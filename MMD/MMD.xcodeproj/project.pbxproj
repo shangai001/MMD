@@ -35,6 +35,7 @@
 		D6E1064C1C74784700049C3F /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106421C74784700049C3F /* UIRefreshControl+AFNetworking.m */; };
 		D6E1064D1C74784700049C3F /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106441C74784700049C3F /* UIWebView+AFNetworking.m */; };
 		D6E106501C747B6B00049C3F /* EZNetReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */; };
+		D6E106531C747CCE00049C3F /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106521C747CCE00049C3F /* LoanViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		D6E106441C74784700049C3F /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		D6E1064E1C747B6B00049C3F /* EZNetReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZNetReachabilityManager.h; sourceTree = "<group>"; };
 		D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZNetReachabilityManager.m; sourceTree = "<group>"; };
+		D6E106511C747CCE00049C3F /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewController.h; sourceTree = "<group>"; };
+		D6E106521C747CCE00049C3F /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,7 @@
 		D6E104FA1C73217C00049C3F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D6E106541C747D0500049C3F /* 登录 */,
 				D6E106161C7327AC00049C3F /* 更多 */,
 				D6E106151C7327A600049C3F /* 我的 */,
 				D6E106141C7327A100049C3F /* 还款 */,
@@ -345,9 +349,8 @@
 		D6E106131C73265700049C3F /* 借款 */ = {
 			isa = PBXGroup;
 			children = (
-				D6E106171C73293000049C3F /* MMLogViewController.h */,
-				D6E106181C73293000049C3F /* MMLogViewController.m */,
-				D6E106191C73293000049C3F /* MMLogViewController.xib */,
+				D6E106511C747CCE00049C3F /* LoanViewController.h */,
+				D6E106521C747CCE00049C3F /* LoanViewController.m */,
 			);
 			name = "借款";
 			sourceTree = "<group>";
@@ -418,6 +421,16 @@
 				D6E106441C74784700049C3F /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		D6E106541C747D0500049C3F /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				D6E106171C73293000049C3F /* MMLogViewController.h */,
+				D6E106181C73293000049C3F /* MMLogViewController.m */,
+				D6E106191C73293000049C3F /* MMLogViewController.xib */,
+			);
+			name = "登录";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,6 +571,7 @@
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D6E1062C1C74783E00049C3F /* AFSecurityPolicy.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
+				D6E106531C747CCE00049C3F /* LoanViewController.m in Sources */,
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
 				D6E1062E1C74783E00049C3F /* AFURLResponseSerialization.m in Sources */,
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,

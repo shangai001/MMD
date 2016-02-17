@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="-331" y="-495"/>
         </scene>
-        <!--View Controller-->
+        <!--Loan View Controller-->
         <scene sceneID="Jqq-oM-S0i">
             <objects>
-                <viewController id="qlK-g4-bQE" sceneMemberID="viewController">
+                <viewController id="qlK-g4-bQE" customClass="LoanViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Myq-B4-Qk3"/>
                         <viewControllerLayoutGuide type="bottom" id="6ok-0l-GT9"/>
