@@ -36,6 +36,7 @@
 		D6E1064D1C74784700049C3F /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106441C74784700049C3F /* UIWebView+AFNetworking.m */; };
 		D6E106501C747B6B00049C3F /* EZNetReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */; };
 		D6E106531C747CCE00049C3F /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106521C747CCE00049C3F /* LoanViewController.m */; };
+		D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106591C747EEA00049C3F /* MMSegmentControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,10 @@
 		D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZNetReachabilityManager.m; sourceTree = "<group>"; };
 		D6E106511C747CCE00049C3F /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewController.h; sourceTree = "<group>"; };
 		D6E106521C747CCE00049C3F /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
+		D6E106581C747EEA00049C3F /* MMSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSegmentControl.h; sourceTree = "<group>"; };
+		D6E106591C747EEA00049C3F /* MMSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSegmentControl.m; sourceTree = "<group>"; };
+		D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentTitleHeader.h; sourceTree = "<group>"; };
+		D6E1065C1C7480E100049C3F /* LoanHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +276,7 @@
 		D6E105061C73219000049C3F /* Const */ = {
 			isa = PBXGroup;
 			children = (
+				D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -349,8 +355,9 @@
 		D6E106131C73265700049C3F /* 借款 */ = {
 			isa = PBXGroup;
 			children = (
-				D6E106511C747CCE00049C3F /* LoanViewController.h */,
-				D6E106521C747CCE00049C3F /* LoanViewController.m */,
+				D6E106571C747EBF00049C3F /* Model */,
+				D6E106561C747EBA00049C3F /* View */,
+				D6E106551C747EB300049C3F /* Controller */,
 			);
 			name = "借款";
 			sourceTree = "<group>";
@@ -431,6 +438,32 @@
 				D6E106191C73293000049C3F /* MMLogViewController.xib */,
 			);
 			name = "登录";
+			sourceTree = "<group>";
+		};
+		D6E106551C747EB300049C3F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6E106511C747CCE00049C3F /* LoanViewController.h */,
+				D6E106521C747CCE00049C3F /* LoanViewController.m */,
+				D6E1065C1C7480E100049C3F /* LoanHeader.h */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D6E106561C747EBA00049C3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6E106581C747EEA00049C3F /* MMSegmentControl.h */,
+				D6E106591C747EEA00049C3F /* MMSegmentControl.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D6E106571C747EBF00049C3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -567,6 +600,7 @@
 				D6E1064B1C74784700049C3F /* UIProgressView+AFNetworking.m in Sources */,
 				D6E106501C747B6B00049C3F /* EZNetReachabilityManager.m in Sources */,
 				D6E106491C74784700049C3F /* UIButton+AFNetworking.m in Sources */,
+				D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */,
 				D6E1064C1C74784700049C3F /* UIRefreshControl+AFNetworking.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D6E1062C1C74783E00049C3F /* AFSecurityPolicy.m in Sources */,
