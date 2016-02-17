@@ -37,6 +37,12 @@
 		D6E106501C747B6B00049C3F /* EZNetReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */; };
 		D6E106531C747CCE00049C3F /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106521C747CCE00049C3F /* LoanViewController.m */; };
 		D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106591C747EEA00049C3F /* MMSegmentControl.m */; };
+		D6E106601C74888200049C3F /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E1065E1C74888200049C3F /* ActivityViewController.m */; };
+		D6E106611C74888200049C3F /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E1065F1C74888200049C3F /* ActivityViewController.xib */; };
+		D6E106651C7488C700049C3F /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106631C7488C700049C3F /* QueryViewController.m */; };
+		D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E106641C7488C700049C3F /* QueryViewController.xib */; };
+		D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106691C74893900049C3F /* ApplyViewController.m */; };
+		D6E1066C1C74893900049C3F /* ApplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E1066A1C74893900049C3F /* ApplyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +127,15 @@
 		D6E106591C747EEA00049C3F /* MMSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSegmentControl.m; sourceTree = "<group>"; };
 		D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentTitleHeader.h; sourceTree = "<group>"; };
 		D6E1065C1C7480E100049C3F /* LoanHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHeader.h; sourceTree = "<group>"; };
+		D6E1065D1C74888200049C3F /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		D6E1065E1C74888200049C3F /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		D6E1065F1C74888200049C3F /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
+		D6E106621C7488C700049C3F /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryViewController.h; sourceTree = "<group>"; };
+		D6E106631C7488C700049C3F /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryViewController.m; sourceTree = "<group>"; };
+		D6E106641C7488C700049C3F /* QueryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryViewController.xib; sourceTree = "<group>"; };
+		D6E106681C74893900049C3F /* ApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyViewController.h; sourceTree = "<group>"; };
+		D6E106691C74893900049C3F /* ApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyViewController.m; sourceTree = "<group>"; };
+		D6E1066A1C74893900049C3F /* ApplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,9 +458,16 @@
 		D6E106551C747EB300049C3F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6E106511C747CCE00049C3F /* LoanViewController.h */,
-				D6E106521C747CCE00049C3F /* LoanViewController.m */,
-				D6E1065C1C7480E100049C3F /* LoanHeader.h */,
+				D6E106671C7488CE00049C3F /* ParentController */,
+				D6E106681C74893900049C3F /* ApplyViewController.h */,
+				D6E106691C74893900049C3F /* ApplyViewController.m */,
+				D6E1066A1C74893900049C3F /* ApplyViewController.xib */,
+				D6E1065D1C74888200049C3F /* ActivityViewController.h */,
+				D6E1065E1C74888200049C3F /* ActivityViewController.m */,
+				D6E1065F1C74888200049C3F /* ActivityViewController.xib */,
+				D6E106621C7488C700049C3F /* QueryViewController.h */,
+				D6E106631C7488C700049C3F /* QueryViewController.m */,
+				D6E106641C7488C700049C3F /* QueryViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -464,6 +486,16 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D6E106671C7488CE00049C3F /* ParentController */ = {
+			isa = PBXGroup;
+			children = (
+				D6E106511C747CCE00049C3F /* LoanViewController.h */,
+				D6E106521C747CCE00049C3F /* LoanViewController.m */,
+				D6E1065C1C7480E100049C3F /* LoanHeader.h */,
+			);
+			name = ParentController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,8 +602,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E104D71C7320FD00049C3F /* LaunchScreen.storyboard in Resources */,
+				D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */,
 				D6E104D41C7320FD00049C3F /* Assets.xcassets in Resources */,
 				D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */,
+				D6E106611C74888200049C3F /* ActivityViewController.xib in Resources */,
+				D6E1066C1C74893900049C3F /* ApplyViewController.xib in Resources */,
 				D6E1061B1C73293000049C3F /* MMLogViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,11 +646,14 @@
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,
 				D6E1064A1C74784700049C3F /* UIImageView+AFNetworking.m in Sources */,
 				D6E104C61C7320FD00049C3F /* main.m in Sources */,
+				D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */,
 				D6E1062A1C74783E00049C3F /* AFHTTPSessionManager.m in Sources */,
 				D6E106451C74784700049C3F /* AFAutoPurgingImageCache.m in Sources */,
 				D6E1062D1C74783E00049C3F /* AFURLRequestSerialization.m in Sources */,
+				D6E106651C7488C700049C3F /* QueryViewController.m in Sources */,
 				D6E1062F1C74783E00049C3F /* AFURLSessionManager.m in Sources */,
 				D6E106461C74784700049C3F /* AFImageDownloader.m in Sources */,
+				D6E106601C74888200049C3F /* ActivityViewController.m in Sources */,
 				D6E1062B1C74783E00049C3F /* AFNetworkReachabilityManager.m in Sources */,
 				D6E1064D1C74784700049C3F /* UIWebView+AFNetworking.m in Sources */,
 				D6E1061A1C73293000049C3F /* MMLogViewController.m in Sources */,

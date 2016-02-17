@@ -10,5 +10,9 @@
 #define LoanHeader_h
 
 #import "SegmentTitleHeader.h"
+#import "MMSegmentControl.h"
+#import "ApplyViewController.h"
+#import "QueryViewController.h"
+#import "ActivityViewController.h"
 
 #endif /* LoanHeader_h */
