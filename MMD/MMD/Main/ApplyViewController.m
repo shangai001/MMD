@@ -9,6 +9,14 @@
 #import "ApplyViewController.h"
 
 @interface ApplyViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *loanTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *loanCountLbale;
+@property (weak, nonatomic) IBOutlet UISlider *loanSlider;
+@property (weak, nonatomic) IBOutlet UILabel *refundTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *loanTimeLabel;
+@property (weak, nonatomic) IBOutlet UISlider *refundTimeSlider;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 
 @end
 
@@ -16,14 +24,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-    
-    
-    UISlider
-    
+    [self configureNextButton];
+    [self configureSliders];
 }
+#pragma mark ConfigureUI
+- (void)configureNextButton{
+    self.nextButton.layer.cornerRadius = 4.0f;
+}
+- (void)configureSliders{
 
+    [self.loanSlider setThumbImage:[UIImage imageNamed:@"circle_blue_44"] forState:UIControlStateNormal];
+    
+    [self.refundTimeSlider setThumbImage:[UIImage imageNamed:@"Circle_Grey_44"] forState:UIControlStateNormal];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

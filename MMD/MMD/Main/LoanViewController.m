@@ -69,6 +69,7 @@
     [self addChildViewController:self.activity];
     [self addChildViewController:self.query];
     
+    self.apply.view.frame = self.view.bounds;
     [self.view addSubview:self.apply.view];
     [self.apply didMoveToParentViewController:self];
     self.currentViewController = self.apply;

@@ -43,6 +43,12 @@
 		D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E106641C7488C700049C3F /* QueryViewController.xib */; };
 		D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106691C74893900049C3F /* ApplyViewController.m */; };
 		D6E1066C1C74893900049C3F /* ApplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E1066A1C74893900049C3F /* ApplyViewController.xib */; };
+		D6E1068A1C75BE8500049C3F /* circle_blue_44.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E106871C75BE8500049C3F /* circle_blue_44.png */; };
+		D6E1068B1C75BE8500049C3F /* circle_blue_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E106881C75BE8500049C3F /* circle_blue_44@2x.png */; };
+		D6E1068C1C75BE8500049C3F /* circle_blue_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E106891C75BE8500049C3F /* circle_blue_44@3x.png */; };
+		D6E106901C75BEF500049C3F /* Circle_Grey_44.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1068D1C75BEF500049C3F /* Circle_Grey_44.png */; };
+		D6E106911C75BEF500049C3F /* Circle_Grey_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1068E1C75BEF500049C3F /* Circle_Grey_44@2x.png */; };
+		D6E106921C75BEF500049C3F /* Circle_Grey_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1068F1C75BEF500049C3F /* Circle_Grey_44@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +142,12 @@
 		D6E106681C74893900049C3F /* ApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyViewController.h; sourceTree = "<group>"; };
 		D6E106691C74893900049C3F /* ApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyViewController.m; sourceTree = "<group>"; };
 		D6E1066A1C74893900049C3F /* ApplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyViewController.xib; sourceTree = "<group>"; };
+		D6E106871C75BE8500049C3F /* circle_blue_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_blue_44.png; sourceTree = "<group>"; };
+		D6E106881C75BE8500049C3F /* circle_blue_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_blue_44@2x.png"; sourceTree = "<group>"; };
+		D6E106891C75BE8500049C3F /* circle_blue_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_blue_44@3x.png"; sourceTree = "<group>"; };
+		D6E1068D1C75BEF500049C3F /* Circle_Grey_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle_Grey_44.png; sourceTree = "<group>"; };
+		D6E1068E1C75BEF500049C3F /* Circle_Grey_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circle_Grey_44@2x.png"; sourceTree = "<group>"; };
+		D6E1068F1C75BEF500049C3F /* Circle_Grey_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circle_Grey_44@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +346,12 @@
 			children = (
 				D6E1050D1C73219800049C3F /* Global */,
 				D6E1050E1C73219800049C3F /* Images */,
+				D6E106871C75BE8500049C3F /* circle_blue_44.png */,
+				D6E106881C75BE8500049C3F /* circle_blue_44@2x.png */,
+				D6E106891C75BE8500049C3F /* circle_blue_44@3x.png */,
+				D6E1068D1C75BEF500049C3F /* Circle_Grey_44.png */,
+				D6E1068E1C75BEF500049C3F /* Circle_Grey_44@2x.png */,
+				D6E1068F1C75BEF500049C3F /* Circle_Grey_44@3x.png */,
 				D6E1050F1C73219800049C3F /* Plist */,
 			);
 			path = Resourses;
@@ -602,10 +620,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E104D71C7320FD00049C3F /* LaunchScreen.storyboard in Resources */,
+				D6E1068B1C75BE8500049C3F /* circle_blue_44@2x.png in Resources */,
+				D6E106921C75BEF500049C3F /* Circle_Grey_44@3x.png in Resources */,
 				D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */,
 				D6E104D41C7320FD00049C3F /* Assets.xcassets in Resources */,
+				D6E106901C75BEF500049C3F /* Circle_Grey_44.png in Resources */,
+				D6E106911C75BEF500049C3F /* Circle_Grey_44@2x.png in Resources */,
 				D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */,
 				D6E106611C74888200049C3F /* ActivityViewController.xib in Resources */,
+				D6E1068A1C75BE8500049C3F /* circle_blue_44.png in Resources */,
+				D6E1068C1C75BE8500049C3F /* circle_blue_44@3x.png in Resources */,
 				D6E1066C1C74893900049C3F /* ApplyViewController.xib in Resources */,
 				D6E1061B1C73293000049C3F /* MMLogViewController.xib in Resources */,
 			);
