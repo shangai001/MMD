@@ -13,7 +13,67 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="借款金额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Tq-rx-cqv">
+                    <rect key="frame" x="260" y="84" width="80" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="eEn-LV-Ppv"/>
+                        <constraint firstAttribute="width" constant="80" id="vSO-2U-3Gv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jp5-V8-dwd">
+                    <rect key="frame" x="260" y="115" width="80" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Cy7-kn-dhu"/>
+                        <constraint firstAttribute="width" constant="80" id="leH-pe-KwE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="还款期限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ED-QI-bYc">
+                    <rect key="frame" x="253" y="303" width="68" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HD-Ej-dNs">
+                    <rect key="frame" x="296" y="332" width="25" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FeK-Eu-WrR">
+                    <rect key="frame" x="8" y="160" width="584" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="LtG-nh-WK9"/>
+                    </constraints>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xMQ-iS-4Sx">
+                    <rect key="frame" x="6" y="388" width="584" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="jXA-bg-0Fd"/>
+                    </constraints>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-N9-kEL">
+                    <rect key="frame" x="102" y="466" width="396" height="30"/>
+                    <state key="normal" title="下一步"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0Tq-rx-cqv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4S3-u2-upY"/>
+                <constraint firstItem="FeK-Eu-WrR" firstAttribute="top" secondItem="Jp5-V8-dwd" secondAttribute="bottom" constant="20" id="Hgv-qc-Dfs"/>
+                <constraint firstItem="Jp5-V8-dwd" firstAttribute="top" secondItem="0Tq-rx-cqv" secondAttribute="bottom" constant="10" id="Lyd-8c-LDu"/>
+                <constraint firstItem="FeK-Eu-WrR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wv1-Ox-xS6"/>
+                <constraint firstAttribute="trailing" secondItem="FeK-Eu-WrR" secondAttribute="trailing" constant="10" id="gz0-tD-OXc"/>
+                <constraint firstItem="FeK-Eu-WrR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="mAh-dD-Mby"/>
+                <constraint firstItem="Jp5-V8-dwd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nvY-3f-HgN"/>
+                <constraint firstItem="0Tq-rx-cqv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="snh-xW-bux"/>
+            </constraints>
         </view>
     </objects>
 </document>
