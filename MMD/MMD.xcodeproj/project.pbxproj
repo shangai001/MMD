@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D606090C1C76FB4B000DB373 /* MMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D606090B1C76FB4B000DB373 /* MMRequest.m */; };
+		D606090F1C76FE1B000DB373 /* HYBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D606090E1C76FE1B000DB373 /* HYBNetworking.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -69,6 +71,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D606090A1C76FB4B000DB373 /* MMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMRequest.h; path = MMD/Expand/Network/MMRequest.h; sourceTree = SOURCE_ROOT; };
+		D606090B1C76FB4B000DB373 /* MMRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMRequest.m; path = MMD/Expand/Network/MMRequest.m; sourceTree = SOURCE_ROOT; };
+		D606090D1C76FE1B000DB373 /* HYBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBNetworking.h; sourceTree = "<group>"; };
+		D606090E1C76FE1B000DB373 /* HYBNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBNetworking.m; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E104C71C7320FD00049C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -330,6 +336,10 @@
 				D6E1061C1C74783E00049C3F /* AFNetworking */,
 				D6E1064E1C747B6B00049C3F /* EZNetReachabilityManager.h */,
 				D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */,
+				D606090A1C76FB4B000DB373 /* MMRequest.h */,
+				D606090B1C76FB4B000DB373 /* MMRequest.m */,
+				D606090D1C76FE1B000DB373 /* HYBNetworking.h */,
+				D606090E1C76FE1B000DB373 /* HYBNetworking.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -658,6 +668,7 @@
 			files = (
 				D6E1064B1C74784700049C3F /* UIProgressView+AFNetworking.m in Sources */,
 				D6E106501C747B6B00049C3F /* EZNetReachabilityManager.m in Sources */,
+				D606090F1C76FE1B000DB373 /* HYBNetworking.m in Sources */,
 				D6E106491C74784700049C3F /* UIButton+AFNetworking.m in Sources */,
 				D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */,
 				D6E1064C1C74784700049C3F /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -677,6 +688,7 @@
 				D6E106651C7488C700049C3F /* QueryViewController.m in Sources */,
 				D6E1062F1C74783E00049C3F /* AFURLSessionManager.m in Sources */,
 				D6E106461C74784700049C3F /* AFImageDownloader.m in Sources */,
+				D606090C1C76FB4B000DB373 /* MMRequest.m in Sources */,
 				D6E106601C74888200049C3F /* ActivityViewController.m in Sources */,
 				D6E1062B1C74783E00049C3F /* AFNetworkReachabilityManager.m in Sources */,
 				D6E1064D1C74784700049C3F /* UIWebView+AFNetworking.m in Sources */,
