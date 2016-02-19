@@ -27,7 +27,7 @@
         <!--Item-->
         <scene sceneID="zw7-xa-3UY">
             <objects>
-                <navigationController id="qxd-3A-D6M" sceneMemberID="viewController">
+                <navigationController id="qxd-3A-D6M" customClass="BaseNavgationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="bCF-nN-Cqf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iZr-j2-Mdn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -63,7 +63,7 @@
         <!--Item-->
         <scene sceneID="rjC-5T-Sq9">
             <objects>
-                <navigationController id="eH7-1G-LpQ" sceneMemberID="viewController">
+                <navigationController id="eH7-1G-LpQ" customClass="BaseNavgationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="aOc-ix-AN5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Ti-5O-KRG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -137,7 +137,7 @@
         <!--Item-->
         <scene sceneID="NnF-gg-tt1">
             <objects>
-                <navigationController id="ZN2-HR-rL7" sceneMemberID="viewController">
+                <navigationController id="ZN2-HR-rL7" customClass="BaseNavgationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Xgr-Q7-bdC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2PN-Hs-eKW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -154,7 +154,7 @@
         <!--Item-->
         <scene sceneID="UK7-BA-S9f">
             <objects>
-                <navigationController id="uNU-PZ-0p7" sceneMemberID="viewController">
+                <navigationController id="uNU-PZ-0p7" customClass="BaseNavgationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ehg-eL-SFb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Wj-WX-oTl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -11,8 +11,10 @@
 
 #import "SegmentTitleHeader.h"
 #import "MMSegmentControl.h"
-#import "ApplyViewController.h"
+
 #import "QueryViewController.h"
 #import "ActivityViewController.h"
+#import "NewApplyViewController.h"
+
 
 #endif /* LoanHeader_h */

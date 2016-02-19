@@ -11,9 +11,9 @@
 
 
 @interface LoanViewController ()
-@property (nonatomic ,strong)MMSegmentControl *segment;
 
-@property (nonatomic, strong)ApplyViewController *apply;
+//@property (nonatomic ,strong)MMSegmentControl *segment;
+@property (nonatomic, strong)NewApplyViewController *apply;
 @property (nonatomic, strong)ActivityViewController *activity;
 @property (nonatomic, strong)QueryViewController *query;
 
@@ -24,19 +24,19 @@
 
 @implementation LoanViewController
 #pragma LazyLoad
-- (MMSegmentControl *)segment{
-    if (!_segment) {
-        NSArray *items = @[FIRSTTITLE,SECONDTITLE,THIRDTITLE];
-        _segment = [[MMSegmentControl alloc] initWithItems:items];
-        [_segment addTarget:self action:@selector(didSelectSegment:) forControlEvents:UIControlEventValueChanged];
-        _segment.selectedSegmentIndex = 0;
-        _segment.tintColor = [UIColor whiteColor];
-    }
-    return _segment;
-}
-- (ApplyViewController *)apply{
+//- (MMSegmentControl *)segment{
+//    if (!_segment) {
+//        NSArray *items = @[FIRSTTITLE,SECONDTITLE,THIRDTITLE];
+//        _segment = [[MMSegmentControl alloc] initWithItems:items];
+//        [_segment addTarget:self action:@selector(didSelectSegment:) forControlEvents:UIControlEventValueChanged];
+//        _segment.selectedSegmentIndex = 0;
+//        _segment.tintColor = [UIColor whiteColor];
+//    }
+//    return _segment;
+//}
+- (NewApplyViewController *)apply{
     if (!_apply) {
-        _apply = [[ApplyViewController alloc] initWithNibName:NSStringFromClass([ApplyViewController class]) bundle:[NSBundle mainBundle]];
+        _apply = [[NewApplyViewController alloc] initWithNibName:NSStringFromClass([NewApplyViewController class]) bundle:[NSBundle mainBundle]];
     }
     return _apply;
 }
@@ -55,13 +55,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"借款";
     // Do any additional setup after loading the view.
     [self initSegment];
     [self initViewControllers];
 }
 - (void)initSegment{
-    self.segment.frame = CGRectMake(0, 0, 120, 30);
-    self.navigationItem.titleView = self.segment;
+//    self.segment.frame = CGRectMake(0, 0, 120, 30);
+//    self.navigationItem.titleView = self.segment;
 }
 - (void)initViewControllers{
     

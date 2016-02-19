@@ -147,6 +147,10 @@
 		D6060A211C76FF0E000DB373 /* qq空间@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609971C76FF0E000DB373 /* qq空间@1x.png */; };
 		D6060A221C76FF0E000DB373 /* qq空间@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609981C76FF0E000DB373 /* qq空间@2x.png */; };
 		D6060A231C76FF0E000DB373 /* qq空间@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609991C76FF0E000DB373 /* qq空间@3x.png */; };
+		D6060A271C770204000DB373 /* NewApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A251C770204000DB373 /* NewApplyViewController.m */; };
+		D6060A281C770204000DB373 /* NewApplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6060A261C770204000DB373 /* NewApplyViewController.xib */; };
+		D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */; };
+		D6060A2F1C771329000DB373 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A2E1C771329000DB373 /* UIImage+Color.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -351,6 +355,14 @@
 		D60609971C76FF0E000DB373 /* qq空间@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq空间@1x.png"; sourceTree = "<group>"; };
 		D60609981C76FF0E000DB373 /* qq空间@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq空间@2x.png"; sourceTree = "<group>"; };
 		D60609991C76FF0E000DB373 /* qq空间@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq空间@3x.png"; sourceTree = "<group>"; };
+		D6060A241C770204000DB373 /* NewApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewApplyViewController.h; sourceTree = "<group>"; };
+		D6060A251C770204000DB373 /* NewApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewApplyViewController.m; sourceTree = "<group>"; };
+		D6060A261C770204000DB373 /* NewApplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewApplyViewController.xib; sourceTree = "<group>"; };
+		D6060A2A1C770F5E000DB373 /* BaseNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavgationController.h; sourceTree = "<group>"; };
+		D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavgationController.m; sourceTree = "<group>"; };
+		D6060A2D1C771329000DB373 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		D6060A2E1C771329000DB373 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		D6060A301C7713C4000DB373 /* ScreenMacrosHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenMacrosHeader.h; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E104C71C7320FD00049C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -457,6 +469,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6060A291C770EFF000DB373 /* Deperated */ = {
+			isa = PBXGroup;
+			children = (
+				D6E106681C74893900049C3F /* ApplyViewController.h */,
+				D6E106691C74893900049C3F /* ApplyViewController.m */,
+				D6E1066A1C74893900049C3F /* ApplyViewController.xib */,
+			);
+			name = Deperated;
+			sourceTree = "<group>";
+		};
 		D6E104B81C7320FD00049C3F = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +561,8 @@
 		D6E104FB1C73217C00049C3F /* Base(基类) */ = {
 			isa = PBXGroup;
 			children = (
+				D6060A2A1C770F5E000DB373 /* BaseNavgationController.h */,
+				D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */,
 			);
 			path = "Base(基类)";
 			sourceTree = "<group>";
@@ -571,6 +595,8 @@
 			isa = PBXGroup;
 			children = (
 				D6E105051C73219000049C3F /* Other */,
+				D6060A2D1C771329000DB373 /* UIImage+Color.h */,
+				D6060A2E1C771329000DB373 /* UIImage+Color.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -601,6 +627,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E105091C73219000049C3F /* TabbarTitleHeader.h */,
+				D6060A301C7713C4000DB373 /* ScreenMacrosHeader.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -900,16 +927,17 @@
 		D6E106551C747EB300049C3F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D6060A291C770EFF000DB373 /* Deperated */,
 				D6E106671C7488CE00049C3F /* ParentController */,
-				D6E106681C74893900049C3F /* ApplyViewController.h */,
-				D6E106691C74893900049C3F /* ApplyViewController.m */,
-				D6E1066A1C74893900049C3F /* ApplyViewController.xib */,
 				D6E1065D1C74888200049C3F /* ActivityViewController.h */,
 				D6E1065E1C74888200049C3F /* ActivityViewController.m */,
 				D6E1065F1C74888200049C3F /* ActivityViewController.xib */,
 				D6E106621C7488C700049C3F /* QueryViewController.h */,
 				D6E106631C7488C700049C3F /* QueryViewController.m */,
 				D6E106641C7488C700049C3F /* QueryViewController.xib */,
+				D6060A241C770204000DB373 /* NewApplyViewController.h */,
+				D6060A251C770204000DB373 /* NewApplyViewController.m */,
+				D6060A261C770204000DB373 /* NewApplyViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1189,6 +1217,7 @@
 				D60609EB1C76FF0E000DB373 /* 手机号码@1x.png in Resources */,
 				D60609CD1C76FF0E000DB373 /* 检查更新@1x.png in Resources */,
 				D6E1061B1C73293000049C3F /* MMLogViewController.xib in Resources */,
+				D6060A281C770204000DB373 /* NewApplyViewController.xib in Resources */,
 				D60609A41C76FF0E000DB373 /* 持证牌照信息@2x.png in Resources */,
 				D60609CE1C76FF0E000DB373 /* 检查更新@2x.png in Resources */,
 				D6060A051C76FF0E000DB373 /* 我的@3x.png in Resources */,
@@ -1239,7 +1268,10 @@
 				D6E1062D1C74783E00049C3F /* AFURLRequestSerialization.m in Sources */,
 				D6E106651C7488C700049C3F /* QueryViewController.m in Sources */,
 				D6E1062F1C74783E00049C3F /* AFURLSessionManager.m in Sources */,
+				D6060A2F1C771329000DB373 /* UIImage+Color.m in Sources */,
 				D6E106461C74784700049C3F /* AFImageDownloader.m in Sources */,
+				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
+				D6060A271C770204000DB373 /* NewApplyViewController.m in Sources */,
 				D606090C1C76FB4B000DB373 /* MMRequest.m in Sources */,
 				D6E106601C74888200049C3F /* ActivityViewController.m in Sources */,
 				D6E1062B1C74783E00049C3F /* AFNetworkReachabilityManager.m in Sources */,
