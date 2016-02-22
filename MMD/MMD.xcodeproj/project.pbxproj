@@ -72,69 +72,69 @@
 		D60609D61C76FF0E000DB373 /* 借款须知@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606094C1C76FF0E000DB373 /* 借款须知@1x.png */; };
 		D60609D71C76FF0E000DB373 /* 借款须知@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606094D1C76FF0E000DB373 /* 借款须知@2x.png */; };
 		D60609D81C76FF0E000DB373 /* 借款须知@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606094E1C76FF0E000DB373 /* 借款须知@3x.png */; };
-		D60609D91C76FF0E000DB373 /* 精品推荐@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606094F1C76FF0E000DB373 /* 精品推荐@1x.png */; };
-		D60609DA1C76FF0E000DB373 /* 精品推荐@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609501C76FF0E000DB373 /* 精品推荐@2x.png */; };
-		D60609DB1C76FF0E000DB373 /* 精品推荐@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609511C76FF0E000DB373 /* 精品推荐@3x.png */; };
-		D60609DC1C76FF0E000DB373 /* 可视@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609521C76FF0E000DB373 /* 可视@1x.png */; };
-		D60609DD1C76FF0E000DB373 /* 可视@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609531C76FF0E000DB373 /* 可视@2x.png */; };
-		D60609DE1C76FF0E000DB373 /* 可视@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609541C76FF0E000DB373 /* 可视@3x.png */; };
-		D60609DF1C76FF0E000DB373 /* 可视0@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609551C76FF0E000DB373 /* 可视0@1x.png */; };
-		D60609E01C76FF0E000DB373 /* 可视0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609561C76FF0E000DB373 /* 可视0@2x.png */; };
-		D60609E11C76FF0E000DB373 /* 可视0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609571C76FF0E000DB373 /* 可视0@3x.png */; };
-		D60609E21C76FF0E000DB373 /* 联系人信息@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609581C76FF0E000DB373 /* 联系人信息@1x.png */; };
-		D60609E31C76FF0E000DB373 /* 联系人信息@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609591C76FF0E000DB373 /* 联系人信息@2x.png */; };
-		D60609E41C76FF0E000DB373 /* 联系人信息@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095A1C76FF0E000DB373 /* 联系人信息@3x.png */; };
-		D60609E51C76FF0E000DB373 /* 朋友圈@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095B1C76FF0E000DB373 /* 朋友圈@1x.png */; };
-		D60609E61C76FF0E000DB373 /* 朋友圈@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095C1C76FF0E000DB373 /* 朋友圈@2x.png */; };
-		D60609E71C76FF0E000DB373 /* 朋友圈@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095D1C76FF0E000DB373 /* 朋友圈@3x.png */; };
-		D60609E81C76FF0E000DB373 /* 身份证信息@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095E1C76FF0E000DB373 /* 身份证信息@1x.png */; };
-		D60609E91C76FF0E000DB373 /* 身份证信息@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095F1C76FF0E000DB373 /* 身份证信息@2x.png */; };
-		D60609EA1C76FF0E000DB373 /* 身份证信息@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609601C76FF0E000DB373 /* 身份证信息@3x.png */; };
-		D60609EB1C76FF0E000DB373 /* 手机号码@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609611C76FF0E000DB373 /* 手机号码@1x.png */; };
-		D60609EC1C76FF0E000DB373 /* 手机号码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609621C76FF0E000DB373 /* 手机号码@2x.png */; };
-		D60609ED1C76FF0E000DB373 /* 手机号码@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609631C76FF0E000DB373 /* 手机号码@3x.png */; };
-		D60609EE1C76FF0E000DB373 /* 腾讯微博@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609641C76FF0E000DB373 /* 腾讯微博@1x.png */; };
-		D60609EF1C76FF0E000DB373 /* 腾讯微博@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609651C76FF0E000DB373 /* 腾讯微博@2x.png */; };
-		D60609F01C76FF0E000DB373 /* 腾讯微博@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609661C76FF0E000DB373 /* 腾讯微博@3x.png */; };
-		D60609F11C76FF0E000DB373 /* 添加照片@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609671C76FF0E000DB373 /* 添加照片@1x.png */; };
-		D60609F21C76FF0E000DB373 /* 添加照片@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609681C76FF0E000DB373 /* 添加照片@2x.png */; };
-		D60609F31C76FF0E000DB373 /* 添加照片@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609691C76FF0E000DB373 /* 添加照片@3x.png */; };
-		D60609F41C76FF0E000DB373 /* 同意@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096A1C76FF0E000DB373 /* 同意@1x.png */; };
-		D60609F51C76FF0E000DB373 /* 同意@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096B1C76FF0E000DB373 /* 同意@2x.png */; };
-		D60609F61C76FF0E000DB373 /* 同意@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096C1C76FF0E000DB373 /* 同意@3x.png */; };
-		D60609F71C76FF0E000DB373 /* 同意0@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096D1C76FF0E000DB373 /* 同意0@1x.png */; };
-		D60609F81C76FF0E000DB373 /* 同意0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096E1C76FF0E000DB373 /* 同意0@2x.png */; };
-		D60609F91C76FF0E000DB373 /* 同意0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096F1C76FF0E000DB373 /* 同意0@3x.png */; };
-		D60609FA1C76FF0E000DB373 /* 微博@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609701C76FF0E000DB373 /* 微博@1x.png */; };
-		D60609FB1C76FF0E000DB373 /* 微博@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609711C76FF0E000DB373 /* 微博@2x.png */; };
-		D60609FC1C76FF0E000DB373 /* 微博@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609721C76FF0E000DB373 /* 微博@3x.png */; };
-		D60609FD1C76FF0E000DB373 /* 微信好友@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609731C76FF0E000DB373 /* 微信好友@1x.png */; };
-		D60609FE1C76FF0E000DB373 /* 微信好友@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609741C76FF0E000DB373 /* 微信好友@2x.png */; };
-		D60609FF1C76FF0E000DB373 /* 微信好友@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609751C76FF0E000DB373 /* 微信好友@3x.png */; };
-		D6060A001C76FF0E000DB373 /* 文件夹@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609761C76FF0E000DB373 /* 文件夹@1x.png */; };
-		D6060A011C76FF0E000DB373 /* 文件夹@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609771C76FF0E000DB373 /* 文件夹@2x.png */; };
-		D6060A021C76FF0E000DB373 /* 文件夹@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609781C76FF0E000DB373 /* 文件夹@3x.png */; };
-		D6060A031C76FF0E000DB373 /* 我的@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609791C76FF0E000DB373 /* 我的@1x.png */; };
-		D6060A041C76FF0E000DB373 /* 我的@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097A1C76FF0E000DB373 /* 我的@2x.png */; };
-		D6060A051C76FF0E000DB373 /* 我的@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097B1C76FF0E000DB373 /* 我的@3x.png */; };
-		D6060A061C76FF0E000DB373 /* 我的0@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097C1C76FF0E000DB373 /* 我的0@1x.png */; };
-		D6060A071C76FF0E000DB373 /* 我的0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097D1C76FF0E000DB373 /* 我的0@2x.png */; };
-		D6060A081C76FF0E000DB373 /* 我的0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097E1C76FF0E000DB373 /* 我的0@3x.png */; };
-		D6060A091C76FF0E000DB373 /* 下拉@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097F1C76FF0E000DB373 /* 下拉@1x.png */; };
-		D6060A0A1C76FF0E000DB373 /* 下拉@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609801C76FF0E000DB373 /* 下拉@2x.png */; };
-		D6060A0B1C76FF0E000DB373 /* 下拉@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609811C76FF0E000DB373 /* 下拉@3x.png */; };
-		D6060A0C1C76FF0E000DB373 /* 消息中心@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609821C76FF0E000DB373 /* 消息中心@1x.png */; };
-		D6060A0D1C76FF0E000DB373 /* 消息中心@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609831C76FF0E000DB373 /* 消息中心@2x.png */; };
-		D6060A0E1C76FF0E000DB373 /* 消息中心@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609841C76FF0E000DB373 /* 消息中心@3x.png */; };
-		D6060A0F1C76FF0E000DB373 /* 信用等级@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609851C76FF0E000DB373 /* 信用等级@1x.png */; };
-		D6060A101C76FF0E000DB373 /* 信用等级@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609861C76FF0E000DB373 /* 信用等级@2x.png */; };
-		D6060A111C76FF0E000DB373 /* 信用等级@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609871C76FF0E000DB373 /* 信用等级@3x.png */; };
-		D6060A121C76FF0E000DB373 /* 信用额度@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609881C76FF0E000DB373 /* 信用额度@1x.png */; };
-		D6060A131C76FF0E000DB373 /* 信用额度@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609891C76FF0E000DB373 /* 信用额度@2x.png */; };
-		D6060A141C76FF0E000DB373 /* 信用额度@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098A1C76FF0E000DB373 /* 信用额度@3x.png */; };
-		D6060A151C76FF0E000DB373 /* 银行卡信息@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098B1C76FF0E000DB373 /* 银行卡信息@1x.png */; };
-		D6060A161C76FF0E000DB373 /* 银行卡信息@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098C1C76FF0E000DB373 /* 银行卡信息@2x.png */; };
-		D6060A171C76FF0E000DB373 /* 银行卡信息@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098D1C76FF0E000DB373 /* 银行卡信息@3x.png */; };
+		D60609D91C76FF0E000DB373 /* recommend.png in Resources */ = {isa = PBXBuildFile; fileRef = D606094F1C76FF0E000DB373 /* recommend.png */; };
+		D60609DA1C76FF0E000DB373 /* recommend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609501C76FF0E000DB373 /* recommend@2x.png */; };
+		D60609DB1C76FF0E000DB373 /* recommend@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609511C76FF0E000DB373 /* recommend@3x.png */; };
+		D60609DC1C76FF0E000DB373 /* visible.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609521C76FF0E000DB373 /* visible.png */; };
+		D60609DD1C76FF0E000DB373 /* visible@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609531C76FF0E000DB373 /* visible@2x.png */; };
+		D60609DE1C76FF0E000DB373 /* visible@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609541C76FF0E000DB373 /* visible@3x.png */; };
+		D60609DF1C76FF0E000DB373 /* no_visible.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609551C76FF0E000DB373 /* no_visible.png */; };
+		D60609E01C76FF0E000DB373 /* no_visible@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609561C76FF0E000DB373 /* no_visible@2x.png */; };
+		D60609E11C76FF0E000DB373 /* no_visible@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609571C76FF0E000DB373 /* no_visible@3x.png */; };
+		D60609E21C76FF0E000DB373 /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609581C76FF0E000DB373 /* contact.png */; };
+		D60609E31C76FF0E000DB373 /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609591C76FF0E000DB373 /* contact@2x.png */; };
+		D60609E41C76FF0E000DB373 /* contact@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095A1C76FF0E000DB373 /* contact@3x.png */; };
+		D60609E51C76FF0E000DB373 /* friendsCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095B1C76FF0E000DB373 /* friendsCircle.png */; };
+		D60609E61C76FF0E000DB373 /* friendsCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095C1C76FF0E000DB373 /* friendsCircle@2x.png */; };
+		D60609E71C76FF0E000DB373 /* friendsCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095D1C76FF0E000DB373 /* friendsCircle@3x.png */; };
+		D60609E81C76FF0E000DB373 /* IDInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095E1C76FF0E000DB373 /* IDInfo.png */; };
+		D60609E91C76FF0E000DB373 /* IDInfo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606095F1C76FF0E000DB373 /* IDInfo@2x.png */; };
+		D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609601C76FF0E000DB373 /* IDInfo@3x.png */; };
+		D60609EB1C76FF0E000DB373 /* phoneNumber.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609611C76FF0E000DB373 /* phoneNumber.png */; };
+		D60609EC1C76FF0E000DB373 /* phoneNumber@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609621C76FF0E000DB373 /* phoneNumber@2x.png */; };
+		D60609ED1C76FF0E000DB373 /* phoneNumber@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609631C76FF0E000DB373 /* phoneNumber@3x.png */; };
+		D60609EE1C76FF0E000DB373 /* txweibo.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609641C76FF0E000DB373 /* txweibo.png */; };
+		D60609EF1C76FF0E000DB373 /* txweibo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609651C76FF0E000DB373 /* txweibo@2x.png */; };
+		D60609F01C76FF0E000DB373 /* txweibo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609661C76FF0E000DB373 /* txweibo@3x.png */; };
+		D60609F11C76FF0E000DB373 /* addPic.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609671C76FF0E000DB373 /* addPic.png */; };
+		D60609F21C76FF0E000DB373 /* addPic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609681C76FF0E000DB373 /* addPic@2x.png */; };
+		D60609F31C76FF0E000DB373 /* addPic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609691C76FF0E000DB373 /* addPic@3x.png */; };
+		D60609F41C76FF0E000DB373 /* approve_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096A1C76FF0E000DB373 /* approve_on.png */; };
+		D60609F51C76FF0E000DB373 /* approve_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096B1C76FF0E000DB373 /* approve_on@2x.png */; };
+		D60609F61C76FF0E000DB373 /* approve_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096C1C76FF0E000DB373 /* approve_on@3x.png */; };
+		D60609F71C76FF0E000DB373 /* approve_off.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096D1C76FF0E000DB373 /* approve_off.png */; };
+		D60609F81C76FF0E000DB373 /* approve_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096E1C76FF0E000DB373 /* approve_off@2x.png */; };
+		D60609F91C76FF0E000DB373 /* approve_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606096F1C76FF0E000DB373 /* approve_off@3x.png */; };
+		D60609FA1C76FF0E000DB373 /* weibo.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609701C76FF0E000DB373 /* weibo.png */; };
+		D60609FB1C76FF0E000DB373 /* weibo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609711C76FF0E000DB373 /* weibo@2x.png */; };
+		D60609FC1C76FF0E000DB373 /* weibo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609721C76FF0E000DB373 /* weibo@3x.png */; };
+		D60609FD1C76FF0E000DB373 /* wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609731C76FF0E000DB373 /* wechat.png */; };
+		D60609FE1C76FF0E000DB373 /* wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609741C76FF0E000DB373 /* wechat@2x.png */; };
+		D60609FF1C76FF0E000DB373 /* wechat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609751C76FF0E000DB373 /* wechat@3x.png */; };
+		D6060A001C76FF0E000DB373 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609761C76FF0E000DB373 /* folder.png */; };
+		D6060A011C76FF0E000DB373 /* folder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609771C76FF0E000DB373 /* folder@2x.png */; };
+		D6060A021C76FF0E000DB373 /* folder@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609781C76FF0E000DB373 /* folder@3x.png */; };
+		D6060A031C76FF0E000DB373 /* mine_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609791C76FF0E000DB373 /* mine_on.png */; };
+		D6060A041C76FF0E000DB373 /* mine_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097A1C76FF0E000DB373 /* mine_on@2x.png */; };
+		D6060A051C76FF0E000DB373 /* mine_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097B1C76FF0E000DB373 /* mine_on@3x.png */; };
+		D6060A061C76FF0E000DB373 /* mine_off.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097C1C76FF0E000DB373 /* mine_off.png */; };
+		D6060A071C76FF0E000DB373 /* mine_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097D1C76FF0E000DB373 /* mine_off@2x.png */; };
+		D6060A081C76FF0E000DB373 /* mine_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097E1C76FF0E000DB373 /* mine_off@3x.png */; };
+		D6060A091C76FF0E000DB373 /* pullDown.png in Resources */ = {isa = PBXBuildFile; fileRef = D606097F1C76FF0E000DB373 /* pullDown.png */; };
+		D6060A0A1C76FF0E000DB373 /* pullDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609801C76FF0E000DB373 /* pullDown@2x.png */; };
+		D6060A0B1C76FF0E000DB373 /* pullDown@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609811C76FF0E000DB373 /* pullDown@3x.png */; };
+		D6060A0C1C76FF0E000DB373 /* notificationCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609821C76FF0E000DB373 /* notificationCenter.png */; };
+		D6060A0D1C76FF0E000DB373 /* notificationCenter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609831C76FF0E000DB373 /* notificationCenter@2x.png */; };
+		D6060A0E1C76FF0E000DB373 /* notificationCenter@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609841C76FF0E000DB373 /* notificationCenter@3x.png */; };
+		D6060A0F1C76FF0E000DB373 /* creditlevel.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609851C76FF0E000DB373 /* creditlevel.png */; };
+		D6060A101C76FF0E000DB373 /* creditlevel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609861C76FF0E000DB373 /* creditlevel@2x.png */; };
+		D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609871C76FF0E000DB373 /* creditlevel@3x.png */; };
+		D6060A121C76FF0E000DB373 /* creditline.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609881C76FF0E000DB373 /* creditline.png */; };
+		D6060A131C76FF0E000DB373 /* creditline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609891C76FF0E000DB373 /* creditline@2x.png */; };
+		D6060A141C76FF0E000DB373 /* creditline@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098A1C76FF0E000DB373 /* creditline@3x.png */; };
+		D6060A151C76FF0E000DB373 /* creditCardInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098B1C76FF0E000DB373 /* creditCardInfo.png */; };
+		D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098C1C76FF0E000DB373 /* creditCardInfo@2x.png */; };
+		D6060A171C76FF0E000DB373 /* creditCardInfo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098D1C76FF0E000DB373 /* creditCardInfo@3x.png */; };
 		D6060A181C76FF0E000DB373 /* go@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098E1C76FF0E000DB373 /* go@1x.png */; };
 		D6060A191C76FF0E000DB373 /* go@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D606098F1C76FF0E000DB373 /* go@2x.png */; };
 		D6060A1A1C76FF0E000DB373 /* go@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609901C76FF0E000DB373 /* go@3x.png */; };
@@ -294,69 +294,69 @@
 		D606094C1C76FF0E000DB373 /* 借款须知@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "借款须知@1x.png"; sourceTree = "<group>"; };
 		D606094D1C76FF0E000DB373 /* 借款须知@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "借款须知@2x.png"; sourceTree = "<group>"; };
 		D606094E1C76FF0E000DB373 /* 借款须知@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "借款须知@3x.png"; sourceTree = "<group>"; };
-		D606094F1C76FF0E000DB373 /* 精品推荐@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "精品推荐@1x.png"; sourceTree = "<group>"; };
-		D60609501C76FF0E000DB373 /* 精品推荐@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "精品推荐@2x.png"; sourceTree = "<group>"; };
-		D60609511C76FF0E000DB373 /* 精品推荐@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "精品推荐@3x.png"; sourceTree = "<group>"; };
-		D60609521C76FF0E000DB373 /* 可视@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "可视@1x.png"; sourceTree = "<group>"; };
-		D60609531C76FF0E000DB373 /* 可视@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "可视@2x.png"; sourceTree = "<group>"; };
-		D60609541C76FF0E000DB373 /* 可视@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "可视@3x.png"; sourceTree = "<group>"; };
-		D60609551C76FF0E000DB373 /* 可视0@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "可视0@1x.png"; sourceTree = "<group>"; };
-		D60609561C76FF0E000DB373 /* 可视0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "可视0@2x.png"; sourceTree = "<group>"; };
-		D60609571C76FF0E000DB373 /* 可视0@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "可视0@3x.png"; sourceTree = "<group>"; };
-		D60609581C76FF0E000DB373 /* 联系人信息@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "联系人信息@1x.png"; sourceTree = "<group>"; };
-		D60609591C76FF0E000DB373 /* 联系人信息@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "联系人信息@2x.png"; sourceTree = "<group>"; };
-		D606095A1C76FF0E000DB373 /* 联系人信息@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "联系人信息@3x.png"; sourceTree = "<group>"; };
-		D606095B1C76FF0E000DB373 /* 朋友圈@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "朋友圈@1x.png"; sourceTree = "<group>"; };
-		D606095C1C76FF0E000DB373 /* 朋友圈@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "朋友圈@2x.png"; sourceTree = "<group>"; };
-		D606095D1C76FF0E000DB373 /* 朋友圈@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "朋友圈@3x.png"; sourceTree = "<group>"; };
-		D606095E1C76FF0E000DB373 /* 身份证信息@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "身份证信息@1x.png"; sourceTree = "<group>"; };
-		D606095F1C76FF0E000DB373 /* 身份证信息@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "身份证信息@2x.png"; sourceTree = "<group>"; };
-		D60609601C76FF0E000DB373 /* 身份证信息@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "身份证信息@3x.png"; sourceTree = "<group>"; };
-		D60609611C76FF0E000DB373 /* 手机号码@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机号码@1x.png"; sourceTree = "<group>"; };
-		D60609621C76FF0E000DB373 /* 手机号码@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机号码@2x.png"; sourceTree = "<group>"; };
-		D60609631C76FF0E000DB373 /* 手机号码@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机号码@3x.png"; sourceTree = "<group>"; };
-		D60609641C76FF0E000DB373 /* 腾讯微博@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "腾讯微博@1x.png"; sourceTree = "<group>"; };
-		D60609651C76FF0E000DB373 /* 腾讯微博@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "腾讯微博@2x.png"; sourceTree = "<group>"; };
-		D60609661C76FF0E000DB373 /* 腾讯微博@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "腾讯微博@3x.png"; sourceTree = "<group>"; };
-		D60609671C76FF0E000DB373 /* 添加照片@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加照片@1x.png"; sourceTree = "<group>"; };
-		D60609681C76FF0E000DB373 /* 添加照片@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加照片@2x.png"; sourceTree = "<group>"; };
-		D60609691C76FF0E000DB373 /* 添加照片@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加照片@3x.png"; sourceTree = "<group>"; };
-		D606096A1C76FF0E000DB373 /* 同意@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同意@1x.png"; sourceTree = "<group>"; };
-		D606096B1C76FF0E000DB373 /* 同意@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同意@2x.png"; sourceTree = "<group>"; };
-		D606096C1C76FF0E000DB373 /* 同意@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同意@3x.png"; sourceTree = "<group>"; };
-		D606096D1C76FF0E000DB373 /* 同意0@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同意0@1x.png"; sourceTree = "<group>"; };
-		D606096E1C76FF0E000DB373 /* 同意0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同意0@2x.png"; sourceTree = "<group>"; };
-		D606096F1C76FF0E000DB373 /* 同意0@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同意0@3x.png"; sourceTree = "<group>"; };
-		D60609701C76FF0E000DB373 /* 微博@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微博@1x.png"; sourceTree = "<group>"; };
-		D60609711C76FF0E000DB373 /* 微博@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微博@2x.png"; sourceTree = "<group>"; };
-		D60609721C76FF0E000DB373 /* 微博@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微博@3x.png"; sourceTree = "<group>"; };
-		D60609731C76FF0E000DB373 /* 微信好友@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信好友@1x.png"; sourceTree = "<group>"; };
-		D60609741C76FF0E000DB373 /* 微信好友@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信好友@2x.png"; sourceTree = "<group>"; };
-		D60609751C76FF0E000DB373 /* 微信好友@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信好友@3x.png"; sourceTree = "<group>"; };
-		D60609761C76FF0E000DB373 /* 文件夹@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文件夹@1x.png"; sourceTree = "<group>"; };
-		D60609771C76FF0E000DB373 /* 文件夹@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文件夹@2x.png"; sourceTree = "<group>"; };
-		D60609781C76FF0E000DB373 /* 文件夹@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文件夹@3x.png"; sourceTree = "<group>"; };
-		D60609791C76FF0E000DB373 /* 我的@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的@1x.png"; sourceTree = "<group>"; };
-		D606097A1C76FF0E000DB373 /* 我的@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的@2x.png"; sourceTree = "<group>"; };
-		D606097B1C76FF0E000DB373 /* 我的@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的@3x.png"; sourceTree = "<group>"; };
-		D606097C1C76FF0E000DB373 /* 我的0@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的0@1x.png"; sourceTree = "<group>"; };
-		D606097D1C76FF0E000DB373 /* 我的0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的0@2x.png"; sourceTree = "<group>"; };
-		D606097E1C76FF0E000DB373 /* 我的0@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的0@3x.png"; sourceTree = "<group>"; };
-		D606097F1C76FF0E000DB373 /* 下拉@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉@1x.png"; sourceTree = "<group>"; };
-		D60609801C76FF0E000DB373 /* 下拉@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉@2x.png"; sourceTree = "<group>"; };
-		D60609811C76FF0E000DB373 /* 下拉@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉@3x.png"; sourceTree = "<group>"; };
-		D60609821C76FF0E000DB373 /* 消息中心@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息中心@1x.png"; sourceTree = "<group>"; };
-		D60609831C76FF0E000DB373 /* 消息中心@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息中心@2x.png"; sourceTree = "<group>"; };
-		D60609841C76FF0E000DB373 /* 消息中心@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息中心@3x.png"; sourceTree = "<group>"; };
-		D60609851C76FF0E000DB373 /* 信用等级@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信用等级@1x.png"; sourceTree = "<group>"; };
-		D60609861C76FF0E000DB373 /* 信用等级@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信用等级@2x.png"; sourceTree = "<group>"; };
-		D60609871C76FF0E000DB373 /* 信用等级@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信用等级@3x.png"; sourceTree = "<group>"; };
-		D60609881C76FF0E000DB373 /* 信用额度@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信用额度@1x.png"; sourceTree = "<group>"; };
-		D60609891C76FF0E000DB373 /* 信用额度@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信用额度@2x.png"; sourceTree = "<group>"; };
-		D606098A1C76FF0E000DB373 /* 信用额度@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信用额度@3x.png"; sourceTree = "<group>"; };
-		D606098B1C76FF0E000DB373 /* 银行卡信息@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "银行卡信息@1x.png"; sourceTree = "<group>"; };
-		D606098C1C76FF0E000DB373 /* 银行卡信息@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "银行卡信息@2x.png"; sourceTree = "<group>"; };
-		D606098D1C76FF0E000DB373 /* 银行卡信息@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "银行卡信息@3x.png"; sourceTree = "<group>"; };
+		D606094F1C76FF0E000DB373 /* recommend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recommend.png; sourceTree = "<group>"; };
+		D60609501C76FF0E000DB373 /* recommend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recommend@2x.png"; sourceTree = "<group>"; };
+		D60609511C76FF0E000DB373 /* recommend@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recommend@3x.png"; sourceTree = "<group>"; };
+		D60609521C76FF0E000DB373 /* visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visible.png; sourceTree = "<group>"; };
+		D60609531C76FF0E000DB373 /* visible@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visible@2x.png"; sourceTree = "<group>"; };
+		D60609541C76FF0E000DB373 /* visible@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visible@3x.png"; sourceTree = "<group>"; };
+		D60609551C76FF0E000DB373 /* no_visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_visible.png; sourceTree = "<group>"; };
+		D60609561C76FF0E000DB373 /* no_visible@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no_visible@2x.png"; sourceTree = "<group>"; };
+		D60609571C76FF0E000DB373 /* no_visible@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no_visible@3x.png"; sourceTree = "<group>"; };
+		D60609581C76FF0E000DB373 /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
+		D60609591C76FF0E000DB373 /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact@2x.png"; sourceTree = "<group>"; };
+		D606095A1C76FF0E000DB373 /* contact@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact@3x.png"; sourceTree = "<group>"; };
+		D606095B1C76FF0E000DB373 /* friendsCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friendsCircle.png; sourceTree = "<group>"; };
+		D606095C1C76FF0E000DB373 /* friendsCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friendsCircle@2x.png"; sourceTree = "<group>"; };
+		D606095D1C76FF0E000DB373 /* friendsCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friendsCircle@3x.png"; sourceTree = "<group>"; };
+		D606095E1C76FF0E000DB373 /* IDInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IDInfo.png; sourceTree = "<group>"; };
+		D606095F1C76FF0E000DB373 /* IDInfo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IDInfo@2x.png"; sourceTree = "<group>"; };
+		D60609601C76FF0E000DB373 /* IDInfo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IDInfo@3x.png"; sourceTree = "<group>"; };
+		D60609611C76FF0E000DB373 /* phoneNumber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phoneNumber.png; sourceTree = "<group>"; };
+		D60609621C76FF0E000DB373 /* phoneNumber@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phoneNumber@2x.png"; sourceTree = "<group>"; };
+		D60609631C76FF0E000DB373 /* phoneNumber@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phoneNumber@3x.png"; sourceTree = "<group>"; };
+		D60609641C76FF0E000DB373 /* txweibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = txweibo.png; sourceTree = "<group>"; };
+		D60609651C76FF0E000DB373 /* txweibo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "txweibo@2x.png"; sourceTree = "<group>"; };
+		D60609661C76FF0E000DB373 /* txweibo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "txweibo@3x.png"; sourceTree = "<group>"; };
+		D60609671C76FF0E000DB373 /* addPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addPic.png; sourceTree = "<group>"; };
+		D60609681C76FF0E000DB373 /* addPic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addPic@2x.png"; sourceTree = "<group>"; };
+		D60609691C76FF0E000DB373 /* addPic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addPic@3x.png"; sourceTree = "<group>"; };
+		D606096A1C76FF0E000DB373 /* approve_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = approve_on.png; sourceTree = "<group>"; };
+		D606096B1C76FF0E000DB373 /* approve_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "approve_on@2x.png"; sourceTree = "<group>"; };
+		D606096C1C76FF0E000DB373 /* approve_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "approve_on@3x.png"; sourceTree = "<group>"; };
+		D606096D1C76FF0E000DB373 /* approve_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = approve_off.png; sourceTree = "<group>"; };
+		D606096E1C76FF0E000DB373 /* approve_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "approve_off@2x.png"; sourceTree = "<group>"; };
+		D606096F1C76FF0E000DB373 /* approve_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "approve_off@3x.png"; sourceTree = "<group>"; };
+		D60609701C76FF0E000DB373 /* weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weibo.png; sourceTree = "<group>"; };
+		D60609711C76FF0E000DB373 /* weibo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo@2x.png"; sourceTree = "<group>"; };
+		D60609721C76FF0E000DB373 /* weibo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo@3x.png"; sourceTree = "<group>"; };
+		D60609731C76FF0E000DB373 /* wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat.png; sourceTree = "<group>"; };
+		D60609741C76FF0E000DB373 /* wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@2x.png"; sourceTree = "<group>"; };
+		D60609751C76FF0E000DB373 /* wechat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@3x.png"; sourceTree = "<group>"; };
+		D60609761C76FF0E000DB373 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
+		D60609771C76FF0E000DB373 /* folder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder@2x.png"; sourceTree = "<group>"; };
+		D60609781C76FF0E000DB373 /* folder@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder@3x.png"; sourceTree = "<group>"; };
+		D60609791C76FF0E000DB373 /* mine_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_on.png; sourceTree = "<group>"; };
+		D606097A1C76FF0E000DB373 /* mine_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_on@2x.png"; sourceTree = "<group>"; };
+		D606097B1C76FF0E000DB373 /* mine_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_on@3x.png"; sourceTree = "<group>"; };
+		D606097C1C76FF0E000DB373 /* mine_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_off.png; sourceTree = "<group>"; };
+		D606097D1C76FF0E000DB373 /* mine_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_off@2x.png"; sourceTree = "<group>"; };
+		D606097E1C76FF0E000DB373 /* mine_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_off@3x.png"; sourceTree = "<group>"; };
+		D606097F1C76FF0E000DB373 /* pullDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullDown.png; sourceTree = "<group>"; };
+		D60609801C76FF0E000DB373 /* pullDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pullDown@2x.png"; sourceTree = "<group>"; };
+		D60609811C76FF0E000DB373 /* pullDown@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pullDown@3x.png"; sourceTree = "<group>"; };
+		D60609821C76FF0E000DB373 /* notificationCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notificationCenter.png; sourceTree = "<group>"; };
+		D60609831C76FF0E000DB373 /* notificationCenter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notificationCenter@2x.png"; sourceTree = "<group>"; };
+		D60609841C76FF0E000DB373 /* notificationCenter@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notificationCenter@3x.png"; sourceTree = "<group>"; };
+		D60609851C76FF0E000DB373 /* creditlevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creditlevel.png; sourceTree = "<group>"; };
+		D60609861C76FF0E000DB373 /* creditlevel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "creditlevel@2x.png"; sourceTree = "<group>"; };
+		D60609871C76FF0E000DB373 /* creditlevel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "creditlevel@3x.png"; sourceTree = "<group>"; };
+		D60609881C76FF0E000DB373 /* creditline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creditline.png; sourceTree = "<group>"; };
+		D60609891C76FF0E000DB373 /* creditline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "creditline@2x.png"; sourceTree = "<group>"; };
+		D606098A1C76FF0E000DB373 /* creditline@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "creditline@3x.png"; sourceTree = "<group>"; };
+		D606098B1C76FF0E000DB373 /* creditCardInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creditCardInfo.png; sourceTree = "<group>"; };
+		D606098C1C76FF0E000DB373 /* creditCardInfo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "creditCardInfo@2x.png"; sourceTree = "<group>"; };
+		D606098D1C76FF0E000DB373 /* creditCardInfo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "creditCardInfo@3x.png"; sourceTree = "<group>"; };
 		D606098E1C76FF0E000DB373 /* go@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go@1x.png"; sourceTree = "<group>"; };
 		D606098F1C76FF0E000DB373 /* go@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go@2x.png"; sourceTree = "<group>"; };
 		D60609901C76FF0E000DB373 /* go@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go@3x.png"; sourceTree = "<group>"; };
@@ -408,6 +408,7 @@
 		D6060A511C7721B9000DB373 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		D6060A521C7721B9000DB373 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		D6060A531C7721B9000DB373 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E104C71C7320FD00049C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -708,6 +709,7 @@
 			children = (
 				D6E105091C73219000049C3F /* TabbarTitleHeader.h */,
 				D6060A301C7713C4000DB373 /* ScreenMacrosHeader.h */,
+				D68492231C7B08AC00227ACA /* ColorHeader.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -823,69 +825,69 @@
 				D606094C1C76FF0E000DB373 /* 借款须知@1x.png */,
 				D606094D1C76FF0E000DB373 /* 借款须知@2x.png */,
 				D606094E1C76FF0E000DB373 /* 借款须知@3x.png */,
-				D606094F1C76FF0E000DB373 /* 精品推荐@1x.png */,
-				D60609501C76FF0E000DB373 /* 精品推荐@2x.png */,
-				D60609511C76FF0E000DB373 /* 精品推荐@3x.png */,
-				D60609521C76FF0E000DB373 /* 可视@1x.png */,
-				D60609531C76FF0E000DB373 /* 可视@2x.png */,
-				D60609541C76FF0E000DB373 /* 可视@3x.png */,
-				D60609551C76FF0E000DB373 /* 可视0@1x.png */,
-				D60609561C76FF0E000DB373 /* 可视0@2x.png */,
-				D60609571C76FF0E000DB373 /* 可视0@3x.png */,
-				D60609581C76FF0E000DB373 /* 联系人信息@1x.png */,
-				D60609591C76FF0E000DB373 /* 联系人信息@2x.png */,
-				D606095A1C76FF0E000DB373 /* 联系人信息@3x.png */,
-				D606095B1C76FF0E000DB373 /* 朋友圈@1x.png */,
-				D606095C1C76FF0E000DB373 /* 朋友圈@2x.png */,
-				D606095D1C76FF0E000DB373 /* 朋友圈@3x.png */,
-				D606095E1C76FF0E000DB373 /* 身份证信息@1x.png */,
-				D606095F1C76FF0E000DB373 /* 身份证信息@2x.png */,
-				D60609601C76FF0E000DB373 /* 身份证信息@3x.png */,
-				D60609611C76FF0E000DB373 /* 手机号码@1x.png */,
-				D60609621C76FF0E000DB373 /* 手机号码@2x.png */,
-				D60609631C76FF0E000DB373 /* 手机号码@3x.png */,
-				D60609641C76FF0E000DB373 /* 腾讯微博@1x.png */,
-				D60609651C76FF0E000DB373 /* 腾讯微博@2x.png */,
-				D60609661C76FF0E000DB373 /* 腾讯微博@3x.png */,
-				D60609671C76FF0E000DB373 /* 添加照片@1x.png */,
-				D60609681C76FF0E000DB373 /* 添加照片@2x.png */,
-				D60609691C76FF0E000DB373 /* 添加照片@3x.png */,
-				D606096A1C76FF0E000DB373 /* 同意@1x.png */,
-				D606096B1C76FF0E000DB373 /* 同意@2x.png */,
-				D606096C1C76FF0E000DB373 /* 同意@3x.png */,
-				D606096D1C76FF0E000DB373 /* 同意0@1x.png */,
-				D606096E1C76FF0E000DB373 /* 同意0@2x.png */,
-				D606096F1C76FF0E000DB373 /* 同意0@3x.png */,
-				D60609701C76FF0E000DB373 /* 微博@1x.png */,
-				D60609711C76FF0E000DB373 /* 微博@2x.png */,
-				D60609721C76FF0E000DB373 /* 微博@3x.png */,
-				D60609731C76FF0E000DB373 /* 微信好友@1x.png */,
-				D60609741C76FF0E000DB373 /* 微信好友@2x.png */,
-				D60609751C76FF0E000DB373 /* 微信好友@3x.png */,
-				D60609761C76FF0E000DB373 /* 文件夹@1x.png */,
-				D60609771C76FF0E000DB373 /* 文件夹@2x.png */,
-				D60609781C76FF0E000DB373 /* 文件夹@3x.png */,
-				D60609791C76FF0E000DB373 /* 我的@1x.png */,
-				D606097A1C76FF0E000DB373 /* 我的@2x.png */,
-				D606097B1C76FF0E000DB373 /* 我的@3x.png */,
-				D606097C1C76FF0E000DB373 /* 我的0@1x.png */,
-				D606097D1C76FF0E000DB373 /* 我的0@2x.png */,
-				D606097E1C76FF0E000DB373 /* 我的0@3x.png */,
-				D606097F1C76FF0E000DB373 /* 下拉@1x.png */,
-				D60609801C76FF0E000DB373 /* 下拉@2x.png */,
-				D60609811C76FF0E000DB373 /* 下拉@3x.png */,
-				D60609821C76FF0E000DB373 /* 消息中心@1x.png */,
-				D60609831C76FF0E000DB373 /* 消息中心@2x.png */,
-				D60609841C76FF0E000DB373 /* 消息中心@3x.png */,
-				D60609851C76FF0E000DB373 /* 信用等级@1x.png */,
-				D60609861C76FF0E000DB373 /* 信用等级@2x.png */,
-				D60609871C76FF0E000DB373 /* 信用等级@3x.png */,
-				D60609881C76FF0E000DB373 /* 信用额度@1x.png */,
-				D60609891C76FF0E000DB373 /* 信用额度@2x.png */,
-				D606098A1C76FF0E000DB373 /* 信用额度@3x.png */,
-				D606098B1C76FF0E000DB373 /* 银行卡信息@1x.png */,
-				D606098C1C76FF0E000DB373 /* 银行卡信息@2x.png */,
-				D606098D1C76FF0E000DB373 /* 银行卡信息@3x.png */,
+				D606094F1C76FF0E000DB373 /* recommend.png */,
+				D60609501C76FF0E000DB373 /* recommend@2x.png */,
+				D60609511C76FF0E000DB373 /* recommend@3x.png */,
+				D60609521C76FF0E000DB373 /* visible.png */,
+				D60609531C76FF0E000DB373 /* visible@2x.png */,
+				D60609541C76FF0E000DB373 /* visible@3x.png */,
+				D60609551C76FF0E000DB373 /* no_visible.png */,
+				D60609561C76FF0E000DB373 /* no_visible@2x.png */,
+				D60609571C76FF0E000DB373 /* no_visible@3x.png */,
+				D60609581C76FF0E000DB373 /* contact.png */,
+				D60609591C76FF0E000DB373 /* contact@2x.png */,
+				D606095A1C76FF0E000DB373 /* contact@3x.png */,
+				D606095B1C76FF0E000DB373 /* friendsCircle.png */,
+				D606095C1C76FF0E000DB373 /* friendsCircle@2x.png */,
+				D606095D1C76FF0E000DB373 /* friendsCircle@3x.png */,
+				D606095E1C76FF0E000DB373 /* IDInfo.png */,
+				D606095F1C76FF0E000DB373 /* IDInfo@2x.png */,
+				D60609601C76FF0E000DB373 /* IDInfo@3x.png */,
+				D60609611C76FF0E000DB373 /* phoneNumber.png */,
+				D60609621C76FF0E000DB373 /* phoneNumber@2x.png */,
+				D60609631C76FF0E000DB373 /* phoneNumber@3x.png */,
+				D60609641C76FF0E000DB373 /* txweibo.png */,
+				D60609651C76FF0E000DB373 /* txweibo@2x.png */,
+				D60609661C76FF0E000DB373 /* txweibo@3x.png */,
+				D60609671C76FF0E000DB373 /* addPic.png */,
+				D60609681C76FF0E000DB373 /* addPic@2x.png */,
+				D60609691C76FF0E000DB373 /* addPic@3x.png */,
+				D606096A1C76FF0E000DB373 /* approve_on.png */,
+				D606096B1C76FF0E000DB373 /* approve_on@2x.png */,
+				D606096C1C76FF0E000DB373 /* approve_on@3x.png */,
+				D606096D1C76FF0E000DB373 /* approve_off.png */,
+				D606096E1C76FF0E000DB373 /* approve_off@2x.png */,
+				D606096F1C76FF0E000DB373 /* approve_off@3x.png */,
+				D60609701C76FF0E000DB373 /* weibo.png */,
+				D60609711C76FF0E000DB373 /* weibo@2x.png */,
+				D60609721C76FF0E000DB373 /* weibo@3x.png */,
+				D60609731C76FF0E000DB373 /* wechat.png */,
+				D60609741C76FF0E000DB373 /* wechat@2x.png */,
+				D60609751C76FF0E000DB373 /* wechat@3x.png */,
+				D60609761C76FF0E000DB373 /* folder.png */,
+				D60609771C76FF0E000DB373 /* folder@2x.png */,
+				D60609781C76FF0E000DB373 /* folder@3x.png */,
+				D60609791C76FF0E000DB373 /* mine_on.png */,
+				D606097A1C76FF0E000DB373 /* mine_on@2x.png */,
+				D606097B1C76FF0E000DB373 /* mine_on@3x.png */,
+				D606097C1C76FF0E000DB373 /* mine_off.png */,
+				D606097D1C76FF0E000DB373 /* mine_off@2x.png */,
+				D606097E1C76FF0E000DB373 /* mine_off@3x.png */,
+				D606097F1C76FF0E000DB373 /* pullDown.png */,
+				D60609801C76FF0E000DB373 /* pullDown@2x.png */,
+				D60609811C76FF0E000DB373 /* pullDown@3x.png */,
+				D60609821C76FF0E000DB373 /* notificationCenter.png */,
+				D60609831C76FF0E000DB373 /* notificationCenter@2x.png */,
+				D60609841C76FF0E000DB373 /* notificationCenter@3x.png */,
+				D60609851C76FF0E000DB373 /* creditlevel.png */,
+				D60609861C76FF0E000DB373 /* creditlevel@2x.png */,
+				D60609871C76FF0E000DB373 /* creditlevel@3x.png */,
+				D60609881C76FF0E000DB373 /* creditline.png */,
+				D60609891C76FF0E000DB373 /* creditline@2x.png */,
+				D606098A1C76FF0E000DB373 /* creditline@3x.png */,
+				D606098B1C76FF0E000DB373 /* creditCardInfo.png */,
+				D606098C1C76FF0E000DB373 /* creditCardInfo@2x.png */,
+				D606098D1C76FF0E000DB373 /* creditCardInfo@3x.png */,
 				D606098E1C76FF0E000DB373 /* go@1x.png */,
 				D606098F1C76FF0E000DB373 /* go@2x.png */,
 				D60609901C76FF0E000DB373 /* go@3x.png */,
@@ -1158,157 +1160,157 @@
 				D60609B11C76FF0E000DB373 /* 更多@3x.png in Resources */,
 				D60609C61C76FF0E000DB373 /* 还款须知@3x.png in Resources */,
 				D60609A11C76FF0E000DB373 /* 步骤0@2x.png in Resources */,
-				D6060A121C76FF0E000DB373 /* 信用额度@1x.png in Resources */,
-				D60609F21C76FF0E000DB373 /* 添加照片@2x.png in Resources */,
+				D6060A121C76FF0E000DB373 /* creditline.png in Resources */,
+				D60609F21C76FF0E000DB373 /* addPic@2x.png in Resources */,
 				D6E104D71C7320FD00049C3F /* LaunchScreen.storyboard in Resources */,
 				D6060A351C77189C000DB373 /* HeaderView.xib in Resources */,
 				D60609AF1C76FF0E000DB373 /* 更多@1x.png in Resources */,
-				D60609EC1C76FF0E000DB373 /* 手机号码@2x.png in Resources */,
-				D60609E71C76FF0E000DB373 /* 朋友圈@3x.png in Resources */,
+				D60609EC1C76FF0E000DB373 /* phoneNumber@2x.png in Resources */,
+				D60609E71C76FF0E000DB373 /* friendsCircle@3x.png in Resources */,
 				D60609B91C76FF0E000DB373 /* 工作信息@2x.png in Resources */,
-				D60609FE1C76FF0E000DB373 /* 微信好友@2x.png in Resources */,
+				D60609FE1C76FF0E000DB373 /* wechat@2x.png in Resources */,
 				D6060A1F1C76FF0E000DB373 /* qq@2x.png in Resources */,
-				D6060A021C76FF0E000DB373 /* 文件夹@3x.png in Resources */,
-				D6060A0B1C76FF0E000DB373 /* 下拉@3x.png in Resources */,
+				D6060A021C76FF0E000DB373 /* folder@3x.png in Resources */,
+				D6060A0B1C76FF0E000DB373 /* pullDown@3x.png in Resources */,
 				D6060A1D1C76FF0E000DB373 /* logo@3x.png in Resources */,
 				D60609D71C76FF0E000DB373 /* 借款须知@2x.png in Resources */,
 				D60609D01C76FF0E000DB373 /* 借款@1x.png in Resources */,
-				D6060A001C76FF0E000DB373 /* 文件夹@1x.png in Resources */,
-				D60609DD1C76FF0E000DB373 /* 可视@2x.png in Resources */,
-				D60609E11C76FF0E000DB373 /* 可视0@3x.png in Resources */,
+				D6060A001C76FF0E000DB373 /* folder.png in Resources */,
+				D60609DD1C76FF0E000DB373 /* visible@2x.png in Resources */,
+				D60609E11C76FF0E000DB373 /* no_visible@3x.png in Resources */,
 				D606099B1C76FF0E000DB373 /* 补充附件@2x.png in Resources */,
 				D60609AD1C76FF0E000DB373 /* 分享@2x.png in Resources */,
-				D60609FD1C76FF0E000DB373 /* 微信好友@1x.png in Resources */,
+				D60609FD1C76FF0E000DB373 /* wechat.png in Resources */,
 				D60609D11C76FF0E000DB373 /* 借款@2x.png in Resources */,
 				D60609BC1C76FF0E000DB373 /* 关于@2x.png in Resources */,
-				D6060A031C76FF0E000DB373 /* 我的@1x.png in Resources */,
+				D6060A031C76FF0E000DB373 /* mine_on.png in Resources */,
 				D60609B31C76FF0E000DB373 /* 更多0@2x.png in Resources */,
 				D6060A1C1C76FF0E000DB373 /* logo@2x.png in Resources */,
 				D60609BA1C76FF0E000DB373 /* 工作信息@3x.png in Resources */,
 				D6E1068B1C75BE8500049C3F /* circle_blue_44@2x.png in Resources */,
-				D60609E51C76FF0E000DB373 /* 朋友圈@1x.png in Resources */,
-				D6060A111C76FF0E000DB373 /* 信用等级@3x.png in Resources */,
+				D60609E51C76FF0E000DB373 /* friendsCircle.png in Resources */,
+				D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */,
 				D60609A61C76FF0E000DB373 /* 电话图标@1x.png in Resources */,
-				D60609E31C76FF0E000DB373 /* 联系人信息@2x.png in Resources */,
+				D60609E31C76FF0E000DB373 /* contact@2x.png in Resources */,
 				D606099F1C76FF0E000DB373 /* 步骤@3x.png in Resources */,
-				D60609F51C76FF0E000DB373 /* 同意@2x.png in Resources */,
+				D60609F51C76FF0E000DB373 /* approve_on@2x.png in Resources */,
 				D60609BB1C76FF0E000DB373 /* 关于@1x.png in Resources */,
 				D6E106921C75BEF500049C3F /* Circle_Grey_44@3x.png in Resources */,
 				D6060A221C76FF0E000DB373 /* qq空间@2x.png in Resources */,
-				D60609E21C76FF0E000DB373 /* 联系人信息@1x.png in Resources */,
+				D60609E21C76FF0E000DB373 /* contact.png in Resources */,
 				D606099A1C76FF0E000DB373 /* 补充附件@1x.png in Resources */,
 				D60609A81C76FF0E000DB373 /* 电话图标@3x.png in Resources */,
-				D60609DE1C76FF0E000DB373 /* 可视@3x.png in Resources */,
+				D60609DE1C76FF0E000DB373 /* visible@3x.png in Resources */,
 				D60609AB1C76FF0E000DB373 /* 返回@3x.png in Resources */,
 				D60609D81C76FF0E000DB373 /* 借款须知@3x.png in Resources */,
 				D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */,
 				D60609BE1C76FF0E000DB373 /* 还款@1x.png in Resources */,
-				D60609E61C76FF0E000DB373 /* 朋友圈@2x.png in Resources */,
+				D60609E61C76FF0E000DB373 /* friendsCircle@2x.png in Resources */,
 				D60609A31C76FF0E000DB373 /* 持证牌照信息@1x.png in Resources */,
 				D60609B81C76FF0E000DB373 /* 工作信息@1x.png in Resources */,
 				D60609B61C76FF0E000DB373 /* 更改密码@2x.png in Resources */,
 				D60609CF1C76FF0E000DB373 /* 检查更新@3x.png in Resources */,
-				D6060A0D1C76FF0E000DB373 /* 消息中心@2x.png in Resources */,
-				D60609E81C76FF0E000DB373 /* 身份证信息@1x.png in Resources */,
+				D6060A0D1C76FF0E000DB373 /* notificationCenter@2x.png in Resources */,
+				D60609E81C76FF0E000DB373 /* IDInfo.png in Resources */,
 				D60609D51C76FF0E000DB373 /* 借款0@3x.png in Resources */,
 				D60609A01C76FF0E000DB373 /* 步骤0@1x.png in Resources */,
-				D60609E91C76FF0E000DB373 /* 身份证信息@2x.png in Resources */,
+				D60609E91C76FF0E000DB373 /* IDInfo@2x.png in Resources */,
 				D60609C71C76FF0E000DB373 /* 还款页面go@1x.png in Resources */,
 				D6E104D41C7320FD00049C3F /* Assets.xcassets in Resources */,
-				D6060A041C76FF0E000DB373 /* 我的@2x.png in Resources */,
+				D6060A041C76FF0E000DB373 /* mine_on@2x.png in Resources */,
 				D60609A91C76FF0E000DB373 /* 返回@1x.png in Resources */,
-				D6060A081C76FF0E000DB373 /* 我的0@3x.png in Resources */,
+				D6060A081C76FF0E000DB373 /* mine_off@3x.png in Resources */,
 				D60609A71C76FF0E000DB373 /* 电话图标@2x.png in Resources */,
 				D6E106901C75BEF500049C3F /* Circle_Grey_44.png in Resources */,
-				D60609ED1C76FF0E000DB373 /* 手机号码@3x.png in Resources */,
+				D60609ED1C76FF0E000DB373 /* phoneNumber@3x.png in Resources */,
 				D6E106911C75BEF500049C3F /* Circle_Grey_44@2x.png in Resources */,
-				D60609F71C76FF0E000DB373 /* 同意0@1x.png in Resources */,
+				D60609F71C76FF0E000DB373 /* approve_off.png in Resources */,
 				D60609C41C76FF0E000DB373 /* 还款须知@1x.png in Resources */,
-				D6060A0A1C76FF0E000DB373 /* 下拉@2x.png in Resources */,
+				D6060A0A1C76FF0E000DB373 /* pullDown@2x.png in Resources */,
 				D60609CA1C76FF0E000DB373 /* 好评@1x.png in Resources */,
-				D6060A161C76FF0E000DB373 /* 银行卡信息@2x.png in Resources */,
+				D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */,
 				D60609B01C76FF0E000DB373 /* 更多@2x.png in Resources */,
-				D6060A061C76FF0E000DB373 /* 我的0@1x.png in Resources */,
+				D6060A061C76FF0E000DB373 /* mine_off.png in Resources */,
 				D60609C11C76FF0E000DB373 /* 还款0@1x.png in Resources */,
-				D60609EA1C76FF0E000DB373 /* 身份证信息@3x.png in Resources */,
-				D6060A071C76FF0E000DB373 /* 我的0@2x.png in Resources */,
+				D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */,
+				D6060A071C76FF0E000DB373 /* mine_off@2x.png in Resources */,
 				D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */,
-				D60609DC1C76FF0E000DB373 /* 可视@1x.png in Resources */,
+				D60609DC1C76FF0E000DB373 /* visible.png in Resources */,
 				D60609AA1C76FF0E000DB373 /* 返回@2x.png in Resources */,
 				D60609B71C76FF0E000DB373 /* 更改密码@3x.png in Resources */,
 				D60609C81C76FF0E000DB373 /* 还款页面go@2x.png in Resources */,
-				D60609FB1C76FF0E000DB373 /* 微博@2x.png in Resources */,
-				D60609FC1C76FF0E000DB373 /* 微博@3x.png in Resources */,
-				D60609E41C76FF0E000DB373 /* 联系人信息@3x.png in Resources */,
+				D60609FB1C76FF0E000DB373 /* weibo@2x.png in Resources */,
+				D60609FC1C76FF0E000DB373 /* weibo@3x.png in Resources */,
+				D60609E41C76FF0E000DB373 /* contact@3x.png in Resources */,
 				D60609A21C76FF0E000DB373 /* 步骤0@3x.png in Resources */,
 				D60609CC1C76FF0E000DB373 /* 好评@3x.png in Resources */,
-				D6060A0C1C76FF0E000DB373 /* 消息中心@1x.png in Resources */,
+				D6060A0C1C76FF0E000DB373 /* notificationCenter.png in Resources */,
 				D6060A1A1C76FF0E000DB373 /* go@3x.png in Resources */,
 				D6E106611C74888200049C3F /* ActivityViewController.xib in Resources */,
-				D60609F41C76FF0E000DB373 /* 同意@1x.png in Resources */,
+				D60609F41C76FF0E000DB373 /* approve_on.png in Resources */,
 				D6060A1B1C76FF0E000DB373 /* logo@1x.png in Resources */,
-				D60609FF1C76FF0E000DB373 /* 微信好友@3x.png in Resources */,
+				D60609FF1C76FF0E000DB373 /* wechat@3x.png in Resources */,
 				D60609B21C76FF0E000DB373 /* 更多0@1x.png in Resources */,
-				D60609E01C76FF0E000DB373 /* 可视0@2x.png in Resources */,
+				D60609E01C76FF0E000DB373 /* no_visible@2x.png in Resources */,
 				D60609AC1C76FF0E000DB373 /* 分享@1x.png in Resources */,
 				D60609C51C76FF0E000DB373 /* 还款须知@2x.png in Resources */,
-				D60609F61C76FF0E000DB373 /* 同意@3x.png in Resources */,
+				D60609F61C76FF0E000DB373 /* approve_on@3x.png in Resources */,
 				D60609D21C76FF0E000DB373 /* 借款@3x.png in Resources */,
 				D60609B51C76FF0E000DB373 /* 更改密码@1x.png in Resources */,
-				D60609F31C76FF0E000DB373 /* 添加照片@3x.png in Resources */,
-				D6060A091C76FF0E000DB373 /* 下拉@1x.png in Resources */,
+				D60609F31C76FF0E000DB373 /* addPic@3x.png in Resources */,
+				D6060A091C76FF0E000DB373 /* pullDown.png in Resources */,
 				D6E1068A1C75BE8500049C3F /* circle_blue_44.png in Resources */,
-				D6060A151C76FF0E000DB373 /* 银行卡信息@1x.png in Resources */,
+				D6060A151C76FF0E000DB373 /* creditCardInfo.png in Resources */,
 				D60609B41C76FF0E000DB373 /* 更多0@3x.png in Resources */,
-				D6060A0E1C76FF0E000DB373 /* 消息中心@3x.png in Resources */,
+				D6060A0E1C76FF0E000DB373 /* notificationCenter@3x.png in Resources */,
 				D6060A191C76FF0E000DB373 /* go@2x.png in Resources */,
-				D60609DA1C76FF0E000DB373 /* 精品推荐@2x.png in Resources */,
+				D60609DA1C76FF0E000DB373 /* recommend@2x.png in Resources */,
 				D6060A1E1C76FF0E000DB373 /* qq@1x.png in Resources */,
-				D6060A011C76FF0E000DB373 /* 文件夹@2x.png in Resources */,
-				D6060A101C76FF0E000DB373 /* 信用等级@2x.png in Resources */,
+				D6060A011C76FF0E000DB373 /* folder@2x.png in Resources */,
+				D6060A101C76FF0E000DB373 /* creditlevel@2x.png in Resources */,
 				D60609D41C76FF0E000DB373 /* 借款0@2x.png in Resources */,
 				D60609D61C76FF0E000DB373 /* 借款须知@1x.png in Resources */,
 				D60609D31C76FF0E000DB373 /* 借款0@1x.png in Resources */,
 				D606099D1C76FF0E000DB373 /* 步骤@1x.png in Resources */,
-				D60609F91C76FF0E000DB373 /* 同意0@3x.png in Resources */,
+				D60609F91C76FF0E000DB373 /* approve_off@3x.png in Resources */,
 				D60609C01C76FF0E000DB373 /* 还款@3x.png in Resources */,
 				D606099E1C76FF0E000DB373 /* 步骤@2x.png in Resources */,
 				D6060A541C7721B9000DB373 /* Info.plist in Resources */,
-				D60609F01C76FF0E000DB373 /* 腾讯微博@3x.png in Resources */,
+				D60609F01C76FF0E000DB373 /* txweibo@3x.png in Resources */,
 				D6060A231C76FF0E000DB373 /* qq空间@3x.png in Resources */,
-				D6060A131C76FF0E000DB373 /* 信用额度@2x.png in Resources */,
+				D6060A131C76FF0E000DB373 /* creditline@2x.png in Resources */,
 				D60609CB1C76FF0E000DB373 /* 好评@2x.png in Resources */,
 				D60609C91C76FF0E000DB373 /* 还款页面go@3x.png in Resources */,
 				D6E1068C1C75BE8500049C3F /* circle_blue_44@3x.png in Resources */,
 				D6060A211C76FF0E000DB373 /* qq空间@1x.png in Resources */,
-				D60609D91C76FF0E000DB373 /* 精品推荐@1x.png in Resources */,
-				D6060A171C76FF0E000DB373 /* 银行卡信息@3x.png in Resources */,
-				D60609DF1C76FF0E000DB373 /* 可视0@1x.png in Resources */,
+				D60609D91C76FF0E000DB373 /* recommend.png in Resources */,
+				D6060A171C76FF0E000DB373 /* creditCardInfo@3x.png in Resources */,
+				D60609DF1C76FF0E000DB373 /* no_visible.png in Resources */,
 				D60609C21C76FF0E000DB373 /* 还款0@2x.png in Resources */,
 				D60609C31C76FF0E000DB373 /* 还款0@3x.png in Resources */,
 				D60609AE1C76FF0E000DB373 /* 分享@3x.png in Resources */,
-				D6060A141C76FF0E000DB373 /* 信用额度@3x.png in Resources */,
-				D60609EE1C76FF0E000DB373 /* 腾讯微博@1x.png in Resources */,
+				D6060A141C76FF0E000DB373 /* creditline@3x.png in Resources */,
+				D60609EE1C76FF0E000DB373 /* txweibo.png in Resources */,
 				D6060A201C76FF0E000DB373 /* qq@3x.png in Resources */,
 				D606099C1C76FF0E000DB373 /* 补充附件@3x.png in Resources */,
 				D60609BD1C76FF0E000DB373 /* 关于@3x.png in Resources */,
 				D60609A51C76FF0E000DB373 /* 持证牌照信息@3x.png in Resources */,
-				D60609DB1C76FF0E000DB373 /* 精品推荐@3x.png in Resources */,
+				D60609DB1C76FF0E000DB373 /* recommend@3x.png in Resources */,
 				D60609BF1C76FF0E000DB373 /* 还款@2x.png in Resources */,
 				D6060A181C76FF0E000DB373 /* go@1x.png in Resources */,
 				D6E1066C1C74893900049C3F /* ApplyViewController.xib in Resources */,
-				D60609FA1C76FF0E000DB373 /* 微博@1x.png in Resources */,
-				D60609F11C76FF0E000DB373 /* 添加照片@1x.png in Resources */,
-				D6060A0F1C76FF0E000DB373 /* 信用等级@1x.png in Resources */,
-				D60609EB1C76FF0E000DB373 /* 手机号码@1x.png in Resources */,
+				D60609FA1C76FF0E000DB373 /* weibo.png in Resources */,
+				D60609F11C76FF0E000DB373 /* addPic.png in Resources */,
+				D6060A0F1C76FF0E000DB373 /* creditlevel.png in Resources */,
+				D60609EB1C76FF0E000DB373 /* phoneNumber.png in Resources */,
 				D60609CD1C76FF0E000DB373 /* 检查更新@1x.png in Resources */,
 				D6E1061B1C73293000049C3F /* MMLogViewController.xib in Resources */,
 				D6060A281C770204000DB373 /* NewApplyViewController.xib in Resources */,
 				D60609A41C76FF0E000DB373 /* 持证牌照信息@2x.png in Resources */,
 				D60609CE1C76FF0E000DB373 /* 检查更新@2x.png in Resources */,
-				D6060A051C76FF0E000DB373 /* 我的@3x.png in Resources */,
-				D60609F81C76FF0E000DB373 /* 同意0@2x.png in Resources */,
-				D60609EF1C76FF0E000DB373 /* 腾讯微博@2x.png in Resources */,
+				D6060A051C76FF0E000DB373 /* mine_on@3x.png in Resources */,
+				D60609F81C76FF0E000DB373 /* approve_off@2x.png in Resources */,
+				D60609EF1C76FF0E000DB373 /* txweibo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,10 +57,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-//    self.view.frame = CGRectMake(0, 64, self.navigationController.view.bounds.size.width, self.navigationController.view.bounds.size.height);
-    UIView *ssView = self.view.superview;
-    NSLog(@"当前view的父视图  %@",ssView);
-    
     self.title = @"借款";
     // Do any additional setup after loading the view.
     [self initHeaderView];

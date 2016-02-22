@@ -8,15 +8,21 @@
 
 #import "MMTabbarController.h"
 #import "TabbarTitleHeader.h"
-
+#import "MMTabbar.h"
+#import "ColorHeader.h"
 
 
 @interface MMTabbarController ()
-
+@property (nonatomic, strong)MMTabbar *imageHelper;
 @end
 
 @implementation MMTabbarController
-
+- (MMTabbar *)imageHelper{
+    if (!_imageHelper) {
+        _imageHelper = [MMTabbar new];
+    }
+    return _imageHelper;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -25,18 +31,29 @@
 }
 - (void)configureItems{
     UITabBar *tabbar = self.tabBar;
+    tabbar.tintColor = REDCOLOR;
+    tabbar.barTintColor = [UIColor whiteColor];
+    
+    
     UITabBarItem *loanItem = tabbar.items[0];
     loanItem.title = LOAN_TITLE;
+    loanItem.image = self.imageHelper.loanOffImage;
+    loanItem.selectedImage = self.imageHelper.loanOnImage;
     
     UITabBarItem *refundItem = tabbar.items[1];
     refundItem.title = REFUND_TITLE;
+    refundItem.image = self.imageHelper.reOffImage;
+    refundItem.selectedImage = self.imageHelper.reOnImage;
     
     UITabBarItem *mineItem = tabbar.items[2];
     mineItem.title = MINE_TITLE;
+    mineItem.image = self.imageHelper.mineOffImage;
+    mineItem.selectedImage = self.imageHelper.mineOnImage;
     
     UITabBarItem *moreItem = tabbar.items[3];
     moreItem.title = MORE_TITLE;
-    
+    moreItem.image = self.imageHelper.moreOffImage;
+    moreItem.selectedImage = self.imageHelper.mineOnImage;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

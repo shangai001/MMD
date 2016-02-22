@@ -11,9 +11,61 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJT-sG-blV">
+                    <rect key="frame" x="30" y="138" width="354" height="170"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kd3-NY-3wO">
+                    <rect key="frame" x="30" y="516" width="354" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="P1F-0k-LJK"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="借款到帐后30天还款，每期还款550元，共1期">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDL-M4-Sy4">
+                    <rect key="frame" x="30" y="572" width="354" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="frO-dT-V6P"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="下一步">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHM-Nq-BNm">
+                    <rect key="frame" x="30" y="336" width="354" height="170"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kd3-NY-3wO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="6Bh-pc-jDK"/>
+                <constraint firstAttribute="bottom" secondItem="SDL-M4-Sy4" secondAttribute="bottom" constant="100" id="6r1-9F-Rjd"/>
+                <constraint firstItem="SDL-M4-Sy4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="7WB-vz-dEw"/>
+                <constraint firstItem="FHM-Nq-BNm" firstAttribute="top" secondItem="VJT-sG-blV" secondAttribute="bottom" constant="28" id="7ZT-TM-jkl"/>
+                <constraint firstAttribute="trailing" secondItem="FHM-Nq-BNm" secondAttribute="trailing" constant="30" id="88G-Dd-GFG"/>
+                <constraint firstItem="FHM-Nq-BNm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Akl-XE-87C"/>
+                <constraint firstItem="FHM-Nq-BNm" firstAttribute="height" secondItem="VJT-sG-blV" secondAttribute="height" id="Dcf-Nd-VQP"/>
+                <constraint firstItem="VJT-sG-blV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="138" id="JYe-MJ-9Zh"/>
+                <constraint firstItem="VJT-sG-blV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="NYg-vp-m68"/>
+                <constraint firstAttribute="trailing" secondItem="VJT-sG-blV" secondAttribute="trailing" constant="30" id="PJy-Fc-E4S"/>
+                <constraint firstItem="SDL-M4-Sy4" firstAttribute="top" secondItem="kd3-NY-3wO" secondAttribute="bottom" constant="35" id="aM3-Rx-Wjg"/>
+                <constraint firstItem="kd3-NY-3wO" firstAttribute="top" secondItem="FHM-Nq-BNm" secondAttribute="bottom" constant="10" id="hHH-6o-egL"/>
+                <constraint firstAttribute="trailing" secondItem="SDL-M4-Sy4" secondAttribute="trailing" constant="30" id="hM8-mt-Qbd"/>
+                <constraint firstAttribute="trailing" secondItem="kd3-NY-3wO" secondAttribute="trailing" constant="30" id="ui3-HM-UTu"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
