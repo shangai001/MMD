@@ -18,13 +18,16 @@
     // Drawing code
 }
 */
+/**
+*  底部线条的宽度待定
+*/
 - (void)awakeFromNib{
-    self.selectedIndex = 0;
+    self.selectedIndex = -1;
 }
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
     _selectedIndex = selectedIndex;
     UIButton *selectButton = (UIButton *)[self viewWithTag:_selectedIndex + BUTTON_BASETAG];
-    
+
     [UIView animateWithDuration:0.15 animations:^{
         CGPoint linePoint = self.bottomLineView.center;
         linePoint.x = selectButton.center.x;
@@ -32,11 +35,22 @@
     }];
     
 }
+- (void)callHeaderDelegate:(UIButton *)selectedButton{
+    if ([self.headerDelegate respondsToSelector:@selector(didSelectButton:buttonIndex:)]) {
+        [self.headerDelegate didSelectButton:selectedButton buttonIndex:self.selectedIndex];
+    }
+}
 - (IBAction)askLoan:(id)sender {
+    self.selectedIndex = 0;
+    [self callHeaderDelegate:sender];
 }
 - (IBAction)promotion:(id)sender {
+    self.selectedIndex = 1;
+    [self callHeaderDelegate:sender];
 }
 - (IBAction)query:(id)sender {
+    self.selectedIndex = 2;
+    [self callHeaderDelegate:sender];
 }
 
 @end

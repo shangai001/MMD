@@ -11,7 +11,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGj-o3-rZc" userLabel="Bottom View">
-                    <rect key="frame" x="128" y="42" width="64" height="2"/>
+                    <rect key="frame" x="15" y="42" width="64" height="2"/>
                     <color key="backgroundColor" red="0.81960784310000001" green="0.27058823529999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="2" id="8ui-hq-dGs"/>
@@ -68,7 +68,7 @@
                 <constraint firstItem="CHW-y9-og0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ao0-bI-oG2"/>
                 <constraint firstAttribute="trailing" secondItem="m0W-Z3-0sC" secondAttribute="trailing" constant="15" id="FRz-Pr-7jg"/>
                 <constraint firstItem="CHW-y9-og0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZRR-s7-0av"/>
-                <constraint firstItem="HGj-o3-rZc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="goc-DJ-nzV"/>
+                <constraint firstItem="HGj-o3-rZc" firstAttribute="centerX" secondItem="mn1-ty-9KH" secondAttribute="centerX" id="gUv-8K-2FL"/>
                 <constraint firstItem="HGj-o3-rZc" firstAttribute="width" secondItem="CHW-y9-og0" secondAttribute="width" id="kHP-u5-JOD"/>
                 <constraint firstItem="m0W-Z3-0sC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nL3-hs-hgA"/>
             </constraints>

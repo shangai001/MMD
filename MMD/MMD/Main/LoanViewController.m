@@ -11,7 +11,7 @@
 #import "Masonry.h"
 
 
-@interface LoanViewController ()
+@interface LoanViewController ()<HeaderViewDelegate>
 
 @property (nonatomic, strong)HeaderView *headerView;
 
@@ -30,7 +30,9 @@
 - (HeaderView *)headerView{
     if (!_headerView) {
         _headerView = [HeaderView loadViewFromNib];
-        _headerView.backgroundColor = [UIColor orangeColor];
+        _headerView.backgroundColor = [UIColor whiteColor];
+        _headerView.headerDelegate = self;
+        _headerView.selectedIndex = 0;
     }
     return _headerView;
 }
@@ -55,20 +57,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.frame = CGRectMake(0, 64, self.navigationController.view.bounds.size.width, self.navigationController.view.bounds.size.height);
+    UIView *ssView = self.view.superview;
+    NSLog(@"当前view的父视图  %@",ssView);
+    
     self.title = @"借款";
     // Do any additional setup after loading the view.
     [self initHeaderView];
     [self initViewControllers];
 }
 - (void)initHeaderView{
-    
-    NSLog(@"导航  %@",self.);
-    
+    //Masonry布局
     [self.navigationController.view addSubview:self.headerView];
+    UIView *superHeaderView = self.headerView.superview;
     [_headerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view.mas_left);
-        make.right.equalTo(self.view.mas_right);
-        make.top.equalTo(self.view.mas_top).with.offset(88);
+        make.left.equalTo(superHeaderView.mas_left);
+        make.right.equalTo(superHeaderView.mas_right);
+        make.top.equalTo(superHeaderView.mas_top).with.offset(64);
         make.height.mas_equalTo(44);
     }];
 }
@@ -78,11 +83,53 @@
     [self addChildViewController:self.activity];
     [self addChildViewController:self.query];
     
-    self.apply.view.frame = self.view.bounds;
     [self.view addSubview:self.apply.view];
+//    [self setChildViewFrame:self.apply.view];
     [self.apply didMoveToParentViewController:self];
     self.currentViewController = self.apply;
     
+}
+- (void)setChildViewFrame:(UIView *)view{
+    UIView *parentView = view.superview;
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(parentView.mas_top).with.offset(64 + 44);
+        make.left.equalTo(parentView.mas_left);
+        make.right.equalTo(parentView.mas_right);
+        make.bottom.equalTo(parentView.mas_bottom);
+    }];
+}
+#pragma mark HeaderViewDelegate
+- (void)didSelectButton:(UIButton *)button buttonIndex:(NSUInteger)index{
+
+    UIViewController *toVC = nil;
+    switch (index) {
+        case 0:
+        {
+            toVC = self.apply;
+        }
+            break;
+        case 1:
+        {
+            toVC = self.activity;
+        }
+            break;
+        case 2:
+        {
+            toVC = self.query;
+        }
+            break;
+        default:
+            break;
+    }
+    
+    [self transitionFromViewController:self.currentViewController toViewController:toVC duration:0.15 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
+        
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [toVC didMoveToParentViewController:self];
+            self.currentViewController = toVC;
+        }
+    }];
 }
 /*
 - (void)didSelectSegment:(MMSegmentControl *)segment{
