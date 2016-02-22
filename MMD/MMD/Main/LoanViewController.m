@@ -8,11 +8,14 @@
 
 #import "LoanViewController.h"
 #import "LoanHeader.h"
+#import "Masonry.h"
 
 
 @interface LoanViewController ()
 
-//@property (nonatomic ,strong)MMSegmentControl *segment;
+@property (nonatomic, strong)HeaderView *headerView;
+
+
 @property (nonatomic, strong)NewApplyViewController *apply;
 @property (nonatomic, strong)ActivityViewController *activity;
 @property (nonatomic, strong)QueryViewController *query;
@@ -24,16 +27,13 @@
 
 @implementation LoanViewController
 #pragma LazyLoad
-//- (MMSegmentControl *)segment{
-//    if (!_segment) {
-//        NSArray *items = @[FIRSTTITLE,SECONDTITLE,THIRDTITLE];
-//        _segment = [[MMSegmentControl alloc] initWithItems:items];
-//        [_segment addTarget:self action:@selector(didSelectSegment:) forControlEvents:UIControlEventValueChanged];
-//        _segment.selectedSegmentIndex = 0;
-//        _segment.tintColor = [UIColor whiteColor];
-//    }
-//    return _segment;
-//}
+- (HeaderView *)headerView{
+    if (!_headerView) {
+        _headerView = [HeaderView loadViewFromNib];
+        _headerView.backgroundColor = [UIColor orangeColor];
+    }
+    return _headerView;
+}
 - (NewApplyViewController *)apply{
     if (!_apply) {
         _apply = [[NewApplyViewController alloc] initWithNibName:NSStringFromClass([NewApplyViewController class]) bundle:[NSBundle mainBundle]];
@@ -57,12 +57,20 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"借款";
     // Do any additional setup after loading the view.
-    [self initSegment];
+    [self initHeaderView];
     [self initViewControllers];
 }
-- (void)initSegment{
-//    self.segment.frame = CGRectMake(0, 0, 120, 30);
-//    self.navigationItem.titleView = self.segment;
+- (void)initHeaderView{
+    
+    NSLog(@"导航  %@",self.);
+    
+    [self.navigationController.view addSubview:self.headerView];
+    [_headerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.top.equalTo(self.view.mas_top).with.offset(88);
+        make.height.mas_equalTo(44);
+    }];
 }
 - (void)initViewControllers{
     
@@ -76,6 +84,7 @@
     self.currentViewController = self.apply;
     
 }
+/*
 - (void)didSelectSegment:(MMSegmentControl *)segment{
     NSUInteger index = segment.selectedSegmentIndex;
     UIViewController *toVC = nil;
@@ -109,6 +118,8 @@
         }
     }];
 }
+ */
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

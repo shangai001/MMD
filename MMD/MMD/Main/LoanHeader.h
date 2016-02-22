@@ -10,8 +10,8 @@
 #define LoanHeader_h
 
 #import "SegmentTitleHeader.h"
-#import "MMSegmentControl.h"
-
+#import "HeaderView.h"
+#import "UIView+LoadViewFromNib.h"
 #import "QueryViewController.h"
 #import "ActivityViewController.h"
 #import "NewApplyViewController.h"
