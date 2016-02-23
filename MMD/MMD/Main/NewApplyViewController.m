@@ -8,6 +8,8 @@
 
 #import "NewApplyViewController.h"
 #import "ColorHeader.h"
+#import "MMLogViewController.h"
+#import "BaseNavgationController.h"
 
 @interface NewApplyViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
 
@@ -104,6 +106,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)nextAction:(id)sender {
+    //登录
+    MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
+    BaseNavgationController *baseNav = [[BaseNavgationController alloc] initWithRootViewController:logger];
+    [self presentViewController:baseNav animated:YES completion:nil];
 }
 
 /*
