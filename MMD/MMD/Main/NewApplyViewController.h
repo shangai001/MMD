@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface NewApplyViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @end

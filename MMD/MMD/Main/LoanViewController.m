@@ -11,6 +11,9 @@
 #import "Masonry.h"
 
 
+
+#define TOP_Y 108
+
 @interface LoanViewController ()<HeaderViewDelegate>
 
 @property (nonatomic, strong)HeaderView *headerView;
@@ -80,7 +83,7 @@
     [self addChildViewController:self.query];
     
     [self.view addSubview:self.apply.view];
-//    [self setChildViewFrame:self.apply.view];
+    self.apply.view.frame = CGRectMake(0, TOP_Y, self.view.frame.size.width, self.view.frame.size.height - TOP_Y);
     [self.apply didMoveToParentViewController:self];
     self.currentViewController = self.apply;
     
@@ -88,7 +91,7 @@
 - (void)setChildViewFrame:(UIView *)view{
     UIView *parentView = view.superview;
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(parentView.mas_top).with.offset(64 + 44);
+        make.top.equalTo(parentView.mas_top).with.offset(TOP_Y);
         make.left.equalTo(parentView.mas_left);
         make.right.equalTo(parentView.mas_right);
         make.bottom.equalTo(parentView.mas_bottom);
@@ -123,6 +126,7 @@
     } completion:^(BOOL finished) {
         if (finished) {
             [toVC didMoveToParentViewController:self];
+            toVC.view.frame = CGRectMake(0, TOP_Y, self.view.frame.size.width, self.view.frame.size.height - 108);
             self.currentViewController = toVC;
         }
     }];
