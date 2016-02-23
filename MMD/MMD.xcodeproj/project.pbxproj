@@ -161,6 +161,15 @@
 		D6E106901C75BEF500049C3F /* Circle_Grey_44.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1068D1C75BEF500049C3F /* Circle_Grey_44.png */; };
 		D6E106911C75BEF500049C3F /* Circle_Grey_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1068E1C75BEF500049C3F /* Circle_Grey_44@2x.png */; };
 		D6E106921C75BEF500049C3F /* Circle_Grey_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1068F1C75BEF500049C3F /* Circle_Grey_44@3x.png */; };
+		D6F01DDC1C7C69D400EBC84E /* UpdateLoanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F01DDB1C7C69D400EBC84E /* UpdateLoanInfo.m */; };
+		D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */; };
+		D6F01DE61C7C6BFA00EBC84E /* add_press@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDE1C7C6BFA00EBC84E /* add_press@3x.png */; };
+		D6F01DE71C7C6BFA00EBC84E /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDF1C7C6BFA00EBC84E /* add@2x.png */; };
+		D6F01DE81C7C6BFA00EBC84E /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DE01C7C6BFA00EBC84E /* add@3x.png */; };
+		D6F01DE91C7C6BFA00EBC84E /* minus_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DE11C7C6BFA00EBC84E /* minus_press@2x.png */; };
+		D6F01DEA1C7C6BFA00EBC84E /* minus_press@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DE21C7C6BFA00EBC84E /* minus_press@3x.png */; };
+		D6F01DEB1C7C6BFA00EBC84E /* minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DE31C7C6BFA00EBC84E /* minus@2x.png */; };
+		D6F01DEC1C7C6BFA00EBC84E /* minus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DE41C7C6BFA00EBC84E /* minus@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -396,6 +405,16 @@
 		D6E1068D1C75BEF500049C3F /* Circle_Grey_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Circle_Grey_44.png; path = ../Circle_Grey_44.png; sourceTree = "<group>"; };
 		D6E1068E1C75BEF500049C3F /* Circle_Grey_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circle_Grey_44@2x.png"; path = "../Circle_Grey_44@2x.png"; sourceTree = "<group>"; };
 		D6E1068F1C75BEF500049C3F /* Circle_Grey_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circle_Grey_44@3x.png"; path = "../Circle_Grey_44@3x.png"; sourceTree = "<group>"; };
+		D6F01DDA1C7C69D400EBC84E /* UpdateLoanInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateLoanInfo.h; sourceTree = "<group>"; };
+		D6F01DDB1C7C69D400EBC84E /* UpdateLoanInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateLoanInfo.m; sourceTree = "<group>"; };
+		D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_press@2x.png"; sourceTree = "<group>"; };
+		D6F01DDE1C7C6BFA00EBC84E /* add_press@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_press@3x.png"; sourceTree = "<group>"; };
+		D6F01DDF1C7C6BFA00EBC84E /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
+		D6F01DE01C7C6BFA00EBC84E /* add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@3x.png"; sourceTree = "<group>"; };
+		D6F01DE11C7C6BFA00EBC84E /* minus_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus_press@2x.png"; sourceTree = "<group>"; };
+		D6F01DE21C7C6BFA00EBC84E /* minus_press@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus_press@3x.png"; sourceTree = "<group>"; };
+		D6F01DE31C7C6BFA00EBC84E /* minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus@2x.png"; sourceTree = "<group>"; };
+		D6F01DE41C7C6BFA00EBC84E /* minus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -664,6 +683,14 @@
 		D6E1050E1C73219800049C3F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */,
+				D6F01DDE1C7C6BFA00EBC84E /* add_press@3x.png */,
+				D6F01DDF1C7C6BFA00EBC84E /* add@2x.png */,
+				D6F01DE01C7C6BFA00EBC84E /* add@3x.png */,
+				D6F01DE11C7C6BFA00EBC84E /* minus_press@2x.png */,
+				D6F01DE21C7C6BFA00EBC84E /* minus_press@3x.png */,
+				D6F01DE31C7C6BFA00EBC84E /* minus@2x.png */,
+				D6F01DE41C7C6BFA00EBC84E /* minus@3x.png */,
 				D6E106871C75BE8500049C3F /* circle_blue_44.png */,
 				D6E106881C75BE8500049C3F /* circle_blue_44@2x.png */,
 				D6E106891C75BE8500049C3F /* circle_blue_44@3x.png */,
@@ -883,6 +910,8 @@
 				D6060A241C770204000DB373 /* NewApplyViewController.h */,
 				D6060A251C770204000DB373 /* NewApplyViewController.m */,
 				D6060A261C770204000DB373 /* NewApplyViewController.xib */,
+				D6F01DDA1C7C69D400EBC84E /* UpdateLoanInfo.h */,
+				D6F01DDB1C7C69D400EBC84E /* UpdateLoanInfo.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1024,6 +1053,7 @@
 				D60609A11C76FF0E000DB373 /* 步骤0@2x.png in Resources */,
 				D60609F21C76FF0E000DB373 /* addPic@2x.png in Resources */,
 				D6E104D71C7320FD00049C3F /* LaunchScreen.storyboard in Resources */,
+				D6F01DE81C7C6BFA00EBC84E /* add@3x.png in Resources */,
 				D6060A351C77189C000DB373 /* HeaderView.xib in Resources */,
 				D60609EC1C76FF0E000DB373 /* phoneNumber@2x.png in Resources */,
 				D60609E71C76FF0E000DB373 /* friendsCircle@3x.png in Resources */,
@@ -1034,6 +1064,7 @@
 				D6060A0B1C76FF0E000DB373 /* pullDown@3x.png in Resources */,
 				D6060A1D1C76FF0E000DB373 /* logo@3x.png in Resources */,
 				D60609D71C76FF0E000DB373 /* 借款须知@2x.png in Resources */,
+				D6F01DEA1C7C6BFA00EBC84E /* minus_press@3x.png in Resources */,
 				D60609DD1C76FF0E000DB373 /* visible@2x.png in Resources */,
 				D60609E11C76FF0E000DB373 /* no_visible@3x.png in Resources */,
 				D606099B1C76FF0E000DB373 /* 补充附件@2x.png in Resources */,
@@ -1048,9 +1079,12 @@
 				D60609E31C76FF0E000DB373 /* contact@2x.png in Resources */,
 				D606099F1C76FF0E000DB373 /* 步骤@3x.png in Resources */,
 				D60609F51C76FF0E000DB373 /* approve_on@2x.png in Resources */,
+				D6F01DE71C7C6BFA00EBC84E /* add@2x.png in Resources */,
+				D6F01DE61C7C6BFA00EBC84E /* add_press@3x.png in Resources */,
 				D6E106921C75BEF500049C3F /* Circle_Grey_44@3x.png in Resources */,
 				D6060A221C76FF0E000DB373 /* qq空间@2x.png in Resources */,
 				D60609A81C76FF0E000DB373 /* 电话图标@3x.png in Resources */,
+				D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */,
 				D60609DE1C76FF0E000DB373 /* visible@3x.png in Resources */,
 				D60609AB1C76FF0E000DB373 /* 返回@3x.png in Resources */,
 				D60609D81C76FF0E000DB373 /* 借款须知@3x.png in Resources */,
@@ -1077,6 +1111,7 @@
 				D60609AA1C76FF0E000DB373 /* 返回@2x.png in Resources */,
 				D60609B71C76FF0E000DB373 /* 更改密码@3x.png in Resources */,
 				D60609C81C76FF0E000DB373 /* 还款页面go@2x.png in Resources */,
+				D6F01DE91C7C6BFA00EBC84E /* minus_press@2x.png in Resources */,
 				D60609FB1C76FF0E000DB373 /* weibo@2x.png in Resources */,
 				D60609FC1C76FF0E000DB373 /* weibo@3x.png in Resources */,
 				D60609E41C76FF0E000DB373 /* contact@3x.png in Resources */,
@@ -1091,9 +1126,11 @@
 				D60609D21C76FF0E000DB373 /* 借款@3x.png in Resources */,
 				D60609F31C76FF0E000DB373 /* addPic@3x.png in Resources */,
 				D6E1068A1C75BE8500049C3F /* circle_blue_44.png in Resources */,
+				D6F01DEC1C7C6BFA00EBC84E /* minus@3x.png in Resources */,
 				D60609B41C76FF0E000DB373 /* 更多0@3x.png in Resources */,
 				D6060A0E1C76FF0E000DB373 /* notificationCenter@3x.png in Resources */,
 				D6060A191C76FF0E000DB373 /* go@2x.png in Resources */,
+				D6F01DEB1C7C6BFA00EBC84E /* minus@2x.png in Resources */,
 				D60609DA1C76FF0E000DB373 /* recommend@2x.png in Resources */,
 				D6060A011C76FF0E000DB373 /* folder@2x.png in Resources */,
 				D6060A101C76FF0E000DB373 /* creditlevel@2x.png in Resources */,
@@ -1176,6 +1213,7 @@
 				D6060A561C7721B9000DB373 /* MASConstraint.m in Sources */,
 				D6E1062D1C74783E00049C3F /* AFURLRequestSerialization.m in Sources */,
 				D6060A5C1C7721B9000DB373 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				D6F01DDC1C7C69D400EBC84E /* UpdateLoanInfo.m in Sources */,
 				D6060A5B1C7721B9000DB373 /* NSArray+MASAdditions.m in Sources */,
 				D6E106651C7488C700049C3F /* QueryViewController.m in Sources */,
 				D6E1062F1C74783E00049C3F /* AFURLSessionManager.m in Sources */,
