@@ -19,49 +19,49 @@
 */
 - (UIImage *)loanOnImage{
     if (!_loanOnImage) {
-        _loanOnImage = [UIImage imageNamed:@"借款"];
+        _loanOnImage = [UIImage imageNamed:@"借款.png"];
     }
     return _loanOnImage;
 }
 - (UIImage *)loanOffImage{
     if (!_loanOffImage) {
-        _loanOffImage = [UIImage imageNamed:@"借款0"];
+        _loanOffImage = [UIImage imageNamed:@"借款0.png"];
     }
     return _loanOffImage;
 }
 - (UIImage *)reOnImage{
     if (!_reOnImage) {
-        _reOnImage = [UIImage imageNamed:@"还款"];
+        _reOnImage = [UIImage imageNamed:@"还款.png"];
     }
     return _reOnImage;
 }
 - (UIImage *)reOffImage{
     if (!_reOffImage) {
-        _reOffImage = [UIImage imageNamed:@"还款0"];
+        _reOffImage = [UIImage imageNamed:@"还款0.png"];
     }
     return _reOffImage;
 }
 - (UIImage *)mineOnImage{
     if (!_mineOnImage) {
-        _mineOnImage = [UIImage imageNamed:@"mine_on"];
+        _mineOnImage = [UIImage imageNamed:@"mine_on.png"];
     }
     return _mineOnImage;
 }
 - (UIImage *)mineOffImage{
     if (!_mineOffImage) {
-        _mineOffImage = [UIImage imageNamed:@"mine_off"];
+        _mineOffImage = [UIImage imageNamed:@"mine_off.png"];
     }
     return _mineOffImage;
 }
 - (UIImage *)moreOnImage{
     if (!_moreOnImage) {
-        _moreOnImage = [UIImage imageNamed:@"更多"];
+        _moreOnImage = [UIImage imageNamed:@"更多.png"];
     }
     return _moreOnImage;
 }
 - (UIImage *)moreOffImage{
     if (!_moreOffImage) {
-        _moreOffImage = [UIImage imageNamed:@"更多0"];
+        _moreOffImage = [UIImage imageNamed:@"更多0.png"];
     }
     return _moreOffImage;
 }

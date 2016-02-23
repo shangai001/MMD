@@ -49,6 +49,7 @@
     mineItem.title = MINE_TITLE;
     mineItem.image = self.imageHelper.mineOffImage;
     mineItem.selectedImage = self.imageHelper.mineOnImage;
+//    mineItem.badgeValue = @"9";
     
     UITabBarItem *moreItem = tabbar.items[3];
     moreItem.title = MORE_TITLE;
