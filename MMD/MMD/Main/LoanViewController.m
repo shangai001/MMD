@@ -131,41 +131,6 @@
         }
     }];
 }
-/*
-- (void)didSelectSegment:(MMSegmentControl *)segment{
-    NSUInteger index = segment.selectedSegmentIndex;
-    UIViewController *toVC = nil;
-    
-    switch (index) {
-        case 0:
-        {
-            toVC = self.apply;
-        }
-            break;
-        case 1:
-        {
-            toVC = self.activity;
-        }
-            break;
-        case 2:
-        {
-            toVC = self.query;
-        }
-            break;
-        default:
-            break;
-    }
-
-    [self transitionFromViewController:self.currentViewController toViewController:toVC duration:0.15 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
-        
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [toVC didMoveToParentViewController:self];
-            self.currentViewController = toVC;
-        }
-    }];
-}
- */
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
