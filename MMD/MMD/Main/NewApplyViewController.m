@@ -25,6 +25,12 @@
     
     [self configurePickerView];
     [self configureMoneyPicker];
+    [self configureUI];
+}
+- (void)configureUI{
+    self.view.layer.masksToBounds = YES;
+    self.topView.layer.cornerRadius = 15.0f;
+    self.bottomView.layer.cornerRadius = 15.0f;
 }
 - (void)configureMoneyPicker{
     self.moneyCount = 500;
