@@ -143,12 +143,6 @@
 		D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E106641C7488C700049C3F /* QueryViewController.xib */; };
 		D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106691C74893900049C3F /* ApplyViewController.m */; };
 		D6E1066C1C74893900049C3F /* ApplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E1066A1C74893900049C3F /* ApplyViewController.xib */; };
-		D6E1068A1C75BE8500049C3F /* circle_blue_44.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E106871C75BE8500049C3F /* circle_blue_44.png */; };
-		D6E1068B1C75BE8500049C3F /* circle_blue_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E106881C75BE8500049C3F /* circle_blue_44@2x.png */; };
-		D6E1068C1C75BE8500049C3F /* circle_blue_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E106891C75BE8500049C3F /* circle_blue_44@3x.png */; };
-		D6E106901C75BEF500049C3F /* Circle_Grey_44.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1068D1C75BEF500049C3F /* Circle_Grey_44.png */; };
-		D6E106911C75BEF500049C3F /* Circle_Grey_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1068E1C75BEF500049C3F /* Circle_Grey_44@2x.png */; };
-		D6E106921C75BEF500049C3F /* Circle_Grey_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1068F1C75BEF500049C3F /* Circle_Grey_44@3x.png */; };
 		D6F01DDC1C7C69D400EBC84E /* UpdateLoanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F01DDB1C7C69D400EBC84E /* UpdateLoanInfo.m */; };
 		D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */; };
 		D6F01DE61C7C6BFA00EBC84E /* add_press@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDE1C7C6BFA00EBC84E /* add_press@3x.png */; };
@@ -387,12 +381,6 @@
 		D6E106681C74893900049C3F /* ApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyViewController.h; sourceTree = "<group>"; };
 		D6E106691C74893900049C3F /* ApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyViewController.m; sourceTree = "<group>"; };
 		D6E1066A1C74893900049C3F /* ApplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyViewController.xib; sourceTree = "<group>"; };
-		D6E106871C75BE8500049C3F /* circle_blue_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_blue_44.png; path = ../circle_blue_44.png; sourceTree = "<group>"; };
-		D6E106881C75BE8500049C3F /* circle_blue_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "circle_blue_44@2x.png"; path = "../circle_blue_44@2x.png"; sourceTree = "<group>"; };
-		D6E106891C75BE8500049C3F /* circle_blue_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "circle_blue_44@3x.png"; path = "../circle_blue_44@3x.png"; sourceTree = "<group>"; };
-		D6E1068D1C75BEF500049C3F /* Circle_Grey_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Circle_Grey_44.png; path = ../Circle_Grey_44.png; sourceTree = "<group>"; };
-		D6E1068E1C75BEF500049C3F /* Circle_Grey_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circle_Grey_44@2x.png"; path = "../Circle_Grey_44@2x.png"; sourceTree = "<group>"; };
-		D6E1068F1C75BEF500049C3F /* Circle_Grey_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circle_Grey_44@3x.png"; path = "../Circle_Grey_44@3x.png"; sourceTree = "<group>"; };
 		D6F01DDA1C7C69D400EBC84E /* UpdateLoanInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateLoanInfo.h; sourceTree = "<group>"; };
 		D6F01DDB1C7C69D400EBC84E /* UpdateLoanInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateLoanInfo.m; sourceTree = "<group>"; };
 		D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_press@2x.png"; sourceTree = "<group>"; };
@@ -692,12 +680,6 @@
 				D6F01DE21C7C6BFA00EBC84E /* minus_press@3x.png */,
 				D6F01DE31C7C6BFA00EBC84E /* minus@2x.png */,
 				D6F01DE41C7C6BFA00EBC84E /* minus@3x.png */,
-				D6E106871C75BE8500049C3F /* circle_blue_44.png */,
-				D6E106881C75BE8500049C3F /* circle_blue_44@2x.png */,
-				D6E106891C75BE8500049C3F /* circle_blue_44@3x.png */,
-				D6E1068D1C75BEF500049C3F /* Circle_Grey_44.png */,
-				D6E1068E1C75BEF500049C3F /* Circle_Grey_44@2x.png */,
-				D6E1068F1C75BEF500049C3F /* Circle_Grey_44@3x.png */,
 				D60609111C76FF0E000DB373 /* 补充附件@2x.png */,
 				D60609121C76FF0E000DB373 /* 补充附件@3x.png */,
 				D60609141C76FF0E000DB373 /* 步骤@2x.png */,
@@ -1083,7 +1065,6 @@
 				D60609B31C76FF0E000DB373 /* 更多0@2x.png in Resources */,
 				D6060A1C1C76FF0E000DB373 /* logo@2x.png in Resources */,
 				D60609BA1C76FF0E000DB373 /* 工作信息@3x.png in Resources */,
-				D6E1068B1C75BE8500049C3F /* circle_blue_44@2x.png in Resources */,
 				D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */,
 				D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */,
 				D60609E31C76FF0E000DB373 /* contact@2x.png in Resources */,
@@ -1092,7 +1073,6 @@
 				D60609F51C76FF0E000DB373 /* approve_on@2x.png in Resources */,
 				D6F01DE71C7C6BFA00EBC84E /* add@2x.png in Resources */,
 				D6F01DE61C7C6BFA00EBC84E /* add_press@3x.png in Resources */,
-				D6E106921C75BEF500049C3F /* Circle_Grey_44@3x.png in Resources */,
 				D6060A221C76FF0E000DB373 /* qq空间@2x.png in Resources */,
 				D60609A81C76FF0E000DB373 /* 电话图标@3x.png in Resources */,
 				D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */,
@@ -1108,9 +1088,7 @@
 				D6E104D41C7320FD00049C3F /* Assets.xcassets in Resources */,
 				D6060A081C76FF0E000DB373 /* mine_off@3x.png in Resources */,
 				D60609A71C76FF0E000DB373 /* 电话图标@2x.png in Resources */,
-				D6E106901C75BEF500049C3F /* Circle_Grey_44.png in Resources */,
 				D60609ED1C76FF0E000DB373 /* phoneNumber@3x.png in Resources */,
-				D6E106911C75BEF500049C3F /* Circle_Grey_44@2x.png in Resources */,
 				D6060A0A1C76FF0E000DB373 /* pullDown@2x.png in Resources */,
 				D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */,
 				D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */,
@@ -1135,7 +1113,6 @@
 				D60609C51C76FF0E000DB373 /* 还款须知@2x.png in Resources */,
 				D60609F61C76FF0E000DB373 /* approve_on@3x.png in Resources */,
 				D60609F31C76FF0E000DB373 /* addPic@3x.png in Resources */,
-				D6E1068A1C75BE8500049C3F /* circle_blue_44.png in Resources */,
 				D6F567201C8004ED00B0612F /* 借款@2x.png in Resources */,
 				D6F01DEC1C7C6BFA00EBC84E /* minus@3x.png in Resources */,
 				D60609B41C76FF0E000DB373 /* 更多0@3x.png in Resources */,
@@ -1155,7 +1132,6 @@
 				D60609CB1C76FF0E000DB373 /* 好评@2x.png in Resources */,
 				D60609C91C76FF0E000DB373 /* 还款页面go@3x.png in Resources */,
 				D6F5672C1C80056300B0612F /* 更多@2x.png in Resources */,
-				D6E1068C1C75BE8500049C3F /* circle_blue_44@3x.png in Resources */,
 				D6060A171C76FF0E000DB373 /* creditCardInfo@3x.png in Resources */,
 				D60609AE1C76FF0E000DB373 /* 分享@3x.png in Resources */,
 				D6060A141C76FF0E000DB373 /* creditline@3x.png in Resources */,
