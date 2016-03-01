@@ -112,7 +112,6 @@
 		D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E105001C73217C00049C3F /* MMTabbarController.m */; };
 		D6E1061A1C73293000049C3F /* MMLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106181C73293000049C3F /* MMLogViewController.m */; };
 		D6E1061B1C73293000049C3F /* MMLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E106191C73293000049C3F /* MMLogViewController.xib */; };
-		D6E106501C747B6B00049C3F /* EZNetReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */; };
 		D6E106531C747CCE00049C3F /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106521C747CCE00049C3F /* LoanViewController.m */; };
 		D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106591C747EEA00049C3F /* MMSegmentControl.m */; };
 		D6E106601C74888200049C3F /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E1065E1C74888200049C3F /* ActivityViewController.m */; };
@@ -291,8 +290,6 @@
 		D6E106171C73293000049C3F /* MMLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLogViewController.h; sourceTree = "<group>"; };
 		D6E106181C73293000049C3F /* MMLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLogViewController.m; sourceTree = "<group>"; };
 		D6E106191C73293000049C3F /* MMLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMLogViewController.xib; sourceTree = "<group>"; };
-		D6E1064E1C747B6B00049C3F /* EZNetReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZNetReachabilityManager.h; sourceTree = "<group>"; };
-		D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZNetReachabilityManager.m; sourceTree = "<group>"; };
 		D6E106511C747CCE00049C3F /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewController.h; sourceTree = "<group>"; };
 		D6E106521C747CCE00049C3F /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
 		D6E106581C747EEA00049C3F /* MMSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSegmentControl.h; sourceTree = "<group>"; };
@@ -615,8 +612,6 @@
 		D6E1050A1C73219000049C3F /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D6E1064E1C747B6B00049C3F /* EZNetReachabilityManager.h */,
-				D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */,
 				D606090A1C76FB4B000DB373 /* MMRequest.h */,
 				D606090B1C76FB4B000DB373 /* MMRequest.m */,
 			);
@@ -1154,7 +1149,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6E106501C747B6B00049C3F /* EZNetReachabilityManager.m in Sources */,
 				D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */,
