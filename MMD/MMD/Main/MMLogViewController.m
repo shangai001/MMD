@@ -11,7 +11,7 @@
 #import "MMDUser.h"
 #import "RegisterViewController.h"
 #import "BaseNavgationController.h"
-
+#import "PasswordLength.h"
 
 @interface MMLogViewController ()<UITextFieldDelegate>
 
@@ -77,7 +77,7 @@
     }
     if (textField == self.passwordTextField) {
         NSString *text = textField.text;
-        if (text.length >= 6 && text.length <= 18) {
+        if (text.length >= SHORTESTLENGTH && text.length <= LONGESTLENGTH) {
             self.user.password = text;
             return YES;
         }
@@ -106,7 +106,7 @@
     }
     if (textField == self.passwordTextField) {
         NSString *text = textField.text;
-        if (text.length >= 6 && text.length <= 18) {
+        if (text.length >= SHORTESTLENGTH && text.length <= LONGESTLENGTH) {
             [textField resignFirstResponder];
             return YES;
         }

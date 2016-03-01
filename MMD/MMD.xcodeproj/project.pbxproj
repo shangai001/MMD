@@ -319,6 +319,7 @@
 		D6A0FB701C8464BD007D8DCB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E104C71C7320FD00049C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -682,6 +683,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */,
+				D6A0FB751C857363007D8DCB /* PasswordLength.h */,
 			);
 			path = Const;
 			sourceTree = "<group>";
