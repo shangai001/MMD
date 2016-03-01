@@ -6,6 +6,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
             <connections>
+                <outlet property="changeSecurityStatus1" destination="ioO-eh-tNR" id="Hhe-Mm-4Jq"/>
+                <outlet property="changeSecurityStatus2" destination="ioO-eh-tNR" id="w5p-uS-i8D"/>
+                <outlet property="getSecurityCodeButton" destination="B7r-m9-FpY" id="upc-WX-yRR"/>
+                <outlet property="password1" destination="GLq-aT-SLA" id="lLb-kn-OB7"/>
+                <outlet property="password2" destination="ofJ-iP-ccL" id="Z05-yg-ZfS"/>
+                <outlet property="phoneNumberField" destination="W3i-aq-19V" id="uZD-Xp-g9s"/>
+                <outlet property="securityCode" destination="fvr-3q-qVf" id="kcS-Vb-3yd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
