@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C1C29D08DC8E5848D086672 /* libPods-MMD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D876B7B7F58349F963758341 /* libPods-MMD.a */; };
 		D606090C1C76FB4B000DB373 /* MMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D606090B1C76FB4B000DB373 /* MMRequest.m */; };
-		D606090F1C76FE1B000DB373 /* HYBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D606090E1C76FE1B000DB373 /* HYBNetworking.m */; };
 		D606099B1C76FF0E000DB373 /* 补充附件@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609111C76FF0E000DB373 /* 补充附件@2x.png */; };
 		D606099C1C76FF0E000DB373 /* 补充附件@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609121C76FF0E000DB373 /* 补充附件@3x.png */; };
 		D606099E1C76FF0E000DB373 /* 步骤@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609141C76FF0E000DB373 /* 步骤@2x.png */; };
@@ -162,10 +162,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		197FE7C65B5A58A153BD57BD /* Pods-MMD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMD.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMD/Pods-MMD.release.xcconfig"; sourceTree = "<group>"; };
+		7B9823A9F698276E5762BEEE /* Pods-MMD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMD/Pods-MMD.debug.xcconfig"; sourceTree = "<group>"; };
 		D606090A1C76FB4B000DB373 /* MMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMRequest.h; path = MMD/Expand/Network/MMRequest.h; sourceTree = SOURCE_ROOT; };
 		D606090B1C76FB4B000DB373 /* MMRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMRequest.m; path = MMD/Expand/Network/MMRequest.m; sourceTree = SOURCE_ROOT; };
-		D606090D1C76FE1B000DB373 /* HYBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBNetworking.h; sourceTree = "<group>"; };
-		D606090E1C76FE1B000DB373 /* HYBNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBNetworking.m; sourceTree = "<group>"; };
 		D60609111C76FF0E000DB373 /* 补充附件@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "补充附件@2x.png"; sourceTree = "<group>"; };
 		D60609121C76FF0E000DB373 /* 补充附件@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "补充附件@3x.png"; sourceTree = "<group>"; };
 		D60609141C76FF0E000DB373 /* 步骤@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "步骤@2x.png"; sourceTree = "<group>"; };
@@ -330,6 +330,7 @@
 		D6F567271C80055800B0612F /* 我的@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的@3x.png"; sourceTree = "<group>"; };
 		D6F5672A1C80056300B0612F /* 更多@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多@2x.png"; sourceTree = "<group>"; };
 		D6F5672B1C80056300B0612F /* 更多@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多@3x.png"; sourceTree = "<group>"; };
+		D876B7B7F58349F963758341 /* libPods-MMD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1C29D08DC8E5848D086672 /* libPods-MMD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +359,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		165643020D117A7BDC39B257 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B9823A9F698276E5762BEEE /* Pods-MMD.debug.xcconfig */,
+				197FE7C65B5A58A153BD57BD /* Pods-MMD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF6E55F0FF7D1C67E87ECAFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D876B7B7F58349F963758341 /* libPods-MMD.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D6060A291C770EFF000DB373 /* Deperated */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +455,8 @@
 				D6E104E01C7320FD00049C3F /* MMDTests */,
 				D6E104EB1C7320FD00049C3F /* MMDUITests */,
 				D6E104C21C7320FD00049C3F /* Products */,
+				165643020D117A7BDC39B257 /* Pods */,
+				AF6E55F0FF7D1C67E87ECAFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -594,8 +615,6 @@
 				D6E1064F1C747B6B00049C3F /* EZNetReachabilityManager.m */,
 				D606090A1C76FB4B000DB373 /* MMRequest.h */,
 				D606090B1C76FB4B000DB373 /* MMRequest.m */,
-				D606090D1C76FE1B000DB373 /* HYBNetworking.h */,
-				D606090E1C76FE1B000DB373 /* HYBNetworking.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -850,9 +869,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6E104F11C7320FD00049C3F /* Build configuration list for PBXNativeTarget "MMD" */;
 			buildPhases = (
+				A94055DF089F58A5874B8D2C /* Check Pods Manifest.lock */,
 				D6E104BD1C7320FD00049C3F /* Sources */,
 				D6E104BE1C7320FD00049C3F /* Frameworks */,
 				D6E104BF1C7320FD00049C3F /* Resources */,
+				2F2D309F5BD7B67E211BDE1B /* Embed Pods Frameworks */,
+				5FE524DFCA85256872CD0983 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1075,13 +1097,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F2D309F5BD7B67E211BDE1B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMD/Pods-MMD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FE524DFCA85256872CD0983 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMD/Pods-MMD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A94055DF089F58A5874B8D2C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D6E104BD1C7320FD00049C3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D6E106501C747B6B00049C3F /* EZNetReachabilityManager.m in Sources */,
-				D606090F1C76FE1B000DB373 /* HYBNetworking.m in Sources */,
 				D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */,
@@ -1239,6 +1308,7 @@
 		};
 		D6E104F21C7320FD00049C3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9823A9F698276E5762BEEE /* Pods-MMD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MMD/Info.plist;
@@ -1250,6 +1320,7 @@
 		};
 		D6E104F31C7320FD00049C3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 197FE7C65B5A58A153BD57BD /* Pods-MMD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MMD/Info.plist;
