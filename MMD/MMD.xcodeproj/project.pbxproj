@@ -107,6 +107,10 @@
 		D6060A5C1C7721B9000DB373 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A4E1C7721B9000DB373 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		D6060A5D1C7721B9000DB373 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A501C7721B9000DB373 /* View+MASAdditions.m */; };
 		D6060A5E1C7721B9000DB373 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A531C7721B9000DB373 /* ViewController+MASAdditions.m */; };
+		D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */; };
+		D6A0FB6B1C845C93007D8DCB /* MMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB6A1C845C93007D8DCB /* MMDUser.m */; };
+		D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */; };
+		D6A0FB741C8464BD007D8DCB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -308,6 +312,13 @@
 		D6060A521C7721B9000DB373 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		D6060A531C7721B9000DB373 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
+		D6A0FB631C8459C0007D8DCB /* checkoutPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutPhoneNumber.h; sourceTree = "<group>"; };
+		D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutPhoneNumber.m; sourceTree = "<group>"; };
+		D6A0FB691C845C93007D8DCB /* MMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDUser.h; sourceTree = "<group>"; };
+		D6A0FB6A1C845C93007D8DCB /* MMDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDUser.m; sourceTree = "<group>"; };
+		D6A0FB701C8464BD007D8DCB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E104C71C7320FD00049C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -473,6 +484,68 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		D6A0FB661C845C51007D8DCB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6A0FB631C8459C0007D8DCB /* checkoutPhoneNumber.h */,
+				D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */,
+				D6E106171C73293000049C3F /* MMLogViewController.h */,
+				D6E106181C73293000049C3F /* MMLogViewController.m */,
+				D6E106191C73293000049C3F /* MMLogViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D6A0FB671C845C57007D8DCB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D6A0FB681C845C5C007D8DCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6A0FB691C845C93007D8DCB /* MMDUser.h */,
+				D6A0FB6A1C845C93007D8DCB /* MMDUser.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D6A0FB6C1C84647A007D8DCB /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				D6A0FB6F1C84648B007D8DCB /* Model */,
+				D6A0FB6E1C846488007D8DCB /* View */,
+				D6A0FB6D1C846481007D8DCB /* Controller */,
+			);
+			name = "注册";
+			sourceTree = "<group>";
+		};
+		D6A0FB6D1C846481007D8DCB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6A0FB701C8464BD007D8DCB /* RegisterViewController.h */,
+				D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */,
+				D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D6A0FB6E1C846488007D8DCB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D6A0FB6F1C84648B007D8DCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		D6E104B81C7320FD00049C3F = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +614,7 @@
 		D6E104FA1C73217C00049C3F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D6A0FB6C1C84647A007D8DCB /* 注册 */,
 				D6E106541C747D0500049C3F /* 登录 */,
 				D6E106161C7327AC00049C3F /* 更多 */,
 				D6E106151C7327A600049C3F /* 我的 */,
@@ -856,9 +930,9 @@
 		D6E106541C747D0500049C3F /* 登录 */ = {
 			isa = PBXGroup;
 			children = (
-				D6E106171C73293000049C3F /* MMLogViewController.h */,
-				D6E106181C73293000049C3F /* MMLogViewController.m */,
-				D6E106191C73293000049C3F /* MMLogViewController.xib */,
+				D6A0FB681C845C5C007D8DCB /* Model */,
+				D6A0FB671C845C57007D8DCB /* View */,
+				D6A0FB661C845C51007D8DCB /* Controller */,
 			);
 			name = "登录";
 			sourceTree = "<group>";
@@ -1043,6 +1117,7 @@
 				D60609F21C76FF0E000DB373 /* addPic@2x.png in Resources */,
 				D6E104D71C7320FD00049C3F /* LaunchScreen.storyboard in Resources */,
 				D6F5671C1C80047500B0612F /* 借款0@3x.png in Resources */,
+				D6A0FB741C8464BD007D8DCB /* RegisterViewController.xib in Resources */,
 				D6F01DE81C7C6BFA00EBC84E /* add@3x.png in Resources */,
 				D6060A351C77189C000DB373 /* HeaderView.xib in Resources */,
 				D60609EC1C76FF0E000DB373 /* phoneNumber@2x.png in Resources */,
@@ -1179,6 +1254,7 @@
 				D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */,
 				D6E1064C1C74784700049C3F /* UIRefreshControl+AFNetworking.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
+				D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */,
 				D6E1062C1C74783E00049C3F /* AFSecurityPolicy.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6E106531C747CCE00049C3F /* LoanViewController.m in Sources */,
@@ -1213,8 +1289,10 @@
 				D6E1062B1C74783E00049C3F /* AFNetworkReachabilityManager.m in Sources */,
 				D6060A5E1C7721B9000DB373 /* ViewController+MASAdditions.m in Sources */,
 				D6E1064D1C74784700049C3F /* UIWebView+AFNetworking.m in Sources */,
+				D6A0FB6B1C845C93007D8DCB /* MMDUser.m in Sources */,
 				D6E1061A1C73293000049C3F /* MMLogViewController.m in Sources */,
 				D6E106481C74784700049C3F /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */,
 				D6E106471C74784700049C3F /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D6060A591C7721B9000DB373 /* MASViewAttribute.m in Sources */,
 			);

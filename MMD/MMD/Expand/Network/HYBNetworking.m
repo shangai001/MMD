@@ -496,11 +496,13 @@ static HYBRequestType  sg_requestType  = kHYBRequestTypeJSON;
 }
 
 + (NSString *)hyb_URLEncode:(NSString *)url {
-  NSString *newString =
-  CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                            (CFStringRef)url,
-                                                            NULL,
-                                                            CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding)));
+//  NSString *newString =
+//  CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+//                                                            (CFStringRef)url,
+//                                                            NULL,
+//                                                            CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding)));
+    
+    NSString *newString = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:url]];
   if (newString) {
     return newString;
   }

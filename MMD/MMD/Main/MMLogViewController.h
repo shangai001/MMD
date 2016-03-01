@@ -19,5 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *logButton;
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (weak, nonatomic) IBOutlet UIButton *forgetPasswordButton;
+@property (weak, nonatomic) IBOutlet UIView *lineView;
+
+
 
 @end
