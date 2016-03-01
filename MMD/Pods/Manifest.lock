@@ -17,15 +17,18 @@ PODS:
   - HYBNetworking (2.0.1):
     - AFNetworking (~> 3.0.4)
   - Masonry (0.6.4)
+  - RealReachability (1.1.1)
 
 DEPENDENCIES:
   - AFNetworking
   - HYBNetworking
   - Masonry
+  - RealReachability
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   HYBNetworking: cb4d4bbe247f69dad3cc1a01eb5df69e01976ac6
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  RealReachability: 0b0f7d686a75466680d452d3fad00e1a1388b923
 
 COCOAPODS: 0.39.0
