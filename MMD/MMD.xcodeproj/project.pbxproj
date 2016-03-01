@@ -330,6 +330,8 @@
 		D6F567271C80055800B0612F /* 我的@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的@3x.png"; sourceTree = "<group>"; };
 		D6F5672A1C80056300B0612F /* 更多@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多@2x.png"; sourceTree = "<group>"; };
 		D6F5672B1C80056300B0612F /* 更多@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多@3x.png"; sourceTree = "<group>"; };
+		D6FDC4CC1C85B485003B2660 /* ServerDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerDefine.h; sourceTree = "<group>"; };
+		D6FDC4CD1C85B528003B2660 /* ServerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOption.h; sourceTree = "<group>"; };
 		D876B7B7F58349F963758341 /* libPods-MMD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -587,6 +589,8 @@
 			children = (
 				D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */,
 				D6A0FB751C857363007D8DCB /* PasswordLength.h */,
+				D6FDC4CC1C85B485003B2660 /* ServerDefine.h */,
+				D6FDC4CD1C85B528003B2660 /* ServerOption.h */,
 			);
 			path = Const;
 			sourceTree = "<group>";
