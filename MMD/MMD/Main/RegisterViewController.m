@@ -10,6 +10,8 @@
 #import "RegisterItem.h"
 #import "checkoutPhoneNumber.h"
 #import "LimitInputWords.h"
+#import "RegisterModel.h"
+
 
 #define PHONENUM_LENGTH 11
 #define LONGESTPASSWORD_LENGTH 12
@@ -46,7 +48,13 @@
     self.getSecurityCodeButton.layer.cornerRadius = self.securityNButtonHeight.constant/2.0;
 }
 - (IBAction)getSecurityCode:(id)sender {
-    
+ 
+    NSDictionary *info = @{@"phone":@"17710243738"};
+    [RegisterModel getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
+        NSLog(@"收到字典是  %@",resultDictionary);
+    } FailureHandler:^(NSError *error) {
+        NSLog(@"error %@",error);
+    }];
 }
 -(void)ez_TextFiledEditChanged:(NSNotification *)obj{
     

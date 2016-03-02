@@ -100,6 +100,7 @@
 		D6A0FB6B1C845C93007D8DCB /* MMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB6A1C845C93007D8DCB /* MMDUser.m */; };
 		D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */; };
 		D6A0FB741C8464BD007D8DCB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */; };
+		D6DD24A31C87439C0042E263 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DD24A21C87439C0042E263 /* RegisterModel.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -269,6 +270,9 @@
 		D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
+		D6DD24A11C87439C0042E263 /* RegisterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
+		D6DD24A21C87439C0042E263 /* RegisterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
+		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E104C71C7320FD00049C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -453,6 +457,8 @@
 			children = (
 				D6EA01F61C8695FC00EE0E2E /* RegisterItem.h */,
 				D6EA01F71C8695FC00EE0E2E /* RegisterItem.m */,
+				D6DD24A11C87439C0042E263 /* RegisterModel.h */,
+				D6DD24A21C87439C0042E263 /* RegisterModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E104C51C7320FD00049C3F /* main.m */,
+				D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1159,6 +1166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DD24A31C87439C0042E263 /* RegisterModel.m in Sources */,
 				D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */,
@@ -1262,6 +1270,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1303,6 +1312,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1321,6 +1331,8 @@
 			baseConfigurationReference = 7B9823A9F698276E5762BEEE /* Pods-MMD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MMD/MMDPrefixHeader.pch";
 				INFOPLIST_FILE = MMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MMD.com.MMD;
@@ -1333,6 +1345,8 @@
 			baseConfigurationReference = 197FE7C65B5A58A153BD57BD /* Pods-MMD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MMD/MMDPrefixHeader.pch";
 				INFOPLIST_FILE = MMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MMD.com.MMD;
