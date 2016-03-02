@@ -120,6 +120,8 @@
 		D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E106641C7488C700049C3F /* QueryViewController.xib */; };
 		D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106691C74893900049C3F /* ApplyViewController.m */; };
 		D6E1066C1C74893900049C3F /* ApplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E1066A1C74893900049C3F /* ApplyViewController.xib */; };
+		D6EA01F81C8695FC00EE0E2E /* RegisterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA01F71C8695FC00EE0E2E /* RegisterItem.m */; };
+		D6EA01FB1C86984500EE0E2E /* LimitInputWords.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA01FA1C86984500EE0E2E /* LimitInputWords.m */; };
 		D6F01DDC1C7C69D400EBC84E /* UpdateLoanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F01DDB1C7C69D400EBC84E /* UpdateLoanInfo.m */; };
 		D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */; };
 		D6F01DE61C7C6BFA00EBC84E /* add_press@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDE1C7C6BFA00EBC84E /* add_press@3x.png */; };
@@ -305,6 +307,10 @@
 		D6E106681C74893900049C3F /* ApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyViewController.h; sourceTree = "<group>"; };
 		D6E106691C74893900049C3F /* ApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyViewController.m; sourceTree = "<group>"; };
 		D6E1066A1C74893900049C3F /* ApplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyViewController.xib; sourceTree = "<group>"; };
+		D6EA01F61C8695FC00EE0E2E /* RegisterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterItem.h; sourceTree = "<group>"; };
+		D6EA01F71C8695FC00EE0E2E /* RegisterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterItem.m; sourceTree = "<group>"; };
+		D6EA01F91C86984500EE0E2E /* LimitInputWords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitInputWords.h; sourceTree = "<group>"; };
+		D6EA01FA1C86984500EE0E2E /* LimitInputWords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitInputWords.m; sourceTree = "<group>"; };
 		D6F01DDA1C7C69D400EBC84E /* UpdateLoanInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateLoanInfo.h; sourceTree = "<group>"; };
 		D6F01DDB1C7C69D400EBC84E /* UpdateLoanInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateLoanInfo.m; sourceTree = "<group>"; };
 		D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_press@2x.png"; sourceTree = "<group>"; };
@@ -429,6 +435,8 @@
 				D6A0FB701C8464BD007D8DCB /* RegisterViewController.h */,
 				D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */,
 				D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */,
+				D6EA01F91C86984500EE0E2E /* LimitInputWords.h */,
+				D6EA01FA1C86984500EE0E2E /* LimitInputWords.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -443,6 +451,8 @@
 		D6A0FB6F1C84648B007D8DCB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6EA01F61C8695FC00EE0E2E /* RegisterItem.h */,
+				D6EA01F71C8695FC00EE0E2E /* RegisterItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1160,7 +1170,9 @@
 				D6060A381C771F3E000DB373 /* UIView+LoadViewFromNib.m in Sources */,
 				D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */,
 				D6060A331C77188E000DB373 /* HeaderView.m in Sources */,
+				D6EA01F81C8695FC00EE0E2E /* RegisterItem.m in Sources */,
 				D6F01DDC1C7C69D400EBC84E /* UpdateLoanInfo.m in Sources */,
+				D6EA01FB1C86984500EE0E2E /* LimitInputWords.m in Sources */,
 				D6E106651C7488C700049C3F /* QueryViewController.m in Sources */,
 				D6060A2F1C771329000DB373 /* UIImage+Color.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,

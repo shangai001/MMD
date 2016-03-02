@@ -13,6 +13,7 @@
                 <outlet property="password2" destination="ofJ-iP-ccL" id="Z05-yg-ZfS"/>
                 <outlet property="phoneNumberField" destination="W3i-aq-19V" id="uZD-Xp-g9s"/>
                 <outlet property="securityCode" destination="fvr-3q-qVf" id="kcS-Vb-3yd"/>
+                <outlet property="securityNButtonHeight" destination="tuX-aB-viS" id="fPu-cJ-aop"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,42 +25,49 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoY-fK-oKh">
                     <rect key="frame" x="30" y="44" width="260" height="438"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3i-aq-19V" userLabel="Phone Number">
-                            <rect key="frame" x="30" y="20" width="200" height="30"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3i-aq-19V" userLabel="Phone Number">
+                            <rect key="frame" x="30" y="20" width="200" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="fht-EW-7SA"/>
+                                <constraint firstAttribute="height" constant="40" id="fht-EW-7SA"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="mLi-2c-Wjv"/>
+                            </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7r-m9-FpY">
-                            <rect key="frame" x="30" y="85" width="200" height="30"/>
+                            <rect key="frame" x="30" y="95" width="200" height="40"/>
                             <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="tuX-aB-viS"/>
+                                <constraint firstAttribute="height" constant="40" id="tuX-aB-viS"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="获取验证码">
+                            <state key="normal" title="获取短信验证码">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="getSecurityCode:" destination="-1" eventType="touchUpInside" id="1Ak-Sq-0iX"/>
+                            </connections>
                         </button>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-3q-qVf" userLabel="验证码">
-                            <rect key="frame" x="30" y="150" width="200" height="30"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入短信验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-3q-qVf" userLabel="验证码">
+                            <rect key="frame" x="30" y="170" width="200" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="pge-RD-7Wf"/>
+                            </connections>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLq-aT-SLA" userLabel="密码0">
-                            <rect key="frame" x="30" y="210" width="200" height="30"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLq-aT-SLA" userLabel="密码0">
+                            <rect key="frame" x="30" y="240" width="200" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofJ-iP-ccL" userLabel="密码1">
-                            <rect key="frame" x="30" y="270" width="200" height="30"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="8RN-0h-2ma"/>
+                            </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Piw-ty-GBd">
-                            <rect key="frame" x="30" y="340" width="200" height="30"/>
+                            <rect key="frame" x="30" y="390" width="200" height="40"/>
                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="注册">
@@ -67,19 +75,27 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioO-eh-tNR" userLabel="密码0明文">
-                            <rect key="frame" x="200" y="210" width="30" height="30"/>
+                            <rect key="frame" x="200" y="240" width="30" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="w2o-hX-Dr3"/>
                             </constraints>
                             <state key="normal" image="no_visible.png"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfK-1m-C5v" userLabel="密码1明文">
-                            <rect key="frame" x="200" y="270" width="30" height="30"/>
+                            <rect key="frame" x="200" y="310" width="30" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="15i-DU-8SW"/>
                             </constraints>
                             <state key="normal" image="no_visible.png"/>
                         </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请再次输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofJ-iP-ccL" userLabel="密码1">
+                            <rect key="frame" x="30" y="310" width="200" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="KOA-Bn-eVb"/>
+                            </connections>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>

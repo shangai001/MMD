@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RegisterItem;
 
 @interface RegisterViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberField;
@@ -17,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *password2;
 @property (weak, nonatomic) IBOutlet UIButton *changeSecurityStatus1;
 @property (weak, nonatomic) IBOutlet UIButton *changeSecurityStatus2;
+
+@property (strong, nonatomic)RegisterItem *registerItem;
 
 @end
