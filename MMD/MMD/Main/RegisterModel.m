@@ -13,7 +13,7 @@
 + (void)getSecurityCode:(NSDictionary *)info
       completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
          FailureHandler:(void(^)(NSError *error))failureBlock{
-    NSString *URL = [NSString stringWithFormat:@"%@/mimidai-api/user/registCode",kHostURL];
+    NSString *URL = [NSString stringWithFormat:@"%@/user/registCode",kHostURL];
     [HYBNetworking getWithUrl:URL params:info success:^(id response) {
         if ([response isKindOfClass:[NSDictionary class]]) {
             completationBlock(response);

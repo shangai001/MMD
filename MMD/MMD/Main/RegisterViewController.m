@@ -22,6 +22,8 @@
 @interface RegisterViewController ()<UITextFieldDelegate>
 
 @property (strong, nonatomic)NSTimer *nextMessageTimer;
+@property (assign, nonatomic)NSUInteger seconds;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *securityNButtonHeight;
 
 @end
@@ -37,6 +39,7 @@
     }
     return _registerItem;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -47,15 +50,44 @@
     self.getSecurityCodeButton.backgroundColor = [UIColor colorWithRed:0.41 green:0.79 blue:0.53 alpha:1];
     self.getSecurityCodeButton.layer.cornerRadius = self.securityNButtonHeight.constant/2.0;
 }
+- (void)changeSecurityButtonTitle:(id)sender{
+    self.seconds += 1;
+    long afterSeconds = 60 -self.seconds;
+    NSString *title = [NSString stringWithFormat:@"%ldS后重新获取",afterSeconds];
+    [self.getSecurityCodeButton setTitle:title forState:UIControlStateNormal];
+    self.getSecurityCodeButton.enabled = NO;
+    if (self.seconds == 60) {
+        [self endTimer:sender];
+    }
+}
+- (void)startTimer:(id)sender{
+    //如果定时器对象不存在，则创建一个并启动
+    if (!self.nextMessageTimer) {
+        self.seconds = 0;
+        self.nextMessageTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(changeSecurityButtonTitle:) userInfo:nil repeats:YES];
+    }
+}
+- (void)endTimer:(id)sender{
+    if (self.nextMessageTimer) {
+        if ([self.nextMessageTimer isValid]) {
+            [self.nextMessageTimer invalidate];
+            self.nextMessageTimer = nil;
+            self.seconds = 0;
+        }
+    }
+    NSString *normalTitle = @"获取短信验证码";
+    [self.getSecurityCodeButton setTitle:normalTitle forState:UIControlStateNormal];
+    self.getSecurityCodeButton.enabled = YES;
+}
 - (IBAction)getSecurityCode:(id)sender {
  
     NSDictionary *info = @{@"phone":@"17710243738"};
     [RegisterModel getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
-        NSLog(@"收到字典是  %@",resultDictionary);
     } FailureHandler:^(NSError *error) {
-        NSLog(@"error %@",error);
     }];
+    [self startTimer:sender];
 }
+
 -(void)ez_TextFiledEditChanged:(NSNotification *)obj{
     
     UITextField *textField = (UITextField *)obj.object;

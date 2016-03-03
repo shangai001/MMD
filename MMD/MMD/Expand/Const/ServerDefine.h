@@ -11,7 +11,7 @@
 #define NetworkConstHeader_h
 
 # if SERVER_OPTION == 1
-#define kHostURL @"http://182.92.198.105:8080"
+#define kHostURL @"http://api.mimidai.com"
 #endif
 
 #endif /* NetworkConstHeader_h */

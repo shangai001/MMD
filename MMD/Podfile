@@ -8,6 +8,8 @@ target 'MMD' do
     pod 'Masonry'
     pod 'HYBNetworking'
     pod 'RealReachability'
+    pod 'MJRefresh'
+    pod 'MJExtension'
 end
 
 target 'MMDTests' do

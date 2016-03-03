@@ -26,7 +26,6 @@
     
     [HYBNetworking updateBaseUrl:kHostURL];
     [HYBNetworking enableInterfaceDebug:YES];
-    [HYBNetworking configRequestType:kHYBRequestTypePlainText];
     [HYBNetworking configResponseType:kHYBResponseTypeData];
 //    [HYBNetworking shouldAutoEncodeUrl:YES];
 }
