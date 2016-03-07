@@ -11,10 +11,10 @@
 #import "checkoutPhoneNumber.h"
 #import "LimitInputWords.h"
 #import "RegisterModel.h"
-#import <YYKeyboardManager.h>
+
+
 #import "RegisterContentView.h"
 #import "UIView+LoadViewFromNib.h"
-
 
 
 #define PHONENUM_LENGTH 11
@@ -23,11 +23,10 @@
 
 
 
-@interface RegisterViewController ()<UITextFieldDelegate,YYKeyboardObserver>
+@interface RegisterViewController ()<UITextFieldDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIScrollView *baseScrollView;
-
 
 @property (strong, nonatomic)NSTimer *nextMessageTimer;
 @property (assign, nonatomic)NSUInteger seconds;
@@ -40,7 +39,6 @@
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [[YYKeyboardManager defaultManager] removeObserver:self];
 }
 - (RegisterItem *)registerItem{
     if (!_registerItem) {
@@ -58,10 +56,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    [self configureButton];
     [self registerNotification];
     [self addDissmissKeyboardGesture];
-
+    [self addKeyboardManager];
+    [self setupUI];
+    [self addButtonAction];
 }
 - (void)registerNotification{
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ez_TextFiledEditChanged:) name:@"UITextFieldTextDidChangeNotification" object:nil];
@@ -71,33 +70,27 @@
     [self.view addGestureRecognizer:keyboardTap];
 }
 - (void)addKeyboardManager{
-     [[YYKeyboardManager defaultManager] addObserver:self];
-}
-#pragma mark - @protocol YYKeyboardObserver
-- (void)keyboardChangedWithTransition:(YYKeyboardTransition)transition{
-    [UIView animateWithDuration:transition.animationDuration delay:0 options:transition.animationOption animations:^{
-        CGRect kbFrame = [[YYKeyboardManager defaultManager] convertRect:transition.toFrame toView:self.view];
-        if (transition.toVisible) {
-            self.backViewTop.constant = self.backViewTop.constant - kbFrame.size.height;
-            self.backViewBottom.constant = self.backViewBottom.constant + kbFrame.size.height;
-        }
-    } completion:^(BOOL finished) {
 
-    }];
 }
-- (void)configureButton{
-    self.getSecurityCodeButton.backgroundColor = [UIColor colorWithRed:0.41 green:0.79 blue:0.53 alpha:1];
-    self.getSecurityCodeButton.layer.cornerRadius = self.securityNButtonHeight.constant/2.0;
+- (void)setupUI{
+    [self.baseScrollView addSubview:self.contentView];
+    CGSize baseScrollViewSie = self.baseScrollView.frame.size;
+    
+    self.contentView.frame = CGRectMake(30, 44, baseScrollViewSie.width - 30 * 2, baseScrollViewSie.height - 44 - 30);
+    [self.contentView setNeedsLayout];
+    self.baseScrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 90);
 }
+- (void)addButtonAction{
+    [self.contentView.getSecurityCodeButton addTarget:self action:@selector(getSecurityCode:) forControlEvents:UIControlEventTouchUpInside];
+}
+
 - (void)removeKeyBoard{
     [self.view endEditing:YES];
 }
 - (void)changeSecurityButtonTitle:(id)sender{
     self.seconds += 1;
     long afterSeconds = 60 -self.seconds;
-    NSString *title = [NSString stringWithFormat:@"%ldS后重新获取",afterSeconds];
-    [self.getSecurityCodeButton setTitle:title forState:UIControlStateNormal];
-    self.getSecurityCodeButton.enabled = NO;
+    [self.contentView changeSecurityButtonWaitingStatus:afterSeconds];
     if (self.seconds == 60) {
         [self endTimer:sender];
     }
@@ -117,15 +110,13 @@
             self.seconds = 0;
         }
     }
-    NSString *normalTitle = @"获取短信验证码";
-    [self.getSecurityCodeButton setTitle:normalTitle forState:UIControlStateNormal];
-    self.getSecurityCodeButton.enabled = YES;
+    [self.contentView changeSecurityButtonNormalStatus];
 }
-- (IBAction)getSecurityCode:(id)sender {
+- (void)getSecurityCode:(id)sender {
  
-    BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:self.phoneNumberField.text];
+    BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:self.contentView.phoneNumberField.text];
     if (isPhoneNum) {
-        NSString *phoneNumber = self.phoneNumberField.text;
+        NSString *phoneNumber = self.contentView.phoneNumberField.text;
         NSDictionary *info = @{@"phone":phoneNumber};
         [RegisterModel getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
             [self saveReturnUserInfo:resultDictionary];
@@ -148,9 +139,9 @@
     
     UITextField *textField = (UITextField *)obj.object;
     NSUInteger textCount = 0;
-    if (textField == self.phoneNumberField) {
+    if (textField == self.contentView.phoneNumberField) {
         textCount = PHONENUM_LENGTH;
-    }else if (textField == self.password1 || textField == self.password2) {
+    }else if (textField == self.contentView.password1 || textField == self.contentView.password2) {
         textCount = LONGESTPASSWORD_LENGTH;
     }else{
         textCount = 12;
@@ -161,6 +152,8 @@
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+//    [self.textKeyboardManager scrollToIdealPositionWithTargetView:textField];
+    
     return YES;
     
 }// return NO to disallow editing.
@@ -168,31 +161,31 @@
     
 }// became first responder
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    if (textField == self.phoneNumberField) {
+    if (textField == self.contentView.phoneNumberField) {
         
     }
-    if (textField == self.securityCode) {
+    if (textField == self.contentView.securityCodeTextField) {
         
     }
-    if (textField == self.password1) {
+    if (textField == self.contentView.password1) {
         
     }
-    if (textField == self.password2) {
+    if (textField == self.contentView.password2) {
         
     }
     return YES;
 }// return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-    if (textField == self.phoneNumberField) {
+    if (textField == self.contentView.phoneNumberField) {
         
     }
-    if (textField == self.securityCode) {
+    if (textField == self.contentView.securityCodeTextField) {
         
     }
-    if (textField == self.password1) {
+    if (textField == self.contentView.password1) {
         
     }
-    if (textField == self.password2) {
+    if (textField == self.contentView.password2) {
         
     }
     
@@ -205,28 +198,28 @@
     return YES;
 }// called when clear button pressed. return NO to ignore (no notifications)
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    if (textField == self.phoneNumberField) {
+    if (textField == self.contentView.phoneNumberField) {
         BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:textField.text];
         if (isPhoneNum) {
             self.registerItem.phoneNum = textField.text;
         }
         return isPhoneNum;
     }
-    if (textField == self.securityCode) {
+    if (textField == self.contentView.securityCodeTextField) {
         return YES;
     }
-    if (textField == self.password1) {
+    if (textField == self.contentView.password1) {
         NSUInteger lenth = textField.text.length;
         BOOL isOk = lenth >= SHORTESTPASSWORD_LENGTH && lenth <= LONGESTPASSWORD_LENGTH;
         return isOk;
     }
-    if (textField == self.password2) {
+    if (textField == self.contentView.password2) {
         NSUInteger lenth = textField.text.length;
         BOOL isOk = lenth >= SHORTESTPASSWORD_LENGTH && lenth <= LONGESTPASSWORD_LENGTH;
         
         BOOL isSame = NO;
-        NSString *pass1 = self.password1.text;
-        NSString *pass2 = self.password2.text;
+        NSString *pass1 = self.contentView.password1.text;
+        NSString *pass2 = self.contentView.password2.text;
         if ([pass1 isEqualToString:pass2]) {
             isSame = YES;
         }else{
