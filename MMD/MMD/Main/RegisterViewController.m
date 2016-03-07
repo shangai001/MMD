@@ -11,8 +11,7 @@
 #import "checkoutPhoneNumber.h"
 #import "LimitInputWords.h"
 #import "RegisterModel.h"
-
-
+#import "LXMKeyboardManager.h"
 #import "RegisterContentView.h"
 #import "UIView+LoadViewFromNib.h"
 
@@ -27,7 +26,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIScrollView *baseScrollView;
-
+@property (strong, nonatomic)LXMKeyboardManager *lxManager;
 @property (strong, nonatomic)NSTimer *nextMessageTimer;
 @property (assign, nonatomic)NSUInteger seconds;
 
@@ -63,14 +62,16 @@
     [self addButtonAction];
 }
 - (void)registerNotification{
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ez_TextFiledEditChanged:) name:@"UITextFieldTextDidChangeNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ez_TextFiledEditChanged:) name:@"UITextFieldTextDidChangeNotification" object:nil];
 }
 - (void)addDissmissKeyboardGesture{
     UITapGestureRecognizer *keyboardTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyBoard)];
     [self.view addGestureRecognizer:keyboardTap];
 }
 - (void)addKeyboardManager{
-
+    if (!self.lxManager) {
+        self.lxManager = [[LXMKeyboardManager alloc] initWithScrollView:self.baseScrollView];
+    }
 }
 - (void)setupUI{
     [self.baseScrollView addSubview:self.contentView];
@@ -78,12 +79,15 @@
     
     self.contentView.frame = CGRectMake(30, 44, baseScrollViewSie.width - 30 * 2, baseScrollViewSie.height - 44 - 30);
     [self.contentView setNeedsLayout];
-    self.baseScrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 90);
+    self.contentView.phoneNumberField.delegate = self;
+    self.contentView.securityCodeTextField.delegate = self;
+    self.contentView.password1.delegate = self;
+    self.contentView.password2.delegate = self;
+    self.baseScrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 55);
 }
 - (void)addButtonAction{
     [self.contentView.getSecurityCodeButton addTarget:self action:@selector(getSecurityCode:) forControlEvents:UIControlEventTouchUpInside];
 }
-
 - (void)removeKeyBoard{
     [self.view endEditing:YES];
 }
@@ -152,8 +156,7 @@
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-//    [self.textKeyboardManager scrollToIdealPositionWithTargetView:textField];
-    
+    [self.lxManager scrollToIdealPositionWithTargetView:textField];
     return YES;
     
 }// return NO to disallow editing.
@@ -202,15 +205,20 @@
         BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:textField.text];
         if (isPhoneNum) {
             self.registerItem.phoneNum = textField.text;
+            [self.contentView.securityCodeTextField becomeFirstResponder];
         }
         return isPhoneNum;
     }
     if (textField == self.contentView.securityCodeTextField) {
+        [self.contentView.password1 becomeFirstResponder];
         return YES;
     }
     if (textField == self.contentView.password1) {
         NSUInteger lenth = textField.text.length;
         BOOL isOk = lenth >= SHORTESTPASSWORD_LENGTH && lenth <= LONGESTPASSWORD_LENGTH;
+        if (isOk) {
+            [self.contentView.password2 becomeFirstResponder];
+        }
         return isOk;
     }
     if (textField == self.contentView.password2) {
@@ -224,6 +232,9 @@
             isSame = YES;
         }else{
             isSame = NO;
+        }
+        if (isOk && isSame) {
+            
         }
         return isOk && isSame;
     }

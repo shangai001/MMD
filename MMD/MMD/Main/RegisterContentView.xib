@@ -16,7 +16,7 @@
                         <constraint firstAttribute="height" constant="40" id="PHY-20-VbT"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKk-PJ-ulm">
                     <rect key="frame" x="30" y="95" width="260" height="40"/>
@@ -32,21 +32,21 @@
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入短信验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5z-LT-LHN" userLabel="验证码">
                     <rect key="frame" x="30" y="170" width="260" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzp-GR-j2V" userLabel="密码0">
-                    <rect key="frame" x="30" y="240" width="260" height="40"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="AF7-8j-0kP">
                     <rect key="frame" x="30" y="390" width="260" height="40"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="注册">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzp-GR-j2V" userLabel="密码0">
+                    <rect key="frame" x="30" y="240" width="260" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3P-4u-NL4" userLabel="密码0明文">
                     <rect key="frame" x="260" y="240" width="30" height="40"/>
                     <constraints>
@@ -54,18 +54,18 @@
                     </constraints>
                     <state key="normal" image="no_visible.png"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzT-q1-oW7" userLabel="密码1明文">
-                    <rect key="frame" x="260" y="310" width="30" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="30" id="fHp-s7-rHO"/>
-                    </constraints>
-                    <state key="normal" image="no_visible.png"/>
-                </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请再次输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Be-jpT" userLabel="密码1">
                     <rect key="frame" x="30" y="310" width="260" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzT-q1-oW7" userLabel="密码1明文">
+                    <rect key="frame" x="260" y="310" width="30" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="mhZ-os-jwd"/>
+                    </constraints>
+                    <state key="normal" image="no_visible.png"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -74,16 +74,16 @@
                 <constraint firstItem="ATc-Be-jpT" firstAttribute="top" secondItem="Mzp-GR-j2V" secondAttribute="bottom" constant="30" id="3LH-ps-XJo"/>
                 <constraint firstItem="x9Q-tB-4q4" firstAttribute="leading" secondItem="S8F-To-y5C" secondAttribute="leading" constant="30" id="4qk-rV-N2W"/>
                 <constraint firstItem="ATc-Be-jpT" firstAttribute="leading" secondItem="Mzp-GR-j2V" secondAttribute="leading" id="5a1-gv-x1q"/>
-                <constraint firstItem="PzT-q1-oW7" firstAttribute="centerY" secondItem="ATc-Be-jpT" secondAttribute="centerY" id="76h-s5-3ER"/>
                 <constraint firstItem="RKk-PJ-ulm" firstAttribute="top" secondItem="x9Q-tB-4q4" secondAttribute="bottom" constant="35" id="8TF-Vx-AjN"/>
                 <constraint firstItem="RKk-PJ-ulm" firstAttribute="leading" secondItem="S8F-To-y5C" secondAttribute="leading" constant="30" id="AmW-9R-OKH"/>
                 <constraint firstItem="ATc-Be-jpT" firstAttribute="height" secondItem="Mzp-GR-j2V" secondAttribute="height" id="Anv-Sm-CT1"/>
                 <constraint firstItem="B3P-4u-NL4" firstAttribute="centerY" secondItem="Mzp-GR-j2V" secondAttribute="centerY" id="B7j-yK-wTA"/>
                 <constraint firstItem="x9Q-tB-4q4" firstAttribute="top" secondItem="S8F-To-y5C" secondAttribute="top" constant="20" id="CVl-bQ-P8r"/>
-                <constraint firstItem="PzT-q1-oW7" firstAttribute="height" secondItem="ATc-Be-jpT" secondAttribute="height" id="Jih-wE-YH9"/>
+                <constraint firstItem="PzT-q1-oW7" firstAttribute="trailing" secondItem="ATc-Be-jpT" secondAttribute="trailing" id="CgR-Hh-rqR"/>
+                <constraint firstItem="PzT-q1-oW7" firstAttribute="height" secondItem="ATc-Be-jpT" secondAttribute="height" id="FdT-7E-bDc"/>
+                <constraint firstItem="PzT-q1-oW7" firstAttribute="centerY" secondItem="ATc-Be-jpT" secondAttribute="centerY" id="KZw-ye-Ksw"/>
                 <constraint firstItem="ATc-Be-jpT" firstAttribute="trailing" secondItem="Mzp-GR-j2V" secondAttribute="trailing" id="KoJ-MH-T4W"/>
                 <constraint firstItem="B3P-4u-NL4" firstAttribute="height" secondItem="Mzp-GR-j2V" secondAttribute="height" id="LGx-sT-5ND"/>
-                <constraint firstItem="PzT-q1-oW7" firstAttribute="trailing" secondItem="ATc-Be-jpT" secondAttribute="trailing" id="UCC-1j-jiA"/>
                 <constraint firstItem="h5z-LT-LHN" firstAttribute="top" secondItem="RKk-PJ-ulm" secondAttribute="bottom" constant="35" id="UPW-bF-znW"/>
                 <constraint firstItem="AF7-8j-0kP" firstAttribute="trailing" secondItem="RKk-PJ-ulm" secondAttribute="trailing" id="Uuf-nY-aLV"/>
                 <constraint firstItem="Mzp-GR-j2V" firstAttribute="leading" secondItem="h5z-LT-LHN" secondAttribute="leading" id="ZSh-Xo-wuI"/>
@@ -108,6 +108,7 @@
                 <outlet property="phoneNumberField" destination="x9Q-tB-4q4" id="1pD-JO-5A6"/>
                 <outlet property="securityCodeTextField" destination="h5z-LT-LHN" id="zC3-WF-0XS"/>
                 <outlet property="securityNButtonHeight" destination="Quf-y9-ozL" id="joy-d4-i0B"/>
+                <outlet property="sureButton" destination="AF7-8j-0kP" id="qTF-aa-QV0"/>
             </connections>
         </view>
     </objects>

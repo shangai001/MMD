@@ -10,8 +10,8 @@
 
 @interface RegisterContentView : UIView
 
+@property (weak, nonatomic) IBOutlet UIButton *sureButton;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberField;
-
 @property (weak, nonatomic) IBOutlet UIButton *getSecurityCodeButton;
 @property (weak, nonatomic) IBOutlet UITextField *securityCodeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *password1;

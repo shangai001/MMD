@@ -7,6 +7,7 @@
 //
 
 #import "RegisterContentView.h"
+#import "ColorHeader.h"
 
 @implementation RegisterContentView
 
@@ -23,6 +24,7 @@
 - (void)configureSecurityButton{
     self.getSecurityCodeButton.backgroundColor = [UIColor colorWithRed:0.41 green:0.79 blue:0.53 alpha:1];
     self.getSecurityCodeButton.layer.cornerRadius = self.securityNButtonHeight.constant/2.0;
+    self.sureButton.backgroundColor = REDCOLOR;
 }
 - (void)changeSecurityButtonWaitingStatus:(NSInteger)seconds{
     NSString *title = [NSString stringWithFormat:@"%ldS后重新获取",seconds];

@@ -96,6 +96,7 @@
 		D6060A331C77188E000DB373 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A321C77188E000DB373 /* HeaderView.m */; };
 		D6060A351C77189C000DB373 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6060A341C77189C000DB373 /* HeaderView.xib */; };
 		D6060A381C771F3E000DB373 /* UIView+LoadViewFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A371C771F3E000DB373 /* UIView+LoadViewFromNib.m */; };
+		D65F3AFE1C8DE7410024E419 /* LXMKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */; };
 		D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */; };
 		D6A0FB6B1C845C93007D8DCB /* MMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB6A1C845C93007D8DCB /* MMDUser.m */; };
 		D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */; };
@@ -267,6 +268,8 @@
 		D6060A341C77189C000DB373 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		D6060A361C771F3E000DB373 /* UIView+LoadViewFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LoadViewFromNib.h"; path = "../../Main/UIView+LoadViewFromNib.h"; sourceTree = "<group>"; };
 		D6060A371C771F3E000DB373 /* UIView+LoadViewFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LoadViewFromNib.m"; path = "../../Main/UIView+LoadViewFromNib.m"; sourceTree = "<group>"; };
+		D65F3AFC1C8DE7410024E419 /* LXMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMKeyboardManager.h; sourceTree = "<group>"; };
+		D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMKeyboardManager.m; sourceTree = "<group>"; };
 		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
 		D6A0FB631C8459C0007D8DCB /* checkoutPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutPhoneNumber.h; sourceTree = "<group>"; };
 		D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutPhoneNumber.m; sourceTree = "<group>"; };
@@ -461,6 +464,8 @@
 		D6A0FB6E1C846488007D8DCB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D65F3AFC1C8DE7410024E419 /* LXMKeyboardManager.h */,
+				D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */,
 				D6FD61731C8DCC170029654E /* RegisterContentView.h */,
 				D6FD61741C8DCC170029654E /* RegisterContentView.m */,
 				D6FD61711C8DCBF40029654E /* RegisterContentView.xib */,
@@ -1211,6 +1216,7 @@
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
 				D6060A271C770204000DB373 /* NewApplyViewController.m in Sources */,
 				D606090C1C76FB4B000DB373 /* MMRequest.m in Sources */,
+				D65F3AFE1C8DE7410024E419 /* LXMKeyboardManager.m in Sources */,
 				D6E106601C74888200049C3F /* ActivityViewController.m in Sources */,
 				D6A0FB6B1C845C93007D8DCB /* MMDUser.m in Sources */,
 				D6E1061A1C73293000049C3F /* MMLogViewController.m in Sources */,
