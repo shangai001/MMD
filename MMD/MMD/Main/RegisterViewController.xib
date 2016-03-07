@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
             <connections>
+                <outlet property="backViewBottom" destination="POW-Et-uwj" id="K37-0x-bTG"/>
+                <outlet property="backViewTop" destination="5iN-Th-K2A" id="1id-9S-Pof"/>
                 <outlet property="changeSecurityStatus1" destination="ioO-eh-tNR" id="Hhe-Mm-4Jq"/>
                 <outlet property="changeSecurityStatus2" destination="ioO-eh-tNR" id="w5p-uS-i8D"/>
                 <outlet property="getSecurityCodeButton" destination="B7r-m9-FpY" id="upc-WX-yRR"/>

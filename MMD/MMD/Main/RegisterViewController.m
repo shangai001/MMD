@@ -22,6 +22,11 @@
 
 @interface RegisterViewController ()<UITextFieldDelegate>
 
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewTop;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewBottom;
+
 @property (strong, nonatomic)NSTimer *nextMessageTimer;
 @property (assign, nonatomic)NSUInteger seconds;
 
