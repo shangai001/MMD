@@ -11,6 +11,7 @@
 #import "checkoutPhoneNumber.h"
 #import "LimitInputWords.h"
 #import "RegisterModel.h"
+#import <YYKeyboardManager.h>
 
 
 
@@ -20,7 +21,7 @@
 
 
 
-@interface RegisterViewController ()<UITextFieldDelegate>
+@interface RegisterViewController ()<UITextFieldDelegate,YYKeyboardObserver>
 
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewTop;
@@ -38,6 +39,7 @@
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[YYKeyboardManager defaultManager] removeObserver:self];
 }
 - (RegisterItem *)registerItem{
     if (!_registerItem) {
@@ -53,6 +55,30 @@
     [self configureButton];
     UITapGestureRecognizer *keyboardTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyBoard)];
     [self.view addGestureRecognizer:keyboardTap];
+
+}
+- (void)addKeyboardManager{
+     [[YYKeyboardManager defaultManager] addObserver:self];
+}
+//- (void)keyboardChangedWithTransition:(YYKeyboardTransition)transition {
+//    CGRect fromFrame = [manager convertRect:transition.fromFrame toView:self.view];
+//    CGRect toFrame =  [manager convertRect:transition.toFrame toView:self.view];
+//    BOOL fromVisible = transition.fromVisible;
+//    BOOL toVisible = transition.toVisible;
+//    NSTimeInterval animationDuration = transition.animationDuration;
+//    UIViewAnimationCurve curve = transition.animationCurve;
+//}
+#pragma mark - @protocol YYKeyboardObserver
+- (void)keyboardChangedWithTransition:(YYKeyboardTransition)transition{
+    [UIView animateWithDuration:transition.animationDuration delay:0 options:transition.animationOption animations:^{
+        CGRect kbFrame = [[YYKeyboardManager defaultManager] convertRect:transition.toFrame toView:self.view];
+        if (transition.toVisible) {
+            self.backViewTop.constant = self.backViewTop.constant - kbFrame.size.height;
+            self.backViewBottom.constant = self.backViewBottom.constant + kbFrame.size.height;
+        }
+    } completion:^(BOOL finished) {
+
+    }];
 }
 - (void)configureButton{
     self.getSecurityCodeButton.backgroundColor = [UIColor colorWithRed:0.41 green:0.79 blue:0.53 alpha:1];

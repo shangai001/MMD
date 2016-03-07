@@ -20,6 +20,7 @@ PODS:
   - MJExtension (3.0.10)
   - MJRefresh (3.1.0)
   - RealReachability (1.1.1)
+  - YYKeyboardManager (1.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - RealReachability
+  - YYKeyboardManager
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
@@ -36,5 +38,6 @@ SPEC CHECKSUMS:
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   RealReachability: 0b0f7d686a75466680d452d3fad00e1a1388b923
+  YYKeyboardManager: 0cf682086094da62dbeb75c7bacff3e1591f223d
 
 COCOAPODS: 0.39.0
