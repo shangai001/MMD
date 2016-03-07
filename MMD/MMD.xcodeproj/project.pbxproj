@@ -100,6 +100,8 @@
 		D6A0FB6B1C845C93007D8DCB /* MMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB6A1C845C93007D8DCB /* MMDUser.m */; };
 		D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */; };
 		D6A0FB741C8464BD007D8DCB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */; };
+		D6B692181C8D7A5B00B3877D /* mmd_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */; };
+		D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */; };
 		D6DD24A31C87439C0042E263 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DD24A21C87439C0042E263 /* RegisterModel.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
@@ -270,6 +272,8 @@
 		D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
+		D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@2x.png"; sourceTree = "<group>"; };
+		D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@3x.png"; sourceTree = "<group>"; };
 		D6DD24A11C87439C0042E263 /* RegisterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
 		D6DD24A21C87439C0042E263 /* RegisterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
@@ -858,6 +862,8 @@
 		D6F5671D1C80048800B0612F /* TabbarImage */ = {
 			isa = PBXGroup;
 			children = (
+				D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */,
+				D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */,
 				D6F5671E1C8004ED00B0612F /* 借款@2x.png */,
 				D6F5671F1C8004ED00B0612F /* 借款@3x.png */,
 				D6F567131C80047500B0612F /* 借款0@2x.png */,
@@ -1027,10 +1033,12 @@
 				D60609AB1C76FF0E000DB373 /* 返回@3x.png in Resources */,
 				D60609D81C76FF0E000DB373 /* 借款须知@3x.png in Resources */,
 				D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */,
+				D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */,
 				D60609E61C76FF0E000DB373 /* friendsCircle@2x.png in Resources */,
 				D60609B61C76FF0E000DB373 /* 更改密码@2x.png in Resources */,
 				D60609CF1C76FF0E000DB373 /* 检查更新@3x.png in Resources */,
 				D6060A0D1C76FF0E000DB373 /* notificationCenter@2x.png in Resources */,
+				D6B692181C8D7A5B00B3877D /* mmd_logo@2x.png in Resources */,
 				D60609E91C76FF0E000DB373 /* IDInfo@2x.png in Resources */,
 				D6E104D41C7320FD00049C3F /* Assets.xcassets in Resources */,
 				D6060A081C76FF0E000DB373 /* mine_off@3x.png in Resources */,
