@@ -102,6 +102,8 @@
 		D6A0FB741C8464BD007D8DCB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */; };
 		D6B692181C8D7A5B00B3877D /* mmd_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */; };
 		D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */; };
+		D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921A1C8D7A8500B3877D /* key@2x.png */; };
+		D6B6921D1C8D7A8500B3877D /* key@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921B1C8D7A8500B3877D /* key@3x.png */; };
 		D6DD24A31C87439C0042E263 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DD24A21C87439C0042E263 /* RegisterModel.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
@@ -274,6 +276,8 @@
 		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
 		D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@2x.png"; sourceTree = "<group>"; };
 		D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@3x.png"; sourceTree = "<group>"; };
+		D6B6921A1C8D7A8500B3877D /* key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@2x.png"; sourceTree = "<group>"; };
+		D6B6921B1C8D7A8500B3877D /* key@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@3x.png"; sourceTree = "<group>"; };
 		D6DD24A11C87439C0042E263 /* RegisterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
 		D6DD24A21C87439C0042E263 /* RegisterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
@@ -862,6 +866,8 @@
 		D6F5671D1C80048800B0612F /* TabbarImage */ = {
 			isa = PBXGroup;
 			children = (
+				D6B6921A1C8D7A8500B3877D /* key@2x.png */,
+				D6B6921B1C8D7A8500B3877D /* key@3x.png */,
 				D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */,
 				D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */,
 				D6F5671E1C8004ED00B0612F /* 借款@2x.png */,
@@ -1044,6 +1050,7 @@
 				D6060A081C76FF0E000DB373 /* mine_off@3x.png in Resources */,
 				D60609A71C76FF0E000DB373 /* 电话图标@2x.png in Resources */,
 				D60609ED1C76FF0E000DB373 /* phoneNumber@3x.png in Resources */,
+				D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */,
 				D6060A0A1C76FF0E000DB373 /* pullDown@2x.png in Resources */,
 				D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */,
 				D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */,
@@ -1062,6 +1069,7 @@
 				D6F567171C80047500B0612F /* 还款0@2x.png in Resources */,
 				D60609CC1C76FF0E000DB373 /* 好评@3x.png in Resources */,
 				D6060A1A1C76FF0E000DB373 /* go@3x.png in Resources */,
+				D6B6921D1C8D7A8500B3877D /* key@3x.png in Resources */,
 				D6E106611C74888200049C3F /* ActivityViewController.xib in Resources */,
 				D60609FF1C76FF0E000DB373 /* wechat@3x.png in Resources */,
 				D60609E01C76FF0E000DB373 /* no_visible@2x.png in Resources */,
