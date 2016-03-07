@@ -148,6 +148,8 @@
 		D6F567291C80055800B0612F /* 我的@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F567271C80055800B0612F /* 我的@3x.png */; };
 		D6F5672C1C80056300B0612F /* 更多@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5672A1C80056300B0612F /* 更多@2x.png */; };
 		D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5672B1C80056300B0612F /* 更多@3x.png */; };
+		D6FD61721C8DCBF40029654E /* RegisterContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FD61711C8DCBF40029654E /* RegisterContentView.xib */; };
+		D6FD61751C8DCC170029654E /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FD61741C8DCC170029654E /* RegisterContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,6 +347,9 @@
 		D6F567271C80055800B0612F /* 我的@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的@3x.png"; sourceTree = "<group>"; };
 		D6F5672A1C80056300B0612F /* 更多@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多@2x.png"; sourceTree = "<group>"; };
 		D6F5672B1C80056300B0612F /* 更多@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多@3x.png"; sourceTree = "<group>"; };
+		D6FD61711C8DCBF40029654E /* RegisterContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterContentView.xib; sourceTree = "<group>"; };
+		D6FD61731C8DCC170029654E /* RegisterContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterContentView.h; sourceTree = "<group>"; };
+		D6FD61741C8DCC170029654E /* RegisterContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterContentView.m; sourceTree = "<group>"; };
 		D6FDC4CC1C85B485003B2660 /* ServerDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerDefine.h; sourceTree = "<group>"; };
 		D6FDC4CD1C85B528003B2660 /* ServerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOption.h; sourceTree = "<group>"; };
 		D876B7B7F58349F963758341 /* libPods-MMD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,6 +461,9 @@
 		D6A0FB6E1C846488007D8DCB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D6FD61731C8DCC170029654E /* RegisterContentView.h */,
+				D6FD61741C8DCC170029654E /* RegisterContentView.m */,
+				D6FD61711C8DCBF40029654E /* RegisterContentView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1051,6 +1059,7 @@
 				D60609A71C76FF0E000DB373 /* 电话图标@2x.png in Resources */,
 				D60609ED1C76FF0E000DB373 /* phoneNumber@3x.png in Resources */,
 				D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */,
+				D6FD61721C8DCBF40029654E /* RegisterContentView.xib in Resources */,
 				D6060A0A1C76FF0E000DB373 /* pullDown@2x.png in Resources */,
 				D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */,
 				D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */,
@@ -1206,6 +1215,7 @@
 				D6A0FB6B1C845C93007D8DCB /* MMDUser.m in Sources */,
 				D6E1061A1C73293000049C3F /* MMLogViewController.m in Sources */,
 				D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */,
+				D6FD61751C8DCC170029654E /* RegisterContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

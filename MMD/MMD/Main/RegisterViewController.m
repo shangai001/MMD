@@ -12,6 +12,8 @@
 #import "LimitInputWords.h"
 #import "RegisterModel.h"
 #import <YYKeyboardManager.h>
+#import "RegisterContentView.h"
+#import "UIView+LoadViewFromNib.h"
 
 
 
@@ -24,14 +26,13 @@
 @interface RegisterViewController ()<UITextFieldDelegate,YYKeyboardObserver>
 
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewTop;
+@property (weak, nonatomic) IBOutlet UIScrollView *baseScrollView;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewBottom;
 
 @property (strong, nonatomic)NSTimer *nextMessageTimer;
 @property (assign, nonatomic)NSUInteger seconds;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *securityNButtonHeight;
+
 
 @end
 
@@ -47,27 +48,31 @@
     }
     return _registerItem;
 }
-
+- (RegisterContentView *)contentView{
+    if (!_contentView) {
+        _contentView = [RegisterContentView loadViewFromNib];
+    }
+    return  _contentView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ez_TextFiledEditChanged:) name:@"UITextFieldTextDidChangeNotification" object:nil];
+
     [self configureButton];
+    [self registerNotification];
+    [self addDissmissKeyboardGesture];
+
+}
+- (void)registerNotification{
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ez_TextFiledEditChanged:) name:@"UITextFieldTextDidChangeNotification" object:nil];
+}
+- (void)addDissmissKeyboardGesture{
     UITapGestureRecognizer *keyboardTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyBoard)];
     [self.view addGestureRecognizer:keyboardTap];
-
 }
 - (void)addKeyboardManager{
      [[YYKeyboardManager defaultManager] addObserver:self];
 }
-//- (void)keyboardChangedWithTransition:(YYKeyboardTransition)transition {
-//    CGRect fromFrame = [manager convertRect:transition.fromFrame toView:self.view];
-//    CGRect toFrame =  [manager convertRect:transition.toFrame toView:self.view];
-//    BOOL fromVisible = transition.fromVisible;
-//    BOOL toVisible = transition.toVisible;
-//    NSTimeInterval animationDuration = transition.animationDuration;
-//    UIViewAnimationCurve curve = transition.animationCurve;
-//}
 #pragma mark - @protocol YYKeyboardObserver
 - (void)keyboardChangedWithTransition:(YYKeyboardTransition)transition{
     [UIView animateWithDuration:transition.animationDuration delay:0 options:transition.animationOption animations:^{
