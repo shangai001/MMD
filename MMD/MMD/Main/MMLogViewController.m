@@ -12,6 +12,7 @@
 #import "RegisterViewController.h"
 #import "BaseNavgationController.h"
 #import "PasswordLength.h"
+#import "ColorHeader.h"
 
 @interface MMLogViewController ()<UITextFieldDelegate>
 
@@ -28,6 +29,7 @@
     // Do any additional setup after loading the view from its nib.
     [self.rememberPasswordButton setImage:[UIImage imageNamed:@"approve_on"] forState:UIControlStateSelected];
     [self.rememberPasswordButton setImage:[UIImage imageNamed:@"approve_off"] forState:UIControlStateNormal];
+    self.logButton.backgroundColor = REDCOLOR;
     if (self.user) {
         self.user = [MMDUser new];
     }

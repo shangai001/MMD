@@ -12,4 +12,8 @@
 @property (nonatomic, copy)NSString *phoneNum;
 @property (nonatomic, copy)NSString *securityCode;
 @property (nonatomic, copy)NSString *password;
+
+
+@property (nonatomic, strong)NSNumber *returnSecurityCode;
+
 @end

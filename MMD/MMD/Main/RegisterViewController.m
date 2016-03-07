@@ -13,6 +13,7 @@
 #import "RegisterModel.h"
 
 
+
 #define PHONENUM_LENGTH 11
 #define LONGESTPASSWORD_LENGTH 12
 #define SHORTESTPASSWORD_LENGTH 6
@@ -45,10 +46,15 @@
     // Do any additional setup after loading the view from its nib.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ez_TextFiledEditChanged:) name:@"UITextFieldTextDidChangeNotification" object:nil];
     [self configureButton];
+    UITapGestureRecognizer *keyboardTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyBoard)];
+    [self.view addGestureRecognizer:keyboardTap];
 }
 - (void)configureButton{
     self.getSecurityCodeButton.backgroundColor = [UIColor colorWithRed:0.41 green:0.79 blue:0.53 alpha:1];
     self.getSecurityCodeButton.layer.cornerRadius = self.securityNButtonHeight.constant/2.0;
+}
+- (void)removeKeyBoard{
+    [self.view endEditing:YES];
 }
 - (void)changeSecurityButtonTitle:(id)sender{
     self.seconds += 1;
@@ -81,22 +87,37 @@
 }
 - (IBAction)getSecurityCode:(id)sender {
  
-    NSDictionary *info = @{@"phone":@"17710243738"};
-    [RegisterModel getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
-    } FailureHandler:^(NSError *error) {
-    }];
-    [self startTimer:sender];
+    BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:self.phoneNumberField.text];
+    if (isPhoneNum) {
+        NSString *phoneNumber = self.phoneNumberField.text;
+        NSDictionary *info = @{@"phone":phoneNumber};
+        [RegisterModel getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
+            [self saveReturnUserInfo:resultDictionary];
+        } FailureHandler:^(NSError *error) {
+        }];
+        [self startTimer:sender];
+    }else{
+        NSLog(@"这不是正确的电话号码！");
+    }
 }
-
+- (void)saveReturnUserInfo:(NSDictionary *)dic{
+    NSNumber *code = dic[@"code"];
+    if ([code integerValue] == 0) {
+        NSUserDefaults *stUserDefault = [NSUserDefaults standardUserDefaults];
+        NSNumber *sid = dic[@"data"][@"result"][@"sid"];
+        [stUserDefault setValue:sid forKey:@"sid"];
+    }
+}
 -(void)ez_TextFiledEditChanged:(NSNotification *)obj{
     
     UITextField *textField = (UITextField *)obj.object;
     NSUInteger textCount = 0;
     if (textField == self.phoneNumberField) {
         textCount = PHONENUM_LENGTH;
-    }
-    if (textField == self.password1 || textField == self.password2) {
+    }else if (textField == self.password1 || textField == self.password2) {
         textCount = LONGESTPASSWORD_LENGTH;
+    }else{
+        textCount = 12;
     }
     [LimitInputWords limitInputText:textField textCount:textCount];
 }
@@ -140,7 +161,10 @@
     }
     
 }// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
-
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    return YES;
+}
 - (BOOL)textFieldShouldClear:(UITextField *)textField{
     return YES;
 }// called when clear button pressed. return NO to ignore (no notifications)
@@ -153,7 +177,7 @@
         return isPhoneNum;
     }
     if (textField == self.securityCode) {
-        
+        return YES;
     }
     if (textField == self.password1) {
         NSUInteger lenth = textField.text.length;
