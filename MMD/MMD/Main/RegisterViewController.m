@@ -10,7 +10,7 @@
 #import "RegisterItem.h"
 #import "checkoutPhoneNumber.h"
 #import "LimitInputWords.h"
-#import "RegisterModel.h"
+#import "MMDLogin.h"
 #import "LXMKeyboardManager.h"
 #import "RegisterContentView.h"
 #import "UIView+LoadViewFromNib.h"
@@ -128,7 +128,7 @@
     if (isPhoneNum) {
         NSString *phoneNumber = self.contentView.phoneNumberField.text;
         NSDictionary *info = @{@"phone":phoneNumber};
-        [RegisterModel getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
+        [MMDLogin getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
             [self saveReturnUserInfo:resultDictionary];
         } FailureHandler:^(NSError *error) {
         }];
@@ -142,14 +142,13 @@
     if ([code integerValue] == 0) {
         NSUserDefaults *stUserDefault = [NSUserDefaults standardUserDefaults];
         NSNumber *sid = dic[@"data"][@"result"][@"sid"];
-//        [stUserDefault setValue:sid forKey:@"sid"];
         [stUserDefault setObject:sid forKey:@"sid"];
     }
 }
 - (void)checkoutRegisterUser:(id)sender{
     [self.view endEditing:YES];
     NSDictionary *info = self.registerItem.mj_keyValues;
-    [RegisterModel registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
+    [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
             NSDictionary *data = resultDictionary[@"data"];
             [UpdateUserInfo updateUserInfo:data];

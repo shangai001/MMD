@@ -106,7 +106,7 @@
 		D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */; };
 		D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921A1C8D7A8500B3877D /* key@2x.png */; };
 		D6B6921D1C8D7A8500B3877D /* key@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921B1C8D7A8500B3877D /* key@3x.png */; };
-		D6DD24A31C87439C0042E263 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DD24A21C87439C0042E263 /* RegisterModel.m */; };
+		D6DD24A31C87439C0042E263 /* MMDLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DD24A21C87439C0042E263 /* MMDLogin.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -286,8 +286,8 @@
 		D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@3x.png"; sourceTree = "<group>"; };
 		D6B6921A1C8D7A8500B3877D /* key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@2x.png"; sourceTree = "<group>"; };
 		D6B6921B1C8D7A8500B3877D /* key@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@3x.png"; sourceTree = "<group>"; };
-		D6DD24A11C87439C0042E263 /* RegisterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
-		D6DD24A21C87439C0042E263 /* RegisterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
+		D6DD24A11C87439C0042E263 /* MMDLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMDLogin.h; path = ../../Main/MMDLogin.h; sourceTree = "<group>"; };
+		D6DD24A21C87439C0042E263 /* MMDLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMDLogin.m; path = ../../Main/MMDLogin.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -481,8 +481,6 @@
 			children = (
 				D6EA01F61C8695FC00EE0E2E /* RegisterItem.h */,
 				D6EA01F71C8695FC00EE0E2E /* RegisterItem.m */,
-				D6DD24A11C87439C0042E263 /* RegisterModel.h */,
-				D6DD24A21C87439C0042E263 /* RegisterModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -662,6 +660,8 @@
 		D6E1050B1C73219000049C3F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				D6DD24A11C87439C0042E263 /* MMDLogin.h */,
+				D6DD24A21C87439C0042E263 /* MMDLogin.m */,
 				D6835B241C8EC5BF0004EF1E /* UpdateUserInfo.h */,
 				D6835B251C8EC5BF0004EF1E /* UpdateUserInfo.m */,
 			);
@@ -1201,7 +1201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DD24A31C87439C0042E263 /* RegisterModel.m in Sources */,
+				D6DD24A31C87439C0042E263 /* MMDLogin.m in Sources */,
 				D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */,

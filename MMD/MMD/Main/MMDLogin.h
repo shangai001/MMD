@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RegisterModel : NSObject
+@interface MMDLogin : NSObject
 
 /**
  *  获取手机验证码

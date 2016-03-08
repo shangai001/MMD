@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "RegisterModel.h"
+#import "MMDLogin.h"
 
-@implementation RegisterModel
+@implementation MMDLogin
 
 + (void)getSecurityCode:(NSDictionary *)info
       completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
