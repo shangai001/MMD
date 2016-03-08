@@ -35,5 +35,15 @@
         failureBlock(error);
     }];
 }
-
++ (void)forgetPassword:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/user/forgetPasswordCode",kHostURL];
+    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
+        if ([response isKindOfClass:[NSDictionary class]]) {
+            completationBlock(response);
+        }
+    } fail:^(NSError *error) {
+        failureBlock(error);
+    }];
+}
 @end

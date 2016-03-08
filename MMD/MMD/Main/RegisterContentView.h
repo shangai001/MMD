@@ -26,6 +26,7 @@
 - (void)changeSecurityButtonWaitingStatus:(NSInteger)seconds;
 - (void)changeSecurityButtonNormalStatus;
 
+- (void)changeSureButtonStatus:(NSUInteger)type;
 
 
 

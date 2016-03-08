@@ -269,8 +269,8 @@
 		D6060A341C77189C000DB373 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		D6060A361C771F3E000DB373 /* UIView+LoadViewFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LoadViewFromNib.h"; path = "../../Main/UIView+LoadViewFromNib.h"; sourceTree = "<group>"; };
 		D6060A371C771F3E000DB373 /* UIView+LoadViewFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LoadViewFromNib.m"; path = "../../Main/UIView+LoadViewFromNib.m"; sourceTree = "<group>"; };
-		D65F3AFC1C8DE7410024E419 /* LXMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMKeyboardManager.h; sourceTree = "<group>"; };
-		D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMKeyboardManager.m; sourceTree = "<group>"; };
+		D65F3AFC1C8DE7410024E419 /* LXMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXMKeyboardManager.h; path = ../../Main/LXMKeyboardManager.h; sourceTree = "<group>"; };
+		D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXMKeyboardManager.m; path = ../../Main/LXMKeyboardManager.m; sourceTree = "<group>"; };
 		D6835B241C8EC5BF0004EF1E /* UpdateUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateUserInfo.h; sourceTree = "<group>"; };
 		D6835B251C8EC5BF0004EF1E /* UpdateUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateUserInfo.m; sourceTree = "<group>"; };
 		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
@@ -442,14 +442,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		D6A0FB6C1C84647A007D8DCB /* 注册 */ = {
+		D6A0FB6C1C84647A007D8DCB /* 注册找回密码 */ = {
 			isa = PBXGroup;
 			children = (
 				D6A0FB6F1C84648B007D8DCB /* Model */,
 				D6A0FB6E1C846488007D8DCB /* View */,
 				D6A0FB6D1C846481007D8DCB /* Controller */,
 			);
-			name = "注册";
+			name = "注册找回密码";
 			sourceTree = "<group>";
 		};
 		D6A0FB6D1C846481007D8DCB /* Controller */ = {
@@ -467,8 +467,6 @@
 		D6A0FB6E1C846488007D8DCB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D65F3AFC1C8DE7410024E419 /* LXMKeyboardManager.h */,
-				D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */,
 				D6FD61731C8DCC170029654E /* RegisterContentView.h */,
 				D6FD61741C8DCC170029654E /* RegisterContentView.m */,
 				D6FD61711C8DCBF40029654E /* RegisterContentView.xib */,
@@ -556,7 +554,7 @@
 		D6E104FA1C73217C00049C3F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D6A0FB6C1C84647A007D8DCB /* 注册 */,
+				D6A0FB6C1C84647A007D8DCB /* 注册找回密码 */,
 				D6E106541C747D0500049C3F /* 登录 */,
 				D6E106161C7327AC00049C3F /* 更多 */,
 				D6E106151C7327A600049C3F /* 我的 */,
@@ -660,6 +658,8 @@
 		D6E1050B1C73219000049C3F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				D65F3AFC1C8DE7410024E419 /* LXMKeyboardManager.h */,
+				D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */,
 				D6DD24A11C87439C0042E263 /* MMDLogin.h */,
 				D6DD24A21C87439C0042E263 /* MMDLogin.m */,
 				D6835B241C8EC5BF0004EF1E /* UpdateUserInfo.h */,

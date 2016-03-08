@@ -65,5 +65,11 @@
         }
     }
 }
-
+- (void)changeSureButtonStatus:(NSUInteger)type{
+    if (type == 0) {
+        [self.sureButton setTitle:@"注  册" forState:UIControlStateNormal];
+    }else if (type == 1){
+        [self.sureButton setTitle:@"确  定" forState:UIControlStateNormal];
+    }
+}
 @end

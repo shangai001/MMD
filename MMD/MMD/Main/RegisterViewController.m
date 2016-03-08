@@ -78,8 +78,15 @@
 }
 - (void)setupUI{
     [self resetUIFrame];
+    if (self.type == 0) {
+        self.title = @"注册用户";
+    }else{
+        self.title = @"找回密码";
+    }
+    [self.contentView changeSureButtonStatus:self.type];
 }
 - (void)resetUIFrame{
+    
     [self.baseScrollView addSubview:self.contentView];
     CGSize baseScrollViewSie = self.baseScrollView.frame.size;
     self.contentView.frame = CGRectMake(30, 44, baseScrollViewSie.width - 30 * 2, baseScrollViewSie.height - 44 - 30);
@@ -92,11 +99,12 @@
 }
 - (void)addButtonAction{
     [self.contentView.getSecurityCodeButton addTarget:self action:@selector(getSecurityCode:) forControlEvents:UIControlEventTouchUpInside];
-    [self.contentView.sureButton addTarget:self action:@selector(checkoutRegisterUser:) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView.sureButton addTarget:self action:@selector(doneUser:) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)removeKeyBoard{
     [self.view endEditing:YES];
 }
+#pragma mark ButtonAction
 - (void)changeSecurityButtonTitle:(id)sender{
     self.seconds += 1;
     long afterSeconds = 60 -self.seconds;
@@ -126,12 +134,18 @@
  
     BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:self.contentView.phoneNumberField.text];
     if (isPhoneNum) {
-        NSString *phoneNumber = self.contentView.phoneNumberField.text;
-        NSDictionary *info = @{@"phone":phoneNumber};
-        [MMDLogin getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
-            [self saveReturnUserInfo:resultDictionary];
-        } FailureHandler:^(NSError *error) {
-        }];
+        if (self.type == 0) {
+            NSString *phoneNumber = self.contentView.phoneNumberField.text;
+            NSDictionary *info = @{@"phone":phoneNumber};
+            [MMDLogin getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
+                [self saveReturnUserInfo:resultDictionary];
+            } FailureHandler:^(NSError *error) {
+            }];
+            
+        }else if (self.type == 1){
+            //找回密码
+            
+        }
         [self startTimer:sender];
     }else{
         NSLog(@"这不是正确的电话号码！");
@@ -145,17 +159,22 @@
         [stUserDefault setObject:sid forKey:@"sid"];
     }
 }
-- (void)checkoutRegisterUser:(id)sender{
+- (void)doneUser:(id)sender{
     [self.view endEditing:YES];
     NSDictionary *info = self.registerItem.mj_keyValues;
-    [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
-        if ([resultDictionary[@"code"] integerValue] == 0) {
-            NSDictionary *data = resultDictionary[@"data"];
-            [UpdateUserInfo updateUserInfo:data];
-        }
-    } FailureHandler:^(NSError *error) {
-        
-    }];
+    if (self.type == 0) {
+        [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
+            if ([resultDictionary[@"code"] integerValue] == 0) {
+                NSDictionary *data = resultDictionary[@"data"];
+                [UpdateUserInfo updateUserInfo:data];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        } FailureHandler:^(NSError *error) {
+            
+        }];
+    }else if (self.type == 1){
+        //找回密码
+    }
 }
 -(void)ez_TextFiledEditChanged:(NSNotification *)obj{
     

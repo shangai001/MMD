@@ -31,4 +31,16 @@
         completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
            FailureHandler:(void(^)(NSError *error))failureBlock;
 
+/**
+ *  忘记密码，获取验证码重新设置密码
+ *
+ *  @param info              传入手机号
+ *  @param completationBlock 完成回调
+ *  @param failureBlock      失败回调
+ */
++ (void)forgetPassword:(NSDictionary *)info
+     completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
+        FailureHandler:(void(^)(NSError *error))failureBlock;
+
+
 @end
