@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+
 @interface RegisterContentView : UIView
 
 @property (weak, nonatomic) IBOutlet UIButton *sureButton;
@@ -22,5 +25,10 @@
 
 - (void)changeSecurityButtonWaitingStatus:(NSInteger)seconds;
 - (void)changeSecurityButtonNormalStatus;
+
+
+
+
+
 
 @end

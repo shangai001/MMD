@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface RegisterItem : NSObject
-@property (nonatomic, copy)NSString *phoneNum;
-@property (nonatomic, copy)NSString *securityCode;
+
+@property (nonatomic, copy)NSString *phone;
+
+@property (nonatomic, copy)NSString *code;
+
 @property (nonatomic, copy)NSString *password;
-
-
-@property (nonatomic, strong)NSNumber *returnSecurityCode;
 
 @end

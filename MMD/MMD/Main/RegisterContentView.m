@@ -20,6 +20,13 @@
 */
 - (void)awakeFromNib{
     [self configureSecurityButton];
+    [self addStatusImageForButtons];
+}
+- (void)addStatusImageForButtons{
+    [self.changeSecurityStatus1 setImage:[UIImage imageNamed:@"no_visible"] forState:UIControlStateNormal];
+    [self.changeSecurityStatus1 setImage:[UIImage imageNamed:@"visible"] forState:UIControlStateSelected];
+    [self.changeSecurityStatus2 setImage:[UIImage imageNamed:@"no_visible"] forState:UIControlStateNormal];
+    [self.changeSecurityStatus2 setImage:[UIImage imageNamed:@"visible"] forState:UIControlStateSelected];
 }
 - (void)configureSecurityButton{
     self.getSecurityCodeButton.backgroundColor = [UIColor colorWithRed:0.41 green:0.79 blue:0.53 alpha:1];
@@ -36,4 +43,27 @@
     [self.getSecurityCodeButton setTitle:normalTitle forState:UIControlStateNormal];
     self.getSecurityCodeButton.enabled = YES;
 }
+- (IBAction)changeStatus1:(id)sender {
+    if ([sender isKindOfClass:[UIButton class]]) {
+        UIButton *button = (UIButton *)sender;
+        button.selected = !button.selected;
+        if (button.selected) {
+            self.password1.secureTextEntry = NO;
+        }else{
+            self.password1.secureTextEntry = YES;
+        }
+    }
+}
+- (IBAction)changeStatus2:(id)sender {
+    if ([sender isKindOfClass:[UIButton class]]) {
+        UIButton *button = (UIButton *)sender;
+        button.selected = !button.selected;
+        if (button.selected) {
+            self.password2.secureTextEntry = NO;
+        }else{
+            self.password2.secureTextEntry = YES;
+        }
+    }
+}
+
 @end

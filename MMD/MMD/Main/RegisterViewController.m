@@ -14,6 +14,8 @@
 #import "LXMKeyboardManager.h"
 #import "RegisterContentView.h"
 #import "UIView+LoadViewFromNib.h"
+#import <MJExtension.h>
+#import "UpdateUserInfo.h"
 
 
 #define PHONENUM_LENGTH 11
@@ -31,7 +33,6 @@
 @property (assign, nonatomic)NSUInteger seconds;
 
 
-
 @end
 
 @implementation RegisterViewController
@@ -39,6 +40,7 @@
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+#pragma mark getter
 - (RegisterItem *)registerItem{
     if (!_registerItem) {
         _registerItem = [RegisterItem new];
@@ -61,6 +63,7 @@
     [self setupUI];
     [self addButtonAction];
 }
+#pragma Prepare
 - (void)registerNotification{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ez_TextFiledEditChanged:) name:@"UITextFieldTextDidChangeNotification" object:nil];
 }
@@ -74,9 +77,11 @@
     }
 }
 - (void)setupUI{
+    [self resetUIFrame];
+}
+- (void)resetUIFrame{
     [self.baseScrollView addSubview:self.contentView];
     CGSize baseScrollViewSie = self.baseScrollView.frame.size;
-    
     self.contentView.frame = CGRectMake(30, 44, baseScrollViewSie.width - 30 * 2, baseScrollViewSie.height - 44 - 30);
     [self.contentView setNeedsLayout];
     self.contentView.phoneNumberField.delegate = self;
@@ -87,6 +92,7 @@
 }
 - (void)addButtonAction{
     [self.contentView.getSecurityCodeButton addTarget:self action:@selector(getSecurityCode:) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView.sureButton addTarget:self action:@selector(checkoutRegisterUser:) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)removeKeyBoard{
     [self.view endEditing:YES];
@@ -136,8 +142,21 @@
     if ([code integerValue] == 0) {
         NSUserDefaults *stUserDefault = [NSUserDefaults standardUserDefaults];
         NSNumber *sid = dic[@"data"][@"result"][@"sid"];
-        [stUserDefault setValue:sid forKey:@"sid"];
+//        [stUserDefault setValue:sid forKey:@"sid"];
+        [stUserDefault setObject:sid forKey:@"sid"];
     }
+}
+- (void)checkoutRegisterUser:(id)sender{
+    [self.view endEditing:YES];
+    NSDictionary *info = self.registerItem.mj_keyValues;
+    [RegisterModel registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
+        if ([resultDictionary[@"code"] integerValue] == 0) {
+            NSDictionary *data = resultDictionary[@"data"];
+            [UpdateUserInfo updateUserInfo:data];
+        }
+    } FailureHandler:^(NSError *error) {
+        
+    }];
 }
 -(void)ez_TextFiledEditChanged:(NSNotification *)obj{
     
@@ -180,16 +199,16 @@
 }// return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     if (textField == self.contentView.phoneNumberField) {
-        
+        self.registerItem.phone = textField.text;
     }
     if (textField == self.contentView.securityCodeTextField) {
-        
+        self.registerItem.code = textField.text;
     }
-    if (textField == self.contentView.password1) {
-        
-    }
-    if (textField == self.contentView.password2) {
-        
+    BOOL isPass1 = textField == self.contentView.password1;
+    BOOL isPass2 = textField == self.contentView.password2;
+    BOOL isSame = [self.contentView.password1.text isEqualToString:self.contentView.password2.text];
+    if ( (isPass1 || isPass2)  && isSame) {
+        self.registerItem.password = textField.text;
     }
     
 }// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
@@ -204,7 +223,6 @@
     if (textField == self.contentView.phoneNumberField) {
         BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:textField.text];
         if (isPhoneNum) {
-            self.registerItem.phoneNum = textField.text;
             [self.contentView.securityCodeTextField becomeFirstResponder];
         }
         return isPhoneNum;
@@ -234,7 +252,7 @@
             isSame = NO;
         }
         if (isOk && isSame) {
-            
+            [textField resignFirstResponder];
         }
         return isOk && isSame;
     }
