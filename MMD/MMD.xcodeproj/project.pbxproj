@@ -978,6 +978,7 @@
 				TargetAttributes = {
 					D6E104C01C7320FD00049C3F = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 6XW46V97PX;
 					};
 					D6E104DC1C7320FD00049C3F = {
 						CreatedOnToolsVersion = 7.2;
@@ -1369,12 +1370,15 @@
 			baseConfigurationReference = 7B9823A9F698276E5762BEEE /* Pods-MMD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MMD/MMDPrefixHeader.pch";
 				INFOPLIST_FILE = MMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MMD.com.MMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1383,12 +1387,15 @@
 			baseConfigurationReference = 197FE7C65B5A58A153BD57BD /* Pods-MMD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MMD/MMDPrefixHeader.pch";
 				INFOPLIST_FILE = MMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MMD.com.MMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

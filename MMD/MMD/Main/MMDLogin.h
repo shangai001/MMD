@@ -42,5 +42,15 @@
      completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
         FailureHandler:(void(^)(NSError *error))failureBlock;
 
+/**
+ *  登录
+ *
+ *  @param info              传入手机号(18632156680)
+ *  @param completationBlock 完成回调
+ *  @param failureBlock      失败回调
+ */
++ (void)loginUser:(NSDictionary *)info
+completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
+   FailureHandler:(void(^)(NSError *error))failureBlock;
 
 @end
