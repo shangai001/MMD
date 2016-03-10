@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="M5K-oR-szP" userLabel="password">
-                    <rect key="frame" x="85" y="195" width="180" height="30"/>
+                    <rect key="frame" x="85" y="195" width="150" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -43,6 +43,7 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="r54-wq-n4K"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" image="no_visible.png"/>
                     <connections>
                         <action selector="changSecurityStarus:" destination="-1" eventType="touchUpInside" id="mEL-SJ-NkM"/>
@@ -152,7 +153,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码必须由6-12位数字字母组成" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE8-8E-9eP">
-                    <rect key="frame" x="85" y="225" width="180" height="21"/>
+                    <rect key="frame" x="85" y="225" width="150" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="0LN-8W-UrE"/>
                     </constraints>
@@ -164,9 +165,8 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="P4v-ab-XWW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="55" id="1lU-wX-hjH"/>
-                <constraint firstItem="hFO-cs-Tae" firstAttribute="trailing" secondItem="M5K-oR-szP" secondAttribute="trailing" id="2oK-SB-F9z"/>
                 <constraint firstItem="aUf-vy-w6M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="55" id="2si-bo-XUc"/>
-                <constraint firstAttribute="trailing" secondItem="M5K-oR-szP" secondAttribute="trailing" constant="55" id="9vr-lB-PEg"/>
+                <constraint firstAttribute="trailing" secondItem="M5K-oR-szP" secondAttribute="trailing" constant="85" id="9vr-lB-PEg"/>
                 <constraint firstItem="hFO-cs-Tae" firstAttribute="bottom" secondItem="M5K-oR-szP" secondAttribute="bottom" id="Bhs-rA-Hcv"/>
                 <constraint firstItem="DTn-9h-l7n" firstAttribute="top" secondItem="aUf-vy-w6M" secondAttribute="bottom" constant="10" id="Bj7-H9-aLy"/>
                 <constraint firstItem="6Lo-zh-cEJ" firstAttribute="trailing" secondItem="aUf-vy-w6M" secondAttribute="trailing" id="GNq-ol-uzd"/>
@@ -177,6 +177,7 @@
                 <constraint firstItem="6Lo-zh-cEJ" firstAttribute="top" secondItem="aUf-vy-w6M" secondAttribute="bottom" constant="10" id="OS4-cT-bwl"/>
                 <constraint firstItem="EE8-8E-9eP" firstAttribute="leading" secondItem="M5K-oR-szP" secondAttribute="leading" id="RHs-jw-Dv9"/>
                 <constraint firstItem="M5K-oR-szP" firstAttribute="leading" secondItem="P4v-ab-XWW" secondAttribute="trailing" constant="10" id="Rfb-3L-efN"/>
+                <constraint firstAttribute="trailing" secondItem="hFO-cs-Tae" secondAttribute="trailing" constant="55" id="TeK-n4-aee"/>
                 <constraint firstItem="DTn-9h-l7n" firstAttribute="leading" secondItem="aUf-vy-w6M" secondAttribute="leading" id="UU3-mU-U8E"/>
                 <constraint firstAttribute="trailing" secondItem="sJB-Rj-EAj" secondAttribute="trailing" constant="30" id="aQs-cP-eGF"/>
                 <constraint firstItem="9MS-va-ege" firstAttribute="top" secondItem="sJB-Rj-EAj" secondAttribute="bottom" constant="30" id="b5g-is-0d6"/>

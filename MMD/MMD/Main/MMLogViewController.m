@@ -10,6 +10,7 @@
 #import "checkoutPhoneNumber.h"
 #import "MMDUser.h"
 #import "MMDLogin.h"
+#import <MJExtension.h>
 #import "RegisterViewController.h"
 #import "BaseNavgationController.h"
 #import "PasswordLength.h"
@@ -30,7 +31,7 @@
     // Do any additional setup after loading the view from its nib.
     [self addButtonStatusImage];
     [self addDissmissKeyboardAction];
-    if (self.user) {
+    if (!self.user) {
         self.user = [MMDUser new];
     }
 }
@@ -50,16 +51,25 @@
     [self.securityBUtton setImage:[UIImage imageNamed:@"visible"] forState:UIControlStateSelected];
 }
 - (IBAction)changSecurityStarus:(id)sender {
-    self.passwordTextField.secureTextEntry = !self.passwordTextField.secureTextEntry;
+    if ([sender isKindOfClass:[UIButton class]]) {
+        self.securityBUtton.selected = !self.securityBUtton.selected;
+        self.passwordTextField.secureTextEntry = !self.passwordTextField.secureTextEntry;
+    }
 }
 - (IBAction)rememberPassword:(id)sender {
     UIButton *button = (UIButton *)sender;
     button.selected = ! button.selected;
 }
 - (IBAction)logIn:(id)sender {
-    NSDictionary *info = @{@"phone":@"18632156680",@"password":@"123456"};
+#warning 此处有BUG
+    NSDictionary *info = self.user.mj_keyValues;
+//    NSDictionary *info = @{@"phoneNumber":@"18632156680",@"password":@"123456"};
+    
     [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
-        
+        if ([resultDictionary[@"code"] integerValue] == 0) {
+            NSLog(@"登录成功");
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
     } FailureHandler:^(NSError *error) {
         
     }];
@@ -68,13 +78,14 @@
 - (IBAction)forgetPassword:(id)sender {
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:NSStringFromClass([RegisterViewController class]) bundle:[NSBundle mainBundle]];
     registerController.title = @"找回密码";
+    registerController.type = 1;
     [self.navigationController pushViewController:registerController animated:YES];
 }
 
 - (IBAction)registerUser:(id)sender {
-    
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:NSStringFromClass([RegisterViewController class]) bundle:[NSBundle mainBundle]];
     registerController.title = @"注册用户";
+    registerController.type = 1;
     [self.navigationController pushViewController:registerController animated:YES];
 }
 #pragma mark UITextFieldDelegate
@@ -82,27 +93,31 @@
     return YES;
 }// return NO to disallow editing.
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-    NSLog(@"textfield  %@",textField);
+
 }// became first responder
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
     if (textField == self.numTextField) {
-        BOOL isOK = [checkoutPhoneNumber checkTelNumber:textField.text];
-        return isOK;
+//        BOOL isOK = [checkoutPhoneNumber checkTelNumber:textField.text];
+//        return isOK;
     }
     if (textField == self.passwordTextField) {
-        NSString *text = textField.text;
-        if (text.length >= SHORTESTLENGTH && text.length <= LONGESTLENGTH) {
-//            self.user.password = text;
-            return YES;
-        }
+
+//        }
     }
-    return NO;
+    return YES;
 }// return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
 - (void)textFieldDidEndEditing:(UITextField *)textField{
+ 
     if ([textField isEqual:self.numTextField]) {
-        self.user.phoneNumber = textField.text;
+        BOOL isOK = [checkoutPhoneNumber checkTelNumber:textField.text];
+        if (isOK) {
+            self.user.phoneNumber = textField.text;
+        }
     }else if ([textField isEqual:self.passwordTextField]){
-        self.user.password = textField.text;
+        NSString *text = textField.text;
+        if (text.length >= SHORTESTLENGTH && text.length <= LONGESTLENGTH) {
+            self.user.password = text;
+        }
     }
     
 }// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called

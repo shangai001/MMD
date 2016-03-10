@@ -144,7 +144,13 @@
             
         }else if (self.type == 1){
             //找回密码
-            
+            NSString *phoneNumber = self.contentView.phoneNumberField.text;
+            NSDictionary *info = @{@"phone":phoneNumber};
+            [MMDLogin forgetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
+                
+            } FailureHandler:^(NSError *error) {
+                
+            }];
         }
         [self startTimer:sender];
     }else{
@@ -162,16 +168,17 @@
 - (void)doneUser:(id)sender{
     [self.view endEditing:YES];
     NSDictionary *info = self.registerItem.mj_keyValues;
+    [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
+        if ([resultDictionary[@"code"] integerValue] == 0) {
+            NSDictionary *data = resultDictionary[@"data"];
+            [UpdateUserInfo updateUserInfo:data];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    } FailureHandler:^(NSError *error) {
+        
+    }];
     if (self.type == 0) {
-        [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
-            if ([resultDictionary[@"code"] integerValue] == 0) {
-                NSDictionary *data = resultDictionary[@"data"];
-                [UpdateUserInfo updateUserInfo:data];
-                [self.navigationController popViewControllerAnimated:YES];
-            }
-        } FailureHandler:^(NSError *error) {
-            
-        }];
+
     }else if (self.type == 1){
         //找回密码
     }
