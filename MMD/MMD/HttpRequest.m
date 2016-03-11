@@ -7,10 +7,15 @@
 //
 
 #import "HttpRequest.h"
-#import "AFNetworking.h"
+#import <AFNetworking.h>
 #import "UploadParam.h"
 
+
 @implementation HttpRequest
+
+
+#define TIME_OUT 5
+#define REQUEST_MAXCOUNT 5
 
 #pragma mark -- GET请求 --
 + (void)getWithURLString:(NSString *)URLString
@@ -19,21 +24,23 @@
                  failure:(void (^)(NSError *))failure {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    /**
-     *  可以接受的类型
-     */
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     /**
      *  请求队列的最大并发数
      */
-//    manager.operationQueue.maxConcurrentOperationCount = 5;
+    manager.operationQueue.maxConcurrentOperationCount = REQUEST_MAXCOUNT;
     /**
      *  请求超时的时间
      */
-//    manager.requestSerializer.timeoutInterval = 5;
+    manager.requestSerializer.timeoutInterval = TIME_OUT;
+    
     [manager GET:URLString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
-            success(responseObject);
+            id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+            success(jsonObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
@@ -49,10 +56,16 @@
                   failure:(void (^)(NSError *))failure {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    
     [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
-            success(responseObject);
+            id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+            success(jsonObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
@@ -69,13 +82,18 @@
                      failure:(void (^)(NSError *))failure {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    
     switch (type) {
         case HttpRequestTypeGet:
         {
             [manager GET:URLString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (success) {
-                    success(responseObject);
+                    id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+                    success(jsonObject);
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {
@@ -88,7 +106,8 @@
         {
             [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (success) {
-                    success(responseObject);
+                    id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+                    success(jsonObject);
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {
@@ -109,11 +128,13 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
     [manager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:uploadParam.data name:uploadParam.name fileName:uploadParam.filename mimeType:uploadParam.mimeType];
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
-            success(responseObject);
+            id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+            success(jsonObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {

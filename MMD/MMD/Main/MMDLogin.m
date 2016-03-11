@@ -7,6 +7,7 @@
 //
 
 #import "MMDLogin.h"
+#import "HttpRequest.h"
 
 @implementation MMDLogin
 
@@ -15,24 +16,39 @@
          FailureHandler:(void(^)(NSError *error))failureBlock{
     
     NSString *URL = [NSString stringWithFormat:@"%@/user/registCode",kHostURL];
-    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
-        if ([response isKindOfClass:[NSDictionary class]]) {
-            completationBlock(response);
+    [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            completationBlock(responseObject);
         }
-    } fail:^(NSError *error) {
+    } failure:^(NSError *error) {
         failureBlock(error);
     }];
+//    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
+//        if ([response isKindOfClass:[NSDictionary class]]) {
+//            completationBlock(response);
+//        }
+//    } fail:^(NSError *error) {
+//        failureBlock(error);
+//    }];
 }
 + (void)registerUserCount:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
     
     NSString *URL = [NSString stringWithFormat:@"%@/user/regist",kHostURL];
-    [HYBNetworking postWithUrl:URL params:info success:^(id response) {
-        if ([response isKindOfClass:[NSDictionary class]]) {
-            completationBlock(response);
+    [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            completationBlock(responseObject);
         }
-    } fail:^(NSError *error) {
+    } failure:^(NSError *error) {
         failureBlock(error);
     }];
+    
+//    [HYBNetworking postWithUrl:URL params:info success:^(id response) {
+//        if ([response isKindOfClass:[NSDictionary class]]) {
+//            completationBlock(response);
+//        }
+//    } fail:^(NSError *error) {
+//        failureBlock(error);
+//    }];
 //    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
 //        if ([response isKindOfClass:[NSDictionary class]]) {
 //            completationBlock(response);
@@ -44,13 +60,20 @@
 + (void)forgetPassword:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
     
     NSString *URL = [NSString stringWithFormat:@"%@/user/forgetPasswordCode",kHostURL];
-    [HYBNetworking postWithUrl:URL params:info success:^(id response) {
-        if ([response isKindOfClass:[NSDictionary class]]) {
-            completationBlock(response);
+    [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            completationBlock(responseObject);
         }
-    } fail:^(NSError *error) {
+    } failure:^(NSError *error) {
         failureBlock(error);
     }];
+//    [HYBNetworking postWithUrl:URL params:info success:^(id response) {
+//        if ([response isKindOfClass:[NSDictionary class]]) {
+//            completationBlock(response);
+//        }
+//    } fail:^(NSError *error) {
+//        failureBlock(error);
+//    }];
 //    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
 //        if ([response isKindOfClass:[NSDictionary class]]) {
 //            completationBlock(response);
@@ -61,13 +84,22 @@
 }
 + (void)loginUser:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
     NSString *URL = [NSString stringWithFormat:@"%@/user/login",kHostURL];
-    [HYBNetworking postWithUrl:URL params:info success:^(id response) {
-        if ([response isKindOfClass:[NSDictionary class]]) {
-            completationBlock(response);
-        }
-    } fail:^(NSError *error) {
+    [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
+//        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            completationBlock(responseObject);
+            NSLog(@"登录响应 %@",responseObject);
+//        }
+    } failure:^(NSError *error) {
         failureBlock(error);
     }];
+    
+//    [HYBNetworking postWithUrl:URL params:info success:^(id response) {
+//        if ([response isKindOfClass:[NSDictionary class]]) {
+//            completationBlock(response);
+//        }
+//    } fail:^(NSError *error) {
+//        failureBlock(error);
+//    }];
 //    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
 //  
 //    } fail:^(NSError *error) {

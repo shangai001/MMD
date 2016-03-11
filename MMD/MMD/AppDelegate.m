@@ -21,13 +21,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self configureBaseNetwork];
+//    [self configureBaseNetwork];
     return YES;
 }
 - (void)configureBaseNetwork{
     
     [HYBNetworking updateBaseUrl:kHostURL];
-//    [HYBNetworking enableInterfaceDebug:YES];
     [HYBNetworking configResponseType:kHYBResponseTypeData];
 //    [UpdateUserInfo updateCommonHeader];
 }
