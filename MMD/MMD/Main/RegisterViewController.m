@@ -208,7 +208,7 @@
             break;
         case 1:
         {
-            NSLog(@"手机号未注册！");
+            NSLog(@"手机号已经注册！");
         }
             break;
         case 2:

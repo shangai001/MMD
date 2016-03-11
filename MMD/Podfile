@@ -6,7 +6,7 @@
 target 'MMD' do
     pod 'AFNetworking'
     pod 'Masonry'
-    pod 'HYBNetworking'
+    pod 'SVProgressHUD'
     pod 'RealReachability'
     pod 'MJRefresh'
     pod 'MJExtension'
