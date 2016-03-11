@@ -10,8 +10,10 @@
 
 @interface MMDUser : NSObject
 
-@property (nonatomic, copy)NSString *phoneNumber;
+@property (nonatomic, copy)NSString *phone;
+
 @property (nonatomic, copy)NSString *password;
+
 @property (nonatomic, copy)NSString *userId;
 
 

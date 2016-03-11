@@ -53,4 +53,15 @@
 completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
    FailureHandler:(void(^)(NSError *error))failureBlock;
 
+/**
+ *  重设密码，需要调用/user/checkIdCardRepeat接口判断是否验证过
+ *
+ *  @param info              传入参数
+ *  @param completationBlock 完成回调
+ *  @param failureBlock      失败回调
+ */
++ (void)resetPassword:(NSDictionary *)info
+    completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
+       FailureHandler:(void(^)(NSError *error))failureBlock;
+
 @end

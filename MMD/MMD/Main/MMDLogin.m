@@ -19,17 +19,11 @@
     [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             completationBlock(responseObject);
+            NSLog(@"获取验证码responseObject %@",responseObject);
         }
     } failure:^(NSError *error) {
         failureBlock(error);
     }];
-//    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
-//        if ([response isKindOfClass:[NSDictionary class]]) {
-//            completationBlock(response);
-//        }
-//    } fail:^(NSError *error) {
-//        failureBlock(error);
-//    }];
 }
 + (void)registerUserCount:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
     
@@ -37,25 +31,11 @@
     [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             completationBlock(responseObject);
+            NSLog(@"新注册responseObject %@",responseObject);
         }
     } failure:^(NSError *error) {
         failureBlock(error);
     }];
-    
-//    [HYBNetworking postWithUrl:URL params:info success:^(id response) {
-//        if ([response isKindOfClass:[NSDictionary class]]) {
-//            completationBlock(response);
-//        }
-//    } fail:^(NSError *error) {
-//        failureBlock(error);
-//    }];
-//    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
-//        if ([response isKindOfClass:[NSDictionary class]]) {
-//            completationBlock(response);
-//        }
-//    } fail:^(NSError *error) {
-//        failureBlock(error);
-//    }];
 }
 + (void)forgetPassword:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
     
@@ -63,47 +43,32 @@
     [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             completationBlock(responseObject);
+            NSLog(@"忘记密码responseObject %@",responseObject);
         }
     } failure:^(NSError *error) {
         failureBlock(error);
     }];
-//    [HYBNetworking postWithUrl:URL params:info success:^(id response) {
-//        if ([response isKindOfClass:[NSDictionary class]]) {
-//            completationBlock(response);
-//        }
-//    } fail:^(NSError *error) {
-//        failureBlock(error);
-//    }];
-//    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
-//        if ([response isKindOfClass:[NSDictionary class]]) {
-//            completationBlock(response);
-//        }
-//    } fail:^(NSError *error) {
-//        failureBlock(error);
-//    }];
 }
 + (void)loginUser:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
     NSString *URL = [NSString stringWithFormat:@"%@/user/login",kHostURL];
     [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
-//        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
             completationBlock(responseObject);
             NSLog(@"登录响应 %@",responseObject);
-//        }
+        }
     } failure:^(NSError *error) {
         failureBlock(error);
     }];
-    
-//    [HYBNetworking postWithUrl:URL params:info success:^(id response) {
-//        if ([response isKindOfClass:[NSDictionary class]]) {
-//            completationBlock(response);
-//        }
-//    } fail:^(NSError *error) {
-//        failureBlock(error);
-//    }];
-//    [HYBNetworking getWithUrl:URL params:info success:^(id response) {
-//  
-//    } fail:^(NSError *error) {
-//        
-//    }];
+}
++ (void)resetPassword:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
+    NSString *URL = [NSString stringWithFormat:@"%@/user/reset",kHostURL];
+    [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            completationBlock(responseObject);
+            NSLog(@"重设密码responseObject %@",responseObject);
+        }
+    } failure:^(NSError *error) {
+        failureBlock(error);
+    }];
 }
 @end

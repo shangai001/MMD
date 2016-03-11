@@ -169,10 +169,37 @@
         NSLog(@"这不是正确的电话号码！");
     }
 }
-//注册手机号码
-- (void)handleGetSecurityCodeInfo:(NSDictionary *)info{
-    NSDictionary *dataDic = info[@"data"];
-    NSInteger codeStatus = [dataDic[@"code"] integerValue];
+
+- (void)saveReturnUserInfo:(NSDictionary *)dic{
+    NSNumber *code = dic[@"code"];
+    if ([code integerValue] == 0) {
+        NSUserDefaults *stUserDefault = [NSUserDefaults standardUserDefaults];
+        NSNumber *sid = dic[@"data"][@"result"][@"sid"];
+        [stUserDefault setObject:sid forKey:@"sid"];
+    }
+}
+- (void)doneUser:(id)sender{
+    
+    [self.view endEditing:YES];
+    NSDictionary *info = self.registerItem.mj_keyValues;
+    if (self.type == kRegisterType) {
+        [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
+            [self handleRegisterResult:resultDictionary];
+        } FailureHandler:^(NSError *error) {
+            
+        }];
+    }
+    if (self.type == kForgetPassword) {
+        [MMDLogin resetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
+            [self handleResetResult:resultDictionary];
+        } FailureHandler:^(NSError *error) {
+            
+        }];
+    }
+}
+//处理注册手机号码结果
+- (void)handleGetSecurityCodeInfo:(NSDictionary *)resultDictionary{
+    NSInteger codeStatus = [resultDictionary[@"code"] integerValue];
     switch (codeStatus) {
         case 0:
         {
@@ -198,34 +225,21 @@
             break;
     }
 }
-- (void)saveReturnUserInfo:(NSDictionary *)dic{
-    NSNumber *code = dic[@"code"];
-    if ([code integerValue] == 0) {
-        NSUserDefaults *stUserDefault = [NSUserDefaults standardUserDefaults];
-        NSNumber *sid = dic[@"data"][@"result"][@"sid"];
-        [stUserDefault setObject:sid forKey:@"sid"];
-    }
-}
-- (void)doneUser:(id)sender{
-    
-    [self.view endEditing:YES];
-    NSDictionary *info = self.registerItem.mj_keyValues;
-    if (self.type == kRegisterType) {
-        [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
-            [self handleRegisterResult:resultDictionary];
-        } FailureHandler:^(NSError *error) {
-            
-        }];
-    }
-}
 //处理注册结果
 - (void)handleRegisterResult:(NSDictionary *)resultDictionary{
-    if ([resultDictionary[@"code"] integerValue] == 0) {
+    NSInteger codeStatus = [resultDictionary[@"code"] integerValue];
+    if (codeStatus == 0) {
         NSDictionary *data = resultDictionary[@"data"];
         [UpdateUserInfo updateUserInfo:data];
         [self.navigationController popViewControllerAnimated:YES];
     }else if ([resultDictionary[@"code"] integerValue] == 1){
         NSLog(@"手机号已经注册！");
+    }
+}
+//处理重设密码结果
+- (void)handleResetResult:(NSDictionary *)resultDictionary{
+    if ([resultDictionary[@"code"] integerValue] == 0) {
+        NSLog(@"密码重置成功");
     }
 }
 -(void)ez_TextFiledEditChanged:(NSNotification *)obj{

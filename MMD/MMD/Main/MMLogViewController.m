@@ -111,7 +111,7 @@
     if ([textField isEqual:self.numTextField]) {
         BOOL isOK = [checkoutPhoneNumber checkTelNumber:textField.text];
         if (isOK) {
-            self.user.phoneNumber = textField.text;
+            self.user.phone = textField.text;
         }
     }else if ([textField isEqual:self.passwordTextField]){
         NSString *text = textField.text;
