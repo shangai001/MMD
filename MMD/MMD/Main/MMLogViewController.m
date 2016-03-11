@@ -8,7 +8,7 @@
 
 #import "MMLogViewController.h"
 #import "checkoutPhoneNumber.h"
-#import "MMDUser.h"
+#import "LoginUser.h"
 #import "MMDLogin.h"
 #import <MJExtension.h>
 #import "RegisterViewController.h"
@@ -18,7 +18,7 @@
 
 @interface MMLogViewController ()<UITextFieldDelegate>
 
-@property (nonatomic, strong)MMDUser *user;
+@property (nonatomic, strong)LoginUser *user;
 
 
 @end
@@ -32,7 +32,7 @@
     [self addButtonStatusImage];
     [self addDissmissKeyboardAction];
     if (!self.user) {
-        self.user = [MMDUser new];
+        self.user = [LoginUser new];
     }
 }
 - (void)addDissmissKeyboardAction{
@@ -61,13 +61,9 @@
     button.selected = ! button.selected;
 }
 - (IBAction)logIn:(id)sender {
-#warning 此处有BUG
     NSDictionary *info = self.user.mj_keyValues;
-//    NSDictionary *info = @{@"phoneNumber":@"18632156680",@"password":@"123456"};
-    
     [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
-            NSLog(@"登录成功");
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     } FailureHandler:^(NSError *error) {
@@ -75,16 +71,20 @@
     }];
     
 }
+- (void)handleLoginResult:(NSDictionary *)resultDictionary{
+    NSLog(@"%@",resultDictionary[@"msg"]);
+    if ([resultDictionary[@"code"] integerValue] == 0) {
+        
+    }
+}
 - (IBAction)forgetPassword:(id)sender {
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:NSStringFromClass([RegisterViewController class]) bundle:[NSBundle mainBundle]];
-    registerController.title = @"找回密码";
     registerController.type = kForgetPassword;
     [self.navigationController pushViewController:registerController animated:YES];
 }
 
 - (IBAction)registerUser:(id)sender {
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:NSStringFromClass([RegisterViewController class]) bundle:[NSBundle mainBundle]];
-    registerController.title = @"注册用户";
     registerController.type = kRegisterType;
     [self.navigationController pushViewController:registerController animated:YES];
 }

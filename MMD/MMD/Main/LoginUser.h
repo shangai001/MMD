@@ -8,13 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MMDUser : NSObject
+@interface LoginUser : NSObject
 
 @property (nonatomic, copy)NSString *phone;
 
 @property (nonatomic, copy)NSString *password;
-
-@property (nonatomic, copy)NSString *userId;
 
 
 @end

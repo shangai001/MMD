@@ -199,6 +199,7 @@
 }
 //处理注册手机号码结果
 - (void)handleGetSecurityCodeInfo:(NSDictionary *)resultDictionary{
+    NSLog(@"%@",resultDictionary[@"msg"]);
     NSInteger codeStatus = [resultDictionary[@"code"] integerValue];
     switch (codeStatus) {
         case 0:
@@ -227,6 +228,7 @@
 }
 //处理注册结果
 - (void)handleRegisterResult:(NSDictionary *)resultDictionary{
+    NSLog(@"%@",resultDictionary[@"msg"]);
     NSInteger codeStatus = [resultDictionary[@"code"] integerValue];
     if (codeStatus == 0) {
         NSDictionary *data = resultDictionary[@"data"];
@@ -238,6 +240,7 @@
 }
 //处理重设密码结果
 - (void)handleResetResult:(NSDictionary *)resultDictionary{
+    NSLog(@"%@",resultDictionary[@"msg"]);
     if ([resultDictionary[@"code"] integerValue] == 0) {
         NSLog(@"密码重置成功");
     }

@@ -99,9 +99,10 @@
 		D65F3AFE1C8DE7410024E419 /* LXMKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */; };
 		D6835B261C8EC5BF0004EF1E /* UpdateUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6835B251C8EC5BF0004EF1E /* UpdateUserInfo.m */; };
 		D69A00001C929E4400EB0823 /* UploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFE1C929E4400EB0823 /* UploadParam.m */; };
+		D69A00031C92C00100EB0823 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A00021C92C00100EB0823 /* UserInfo.m */; };
 		D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFC1C929E4400EB0823 /* HttpRequest.m */; };
 		D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */; };
-		D6A0FB6B1C845C93007D8DCB /* MMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB6A1C845C93007D8DCB /* MMDUser.m */; };
+		D6A0FB6B1C845C93007D8DCB /* LoginUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB6A1C845C93007D8DCB /* LoginUser.m */; };
 		D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */; };
 		D6A0FB741C8464BD007D8DCB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */; };
 		D6B692181C8D7A5B00B3877D /* mmd_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */; };
@@ -276,14 +277,16 @@
 		D6835B241C8EC5BF0004EF1E /* UpdateUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateUserInfo.h; sourceTree = "<group>"; };
 		D6835B251C8EC5BF0004EF1E /* UpdateUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateUserInfo.m; sourceTree = "<group>"; };
 		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
+		D69A00011C92C00100EB0823 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		D69A00021C92C00100EB0823 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		D69AFFFB1C929E4400EB0823 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
 		D69AFFFC1C929E4400EB0823 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		D69AFFFD1C929E4400EB0823 /* UploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadParam.h; sourceTree = "<group>"; };
 		D69AFFFE1C929E4400EB0823 /* UploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadParam.m; sourceTree = "<group>"; };
 		D6A0FB631C8459C0007D8DCB /* checkoutPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutPhoneNumber.h; sourceTree = "<group>"; };
 		D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutPhoneNumber.m; sourceTree = "<group>"; };
-		D6A0FB691C845C93007D8DCB /* MMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDUser.h; sourceTree = "<group>"; };
-		D6A0FB6A1C845C93007D8DCB /* MMDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDUser.m; sourceTree = "<group>"; };
+		D6A0FB691C845C93007D8DCB /* LoginUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUser.h; sourceTree = "<group>"; };
+		D6A0FB6A1C845C93007D8DCB /* LoginUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginUser.m; sourceTree = "<group>"; };
 		D6A0FB701C8464BD007D8DCB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -442,8 +445,8 @@
 		D6A0FB681C845C5C007D8DCB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D6A0FB691C845C93007D8DCB /* MMDUser.h */,
-				D6A0FB6A1C845C93007D8DCB /* MMDUser.m */,
+				D6A0FB691C845C93007D8DCB /* LoginUser.h */,
+				D6A0FB6A1C845C93007D8DCB /* LoginUser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -642,6 +645,8 @@
 		D6E105071C73219000049C3F /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				D69A00011C92C00100EB0823 /* UserInfo.h */,
+				D69A00021C92C00100EB0823 /* UserInfo.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -1236,10 +1241,11 @@
 				D69A00001C929E4400EB0823 /* UploadParam.m in Sources */,
 				D65F3AFE1C8DE7410024E419 /* LXMKeyboardManager.m in Sources */,
 				D6E106601C74888200049C3F /* ActivityViewController.m in Sources */,
-				D6A0FB6B1C845C93007D8DCB /* MMDUser.m in Sources */,
+				D6A0FB6B1C845C93007D8DCB /* LoginUser.m in Sources */,
 				D6E1061A1C73293000049C3F /* MMLogViewController.m in Sources */,
 				D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */,
 				D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */,
+				D69A00031C92C00100EB0823 /* UserInfo.m in Sources */,
 				D6FD61751C8DCC170029654E /* RegisterContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
