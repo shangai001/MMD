@@ -33,16 +33,19 @@
     self.getSecurityCodeButton.layer.cornerRadius = self.securityNButtonHeight.constant/2.0;
     self.sureButton.backgroundColor = REDCOLOR;
 }
+//改变“获取手机验证码”状态-->"xxS后重新获取"
 - (void)changeSecurityButtonWaitingStatus:(NSInteger)seconds{
     NSString *title = [NSString stringWithFormat:@"%ldS后重新获取",seconds];
     [self.getSecurityCodeButton setTitle:title forState:UIControlStateNormal];
     self.getSecurityCodeButton.enabled = NO;
 }
+//改变"xxS后重新获取"-->“获取手机验证码”状态
 - (void)changeSecurityButtonNormalStatus{
     NSString *normalTitle = @"获取短信验证码";
     [self.getSecurityCodeButton setTitle:normalTitle forState:UIControlStateNormal];
     self.getSecurityCodeButton.enabled = YES;
 }
+//输入密码1
 - (IBAction)changeStatus1:(id)sender {
     if ([sender isKindOfClass:[UIButton class]]) {
         UIButton *button = (UIButton *)sender;
@@ -54,6 +57,7 @@
         }
     }
 }
+//输入密码2
 - (IBAction)changeStatus2:(id)sender {
     if ([sender isKindOfClass:[UIButton class]]) {
         UIButton *button = (UIButton *)sender;
@@ -65,6 +69,7 @@
         }
     }
 }
+//改变底部button title
 - (void)changeSureButtonStatus:(NSUInteger)type{
     if (type == 0) {
         [self.sureButton setTitle:@"注  册" forState:UIControlStateNormal];

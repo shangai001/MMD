@@ -64,27 +64,26 @@
     [self addButtonAction];
 }
 #pragma Prepare
+//注册通知，限制字数
 - (void)registerNotification{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ez_TextFiledEditChanged:) name:@"UITextFieldTextDidChangeNotification" object:nil];
 }
+//添加取消输入手势
 - (void)addDissmissKeyboardGesture{
     UITapGestureRecognizer *keyboardTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyBoard)];
     [self.view addGestureRecognizer:keyboardTap];
 }
+//添加自动调整输入框位置管理器
 - (void)addKeyboardManager{
     if (!self.lxManager) {
         self.lxManager = [[LXMKeyboardManager alloc] initWithScrollView:self.baseScrollView];
     }
 }
+//分别修改UI/标题
 - (void)setupUI{
     [self resetUIFrame];
-    if (self.type == 0) {
-        self.title = @"注册用户";
-    }else{
-        self.title = @"找回密码";
-    }
-    [self.contentView changeSureButtonStatus:self.type];
 }
+//修改UI Frame
 - (void)resetUIFrame{
     
     [self.baseScrollView addSubview:self.contentView];
@@ -97,6 +96,7 @@
     self.contentView.password2.delegate = self;
     self.baseScrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 55);
 }
+//获取验证码/确定 点击事件
 - (void)addButtonAction{
     [self.contentView.getSecurityCodeButton addTarget:self action:@selector(getSecurityCode:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView.sureButton addTarget:self action:@selector(doneUser:) forControlEvents:UIControlEventTouchUpInside];
@@ -104,7 +104,17 @@
 - (void)removeKeyBoard{
     [self.view endEditing:YES];
 }
+- (void)setType:(kUserType)type{
+    _type = type;
+    if (_type == kRegisterType) {
+        self.title = @"注册用户";
+    }else if (_type == kForgetPassword){
+        self.title = @"找回密码";
+    }
+    [self.contentView changeSureButtonStatus:_type];
+}
 #pragma mark ButtonAction
+//改变获取验证码Button状态
 - (void)changeSecurityButtonTitle:(id)sender{
     self.seconds += 1;
     long afterSeconds = 60 -self.seconds;
@@ -113,6 +123,7 @@
         [self endTimer:sender];
     }
 }
+//开始定时器
 - (void)startTimer:(id)sender{
     //如果定时器对象不存在，则创建一个并启动
     if (!self.nextMessageTimer) {
@@ -120,6 +131,7 @@
         self.nextMessageTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(changeSecurityButtonTitle:) userInfo:nil repeats:YES];
     }
 }
+//关闭定时器
 - (void)endTimer:(id)sender{
     if (self.nextMessageTimer) {
         if ([self.nextMessageTimer isValid]) {
@@ -131,19 +143,19 @@
     [self.contentView changeSecurityButtonNormalStatus];
 }
 - (void)getSecurityCode:(id)sender {
- 
     BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:self.contentView.phoneNumberField.text];
+    //如果是手机号
     if (isPhoneNum) {
-        if (self.type == 0) {
+        //注册
+        if (self.type == kRegisterType) {
             NSString *phoneNumber = self.contentView.phoneNumberField.text;
             NSDictionary *info = @{@"phone":phoneNumber};
             [MMDLogin getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
-                [self saveReturnUserInfo:resultDictionary];
+                [self handleGetSecurityCodeInfo:resultDictionary];
             } FailureHandler:^(NSError *error) {
             }];
-            
-        }else if (self.type == 1){
             //找回密码
+        }else if (self.type == kForgetPassword){
             NSString *phoneNumber = self.contentView.phoneNumberField.text;
             NSDictionary *info = @{@"phone":phoneNumber};
             [MMDLogin forgetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
@@ -157,6 +169,35 @@
         NSLog(@"这不是正确的电话号码！");
     }
 }
+//注册手机号码
+- (void)handleGetSecurityCodeInfo:(NSDictionary *)info{
+    NSDictionary *dataDic = info[@"data"];
+    NSInteger codeStatus = [dataDic[@"code"] integerValue];
+    switch (codeStatus) {
+        case 0:
+        {
+            NSLog(@"获取验证码成功！");
+        }
+            break;
+        case 1:
+        {
+            NSLog(@"手机号未注册！");
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            
+        }
+            break;
+        default:
+            break;
+    }
+}
 - (void)saveReturnUserInfo:(NSDictionary *)dic{
     NSNumber *code = dic[@"code"];
     if ([code integerValue] == 0) {
@@ -166,21 +207,25 @@
     }
 }
 - (void)doneUser:(id)sender{
+    
     [self.view endEditing:YES];
     NSDictionary *info = self.registerItem.mj_keyValues;
-    [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
-        if ([resultDictionary[@"code"] integerValue] == 0) {
-            NSDictionary *data = resultDictionary[@"data"];
-            [UpdateUserInfo updateUserInfo:data];
-            [self.navigationController popViewControllerAnimated:YES];
-        }
-    } FailureHandler:^(NSError *error) {
-        
-    }];
-    if (self.type == 0) {
-
-    }else if (self.type == 1){
-        //找回密码
+    if (self.type == kRegisterType) {
+        [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
+            [self handleRegisterResult:resultDictionary];
+        } FailureHandler:^(NSError *error) {
+            
+        }];
+    }
+}
+//处理注册结果
+- (void)handleRegisterResult:(NSDictionary *)resultDictionary{
+    if ([resultDictionary[@"code"] integerValue] == 0) {
+        NSDictionary *data = resultDictionary[@"data"];
+        [UpdateUserInfo updateUserInfo:data];
+        [self.navigationController popViewControllerAnimated:YES];
+    }else if ([resultDictionary[@"code"] integerValue] == 1){
+        NSLog(@"手机号已经注册！");
     }
 }
 -(void)ez_TextFiledEditChanged:(NSNotification *)obj{

@@ -22,6 +22,7 @@
     NSDictionary *sidDic = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"token"];
     if (sidDic) {
         [HYBNetworking configCommonHttpHeaders:sidDic];
+        NSLog(@"更新Header成功");
     }
 }
 @end

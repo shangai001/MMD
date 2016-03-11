@@ -78,14 +78,14 @@
 - (IBAction)forgetPassword:(id)sender {
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:NSStringFromClass([RegisterViewController class]) bundle:[NSBundle mainBundle]];
     registerController.title = @"找回密码";
-    registerController.type = 1;
+    registerController.type = kForgetPassword;
     [self.navigationController pushViewController:registerController animated:YES];
 }
 
 - (IBAction)registerUser:(id)sender {
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:NSStringFromClass([RegisterViewController class]) bundle:[NSBundle mainBundle]];
     registerController.title = @"注册用户";
-    registerController.type = 1;
+    registerController.type = kRegisterType;
     [self.navigationController pushViewController:registerController animated:YES];
 }
 #pragma mark UITextFieldDelegate
