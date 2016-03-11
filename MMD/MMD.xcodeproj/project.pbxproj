@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7C1C29D08DC8E5848D086672 /* libPods-MMD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D876B7B7F58349F963758341 /* libPods-MMD.a */; };
-		D606090C1C76FB4B000DB373 /* MMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D606090B1C76FB4B000DB373 /* MMRequest.m */; };
 		D606099B1C76FF0E000DB373 /* 补充附件@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609111C76FF0E000DB373 /* 补充附件@2x.png */; };
 		D606099C1C76FF0E000DB373 /* 补充附件@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609121C76FF0E000DB373 /* 补充附件@3x.png */; };
 		D606099E1C76FF0E000DB373 /* 步骤@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609141C76FF0E000DB373 /* 步骤@2x.png */; };
@@ -177,8 +176,6 @@
 /* Begin PBXFileReference section */
 		197FE7C65B5A58A153BD57BD /* Pods-MMD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMD.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMD/Pods-MMD.release.xcconfig"; sourceTree = "<group>"; };
 		7B9823A9F698276E5762BEEE /* Pods-MMD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMD/Pods-MMD.debug.xcconfig"; sourceTree = "<group>"; };
-		D606090A1C76FB4B000DB373 /* MMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMRequest.h; path = MMD/Expand/Network/MMRequest.h; sourceTree = SOURCE_ROOT; };
-		D606090B1C76FB4B000DB373 /* MMRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMRequest.m; path = MMD/Expand/Network/MMRequest.m; sourceTree = SOURCE_ROOT; };
 		D60609111C76FF0E000DB373 /* 补充附件@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "补充附件@2x.png"; sourceTree = "<group>"; };
 		D60609121C76FF0E000DB373 /* 补充附件@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "补充附件@3x.png"; sourceTree = "<group>"; };
 		D60609141C76FF0E000DB373 /* 步骤@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "步骤@2x.png"; sourceTree = "<group>"; };
@@ -279,10 +276,10 @@
 		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
 		D69A00011C92C00100EB0823 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		D69A00021C92C00100EB0823 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
-		D69AFFFB1C929E4400EB0823 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
-		D69AFFFC1C929E4400EB0823 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
-		D69AFFFD1C929E4400EB0823 /* UploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadParam.h; sourceTree = "<group>"; };
-		D69AFFFE1C929E4400EB0823 /* UploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadParam.m; sourceTree = "<group>"; };
+		D69AFFFB1C929E4400EB0823 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = ../../HttpRequest.h; sourceTree = "<group>"; };
+		D69AFFFC1C929E4400EB0823 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = ../../HttpRequest.m; sourceTree = "<group>"; };
+		D69AFFFD1C929E4400EB0823 /* UploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UploadParam.h; path = ../../UploadParam.h; sourceTree = "<group>"; };
+		D69AFFFE1C929E4400EB0823 /* UploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UploadParam.m; path = ../../UploadParam.m; sourceTree = "<group>"; };
 		D6A0FB631C8459C0007D8DCB /* checkoutPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutPhoneNumber.h; sourceTree = "<group>"; };
 		D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutPhoneNumber.m; sourceTree = "<group>"; };
 		D6A0FB691C845C93007D8DCB /* LoginUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUser.h; sourceTree = "<group>"; };
@@ -517,10 +514,6 @@
 		D6E104C31C7320FD00049C3F /* MMD */ = {
 			isa = PBXGroup;
 			children = (
-				D69AFFFB1C929E4400EB0823 /* HttpRequest.h */,
-				D69AFFFC1C929E4400EB0823 /* HttpRequest.m */,
-				D69AFFFD1C929E4400EB0823 /* UploadParam.h */,
-				D69AFFFE1C929E4400EB0823 /* UploadParam.m */,
 				D6E104C71C7320FD00049C3F /* AppDelegate.h */,
 				D6E104C81C7320FD00049C3F /* AppDelegate.m */,
 				D6E104CD1C7320FD00049C3F /* Main.storyboard */,
@@ -664,8 +657,10 @@
 		D6E1050A1C73219000049C3F /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D606090A1C76FB4B000DB373 /* MMRequest.h */,
-				D606090B1C76FB4B000DB373 /* MMRequest.m */,
+				D69AFFFB1C929E4400EB0823 /* HttpRequest.h */,
+				D69AFFFC1C929E4400EB0823 /* HttpRequest.m */,
+				D69AFFFD1C929E4400EB0823 /* UploadParam.h */,
+				D69AFFFE1C929E4400EB0823 /* UploadParam.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1237,7 +1232,6 @@
 				D6060A2F1C771329000DB373 /* UIImage+Color.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
 				D6060A271C770204000DB373 /* NewApplyViewController.m in Sources */,
-				D606090C1C76FB4B000DB373 /* MMRequest.m in Sources */,
 				D69A00001C929E4400EB0823 /* UploadParam.m in Sources */,
 				D65F3AFE1C8DE7410024E419 /* LXMKeyboardManager.m in Sources */,
 				D6E106601C74888200049C3F /* ActivityViewController.m in Sources */,
