@@ -15,6 +15,7 @@
 #import "BaseNavgationController.h"
 #import "PasswordLength.h"
 #import "ColorHeader.h"
+#import "UpdateUserInfo.h"
 
 @interface MMLogViewController ()<UITextFieldDelegate>
 
@@ -61,9 +62,12 @@
     button.selected = ! button.selected;
 }
 - (IBAction)logIn:(id)sender {
-    NSDictionary *info = self.user.mj_keyValues;
+//    NSDictionary *info = self.user.mj_keyValues;
+    NSDictionary *info = @{@"phone":@"18632156680",@"password":@"123456"};
+    
     [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
+            [self handleLoginResult:resultDictionary];
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     } FailureHandler:^(NSError *error) {
@@ -74,7 +78,7 @@
 - (void)handleLoginResult:(NSDictionary *)resultDictionary{
     NSLog(@"%@",resultDictionary[@"msg"]);
     if ([resultDictionary[@"code"] integerValue] == 0) {
-        
+        [UpdateUserInfo updateUserInfo:resultDictionary];
     }
 }
 - (IBAction)forgetPassword:(id)sender {

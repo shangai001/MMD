@@ -71,4 +71,8 @@
         failureBlock(error);
     }];
 }
++ (NSString *)userId{
+    NSString *userId = [SDUserDefault valueForKey:@"userId"];
+    return userId;
+}
 @end

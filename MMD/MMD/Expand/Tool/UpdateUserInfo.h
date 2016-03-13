@@ -10,9 +10,8 @@
 
 @interface UpdateUserInfo : NSObject
 
-+ (void)updateUserInfo:(NSDictionary *)user;
++ (void)updateUserInfo:(NSDictionary *)userDictionary;
 
-+ (void)updateCommonHeader;
 
 
 @end

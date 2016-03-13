@@ -64,4 +64,6 @@ completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
     completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
        FailureHandler:(void(^)(NSError *error))failureBlock;
 
++ (NSString *)userId;
+
 @end

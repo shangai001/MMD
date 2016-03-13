@@ -48,6 +48,7 @@
 
 #pragma mark - Core Data stack
 
+@synthesize backgroundObjectContext = _backgroundObjectContext;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
@@ -94,36 +95,89 @@
     
     return _persistentStoreCoordinator;
 }
-
-
-- (NSManagedObjectContext *)managedObjectContext {
-    // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
+//子context（临时）
+- (NSManagedObjectContext *)praviateObjectContext{
+    NSManagedObjectContext *praviateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    [praviateContext setParentContext:self.managedObjectContext];
+    return praviateContext;
+}
+//主线程context 更新UI
+- (NSManagedObjectContext *)managedObjectContext{
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
+    }
+    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    [_managedObjectContext setParentContext:self.backgroundObjectContext];
+    
+    return _managedObjectContext;
+}
+//父context 用于最终的更新
+- (NSManagedObjectContext *)backgroundObjectContext {
+    // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
+    if (_backgroundObjectContext != nil) {
+        return _backgroundObjectContext;
     }
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (!coordinator) {
         return nil;
     }
-    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-    [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-    return _managedObjectContext;
+    _backgroundObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    [_backgroundObjectContext setPersistentStoreCoordinator:coordinator];
+    return _backgroundObjectContext;
 }
 
 #pragma mark - Core Data Saving support
-
-- (void)saveContext {
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        NSError *error = nil;
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
+- (void)backgroundSaveContext{
+    //不确定
+    [self saveContext];
+    
+    NSManagedObjectContext *managedObjectContext = self.backgroundObjectContext;
+    
+    if (managedObjectContext) {
+        
+        [managedObjectContext performBlock:^{
+            
+            if ([managedObjectContext hasChanges]) {
+                
+                NSError *error = nil;
+                
+                if ([managedObjectContext save:&error]) {
+                    
+                    NSLog(@"_parentContext SAVED changes to persistent store");
+                }else{
+                    NSLog(@"_parentContext FAILED to save: %@", error);
+                }
+            }else{
+                NSLog(@"_parentContext SKIPPED saving as there are no changes");
+            }
+        }];
     }
+}
+- (void)saveContext {
+    
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    
+    if (managedObjectContext != nil) {
+        
+        [managedObjectContext performBlock:^{
+            NSError *error = nil;
+            if ([managedObjectContext hasChanges] &&
+                ![managedObjectContext save:&error]) {
+                // Replace this implementation with code to handle the error
+                // appropriately.
+                // abort() causes the application to generate a crash log and terminate.
+                // You should not use this function in a shipping application, although it
+                // may be useful during development.
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            }else{
+                
+            }
+            
+        }];
+    }
+
 }
 
 @end

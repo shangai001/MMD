@@ -11,6 +11,10 @@
 
 #import "ServerDefine.h"
 
+#define Appdelegate [UIApplication sharedApplication].delegate
+
+#define SDUserDefault [NSUserDefaults standardUserDefaults]
+
 //#import <HYBNetworking.h>
 
 // Include any system framework and library headers here that should be included in all compilation units.

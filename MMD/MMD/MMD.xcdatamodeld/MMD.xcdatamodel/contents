@@ -1,4 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="UserBank" syncable="YES">
+        <attribute name="pid" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appVersion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="channelCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="channelStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="children" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="childrenName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contract" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expireRepay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idcard" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idcardAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idcardArea" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idcardAuthen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idcardCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idcardFaceCertConfidence" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idcardPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idcardProvince" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imei" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imsi" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lifeRadius" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lifeRadiusName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="marriage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="marriageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nativePlace" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notInfoStates" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneBrand" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneModel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneOs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneRegion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="recentRepay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="630"/>
+        <element name="UserBank" positionX="-54" positionY="144" width="128" height="75"/>
+    </elements>
 </model>
