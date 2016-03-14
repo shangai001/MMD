@@ -64,6 +64,11 @@ completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
     completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
        FailureHandler:(void(^)(NSError *error))failureBlock;
 
++ (void)checkUserAuthorized:(NSDictionary *)info
+          completionHandler:(void (^)(NSDictionary *))completationBlock
+             FailureHandler:(void (^)(NSError *))failureBlock;
+
+
 + (NSString *)userId;
 
 @end

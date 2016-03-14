@@ -15,11 +15,12 @@
 #import "BaseNavgationController.h"
 #import "PasswordLength.h"
 #import "ColorHeader.h"
-#import "UpdateUserInfo.h"
+#import "UserInfoManager.h"
 
 @interface MMLogViewController ()<UITextFieldDelegate>
 
 @property (nonatomic, strong)LoginUser *user;
+
 
 
 @end
@@ -62,9 +63,9 @@
     button.selected = ! button.selected;
 }
 - (IBAction)logIn:(id)sender {
-//    NSDictionary *info = self.user.mj_keyValues;
-    NSDictionary *info = @{@"phone":@"18632156680",@"password":@"123456"};
-    
+    NSDictionary *info = self.user.mj_keyValues;
+    //记住密码
+    [self savePasswordBeforeLogin];
     [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
             [self handleLoginResult:resultDictionary];
@@ -75,10 +76,21 @@
     }];
     
 }
+- (void)savePasswordBeforeLogin{
+    if (self.rememberPasswordButton.selected) {
+        NSString *password = self.user.password;
+        [SDUserDefault setValue:password forKey:@"password"];
+    }else{
+        if ([SDUserDefault valueForKey:@"password"]) {
+            [SDUserDefault removeObjectForKey:@"password"];
+        }
+    }
+    [SDUserDefault synchronize];
+}
 - (void)handleLoginResult:(NSDictionary *)resultDictionary{
     NSLog(@"%@",resultDictionary[@"msg"]);
     if ([resultDictionary[@"code"] integerValue] == 0) {
-        [UpdateUserInfo updateUserInfo:resultDictionary];
+        [UserInfoManager updateUserInfo:resultDictionary];
     }
 }
 - (IBAction)forgetPassword:(id)sender {

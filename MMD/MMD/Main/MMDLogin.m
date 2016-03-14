@@ -37,6 +37,21 @@
         failureBlock(error);
     }];
 }
++ (void)checkUserAuthorized:(NSDictionary *)info
+          completionHandler:(void (^)(NSDictionary *))completationBlock
+             FailureHandler:(void (^)(NSError *))failureBlock{
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/user/reset",kHostURL];
+    [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            completationBlock(responseObject);
+            NSLog(@"验证是否通过验证 %@",responseObject);
+        }
+    } failure:^(NSError *error) {
+        failureBlock(error);
+    }];
+}
+
 + (void)forgetPassword:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
     
     NSString *URL = [NSString stringWithFormat:@"%@/user/forgetPasswordCode",kHostURL];

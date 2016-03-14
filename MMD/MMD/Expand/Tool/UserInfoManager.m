@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "UpdateUserInfo.h"
+#import "UserInfoManager.h"
 
-@implementation UpdateUserInfo
+@implementation UserInfoManager
 
 + (void)updateUserInfo:(NSDictionary *)userDictionary{
     
@@ -17,7 +17,7 @@
         NSDictionary *dataDic = userDictionary[@"data"];
         for (NSString *keyString in [dataDic allKeys]) {
             NSDictionary *dic = dataDic[keyString];
-            [UpdateUserInfo saveDictionaryInUserDefault:dic];
+            [UserInfoManager saveDictionaryInUserDefault:dic];
         }
         //通知主线程刷新
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -39,7 +39,7 @@
                 
                 if ([obj isKindOfClass:[NSDictionary class]]) {
                     
-                    [UpdateUserInfo saveDictionaryInUserDefault:obj];
+                    [UserInfoManager saveDictionaryInUserDefault:obj];
                     
                 }else{
                     

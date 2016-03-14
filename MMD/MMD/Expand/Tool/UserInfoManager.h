@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UpdateUserInfo : NSObject
+@interface UserInfoManager : NSObject
 
 + (void)updateUserInfo:(NSDictionary *)userDictionary;
 

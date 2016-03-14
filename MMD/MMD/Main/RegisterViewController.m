@@ -15,7 +15,7 @@
 #import "RegisterContentView.h"
 #import "UIView+LoadViewFromNib.h"
 #import <MJExtension.h>
-#import "UpdateUserInfo.h"
+#import "UserInfoManager.h"
 
 
 #define PHONENUM_LENGTH 11
@@ -154,7 +154,8 @@
                 [self handleGetSecurityCodeInfo:resultDictionary];
             } FailureHandler:^(NSError *error) {
             }];
-            //找回密码
+            //找回密码,找回密码需要确定银行卡是否验证
+            
         }else if (self.type == kForgetPassword){
             NSString *phoneNumber = self.contentView.phoneNumberField.text;
             NSDictionary *info = @{@"phone":phoneNumber};
@@ -190,8 +191,15 @@
         }];
     }
     if (self.type == kForgetPassword) {
-        [MMDLogin resetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
-            [self handleResetResult:resultDictionary];
+        [MMDLogin checkUserAuthorized:info completionHandler:^(NSDictionary *resultDictionary) {
+            if ([resultDictionary[@"code"] integerValue] != 0) {
+                [MMDLogin resetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
+                    [self handleResetResult:resultDictionary];
+                } FailureHandler:^(NSError *error) {
+                    
+                }];
+            }
+            
         } FailureHandler:^(NSError *error) {
             
         }];
@@ -232,7 +240,7 @@
     NSInteger codeStatus = [resultDictionary[@"code"] integerValue];
     if (codeStatus == 0) {
         NSDictionary *data = resultDictionary[@"data"];
-        [UpdateUserInfo updateUserInfo:data];
+        [UserInfoManager updateUserInfo:data];
         [self.navigationController popViewControllerAnimated:YES];
     }else if ([resultDictionary[@"code"] integerValue] == 1){
         NSLog(@"手机号已经注册！");

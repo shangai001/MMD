@@ -97,7 +97,7 @@
 		D6060A381C771F3E000DB373 /* UIView+LoadViewFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A371C771F3E000DB373 /* UIView+LoadViewFromNib.m */; };
 		D64A2D0B1C956168002654AC /* UserInfoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D0A1C956168002654AC /* UserInfoImporter.m */; };
 		D65F3AFE1C8DE7410024E419 /* LXMKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */; };
-		D6835B261C8EC5BF0004EF1E /* UpdateUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6835B251C8EC5BF0004EF1E /* UpdateUserInfo.m */; };
+		D6835B261C8EC5BF0004EF1E /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */; };
 		D69A00001C929E4400EB0823 /* UploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFE1C929E4400EB0823 /* UploadParam.m */; };
 		D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFC1C929E4400EB0823 /* HttpRequest.m */; };
 		D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */; };
@@ -273,8 +273,8 @@
 		D64A2D0A1C956168002654AC /* UserInfoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoImporter.m; sourceTree = "<group>"; };
 		D65F3AFC1C8DE7410024E419 /* LXMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXMKeyboardManager.h; path = ../../Main/LXMKeyboardManager.h; sourceTree = "<group>"; };
 		D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXMKeyboardManager.m; path = ../../Main/LXMKeyboardManager.m; sourceTree = "<group>"; };
-		D6835B241C8EC5BF0004EF1E /* UpdateUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateUserInfo.h; sourceTree = "<group>"; };
-		D6835B251C8EC5BF0004EF1E /* UpdateUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateUserInfo.m; sourceTree = "<group>"; };
+		D6835B241C8EC5BF0004EF1E /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
+		D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
 		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
 		D69AFFFB1C929E4400EB0823 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = ../../HttpRequest.h; sourceTree = "<group>"; };
 		D69AFFFC1C929E4400EB0823 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = ../../HttpRequest.m; sourceTree = "<group>"; };
@@ -672,8 +672,8 @@
 				D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */,
 				D6DD24A11C87439C0042E263 /* MMDLogin.h */,
 				D6DD24A21C87439C0042E263 /* MMDLogin.m */,
-				D6835B241C8EC5BF0004EF1E /* UpdateUserInfo.h */,
-				D6835B251C8EC5BF0004EF1E /* UpdateUserInfo.m */,
+				D6835B241C8EC5BF0004EF1E /* UserInfoManager.h */,
+				D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1226,7 +1226,7 @@
 				D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */,
 				D6060A331C77188E000DB373 /* HeaderView.m in Sources */,
 				D6EA01F81C8695FC00EE0E2E /* RegisterItem.m in Sources */,
-				D6835B261C8EC5BF0004EF1E /* UpdateUserInfo.m in Sources */,
+				D6835B261C8EC5BF0004EF1E /* UserInfoManager.m in Sources */,
 				D6F01DDC1C7C69D400EBC84E /* UpdateLoanInfo.m in Sources */,
 				D6EA01FB1C86984500EE0E2E /* LimitInputWords.m in Sources */,
 				D6E106651C7488C700049C3F /* QueryViewController.m in Sources */,
