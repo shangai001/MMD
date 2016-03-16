@@ -67,7 +67,7 @@
 }
 - (void)initHeaderView{
     //Masonry布局
-    [self.navigationController.view addSubview:self.headerView];
+    [self.view addSubview:self.headerView];
     UIView *superHeaderView = self.headerView.superview;
     [_headerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(superHeaderView.mas_left);

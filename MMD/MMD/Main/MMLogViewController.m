@@ -16,6 +16,10 @@
 #import "PasswordLength.h"
 #import "ColorHeader.h"
 #import "UserInfoManager.h"
+#import "VerifyViewController.h"
+
+#define FIRSTTIMELOGOIN @"firstTimeLogin"
+
 
 @interface MMLogViewController ()<UITextFieldDelegate>
 
@@ -69,7 +73,6 @@
     [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
             [self handleLoginResult:resultDictionary];
-            [self dismissViewControllerAnimated:YES completion:nil];
         }
     } FailureHandler:^(NSError *error) {
         
@@ -91,6 +94,13 @@
     NSLog(@"%@",resultDictionary[@"msg"]);
     if ([resultDictionary[@"code"] integerValue] == 0) {
         [UserInfoManager updateUserInfo:resultDictionary];
+    }
+    //如果是第一次登录，验证身份证号码
+    VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
+    [self.navigationController pushViewController:verifyer animated:YES];
+    
+    if ([SDUserDefault boolForKey:FIRSTTIMELOGOIN]) {
+        [SDUserDefault setBool:YES forKey:FIRSTTIMELOGOIN];
     }
 }
 - (IBAction)forgetPassword:(id)sender {

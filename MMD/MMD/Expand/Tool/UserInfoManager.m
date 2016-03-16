@@ -16,8 +16,10 @@
         // 处理耗时操作的代码块...
         NSDictionary *dataDic = userDictionary[@"data"];
         for (NSString *keyString in [dataDic allKeys]) {
-            NSDictionary *dic = dataDic[keyString];
-            [UserInfoManager saveDictionaryInUserDefault:dic];
+            id dic = dataDic[keyString];
+            if (![dic isKindOfClass:[NSNull class]]) {
+                [UserInfoManager saveDictionaryInUserDefault:dic];
+            }
         }
         //通知主线程刷新
         dispatch_async(dispatch_get_main_queue(), ^{

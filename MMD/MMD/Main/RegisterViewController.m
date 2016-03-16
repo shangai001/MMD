@@ -154,8 +154,7 @@
                 [self handleGetSecurityCodeInfo:resultDictionary];
             } FailureHandler:^(NSError *error) {
             }];
-            //找回密码,找回密码需要确定银行卡是否验证
-            
+            //找回密码
         }else if (self.type == kForgetPassword){
             NSString *phoneNumber = self.contentView.phoneNumberField.text;
             NSDictionary *info = @{@"phone":phoneNumber};
@@ -191,6 +190,7 @@
         }];
     }
     if (self.type == kForgetPassword) {
+        //找回密码，如果用户通过审核，必须输入身份证号码（缺失UI）
         [MMDLogin checkUserAuthorized:info completionHandler:^(NSDictionary *resultDictionary) {
             if ([resultDictionary[@"code"] integerValue] != 0) {
                 [MMDLogin resetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
@@ -243,7 +243,7 @@
         [UserInfoManager updateUserInfo:data];
         [self.navigationController popViewControllerAnimated:YES];
     }else if ([resultDictionary[@"code"] integerValue] == 1){
-        NSLog(@"手机号已经注册！");
+
     }
 }
 //处理重设密码结果
