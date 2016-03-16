@@ -15,5 +15,7 @@ typedef NS_ENUM(NSInteger,kDirectionStyle) {
 @interface StageView : UIView
 
 - (instancetype)initWithStyle:(kDirectionStyle)style stage:(NSUInteger)stage frame:(CGRect)frame;
+//stage:几个button
+- (void)updateProsess:(NSUInteger)stage;
 
 @end

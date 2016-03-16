@@ -9,6 +9,7 @@
 #import "VerifyViewController.h"
 #import "StageView.h"
 
+
 @interface VerifyViewController ()
 
 @end
@@ -20,10 +21,9 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"首次信息确认";
     StageView *stageV = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(10, 100, 300, 40)];
-    stageV.backgroundColor = [UIColor cyanColor];
+
     [self.view addSubview:stageV];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -111,6 +111,7 @@
 		D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */; };
 		D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921A1C8D7A8500B3877D /* key@2x.png */; };
 		D6B6921D1C8D7A8500B3877D /* key@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921B1C8D7A8500B3877D /* key@3x.png */; };
+		D6C1E26F1C9933A7002289A4 /* DashesLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C1E26E1C9933A7002289A4 /* DashesLineView.m */; };
 		D6D30C211C98013600653249 /* DashLineHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D30C201C98013600653249 /* DashLineHelper.m */; };
 		D6DD24A31C87439C0042E263 /* MMDLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DD24A21C87439C0042E263 /* MMDLogin.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
@@ -301,6 +302,8 @@
 		D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@3x.png"; sourceTree = "<group>"; };
 		D6B6921A1C8D7A8500B3877D /* key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@2x.png"; sourceTree = "<group>"; };
 		D6B6921B1C8D7A8500B3877D /* key@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@3x.png"; sourceTree = "<group>"; };
+		D6C1E26D1C9933A7002289A4 /* DashesLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashesLineView.h; sourceTree = "<group>"; };
+		D6C1E26E1C9933A7002289A4 /* DashesLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashesLineView.m; sourceTree = "<group>"; };
 		D6D30C1F1C98013600653249 /* DashLineHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashLineHelper.h; sourceTree = "<group>"; };
 		D6D30C201C98013600653249 /* DashLineHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashLineHelper.m; sourceTree = "<group>"; };
 		D6DD24A11C87439C0042E263 /* MMDLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMDLogin.h; path = ../../Main/MMDLogin.h; sourceTree = "<group>"; };
@@ -463,6 +466,8 @@
 			children = (
 				D64A2D151C97F6A1002654AC /* StageView.h */,
 				D64A2D161C97F6A1002654AC /* StageView.m */,
+				D6C1E26D1C9933A7002289A4 /* DashesLineView.h */,
+				D6C1E26E1C9933A7002289A4 /* DashesLineView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1266,6 +1271,7 @@
 				D6DD24A31C87439C0042E263 /* MMDLogin.m in Sources */,
 				D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
+				D6C1E26F1C9933A7002289A4 /* DashesLineView.m in Sources */,
 				D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6E106531C747CCE00049C3F /* LoanViewController.m in Sources */,

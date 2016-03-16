@@ -7,10 +7,12 @@
 //
 
 #import "StageView.h"
+#import "DashesLineView.h"
 #import <Masonry.h>
 
 #define buttonWidthHeight 30
 #define buttonToLeft 10
+#define StageViewHeight 4
 
 @interface StageView ()
 
@@ -49,6 +51,7 @@
     if (self) {
         self.style = kHorizontalStyle;
         self.stage = stage;
+        self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -57,6 +60,7 @@
     if (self) {
         self.style = style;
         self.stage = 0;
+        self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -65,20 +69,28 @@
     if (self) {
         self.style = style;
         self.stage = stage;
+        self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
 - (void)setStage:(NSUInteger)stage{
     _stage = stage;
     for (NSUInteger j = 0; j < _stage; j ++) {
-
         UIButton *button =  [StageView initStageButton:j];
         [self addSubview:button];
-        [self addMasonryLayout:button stage:_stage j:j];
+        [self addMasonryLayoutButton:button view:nil stage:_stage j:j];
         [self setNeedsLayout];
     }
+    for (NSUInteger k = 0; k < _stage - 1; k ++) {
+        CGRect superFrame = self.frame;
+        CGFloat buttonLeftToButtonLeft = (superFrame.size.width - 2 * buttonToLeft - _stage * buttonWidthHeight)/(_stage - 1);
+        CGFloat leftToSuper = buttonToLeft + buttonWidthHeight + (buttonWidthHeight + buttonLeftToButtonLeft) * k;
+        DashesLineView *lineView = [[DashesLineView alloc] initWithFrame:CGRectMake(leftToSuper, (superFrame.size.height - StageViewHeight)/2, buttonLeftToButtonLeft, StageViewHeight)];
+        lineView.lineType = k == 0 ? kRedDasheType : kGrayRealType;
+        [self addSubview:lineView];
+    }
 }
-- (void)addMasonryLayout:(UIButton *)button stage:(NSUInteger)stage j:(NSUInteger)j{
+- (void)addMasonryLayoutButton:(UIButton *)button view:(DashesLineView *)lineView stage:(NSUInteger)stage j:(NSUInteger)j{
     
     CGRect superFrame = self.frame;
     if (self.style == kHorizontalStyle) {
@@ -113,7 +125,9 @@
     }
     return button;
 }
-- (void)matchStage:(NSUInteger)stage sender:(id)sender{
-    
+- (void)updateProsess:(NSUInteger)stage{
+    UIButton *button = (UIButton *)[self viewWithTag:stage + 100];
+    button.selected = YES;
 }
+
 @end
