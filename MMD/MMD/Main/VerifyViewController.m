@@ -12,7 +12,6 @@
 #import "ColorHeader.h"
 
 @interface VerifyViewController ()
-@property (weak, nonatomic) IBOutlet UIView *headerBackView;
 
 @property (nonatomic, strong)StageView *stageView;
 
@@ -29,7 +28,7 @@
 }
 - (void)initStageView{
     self.stageView = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(0, 64, ScreenWidth - 2 * 0 , 60)];
-    [self.headerBackView addSubview:self.stageView];
+    [self.view addSubview:self.stageView];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

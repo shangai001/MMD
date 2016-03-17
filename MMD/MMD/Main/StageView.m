@@ -37,7 +37,7 @@
     if (self) {
         self.style = kHorizontalStyle;
         self.stage = 0;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -61,7 +61,7 @@
     if (self) {
         self.style = kHorizontalStyle;
         self.stage = stage;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -70,7 +70,7 @@
     if (self) {
         self.style = style;
         self.stage = 0;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -79,7 +79,7 @@
     if (self) {
         self.style = style;
         self.stage = stage;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
