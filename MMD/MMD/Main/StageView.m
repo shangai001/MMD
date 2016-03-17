@@ -32,7 +32,15 @@
     // Drawing code
 }
 */
-
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.style = kHorizontalStyle;
+        self.stage = 0;
+        self.backgroundColor = [UIColor whiteColor];
+    }
+    return self;
+}
  //从代码加载
 - (instancetype)initWithFrame:(CGRect)frame{
     
@@ -77,30 +85,33 @@
 }
 - (void)setStage:(NSUInteger)stage{
     _stage = stage;
-    for (NSUInteger j = 0; j < _stage; j ++) {
-        UIButton *button =  [StageView initStageButton:j];
-        [self addSubview:button];
-        [self addMasonryLayoutButton:button view:nil stage:_stage j:j];
-        [self setNeedsLayout];
-    }
-    for (NSUInteger k = 0; k < _stage - 1; k ++) {
-        CGRect superFrame = self.frame;
-        if (self.style == kHorizontalStyle) {
-            CGFloat buttonLeftToButtonLeft = (superFrame.size.width - 2 * buttonToLeft - _stage * buttonWidthHeight)/(_stage - 1);
-            CGFloat leftToSuper = buttonToLeft + buttonWidthHeight + (buttonWidthHeight + buttonLeftToButtonLeft) * k;
-            HorizontalDashLineView *lineView = [[HorizontalDashLineView alloc] initWithFrame:CGRectMake(leftToSuper, (superFrame.size.height - StageViewHeight)/2, buttonLeftToButtonLeft, StageViewHeight)];
-            lineView.lineType = k == 0 ? kRedDasheType : kGrayRealType;
-            [self addSubview:lineView];
-        }else{
-            CGFloat buttonTopToButtonTop = (superFrame.size.height - 2 * buttonToLeft - _stage * buttonWidthHeight)/(_stage - 1);
-            CGFloat topToSuper = buttonToLeft + buttonWidthHeight + (buttonTopToButtonTop + buttonWidthHeight) * k;
-            VerticalDashLineView *lineView = [[VerticalDashLineView alloc] initWithFrame:CGRectMake((superFrame.size.width - StageViewHeight)/2, topToSuper,StageViewHeight , buttonTopToButtonTop)];
-            lineView.lineType = k == 0 ? kRedDasheType : kGrayRealType;
-            [self addSubview:lineView];
+    if (_stage > 0) {
+        for (NSUInteger j = 0; j < _stage; j ++) {
+            UIButton *button =  [StageView initStageButton:j];
+            [self addSubview:button];
+            [self addMasonryLayoutButton:button stage:_stage j:j];
+            [self setNeedsLayout];
         }
+        for (NSUInteger k = 0; k < _stage - 1; k ++) {
+            CGRect superFrame = self.frame;
+            if (self.style == kHorizontalStyle) {
+                CGFloat buttonLeftToButtonLeft = (superFrame.size.width - 2 * buttonToLeft - _stage * buttonWidthHeight)/(_stage - 1);
+                CGFloat leftToSuper = buttonToLeft + buttonWidthHeight + (buttonWidthHeight + buttonLeftToButtonLeft) * k;
+                HorizontalDashLineView *lineView = [[HorizontalDashLineView alloc] initWithFrame:CGRectMake(leftToSuper, (superFrame.size.height - StageViewHeight)/2, buttonLeftToButtonLeft, StageViewHeight)];
+                lineView.lineType = k == 0 ? kRedDasheType : kGrayRealType;
+                [self addSubview:lineView];
+            }else{
+                CGFloat buttonTopToButtonTop = (superFrame.size.height - 2 * buttonToLeft - _stage * buttonWidthHeight)/(_stage - 1);
+                CGFloat topToSuper = buttonToLeft + buttonWidthHeight + (buttonTopToButtonTop + buttonWidthHeight) * k;
+                VerticalDashLineView *lineView = [[VerticalDashLineView alloc] initWithFrame:CGRectMake((superFrame.size.width - StageViewHeight)/2, topToSuper,StageViewHeight , buttonTopToButtonTop)];
+                lineView.lineType = k == 0 ? kRedDasheType : kGrayRealType;
+                [self addSubview:lineView];
+            }
+        }
+ 
     }
 }
-- (void)addMasonryLayoutButton:(UIButton *)button view:(HorizontalDashLineView *)lineView stage:(NSUInteger)stage j:(NSUInteger)j{
+- (void)addMasonryLayoutButton:(UIButton *)button stage:(NSUInteger)stage j:(NSUInteger)j{
     
     CGRect superFrame = self.frame;
     if (self.style == kHorizontalStyle) {
@@ -114,6 +125,7 @@
             make.left.mas_equalTo(self.mas_left).with.offset(leftToSuper);
             make.centerY.mas_equalTo(self);
         }];
+        [self addTitleLabel:j below:button];
     }else{
         //第n+1个button上边距离第n个button上边距离
         CGFloat buttonTopToButtonTop = (superFrame.size.height - 2 * buttonToLeft - stage * buttonWidthHeight)/(_stage - 1);
@@ -125,6 +137,25 @@
         }];
     }
 }
+
+- (void)addTitleLabel:(NSInteger)index below:(UIButton *)button{
+    
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.font = [UIFont systemFontOfSize:12];
+    titleLabel.adjustsFontSizeToFitWidth = YES;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.textColor = [UIColor lightGrayColor];
+    NSString *title = [NSString stringWithFormat:@"第%ld步",index];
+    titleLabel.text = title;
+    [self addSubview:titleLabel];
+    
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight/2));
+        make.centerX.mas_equalTo(button);
+        make.top.mas_equalTo(button.mas_bottom);
+    }];
+}
+
 + (UIButton *)initStageButton:(NSUInteger)j {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:[UIImage imageNamed:@"步骤"] forState:UIControlStateSelected];

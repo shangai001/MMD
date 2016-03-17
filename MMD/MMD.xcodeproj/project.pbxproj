@@ -286,7 +286,7 @@
 		D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXMKeyboardManager.m; path = ../../Main/LXMKeyboardManager.m; sourceTree = "<group>"; };
 		D6835B241C8EC5BF0004EF1E /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
 		D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
-		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
+		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorHeader.h; path = ../Macros/ColorHeader.h; sourceTree = "<group>"; };
 		D69AFFFB1C929E4400EB0823 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = ../../HttpRequest.h; sourceTree = "<group>"; };
 		D69AFFFC1C929E4400EB0823 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = ../../HttpRequest.m; sourceTree = "<group>"; };
 		D69AFFFD1C929E4400EB0823 /* UploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UploadParam.h; path = ../../UploadParam.h; sourceTree = "<group>"; };
@@ -687,6 +687,7 @@
 		D6E105061C73219000049C3F /* Const */ = {
 			isa = PBXGroup;
 			children = (
+				D68492231C7B08AC00227ACA /* ColorHeader.h */,
 				D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */,
 				D6A0FB751C857363007D8DCB /* PasswordLength.h */,
 				D6FDC4CC1C85B485003B2660 /* ServerDefine.h */,
@@ -709,7 +710,6 @@
 			children = (
 				D6E105091C73219000049C3F /* TabbarTitleHeader.h */,
 				D6060A301C7713C4000DB373 /* ScreenMacrosHeader.h */,
-				D68492231C7B08AC00227ACA /* ColorHeader.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";

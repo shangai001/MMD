@@ -8,9 +8,13 @@
 
 #import "VerifyViewController.h"
 #import "StageView.h"
-
+#import <Masonry.h>
+#import "ColorHeader.h"
 
 @interface VerifyViewController ()
+@property (weak, nonatomic) IBOutlet UIView *headerBackView;
+
+@property (nonatomic, strong)StageView *stageView;
 
 @end
 
@@ -20,14 +24,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"首次信息确认";
-    StageView *stageV = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(10, 100, 300, 40)];
-    stageV.backgroundColor = [UIColor whiteColor];
-    StageView *stage2 = [[StageView alloc] initWithStyle:kverticalTypeStyle stage:3 frame:CGRectMake(10, 150, 40, 300)];
-    stage2.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:stage2];
-    [self.view addSubview:stageV];
+    self.view.backgroundColor = BACKGROUNDCOLOR;
+    [self initStageView];
 }
-
+- (void)initStageView{
+    self.stageView = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(0, 64, ScreenWidth - 2 * 0 , 60)];
+    [self.headerBackView addSubview:self.stageView];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
