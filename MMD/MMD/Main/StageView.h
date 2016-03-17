@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StageDirectionHeader.h"
 
-typedef NS_ENUM(NSInteger,kDirectionStyle) {
-    kHorizontalStyle,
-    kverticalTypeStyle
-};
+
 @interface StageView : UIView
 
 - (instancetype)initWithStyle:(kDirectionStyle)style stage:(NSUInteger)stage frame:(CGRect)frame;

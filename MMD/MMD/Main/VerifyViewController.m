@@ -21,7 +21,10 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"首次信息确认";
     StageView *stageV = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(10, 100, 300, 40)];
-
+    stageV.backgroundColor = [UIColor whiteColor];
+    StageView *stage2 = [[StageView alloc] initWithStyle:kverticalTypeStyle stage:3 frame:CGRectMake(10, 150, 40, 300)];
+    stage2.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:stage2];
     [self.view addSubview:stageV];
 }
 
