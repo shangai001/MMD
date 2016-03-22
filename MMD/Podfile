@@ -11,6 +11,7 @@ target 'MMD' do
     pod 'MJRefresh'
     pod 'MJExtension'
     pod 'YYKeyboardManager'
+    pod 'YYKit'
 end
 
 target 'MMDTests' do
