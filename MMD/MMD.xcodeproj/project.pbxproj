@@ -103,6 +103,12 @@
 		D6835B261C8EC5BF0004EF1E /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */; };
 		D69A00001C929E4400EB0823 /* UploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFE1C929E4400EB0823 /* UploadParam.m */; };
 		D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFC1C929E4400EB0823 /* HttpRequest.m */; };
+		D69E72AF1CA3D2AE00A06749 /* FirstStepController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69E72AD1CA3D2AE00A06749 /* FirstStepController.m */; };
+		D69E72B01CA3D2AE00A06749 /* FirstStepController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69E72AE1CA3D2AE00A06749 /* FirstStepController.xib */; };
+		D69E72B41CA3D2C300A06749 /* SecondStaepController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69E72B21CA3D2C300A06749 /* SecondStaepController.m */; };
+		D69E72B51CA3D2C300A06749 /* SecondStaepController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69E72B31CA3D2C300A06749 /* SecondStaepController.xib */; };
+		D69E72B91CA3D2D700A06749 /* ThirdStepController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69E72B71CA3D2D700A06749 /* ThirdStepController.m */; };
+		D69E72BA1CA3D2D700A06749 /* ThirdStepController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69E72B81CA3D2D700A06749 /* ThirdStepController.xib */; };
 		D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */; };
 		D6A0FB6B1C845C93007D8DCB /* LoginUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB6A1C845C93007D8DCB /* LoginUser.m */; };
 		D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */; };
@@ -111,6 +117,8 @@
 		D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */; };
 		D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921A1C8D7A8500B3877D /* key@2x.png */; };
 		D6B6921D1C8D7A8500B3877D /* key@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921B1C8D7A8500B3877D /* key@3x.png */; };
+		D6B6CCAA1CA38B9C0040AF50 /* VerifyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B6CCA81CA38B9C0040AF50 /* VerifyTableViewCell.m */; };
+		D6B6CCAB1CA38B9C0040AF50 /* VerifyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B6CCA91CA38B9C0040AF50 /* VerifyTableViewCell.xib */; };
 		D6C1E26F1C9933A7002289A4 /* HorizontalDashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C1E26E1C9933A7002289A4 /* HorizontalDashLineView.m */; };
 		D6D30C211C98013600653249 /* DashLineHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D30C201C98013600653249 /* DashLineHelper.m */; };
 		D6DD24A31C87439C0042E263 /* MMDLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DD24A21C87439C0042E263 /* MMDLogin.m */; };
@@ -291,6 +299,15 @@
 		D69AFFFC1C929E4400EB0823 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = ../../HttpRequest.m; sourceTree = "<group>"; };
 		D69AFFFD1C929E4400EB0823 /* UploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UploadParam.h; path = ../../UploadParam.h; sourceTree = "<group>"; };
 		D69AFFFE1C929E4400EB0823 /* UploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UploadParam.m; path = ../../UploadParam.m; sourceTree = "<group>"; };
+		D69E72AC1CA3D2AE00A06749 /* FirstStepController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstStepController.h; sourceTree = "<group>"; };
+		D69E72AD1CA3D2AE00A06749 /* FirstStepController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstStepController.m; sourceTree = "<group>"; };
+		D69E72AE1CA3D2AE00A06749 /* FirstStepController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstStepController.xib; sourceTree = "<group>"; };
+		D69E72B11CA3D2C300A06749 /* SecondStaepController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondStaepController.h; sourceTree = "<group>"; };
+		D69E72B21CA3D2C300A06749 /* SecondStaepController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondStaepController.m; sourceTree = "<group>"; };
+		D69E72B31CA3D2C300A06749 /* SecondStaepController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondStaepController.xib; sourceTree = "<group>"; };
+		D69E72B61CA3D2D700A06749 /* ThirdStepController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdStepController.h; sourceTree = "<group>"; };
+		D69E72B71CA3D2D700A06749 /* ThirdStepController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdStepController.m; sourceTree = "<group>"; };
+		D69E72B81CA3D2D700A06749 /* ThirdStepController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdStepController.xib; sourceTree = "<group>"; };
 		D6A0FB631C8459C0007D8DCB /* checkoutPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutPhoneNumber.h; sourceTree = "<group>"; };
 		D6A0FB641C8459C0007D8DCB /* checkoutPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutPhoneNumber.m; sourceTree = "<group>"; };
 		D6A0FB691C845C93007D8DCB /* LoginUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUser.h; sourceTree = "<group>"; };
@@ -303,6 +320,10 @@
 		D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@3x.png"; sourceTree = "<group>"; };
 		D6B6921A1C8D7A8500B3877D /* key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@2x.png"; sourceTree = "<group>"; };
 		D6B6921B1C8D7A8500B3877D /* key@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@3x.png"; sourceTree = "<group>"; };
+		D6B6CCA71CA38B9C0040AF50 /* VerifyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyTableViewCell.h; sourceTree = "<group>"; };
+		D6B6CCA81CA38B9C0040AF50 /* VerifyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyTableViewCell.m; sourceTree = "<group>"; };
+		D6B6CCA91CA38B9C0040AF50 /* VerifyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyTableViewCell.xib; sourceTree = "<group>"; };
+		D6B6CCAC1CA38CFB0040AF50 /* HeightHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightHeader.h; sourceTree = "<group>"; };
 		D6C1E26D1C9933A7002289A4 /* HorizontalDashLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalDashLineView.h; sourceTree = "<group>"; };
 		D6C1E26E1C9933A7002289A4 /* HorizontalDashLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalDashLineView.m; sourceTree = "<group>"; };
 		D6C1E2731C996ACA002289A4 /* StageDirectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageDirectionHeader.h; sourceTree = "<group>"; };
@@ -454,6 +475,15 @@
 				D64A2D101C97F29D002654AC /* VerifyViewController.h */,
 				D64A2D111C97F29D002654AC /* VerifyViewController.m */,
 				D64A2D121C97F29D002654AC /* VerifyViewController.xib */,
+				D69E72AC1CA3D2AE00A06749 /* FirstStepController.h */,
+				D69E72AD1CA3D2AE00A06749 /* FirstStepController.m */,
+				D69E72AE1CA3D2AE00A06749 /* FirstStepController.xib */,
+				D69E72B11CA3D2C300A06749 /* SecondStaepController.h */,
+				D69E72B21CA3D2C300A06749 /* SecondStaepController.m */,
+				D69E72B31CA3D2C300A06749 /* SecondStaepController.xib */,
+				D69E72B61CA3D2D700A06749 /* ThirdStepController.h */,
+				D69E72B71CA3D2D700A06749 /* ThirdStepController.m */,
+				D69E72B81CA3D2D700A06749 /* ThirdStepController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -475,6 +505,9 @@
 				D6EAA9ED1C9A82060042CADA /* VerticalDashLineView.h */,
 				D6EAA9EE1C9A82060042CADA /* VerticalDashLineView.m */,
 				D6C1E2731C996ACA002289A4 /* StageDirectionHeader.h */,
+				D6B6CCA71CA38B9C0040AF50 /* VerifyTableViewCell.h */,
+				D6B6CCA81CA38B9C0040AF50 /* VerifyTableViewCell.m */,
+				D6B6CCA91CA38B9C0040AF50 /* VerifyTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -709,6 +742,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E105091C73219000049C3F /* TabbarTitleHeader.h */,
+				D6B6CCAC1CA38CFB0040AF50 /* HeightHeader.h */,
 				D6060A301C7713C4000DB373 /* ScreenMacrosHeader.h */,
 			);
 			path = Macros;
@@ -1114,6 +1148,7 @@
 				D6F567281C80055800B0612F /* 我的@2x.png in Resources */,
 				D60609B31C76FF0E000DB373 /* 更多0@2x.png in Resources */,
 				D6060A1C1C76FF0E000DB373 /* logo@2x.png in Resources */,
+				D69E72BA1CA3D2D700A06749 /* ThirdStepController.xib in Resources */,
 				D60609BA1C76FF0E000DB373 /* 工作信息@3x.png in Resources */,
 				D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */,
 				D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */,
@@ -1128,6 +1163,7 @@
 				D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */,
 				D60609DE1C76FF0E000DB373 /* visible@3x.png in Resources */,
 				D60609AB1C76FF0E000DB373 /* 返回@3x.png in Resources */,
+				D69E72B51CA3D2C300A06749 /* SecondStaepController.xib in Resources */,
 				D60609D81C76FF0E000DB373 /* 借款须知@3x.png in Resources */,
 				D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */,
 				D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */,
@@ -1148,6 +1184,7 @@
 				D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */,
 				D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */,
 				D6060A071C76FF0E000DB373 /* mine_off@2x.png in Resources */,
+				D6B6CCAB1CA38B9C0040AF50 /* VerifyTableViewCell.xib in Resources */,
 				D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */,
 				D60609AA1C76FF0E000DB373 /* 返回@2x.png in Resources */,
 				D6F567211C8004ED00B0612F /* 借款@3x.png in Resources */,
@@ -1182,6 +1219,7 @@
 				D60609F91C76FF0E000DB373 /* approve_off@3x.png in Resources */,
 				D606099E1C76FF0E000DB373 /* 步骤@2x.png in Resources */,
 				D60609F01C76FF0E000DB373 /* txweibo@3x.png in Resources */,
+				D69E72B01CA3D2AE00A06749 /* FirstStepController.xib in Resources */,
 				D6060A231C76FF0E000DB373 /* qq空间@3x.png in Resources */,
 				D6060A131C76FF0E000DB373 /* creditline@2x.png in Resources */,
 				D60609CB1C76FF0E000DB373 /* 好评@2x.png in Resources */,
@@ -1287,7 +1325,9 @@
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,
 				D6E104C61C7320FD00049C3F /* main.m in Sources */,
+				D69E72AF1CA3D2AE00A06749 /* FirstStepController.m in Sources */,
 				D6060A381C771F3E000DB373 /* UIView+LoadViewFromNib.m in Sources */,
+				D6B6CCAA1CA38B9C0040AF50 /* VerifyTableViewCell.m in Sources */,
 				D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */,
 				D6060A331C77188E000DB373 /* HeaderView.m in Sources */,
 				D6EA01F81C8695FC00EE0E2E /* RegisterItem.m in Sources */,
@@ -1304,11 +1344,13 @@
 				D69A00001C929E4400EB0823 /* UploadParam.m in Sources */,
 				D65F3AFE1C8DE7410024E419 /* LXMKeyboardManager.m in Sources */,
 				D6E106601C74888200049C3F /* ActivityViewController.m in Sources */,
+				D69E72B91CA3D2D700A06749 /* ThirdStepController.m in Sources */,
 				D6A0FB6B1C845C93007D8DCB /* LoginUser.m in Sources */,
 				D6E1061A1C73293000049C3F /* MMLogViewController.m in Sources */,
 				D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */,
 				D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */,
 				D6FD61751C8DCC170029654E /* RegisterContentView.m in Sources */,
+				D69E72B41CA3D2C300A06749 /* SecondStaepController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1380,6 +1422,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1424,6 +1467,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

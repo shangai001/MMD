@@ -8,14 +8,24 @@
 
 #import "VerifyViewController.h"
 #import "StageView.h"
-#import <Masonry.h>
 #import "ColorHeader.h"
+#import "HeightHeader.h"
+#import "FirstStepController.h"
+#import "SecondStaepController.h"
+#import "ThirdStepController.h"
+
 
 @interface VerifyViewController ()
 
 @property (nonatomic, strong)StageView *stageView;
+@property (nonatomic, strong)FirstStepController *first;
+@property (nonatomic, strong)SecondStaepController *second;
+@property (nonatomic, strong)ThirdStepController *third;
 
 @end
+
+#define StageHeight 60
+
 
 @implementation VerifyViewController
 
@@ -25,10 +35,15 @@
     self.title = @"首次信息确认";
     self.view.backgroundColor = BACKGROUNDCOLOR;
     [self initStageView];
+    [self addStepsController];
 }
 - (void)initStageView{
-    self.stageView = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(0, 64, ScreenWidth - 2 * 0 , 60)];
+    
+    self.stageView = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(0, kTopLayoutGuide, ScreenWidth - 2 * 0 , StageHeight)];
     [self.view addSubview:self.stageView];
+}
+- (void)addStepsController{
+    _first = [[FirstStepController alloc] initWithNibName:NSStringFromClass([FirstStepController class]) bundle:[NSBundle mainBundle]];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

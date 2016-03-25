@@ -9,7 +9,7 @@
 #import "LoanViewController.h"
 #import "LoanHeader.h"
 #import "Masonry.h"
-
+#import "ColorHeader.h"
 
 
 #define TOP_Y 108
@@ -59,7 +59,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = BACKGROUNDCOLOR;
     self.title = @"借款";
     // Do any additional setup after loading the view.
     [self initHeaderView];
