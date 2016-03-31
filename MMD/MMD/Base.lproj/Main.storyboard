@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="653" y="909"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="Chw-Dq-BC7">
             <objects>
-                <viewController id="Zph-I0-wkf" sceneMemberID="viewController">
+                <viewController id="Zph-I0-wkf" customClass="MoreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AHb-i5-PLx"/>
                         <viewControllerLayoutGuide type="bottom" id="7ar-mP-Av4"/>
@@ -126,9 +126,26 @@
                     <view key="view" contentMode="scaleToFill" id="8jZ-mW-rpn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SUd-qP-0zk">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SUd-qP-0zk" firstAttribute="leading" secondItem="8jZ-mW-rpn" secondAttribute="leading" constant="20" id="3cd-a1-D31"/>
+                            <constraint firstItem="SUd-qP-0zk" firstAttribute="top" secondItem="8jZ-mW-rpn" secondAttribute="top" id="4yb-NI-X5X"/>
+                            <constraint firstAttribute="trailing" secondItem="SUd-qP-0zk" secondAttribute="trailing" constant="20" id="jOn-4I-d3R"/>
+                            <constraint firstAttribute="bottom" secondItem="SUd-qP-0zk" secondAttribute="bottom" id="m7m-g9-Ces"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UFQ-Ak-xli"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="tableView" destination="SUd-qP-0zk" id="aze-wT-ni6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="da9-5r-IG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

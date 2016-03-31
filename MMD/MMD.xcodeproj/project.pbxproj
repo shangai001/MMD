@@ -114,6 +114,12 @@
 		D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805EA71CAD1CF500316925 /* ZCAddressBook.m */; };
 		D6805EAC1CAD207800316925 /* ContactList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6805EAB1CAD207800316925 /* ContactList.plist */; };
 		D6805EAF1CAD242500316925 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805EAE1CAD242500316925 /* BaseViewController.m */; };
+		D6805EB21CAD248700316925 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805EB11CAD248700316925 /* MoreViewController.m */; };
+		D6805EFA1CAD29E200316925 /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805EF81CAD29E200316925 /* MoreTableViewCell.m */; };
+		D6805EFB1CAD29E200316925 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6805EF91CAD29E200316925 /* MoreTableViewCell.xib */; };
+		D6805F011CAD2BBE00316925 /* ImagesTitles.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6805F001CAD2BBE00316925 /* ImagesTitles.plist */; };
+		D6805F071CAD2EBC00316925 /* MoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805F061CAD2EBC00316925 /* MoreItem.m */; };
+		D6805F0A1CAD2F0D00316925 /* MoreTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805F091CAD2F0D00316925 /* MoreTableViewCell+PutValue.m */; };
 		D6835B261C8EC5BF0004EF1E /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */; };
 		D69A00001C929E4400EB0823 /* UploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFE1C929E4400EB0823 /* UploadParam.m */; };
 		D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFC1C929E4400EB0823 /* HttpRequest.m */; };
@@ -332,6 +338,16 @@
 		D6805EAB1CAD207800316925 /* ContactList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ContactList.plist; sourceTree = "<group>"; };
 		D6805EAD1CAD242500316925 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D6805EAE1CAD242500316925 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D6805EB01CAD248700316925 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		D6805EB11CAD248700316925 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		D6805EF71CAD29E200316925 /* MoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewCell.h; sourceTree = "<group>"; };
+		D6805EF81CAD29E200316925 /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
+		D6805EF91CAD29E200316925 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
+		D6805F001CAD2BBE00316925 /* ImagesTitles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImagesTitles.plist; sourceTree = "<group>"; };
+		D6805F051CAD2EBC00316925 /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
+		D6805F061CAD2EBC00316925 /* MoreItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreItem.m; sourceTree = "<group>"; };
+		D6805F081CAD2F0D00316925 /* MoreTableViewCell+PutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MoreTableViewCell+PutValue.h"; sourceTree = "<group>"; };
+		D6805F091CAD2F0D00316925 /* MoreTableViewCell+PutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MoreTableViewCell+PutValue.m"; sourceTree = "<group>"; };
 		D6835B241C8EC5BF0004EF1E /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
 		D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
 		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
@@ -632,6 +648,37 @@
 				D6805EA71CAD1CF500316925 /* ZCAddressBook.m */,
 			);
 			path = "联系人";
+			sourceTree = "<group>";
+		};
+		D6805F021CAD2E6B00316925 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6805EB01CAD248700316925 /* MoreViewController.h */,
+				D6805EB11CAD248700316925 /* MoreViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D6805F031CAD2E7A00316925 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6805EF71CAD29E200316925 /* MoreTableViewCell.h */,
+				D6805EF81CAD29E200316925 /* MoreTableViewCell.m */,
+				D6805EF91CAD29E200316925 /* MoreTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D6805F041CAD2E8200316925 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6805F001CAD2BBE00316925 /* ImagesTitles.plist */,
+				D6805F051CAD2EBC00316925 /* MoreItem.h */,
+				D6805F061CAD2EBC00316925 /* MoreItem.m */,
+				D6805F081CAD2F0D00316925 /* MoreTableViewCell+PutValue.h */,
+				D6805F091CAD2F0D00316925 /* MoreTableViewCell+PutValue.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		D6A0FB661C845C51007D8DCB /* Controller */ = {
@@ -1053,6 +1100,9 @@
 		D6E106161C7327AC00049C3F /* 更多 */ = {
 			isa = PBXGroup;
 			children = (
+				D6805F041CAD2E8200316925 /* Model */,
+				D6805F031CAD2E7A00316925 /* View */,
+				D6805F021CAD2E6B00316925 /* Controller */,
 			);
 			name = "更多";
 			sourceTree = "<group>";
@@ -1298,6 +1348,7 @@
 				D60609B61C76FF0E000DB373 /* 更改密码@2x.png in Resources */,
 				D60609CF1C76FF0E000DB373 /* 检查更新@3x.png in Resources */,
 				D6060A0D1C76FF0E000DB373 /* notificationCenter@2x.png in Resources */,
+				D6805EFB1CAD29E200316925 /* MoreTableViewCell.xib in Resources */,
 				D6B692181C8D7A5B00B3877D /* mmd_logo@2x.png in Resources */,
 				D60609E91C76FF0E000DB373 /* IDInfo@2x.png in Resources */,
 				D6E104D41C7320FD00049C3F /* Assets.xcassets in Resources */,
@@ -1320,6 +1371,7 @@
 				D6F01DE91C7C6BFA00EBC84E /* minus_press@2x.png in Resources */,
 				D60609FB1C76FF0E000DB373 /* weibo@2x.png in Resources */,
 				D60609FC1C76FF0E000DB373 /* weibo@3x.png in Resources */,
+				D6805F011CAD2BBE00316925 /* ImagesTitles.plist in Resources */,
 				D60609E41C76FF0E000DB373 /* contact@3x.png in Resources */,
 				D6F5671B1C80047500B0612F /* 借款0@2x.png in Resources */,
 				D60609A21C76FF0E000DB373 /* 步骤0@3x.png in Resources */,
@@ -1449,11 +1501,13 @@
 				D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
+				D6805EFA1CAD29E200316925 /* MoreTableViewCell.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6805E951CAD1A3300316925 /* STPickerDate.m in Sources */,
 				D6E106531C747CCE00049C3F /* LoanViewController.m in Sources */,
 				D6805EAF1CAD242500316925 /* BaseViewController.m in Sources */,
 				D64A2D0B1C956168002654AC /* UserInfoImporter.m in Sources */,
+				D6805F0A1CAD2F0D00316925 /* MoreTableViewCell+PutValue.m in Sources */,
 				D64A2D131C97F29D002654AC /* VerifyViewController.m in Sources */,
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,
@@ -1461,6 +1515,7 @@
 				D69E72AF1CA3D2AE00A06749 /* FirstStepController.m in Sources */,
 				D6060A381C771F3E000DB373 /* UIView+LoadViewFromNib.m in Sources */,
 				D6B6CCAA1CA38B9C0040AF50 /* VerifyTableViewCell.m in Sources */,
+				D6805F071CAD2EBC00316925 /* MoreItem.m in Sources */,
 				D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */,
 				D6060A331C77188E000DB373 /* HeaderView.m in Sources */,
 				D6805E981CAD1A3300316925 /* STConst.m in Sources */,
@@ -1484,6 +1539,7 @@
 				D6E106601C74888200049C3F /* ActivityViewController.m in Sources */,
 				D69E72B91CA3D2D700A06749 /* ThirdStepController.m in Sources */,
 				D6A0FB6B1C845C93007D8DCB /* LoginUser.m in Sources */,
+				D6805EB21CAD248700316925 /* MoreViewController.m in Sources */,
 				D6E1061A1C73293000049C3F /* MMLogViewController.m in Sources */,
 				D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */,
 				D6E396091CABD0C50090E127 /* VerifyItem.m in Sources */,
