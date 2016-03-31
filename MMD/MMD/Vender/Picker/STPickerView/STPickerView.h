@@ -66,6 +66,10 @@ typedef NS_ENUM(NSInteger, STPickerContentMode) {
  *  8.移除
  */
 - (void)remove;
+/**
+ *  9.reload
+ */
+- (void)ez_reloadAllComponents;
 
 @end
 NS_ASSUME_NONNULL_END

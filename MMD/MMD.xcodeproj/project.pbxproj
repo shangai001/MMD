@@ -110,6 +110,9 @@
 		D6805E991CAD1A3300316925 /* STUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E8C1CAD1A3300316925 /* STUI.m */; };
 		D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E8E1CAD1A3300316925 /* UIView+ST.m */; };
 		D6805E9B1CAD1A3300316925 /* STPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E911CAD1A3300316925 /* STPickerView.m */; };
+		D6805EA81CAD1CF500316925 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = D6805EA41CAD1CF500316925 /* pinyin.c */; };
+		D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805EA71CAD1CF500316925 /* ZCAddressBook.m */; };
+		D6805EAC1CAD207800316925 /* ContactList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6805EAB1CAD207800316925 /* ContactList.plist */; };
 		D6835B261C8EC5BF0004EF1E /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */; };
 		D69A00001C929E4400EB0823 /* UploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFE1C929E4400EB0823 /* UploadParam.m */; };
 		D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFC1C929E4400EB0823 /* HttpRequest.m */; };
@@ -321,6 +324,11 @@
 		D6805E8E1CAD1A3300316925 /* UIView+ST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ST.m"; sourceTree = "<group>"; };
 		D6805E901CAD1A3300316925 /* STPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerView.h; sourceTree = "<group>"; };
 		D6805E911CAD1A3300316925 /* STPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerView.m; sourceTree = "<group>"; };
+		D6805EA41CAD1CF500316925 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		D6805EA51CAD1CF500316925 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		D6805EA61CAD1CF500316925 /* ZCAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAddressBook.h; sourceTree = "<group>"; };
+		D6805EA71CAD1CF500316925 /* ZCAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAddressBook.m; sourceTree = "<group>"; };
+		D6805EAB1CAD207800316925 /* ContactList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ContactList.plist; sourceTree = "<group>"; };
 		D6835B241C8EC5BF0004EF1E /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
 		D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
 		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
@@ -584,6 +592,7 @@
 				D6805E841CAD1A3300316925 /* BankList.plist */,
 				D6805E851CAD1A3300316925 /* STPickerSingle.h */,
 				D6805E861CAD1A3300316925 /* STPickerSingle.m */,
+				D6805EAB1CAD207800316925 /* ContactList.plist */,
 			);
 			path = "Single(单数组)";
 			sourceTree = "<group>";
@@ -609,6 +618,17 @@
 				D6805E911CAD1A3300316925 /* STPickerView.m */,
 			);
 			path = STPickerView;
+			sourceTree = "<group>";
+		};
+		D6805EA31CAD1CF500316925 /* 联系人 */ = {
+			isa = PBXGroup;
+			children = (
+				D6805EA41CAD1CF500316925 /* pinyin.c */,
+				D6805EA51CAD1CF500316925 /* pinyin.h */,
+				D6805EA61CAD1CF500316925 /* ZCAddressBook.h */,
+				D6805EA71CAD1CF500316925 /* ZCAddressBook.m */,
+			);
+			path = "联系人";
 			sourceTree = "<group>";
 		};
 		D6A0FB661C845C51007D8DCB /* Controller */ = {
@@ -995,6 +1015,7 @@
 		D6E105101C7321A000049C3F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				D6805EA31CAD1CF500316925 /* 联系人 */,
 				D6805E791CAD1A3200316925 /* Picker */,
 			);
 			path = Vender;
@@ -1226,6 +1247,7 @@
 				D6E104D71C7320FD00049C3F /* LaunchScreen.storyboard in Resources */,
 				D6F5671C1C80047500B0612F /* 借款0@3x.png in Resources */,
 				D6A0FB741C8464BD007D8DCB /* RegisterViewController.xib in Resources */,
+				D6805EAC1CAD207800316925 /* ContactList.plist in Resources */,
 				D6F01DE81C7C6BFA00EBC84E /* add@3x.png in Resources */,
 				D6060A351C77189C000DB373 /* HeaderView.xib in Resources */,
 				D60609EC1C76FF0E000DB373 /* phoneNumber@2x.png in Resources */,
@@ -1414,11 +1436,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6805EA81CAD1CF500316925 /* pinyin.c in Sources */,
 				D6DD24A31C87439C0042E263 /* MMDLogin.m in Sources */,
 				D6E1065A1C747EEA00049C3F /* MMSegmentControl.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D6C1E26F1C9933A7002289A4 /* HorizontalDashLineView.m in Sources */,
 				D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */,
+				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6805E951CAD1A3300316925 /* STPickerDate.m in Sources */,

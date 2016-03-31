@@ -14,6 +14,7 @@
 #import "ColorHeader.h"
 #import <Masonry.h>
 #import <NSArray+YYAdd.h>
+#import "ZCAddressBook.h"
 
 @interface FirstStepController ()<UITextFieldDelegate,STPickerAreaDelegate,STPickerSingleDelegate>
 
@@ -34,6 +35,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+//获取系统通讯录
+- (IBAction)systemAddressClick:(id)sender {
+    [[ZCAddressBook shareControl]showPhoneViewWithTarget:self Block:^(BOOL isSuccess, NSDictionary *dic) {
+        NSArray *selectedPerson = dic[@"telphone"];
+        NSString *phoneNumber = [NSString stringWithFormat:@"%@",[selectedPerson lastObject]];
+        self.contactPhoneNumberTextField.text = phoneNumber;
+    }];
 }
 #pragma mark STPickerAreaDelegate
 - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area{
@@ -56,12 +65,32 @@
     }
     if ([textField isEqual:_bankTextField]) {
         [self.view endEditing:YES];
-        self.backPickerView = [[STPickerSingle alloc] init];
+        if (!self.backPickerView) {
+            self.backPickerView = [[STPickerSingle alloc] init];
+        }
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BankList" ofType:@"plist"];
         NSData *arrayData = [NSData dataWithContentsOfFile:plistPath];
         NSMutableArray *backArray = [NSMutableArray arrayWithPlistData:arrayData];
         [self.backPickerView setArrayData:backArray];
+        [self.backPickerView ez_reloadAllComponents];
         [self.backPickerView setTitle:@"请选择银行"];
+        self.backPickerView.widthPickerComponent = 120;
+        [self.backPickerView setContentMode:STPickerContentModeBottom];
+        [self.backPickerView setDelegate:self];
+        [self.backPickerView show];
+        return NO;
+    }
+    if ([textField isEqual:_contactNameTextField]) {
+        [self.view endEditing:YES];
+        if (!self.backPickerView) {
+            self.backPickerView = [[STPickerSingle alloc] init];
+        }
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"ContactList" ofType:@"plist"];
+        NSData *arrayData = [NSData dataWithContentsOfFile:plistPath];
+        NSMutableArray *backArray = [NSMutableArray arrayWithPlistData:arrayData];
+        [self.backPickerView setArrayData:backArray];
+        [self.backPickerView ez_reloadAllComponents];
+        [self.backPickerView setTitle:@"请选择联系人姓名"];
         self.backPickerView.widthPickerComponent = 120;
         [self.backPickerView setContentMode:STPickerContentModeBottom];
         [self.backPickerView setDelegate:self];

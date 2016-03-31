@@ -273,5 +273,8 @@
     }
     return _lineViewDown;
 }
+- (void)ez_reloadAllComponents{
+    [self.pickerView reloadAllComponents];
+}
 @end
 
