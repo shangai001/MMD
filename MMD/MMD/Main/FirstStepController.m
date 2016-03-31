@@ -8,15 +8,18 @@
 
 #import "FirstStepController.h"
 #import "VerifyItem.h"
-//#import "ZHPickView.h"
+#import "STPickerSingle.h"
 #import "STPickerArea.h"
 #import "HeightHeader.h"
 #import "ColorHeader.h"
 #import <Masonry.h>
+#import <NSArray+YYAdd.h>
 
-@interface FirstStepController ()<UITextFieldDelegate,STPickerAreaDelegate>
+@interface FirstStepController ()<UITextFieldDelegate,STPickerAreaDelegate,STPickerSingleDelegate>
+
 @property (nonatomic, strong)VerifyItem *item;
-@property (nonatomic, strong)STPickerArea *pickerView;
+@property (nonatomic, strong)STPickerArea *cityPickerView;
+@property (nonatomic, strong)STPickerSingle *backPickerView;
 
 @end
 
@@ -32,41 +35,47 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark STPickerAreaDelegate
+- (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area{
+    NSString *cityAddress = [NSString stringWithFormat:@"%@%@%@",province,city,area];
+    self.item.city = cityAddress;
+    self.cityTextField.text = cityAddress;
+}
+- (void)pickerSingle:(STPickerSingle *)pickerSingle selectedTitle:(NSString *)selectedTitle{
+    self.item.bank = selectedTitle;
+    self.bankTextField.text = selectedTitle;
+}
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     if ([textField isEqual:_cityTextField]) {
-        
-        [textField resignFirstResponder];
-        
-        [textField resignFirstResponder];
-        
-        self.pickerView = [[STPickerArea alloc]init];
-        [self.pickerView setDelegate:self];
-        [self.pickerView setContentMode:STPickerContentModeBottom];
-        [self.pickerView show];
-        
-//        [self.pickerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.mas_equalTo(superView);
-//            make.bottom.mas_equalTo(superView);
-//            make.right.mas_equalTo(superView);
-//            make.height.mas_equalTo(200);
-//        }];
-//        [self.view setNeedsLayout];
-//        AddressPickView *addressPickView = [AddressPickView shareInstance];
-//        addressPickView.frame = CGRectMake(0, 200, 275, 200);
-//        [self.view addSubview:addressPickView];
-//        addressPickView.block = ^(NSString *province,NSString *city,NSString *town){
-//            self.item.city = [NSString stringWithFormat:@"%@ %@ %@",province,city,town] ;
-//        };
+        [self.view endEditing:YES];
+        self.cityPickerView = [[STPickerArea alloc]init];
+        [self.cityPickerView setDelegate:self];
+        [self.cityPickerView setContentMode:STPickerContentModeBottom];
+        [self.cityPickerView show];
+        return NO;
+    }
+    if ([textField isEqual:_bankTextField]) {
+        [self.view endEditing:YES];
+        self.backPickerView = [[STPickerSingle alloc] init];
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BankList" ofType:@"plist"];
+        NSData *arrayData = [NSData dataWithContentsOfFile:plistPath];
+        NSMutableArray *backArray = [NSMutableArray arrayWithPlistData:arrayData];
+        [self.backPickerView setArrayData:backArray];
+        [self.backPickerView setTitle:@"请选择银行"];
+        self.backPickerView.widthPickerComponent = 120;
+        [self.backPickerView setContentMode:STPickerContentModeBottom];
+        [self.backPickerView setDelegate:self];
+        [self.backPickerView show];
         return NO;
     }
     return YES;
 }// return NO to disallow editing.
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-
+    if ([textField isFirstResponder]) {
+        NSLog(@"成为第一响应者");
+    }
 }// became first responder
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    
     return YES;
 }// return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
 - (void)textFieldDidEndEditing:(UITextField *)textField{
@@ -84,7 +93,6 @@
     }
 
     if ([textField isEqual:_contactNameTextField]) {
-//        self.item.contactName = _contactNameTextField.text;
     }
     if ([textField isEqual:_contactPhoneNumberTextField]) {
 

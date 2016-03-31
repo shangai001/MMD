@@ -99,12 +99,14 @@
                 CGFloat leftToSuper = buttonToLeft + buttonWidthHeight + (buttonWidthHeight + buttonLeftToButtonLeft) * k;
                 HorizontalDashLineView *lineView = [[HorizontalDashLineView alloc] initWithFrame:CGRectMake(leftToSuper, (superFrame.size.height - StageViewHeight)/2, buttonLeftToButtonLeft, StageViewHeight)];
                 lineView.lineType = k == 0 ? kRedDasheType : kGrayRealType;
+                lineView.tag = 100 + k;
                 [self addSubview:lineView];
             }else{
                 CGFloat buttonTopToButtonTop = (superFrame.size.height - 2 * buttonToLeft - _stage * buttonWidthHeight)/(_stage - 1);
                 CGFloat topToSuper = buttonToLeft + buttonWidthHeight + (buttonTopToButtonTop + buttonWidthHeight) * k;
                 VerticalDashLineView *lineView = [[VerticalDashLineView alloc] initWithFrame:CGRectMake((superFrame.size.width - StageViewHeight)/2, topToSuper,StageViewHeight , buttonTopToButtonTop)];
                 lineView.lineType = k == 0 ? kRedDasheType : kGrayRealType;
+                lineView.tag = 200 + k;
                 [self addSubview:lineView];
             }
         }
@@ -145,7 +147,7 @@
     titleLabel.adjustsFontSizeToFitWidth = YES;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor lightGrayColor];
-    NSString *title = [NSString stringWithFormat:@"第%ld步",index];
+    NSString *title = [NSString stringWithFormat:@"第%ld步",(long)index];
     titleLabel.text = title;
     [self addSubview:titleLabel];
     
@@ -160,15 +162,24 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:[UIImage imageNamed:@"步骤"] forState:UIControlStateSelected];
     [button setImage:[UIImage imageNamed:@"步骤0"] forState:UIControlStateNormal];
-    button.tag = j + 100;
+    button.tag = j + 300;
     if (j == 0) {
         button.selected = YES;
     }
     return button;
 }
 - (void)updateProsess:(NSUInteger)stage{
-    UIButton *button = (UIButton *)[self viewWithTag:stage + 100];
+    UIButton *button = (UIButton *)[self viewWithTag:stage + 300];
     button.selected = YES;
+    if (self.style == kHorizontalStyle) {
+        HorizontalDashLineView *lineView = (HorizontalDashLineView *)[self viewWithTag:100+stage-1];
+        lineView.lineType = kRedRealType;
+        [lineView setNeedsDisplay];
+    }else if (self.style == kverticalTypeStyle){
+        VerticalDashLineView *lineView = (VerticalDashLineView *)[self viewWithTag:200 + stage - 1];
+        lineView.lineType = kRedRealType;
+        [lineView setNeedsDisplay];
+    }
 }
 
 @end
