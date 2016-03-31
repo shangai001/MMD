@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondStaepController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *maritalStatusField;
+@property (weak, nonatomic) IBOutlet UITextField *childField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lifeRadius;
+@property (weak, nonatomic) IBOutlet UITextField *careerField;
+@property (weak, nonatomic) IBOutlet UITextField *compangyName;
+@property (weak, nonatomic) IBOutlet UITextField *compangyCityField;
+@property (weak, nonatomic) IBOutlet UITextField *compangyAddressField;
+@property (weak, nonatomic) IBOutlet UITextField *companyPhoneNum;
 
 @end

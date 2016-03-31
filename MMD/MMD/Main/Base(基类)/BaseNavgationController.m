@@ -9,7 +9,8 @@
 #import "BaseNavgationController.h"
 #import "UIImage+Color.h"
 #import "ColorHeader.h"
-#import "ScreenMacrosHeader.h"
+#import "HeightHeader.h"
+
 
 
 @interface BaseNavgationController ()
@@ -27,7 +28,7 @@
     //2.设置bar北京
     UINavigationBar *navBar = [UINavigationBar appearance];
     UIColor *barBackColor = REDCOLOR;
-    UIImage *barBackImage = [UIImage imageWithColor:barBackColor size:CGSizeMake(SCREEN_WIDTH, 44)];
+    UIImage *barBackImage = [UIImage imageWithColor:barBackColor size:CGSizeMake(YYScreenSize().width, 44)];
     [navBar setBackgroundImage:barBackImage forBarMetrics:UIBarMetricsDefault];
     
     

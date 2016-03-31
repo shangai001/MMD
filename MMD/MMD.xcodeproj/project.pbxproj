@@ -100,6 +100,12 @@
 		D64A2D141C97F29D002654AC /* VerifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64A2D121C97F29D002654AC /* VerifyViewController.xib */; };
 		D64A2D171C97F6A1002654AC /* StageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D161C97F6A1002654AC /* StageView.m */; };
 		D65F3AFE1C8DE7410024E419 /* LXMKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */; };
+		D6805E5B1CACD78400316925 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6805E581CACD78400316925 /* area.plist */; };
+		D6805E5C1CACD78400316925 /* STPickerArea.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E5A1CACD78400316925 /* STPickerArea.m */; };
+		D6805E601CACD7DE00316925 /* STPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E5F1CACD7DE00316925 /* STPickerView.m */; };
+		D6805E681CACD89E00316925 /* STConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E631CACD89E00316925 /* STConst.m */; };
+		D6805E691CACD89E00316925 /* STUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E651CACD89E00316925 /* STUI.m */; };
+		D6805E6A1CACD89E00316925 /* UIView+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E671CACD89E00316925 /* UIView+ST.m */; };
 		D6835B261C8EC5BF0004EF1E /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */; };
 		D69A00001C929E4400EB0823 /* UploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFE1C929E4400EB0823 /* UploadParam.m */; };
 		D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFFC1C929E4400EB0823 /* HttpRequest.m */; };
@@ -142,6 +148,7 @@
 		D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E106641C7488C700049C3F /* QueryViewController.xib */; };
 		D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E106691C74893900049C3F /* ApplyViewController.m */; };
 		D6E1066C1C74893900049C3F /* ApplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E1066A1C74893900049C3F /* ApplyViewController.xib */; };
+		D6E396091CABD0C50090E127 /* VerifyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E396081CABD0C50090E127 /* VerifyItem.m */; };
 		D6EA01F81C8695FC00EE0E2E /* RegisterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA01F71C8695FC00EE0E2E /* RegisterItem.m */; };
 		D6EA01FB1C86984500EE0E2E /* LimitInputWords.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA01FA1C86984500EE0E2E /* LimitInputWords.m */; };
 		D6EAA9EF1C9A82060042CADA /* VerticalDashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EAA9EE1C9A82060042CADA /* VerticalDashLineView.m */; };
@@ -277,7 +284,6 @@
 		D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavgationController.m; sourceTree = "<group>"; };
 		D6060A2D1C771329000DB373 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		D6060A2E1C771329000DB373 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
-		D6060A301C7713C4000DB373 /* ScreenMacrosHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenMacrosHeader.h; sourceTree = "<group>"; };
 		D6060A311C77188E000DB373 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		D6060A321C77188E000DB373 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		D6060A341C77189C000DB373 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -292,9 +298,21 @@
 		D64A2D161C97F6A1002654AC /* StageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageView.m; sourceTree = "<group>"; };
 		D65F3AFC1C8DE7410024E419 /* LXMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXMKeyboardManager.h; path = ../../Main/LXMKeyboardManager.h; sourceTree = "<group>"; };
 		D65F3AFD1C8DE7410024E419 /* LXMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXMKeyboardManager.m; path = ../../Main/LXMKeyboardManager.m; sourceTree = "<group>"; };
+		D6805E581CACD78400316925 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		D6805E591CACD78400316925 /* STPickerArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerArea.h; sourceTree = "<group>"; };
+		D6805E5A1CACD78400316925 /* STPickerArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerArea.m; sourceTree = "<group>"; };
+		D6805E5E1CACD7DE00316925 /* STPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerView.h; sourceTree = "<group>"; };
+		D6805E5F1CACD7DE00316925 /* STPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerView.m; sourceTree = "<group>"; };
+		D6805E611CACD88500316925 /* STConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STConfig.h; path = ../Main/STConfig.h; sourceTree = "<group>"; };
+		D6805E621CACD88500316925 /* STConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STConst.h; path = ../Main/STConst.h; sourceTree = "<group>"; };
+		D6805E631CACD89E00316925 /* STConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STConst.m; path = ../Main/STConst.m; sourceTree = "<group>"; };
+		D6805E641CACD89E00316925 /* STUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STUI.h; path = ../Main/STUI.h; sourceTree = "<group>"; };
+		D6805E651CACD89E00316925 /* STUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STUI.m; path = ../Main/STUI.m; sourceTree = "<group>"; };
+		D6805E661CACD89E00316925 /* UIView+ST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ST.h"; path = "../Main/UIView+ST.h"; sourceTree = "<group>"; };
+		D6805E671CACD89E00316925 /* UIView+ST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ST.m"; path = "../Main/UIView+ST.m"; sourceTree = "<group>"; };
 		D6835B241C8EC5BF0004EF1E /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
 		D6835B251C8EC5BF0004EF1E /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
-		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorHeader.h; path = ../Macros/ColorHeader.h; sourceTree = "<group>"; };
+		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
 		D69AFFFB1C929E4400EB0823 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = ../../HttpRequest.h; sourceTree = "<group>"; };
 		D69AFFFC1C929E4400EB0823 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = ../../HttpRequest.m; sourceTree = "<group>"; };
 		D69AFFFD1C929E4400EB0823 /* UploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UploadParam.h; path = ../../UploadParam.h; sourceTree = "<group>"; };
@@ -315,7 +333,7 @@
 		D6A0FB701C8464BD007D8DCB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		D6A0FB711C8464BD007D8DCB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		D6A0FB721C8464BD007D8DCB /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
-		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
+		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PasswordLength.h; path = ../Const/PasswordLength.h; sourceTree = "<group>"; };
 		D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@2x.png"; sourceTree = "<group>"; };
 		D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@3x.png"; sourceTree = "<group>"; };
 		D6B6921A1C8D7A8500B3877D /* key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@2x.png"; sourceTree = "<group>"; };
@@ -359,7 +377,7 @@
 		D6E106521C747CCE00049C3F /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
 		D6E106581C747EEA00049C3F /* MMSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSegmentControl.h; sourceTree = "<group>"; };
 		D6E106591C747EEA00049C3F /* MMSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSegmentControl.m; sourceTree = "<group>"; };
-		D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentTitleHeader.h; sourceTree = "<group>"; };
+		D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SegmentTitleHeader.h; path = ../Const/SegmentTitleHeader.h; sourceTree = "<group>"; };
 		D6E1065C1C7480E100049C3F /* LoanHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHeader.h; sourceTree = "<group>"; };
 		D6E1065D1C74888200049C3F /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		D6E1065E1C74888200049C3F /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
@@ -370,6 +388,8 @@
 		D6E106681C74893900049C3F /* ApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyViewController.h; sourceTree = "<group>"; };
 		D6E106691C74893900049C3F /* ApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyViewController.m; sourceTree = "<group>"; };
 		D6E1066A1C74893900049C3F /* ApplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyViewController.xib; sourceTree = "<group>"; };
+		D6E396071CABD0C50090E127 /* VerifyItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyItem.h; sourceTree = "<group>"; };
+		D6E396081CABD0C50090E127 /* VerifyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyItem.m; sourceTree = "<group>"; };
 		D6EA01F61C8695FC00EE0E2E /* RegisterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterItem.h; sourceTree = "<group>"; };
 		D6EA01F71C8695FC00EE0E2E /* RegisterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterItem.m; sourceTree = "<group>"; };
 		D6EA01F91C86984500EE0E2E /* LimitInputWords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitInputWords.h; sourceTree = "<group>"; };
@@ -401,8 +421,8 @@
 		D6FD61711C8DCBF40029654E /* RegisterContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterContentView.xib; sourceTree = "<group>"; };
 		D6FD61731C8DCC170029654E /* RegisterContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterContentView.h; sourceTree = "<group>"; };
 		D6FD61741C8DCC170029654E /* RegisterContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterContentView.m; sourceTree = "<group>"; };
-		D6FDC4CC1C85B485003B2660 /* ServerDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerDefine.h; sourceTree = "<group>"; };
-		D6FDC4CD1C85B528003B2660 /* ServerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOption.h; sourceTree = "<group>"; };
+		D6FDC4CC1C85B485003B2660 /* ServerDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerDefine.h; path = ../Const/ServerDefine.h; sourceTree = "<group>"; };
+		D6FDC4CD1C85B528003B2660 /* ServerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerOption.h; path = ../Const/ServerOption.h; sourceTree = "<group>"; };
 		D876B7B7F58349F963758341 /* libPods-MMD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -491,6 +511,8 @@
 		D64A2D0E1C97F262002654AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6E396071CABD0C50090E127 /* VerifyItem.h */,
+				D6E396081CABD0C50090E127 /* VerifyItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -510,6 +532,43 @@
 				D6B6CCA91CA38B9C0040AF50 /* VerifyTableViewCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		D6805E571CACD78400316925 /* Area(地区) */ = {
+			isa = PBXGroup;
+			children = (
+				D6805E581CACD78400316925 /* area.plist */,
+				D6805E591CACD78400316925 /* STPickerArea.h */,
+				D6805E5A1CACD78400316925 /* STPickerArea.m */,
+			);
+			name = "Area(地区)";
+			path = "../Main/Area(地区)";
+			sourceTree = "<group>";
+		};
+		D6805E5D1CACD7DE00316925 /* STPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				D6805E5E1CACD7DE00316925 /* STPickerView.h */,
+				D6805E5F1CACD7DE00316925 /* STPickerView.m */,
+			);
+			name = STPickerView;
+			path = ../Main/STPickerView;
+			sourceTree = "<group>";
+		};
+		D6805E6B1CACD8F600316925 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				D6805E631CACD89E00316925 /* STConst.m */,
+				D6805E641CACD89E00316925 /* STUI.h */,
+				D6805E651CACD89E00316925 /* STUI.m */,
+				D6805E661CACD89E00316925 /* UIView+ST.h */,
+				D6805E671CACD89E00316925 /* UIView+ST.m */,
+				D6805E611CACD88500316925 /* STConfig.h */,
+				D6805E621CACD88500316925 /* STConst.h */,
+				D6805E5D1CACD7DE00316925 /* STPickerView */,
+				D6805E571CACD78400316925 /* Area(地区) */,
+			);
+			name = Picker;
 			sourceTree = "<group>";
 		};
 		D6A0FB661C845C51007D8DCB /* Controller */ = {
@@ -720,11 +779,6 @@
 		D6E105061C73219000049C3F /* Const */ = {
 			isa = PBXGroup;
 			children = (
-				D68492231C7B08AC00227ACA /* ColorHeader.h */,
-				D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */,
-				D6A0FB751C857363007D8DCB /* PasswordLength.h */,
-				D6FDC4CC1C85B485003B2660 /* ServerDefine.h */,
-				D6FDC4CD1C85B528003B2660 /* ServerOption.h */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -741,9 +795,13 @@
 		D6E105081C73219000049C3F /* Macros */ = {
 			isa = PBXGroup;
 			children = (
+				D68492231C7B08AC00227ACA /* ColorHeader.h */,
+				D6E1065B1C74806800049C3F /* SegmentTitleHeader.h */,
+				D6A0FB751C857363007D8DCB /* PasswordLength.h */,
+				D6FDC4CC1C85B485003B2660 /* ServerDefine.h */,
+				D6FDC4CD1C85B528003B2660 /* ServerOption.h */,
 				D6E105091C73219000049C3F /* TabbarTitleHeader.h */,
 				D6B6CCAC1CA38CFB0040AF50 /* HeightHeader.h */,
-				D6060A301C7713C4000DB373 /* ScreenMacrosHeader.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -897,6 +955,7 @@
 		D6E105101C7321A000049C3F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				D6805E6B1CACD8F600316925 /* Picker */,
 			);
 			path = Vender;
 			sourceTree = "<group>";
@@ -1166,6 +1225,7 @@
 				D69E72B51CA3D2C300A06749 /* SecondStaepController.xib in Resources */,
 				D60609D81C76FF0E000DB373 /* 借款须知@3x.png in Resources */,
 				D6E106661C7488C700049C3F /* QueryViewController.xib in Resources */,
+				D6805E5B1CACD78400316925 /* area.plist in Resources */,
 				D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */,
 				D60609E61C76FF0E000DB373 /* friendsCircle@2x.png in Resources */,
 				D60609B61C76FF0E000DB373 /* 更改密码@2x.png in Resources */,
@@ -1318,6 +1378,7 @@
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D6C1E26F1C9933A7002289A4 /* HorizontalDashLineView.m in Sources */,
 				D6A0FB731C8464BD007D8DCB /* RegisterViewController.m in Sources */,
+				D6805E691CACD89E00316925 /* STUI.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6E106531C747CCE00049C3F /* LoanViewController.m in Sources */,
 				D64A2D0B1C956168002654AC /* UserInfoImporter.m in Sources */,
@@ -1331,14 +1392,17 @@
 				D6E1066B1C74893900049C3F /* ApplyViewController.m in Sources */,
 				D6060A331C77188E000DB373 /* HeaderView.m in Sources */,
 				D6EA01F81C8695FC00EE0E2E /* RegisterItem.m in Sources */,
+				D6805E681CACD89E00316925 /* STConst.m in Sources */,
 				D6835B261C8EC5BF0004EF1E /* UserInfoManager.m in Sources */,
 				D6F01DDC1C7C69D400EBC84E /* UpdateLoanInfo.m in Sources */,
 				D64A2D171C97F6A1002654AC /* StageView.m in Sources */,
 				D6EA01FB1C86984500EE0E2E /* LimitInputWords.m in Sources */,
+				D6805E601CACD7DE00316925 /* STPickerView.m in Sources */,
 				D6EAA9EF1C9A82060042CADA /* VerticalDashLineView.m in Sources */,
 				D6D30C211C98013600653249 /* DashLineHelper.m in Sources */,
 				D6E106651C7488C700049C3F /* QueryViewController.m in Sources */,
 				D6060A2F1C771329000DB373 /* UIImage+Color.m in Sources */,
+				D6805E6A1CACD89E00316925 /* UIView+ST.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
 				D6060A271C770204000DB373 /* NewApplyViewController.m in Sources */,
 				D69A00001C929E4400EB0823 /* UploadParam.m in Sources */,
@@ -1348,6 +1412,8 @@
 				D6A0FB6B1C845C93007D8DCB /* LoginUser.m in Sources */,
 				D6E1061A1C73293000049C3F /* MMLogViewController.m in Sources */,
 				D69AFFFF1C929E4400EB0823 /* HttpRequest.m in Sources */,
+				D6805E5C1CACD78400316925 /* STPickerArea.m in Sources */,
+				D6E396091CABD0C50090E127 /* VerifyItem.m in Sources */,
 				D6A0FB651C8459C0007D8DCB /* checkoutPhoneNumber.m in Sources */,
 				D6FD61751C8DCC170029654E /* RegisterContentView.m in Sources */,
 				D69E72B41CA3D2C300A06749 /* SecondStaepController.m in Sources */,

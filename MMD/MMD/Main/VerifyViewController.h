@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VerifyItem;
 
 @interface VerifyViewController : UIViewController
+
+@property (nonatomic,copy)VerifyItem *item;
 
 @end
