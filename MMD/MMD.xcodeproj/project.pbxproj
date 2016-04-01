@@ -96,6 +96,7 @@
 		D6060A351C77189C000DB373 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6060A341C77189C000DB373 /* HeaderView.xib */; };
 		D6060A381C771F3E000DB373 /* UIView+LoadViewFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A371C771F3E000DB373 /* UIView+LoadViewFromNib.m */; };
 		D63546E31CAE4F9F00E240B5 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D63546E21CAE4F9F00E240B5 /* AppInfo.m */; };
+		D647FAE51CAE7B1200CBF19E /* RefundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FAE41CAE7B1200CBF19E /* RefundController.m */; };
 		D64A2D0B1C956168002654AC /* UserInfoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D0A1C956168002654AC /* UserInfoImporter.m */; };
 		D64A2D131C97F29D002654AC /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D111C97F29D002654AC /* VerifyViewController.m */; };
 		D64A2D141C97F29D002654AC /* VerifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64A2D121C97F29D002654AC /* VerifyViewController.xib */; };
@@ -311,6 +312,8 @@
 		D6060A371C771F3E000DB373 /* UIView+LoadViewFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LoadViewFromNib.m"; path = "../../Main/UIView+LoadViewFromNib.m"; sourceTree = "<group>"; };
 		D63546E11CAE4F9F00E240B5 /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
 		D63546E21CAE4F9F00E240B5 /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
+		D647FAE31CAE7B1200CBF19E /* RefundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundController.h; sourceTree = "<group>"; };
+		D647FAE41CAE7B1200CBF19E /* RefundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundController.m; sourceTree = "<group>"; };
 		D64A2D091C956168002654AC /* UserInfoImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoImporter.h; sourceTree = "<group>"; };
 		D64A2D0A1C956168002654AC /* UserInfoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoImporter.m; sourceTree = "<group>"; };
 		D64A2D101C97F29D002654AC /* VerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyViewController.h; sourceTree = "<group>"; };
@@ -530,6 +533,15 @@
 				D6E1066A1C74893900049C3F /* ApplyViewController.xib */,
 			);
 			name = Deperated;
+			sourceTree = "<group>";
+		};
+		D647FAE21CAE7AF400CBF19E /* 还款须知 */ = {
+			isa = PBXGroup;
+			children = (
+				D647FAE31CAE7B1200CBF19E /* RefundController.h */,
+				D647FAE41CAE7B1200CBF19E /* RefundController.m */,
+			);
+			name = "还款须知";
 			sourceTree = "<group>";
 		};
 		D64A2D0C1C97F23F002654AC /* 验证用户 */ = {
@@ -1128,6 +1140,7 @@
 		D6E106161C7327AC00049C3F /* 更多 */ = {
 			isa = PBXGroup;
 			children = (
+				D647FAE21CAE7AF400CBF19E /* 还款须知 */,
 				D6E2FFF81CAE5D4E00197B3E /* 借款须知 */,
 				D6805F041CAD2E8200316925 /* Model */,
 				D6805F031CAD2E7A00316925 /* View */,
@@ -1571,6 +1584,7 @@
 				D64A2D171C97F6A1002654AC /* StageView.m in Sources */,
 				D6EA01FB1C86984500EE0E2E /* LimitInputWords.m in Sources */,
 				D6EAA9EF1C9A82060042CADA /* VerticalDashLineView.m in Sources */,
+				D647FAE51CAE7B1200CBF19E /* RefundController.m in Sources */,
 				D6805E931CAD1A3300316925 /* STPickerArea.m in Sources */,
 				D6D30C211C98013600653249 /* DashLineHelper.m in Sources */,
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,
