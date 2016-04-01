@@ -167,6 +167,7 @@
 		D6E1066C1C74893900049C3F /* ApplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E1066A1C74893900049C3F /* ApplyViewController.xib */; };
 		D6E2FFF61CAE579800197B3E /* message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E2FFF41CAE579800197B3E /* message@2x.png */; };
 		D6E2FFF71CAE579800197B3E /* message@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E2FFF51CAE579800197B3E /* message@3x.png */; };
+		D6E2FFFB1CAE5E5F00197B3E /* LoanRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E2FFFA1CAE5E5F00197B3E /* LoanRulesViewController.m */; };
 		D6E396091CABD0C50090E127 /* VerifyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E396081CABD0C50090E127 /* VerifyItem.m */; };
 		D6EA01F81C8695FC00EE0E2E /* RegisterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA01F71C8695FC00EE0E2E /* RegisterItem.m */; };
 		D6EA01FB1C86984500EE0E2E /* LimitInputWords.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA01FA1C86984500EE0E2E /* LimitInputWords.m */; };
@@ -438,6 +439,8 @@
 		D6E1066A1C74893900049C3F /* ApplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyViewController.xib; sourceTree = "<group>"; };
 		D6E2FFF41CAE579800197B3E /* message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message@2x.png"; sourceTree = "<group>"; };
 		D6E2FFF51CAE579800197B3E /* message@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message@3x.png"; sourceTree = "<group>"; };
+		D6E2FFF91CAE5E5F00197B3E /* LoanRulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanRulesViewController.h; sourceTree = "<group>"; };
+		D6E2FFFA1CAE5E5F00197B3E /* LoanRulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanRulesViewController.m; sourceTree = "<group>"; };
 		D6E396071CABD0C50090E127 /* VerifyItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyItem.h; sourceTree = "<group>"; };
 		D6E396081CABD0C50090E127 /* VerifyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyItem.m; sourceTree = "<group>"; };
 		D6EA01F61C8695FC00EE0E2E /* RegisterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterItem.h; sourceTree = "<group>"; };
@@ -1125,6 +1128,7 @@
 		D6E106161C7327AC00049C3F /* 更多 */ = {
 			isa = PBXGroup;
 			children = (
+				D6E2FFF81CAE5D4E00197B3E /* 借款须知 */,
 				D6805F041CAD2E8200316925 /* Model */,
 				D6805F031CAD2E7A00316925 /* View */,
 				D6805F021CAD2E6B00316925 /* Controller */,
@@ -1189,6 +1193,15 @@
 				D6E1065C1C7480E100049C3F /* LoanHeader.h */,
 			);
 			name = ParentController;
+			sourceTree = "<group>";
+		};
+		D6E2FFF81CAE5D4E00197B3E /* 借款须知 */ = {
+			isa = PBXGroup;
+			children = (
+				D6E2FFF91CAE5E5F00197B3E /* LoanRulesViewController.h */,
+				D6E2FFFA1CAE5E5F00197B3E /* LoanRulesViewController.m */,
+			);
+			name = "借款须知";
 			sourceTree = "<group>";
 		};
 		D6F5671D1C80048800B0612F /* TabbarImage */ = {
@@ -1563,6 +1576,7 @@
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,
 				D6E106651C7488C700049C3F /* QueryViewController.m in Sources */,
 				D6060A2F1C771329000DB373 /* UIImage+Color.m in Sources */,
+				D6E2FFFB1CAE5E5F00197B3E /* LoanRulesViewController.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
 				D6060A271C770204000DB373 /* NewApplyViewController.m in Sources */,
 				D69A00001C929E4400EB0823 /* UploadParam.m in Sources */,

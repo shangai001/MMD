@@ -12,6 +12,7 @@
 #import <NSArray+YYAdd.h>
 #import "MoreItem.h"
 #import "MoreTableViewCell+PutValue.h"
+#import "LoanRulesViewController.h"
 
 static NSString *cellId = @"moreCellId";
 @interface MoreViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -89,6 +90,68 @@ static NSString *cellId = @"moreCellId";
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
+}
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+
+    NSInteger section =  indexPath.section;
+    NSInteger row = indexPath.row;
+    
+    switch (section) {
+        case 0:
+        {
+            if (row == 0) {
+                [self gotoMessageCenter];
+            }else if (row == 1){
+                [self gotoSupportCenter];
+            }
+        }
+            break;
+        case 1:
+        {
+            if (row == 0) {
+                [self gotoLoanRules];
+            }else{
+                [self gotoRefundRules];
+            }
+        }
+            break;
+        case 2:
+        {
+            if (row == 0) {
+                [self aboutMMD];
+            }else if (row ==1){
+                [self shareMMD];
+            }
+        }
+            break;
+        default:
+            break;
+    }
+}
+#pragma GoToSubView
+- (void)gotoMessageCenter{
+    
+}
+- (void)gotoSupportCenter{
+    
+}
+- (void)gotoLoanRules{
+    
+    LoanRulesViewController *loanRuler = [[LoanRulesViewController alloc] init];
+    [self.navigationController pushViewController:loanRuler animated:YES];
+}
+- (void)gotoRefundRules{
+    
+}
+- (void)aboutMMD{
+    
+}
+- (void)shareMMD{
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
