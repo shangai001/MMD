@@ -13,6 +13,11 @@
 #import "MoreItem.h"
 #import "MoreTableViewCell+PutValue.h"
 #import "LoanRulesViewController.h"
+#import "RefundController.h"
+
+
+
+
 
 static NSString *cellId = @"moreCellId";
 @interface MoreViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -138,12 +143,12 @@ static NSString *cellId = @"moreCellId";
     
 }
 - (void)gotoLoanRules{
-    
     LoanRulesViewController *loanRuler = [[LoanRulesViewController alloc] init];
     [self.navigationController pushViewController:loanRuler animated:YES];
 }
 - (void)gotoRefundRules{
-    
+    RefundController *refund = [RefundController new];
+    [self.navigationController pushViewController:refund animated:YES];
 }
 - (void)aboutMMD{
     
