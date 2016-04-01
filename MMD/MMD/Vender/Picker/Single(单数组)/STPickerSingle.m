@@ -78,11 +78,13 @@
     }else if (component == 1){
         UILabel *label = [[UILabel alloc]init];
         [label setText:self.arrayData[row]];
+        label.adjustsFontSizeToFitWidth = YES;
         [label setTextAlignment:NSTextAlignmentCenter];
         return label;
     }else {
         UILabel *label = [[UILabel alloc]init];
         [label setText:self.titleUnit];
+        label.adjustsFontSizeToFitWidth = YES;
         [label setTextAlignment:NSTextAlignmentLeft];
         return label;
     }

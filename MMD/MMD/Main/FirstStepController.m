@@ -74,7 +74,7 @@
         [self.backPickerView setArrayData:backArray];
         [self.backPickerView ez_reloadAllComponents];
         [self.backPickerView setTitle:@"请选择银行"];
-        self.backPickerView.widthPickerComponent = 120;
+        self.backPickerView.widthPickerComponent = 160;
         [self.backPickerView setContentMode:STPickerContentModeBottom];
         [self.backPickerView setDelegate:self];
         [self.backPickerView show];

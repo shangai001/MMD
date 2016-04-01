@@ -66,11 +66,11 @@ static NSString *cellId = @"moreCellId";
 #pragma mark UITabbleviewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
-        return 1;
+        return 2;
     }else if (section == 1){
         return 2;
     }else if (section == 2){
-        return 5;
+        return 3;
     }
     return 0;
 }
@@ -82,10 +82,13 @@ static NSString *cellId = @"moreCellId";
     NSArray *section = self.dataArray[indexPath.section];
     MoreItem *item = section[indexPath.row];
     [moreCell putValue:item];
+    if (indexPath.section == 2 && indexPath.row == 2) {
+        [moreCell addVersionLabelAfterHideGoButton];
+    }
     return moreCell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+    return 44;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

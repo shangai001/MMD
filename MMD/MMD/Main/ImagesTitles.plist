@@ -9,6 +9,12 @@
 			<key>imageName</key>
 			<string>notificationCenter</string>
 		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>message</string>
+			<key>title</key>
+			<string>客服中心</string>
+		</dict>
 	</array>
 	<array>
 		<dict>
@@ -36,18 +42,6 @@
 			<string>分享</string>
 			<key>title</key>
 			<string>分享米米贷</string>
-		</dict>
-		<dict>
-			<key>imageName</key>
-			<string>好评</string>
-			<key>title</key>
-			<string>给个好评</string>
-		</dict>
-		<dict>
-			<key>imageName</key>
-			<string>recommend</string>
-			<key>title</key>
-			<string>精品推荐</string>
 		</dict>
 		<dict>
 			<key>imageName</key>

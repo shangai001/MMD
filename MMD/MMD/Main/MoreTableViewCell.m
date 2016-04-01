@@ -7,6 +7,7 @@
 //
 
 #import "MoreTableViewCell.h"
+#import "AppInfo.h"
 
 @implementation MoreTableViewCell
 
@@ -19,5 +20,14 @@
 
     // Configure the view for the selected state
 }
-
+- (void)addVersionLabelAfterHideGoButton{
+    UIButton *button = self.goButton;
+    self.goButton.hidden = YES;
+    CGRect buttonFrame = button.frame;
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(buttonFrame.origin.x - 20, buttonFrame.origin.y, buttonFrame.size.width, buttonFrame.size.height)];
+    label.text = [AppInfo app_Version];
+    label.font = [UIFont systemFontOfSize:12];
+    label.textAlignment = NSTextAlignmentLeft;
+    [self.contentView addSubview:label];
+}
 @end
