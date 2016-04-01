@@ -12,6 +12,7 @@ target 'MMD' do
     pod 'MJExtension'
     pod 'YYKeyboardManager'
     pod 'YYKit'
+    pod 'KINWebBrowser'
 end
 
 target 'MMDTests' do

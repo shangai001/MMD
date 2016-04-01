@@ -91,12 +91,10 @@ static NSString *cellId = @"moreCellId";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
 }
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     NSInteger section =  indexPath.section;
     NSInteger row = indexPath.row;
     

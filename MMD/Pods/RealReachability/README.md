@@ -1,21 +1,21 @@
 # RealReachability
-[![Version](https://img.shields.io/badge/pod-1.1-yellow.svg)](http://cocoadocs.org/docsets/RealReachability/1.1/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](http://cocoadocs.org/docsets/RealReachability/1.1/)
-[![Platform](https://img.shields.io/badge/Platform-iOS-orange.svg)](http://cocoadocs.org/docsets/RealReachability/1.1/)
-[![Platform](https://img.shields.io/badge/Build-Passed-green.svg)](http://cocoadocs.org/docsets/RealReachability/1.1/)
+[![Version](https://img.shields.io/badge/pod-1.1.1-yellow.svg)](http://cocoadocs.org/docsets/RealReachability/1.1.1/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](http://cocoadocs.org/docsets/RealReachability/1.1.1/)
+[![Platform](https://img.shields.io/badge/Platform-iOS-orange.svg)](http://cocoadocs.org/docsets/RealReachability/1.1.1/)
+[![Platform](https://img.shields.io/badge/Build-Passed-green.svg)](http://cocoadocs.org/docsets/RealReachability/1.1.1/)
 ####We need to observe the REAL reachability of network for iOS. That's what RealReachability do.
-#Why RealReachablity?
-As we know, we already have reachablity framework for us to choose. Such as the famous repository [Reachability](https://github.com/tonymillion/Reachability).
+#Why RealReachability?
+As we know, we already have reachability framework for us to choose. Such as the famous repository [Reachability](https://github.com/tonymillion/Reachability).
 
-**BUT we really need a tool for us to get the reachablity, not the local connection!**
+**BUT we really need a tool for us to get the reachability, not the local connection!**
 
-**Apple doc tells us somthing about SCNetworkReachability API:
+**Apple doc tells us something about SCNetworkReachability API:
 "Note that reachability does not guarantee that the data packet will actually be received by the host."**
 
-The called "reachability" we already know can only tell us the local connection status.These tools current we know are all supported by the SCNetworkReachability API.
+The called "reachability" we already know can only tell us the local connection status.These tools currently we know are all supported by the SCNetworkReachability API.
 
 
-**Now [RealReachablity](https://github.com/dustturtle/RealReachability) can do this for you~**
+**Now [RealReachability](https://github.com/dustturtle/RealReachability) can do this for you~**
 
 We introduce ping module for us to check the real network status, together with SCNetworkReachability API. And we use FSM(finite state machine) to control all of the network status to confirm that only status change will be sent to application.
 
@@ -36,7 +36,7 @@ To integrate RealReachability into your Xcode project using CocoaPods, specify i
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '6.0'
 
-pod 'RealReachability', '~> 1.1'
+pod 'RealReachability', '~> 1.1.1'
 ```
 
 Then, run the following command:
@@ -81,21 +81,21 @@ If you'd rather do everything by hand, just add the folder "RealReachability" to
 [GLobalRealReachability reachabilityWithBlock:^(ReachabilityStatus status) {
         switch (status)
         {
-            case NotReachable:
+            case RealStatusNotReachable:
             {
             //  case NotReachable handler
                 break;
             }
                 
-            case ReachableViaWiFi:
+            case RealStatusViaWiFi:
             {
-            //  case ReachableViaWiFi handler
+            //  case WiFi handler
                 break;
             }
                 
-            case ReachableViaWWAN:
+            case RealStatusViaWWAN:
             {
-            //  case ReachableViaWWAN handler
+            //  case WWAN handler
                 break;
             }
                 
@@ -110,6 +110,13 @@ ReachabilityStatus status = [reachability currentReachabilityStatus];
 ```
 
 Once the reachabilityWithBlock was called, the "currentReachabilityStatus" will be refreshed synchronously.
+#### Set your own host for Ping (optional)
+Please make sure the host you set here is available for pinging. Large, stable website suggested.   
+This step is optional. If you do not set this, our default host is: www.baidu.com.   
+You may set your own host any time you like. Codes just like below:
+```
+GLobalRealReachability.hostForPing = @"www.baidu.com";
+```
 
 #Demo
 We already put the demo project in the [repository](https://github.com/dustturtle/RealReachability).

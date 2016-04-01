@@ -11,22 +11,24 @@
 #import "LocalConnection.h"
 #import "PingHelper.h"
 #import <UIKit/UIKit.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
 #if (!defined(DEBUG))
 #define NSLog(...)
 #endif
 
 #define kDefaultHost @"www.baidu.com"
-#define kDefaultCheckInterval 1.0f
+#define kDefaultCheckInterval 2.0f
 
 NSString *const kRealReachabilityChangedNotification = @"kRealReachabilityChangedNotification";
 
 @interface RealReachability()
-
 @property (nonatomic, strong) FSMEngine *engine;
-
 @property (nonatomic, assign) BOOL isNotifying;
 
+@property (nonatomic,strong) NSArray *typeStrings4G;
+@property (nonatomic,strong) NSArray *typeStrings3G;
+@property (nonatomic,strong) NSArray *typeStrings2G;
 @end
 
 @implementation RealReachability
@@ -39,6 +41,20 @@ NSString *const kRealReachabilityChangedNotification = @"kRealReachabilityChange
     {
         _engine = [[FSMEngine alloc] init];
         [_engine start];
+        
+        _typeStrings2G = @[CTRadioAccessTechnologyEdge,
+                           CTRadioAccessTechnologyGPRS,
+                           CTRadioAccessTechnologyCDMA1x];
+        
+        _typeStrings3G = @[CTRadioAccessTechnologyHSDPA,
+                           CTRadioAccessTechnologyWCDMA,
+                           CTRadioAccessTechnologyHSUPA,
+                           CTRadioAccessTechnologyCDMAEVDORev0,
+                           CTRadioAccessTechnologyCDMAEVDORevA,
+                           CTRadioAccessTechnologyCDMAEVDORevB,
+                           CTRadioAccessTechnologyeHRPD];
+        
+        _typeStrings4G = @[CTRadioAccessTechnologyLTE];
         
         _hostForPing = kDefaultHost;
         _autoCheckInterval = kDefaultCheckInterval;
@@ -96,7 +112,7 @@ NSString *const kRealReachabilityChangedNotification = @"kRealReachabilityChange
     self.isNotifying = YES;
     
     NSDictionary *inputDic = @{kEventKeyID:@(RREventLoad)};
-    [self.engine reciveInput:inputDic];
+    [self.engine receiveInput:inputDic];
     
     [GLocalConnection startNotifier];
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -111,7 +127,7 @@ NSString *const kRealReachabilityChangedNotification = @"kRealReachabilityChange
 - (void)stopNotifier
 {
     NSDictionary *inputDic = @{kEventKeyID:@(RREventUnLoad)};
-    [self.engine reciveInput:inputDic];
+    [self.engine receiveInput:inputDic];
     
     [GLocalConnection stopNotifier];
     
@@ -122,12 +138,22 @@ NSString *const kRealReachabilityChangedNotification = @"kRealReachabilityChange
 
 - (void)reachabilityWithBlock:(void (^)(ReachabilityStatus))asyncHandler
 {
+    // logic optimization: no need to ping when Local connection unavailable!
+    if ([GLocalConnection currentLocalConnectionStatus] == LC_UnReachable)
+    {
+        if (asyncHandler != nil)
+        {
+            asyncHandler(RealStatusNotReachable);
+        }
+        return;
+    }
+    
     __weak __typeof(self)weakSelf = self;
     [GPingHelper pingWithBlock:^(BOOL isSuccess)
      {
          __strong __typeof(weakSelf)strongSelf = weakSelf;
          NSDictionary *inputDic = @{kEventKeyID:@(RREventPingCallback), kEventKeyParam:@(isSuccess)};
-         NSInteger rtn = [strongSelf.engine reciveInput:inputDic];
+         NSInteger rtn = [strongSelf.engine receiveInput:inputDic];
          if (rtn == 0) // state changed & state available, post notification.
          {
              if ([self.engine isCurrentStateAvailable])
@@ -212,6 +238,27 @@ NSString *const kRealReachabilityChangedNotification = @"kRealReachabilityChange
     GPingHelper.host = _hostForPing;
 }
 
+- (WWANAccessType)currentWWANtype
+{
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+    {
+        CTTelephonyNetworkInfo *teleInfo= [[CTTelephonyNetworkInfo alloc] init];
+        NSString *accessString = teleInfo.currentRadioAccessTechnology;
+        if ([accessString length] > 0)
+        {
+            return [self accessTypeForString:accessString];
+        }
+        else
+        {
+            return WWANTypeUnknown;
+        }
+    }
+    else
+    {
+        return WWANTypeUnknown;
+    }
+}
+
 #pragma mark - inner methods
 - (NSString *)paramValueFromStatus:(LocalConnectionStatus)status
 {
@@ -255,6 +302,26 @@ NSString *const kRealReachabilityChangedNotification = @"kRealReachabilityChange
     });
 }
 
+- (WWANAccessType)accessTypeForString:(NSString *)accessString
+{
+    if ([self.typeStrings4G containsObject:accessString])
+    {
+        return WWANType4G;
+    }
+    else if ([self.typeStrings3G containsObject:accessString])
+    {
+        return WWANType3G;
+    }
+    else if ([self.typeStrings2G containsObject:accessString])
+    {
+        return WWANType2G;
+    }
+    else
+    {
+        return WWANTypeUnknown;
+    }
+}
+
 #pragma mark - Notification observer
 - (void)localConnectionChanged:(NSNotification *)notification
 {
@@ -263,7 +330,7 @@ NSString *const kRealReachabilityChangedNotification = @"kRealReachabilityChange
     NSLog(@"currentLocalConnectionStatus:%@",@(lcStatus));
     
     NSDictionary *inputDic = @{kEventKeyID:@(RREventLocalConnectionCallback), kEventKeyParam:[self paramValueFromStatus:lcStatus]};
-    NSInteger rtn = [self.engine reciveInput:inputDic];
+    NSInteger rtn = [self.engine receiveInput:inputDic];
     
     if (rtn == 0) // state changed & state available, post notification.
     {
