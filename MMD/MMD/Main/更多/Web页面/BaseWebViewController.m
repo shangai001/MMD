@@ -1,28 +1,33 @@
 //
-//  LoanRulesViewController.m
+//  BaseWebViewController.m
 //  MMD
 //
-//  Created by pencho on 16/4/1.
+//  Created by pencho on 16/4/2.
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "LoanRulesViewController.h"
+#import "BaseWebViewController.h"
 #import <WebKit/WebKit.h>
 #import <SVProgressHUD.h>
 
 
-@interface LoanRulesViewController ()<WKUIDelegate,WKNavigationDelegate>
+
+@interface BaseWebViewController ()<WKUIDelegate,WKNavigationDelegate>
 @property (strong, nonnull)WKWebView *webView;
 @end
 
-@implementation LoanRulesViewController
+@implementation BaseWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     self.webView.navigationDelegate = self;
-    NSString *url = [NSString stringWithFormat:@"%@/webview/applyNotice",kHostURL];
+    //借款须知
+//    NSString *url = [NSString stringWithFormat:@"%@/webview/applyNotice",kHostURL];
+    //还款须知
+//    NSString *url = [NSString stringWithFormat:@"%@/webview/repaymentNotice",kHostURL];
+    NSString *url = self.URLString;
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     [self.view addSubview:self.webView];
 }
@@ -53,12 +58,18 @@
 }
 // 在收到响应后，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler{
-       decisionHandler(WKNavigationResponsePolicyAllow);
+    decisionHandler(WKNavigationResponsePolicyAllow);
 }
 // 在发送请求之前，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
     decisionHandler(WKNavigationActionPolicyAllow);
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 /*
 #pragma mark - Navigation
 
@@ -68,8 +79,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 @end

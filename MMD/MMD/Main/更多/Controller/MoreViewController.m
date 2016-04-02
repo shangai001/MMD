@@ -12,9 +12,8 @@
 #import <NSArray+YYAdd.h>
 #import "MoreItem.h"
 #import "MoreTableViewCell+PutValue.h"
-#import "LoanRulesViewController.h"
-#import "RefundController.h"
-
+#import "LoanRulesWebController.h"
+#import "RefundWebController.h"
 
 
 
@@ -135,7 +134,7 @@ static NSString *cellId = @"moreCellId";
             break;
     }
 }
-#pragma GoToSubView
+#pragma mark GoToSubView
 - (void)gotoMessageCenter{
     
 }
@@ -143,12 +142,14 @@ static NSString *cellId = @"moreCellId";
     
 }
 - (void)gotoLoanRules{
-    LoanRulesViewController *loanRuler = [[LoanRulesViewController alloc] init];
+    LoanRulesWebController *loanRuler = [[LoanRulesWebController alloc] init];
+    loanRuler.URLString = [NSString stringWithFormat:@"%@/webview/applyNotice",kHostURL];
     [self.navigationController pushViewController:loanRuler animated:YES];
 }
 - (void)gotoRefundRules{
-    RefundController *refund = [RefundController new];
-    [self.navigationController pushViewController:refund animated:YES];
+    RefundWebController *refunder = [[RefundWebController alloc] init];
+    refunder.URLString = [NSString stringWithFormat:@"%@/webview/repaymentNotice",kHostURL];
+    [self.navigationController pushViewController:refunder animated:YES];
 }
 - (void)aboutMMD{
     

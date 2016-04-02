@@ -89,13 +89,14 @@
 		D6060A221C76FF0E000DB373 /* qq空间@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609981C76FF0E000DB373 /* qq空间@2x.png */; };
 		D6060A231C76FF0E000DB373 /* qq空间@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609991C76FF0E000DB373 /* qq空间@3x.png */; };
 		D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */; };
+		D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356221CAFDF3A000A321C /* BaseWebViewController.m */; };
+		D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356251CAFE036000A321C /* LoanRulesWebController.m */; };
+		D63356291CAFE100000A321C /* RefundWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356281CAFE100000A321C /* RefundWebController.m */; };
 		D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB071CAE7E2D00CBF19E /* MoreViewController.m */; };
 		D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0A1CAE7E2D00CBF19E /* MoreItem.m */; };
 		D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0C1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m */; };
 		D647FB1C1CAE7E2D00CBF19E /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0F1CAE7E2D00CBF19E /* MoreTableViewCell.m */; };
 		D647FB1D1CAE7E2D00CBF19E /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D647FB101CAE7E2D00CBF19E /* MoreTableViewCell.xib */; };
-		D647FB1E1CAE7E2D00CBF19E /* LoanRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB131CAE7E2D00CBF19E /* LoanRulesViewController.m */; };
-		D647FB1F1CAE7E2D00CBF19E /* RefundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB151CAE7E2D00CBF19E /* RefundController.m */; };
 		D647FB5A1CAE7F7A00CBF19E /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB461CAE7F7A00CBF19E /* ActivityViewController.m */; };
 		D647FB5B1CAE7F7A00CBF19E /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D647FB471CAE7F7A00CBF19E /* ActivityViewController.xib */; };
 		D647FB5C1CAE7F7A00CBF19E /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB4A1CAE7F7A00CBF19E /* LoanViewController.m */; };
@@ -296,6 +297,12 @@
 		D60609991C76FF0E000DB373 /* qq空间@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq空间@3x.png"; sourceTree = "<group>"; };
 		D6060A2A1C770F5E000DB373 /* BaseNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavgationController.h; sourceTree = "<group>"; };
 		D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavgationController.m; sourceTree = "<group>"; };
+		D63356211CAFDF3A000A321C /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
+		D63356221CAFDF3A000A321C /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
+		D63356241CAFE036000A321C /* LoanRulesWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanRulesWebController.h; sourceTree = "<group>"; };
+		D63356251CAFE036000A321C /* LoanRulesWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanRulesWebController.m; sourceTree = "<group>"; };
+		D63356271CAFE100000A321C /* RefundWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundWebController.h; sourceTree = "<group>"; };
+		D63356281CAFE100000A321C /* RefundWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundWebController.m; sourceTree = "<group>"; };
 		D647FB061CAE7E2D00CBF19E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		D647FB071CAE7E2D00CBF19E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D647FB091CAE7E2D00CBF19E /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
@@ -305,10 +312,6 @@
 		D647FB0E1CAE7E2D00CBF19E /* MoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewCell.h; sourceTree = "<group>"; };
 		D647FB0F1CAE7E2D00CBF19E /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
 		D647FB101CAE7E2D00CBF19E /* MoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
-		D647FB121CAE7E2D00CBF19E /* LoanRulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanRulesViewController.h; sourceTree = "<group>"; };
-		D647FB131CAE7E2D00CBF19E /* LoanRulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanRulesViewController.m; sourceTree = "<group>"; };
-		D647FB141CAE7E2D00CBF19E /* RefundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundController.h; sourceTree = "<group>"; };
-		D647FB151CAE7E2D00CBF19E /* RefundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundController.m; sourceTree = "<group>"; };
 		D647FB451CAE7F7A00CBF19E /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		D647FB461CAE7F7A00CBF19E /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 		D647FB471CAE7F7A00CBF19E /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
@@ -562,10 +565,12 @@
 		D647FB111CAE7E2D00CBF19E /* Web页面 */ = {
 			isa = PBXGroup;
 			children = (
-				D647FB121CAE7E2D00CBF19E /* LoanRulesViewController.h */,
-				D647FB131CAE7E2D00CBF19E /* LoanRulesViewController.m */,
-				D647FB141CAE7E2D00CBF19E /* RefundController.h */,
-				D647FB151CAE7E2D00CBF19E /* RefundController.m */,
+				D63356211CAFDF3A000A321C /* BaseWebViewController.h */,
+				D63356221CAFDF3A000A321C /* BaseWebViewController.m */,
+				D63356241CAFE036000A321C /* LoanRulesWebController.h */,
+				D63356251CAFE036000A321C /* LoanRulesWebController.m */,
+				D63356271CAFE100000A321C /* RefundWebController.h */,
+				D63356281CAFE100000A321C /* RefundWebController.m */,
 			);
 			path = "Web页面";
 			sourceTree = "<group>";
@@ -1513,6 +1518,7 @@
 				D647FB5D1CAE7F7A00CBF19E /* NewApplyViewController.m in Sources */,
 				D647FB5C1CAE7F7A00CBF19E /* LoanViewController.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
+				D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
 				D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */,
 				D647FB821CAE80BE00CBF19E /* LimitInputWords.m in Sources */,
@@ -1544,20 +1550,20 @@
 				D647FBB41CAE87FD00CBF19E /* HorizontalDashLineView.m in Sources */,
 				D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */,
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
-				D647FB1F1CAE7E2D00CBF19E /* RefundController.m in Sources */,
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,
 				D647FB8E1CAE814300CBF19E /* UploadParam.m in Sources */,
 				D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */,
 				D6805E931CAD1A3300316925 /* STPickerArea.m in Sources */,
 				D647FB611CAE7F7A00CBF19E /* HeaderView.m in Sources */,
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,
-				D647FB1E1CAE7E2D00CBF19E /* LoanRulesViewController.m in Sources */,
 				D647FBC71CAE920100CBF19E /* MMDLogin.m in Sources */,
 				D647FBB51CAE87FD00CBF19E /* StageView.m in Sources */,
 				D647FB861CAE80BE00CBF19E /* RegisterContentView.m in Sources */,
 				D647FB631CAE7F7A00CBF19E /* MMSegmentControl.m in Sources */,
+				D63356291CAFE100000A321C /* RefundWebController.m in Sources */,
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,
+				D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
