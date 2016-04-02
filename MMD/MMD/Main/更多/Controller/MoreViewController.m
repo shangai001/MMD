@@ -14,6 +14,7 @@
 #import "MoreTableViewCell+PutValue.h"
 #import "LoanRulesWebController.h"
 #import "RefundWebController.h"
+#import "MMDInfoWebController.h"
 
 
 
@@ -152,7 +153,9 @@ static NSString *cellId = @"moreCellId";
     [self.navigationController pushViewController:refunder animated:YES];
 }
 - (void)aboutMMD{
-    
+    MMDInfoWebController *mmdInfoer = [[MMDInfoWebController alloc] init];
+    mmdInfoer.URLString = [NSString stringWithFormat:@"%@/webview/about",kHostURL];
+    [self.navigationController pushViewController:mmdInfoer animated:YES];
 }
 - (void)shareMMD{
     
