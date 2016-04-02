@@ -21,7 +21,16 @@ PODS:
   - Masonry (1.0.0)
   - MJExtension (3.0.10)
   - MJRefresh (3.1.0)
+  - MOBFoundation_IDFA (1.5.1)
   - RealReachability (1.1.2)
+  - ShareSDK3 (3.2.5):
+    - ShareSDK3/ShareSDK (= 3.2.5)
+  - ShareSDK3/ShareSDK (3.2.5)
+  - ShareSDK3/ShareSDKPlatforms/Messenger (3.2.5)
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.2.5)
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.2.5)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.2.5)
+  - ShareSDK3/ShareSDKUI (3.2.5)
   - SVProgressHUD (2.0.2)
   - TUSafariActivity (1.0.4)
   - YYKeyboardManager (1.0.1)
@@ -35,7 +44,14 @@ DEPENDENCIES:
   - Masonry
   - MJExtension
   - MJRefresh
+  - MOBFoundation_IDFA
   - RealReachability
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/Messenger
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - ShareSDK3/ShareSDKUI
   - SVProgressHUD
   - YYKeyboardManager
   - YYKit
@@ -47,7 +63,9 @@ SPEC CHECKSUMS:
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  MOBFoundation_IDFA: f5d3d1f89166f60c6985e34b7d90e6fb5d58fb61
   RealReachability: ad8975d056156cb80ef1ab7f62b3ef2c39fbfc08
+  ShareSDK3: ccdd8ec971044703e7722e19c2f3b38fb03775e2
   SVProgressHUD: e4020e23badbd7cc61bc4a80d3c1da57f166a978
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
   YYKeyboardManager: ff53d2e80d1808567a7f004028bd200d9469a89f

@@ -13,6 +13,14 @@ target 'MMD' do
     pod 'YYKeyboardManager'
     pod 'YYKit'
     pod 'KINWebBrowser'
+    
+    pod 'ShareSDK3'
+    pod 'MOBFoundation_IDFA'
+    pod 'ShareSDK3/ShareSDKUI'
+    pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+    pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+    pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+    pod 'ShareSDK3/ShareSDKPlatforms/Messenger'
 end
 
 target 'MMDTests' do

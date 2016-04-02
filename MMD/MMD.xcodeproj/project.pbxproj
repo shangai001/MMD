@@ -306,6 +306,7 @@
 		D63356281CAFE100000A321C /* RefundWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundWebController.m; sourceTree = "<group>"; };
 		D633562A1CAFE1FE000A321C /* MMDInfoWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDInfoWebController.h; sourceTree = "<group>"; };
 		D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDInfoWebController.m; sourceTree = "<group>"; };
+		D633562D1CAFE630000A321C /* ShareSDKAppkeyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSDKAppkeyHeader.h; sourceTree = "<group>"; };
 		D647FB061CAE7E2D00CBF19E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		D647FB071CAE7E2D00CBF19E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D647FB091CAE7E2D00CBF19E /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
@@ -1038,6 +1039,7 @@
 		D6E105061C73219000049C3F /* Const */ = {
 			isa = PBXGroup;
 			children = (
+				D633562D1CAFE630000A321C /* ShareSDKAppkeyHeader.h */,
 			);
 			path = Const;
 			sourceTree = "<group>";
