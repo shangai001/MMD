@@ -7,6 +7,7 @@
 //
 
 #import "MessageCenterController.h"
+#import "MoreWebTitle.h"
 
 @interface MessageCenterController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = MESSAGECENTER_TITLE;
 }
 
 - (void)didReceiveMemoryWarning {

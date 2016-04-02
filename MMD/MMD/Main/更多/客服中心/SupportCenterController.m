@@ -7,6 +7,7 @@
 //
 
 #import "SupportCenterController.h"
+#import "MoreWebTitle.h"
 
 @interface SupportCenterController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = SUPPORTCENTER_TITLE;
+    
 }
 
 - (void)didReceiveMemoryWarning {

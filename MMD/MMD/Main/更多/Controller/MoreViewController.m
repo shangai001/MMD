@@ -92,11 +92,19 @@ static NSString *cellId = @"moreCellId";
     [moreCell putValue:item];
     if (indexPath.section == 2 && indexPath.row == 2) {
         [moreCell addVersionLabelAfterHideGoButton];
+        moreCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return moreCell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
+}
+//控制cell不被点击
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 2 && indexPath.row == 2) {
+        return nil;
+    }
+    return indexPath;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
