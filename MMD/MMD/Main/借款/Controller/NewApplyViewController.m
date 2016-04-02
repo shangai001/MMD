@@ -14,6 +14,7 @@
 
 //-------test----------
 #import "HttpRequest.h"
+#import "LoanVerifyController.h"
 
 
 @interface NewApplyViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
@@ -119,18 +120,22 @@
         //已经登录
         
     }else{
+        /*
         NSString *testUrl = @"http://123.103.22.206:8081/api/getBootCoverImage?userId=0&type=1&version=1.2.7";
         [HttpRequest getWithURLString:testUrl parameters:nil success:^(id responseObject) {
             NSLog(@"-->%@",responseObject);
         } failure:^(NSError *error) {
             NSLog(@"-->%@",error);
         }];
+         */
+
         /*
         //未登录
         MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
         [self.navigationController pushViewController:logger animated:YES];
          */
-        
+        LoanVerifyController *loanVerifyer = [LoanVerifyController new];
+        [self.navigationController pushViewController:loanVerifyer animated:YES];
     }
     /*
     VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];

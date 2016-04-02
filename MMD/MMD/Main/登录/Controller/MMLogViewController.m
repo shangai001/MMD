@@ -100,7 +100,7 @@
             }
         }
     } FailureHandler:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",error.localizedFailureReason]];
+        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",error.localizedDescription]];
         NSLog(@"error = %@",error);
     }];
     

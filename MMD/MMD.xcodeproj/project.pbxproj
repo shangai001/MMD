@@ -97,6 +97,12 @@
 		D63356371CB00481000A321C /* SupportCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356361CB00481000A321C /* SupportCenterController.m */; };
 		D633563F1CB016BE000A321C /* FailureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D633563E1CB016BE000A321C /* FailureView.m */; };
 		D63356411CB016DC000A321C /* FailureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63356401CB016DC000A321C /* FailureView.xib */; };
+		D63356531CB033B2000A321C /* LoanVerifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356521CB033B2000A321C /* LoanVerifyController.m */; };
+		D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356581CB035BF000A321C /* FormTableViewCell.m */; };
+		D633565B1CB035BF000A321C /* FormTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63356591CB035BF000A321C /* FormTableViewCell.xib */; };
+		D633565E1CB0378F000A321C /* HeaderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D633565D1CB0378F000A321C /* HeaderLabel.m */; };
+		D63356611CB03ACE000A321C /* FormItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356601CB03ACE000A321C /* FormItem.m */; };
+		D63356641CB03B2C000A321C /* FormTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356631CB03B2C000A321C /* FormTableViewCell+PutValue.m */; };
 		D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB071CAE7E2D00CBF19E /* MoreViewController.m */; };
 		D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0A1CAE7E2D00CBF19E /* MoreItem.m */; };
 		D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0C1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m */; };
@@ -319,6 +325,17 @@
 		D633563D1CB016BE000A321C /* FailureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailureView.h; sourceTree = "<group>"; };
 		D633563E1CB016BE000A321C /* FailureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailureView.m; sourceTree = "<group>"; };
 		D63356401CB016DC000A321C /* FailureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FailureView.xib; sourceTree = "<group>"; };
+		D63356511CB033B2000A321C /* LoanVerifyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanVerifyController.h; sourceTree = "<group>"; };
+		D63356521CB033B2000A321C /* LoanVerifyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanVerifyController.m; sourceTree = "<group>"; };
+		D63356571CB035BF000A321C /* FormTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTableViewCell.h; sourceTree = "<group>"; };
+		D63356581CB035BF000A321C /* FormTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTableViewCell.m; sourceTree = "<group>"; };
+		D63356591CB035BF000A321C /* FormTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormTableViewCell.xib; sourceTree = "<group>"; };
+		D633565C1CB0378F000A321C /* HeaderLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderLabel.h; sourceTree = "<group>"; };
+		D633565D1CB0378F000A321C /* HeaderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderLabel.m; sourceTree = "<group>"; };
+		D633565F1CB03ACE000A321C /* FormItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormItem.h; sourceTree = "<group>"; };
+		D63356601CB03ACE000A321C /* FormItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItem.m; sourceTree = "<group>"; };
+		D63356621CB03B2C000A321C /* FormTableViewCell+PutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FormTableViewCell+PutValue.h"; sourceTree = "<group>"; };
+		D63356631CB03B2C000A321C /* FormTableViewCell+PutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FormTableViewCell+PutValue.m"; sourceTree = "<group>"; };
 		D647FB061CAE7E2D00CBF19E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		D647FB071CAE7E2D00CBF19E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D647FB091CAE7E2D00CBF19E /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
@@ -577,6 +594,55 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D633564C1CB03335000A321C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D633564D1CB0336A000A321C /* 申请借款确认 */ = {
+			isa = PBXGroup;
+			children = (
+				D633564E1CB0336A000A321C /* Controller */,
+				D633564F1CB0336A000A321C /* Model */,
+				D63356501CB0336A000A321C /* View */,
+			);
+			path = "申请借款确认";
+			sourceTree = "<group>";
+		};
+		D633564E1CB0336A000A321C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D63356511CB033B2000A321C /* LoanVerifyController.h */,
+				D63356521CB033B2000A321C /* LoanVerifyController.m */,
+				D633565C1CB0378F000A321C /* HeaderLabel.h */,
+				D633565D1CB0378F000A321C /* HeaderLabel.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D633564F1CB0336A000A321C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D633565F1CB03ACE000A321C /* FormItem.h */,
+				D63356601CB03ACE000A321C /* FormItem.m */,
+				D63356621CB03B2C000A321C /* FormTableViewCell+PutValue.h */,
+				D63356631CB03B2C000A321C /* FormTableViewCell+PutValue.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D63356501CB0336A000A321C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D63356571CB035BF000A321C /* FormTableViewCell.h */,
+				D63356581CB035BF000A321C /* FormTableViewCell.m */,
+				D63356591CB035BF000A321C /* FormTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D647FB041CAE7E2D00CBF19E /* 更多 */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,8 +721,9 @@
 		D647FB431CAE7F7A00CBF19E /* 借款 */ = {
 			isa = PBXGroup;
 			children = (
+				D633564D1CB0336A000A321C /* 申请借款确认 */,
+				D633564C1CB03335000A321C /* Model */,
 				D647FB441CAE7F7A00CBF19E /* Controller */,
-				D647FB511CAE7F7A00CBF19E /* Model */,
 				D647FB521CAE7F7A00CBF19E /* View */,
 			);
 			path = "借款";
@@ -679,13 +746,6 @@
 				D647FB501CAE7F7A00CBF19E /* QueryViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		D647FB511CAE7F7A00CBF19E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		D647FB521CAE7F7A00CBF19E /* View */ = {
@@ -1394,6 +1454,7 @@
 				D647FB1D1CAE7E2D00CBF19E /* MoreTableViewCell.xib in Resources */,
 				D60609BA1C76FF0E000DB373 /* 工作信息@3x.png in Resources */,
 				D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */,
+				D633565B1CB035BF000A321C /* FormTableViewCell.xib in Resources */,
 				D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */,
 				D60609E31C76FF0E000DB373 /* contact@2x.png in Resources */,
 				D606099F1C76FF0E000DB373 /* 步骤@3x.png in Resources */,
@@ -1571,6 +1632,7 @@
 				D647FB5C1CAE7F7A00CBF19E /* LoanViewController.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */,
+				D63356611CB03ACE000A321C /* FormItem.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
 				D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */,
 				D647FB821CAE80BE00CBF19E /* LimitInputWords.m in Sources */,
@@ -1581,6 +1643,7 @@
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6805E951CAD1A3300316925 /* STPickerDate.m in Sources */,
 				D6805EAF1CAD242500316925 /* BaseViewController.m in Sources */,
+				D633565E1CB0378F000A321C /* HeaderLabel.m in Sources */,
 				D647FBB61CAE87FD00CBF19E /* VerifyTableViewCell.m in Sources */,
 				D64A2D0B1C956168002654AC /* UserInfoImporter.m in Sources */,
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
@@ -1598,12 +1661,14 @@
 				D6805E981CAD1A3300316925 /* STConst.m in Sources */,
 				D647FBAD1CAE87FD00CBF19E /* SecondStaepController.m in Sources */,
 				D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */,
+				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,
 				D647FB831CAE80BE00CBF19E /* RegisterViewController.m in Sources */,
 				D647FBB11CAE87FD00CBF19E /* VerifyViewController.m in Sources */,
 				D647FBAF1CAE87FD00CBF19E /* ThirdStepController.m in Sources */,
 				D6805E941CAD1A3300316925 /* NSCalendar+ST.m in Sources */,
 				D647FBB41CAE87FD00CBF19E /* HorizontalDashLineView.m in Sources */,
 				D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */,
+				D63356531CB033B2000A321C /* LoanVerifyController.m in Sources */,
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,
 				D647FB8E1CAE814300CBF19E /* UploadParam.m in Sources */,
@@ -1613,6 +1678,7 @@
 				D647FB611CAE7F7A00CBF19E /* HeaderView.m in Sources */,
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,
 				D647FBC71CAE920100CBF19E /* MMDLogin.m in Sources */,
+				D63356641CB03B2C000A321C /* FormTableViewCell+PutValue.m in Sources */,
 				D647FBB51CAE87FD00CBF19E /* StageView.m in Sources */,
 				D647FB861CAE80BE00CBF19E /* RegisterContentView.m in Sources */,
 				D647FB631CAE7F7A00CBF19E /* MMSegmentControl.m in Sources */,
