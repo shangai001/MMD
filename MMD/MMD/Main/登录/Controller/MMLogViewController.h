@@ -6,9 +6,11 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MMLogViewController : UIViewController
+
+@interface MMLogViewController : BaseViewController
+
 @property (weak, nonatomic) IBOutlet UIImageView *mmdImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *phoneNumImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *passwordImageView;

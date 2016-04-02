@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface LoanViewController : UIViewController
+@interface LoanViewController : BaseViewController
 
 @end

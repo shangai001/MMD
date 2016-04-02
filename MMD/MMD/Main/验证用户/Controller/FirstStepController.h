@@ -6,9 +6,12 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface FirstStepController : UIViewController
+#import "BaseViewController.h"
+
+
+@interface FirstStepController : BaseViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *idCardTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cardTextField;

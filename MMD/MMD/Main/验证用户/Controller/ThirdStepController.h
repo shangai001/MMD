@@ -6,8 +6,9 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface ThirdStepController : UIViewController
+#import "BaseViewController.h"
+
+@interface ThirdStepController : BaseViewController
 
 @end

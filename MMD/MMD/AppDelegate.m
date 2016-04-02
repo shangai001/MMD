@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-//#import "ServerDefine.h"
-//#import "UpdateUserInfo.h"
 
 
 @interface AppDelegate ()
@@ -20,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //集成分享控件
+    
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

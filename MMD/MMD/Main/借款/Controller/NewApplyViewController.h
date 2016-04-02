@@ -6,9 +6,10 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface NewApplyViewController : UIViewController
+
+@interface NewApplyViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *increaseButton;
 @property (weak, nonatomic) IBOutlet UIButton *decreaseButton;

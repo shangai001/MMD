@@ -93,6 +93,7 @@
 		D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356251CAFE036000A321C /* LoanRulesWebController.m */; };
 		D63356291CAFE100000A321C /* RefundWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356281CAFE100000A321C /* RefundWebController.m */; };
 		D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */; };
+		D63356341CB000D3000A321C /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356331CB000D3000A321C /* MessageCenterController.m */; };
 		D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB071CAE7E2D00CBF19E /* MoreViewController.m */; };
 		D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0A1CAE7E2D00CBF19E /* MoreItem.m */; };
 		D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0C1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m */; };
@@ -307,6 +308,8 @@
 		D633562A1CAFE1FE000A321C /* MMDInfoWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDInfoWebController.h; sourceTree = "<group>"; };
 		D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDInfoWebController.m; sourceTree = "<group>"; };
 		D633562D1CAFE630000A321C /* ShareSDKAppkeyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSDKAppkeyHeader.h; sourceTree = "<group>"; };
+		D63356321CB000D3000A321C /* MessageCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCenterController.h; sourceTree = "<group>"; };
+		D63356331CB000D3000A321C /* MessageCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCenterController.m; sourceTree = "<group>"; };
 		D647FB061CAE7E2D00CBF19E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		D647FB071CAE7E2D00CBF19E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D647FB091CAE7E2D00CBF19E /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
@@ -522,10 +525,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D633562E1CAFFDBF000A321C /* 消息中心 */ = {
+			isa = PBXGroup;
+			children = (
+				D633562F1CAFFDBF000A321C /* Controller */,
+				D63356301CAFFDBF000A321C /* Model */,
+				D63356311CAFFDBF000A321C /* View */,
+			);
+			path = "消息中心";
+			sourceTree = "<group>";
+		};
+		D633562F1CAFFDBF000A321C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D63356321CB000D3000A321C /* MessageCenterController.h */,
+				D63356331CB000D3000A321C /* MessageCenterController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D63356301CAFFDBF000A321C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D63356311CAFFDBF000A321C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D647FB041CAE7E2D00CBF19E /* 更多 */ = {
 			isa = PBXGroup;
 			children = (
-				D647FB201CAE7E7900CBF19E /* 消息中心 */,
+				D633562E1CAFFDBF000A321C /* 消息中心 */,
 				D647FB051CAE7E2D00CBF19E /* Controller */,
 				D647FB081CAE7E2D00CBF19E /* Model */,
 				D647FB0D1CAE7E2D00CBF19E /* View */,
@@ -593,13 +629,6 @@
 			children = (
 			);
 			path = "客服中心";
-			sourceTree = "<group>";
-		};
-		D647FB201CAE7E7900CBF19E /* 消息中心 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "消息中心";
 			sourceTree = "<group>";
 		};
 		D647FB431CAE7F7A00CBF19E /* 借款 */ = {
@@ -1537,6 +1566,7 @@
 				D647FBB61CAE87FD00CBF19E /* VerifyTableViewCell.m in Sources */,
 				D64A2D0B1C956168002654AC /* UserInfoImporter.m in Sources */,
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
+				D63356341CB000D3000A321C /* MessageCenterController.m in Sources */,
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,
 				D6E104C61C7320FD00049C3F /* main.m in Sources */,
 				D647FBC81CAE920100CBF19E /* UserInfoManager.m in Sources */,

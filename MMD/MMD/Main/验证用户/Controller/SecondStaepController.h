@@ -6,9 +6,10 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface SecondStaepController : UIViewController
+@interface SecondStaepController : BaseViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *maritalStatusField;
 @property (weak, nonatomic) IBOutlet UITextField *childField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lifeRadius;
