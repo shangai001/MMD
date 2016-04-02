@@ -12,13 +12,16 @@
 #import "HeaderLabel.h"
 #import "FormItem.h"
 #import "FormTableViewCell+PutValue.h"
+#import "SureViewController.h"
+
 
 
 #define EDGELENGTH 10
+#define SUREBOTTOMBARHEIGHT 74
 
 static NSString *cellReuseId = @"formTableCellId";
 
-@interface LoanVerifyController ()<UITableViewDataSource,UITableViewDelegate>
+@interface LoanVerifyController ()<UITableViewDataSource,UITableViewDelegate,AgreeLoanProtro>
 
 @property (nonatomic, strong)UITableView *mainTableView;
 @property (nonatomic, strong)NSMutableArray *dataArray;
@@ -33,6 +36,7 @@ static NSString *cellReuseId = @"formTableCellId";
     self.title = @"申请借款确认";
     [self initTableView];
     [self requestData];
+    [self addSureBottomBar];
 }
 - (void)requestData{
     self.dataArray = [NSMutableArray array];
@@ -57,6 +61,14 @@ static NSString *cellReuseId = @"formTableCellId";
     _mainTableView.showsHorizontalScrollIndicator = _mainTableView.showsVerticalScrollIndicator = NO;
     [_mainTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FormTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellReuseId];
     [self.view addSubview:_mainTableView];
+}
+- (void)addSureBottomBar{
+    SureViewController *sureVC = [[SureViewController alloc] initWithNibName:NSStringFromClass([SureViewController class]) bundle:[NSBundle mainBundle]];
+    [self addChildViewController:sureVC];
+    [self.view addSubview:sureVC.view];
+    sureVC.view.frame = CGRectMake(0, kScreenHeight - SUREBOTTOMBARHEIGHT - kTabbarHeight, kScreenWidth, SUREBOTTOMBARHEIGHT);
+    [sureVC didMoveToParentViewController:self];
+    sureVC.agreeDelegate = self;
 }
 #pragma mark UITableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -101,6 +113,10 @@ static NSString *cellReuseId = @"formTableCellId";
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 30;
+}
+#pragma AgreeProtro
+- (void)didAgreeLoanProto:(id)sender{
+    NSLog(@"去往下一个页面");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
