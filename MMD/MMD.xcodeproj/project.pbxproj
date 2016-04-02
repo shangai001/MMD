@@ -95,6 +95,8 @@
 		D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */; };
 		D63356341CB000D3000A321C /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356331CB000D3000A321C /* MessageCenterController.m */; };
 		D63356371CB00481000A321C /* SupportCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356361CB00481000A321C /* SupportCenterController.m */; };
+		D633563F1CB016BE000A321C /* FailureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D633563E1CB016BE000A321C /* FailureView.m */; };
+		D63356411CB016DC000A321C /* FailureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63356401CB016DC000A321C /* FailureView.xib */; };
 		D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB071CAE7E2D00CBF19E /* MoreViewController.m */; };
 		D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0A1CAE7E2D00CBF19E /* MoreItem.m */; };
 		D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0C1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m */; };
@@ -314,6 +316,9 @@
 		D63356351CB00481000A321C /* SupportCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportCenterController.h; sourceTree = "<group>"; };
 		D63356361CB00481000A321C /* SupportCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportCenterController.m; sourceTree = "<group>"; };
 		D63356381CB005BB000A321C /* MoreWebTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreWebTitle.h; sourceTree = "<group>"; };
+		D633563D1CB016BE000A321C /* FailureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailureView.h; sourceTree = "<group>"; };
+		D633563E1CB016BE000A321C /* FailureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailureView.m; sourceTree = "<group>"; };
+		D63356401CB016DC000A321C /* FailureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FailureView.xib; sourceTree = "<group>"; };
 		D647FB061CAE7E2D00CBF19E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		D647FB071CAE7E2D00CBF19E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D647FB091CAE7E2D00CBF19E /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
@@ -562,6 +567,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D633563C1CB016A5000A321C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D633563D1CB016BE000A321C /* FailureView.h */,
+				D633563E1CB016BE000A321C /* FailureView.m */,
+				D63356401CB016DC000A321C /* FailureView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D647FB041CAE7E2D00CBF19E /* 更多 */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,10 +665,10 @@
 		D647FB441CAE7F7A00CBF19E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D647FB481CAE7F7A00CBF19E /* LoanHeader.h */,
 				D647FB451CAE7F7A00CBF19E /* ActivityViewController.h */,
 				D647FB461CAE7F7A00CBF19E /* ActivityViewController.m */,
 				D647FB471CAE7F7A00CBF19E /* ActivityViewController.xib */,
-				D647FB481CAE7F7A00CBF19E /* LoanHeader.h */,
 				D647FB491CAE7F7A00CBF19E /* LoanViewController.h */,
 				D647FB4A1CAE7F7A00CBF19E /* LoanViewController.m */,
 				D647FB4B1CAE7F7A00CBF19E /* NewApplyViewController.h */,
@@ -690,9 +705,9 @@
 		D647FB651CAE800100CBF19E /* 登录 */ = {
 			isa = PBXGroup;
 			children = (
+				D633563C1CB016A5000A321C /* View */,
 				D647FB661CAE800100CBF19E /* Controller */,
 				D647FB6C1CAE800100CBF19E /* Model */,
-				D647FB6F1CAE800100CBF19E /* View */,
 			);
 			path = "登录";
 			sourceTree = "<group>";
@@ -716,13 +731,6 @@
 				D647FB6E1CAE800100CBF19E /* LoginUser.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D647FB6F1CAE800100CBF19E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D647FB741CAE80BE00CBF19E /* 找回密码 */ = {
@@ -1445,6 +1453,7 @@
 				D647FBAC1CAE87FD00CBF19E /* FirstStepController.xib in Resources */,
 				D60609E01C76FF0E000DB373 /* no_visible@2x.png in Resources */,
 				D647FBB71CAE87FD00CBF19E /* VerifyTableViewCell.xib in Resources */,
+				D63356411CB016DC000A321C /* FailureView.xib in Resources */,
 				D60609C51C76FF0E000DB373 /* 还款须知@2x.png in Resources */,
 				D60609F61C76FF0E000DB373 /* approve_on@3x.png in Resources */,
 				D647FBD71CAE92B200CBF19E /* BankList.plist in Resources */,
@@ -1566,6 +1575,7 @@
 				D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */,
 				D647FB821CAE80BE00CBF19E /* LimitInputWords.m in Sources */,
 				D63356371CB00481000A321C /* SupportCenterController.m in Sources */,
+				D633563F1CB016BE000A321C /* FailureView.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,

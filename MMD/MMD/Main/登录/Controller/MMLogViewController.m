@@ -17,6 +17,8 @@
 #import "ColorHeader.h"
 #import "UserInfoManager.h"
 #import "VerifyViewController.h"
+#import "FailureView.h"
+#import "UIView+LoadViewFromNib.h"
 
 #define FIRSTTIMELOGOIN @"firstTimeLogin"
 
@@ -24,7 +26,9 @@
 @interface MMLogViewController ()<UITextFieldDelegate>
 
 @property (nonatomic, strong)LoginUser *user;
-
+@property (nonatomic, assign)NSUInteger failureCount;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rememberButtonToTop;
+@property (nonatomic, strong)FailureView *failureView;
 
 
 @end
@@ -37,11 +41,17 @@
     // Do any additional setup after loading the view from its nib.
     [self addButtonStatusImage];
     [self addDissmissKeyboardAction];
+
+}
+- (void)initefaultValue{
+    
     if (!self.user) {
         self.user = [LoginUser new];
     }
+    self.failureCount = 0;
 }
 - (void)addDissmissKeyboardAction{
+    
     UITapGestureRecognizer *disTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(disKeyboard:)];
     [self.view addGestureRecognizer:disTap];
 }
@@ -49,6 +59,7 @@
     [self.view endEditing:YES];
 }
 - (void)addButtonStatusImage{
+    
     [self.rememberPasswordButton setImage:[UIImage imageNamed:@"approve_on"] forState:UIControlStateSelected];
     [self.rememberPasswordButton setImage:[UIImage imageNamed:@"approve_off"] forState:UIControlStateNormal];
     self.logButton.backgroundColor = REDCOLOR;
@@ -57,6 +68,7 @@
     [self.securityBUtton setImage:[UIImage imageNamed:@"visible"] forState:UIControlStateSelected];
 }
 - (IBAction)changSecurityStarus:(id)sender {
+    
     if ([sender isKindOfClass:[UIButton class]]) {
         self.securityBUtton.selected = !self.securityBUtton.selected;
         self.passwordTextField.secureTextEntry = !self.passwordTextField.secureTextEntry;
@@ -73,19 +85,30 @@
     [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
             [self handleLoginResult:resultDictionary];
+            self.failureCount  = 0;
+        }else{
+            NSLog(@"登录失败 +1");
+            self.failureCount += 1;
+            if (self.failureCount == 3) {
+                //弹出图形识别
+                self.rememberButtonToTop.constant += 30;
+                [self.view setNeedsLayout];
+                self.failureView = [FailureView loadViewFromNib];
+                
+            }
         }
     } FailureHandler:^(NSError *error) {
-        
+        NSLog(@"error = %@",error);
     }];
     
 }
 - (void)savePasswordBeforeLogin{
     if (self.rememberPasswordButton.selected) {
         NSString *password = self.user.password;
-        [SDUserDefault setValue:password forKey:@"password"];
+        [SDUserDefault setValue:password forKey:PASSWORD];
     }else{
-        if ([SDUserDefault valueForKey:@"password"]) {
-            [SDUserDefault removeObjectForKey:@"password"];
+        if ([SDUserDefault valueForKey:PASSWORD]) {
+            [SDUserDefault removeObjectForKey:PASSWORD];
         }
     }
     [SDUserDefault synchronize];

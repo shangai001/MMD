@@ -72,6 +72,7 @@
             NSLog(@"登录响应 %@",responseObject);
         }
     } failure:^(NSError *error) {
+        
         failureBlock(error);
     }];
 }
@@ -90,4 +91,10 @@
     NSString *userId = [SDUserDefault valueForKey:@"userId"];
     return userId;
 }
+/*
++ (BOOL)isLoggedin{
+    NSString *sessiondid = @"";
+}
+*/
+
 @end

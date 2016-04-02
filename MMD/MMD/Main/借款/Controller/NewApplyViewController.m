@@ -8,7 +8,7 @@
 
 #import "NewApplyViewController.h"
 #import "ColorHeader.h"
-//#import "MMLogViewController.h"
+#import "MMLogViewController.h"
 #import "VerifyViewController.h"
 
 #import "BaseNavgationController.h"
@@ -110,14 +110,21 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)nextAction:(id)sender {
+    //判断是否登录
+    BOOL isLogged = NO;
+    if (isLogged) {
+        //已经登录
+        
+    }else{
+        //未登录
+        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:logger animated:YES];
+    }
     /*
-    //登录
-    MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
-    BaseNavgationController *baseNav = [[BaseNavgationController alloc] initWithRootViewController:logger];
-    [self presentViewController:baseNav animated:YES completion:nil];
-     */
     VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
     [self.navigationController pushViewController:verifyer animated:YES];
+     */
+    
 }
 
 /*
