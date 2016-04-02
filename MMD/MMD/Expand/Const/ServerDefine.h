@@ -11,6 +11,7 @@
 #define NetworkConstHeader_h
 
 # if SERVER_OPTION == 1
+//api.mimidai.com
 #define kHostURL @"http://api.mimidai.com"
 #endif
 

@@ -19,6 +19,8 @@
 #import "VerifyViewController.h"
 #import "FailureView.h"
 #import "UIView+LoadViewFromNib.h"
+#import <SVProgressHUD.h>
+
 
 #define FIRSTTIMELOGOIN @"firstTimeLogin"
 
@@ -98,6 +100,7 @@
             }
         }
     } FailureHandler:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",error.localizedFailureReason]];
         NSLog(@"error = %@",error);
     }];
     
