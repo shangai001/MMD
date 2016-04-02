@@ -7,6 +7,7 @@
 //
 
 #import "RefundWebController.h"
+#import "MoreWebTitle.h"
 
 @interface RefundWebController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = REFUND_TITLE;
 }
 
 - (void)didReceiveMemoryWarning {

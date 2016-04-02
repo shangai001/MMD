@@ -15,6 +15,8 @@
 #import "LoanRulesWebController.h"
 #import "RefundWebController.h"
 #import "MMDInfoWebController.h"
+#import "MessageCenterController.h"
+#import "SupportCenterController.h"
 
 
 
@@ -137,10 +139,12 @@ static NSString *cellId = @"moreCellId";
 }
 #pragma mark GoToSubView
 - (void)gotoMessageCenter{
-    
+    MessageCenterController *messageCenter = [MessageCenterController new];
+    [self.navigationController pushViewController:messageCenter animated:YES];
 }
 - (void)gotoSupportCenter{
-    
+    SupportCenterController *supportCenter = [SupportCenterController new];
+    [self.navigationController pushViewController:supportCenter animated:YES];
 }
 - (void)gotoLoanRules{
     LoanRulesWebController *loanRuler = [[LoanRulesWebController alloc] init];

@@ -7,6 +7,7 @@
 //
 
 #import "MMDInfoWebController.h"
+#import "MoreWebTitle.h"
 
 @interface MMDInfoWebController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = ABOUT_MMD;
 }
 
 - (void)didReceiveMemoryWarning {

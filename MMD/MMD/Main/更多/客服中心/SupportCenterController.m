@@ -1,26 +1,22 @@
 //
-//  LoanRulesWebController.m
+//  SupportCenterController.m
 //  MMD
 //
 //  Created by pencho on 16/4/2.
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "LoanRulesWebController.h"
-#import "MoreWebTitle.h"
+#import "SupportCenterController.h"
 
-
-
-@interface LoanRulesWebController ()
+@interface SupportCenterController ()
 
 @end
 
-@implementation LoanRulesWebController
+@implementation SupportCenterController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = LOAN_TITLE;
 }
 
 - (void)didReceiveMemoryWarning {
