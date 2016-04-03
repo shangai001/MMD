@@ -106,6 +106,7 @@
 		D633566B1CB04320000A321C /* SureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356691CB04320000A321C /* SureViewController.m */; };
 		D633566C1CB04320000A321C /* SureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D633566A1CB04320000A321C /* SureViewController.xib */; };
 		D633566F1CB04E47000A321C /* LoanProtroWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633566E1CB04E47000A321C /* LoanProtroWebController.m */; };
+		D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356711CB10CBF000A321C /* CalculateRefund.m */; };
 		D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB071CAE7E2D00CBF19E /* MoreViewController.m */; };
 		D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0A1CAE7E2D00CBF19E /* MoreItem.m */; };
 		D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0C1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m */; };
@@ -344,6 +345,8 @@
 		D633566A1CB04320000A321C /* SureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureViewController.xib; sourceTree = "<group>"; };
 		D633566D1CB04E47000A321C /* LoanProtroWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanProtroWebController.h; sourceTree = "<group>"; };
 		D633566E1CB04E47000A321C /* LoanProtroWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanProtroWebController.m; sourceTree = "<group>"; };
+		D63356701CB10CBF000A321C /* CalculateRefund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateRefund.h; sourceTree = "<group>"; };
+		D63356711CB10CBF000A321C /* CalculateRefund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateRefund.m; sourceTree = "<group>"; };
 		D647FB061CAE7E2D00CBF19E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		D647FB071CAE7E2D00CBF19E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D647FB091CAE7E2D00CBF19E /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
@@ -605,6 +608,8 @@
 		D633564C1CB03335000A321C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D63356701CB10CBF000A321C /* CalculateRefund.h */,
+				D63356711CB10CBF000A321C /* CalculateRefund.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1675,6 +1680,7 @@
 				D647FB5A1CAE7F7A00CBF19E /* ActivityViewController.m in Sources */,
 				D647FBAB1CAE87FD00CBF19E /* FirstStepController.m in Sources */,
 				D6805E981CAD1A3300316925 /* STConst.m in Sources */,
+				D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */,
 				D647FBAD1CAE87FD00CBF19E /* SecondStaepController.m in Sources */,
 				D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,

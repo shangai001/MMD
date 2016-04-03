@@ -171,15 +171,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="P1F-0k-LJK"/>
                     </constraints>
-                    <attributedString key="attributedText">
-                        <fragment content="借款到帐后30天还款，每期还款550元，共1期">
-                            <attributes>
-                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="12" name="PingFangSC-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
+                    <attributedString key="attributedText"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDL-M4-Sy4">

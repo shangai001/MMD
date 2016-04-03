@@ -14,7 +14,7 @@
 @implementation HttpRequest
 
 
-#define TIME_OUT 5
+#define TIME_OUT 10
 #define REQUEST_MAXCOUNT 5
 
 #pragma mark -- GET请求 --
@@ -99,6 +99,7 @@
     switch (type) {
         case HttpRequestTypeGet:
         {
+            manager.requestSerializer.timeoutInterval = TIME_OUT;
             [manager GET:URLString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (success) {
                     id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
