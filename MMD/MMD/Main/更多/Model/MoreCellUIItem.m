@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "MoreItem.h"
+#import "MoreCellUIItem.h"
 
-@implementation MoreItem
+@implementation MoreCellUIItem
 
 @end

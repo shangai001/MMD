@@ -10,13 +10,11 @@
 #import "ColorHeader.h"
 #import "MoreTableViewCell.h"
 #import <NSArray+YYAdd.h>
-#import "MoreItem.h"
-#import "MoreTableViewCell+PutValue.h"
-#import "LoanRulesWebController.h"
-#import "RefundWebController.h"
-#import "MMDInfoWebController.h"
-#import "MessageCenterController.h"
-#import "SupportCenterController.h"
+#import "MoreCellUIItem.h"
+#import "MoreTableViewCell+InitMoreCellUI.h"
+#import "ImagesTitles_More_Header.h"
+//将所有的(除了分享)跳转逻辑抽离到以下类
+#import "MoreCellActionHelper.h"
 
 
 
@@ -36,18 +34,16 @@ static NSString *cellId = @"moreCellId";
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
         
-        NSString *titleListPath = [[NSBundle mainBundle] pathForResource:@"ImagesTitles" ofType:@"plist"];
+        NSString *titleListPath = [[NSBundle mainBundle] pathForResource:ImagesTitles_More ofType:@"plist"];
         NSData *imagesTitleData = [NSData dataWithContentsOfFile:titleListPath];
         NSArray *tempDataArray = [NSMutableArray arrayWithPlistData:imagesTitleData];
         NSLog(@"data转换  %@",tempDataArray);
         for (NSInteger k = 0; k < tempDataArray.count; k ++) {
             NSMutableArray *singleCellArray = [NSMutableArray array];
-            
-            
             NSArray *oneSection = tempDataArray[k];
             NSLog(@"每一个组 %@",oneSection);
             for (NSInteger j = 0; j < oneSection.count; j ++) {
-                MoreItem *item = [MoreItem new];
+                MoreCellUIItem *item = [MoreCellUIItem new];
                 NSDictionary *infoDic = oneSection[j];
                 item.imageName = infoDic[@"imageName"];
                 item.title = infoDic[@"title"];
@@ -88,7 +84,7 @@ static NSString *cellId = @"moreCellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MoreTableViewCell *moreCell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     NSArray *section = self.dataArray[indexPath.section];
-    MoreItem *item = section[indexPath.row];
+    MoreCellUIItem *item = section[indexPath.row];
     [moreCell putValue:item];
     if (indexPath.section == 2 && indexPath.row == 2) {
         [moreCell addVersionLabelAfterHideGoButton];
@@ -109,66 +105,15 @@ static NSString *cellId = @"moreCellId";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    NSInteger section =  indexPath.section;
-    NSInteger row = indexPath.row;
-    
-    switch (section) {
-        case 0:
-        {
-            if (row == 0) {
-                [self gotoMessageCenter];
-            }else if (row == 1){
-                [self gotoSupportCenter];
-            }
-        }
-            break;
-        case 1:
-        {
-            if (row == 0) {
-                [self gotoLoanRules];
-            }else{
-                [self gotoRefundRules];
-            }
-        }
-            break;
-        case 2:
-        {
-            if (row == 0) {
-                [self aboutMMD];
-            }else if (row ==1){
-                [self shareMMD];
-            }
-        }
-            break;
-        default:
-            break;
+    //分享有可能特殊
+    if (indexPath.section == 2 && indexPath.row == 1) {
+        [self shareMMD];
+    }else{
+        [MoreCellActionHelper jumpFromViewController:self atIndex:indexPath];
     }
 }
-#pragma mark GoToSubView
-- (void)gotoMessageCenter{
-    MessageCenterController *messageCenter = [MessageCenterController new];
-    [self.navigationController pushViewController:messageCenter animated:YES];
-}
-- (void)gotoSupportCenter{
-    SupportCenterController *supportCenter = [SupportCenterController new];
-    [self.navigationController pushViewController:supportCenter animated:YES];
-}
-- (void)gotoLoanRules{
-    LoanRulesWebController *loanRuler = [[LoanRulesWebController alloc] init];
-    loanRuler.URLString = [NSString stringWithFormat:@"%@/webview/applyNotice",kHostURL];
-    [self.navigationController pushViewController:loanRuler animated:YES];
-}
-- (void)gotoRefundRules{
-    RefundWebController *refunder = [[RefundWebController alloc] init];
-    refunder.URLString = [NSString stringWithFormat:@"%@/webview/repaymentNotice",kHostURL];
-    [self.navigationController pushViewController:refunder animated:YES];
-}
-- (void)aboutMMD{
-    MMDInfoWebController *mmdInfoer = [[MMDInfoWebController alloc] init];
-    mmdInfoer.URLString = [NSString stringWithFormat:@"%@/webview/about",kHostURL];
-    [self.navigationController pushViewController:mmdInfoer animated:YES];
-}
+#pragma mark ShareAction
+
 - (void)shareMMD{
     
 }

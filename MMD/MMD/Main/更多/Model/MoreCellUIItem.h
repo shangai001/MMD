@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MoreItem : NSObject
+@interface MoreCellUIItem : NSObject
 @property (nonatomic, copy)NSString *imageName;
 @property (nonatomic, copy)NSString *title;
 @end
