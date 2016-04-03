@@ -81,7 +81,9 @@
     button.selected = ! button.selected;
 }
 - (IBAction)logIn:(id)sender {
-    NSDictionary *info = self.user.mj_keyValues;
+    [self.view endEditing:YES];
+//    NSDictionary *info = self.user.mj_keyValues;
+    NSDictionary *info = @{@"phone":@"18632156680",@"password":@"123456"};
     //记住密码
     [self savePasswordBeforeLogin];
     [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
@@ -148,14 +150,6 @@
 
 }// became first responder
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    if (textField == self.numTextField) {
-//        BOOL isOK = [checkoutPhoneNumber checkTelNumber:textField.text];
-//        return isOK;
-    }
-    if (textField == self.passwordTextField) {
-
-//        }
-    }
     return YES;
 }// return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
 - (void)textFieldDidEndEditing:(UITextField *)textField{

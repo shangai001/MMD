@@ -129,13 +129,13 @@
         }];
          */
 
-        /*
         //未登录
         MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
         [self.navigationController pushViewController:logger animated:YES];
-         */
+        /*
         LoanVerifyController *loanVerifyer = [LoanVerifyController new];
         [self.navigationController pushViewController:loanVerifyer animated:YES];
+         */
     }
     /*
     VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
