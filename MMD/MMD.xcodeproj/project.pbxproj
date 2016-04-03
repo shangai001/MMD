@@ -109,6 +109,7 @@
 		D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356711CB10CBF000A321C /* CalculateRefund.m */; };
 		D63356781CB12062000A321C /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356771CB12062000A321C /* BaseModel.m */; };
 		D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D633567A1CB121EE000A321C /* WarnLoginModel.m */; };
+		D633567E1CB172E3000A321C /* FullUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D633567D1CB172E3000A321C /* FullUserInfo.m */; };
 		D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB071CAE7E2D00CBF19E /* MoreViewController.m */; };
 		D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0A1CAE7E2D00CBF19E /* MoreItem.m */; };
 		D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0C1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m */; };
@@ -353,6 +354,8 @@
 		D63356771CB12062000A321C /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		D63356791CB121EE000A321C /* WarnLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarnLoginModel.h; sourceTree = "<group>"; };
 		D633567A1CB121EE000A321C /* WarnLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarnLoginModel.m; sourceTree = "<group>"; };
+		D633567C1CB172E3000A321C /* FullUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullUserInfo.h; sourceTree = "<group>"; };
+		D633567D1CB172E3000A321C /* FullUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullUserInfo.m; sourceTree = "<group>"; };
 		D647FB061CAE7E2D00CBF19E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		D647FB071CAE7E2D00CBF19E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D647FB091CAE7E2D00CBF19E /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
@@ -815,6 +818,8 @@
 				D647FB6E1CAE800100CBF19E /* LoginUser.m */,
 				D63356791CB121EE000A321C /* WarnLoginModel.h */,
 				D633567A1CB121EE000A321C /* WarnLoginModel.m */,
+				D633567C1CB172E3000A321C /* FullUserInfo.h */,
+				D633567D1CB172E3000A321C /* FullUserInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1717,6 +1722,7 @@
 				D647FB861CAE80BE00CBF19E /* RegisterContentView.m in Sources */,
 				D647FB631CAE7F7A00CBF19E /* MMSegmentControl.m in Sources */,
 				D63356291CAFE100000A321C /* RefundWebController.m in Sources */,
+				D633567E1CB172E3000A321C /* FullUserInfo.m in Sources */,
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,
 				D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */,
