@@ -20,10 +20,12 @@
 #import "FailureView.h"
 #import "UIView+LoadViewFromNib.h"
 #import <SVProgressHUD.h>
+#import "WarnLoginModel.h"
 
 
 #define FIRSTTIMELOGOIN @"firstTimeLogin"
-
+#define REMEMBERBUTTONTOTOP_DEFAULT 25
+#define INPUTROW_HEIGHT 30
 
 @interface MMLogViewController ()<UITextFieldDelegate>
 
@@ -31,6 +33,7 @@
 @property (nonatomic, assign)NSUInteger failureCount;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rememberButtonToTop;
 @property (nonatomic, strong)FailureView *failureView;
+
 
 
 @end
@@ -82,24 +85,17 @@
 }
 - (IBAction)logIn:(id)sender {
     [self.view endEditing:YES];
+    //TODO:这里需要验证
 //    NSDictionary *info = self.user.mj_keyValues;
     NSDictionary *info = @{@"phone":@"18632156680",@"password":@"123456"};
     //记住密码
     [self savePasswordBeforeLogin];
     [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
+            [self resetFailureValue];
             [self handleLoginResult:resultDictionary];
-            self.failureCount  = 0;
         }else{
-            NSLog(@"登录失败 +1");
-            self.failureCount += 1;
-            if (self.failureCount == 3) {
-                //弹出图形识别
-                self.rememberButtonToTop.constant += 30;
-                [self.view setNeedsLayout];
-                self.failureView = [FailureView loadViewFromNib];
-                
-            }
+            [self logginFailure:nil];
         }
     } FailureHandler:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",error.localizedDescription]];
@@ -107,6 +103,56 @@
     }];
     
 }
+
+/**
+ *  显示或者去掉 图形验证
+ *
+ *  @param hidden 验证图是否将要隐藏
+ */
+- (void)popRecognizeImageView:(BOOL)hidden{
+    
+    if (hidden) {
+        //正常视图
+        self.rememberButtonToTop.constant = REMEMBERBUTTONTOTOP_DEFAULT;
+        [self.failureView removeFromSuperview];
+    }else{
+        //异常 验证视图
+       self.rememberButtonToTop.constant = INPUTROW_HEIGHT + REMEMBERBUTTONTOTOP_DEFAULT;
+        if (!self.failureView) {
+            self.failureView = [FailureView loadViewFromNib];
+        }
+        //TODO:添加验证视图
+        [self.view addSubview:self.failureView];
+    }
+    [self.view setNeedsLayout];
+}
+//登录成功
+- (void)resetFailureValue{
+    self.failureCount = 0;
+    [self popRecognizeImageView:YES];
+}
+//登录失败处理
+- (void)logginFailure:(id)sender{
+    NSLog(@"登录失败 +1");
+    self.failureCount += 1;
+    if (self.failureCount == 3) {
+        [self popRecognizeImageView:NO];
+        [self sendUnusualMessage:nil];
+    }
+}
+//发送异常登录警告
+- (void)sendUnusualMessage:(id)sender{
+    
+    NSDictionary *phoneDic = @{@"phone":self.user.phone};
+    [WarnLoginModel postWarnningMessageToPhone:phoneDic success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            NSLog(@"%@",resultDic[@"msg"]);
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"异常登录短信发送失败");
+    }];
+}
+#pragma mark SavePassword
 - (void)savePasswordBeforeLogin{
     if (self.rememberPasswordButton.selected) {
         NSString *password = self.user.password;
@@ -118,8 +164,8 @@
     }
     [SDUserDefault synchronize];
 }
+#pragma mark AfterLogin
 - (void)handleLoginResult:(NSDictionary *)resultDictionary{
-    NSLog(@"%@",resultDictionary[@"msg"]);
     if ([resultDictionary[@"code"] integerValue] == 0) {
         [UserInfoManager updateUserInfo:resultDictionary];
     }
@@ -131,6 +177,7 @@
         [SDUserDefault setBool:YES forKey:FIRSTTIMELOGOIN];
     }
 }
+#pragma mark ButtonOutletAction
 - (IBAction)forgetPassword:(id)sender {
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:NSStringFromClass([RegisterViewController class]) bundle:[NSBundle mainBundle]];
     registerController.type = kForgetPassword;

@@ -107,6 +107,8 @@
 		D633566C1CB04320000A321C /* SureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D633566A1CB04320000A321C /* SureViewController.xib */; };
 		D633566F1CB04E47000A321C /* LoanProtroWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633566E1CB04E47000A321C /* LoanProtroWebController.m */; };
 		D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356711CB10CBF000A321C /* CalculateRefund.m */; };
+		D63356781CB12062000A321C /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356771CB12062000A321C /* BaseModel.m */; };
+		D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D633567A1CB121EE000A321C /* WarnLoginModel.m */; };
 		D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB071CAE7E2D00CBF19E /* MoreViewController.m */; };
 		D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0A1CAE7E2D00CBF19E /* MoreItem.m */; };
 		D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0C1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m */; };
@@ -347,6 +349,10 @@
 		D633566E1CB04E47000A321C /* LoanProtroWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanProtroWebController.m; sourceTree = "<group>"; };
 		D63356701CB10CBF000A321C /* CalculateRefund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateRefund.h; sourceTree = "<group>"; };
 		D63356711CB10CBF000A321C /* CalculateRefund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateRefund.m; sourceTree = "<group>"; };
+		D63356761CB12062000A321C /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		D63356771CB12062000A321C /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		D63356791CB121EE000A321C /* WarnLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarnLoginModel.h; sourceTree = "<group>"; };
+		D633567A1CB121EE000A321C /* WarnLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarnLoginModel.m; sourceTree = "<group>"; };
 		D647FB061CAE7E2D00CBF19E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		D647FB071CAE7E2D00CBF19E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D647FB091CAE7E2D00CBF19E /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
@@ -807,6 +813,8 @@
 			children = (
 				D647FB6D1CAE800100CBF19E /* LoginUser.h */,
 				D647FB6E1CAE800100CBF19E /* LoginUser.m */,
+				D63356791CB121EE000A321C /* WarnLoginModel.h */,
+				D633567A1CB121EE000A321C /* WarnLoginModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1129,6 +1137,8 @@
 				D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */,
 				D6805EAD1CAD242500316925 /* BaseViewController.h */,
 				D6805EAE1CAD242500316925 /* BaseViewController.m */,
+				D63356761CB12062000A321C /* BaseModel.h */,
+				D63356771CB12062000A321C /* BaseModel.m */,
 			);
 			path = "Base(基类)";
 			sourceTree = "<group>";
@@ -1682,6 +1692,7 @@
 				D6805E981CAD1A3300316925 /* STConst.m in Sources */,
 				D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */,
 				D647FBAD1CAE87FD00CBF19E /* SecondStaepController.m in Sources */,
+				D63356781CB12062000A321C /* BaseModel.m in Sources */,
 				D647FB1B1CAE7E2D00CBF19E /* MoreTableViewCell+PutValue.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,
 				D647FB831CAE80BE00CBF19E /* RegisterViewController.m in Sources */,
@@ -1690,6 +1701,7 @@
 				D6805E941CAD1A3300316925 /* NSCalendar+ST.m in Sources */,
 				D647FBB41CAE87FD00CBF19E /* HorizontalDashLineView.m in Sources */,
 				D647FB1A1CAE7E2D00CBF19E /* MoreItem.m in Sources */,
+				D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */,
 				D63356531CB033B2000A321C /* LoanVerifyController.m in Sources */,
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,

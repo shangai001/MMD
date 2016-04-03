@@ -15,7 +15,7 @@
                 <outlet property="passwordTextField" destination="M5K-oR-szP" id="Ehb-hT-rEA"/>
                 <outlet property="phoneNumImageView" destination="1c7-Nn-Tt5" id="GX1-h1-dg2"/>
                 <outlet property="registerButton" destination="DTn-9h-l7n" id="QE8-RD-yFP"/>
-                <outlet property="rememberButtonToTop" destination="d7d-1h-iEh" id="GVb-OV-o8Y"/>
+                <outlet property="rememberButtonToTop" destination="d7d-1h-iEh" id="qOM-ri-r6C"/>
                 <outlet property="rememberPasswordButton" destination="3rc-AM-T6T" id="EUM-h3-naS"/>
                 <outlet property="securityBUtton" destination="hFO-cs-Tae" id="BT6-GK-JgT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

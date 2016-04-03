@@ -72,7 +72,6 @@
             NSLog(@"登录响应 %@",responseObject);
         }
     } failure:^(NSError *error) {
-        
         failureBlock(error);
     }];
 }
