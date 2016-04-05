@@ -186,6 +186,7 @@
 		D6B031CA1CB3942F00E2955A /* UserJob.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C91CB3942F00E2955A /* UserJob.m */; };
 		D6B031CD1CB3947300E2955A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031CC1CB3947300E2955A /* User.m */; };
 		D6B031D01CB3949400E2955A /* CreditRating.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031CF1CB3949400E2955A /* CreditRating.m */; };
+		D6B031D31CB3964200E2955A /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031D21CB3964200E2955A /* MessageModel.m */; };
 		D6B692181C8D7A5B00B3877D /* mmd_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */; };
 		D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */; };
 		D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921A1C8D7A8500B3877D /* key@2x.png */; };
@@ -507,6 +508,8 @@
 		D6B031CC1CB3947300E2955A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D6B031CE1CB3949400E2955A /* CreditRating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditRating.h; sourceTree = "<group>"; };
 		D6B031CF1CB3949400E2955A /* CreditRating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditRating.m; sourceTree = "<group>"; };
+		D6B031D11CB3964200E2955A /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		D6B031D21CB3964200E2955A /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 		D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@2x.png"; sourceTree = "<group>"; };
 		D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@3x.png"; sourceTree = "<group>"; };
 		D6B6921A1C8D7A8500B3877D /* key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@2x.png"; sourceTree = "<group>"; };
@@ -866,13 +869,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		D647FB651CAE800100CBF19E /* 登录 */ = {
+		D647FB651CAE800100CBF19E /* 登录注册 */ = {
 			isa = PBXGroup;
 			children = (
 				D633563C1CB016A5000A321C /* View */,
 				D647FB661CAE800100CBF19E /* Controller */,
 				D647FB6C1CAE800100CBF19E /* Model */,
 			);
+			name = "登录注册";
 			path = "登录";
 			sourceTree = "<group>";
 		};
@@ -901,13 +905,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D647FB741CAE80BE00CBF19E /* 找回密码 */ = {
+		D647FB741CAE80BE00CBF19E /* 注册&找回密码 */ = {
 			isa = PBXGroup;
 			children = (
 				D647FB751CAE80BE00CBF19E /* Controller */,
 				D647FB7B1CAE80BE00CBF19E /* Model */,
 				D647FB7E1CAE80BE00CBF19E /* View */,
 			);
+			name = "注册&找回密码";
 			path = "找回密码";
 			sourceTree = "<group>";
 		};
@@ -928,6 +933,8 @@
 			children = (
 				D647FB7C1CAE80BE00CBF19E /* RegisterItem.h */,
 				D647FB7D1CAE80BE00CBF19E /* RegisterItem.m */,
+				D6B031D11CB3964200E2955A /* MessageModel.h */,
+				D6B031D21CB3964200E2955A /* MessageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1202,8 +1209,8 @@
 			children = (
 				D633567F1CB17717000A321C /* 我的 */,
 				D647FB8F1CAE87FD00CBF19E /* 验证用户 */,
-				D647FB741CAE80BE00CBF19E /* 找回密码 */,
-				D647FB651CAE800100CBF19E /* 登录 */,
+				D647FB741CAE80BE00CBF19E /* 注册&找回密码 */,
+				D647FB651CAE800100CBF19E /* 登录注册 */,
 				D647FB431CAE7F7A00CBF19E /* 借款 */,
 				D647FB041CAE7E2D00CBF19E /* 更多 */,
 				D6E104FB1C73217C00049C3F /* Base(基类) */,
@@ -1765,6 +1772,7 @@
 				D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */,
 				D647FB821CAE80BE00CBF19E /* LimitInputWords.m in Sources */,
 				D63356371CB00481000A321C /* SupportCenterController.m in Sources */,
+				D6B031D31CB3964200E2955A /* MessageModel.m in Sources */,
 				D633563F1CB016BE000A321C /* FailureView.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,

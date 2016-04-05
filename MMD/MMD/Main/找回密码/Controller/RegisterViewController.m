@@ -11,11 +11,15 @@
 #import "checkoutPhoneNumber.h"
 #import "LimitInputWords.h"
 #import "LogginModel.h"
+#import "MessageModel.h"
+#import <SVProgressHUD.h>
 #import "LXMKeyboardManager.h"
 #import "RegisterContentView.h"
 #import "UIView+LoadViewFromNib.h"
 #import <MJExtension.h>
-#import "UserInfoManager.h"
+#import "UserInfoImporter.h"
+
+
 
 
 #define PHONENUM_LENGTH 11
@@ -144,38 +148,65 @@
 }
 - (void)getSecurityCode:(id)sender {
     BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:self.contentView.phoneNumberField.text];
-    //如果是手机号
-    if (isPhoneNum) {
-        //注册
-        if (self.type == kRegisterType) {
-            NSString *phoneNumber = self.contentView.phoneNumberField.text;
-            NSDictionary *info = @{@"phone":phoneNumber};
-            [LogginModel getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
-                [self handleGetSecurityCodeInfo:resultDictionary];
-            } FailureHandler:^(NSError *error) {
-            }];
-            //找回密码
-        }else if (self.type == kForgetPassword){
-            NSString *phoneNumber = self.contentView.phoneNumberField.text;
-            NSDictionary *info = @{@"phone":phoneNumber};
-            [LogginModel forgetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
-                
-            } FailureHandler:^(NSError *error) {
-                
-            }];
-        }
-        [self startTimer:sender];
-    }else{
-        NSLog(@"这不是正确的电话号码！");
-    }
-}
+    if (!isPhoneNum) return;
+    //注册
+    if (self.type == kRegisterType) {
+        //先去请求message token
+        [MessageModel getSecurityMessageToken:nil completion:^(NSDictionary *resultDic) {
+            if ([resultDic[@"code"] integerValue] == 0) {
+                NSString *phoneNumber = self.contentView.phoneNumberField.text;
+                NSString *token = resultDic[@"data"];
+                NSDictionary *info = @{@"phone":phoneNumber,@"token":token};
+                [self getMessageCode:info];
+            }
+        } failure:^(NSError *error) {
+            [SVProgressHUD showErrorWithStatus:@"获取短信验证码失败"];
+            NSLog(@"err0r %@",error);
+        }];
+        
+    }else if (self.type == kForgetPassword){
+        //先去请求message token
+        [MessageModel getSecurityMessageToken:nil completion:^(NSDictionary *resultDic) {
+            if ([resultDic[@"code"] integerValue] == 0) {
+                NSString *phoneNumber = self.contentView.phoneNumberField.text;
+                NSString *token = resultDic[@"data"];
+                NSDictionary *info = @{@"phone":phoneNumber,@"token":token};
+                [self getForgetPasswordMessageCode:info];
+            }
+        } failure:^(NSError *error) {
+            [SVProgressHUD showErrorWithStatus:@"获取短信验证码失败"];
+            NSLog(@"err0r %@",error);
+        }];
 
+    }
+    [self startTimer:sender];
+}
+//注册时获取手机验证码
+- (void)getMessageCode:(NSDictionary *)info{
+    
+    [MessageModel getSecurityMessageCode:info completion:^(NSDictionary *resultDic) {
+        NSLog(@"resultDic");
+        if ([resultDic[@"code"] integerValue] != 0) {
+            [SVProgressHUD showInfoWithStatus:resultDic[@"msg"]];
+        }
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+    }];
+}
+//找回密码时获取手机验证码
+- (void)getForgetPasswordMessageCode:(NSDictionary *)info{
+    
+    [LogginModel forgetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
+        
+    } FailureHandler:^(NSError *error) {
+        
+    }];
+}
+#pragma mark SaveUserInfo
 - (void)saveReturnUserInfo:(NSDictionary *)dic{
     NSNumber *code = dic[@"code"];
     if ([code integerValue] == 0) {
-        NSUserDefaults *stUserDefault = [NSUserDefaults standardUserDefaults];
-        NSNumber *sid = dic[@"data"][@"result"][@"sid"];
-        [stUserDefault setObject:sid forKey:@"sid"];
+      //保存用户信息
     }
 }
 - (void)doneUser:(id)sender{
@@ -183,15 +214,17 @@
     [self.view endEditing:YES];
     NSDictionary *info = self.registerItem.mj_keyValues;
     if (self.type == kRegisterType) {
-        [LogginModel registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
-            [self handleRegisterResult:resultDictionary];
-        } FailureHandler:^(NSError *error) {
-            
+        
+        [MessageModel registerUser:info completation:^(NSDictionary *resultDic) {
+            [self handleRegisterResult:resultDic];
+        } failure:^(NSError *error) {
+            NSLog(@"error = %@",error);
         }];
     }
     if (self.type == kForgetPassword) {
         //找回密码，如果用户通过审核，必须输入身份证号码（缺失UI）
         [LogginModel checkUserAuthorized:info completionHandler:^(NSDictionary *resultDictionary) {
+            
             if ([resultDictionary[@"code"] integerValue] != 0) {
                 [LogginModel resetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
                     [self handleResetResult:resultDictionary];
@@ -205,45 +238,19 @@
         }];
     }
 }
-//处理注册手机号码结果
-- (void)handleGetSecurityCodeInfo:(NSDictionary *)resultDictionary{
-    NSLog(@"%@",resultDictionary[@"msg"]);
-    NSInteger codeStatus = [resultDictionary[@"code"] integerValue];
-    switch (codeStatus) {
-        case 0:
-        {
-            NSLog(@"获取验证码成功！");
-        }
-            break;
-        case 1:
-        {
-            NSLog(@"手机号已经注册！");
-        }
-            break;
-        case 2:
-        {
-            
-        }
-            break;
-        case 3:
-        {
-            
-        }
-            break;
-        default:
-            break;
-    }
-}
 //处理注册结果
 - (void)handleRegisterResult:(NSDictionary *)resultDictionary{
+    
     NSLog(@"%@",resultDictionary[@"msg"]);
     NSInteger codeStatus = [resultDictionary[@"code"] integerValue];
+    //注册成功
     if (codeStatus == 0) {
         NSDictionary *data = resultDictionary[@"data"];
-        [UserInfoManager updateUserInfo:data];
+        [UserInfoImporter updateUserInfo:data];
         [self.navigationController popViewControllerAnimated:YES];
     }else if ([resultDictionary[@"code"] integerValue] == 1){
-
+        //注册失败
+        [SVProgressHUD showErrorWithStatus:resultDictionary[@"msg"]];
     }
 }
 //处理重设密码结果

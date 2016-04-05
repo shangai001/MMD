@@ -9,6 +9,7 @@
 #import "HttpRequest.h"
 #import <AFNetworking.h>
 #import "UploadParam.h"
+#import "AppInfo.h"
 
 
 @implementation HttpRequest
@@ -27,16 +28,10 @@
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
-    /**
-     *  请求队列的最大并发数
-     */
     manager.operationQueue.maxConcurrentOperationCount = REQUEST_MAXCOUNT;
-    /**
-     *  请求超时的时间
-     */
     manager.requestSerializer.timeoutInterval = TIME_OUT;
-    
-    [manager GET:URLString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString *versionURLString = [self appendVersionString:URLString];
+    [manager GET:versionURLString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
             success(jsonObject);
@@ -55,12 +50,12 @@
                   failure:(void (^)(NSError *))failure {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/html", nil];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
     
+    //添加verison
+    parameters = [self containVersionDictionary:parameters];
     [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
@@ -84,14 +79,17 @@
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/html", nil];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
     
     switch (type) {
         case HttpRequestTypeGet:
         {
+            
+            //添加version
+            NSString *versionURLString = [self appendVersionString:URLString];
             manager.requestSerializer.timeoutInterval = TIME_OUT;
-            [manager GET:URLString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            [manager GET:versionURLString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (success) {
                     id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
                     success(jsonObject);
@@ -105,6 +103,9 @@
             break;
         case HttpRequestTypePost:
         {
+            //添加version
+            parameters = [self containVersionDictionary:parameters];
+            
             [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (success) {
                     id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
@@ -129,7 +130,8 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
+    //添加verison
+    parameters = [self containVersionDictionary:parameters];
     [manager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:uploadParam.data name:uploadParam.name fileName:uploadParam.filename mimeType:uploadParam.mimeType];
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -143,5 +145,25 @@
         }
     }];
 }
-
+//GET  方法 添加版本号
++ (NSString *)appendVersionString:(NSString *)URLString{
+    
+    NSString *mimidaiVersion = [AppInfo app_Version];
+    NSString *URLString_Version = [NSString stringWithFormat:@"%@/%@",URLString,mimidaiVersion];
+    
+    return URLString_Version;
+}
+//POST 方法 添加版本号
++ (id)containVersionDictionary:(id)parameters{
+    
+    if ([parameters isKindOfClass:[NSDictionary class]]) {
+        
+        NSDictionary *infoDic = (NSDictionary *)parameters;
+        NSMutableDictionary *versionDic = [NSMutableDictionary dictionaryWithDictionary:infoDic];
+        NSString *mimidaiVersion = [AppInfo app_Version];
+        [versionDic setObject:mimidaiVersion forKey:@"mimidaiVersion"];
+        return versionDic;
+    }
+    return parameters;
+}
 @end

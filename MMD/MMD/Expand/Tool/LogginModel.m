@@ -11,32 +11,6 @@
 
 @implementation LogginModel
 
-+ (void)getSecurityCode:(NSDictionary *)info
-      completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
-         FailureHandler:(void(^)(NSError *error))failureBlock{
-    
-    NSString *URL = [NSString stringWithFormat:@"%@/user/registCode",kHostURL];
-    [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
-        if ([responseObject isKindOfClass:[NSDictionary class]]) {
-            completationBlock(responseObject);
-            NSLog(@"获取验证码responseObject %@",responseObject);
-        }
-    } failure:^(NSError *error) {
-        failureBlock(error);
-    }];
-}
-+ (void)registerUserCount:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
-    
-    NSString *URL = [NSString stringWithFormat:@"%@/user/regist",kHostURL];
-    [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
-        if ([responseObject isKindOfClass:[NSDictionary class]]) {
-            completationBlock(responseObject);
-            NSLog(@"新注册responseObject %@",responseObject);
-        }
-    } failure:^(NSError *error) {
-        failureBlock(error);
-    }];
-}
 + (void)checkUserAuthorized:(NSDictionary *)info
           completionHandler:(void (^)(NSDictionary *))completationBlock
              FailureHandler:(void (^)(NSError *))failureBlock{
