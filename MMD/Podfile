@@ -10,9 +10,8 @@ target 'MMD' do
     pod 'RealReachability'
     pod 'MJRefresh'
     pod 'MJExtension'
-    pod 'YYKeyboardManager'
     pod 'YYKit'
-    pod 'KINWebBrowser'
+    pod 'SDAutoLayout'
     
     pod 'ShareSDK3'
     pod 'MOBFoundation_IDFA'
