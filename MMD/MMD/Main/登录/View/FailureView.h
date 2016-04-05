@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FailureView : UIView
+
+@protocol didEndInputCode <NSObject>
+
+- (void)didEndInputCode:(NSString *)codeString;
+- (void)shouldRefreshCode;
+
+@end
+@interface FailureView : UIView<UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *codeIcomImage;
+@property (weak, nonatomic) IBOutlet UITextField *codeTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *codeImage;
+@property (weak, nonatomic)id<didEndInputCode> delegate;
+
+
+- (void)willEndInput;
 
 @end

@@ -81,4 +81,9 @@ typedef NS_ENUM(NSUInteger,HttpRequestType) {
                     success:(void (^)())success
                     failure:(void (^)(NSError *error))failure;
 
++ (void)postUUIDWithURLString:(NSString *)URLString
+                       parameters:(id)parameters
+                          success:(void (^)(id responseObject))success
+                          failure:(void (^)(NSError *error))failure;
+
 @end

@@ -168,6 +168,10 @@
 		D647FBD81CAE92B200CBF19E /* ContactList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD41CAE92B200CBF19E /* ContactList.plist */; };
 		D647FBD91CAE92B200CBF19E /* ImagesTitles_More.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD51CAE92B200CBF19E /* ImagesTitles_More.plist */; };
 		D64A2D0B1C956168002654AC /* UserInfoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D0A1C956168002654AC /* UserInfoImporter.m */; };
+		D66B4F921CB4159E0038F312 /* UserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F911CB4159E0038F312 /* UserDefaultManager.m */; };
+		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
+		D66B4F981CB4263B0038F312 /* LogginSuccessActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F971CB4263B0038F312 /* LogginSuccessActionHelper.m */; };
+		D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F9A1CB42F570038F312 /* GraphicVerification.m */; };
 		D6805E931CAD1A3300316925 /* STPickerArea.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E7D1CAD1A3300316925 /* STPickerArea.m */; };
 		D6805E941CAD1A3300316925 /* NSCalendar+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E801CAD1A3300316925 /* NSCalendar+ST.m */; };
 		D6805E951CAD1A3300316925 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E821CAD1A3300316925 /* STPickerDate.m */; };
@@ -457,8 +461,8 @@
 		D647FBBD1CAE920100CBF19E /* DashLineHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashLineHelper.m; sourceTree = "<group>"; };
 		D647FBBE1CAE920100CBF19E /* LXMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMKeyboardManager.h; sourceTree = "<group>"; };
 		D647FBBF1CAE920100CBF19E /* LXMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMKeyboardManager.m; sourceTree = "<group>"; };
-		D647FBC01CAE920100CBF19E /* LogginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogginModel.h; sourceTree = "<group>"; };
-		D647FBC11CAE920100CBF19E /* LogginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogginModel.m; sourceTree = "<group>"; };
+		D647FBC01CAE920100CBF19E /* LogginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogginModel.h; path = ../Tool/LogginModel.h; sourceTree = "<group>"; };
+		D647FBC11CAE920100CBF19E /* LogginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogginModel.m; path = ../Tool/LogginModel.m; sourceTree = "<group>"; };
 		D647FBCB1CAE925400CBF19E /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		D647FBCC1CAE925400CBF19E /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		D647FBCD1CAE925400CBF19E /* UIView+LoadViewFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadViewFromNib.h"; sourceTree = "<group>"; };
@@ -469,6 +473,14 @@
 		D647FBD51CAE92B200CBF19E /* ImagesTitles_More.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImagesTitles_More.plist; sourceTree = "<group>"; };
 		D64A2D091C956168002654AC /* UserInfoImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoImporter.h; sourceTree = "<group>"; };
 		D64A2D0A1C956168002654AC /* UserInfoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoImporter.m; sourceTree = "<group>"; };
+		D66B4F901CB4159E0038F312 /* UserDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultManager.h; sourceTree = "<group>"; };
+		D66B4F911CB4159E0038F312 /* UserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultManager.m; sourceTree = "<group>"; };
+		D66B4F931CB4232F0038F312 /* MMDLoggin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDLoggin.h; sourceTree = "<group>"; };
+		D66B4F941CB4232F0038F312 /* MMDLoggin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDLoggin.m; sourceTree = "<group>"; };
+		D66B4F961CB4263B0038F312 /* LogginSuccessActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogginSuccessActionHelper.h; sourceTree = "<group>"; };
+		D66B4F971CB4263B0038F312 /* LogginSuccessActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogginSuccessActionHelper.m; sourceTree = "<group>"; };
+		D66B4F991CB42F570038F312 /* GraphicVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicVerification.h; sourceTree = "<group>"; };
+		D66B4F9A1CB42F570038F312 /* GraphicVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicVerification.m; sourceTree = "<group>"; };
 		D6805E7C1CAD1A3300316925 /* STPickerArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerArea.h; sourceTree = "<group>"; };
 		D6805E7D1CAD1A3300316925 /* STPickerArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerArea.m; sourceTree = "<group>"; };
 		D6805E7F1CAD1A3300316925 /* NSCalendar+ST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+ST.h"; sourceTree = "<group>"; };
@@ -646,6 +658,8 @@
 				D633563D1CB016BE000A321C /* FailureView.h */,
 				D633563E1CB016BE000A321C /* FailureView.m */,
 				D63356401CB016DC000A321C /* FailureView.xib */,
+				D66B4F991CB42F570038F312 /* GraphicVerification.h */,
+				D66B4F9A1CB42F570038F312 /* GraphicVerification.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -885,6 +899,8 @@
 			children = (
 				D647FB671CAE800100CBF19E /* checkoutPhoneNumber.h */,
 				D647FB681CAE800100CBF19E /* checkoutPhoneNumber.m */,
+				D66B4F961CB4263B0038F312 /* LogginSuccessActionHelper.h */,
+				D66B4F971CB4263B0038F312 /* LogginSuccessActionHelper.m */,
 				D647FB691CAE800100CBF19E /* MMLogViewController.h */,
 				D647FB6A1CAE800100CBF19E /* MMLogViewController.m */,
 				D647FB6B1CAE800100CBF19E /* MMLogViewController.xib */,
@@ -1023,8 +1039,6 @@
 				D647FBBD1CAE920100CBF19E /* DashLineHelper.m */,
 				D647FBBE1CAE920100CBF19E /* LXMKeyboardManager.h */,
 				D647FBBF1CAE920100CBF19E /* LXMKeyboardManager.m */,
-				D647FBC01CAE920100CBF19E /* LogginModel.h */,
-				D647FBC11CAE920100CBF19E /* LogginModel.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1271,6 +1285,10 @@
 		D6E105071C73219000049C3F /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				D647FBC01CAE920100CBF19E /* LogginModel.h */,
+				D647FBC11CAE920100CBF19E /* LogginModel.m */,
+				D66B4F931CB4232F0038F312 /* MMDLoggin.h */,
+				D66B4F941CB4232F0038F312 /* MMDLoggin.m */,
 				D64A2D091C956168002654AC /* UserInfoImporter.h */,
 				D64A2D0A1C956168002654AC /* UserInfoImporter.m */,
 				D6B031C21CB3920E00E2955A /* UserInfoItem.h */,
@@ -1283,6 +1301,8 @@
 				D6B031CC1CB3947300E2955A /* User.m */,
 				D6B031CE1CB3949400E2955A /* CreditRating.h */,
 				D6B031CF1CB3949400E2955A /* CreditRating.m */,
+				D66B4F901CB4159E0038F312 /* UserDefaultManager.h */,
+				D66B4F911CB4159E0038F312 /* UserDefaultManager.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -1754,6 +1774,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D66B4F981CB4263B0038F312 /* LogginSuccessActionHelper.m in Sources */,
 				D6B031CD1CB3947300E2955A /* User.m in Sources */,
 				D647FB711CAE800100CBF19E /* MMLogViewController.m in Sources */,
 				D6B031CA1CB3942F00E2955A /* UserJob.m in Sources */,
@@ -1775,8 +1796,11 @@
 				D633563F1CB016BE000A321C /* FailureView.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
+				D66B4F921CB4159E0038F312 /* UserDefaultManager.m in Sources */,
+				D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6805E951CAD1A3300316925 /* STPickerDate.m in Sources */,
+				D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */,
 				D63356971CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.m in Sources */,
 				D63356851CB17750000A321C /* MineViewController.m in Sources */,
 				D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */,

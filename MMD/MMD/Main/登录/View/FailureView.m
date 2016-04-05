@@ -17,5 +17,27 @@
     // Drawing code
 }
 */
+- (void)awakeFromNib{
+    self.codeTextField.delegate = self;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(refreshCode:)];
+    [self.codeImage addGestureRecognizer:tap];
+}
+- (void)refreshCode:(id)sender{
+    if ([self.delegate respondsToSelector:@selector(shouldRefreshCode)]) {
+        [self.delegate shouldRefreshCode];
+    }
+}
+- (void)willEndInput{
+    if ([self.codeTextField isFirstResponder]) {
+        [self.codeTextField resignFirstResponder];
+    }
+}
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    NSString *codeString = textField.text;
+    if ([self.delegate respondsToSelector:@selector(didEndInputCode:)] && codeString.length > 0) {
+        [self.delegate didEndInputCode:codeString];
+    }
+    return YES;
+}
 
 @end

@@ -14,5 +14,8 @@
 
 @property (nonatomic, copy)NSString *password;
 
+@property (nonatomic, copy)NSString *uuid;
+
+@property (nonatomic, copy)NSString *code;
 
 @end

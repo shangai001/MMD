@@ -145,6 +145,27 @@
         }
     }];
 }
++ (void)postUUIDWithURLString:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"image/jpeg", nil];
+    
+    //添加verison
+    parameters = [self containVersionDictionary:parameters];
+    [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (success && [responseObject isKindOfClass:[NSData class]]) {
+            id imageObject = [UIImage imageWithData:responseObject];
+            success(imageObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+
+}
 //GET  方法 添加版本号
 + (NSString *)appendVersionString:(NSString *)URLString{
     

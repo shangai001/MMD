@@ -23,10 +23,15 @@
                 [self saveDictionaryInUserDefault:dic];
             }
         }
-        //通知主线程刷新
+        //通知主线程
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *userId = [SDUserDefault valueForKey:@"userId"];
+            NSLog(@"当前用户id --> %@",userId);
         });
+        //标记当前登录成功
+        if (![SDUserDefault boolForKey:Loggin]) {
+            [SDUserDefault setBool:YES forKey:Loggin];
+        }
         
     });
     
