@@ -905,14 +905,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D647FB741CAE80BE00CBF19E /* 注册&找回密码 */ = {
+		D647FB741CAE80BE00CBF19E /* 找回密码 */ = {
 			isa = PBXGroup;
 			children = (
 				D647FB751CAE80BE00CBF19E /* Controller */,
 				D647FB7B1CAE80BE00CBF19E /* Model */,
 				D647FB7E1CAE80BE00CBF19E /* View */,
 			);
-			name = "注册&找回密码";
 			path = "找回密码";
 			sourceTree = "<group>";
 		};
@@ -1209,7 +1208,7 @@
 			children = (
 				D633567F1CB17717000A321C /* 我的 */,
 				D647FB8F1CAE87FD00CBF19E /* 验证用户 */,
-				D647FB741CAE80BE00CBF19E /* 注册&找回密码 */,
+				D647FB741CAE80BE00CBF19E /* 找回密码 */,
 				D647FB651CAE800100CBF19E /* 登录注册 */,
 				D647FB431CAE7F7A00CBF19E /* 借款 */,
 				D647FB041CAE7E2D00CBF19E /* 更多 */,

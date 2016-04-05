@@ -85,7 +85,6 @@
 }
 - (IBAction)logIn:(id)sender {
     [self.view endEditing:YES];
-    //TODO:这里需要验证
     NSDictionary *info = self.user.mj_keyValues;
     //记住密码
     [self savePasswordBeforeLogin];
@@ -120,8 +119,9 @@
         if (!self.failureView) {
             self.failureView = [FailureView loadViewFromNib];
         }
-        //TODO:添加验证视图
-        [self.view addSubview:self.failureView];
+        if (![self.view.subviews containsObject:self.failureView]) {
+            [self.view addSubview:self.failureView];
+        }
     }
     [self.view setNeedsLayout];
 }
@@ -156,10 +156,10 @@
     
     if (self.rememberPasswordButton.selected) {
         NSString *password = self.user.password;
-        [SDUserDefault setValue:password forKey:PASSWORD];
+        [SDUserDefault setValue:password forKey:EZ_PASSWORD];
     }else{
-        if ([SDUserDefault valueForKey:PASSWORD]) {
-            [SDUserDefault removeObjectForKey:PASSWORD];
+        if ([SDUserDefault valueForKey:EZ_PASSWORD]) {
+            [SDUserDefault removeObjectForKey:EZ_PASSWORD];
         }
     }
     [SDUserDefault synchronize];

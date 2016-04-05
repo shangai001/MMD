@@ -15,7 +15,7 @@
 
 #define SDUserDefault   [NSUserDefaults standardUserDefaults]
 
-#define PASSWORD @"PASSWORD"
+#define EZ_PASSWORD @"iOS_PASSWORD"
 
 
 

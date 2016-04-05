@@ -18,6 +18,7 @@
 #import "UIView+LoadViewFromNib.h"
 #import <MJExtension.h>
 #import "UserInfoImporter.h"
+#import "HeightHeader.h"
 
 
 
@@ -85,20 +86,23 @@
 }
 //分别修改UI/标题
 - (void)setupUI{
+    self.baseScrollView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+    [self.baseScrollView addSubview:self.contentView];
+    self.contentView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - kTabbarHeight - kNavigationBarHeight);
     [self resetUIFrame];
 }
 //修改UI Frame
 - (void)resetUIFrame{
     
-    [self.baseScrollView addSubview:self.contentView];
     CGSize baseScrollViewSie = self.baseScrollView.frame.size;
     self.contentView.frame = CGRectMake(30, 44, baseScrollViewSie.width - 30 * 2, baseScrollViewSie.height - 44 - 30);
-    [self.contentView setNeedsLayout];
+    
     self.contentView.phoneNumberField.delegate = self;
     self.contentView.securityCodeTextField.delegate = self;
     self.contentView.password1.delegate = self;
     self.contentView.password2.delegate = self;
-    self.baseScrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 55);
+    self.baseScrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 50);
+    [self.view setNeedsLayout];
 }
 //获取验证码/确定 点击事件
 - (void)addButtonAction{
@@ -207,6 +211,7 @@
     NSNumber *code = dic[@"code"];
     if ([code integerValue] == 0) {
       //保存用户信息
+        [UserInfoImporter updateUserInfo:dic];
     }
 }
 - (void)doneUser:(id)sender{

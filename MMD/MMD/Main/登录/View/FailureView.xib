@@ -10,29 +10,40 @@
             <rect key="frame" x="0.0" y="0.0" width="289" height="30"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Fj-AJ-SRc">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qq.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Fj-AJ-SRc">
                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="6iz-V9-9DL"/>
                         <constraint firstAttribute="height" constant="30" id="Xa0-Zi-vSP"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OTc-sE-IpD">
-                    <rect key="frame" x="198" y="0.0" width="91" height="30"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OTc-sE-IpD">
+                    <rect key="frame" x="160" y="0.0" width="129" height="30"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gc0-Pg-Aog">
-                    <rect key="frame" x="31" y="0.0" width="131" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gc0-Pg-Aog">
+                    <rect key="frame" x="30" y="0.0" width="130" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" red="0.7807924747467041" green="0.2516772449016571" blue="0.077683232724666595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Gc0-Pg-Aog" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0xh-nN-BWo"/>
                 <constraint firstItem="5Fj-AJ-SRc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4d0-nb-wGT"/>
+                <constraint firstAttribute="trailing" secondItem="OTc-sE-IpD" secondAttribute="trailing" id="6IC-Um-AfY"/>
+                <constraint firstItem="OTc-sE-IpD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8Ng-6l-9xy"/>
+                <constraint firstItem="OTc-sE-IpD" firstAttribute="width" secondItem="Gc0-Pg-Aog" secondAttribute="width" id="CBV-p8-u3P"/>
+                <constraint firstItem="OTc-sE-IpD" firstAttribute="leading" secondItem="Gc0-Pg-Aog" secondAttribute="trailing" id="MHs-Au-57q"/>
+                <constraint firstAttribute="bottom" secondItem="Gc0-Pg-Aog" secondAttribute="bottom" id="SmW-fK-pNu"/>
+                <constraint firstItem="Gc0-Pg-Aog" firstAttribute="leading" secondItem="5Fj-AJ-SRc" secondAttribute="trailing" id="gvv-q5-Fom"/>
                 <constraint firstItem="5Fj-AJ-SRc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qll-6r-avf"/>
+                <constraint firstAttribute="bottom" secondItem="OTc-sE-IpD" secondAttribute="bottom" id="wCD-dd-NPu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="228.5" y="220"/>
         </view>
     </objects>
+    <resources>
+        <image name="qq.png" width="35" height="35"/>
+    </resources>
 </document>
