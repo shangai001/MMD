@@ -40,6 +40,12 @@
 
 @implementation MMLogViewController
 
+- (FailureView *)failureView{
+    if (!_failureView) {
+        _failureView = [FailureView loadViewFromNib];
+    }
+    return _failureView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"登录";
@@ -116,12 +122,11 @@
     }else{
         //异常 验证视图
        self.rememberButtonToTop.constant = INPUTROW_HEIGHT + REMEMBERBUTTONTOTOP_DEFAULT;
-        if (!self.failureView) {
-            self.failureView = [FailureView loadViewFromNib];
-        }
         if (![self.view.subviews containsObject:self.failureView]) {
             [self.view addSubview:self.failureView];
         }
+        //设置错误验证码frame
+        
     }
     [self.view setNeedsLayout];
 }
