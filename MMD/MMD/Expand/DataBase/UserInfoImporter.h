@@ -11,4 +11,6 @@
 
 @interface UserInfoImporter : NSObject
 
++ (void)updateUserInfo:(NSDictionary *)userDictionary;
+
 @end

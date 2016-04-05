@@ -6,9 +6,10 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface MMDLogin : NSObject
+
+@interface LogginModel : BaseModel
 
 /**
  *  获取手机验证码
@@ -68,7 +69,5 @@ completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
           completionHandler:(void (^)(NSDictionary *))completationBlock
              FailureHandler:(void (^)(NSError *))failureBlock;
 
-
-+ (NSString *)userId;
 
 @end

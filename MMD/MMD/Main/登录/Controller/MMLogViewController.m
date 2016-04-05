@@ -9,18 +9,18 @@
 #import "MMLogViewController.h"
 #import "checkoutPhoneNumber.h"
 #import "LoginUser.h"
-#import "MMDLogin.h"
+#import "LogginModel.h"
 #import <MJExtension.h>
 #import "RegisterViewController.h"
 #import "BaseNavgationController.h"
 #import "PasswordLength.h"
 #import "ColorHeader.h"
-#import "UserInfoManager.h"
 #import "VerifyViewController.h"
 #import "FailureView.h"
 #import "UIView+LoadViewFromNib.h"
 #import <SVProgressHUD.h>
 #import "WarnLoginModel.h"
+#import "UserInfoImporter.h"
 
 
 #define FIRSTTIMELOGOIN @"firstTimeLogin"
@@ -46,9 +46,9 @@
     // Do any additional setup after loading the view from its nib.
     [self addButtonStatusImage];
     [self addDissmissKeyboardAction];
-
+    [self initDefaultValue];
 }
-- (void)initefaultValue{
+- (void)initDefaultValue{
     
     if (!self.user) {
         self.user = [LoginUser new];
@@ -86,14 +86,10 @@
 - (IBAction)logIn:(id)sender {
     [self.view endEditing:YES];
     //TODO:这里需要验证
-//    NSDictionary *info = self.user.mj_keyValues;
-    NSString *phone = @"18632156680";
-    NSString *password = @"123456";
-    
-    NSDictionary *info = @{@"phone":phone,@"password":password};
+    NSDictionary *info = self.user.mj_keyValues;
     //记住密码
     [self savePasswordBeforeLogin];
-    [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
+    [LogginModel loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
             [self resetFailureValue];
             [self handleLoginResult:resultDictionary];
@@ -138,7 +134,7 @@
 - (void)logginFailure:(id)sender{
     NSLog(@"登录失败 +1");
     self.failureCount += 1;
-    if (self.failureCount == 3) {
+    if (self.failureCount >= 3) {
         [self popRecognizeImageView:NO];
         [self sendUnusualMessage:nil];
     }
@@ -157,6 +153,7 @@
 }
 #pragma mark SavePassword
 - (void)savePasswordBeforeLogin{
+    
     if (self.rememberPasswordButton.selected) {
         NSString *password = self.user.password;
         [SDUserDefault setValue:password forKey:PASSWORD];
@@ -170,7 +167,7 @@
 #pragma mark AfterLogin
 - (void)handleLoginResult:(NSDictionary *)resultDictionary{
     if ([resultDictionary[@"code"] integerValue] == 0) {
-        [UserInfoManager updateUserInfo:resultDictionary];
+        [UserInfoImporter updateUserInfo:resultDictionary];
     }
     //如果是第一次登录，验证身份证号码
     VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];

@@ -10,7 +10,7 @@
 #import "RegisterItem.h"
 #import "checkoutPhoneNumber.h"
 #import "LimitInputWords.h"
-#import "MMDLogin.h"
+#import "LogginModel.h"
 #import "LXMKeyboardManager.h"
 #import "RegisterContentView.h"
 #import "UIView+LoadViewFromNib.h"
@@ -150,7 +150,7 @@
         if (self.type == kRegisterType) {
             NSString *phoneNumber = self.contentView.phoneNumberField.text;
             NSDictionary *info = @{@"phone":phoneNumber};
-            [MMDLogin getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
+            [LogginModel getSecurityCode:info completionHandler:^(NSDictionary *resultDictionary) {
                 [self handleGetSecurityCodeInfo:resultDictionary];
             } FailureHandler:^(NSError *error) {
             }];
@@ -158,7 +158,7 @@
         }else if (self.type == kForgetPassword){
             NSString *phoneNumber = self.contentView.phoneNumberField.text;
             NSDictionary *info = @{@"phone":phoneNumber};
-            [MMDLogin forgetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
+            [LogginModel forgetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
                 
             } FailureHandler:^(NSError *error) {
                 
@@ -183,7 +183,7 @@
     [self.view endEditing:YES];
     NSDictionary *info = self.registerItem.mj_keyValues;
     if (self.type == kRegisterType) {
-        [MMDLogin registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
+        [LogginModel registerUserCount:info completionHandler:^(NSDictionary *resultDictionary) {
             [self handleRegisterResult:resultDictionary];
         } FailureHandler:^(NSError *error) {
             
@@ -191,9 +191,9 @@
     }
     if (self.type == kForgetPassword) {
         //找回密码，如果用户通过审核，必须输入身份证号码（缺失UI）
-        [MMDLogin checkUserAuthorized:info completionHandler:^(NSDictionary *resultDictionary) {
+        [LogginModel checkUserAuthorized:info completionHandler:^(NSDictionary *resultDictionary) {
             if ([resultDictionary[@"code"] integerValue] != 0) {
-                [MMDLogin resetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
+                [LogginModel resetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
                     [self handleResetResult:resultDictionary];
                 } FailureHandler:^(NSError *error) {
                     

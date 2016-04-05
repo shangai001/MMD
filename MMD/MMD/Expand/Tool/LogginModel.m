@@ -6,10 +6,10 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "MMDLogin.h"
+#import "LogginModel.h"
 #import "HttpRequest.h"
 
-@implementation MMDLogin
+@implementation LogginModel
 
 + (void)getSecurityCode:(NSDictionary *)info
       completionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
@@ -86,14 +86,5 @@
         failureBlock(error);
     }];
 }
-+ (NSString *)userId{
-    NSString *userId = [SDUserDefault valueForKey:@"userId"];
-    return userId;
-}
-/*
-+ (BOOL)isLoggedin{
-    NSString *sessiondid = @"";
-}
-*/
 
 @end
