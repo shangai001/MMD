@@ -87,7 +87,10 @@
     [self.view endEditing:YES];
     //TODO:这里需要验证
 //    NSDictionary *info = self.user.mj_keyValues;
-    NSDictionary *info = @{@"phone":@"18632156680",@"password":@"123456"};
+    NSString *phone = @"18632156680";
+    NSString *password = @"123456";
+    
+    NSDictionary *info = @{@"phone":phone,@"password":password};
     //记住密码
     [self savePasswordBeforeLogin];
     [MMDLogin loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
