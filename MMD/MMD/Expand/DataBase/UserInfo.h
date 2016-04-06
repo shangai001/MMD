@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserInfoItem : NSObject
+@interface UserInfo : NSObject
 
 /*
  "id": 1,
@@ -54,22 +54,44 @@
  "totalBalance": null,
  "infoView": null
  */
+
 @property (copy, nonatomic)NSNumber *userId;
 @property (copy, nonatomic)NSString *name;
 @property (copy, nonatomic)NSString *idcard;
+@property (copy, nonatomic)NSString *idcardCity;
 @property (copy, nonatomic)NSString *idcardProvince;
-//...
+@property (copy, nonatomic)NSString *idcardArea;
 @property (copy, nonatomic)NSString *idcardAddress;
+@property (copy, nonatomic)id nativePlace;
 @property (copy, nonatomic)NSString *sex;
-@property (copy, nonatomic)NSString *phone;
+@property (copy, nonatomic)NSNumber *birthday;
+@property (copy, nonatomic)NSNumber *age;
+@property (copy ,nonatomic)NSString *phone;
+@property (copy, nonatomic)NSString *phoneRegion;
+@property (copy, nonatomic)id address;
+
 @property (copy, nonatomic)NSString *marriage;
 @property (copy, nonatomic)NSString *marriageName;
 @property (copy, nonatomic)NSString *children;
 @property (copy, nonatomic)NSString *childrenName;
-@property (copy, nonatomic)NSString *score;
+@property (copy, nonatomic)NSString *appVersion;
+@property (copy, nonatomic)NSNumber *score;
+
 @property (copy, nonatomic)NSString *lifeRadius;
 @property (copy, nonatomic)NSString *lifeRadiusName;
 @property (copy, nonatomic)NSString *idcardPhoto;
-//
+
+@property (copy, nonatomic)id user;
+@property (copy, nonatomic)id notInfoStates;
+@property (copy, nonatomic)id idcardAuthen;
+@property (copy, nonatomic)id contract;
+@property (copy, nonatomic)id amount;
+@property (copy, nonatomic)id expireRepay;
+@property (copy, nonatomic)id recentRepay;
+
+@property (assign, nonatomic)float idcardFaceCertConfidence;
+@property (copy, nonatomic)id attachmentId;
+@property (copy, nonatomic)id totalBalance;
+@property (copy, nonatomic)id infoView;
 
 @end

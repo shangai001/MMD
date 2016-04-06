@@ -167,8 +167,7 @@
 		D647FBD71CAE92B200CBF19E /* BankList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD31CAE92B200CBF19E /* BankList.plist */; };
 		D647FBD81CAE92B200CBF19E /* ContactList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD41CAE92B200CBF19E /* ContactList.plist */; };
 		D647FBD91CAE92B200CBF19E /* ImagesTitles_More.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD51CAE92B200CBF19E /* ImagesTitles_More.plist */; };
-		D64A2D0B1C956168002654AC /* UserInfoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D0A1C956168002654AC /* UserInfoImporter.m */; };
-		D66B4F921CB4159E0038F312 /* UserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F911CB4159E0038F312 /* UserDefaultManager.m */; };
+		D64A2D0B1C956168002654AC /* MMDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D0A1C956168002654AC /* MMDUserInfo.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
 		D66B4F981CB4263B0038F312 /* LogginSuccessActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F971CB4263B0038F312 /* LogginSuccessActionHelper.m */; };
 		D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F9A1CB42F570038F312 /* GraphicVerification.m */; };
@@ -185,7 +184,7 @@
 		D6805EAF1CAD242500316925 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805EAE1CAD242500316925 /* BaseViewController.m */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
-		D6B031C41CB3920E00E2955A /* UserInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C31CB3920E00E2955A /* UserInfoItem.m */; };
+		D6B031C41CB3920E00E2955A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C31CB3920E00E2955A /* UserInfo.m */; };
 		D6B031C71CB3940F00E2955A /* UserBank.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C61CB3940F00E2955A /* UserBank.m */; };
 		D6B031CA1CB3942F00E2955A /* UserJob.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C91CB3942F00E2955A /* UserJob.m */; };
 		D6B031CD1CB3947300E2955A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031CC1CB3947300E2955A /* User.m */; };
@@ -471,10 +470,8 @@
 		D647FBD31CAE92B200CBF19E /* BankList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BankList.plist; sourceTree = "<group>"; };
 		D647FBD41CAE92B200CBF19E /* ContactList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ContactList.plist; sourceTree = "<group>"; };
 		D647FBD51CAE92B200CBF19E /* ImagesTitles_More.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImagesTitles_More.plist; sourceTree = "<group>"; };
-		D64A2D091C956168002654AC /* UserInfoImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoImporter.h; sourceTree = "<group>"; };
-		D64A2D0A1C956168002654AC /* UserInfoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoImporter.m; sourceTree = "<group>"; };
-		D66B4F901CB4159E0038F312 /* UserDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultManager.h; sourceTree = "<group>"; };
-		D66B4F911CB4159E0038F312 /* UserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultManager.m; sourceTree = "<group>"; };
+		D64A2D091C956168002654AC /* MMDUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDUserInfo.h; sourceTree = "<group>"; };
+		D64A2D0A1C956168002654AC /* MMDUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDUserInfo.m; sourceTree = "<group>"; };
 		D66B4F931CB4232F0038F312 /* MMDLoggin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDLoggin.h; sourceTree = "<group>"; };
 		D66B4F941CB4232F0038F312 /* MMDLoggin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDLoggin.m; sourceTree = "<group>"; };
 		D66B4F961CB4263B0038F312 /* LogginSuccessActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogginSuccessActionHelper.h; sourceTree = "<group>"; };
@@ -510,8 +507,8 @@
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
 		D6ABF2491CB18F3C000A7A01 /* MoreCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreCellActionHelper.m; sourceTree = "<group>"; };
-		D6B031C21CB3920E00E2955A /* UserInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoItem.h; sourceTree = "<group>"; };
-		D6B031C31CB3920E00E2955A /* UserInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoItem.m; sourceTree = "<group>"; };
+		D6B031C21CB3920E00E2955A /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		D6B031C31CB3920E00E2955A /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		D6B031C51CB3940F00E2955A /* UserBank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserBank.h; sourceTree = "<group>"; };
 		D6B031C61CB3940F00E2955A /* UserBank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserBank.m; sourceTree = "<group>"; };
 		D6B031C81CB3942F00E2955A /* UserJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserJob.h; sourceTree = "<group>"; };
@@ -1289,10 +1286,10 @@
 				D647FBC11CAE920100CBF19E /* LogginModel.m */,
 				D66B4F931CB4232F0038F312 /* MMDLoggin.h */,
 				D66B4F941CB4232F0038F312 /* MMDLoggin.m */,
-				D64A2D091C956168002654AC /* UserInfoImporter.h */,
-				D64A2D0A1C956168002654AC /* UserInfoImporter.m */,
-				D6B031C21CB3920E00E2955A /* UserInfoItem.h */,
-				D6B031C31CB3920E00E2955A /* UserInfoItem.m */,
+				D64A2D091C956168002654AC /* MMDUserInfo.h */,
+				D64A2D0A1C956168002654AC /* MMDUserInfo.m */,
+				D6B031C21CB3920E00E2955A /* UserInfo.h */,
+				D6B031C31CB3920E00E2955A /* UserInfo.m */,
 				D6B031C51CB3940F00E2955A /* UserBank.h */,
 				D6B031C61CB3940F00E2955A /* UserBank.m */,
 				D6B031C81CB3942F00E2955A /* UserJob.h */,
@@ -1301,8 +1298,6 @@
 				D6B031CC1CB3947300E2955A /* User.m */,
 				D6B031CE1CB3949400E2955A /* CreditRating.h */,
 				D6B031CF1CB3949400E2955A /* CreditRating.m */,
-				D66B4F901CB4159E0038F312 /* UserDefaultManager.h */,
-				D66B4F911CB4159E0038F312 /* UserDefaultManager.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -1796,7 +1791,6 @@
 				D633563F1CB016BE000A321C /* FailureView.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
-				D66B4F921CB4159E0038F312 /* UserDefaultManager.m in Sources */,
 				D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6805E951CAD1A3300316925 /* STPickerDate.m in Sources */,
@@ -1807,11 +1801,11 @@
 				D6805EAF1CAD242500316925 /* BaseViewController.m in Sources */,
 				D633565E1CB0378F000A321C /* HeaderLabel.m in Sources */,
 				D647FBB61CAE87FD00CBF19E /* VerifyTableViewCell.m in Sources */,
-				D64A2D0B1C956168002654AC /* UserInfoImporter.m in Sources */,
+				D64A2D0B1C956168002654AC /* MMDUserInfo.m in Sources */,
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
 				D63356341CB000D3000A321C /* MessageCenterController.m in Sources */,
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,
-				D6B031C41CB3920E00E2955A /* UserInfoItem.m in Sources */,
+				D6B031C41CB3920E00E2955A /* UserInfo.m in Sources */,
 				D6E104C61C7320FD00049C3F /* main.m in Sources */,
 				D63356911CB184E8000A321C /* MoreTableViewCell+MineUIInfo.m in Sources */,
 				D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */,

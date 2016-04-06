@@ -6,17 +6,45 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "UserInfoImporter.h"
+#import "MMDUserInfo.h"
 #import "AppDelegate.h"
 
+@implementation MMDUserInfo
 
-@implementation UserInfoImporter
 
++ (instancetype)shareUserInfo{
+    
+    static MMDUserInfo *importer = nil;
+    
+    static dispatch_once_t once;
+    
+    dispatch_once(&once, ^{
+        
+        importer = [[MMDUserInfo alloc] init];
+    });
+    return importer;
+}
+
+//登录成功后更新各大属性
+- (void)updateUserInfo:(NSDictionary *)userDictionary{
+    
+    //标记当前登录成功
+    if (![SDUserDefault boolForKey:Loggin]) {
+        [SDUserDefault setBool:YES forKey:Loggin];
+    }
+    //更新
+    NSDictionary *dataDic = userDictionary[@"data"];
+    self.userInfo = dataDic[@"userInfo"];
+    self.user = dataDic[@"user"];
+    self.userBank = dataDic[@"userBank"];
+    self.userJob = dataDic[@"userJob"];
+}
+
+/*
 + (void)updateUserInfo:(NSDictionary *)userDictionary{
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        // 处理耗时操作的代码块...
-        NSDictionary *dataDic = userDictionary[@"data"];
+         NSDictionary *dataDic = userDictionary[@"data"];
         for (NSString *keyString in [dataDic allKeys]) {
             id dic = dataDic[keyString];
             if (![dic isKindOfClass:[NSNull class]]) {
@@ -25,17 +53,8 @@
         }
         //通知主线程
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *userId = [SDUserDefault valueForKey:@"userId"];
-            NSLog(@"当前用户id --> %@",userId);
         });
-        //标记当前登录成功
-        if (![SDUserDefault boolForKey:Loggin]) {
-            [SDUserDefault setBool:YES forKey:Loggin];
-        }
-        
-    });
-    
-    
+     });
 }
 + (void)saveDictionaryInUserDefault:(NSDictionary *)info{
     
@@ -60,6 +79,7 @@
         }
     }];
 }
+  */
 
 
 @end

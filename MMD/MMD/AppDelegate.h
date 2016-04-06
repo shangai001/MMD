@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+@class MMDUserInfo;
+
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic)MMDUserInfo *userInfo;
+
 
 @property (strong, nonatomic) UIWindow *window;
 

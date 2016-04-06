@@ -21,10 +21,11 @@
 #import <SVProgressHUD.h>
 #import <UIView+SDAutoLayout.h>
 #import "WarnLoginModel.h"
-#import "UserInfoImporter.h"
-#import "UserDefaultManager.h"
+#import "MMDUserInfo.h"
 #import "LogginSuccessActionHelper.h"
 #import "GraphicVerification.h"
+#import "MMDLoggin.h"
+#import "AppDelegate.h"
 
 
 #define REMEMBERBUTTONTOTOP_DEFAULT 25
@@ -210,15 +211,16 @@
     if (self.rememberPasswordButton.selected) {
         NSString *phoneNumber = self.user.phone;
         NSString *password = self.user.password;
-        [UserDefaultManager ez_RecordUser:phoneNumber password:password];
+        [MMDLoggin ez_RecordUser:phoneNumber password:password];
     }
 }
 #pragma mark AfterLogin
 - (void)handleLoginResult:(NSDictionary *)resultDictionary{
     //是否需要记住密码
     [self recordUserPassword];
-    //记录用户信息
-    [UserInfoImporter updateUserInfo:resultDictionary];
+    //记录用户信息(可以单独写出来)
+    AppDelegate *app_delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [app_delegate.userInfo updateUserInfo:resultDictionary];
     //检查用户资料完善情况
     [self checkoutUserCompleteInfo];
 }
@@ -269,7 +271,7 @@
     
     if ([textField isEqual:self.numTextField]) {
         NSString * toBePhoneNumberString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-        NSString *password = [UserDefaultManager ez_FindPasswordForPhone:toBePhoneNumberString];
+        NSString *password = [MMDLoggin ez_FindPasswordForPhone:toBePhoneNumberString];
         if (password) {
             self.passwordTextField.text = password;
             self.user.password = password;

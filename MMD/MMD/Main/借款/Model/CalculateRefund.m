@@ -12,6 +12,9 @@
 
 + (NSUInteger)calculateRefundWithNumber:(NSUInteger)loanNumber time:(NSUInteger)month{
     
+    
+    
+    
     NSUInteger refundNumber =  loanNumber * (1 + 0.8 + month * 0.1);
     
     return refundNumber;

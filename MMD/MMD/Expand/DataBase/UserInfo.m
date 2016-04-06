@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "UserInfoItem.h"
+#import "UserInfo.h"
 
-@implementation UserInfoItem
+@implementation UserInfo
 
 
 

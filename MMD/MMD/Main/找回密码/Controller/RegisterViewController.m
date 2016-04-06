@@ -17,7 +17,7 @@
 #import "RegisterContentView.h"
 #import "UIView+LoadViewFromNib.h"
 #import <MJExtension.h>
-#import "UserInfoImporter.h"
+#import "MMDUserInfo.h"
 #import "HeightHeader.h"
 
 
@@ -211,7 +211,7 @@
     NSNumber *code = dic[@"code"];
     if ([code integerValue] == 0) {
       //保存用户信息
-        [UserInfoImporter updateUserInfo:dic];
+        [MMDUserInfo updateUserInfo:dic];
     }
 }
 - (void)doneUser:(id)sender{
@@ -251,7 +251,7 @@
     //注册成功
     if (codeStatus == 0) {
         NSDictionary *data = resultDictionary[@"data"];
-        [UserInfoImporter updateUserInfo:data];
+        [MMDUserInfo updateUserInfo:data];
         [self.navigationController popViewControllerAnimated:YES];
     }else if ([resultDictionary[@"code"] integerValue] == 1){
         //注册失败
