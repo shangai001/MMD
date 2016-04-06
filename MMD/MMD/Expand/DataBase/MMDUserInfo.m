@@ -26,14 +26,9 @@
 
 //登录成功后更新各大属性
 - (void)updateUserInfo:(NSDictionary *)userDictionary{
-    
-    //标记当前登录成功
-    if (![SDUserDefault boolForKey:Loggin]) {
-        [SDUserDefault setBool:YES forKey:Loggin];
-    }
     //更新
     AppDelegate *app_delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    app_delegate.userInfo = self;
+    app_delegate.userInfo = [MMDUserInfo shareUserInfo];
 }
 
 /*

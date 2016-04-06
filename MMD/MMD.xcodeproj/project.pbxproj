@@ -174,6 +174,7 @@
 		D66B4FA21CB4EE820038F312 /* AppUserInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4FA11CB4EE820038F312 /* AppUserInfoHelper.m */; };
 		D66B4FA51CB502970038F312 /* GetCodesAndAreas.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4FA41CB502970038F312 /* GetCodesAndAreas.m */; };
 		D66B4FA81CB509280038F312 /* BankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4FA71CB509280038F312 /* BankModel.m */; };
+		D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D67D6DBF1CB53216003D4D2D /* IDCardModel.m */; };
 		D6805E931CAD1A3300316925 /* STPickerArea.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E7D1CAD1A3300316925 /* STPickerArea.m */; };
 		D6805E941CAD1A3300316925 /* NSCalendar+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E801CAD1A3300316925 /* NSCalendar+ST.m */; };
 		D6805E951CAD1A3300316925 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E821CAD1A3300316925 /* STPickerDate.m */; };
@@ -487,6 +488,8 @@
 		D66B4FA41CB502970038F312 /* GetCodesAndAreas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetCodesAndAreas.m; path = MMD/Expand/DataBase/GetCodesAndAreas.m; sourceTree = SOURCE_ROOT; };
 		D66B4FA61CB509280038F312 /* BankModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankModel.h; sourceTree = "<group>"; };
 		D66B4FA71CB509280038F312 /* BankModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankModel.m; sourceTree = "<group>"; };
+		D67D6DBE1CB53216003D4D2D /* IDCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardModel.h; sourceTree = "<group>"; };
+		D67D6DBF1CB53216003D4D2D /* IDCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardModel.m; sourceTree = "<group>"; };
 		D6805E7C1CAD1A3300316925 /* STPickerArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerArea.h; sourceTree = "<group>"; };
 		D6805E7D1CAD1A3300316925 /* STPickerArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerArea.m; sourceTree = "<group>"; };
 		D6805E7F1CAD1A3300316925 /* NSCalendar+ST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+ST.h"; sourceTree = "<group>"; };
@@ -1017,6 +1020,8 @@
 				D647FB9F1CAE87FD00CBF19E /* VerifyItem.m */,
 				D66B4FA61CB509280038F312 /* BankModel.h */,
 				D66B4FA71CB509280038F312 /* BankModel.m */,
+				D67D6DBE1CB53216003D4D2D /* IDCardModel.h */,
+				D67D6DBF1CB53216003D4D2D /* IDCardModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1827,6 +1832,7 @@
 				D647FBB61CAE87FD00CBF19E /* VerifyTableViewCell.m in Sources */,
 				D64A2D0B1C956168002654AC /* MMDUserInfo.m in Sources */,
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
+				D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */,
 				D63356341CB000D3000A321C /* MessageCenterController.m in Sources */,
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,
 				D6B031C41CB3920E00E2955A /* UserInfo.m in Sources */,

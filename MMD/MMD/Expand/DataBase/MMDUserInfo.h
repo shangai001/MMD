@@ -11,6 +11,9 @@
 
 @interface MMDUserInfo : NSObject
 
++ (instancetype)shareUserInfo;
+
+
 - (void)updateUserInfo:(NSDictionary *)userDictionary;
 
 @end

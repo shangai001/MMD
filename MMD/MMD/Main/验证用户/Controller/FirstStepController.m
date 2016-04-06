@@ -23,17 +23,28 @@
 @property (nonatomic, strong)VerifyItem *item;
 @property (nonatomic, strong)STPickerArea *cityPickerView;
 @property (nonatomic, strong)STPickerSingle *backPickerView;
+@property (weak, nonatomic) IBOutlet UIButton *nextButon;
 
 @end
 
 @implementation FirstStepController
 
+- (VerifyItem *)item{
+    if (!_item) {
+        _item = [VerifyItem new];
+    }
+    return _item;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = BACKGROUNDCOLOR;
+    [self congureNextButton];
 }
-
+- (void)congureNextButton{
+    self.nextButon.backgroundColor = REDCOLOR;
+    self.nextButon.layer.cornerRadius = 10.0f;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -46,6 +57,8 @@
         NSString *fullName = [NSString stringWithFormat:@"%@%@",dic[@"first"],dic[@"last"]];
         self.contactPhoneNumberTextField.text = phoneNumber;
         self.contactNameTextField.text = fullName;
+        self.item.contactName = fullName;
+        self.item.contactNum = phoneNumber;
     }];
 }
 #pragma mark STPickerAreaDelegate
@@ -122,19 +135,25 @@
         self.item.name = _nameTextField.text;
     }
     if ([textField isEqual:_idCardTextField]) {
-        self.item.idCardNum = _nameTextField.text;
+        self.item.idCardNum = _idCardTextField.text;
     }
+    //银行卡信息
     if ([textField isEqual:_cardTextField]) {
+        
+        NSMutableDictionary *info = @{};
         self.item.cardNum = _cardTextField.text;
     }
     if ([textField isEqual:_bankTextField]) {
         self.item.bank = _bankTextField.text;
     }
-
-    if ([textField isEqual:_contactNameTextField]) {
-    }
     if ([textField isEqual:_contactPhoneNumberTextField]) {
-
+        self.item.contactNum = _contactPhoneNumberTextField.text;
+    }
+    if ([textField isEqual:_contactNameTextField]) {
+        self.item.contactName = _contactNameTextField.text;
+    }
+    if ([textField isEqual:_contactRelationshipTextField]) {
+        self.item.contactRealtionship = _contactRelationshipTextField.text;
     }
 }// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
 
@@ -148,6 +167,13 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     return YES;
 }// called when 'return' key pressed. return NO to ignore.
+
+- (IBAction)nextPage:(UIButton *)sender {
+    
+    NSLog(@"item = %@",self.item.description);
+}
+
+
 /*
 #pragma mark - Navigation
 

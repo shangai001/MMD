@@ -26,5 +26,7 @@
 
 + (NSDictionary *)creditRating;
 
++ (NSMutableDictionary *)tokenAndUserIdDictionary;
+
 
 @end
