@@ -11,10 +11,10 @@
 @interface IDCardModel : BaseModel
 
 /**
- *  检查身份证是否已经注册
+ *  检查身份证是否已经注册,传入idcard
  *
  *  @param info    idcard
- *  @param success
+ *  @param success 传入idcard
  *  @param failure 
  */
 + (void)checkoutIDCard:(NSDictionary *)info

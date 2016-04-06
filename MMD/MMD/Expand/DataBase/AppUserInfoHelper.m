@@ -27,24 +27,18 @@
 + (void)updateUserInfo:(NSDictionary *)info{
     
     NSDictionary *dataDic = info[@"data"];
-    
-    AppDelegate *app_delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    if (app_delegate.userInfo == nil) {
-        app_delegate.userInfo = [MMDUserInfo shareUserInfo];
-    }
-    [app_delegate.userInfo updateUserInfo:dataDic];
     [self saveIno:dataDic path:[self getDocumentPath]];
 }
 + (void)saveIno:(NSDictionary *)info path:(NSString *)filePath{
     
-    //标记当前登录成功
-    //    if (![SDUserDefault boolForKey:Loggin]) {
-    //        [SDUserDefault setBool:YES forKey:Loggin];
-    //    }
-    
     NSString *fullPath = [filePath stringByAppendingPathComponent:@"UserInfo.data"];
     BOOL success = [NSKeyedArchiver archiveRootObject:info toFile:fullPath];
+    if (success) {
+        //标记当前登录成功
+        //    if (![SDUserDefault boolForKey:Loggin]) {
+        //        [SDUserDefault setBool:YES forKey:Loggin];
+        //    }
+    }
     NSAssert(success, @"归档用户信息失败");
 }
 + (NSDictionary *)unarchiveUserInfo{

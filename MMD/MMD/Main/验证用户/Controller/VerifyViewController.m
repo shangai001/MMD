@@ -29,27 +29,61 @@
 
 @implementation VerifyViewController
 
+- (FirstStepController *)first{
+    if (!_first) {
+        _first = [[FirstStepController alloc] initWithNibName:NSStringFromClass([FirstStepController class]) bundle:[NSBundle mainBundle]];
+    }
+    return _first;
+}
+- (SecondStaepController *)second{
+    if (!_second) {
+        _second = [[SecondStaepController alloc] initWithNibName:NSStringFromClass([SecondStaepController class]) bundle:[NSBundle mainBundle]];
+    }
+    return  _second;
+}
+- (ThirdStepController *)third{
+    if (!_third) {
+        _third = [[ThirdStepController alloc] initWithNibName:NSStringFromClass([ThirdStepController class]) bundle:[NSBundle mainBundle]];
+    }
+    return _third;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"首次信息确认";
     self.view.backgroundColor = BACKGROUNDCOLOR;
     [self initStageView];
-    [self addStepsController];
+    [self addDissmissKeyboardGesture];
 }
 - (void)initStageView{
     self.stageView = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(STAGETOLEFT, kTopLayoutGuide, YYScreenSize().width - 2 * STAGETOLEFT , StageHeight)];
     [self.view addSubview:self.stageView];
 }
-- (void)addStepsController{
-    self.first = [[FirstStepController alloc] initWithNibName:NSStringFromClass([FirstStepController class]) bundle:[NSBundle mainBundle]];
-    [self addChildViewController:self.first];
-    
-    self.second = [[SecondStaepController alloc] initWithNibName:NSStringFromClass([SecondStaepController class]) bundle:[NSBundle mainBundle]];
-    [self addChildViewController:self.second];
-    
-    self.third = [[ThirdStepController alloc] initWithNibName:NSStringFromClass([ThirdStepController class]) bundle:[NSBundle mainBundle]];
-    //添加autolayout
+- (void)addDissmissKeyboardGesture{
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ez_removeKeyboard:)];
+    [self.view addGestureRecognizer:tap];
+}
+- (void)ez_removeKeyboard:(id)sender{
+    [self.view endEditing:YES];
+}
+- (void)addSDautoLayout:(UIView *)view{
+    view.sd_layout
+    .leftEqualToView(self.view)
+    .rightEqualToView(self.view)
+    .topSpaceToView(self.view,kTopLayoutGuide + StageHeight)
+    .bottomEqualToView(self.view);
+}
+- (void)setStatus:(NSInteger)status{
+    _status = status;
+    if (![self.first.parentViewController isEqual:self]) {
+        [self addChildViewController:self.first];
+    }
+    if (![self.second.parentViewController isEqual:self]) {
+         [self addChildViewController:self.second];
+    }
+    if (![self.third.parentViewController isEqual:self]) {
+        [self addChildViewController:self.third];
+    }
     if (_status == 0) {
         [self.view addSubview:self.first.view];
         [self addSDautoLayout:self.first.view];
@@ -63,16 +97,6 @@
         [self addSDautoLayout:self.third.view];
         [self.third didMoveToParentViewController:self];
     }
-}
-- (void)addSDautoLayout:(UIView *)view{
-    view.sd_layout
-    .leftEqualToView(self.view)
-    .rightEqualToView(self.view)
-    .topSpaceToView(self.view,kTopLayoutGuide + StageHeight)
-    .bottomEqualToView(self.view);
-}
-- (void)setStatus:(NSInteger)status{
-    _status = status;
 }
 - (void)transitionFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL))completion{
     /*

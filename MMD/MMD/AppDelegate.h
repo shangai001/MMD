@@ -8,14 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "MMDUserInfo.h"
 
 
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic)MMDUserInfo *userInfo;
 
 
 @property (strong, nonatomic) UIWindow *window;

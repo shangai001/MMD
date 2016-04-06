@@ -26,9 +26,6 @@
 
 //登录成功后更新各大属性
 - (void)updateUserInfo:(NSDictionary *)userDictionary{
-    //更新
-    AppDelegate *app_delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    app_delegate.userInfo = [MMDUserInfo shareUserInfo];
 }
 
 /*

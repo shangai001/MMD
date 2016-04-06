@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
+//舍弃了
+
 @interface MMDUserInfo : NSObject
 
 + (instancetype)shareUserInfo;

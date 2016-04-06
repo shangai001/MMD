@@ -14,6 +14,7 @@
 + (void)getBankList:(NSDictionary *)info
        completation:(successHandler)success
             failure:(failureHandler)failure{
+    
     NSMutableDictionary *userIdTokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
     
     NSString *URL = [NSString stringWithFormat:@"%@/user/getBanks",kHostURL];

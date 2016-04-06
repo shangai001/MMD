@@ -175,6 +175,7 @@
 		D66B4FA51CB502970038F312 /* GetCodesAndAreas.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4FA41CB502970038F312 /* GetCodesAndAreas.m */; };
 		D66B4FA81CB509280038F312 /* BankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4FA71CB509280038F312 /* BankModel.m */; };
 		D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D67D6DBF1CB53216003D4D2D /* IDCardModel.m */; };
+		D67D6DC61CB54CFA003D4D2D /* VerifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D67D6DC51CB54CFA003D4D2D /* VerifyModel.m */; };
 		D6805E931CAD1A3300316925 /* STPickerArea.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E7D1CAD1A3300316925 /* STPickerArea.m */; };
 		D6805E941CAD1A3300316925 /* NSCalendar+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E801CAD1A3300316925 /* NSCalendar+ST.m */; };
 		D6805E951CAD1A3300316925 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805E821CAD1A3300316925 /* STPickerDate.m */; };
@@ -490,6 +491,8 @@
 		D66B4FA71CB509280038F312 /* BankModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankModel.m; sourceTree = "<group>"; };
 		D67D6DBE1CB53216003D4D2D /* IDCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardModel.h; sourceTree = "<group>"; };
 		D67D6DBF1CB53216003D4D2D /* IDCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardModel.m; sourceTree = "<group>"; };
+		D67D6DC41CB54CFA003D4D2D /* VerifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyModel.h; sourceTree = "<group>"; };
+		D67D6DC51CB54CFA003D4D2D /* VerifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyModel.m; sourceTree = "<group>"; };
 		D6805E7C1CAD1A3300316925 /* STPickerArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerArea.h; sourceTree = "<group>"; };
 		D6805E7D1CAD1A3300316925 /* STPickerArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerArea.m; sourceTree = "<group>"; };
 		D6805E7F1CAD1A3300316925 /* NSCalendar+ST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+ST.h"; sourceTree = "<group>"; };
@@ -1022,6 +1025,8 @@
 				D66B4FA71CB509280038F312 /* BankModel.m */,
 				D67D6DBE1CB53216003D4D2D /* IDCardModel.h */,
 				D67D6DBF1CB53216003D4D2D /* IDCardModel.m */,
+				D67D6DC41CB54CFA003D4D2D /* VerifyModel.h */,
+				D67D6DC51CB54CFA003D4D2D /* VerifyModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1803,6 +1808,7 @@
 				D6B031CA1CB3942F00E2955A /* UserJob.m in Sources */,
 				D6805EA81CAD1CF500316925 /* pinyin.c in Sources */,
 				D647FB8D1CAE814300CBF19E /* HttpRequest.m in Sources */,
+				D67D6DC61CB54CFA003D4D2D /* VerifyModel.m in Sources */,
 				D647FB5D1CAE7F7A00CBF19E /* NewApplyViewController.m in Sources */,
 				D647FB5C1CAE7F7A00CBF19E /* LoanViewController.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,

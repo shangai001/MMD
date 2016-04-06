@@ -13,8 +13,13 @@
 #import "HeightHeader.h"
 #import "ColorHeader.h"
 #import "BankModel.h"
-#import <NSArray+YYAdd.h>
+//#import <NSArray+YYAdd.h>
+#import "VerifyModel.h"
+#import <MJExtension.h>
 #import "ZCAddressBook.h"
+#import "IDCardModel.h"
+#import <SVProgressHUD.h>
+#import "VerifyViewController.h"
 
 
 
@@ -124,6 +129,20 @@
         
     }];
 }
+- (void)checkoutIDCard:(NSString *)idcard{
+    
+    NSDictionary *idcardInfo = @{@"idcard":idcard};
+    [IDCardModel checkoutIDCard:idcardInfo completation:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            self.item.cardNum = _cardTextField.text;
+        }else{
+            [SVProgressHUD showInfoWithStatus:resultDic[@"msg"]];
+        }
+        
+    } failure:^(NSError *error) {
+        NSAssert(error, @"验证身份证出错");
+    }];
+}
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     
 }// became first responder
@@ -136,18 +155,19 @@
     }
     if ([textField isEqual:_idCardTextField]) {
         self.item.idCardNum = _idCardTextField.text;
+        [self checkoutIDCard:_idCardTextField.text];
     }
-    //银行卡信息
+    //银行卡信息---可以检查银行卡也可以不用检查
     if ([textField isEqual:_cardTextField]) {
-        
-        NSMutableDictionary *info = @{};
+
         self.item.cardNum = _cardTextField.text;
     }
     if ([textField isEqual:_bankTextField]) {
         self.item.bank = _bankTextField.text;
     }
     if ([textField isEqual:_contactPhoneNumberTextField]) {
-        self.item.contactNum = _contactPhoneNumberTextField.text;
+//        self.item.contactNum = _contactPhoneNumberTextField.text;
+        [self systemAddressClick:_contactPhoneNumberTextField];
     }
     if ([textField isEqual:_contactNameTextField]) {
         self.item.contactName = _contactNameTextField.text;
@@ -170,7 +190,20 @@
 
 - (IBAction)nextPage:(UIButton *)sender {
     
+    VerifyViewController *paVC = (VerifyViewController *)self.parentViewController;
+    paVC.status = 1;
+    /*
     NSLog(@"item = %@",self.item.description);
+    NSMutableDictionary *userItemDic = self.item.mj_keyValues;;
+    [VerifyModel postFirstInformation:userItemDic success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+        }else{
+            [SVProgressHUD showInfoWithStatus:@"提交信息失败"];
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+     */
 }
 
 
