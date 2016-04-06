@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "MMDUserInfo.h"
 
-@class MMDUserInfo;
+
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

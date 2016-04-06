@@ -14,5 +14,6 @@
 @interface VerifyViewController : BaseViewController
 
 @property (nonatomic,copy)VerifyItem *item;
+@property (nonatomic,assign)NSInteger status;
 
 @end

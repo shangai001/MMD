@@ -21,16 +21,15 @@
 #import <SVProgressHUD.h>
 #import <UIView+SDAutoLayout.h>
 #import "WarnLoginModel.h"
-#import "MMDUserInfo.h"
 #import "LogginSuccessActionHelper.h"
 #import "GraphicVerification.h"
 #import "MMDLoggin.h"
-#import "AppDelegate.h"
+#import "AppUserInfoHelper.h"
 
 
 #define REMEMBERBUTTONTOTOP_DEFAULT 25
 #define INPUTROW_HEIGHT 30
-#define AuditState @"auditState"
+
 
 
 
@@ -219,14 +218,14 @@
     //是否需要记住密码
     [self recordUserPassword];
     //记录用户信息(可以单独写出来)
-    AppDelegate *app_delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [app_delegate.userInfo updateUserInfo:resultDictionary];
+    [AppUserInfoHelper updateUserInfo:resultDictionary];
     //检查用户资料完善情况
     [self checkoutUserCompleteInfo];
 }
 - (void)checkoutUserCompleteInfo{
     
-    NSInteger status = [[SDUserDefault objectForKey:AuditState] integerValue];
+    NSDictionary *user = [AppUserInfoHelper user];
+    NSInteger status = [[user objectForKey:AuditState] integerValue];
     [LogginSuccessActionHelper jumpFromViewController:self userStatus:status];
 }
 #pragma mark ButtonOutletAction

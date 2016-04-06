@@ -38,6 +38,9 @@
     self.user = dataDic[@"user"];
     self.userBank = dataDic[@"userBank"];
     self.userJob = dataDic[@"userJob"];
+    
+    AppDelegate *app_delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    app_delegate.userInfo = self;
 }
 
 /*

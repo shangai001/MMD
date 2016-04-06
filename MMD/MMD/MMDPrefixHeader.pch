@@ -15,6 +15,7 @@
 #define SDUserDefault   [NSUserDefaults standardUserDefaults]
 
 #define Loggin @"isLoggin"
+#define AuditState @"auditState"
 
 #define WeakSelf __weak typeof(self)weakSelf = self
 

@@ -11,9 +11,7 @@
 #import "MMLogViewController.h"
 #import "VerifyViewController.h"
 #import "BaseNavgationController.h"
-
-//-------test----------
-#import "HttpRequest.h"
+#import "AppUserInfoHelper.h"
 #import "LoanVerifyController.h"
 #import "CalculateRefund.h"
 
@@ -121,32 +119,21 @@
 }
 - (IBAction)nextAction:(id)sender {
     //判断是否登录
-    BOOL isLogged = NO;
+    BOOL isLogged = [SDUserDefault boolForKey:Loggin];
     if (isLogged) {
         //已经登录
-        
+        NSDictionary *user = [AppUserInfoHelper user];
+        NSInteger status = [[user objectForKey:AuditState] integerValue];
+        //跳转到父Controller
+        VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
+#warning 此处需要修改
+        verifyer.status = 0;
+        [self.navigationController pushViewController:verifyer animated:YES];
     }else{
-        /*
-        NSString *testUrl = @"http://123.103.22.206:8081/api/getBootCoverImage?userId=0&type=1&version=1.2.7";
-        [HttpRequest getWithURLString:testUrl parameters:nil success:^(id responseObject) {
-            NSLog(@"-->%@",responseObject);
-        } failure:^(NSError *error) {
-            NSLog(@"-->%@",error);
-        }];
-         */
-
         //未登录
         MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
         [self.navigationController pushViewController:logger animated:YES];
-        /*
-        LoanVerifyController *loanVerifyer = [LoanVerifyController new];
-        [self.navigationController pushViewController:loanVerifyer animated:YES];
-         */
     }
-    /*
-    VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
-    [self.navigationController pushViewController:verifyer animated:YES];
-     */
     
 }
 #pragma mark UpdateRefundNumber

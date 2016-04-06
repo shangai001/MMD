@@ -8,34 +8,43 @@
 
 #import "LogginSuccessActionHelper.h"
 #import "MMLogViewController.h"
+#import "VerifyViewController.h"
+#import "FirstStepController.h"
+#import "SecondStaepController.h"
+#import "ThirdStepController.h"
 
+/*
+ if (status == 0) {
+ //刚刚注册
+ 
+ }else if (status == 1){
+ //完善第一步信息
+ 
+ }else if (status == 2){
+ //完善第二步信息
+ 
+ }else if (status == 3){
+ //完善第三部信息
+ 
+ }else if (status == 4){
+ //通过审核
+ 
+ }
+
+ */
 @implementation LogginSuccessActionHelper
 
 + (void)jumpFromViewController:(MMLogViewController *)logger userStatus:(NSInteger)status{
     
-    if (status == 0) {
-        //刚刚注册
-        
-    }else if (status == 1){
-        //完善第一步信息
-        
-    }else if (status == 2){
-        //完善第二步信息
-        
-    }else if (status == 3){
-        //完善第三部信息
-        
-    }else if (status == 4){
-        //通过审核
-        
+    if (status < 3 && status >= 0) {
+        //跳转到父Controller
+        VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
+#warning 此处需要修改
+        verifyer.status = 0;
+        [logger.navigationController pushViewController:verifyer animated:YES];
+    }else{
+        //已经完善信息，返回登录前的页面
+        [logger.navigationController popViewControllerAnimated:YES];
     }
-    
-    /*
-     //如果是第一次登录，验证身份证号码
-     VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
-     [self.navigationController pushViewController:verifyer animated:YES];
-     */
-
-    
-}
+ }
 @end

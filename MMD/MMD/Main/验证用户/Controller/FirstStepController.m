@@ -12,9 +12,11 @@
 #import "STPickerArea.h"
 #import "HeightHeader.h"
 #import "ColorHeader.h"
-#import <Masonry.h>
+#import "BankModel.h"
 #import <NSArray+YYAdd.h>
 #import "ZCAddressBook.h"
+
+
 
 @interface FirstStepController ()<UITextFieldDelegate,STPickerAreaDelegate,STPickerSingleDelegate>
 
@@ -56,53 +58,59 @@
 }
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     if ([textField isEqual:_cityTextField]) {
-        [self.view endEditing:YES];
-        self.cityPickerView = [[STPickerArea alloc]init];
-        [self.cityPickerView setDelegate:self];
-        [self.cityPickerView setContentMode:STPickerContentModeBottom];
-        [self.cityPickerView show];
+        [self showAreaPicker];
         return NO;
     }
     if ([textField isEqual:_bankTextField]) {
-        [self.view endEditing:YES];
-        if (!self.backPickerView) {
-            self.backPickerView = [[STPickerSingle alloc] init];
-        }
-        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BankList" ofType:@"plist"];
-        NSData *arrayData = [NSData dataWithContentsOfFile:plistPath];
-        NSMutableArray *backArray = [NSMutableArray arrayWithPlistData:arrayData];
-        [self.backPickerView setArrayData:backArray];
+        [self showBankPicker];
+        return NO;
+    }
+    return YES;
+}// return NO to disallow editing.
+- (NSMutableArray *)formatBankList:(NSArray *)data{
+    NSMutableArray *bankArray = [NSMutableArray arrayWithCapacity:data.count];
+    for (NSDictionary *dic in data) {
+        NSString *name = dic[@"name"];
+        [bankArray addObject:name];
+    }
+    return bankArray;
+}
+#pragma mark ShowPickerView
+- (void)showAreaPicker{
+    [self.view endEditing:YES];
+    self.cityPickerView = [[STPickerArea alloc]init];
+    [self.cityPickerView setDelegate:self];
+    [self.cityPickerView setContentMode:STPickerContentModeBottom];
+    [self.cityPickerView show];
+}
+- (void)showBankPicker{
+    
+    [self.view endEditing:YES];
+    if (!self.backPickerView) {
+        self.backPickerView = [[STPickerSingle alloc] init];
+    }
+    //加载本地数据
+    /*
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"BankList" ofType:@"plist"];
+    NSData *arrayData = [NSData dataWithContentsOfFile:plistPath];
+    NSMutableArray *backArray = [NSMutableArray arrayWithPlistData:arrayData];
+     */
+    [BankModel getBankList:nil completation:^(NSDictionary *resultDic) {
+        NSArray *data = resultDic[@"data"];
+        NSMutableArray *bankArray = [self formatBankList:data];
+        [self.backPickerView setArrayData:bankArray];
         [self.backPickerView ez_reloadAllComponents];
         [self.backPickerView setTitle:@"请选择银行"];
         self.backPickerView.widthPickerComponent = 160;
         [self.backPickerView setContentMode:STPickerContentModeBottom];
         [self.backPickerView setDelegate:self];
         [self.backPickerView show];
-        return NO;
-    }
-    if ([textField isEqual:_contactNameTextField]) {
-        [self.view endEditing:YES];
-        if (!self.backPickerView) {
-            self.backPickerView = [[STPickerSingle alloc] init];
-        }
-        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"ContactList" ofType:@"plist"];
-        NSData *arrayData = [NSData dataWithContentsOfFile:plistPath];
-        NSMutableArray *backArray = [NSMutableArray arrayWithPlistData:arrayData];
-        [self.backPickerView setArrayData:backArray];
-        [self.backPickerView ez_reloadAllComponents];
-        [self.backPickerView setTitle:@"请选择联系人姓名"];
-        self.backPickerView.widthPickerComponent = 120;
-        [self.backPickerView setContentMode:STPickerContentModeBottom];
-        [self.backPickerView setDelegate:self];
-        [self.backPickerView show];
-        return NO;
-    }
-    return YES;
-}// return NO to disallow editing.
+    } failure:^(NSError *error) {
+        
+    }];
+}
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-    if ([textField isFirstResponder]) {
-        NSLog(@"成为第一响应者");
-    }
+    
 }// became first responder
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
     return YES;

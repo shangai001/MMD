@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface VerifyItem : NSObject
+
 @property (nonatomic, copy)NSString *name;
 @property (nonatomic, copy)NSString *idCardNum;
 @property (nonatomic, copy)NSString *cardNum;

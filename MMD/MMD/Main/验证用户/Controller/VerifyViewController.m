@@ -13,7 +13,7 @@
 #import "FirstStepController.h"
 #import "SecondStaepController.h"
 #import "ThirdStepController.h"
-#import <Masonry.h>
+#import <UIView+SDAutoLayout.h>
 
 @interface VerifyViewController ()
 
@@ -49,18 +49,30 @@
     [self addChildViewController:self.second];
     
     self.third = [[ThirdStepController alloc] initWithNibName:NSStringFromClass([ThirdStepController class]) bundle:[NSBundle mainBundle]];
-    [self addChildViewController:self.third];
-    
-    [self.view addSubview:self.first.view];
-//    self.first.view.frame = CGRectMake(0, kTopLayoutGuide + StageHeight, YYScreenSize().width, YYScreenSize().height - kTopLayoutGuide - StageHeight);
-    [self.first.view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view.mas_top).with.offset(kTopLayoutGuide + StageHeight);
-        make.left.mas_equalTo(self.view.mas_left);
-        make.bottom.mas_equalTo(self.view.mas_bottom);
-        make.right.mas_equalTo(self.view.mas_right);
-    }];
-    
-    [self.first didMoveToParentViewController:self];
+    //添加autolayout
+    if (_status == 0) {
+        [self.view addSubview:self.first.view];
+        [self addSDautoLayout:self.first.view];
+        [self.first didMoveToParentViewController:self];
+    }else if (_status == 1){
+        [self.view addSubview:self.second.view];
+        [self addSDautoLayout:self.second.view];
+        [self.second didMoveToParentViewController:self];
+    }else if (_status == 2){
+        [self.view addSubview:self.third.view];
+        [self addSDautoLayout:self.third.view];
+        [self.third didMoveToParentViewController:self];
+    }
+}
+- (void)addSDautoLayout:(UIView *)view{
+    view.sd_layout
+    .leftEqualToView(self.view)
+    .rightEqualToView(self.view)
+    .topSpaceToView(self.view,kTopLayoutGuide + StageHeight)
+    .bottomEqualToView(self.view);
+}
+- (void)setStatus:(NSInteger)status{
+    _status = status;
 }
 - (void)transitionFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL))completion{
     /*
@@ -78,12 +90,13 @@
     [UIView animateKeyframesWithDuration:0.15 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubicPaced animations:^{
         [self.view addSubview:toViewController.view];
         [fromViewController willMoveToParentViewController:nil];
-        [toViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.view.mas_top).with.offset(kTopLayoutGuide + StageHeight);
-            make.left.mas_equalTo(self.view.mas_left);
-            make.bottom.mas_equalTo(self.view.mas_bottom);
-            make.right.mas_equalTo(self.view.mas_right);
-        }];
+        //添加autolayout
+        toViewController.view.sd_layout
+        .leftEqualToView(self.view)
+        .rightEqualToView(self.view)
+        .bottomEqualToView(self.view)
+        .topSpaceToView(self.view,kTopLayoutGuide + StageHeight);
+        
     } completion:^(BOOL finished) {
         [toViewController didMoveToParentViewController:self];
     }];
