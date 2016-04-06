@@ -12,62 +12,81 @@
 
 @implementation AppUserInfoHelper
 
++ (NSString *)getDocumentPath {
+    
+    NSArray *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = documents[0];
+    return documentPath;
+}
 + (void)updateUserInfo:(NSDictionary *)info{
     
+    NSDictionary *dataDic = info[@"data"];
+    
     AppDelegate *app_delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
     if (app_delegate.userInfo == nil) {
         app_delegate.userInfo = [[MMDUserInfo alloc] init];
     }
-    [app_delegate.userInfo updateUserInfo:info];
     
+    [app_delegate.userInfo updateUserInfo:dataDic];
+    
+    [self saveIno:dataDic path:[self getDocumentPath]];
 }
-+ (MMDUserInfo *)getCurrentUserInfo{
++ (void)saveIno:(NSDictionary *)info path:(NSString *)filePath{
     
-    AppDelegate *app_delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    if ([app_delegate.userInfo isKindOfClass:[NSNull class]]) {
-        return nil;
-    }
-    return app_delegate.userInfo;
+    NSString *fullPath = [filePath stringByAppendingPathComponent:@"UserInfo.data"];
+    BOOL success = [NSKeyedArchiver archiveRootObject:info toFile:fullPath];
+    NSAssert(success, @"归档用户信息失败");
+}
++ (NSDictionary *)unarchiveUserInfo{
     
+    NSString *filePath = [self getDocumentPath];
+    
+    NSString *fullPath = [filePath stringByAppendingPathComponent:@"UserInfo.data"];
+    
+    NSDictionary *userInfo = [NSKeyedUnarchiver unarchiveObjectWithFile:fullPath];
+    
+    return userInfo;
 }
 + (NSDictionary *)user{
     
-    MMDUserInfo *item = [self getCurrentUserInfo];
-    if ([item.user isKindOfClass:[NSNull class]]) {
+    NSDictionary *fullDic = [self unarchiveUserInfo];
+    
+    if ([fullDic[@"user"] isKindOfClass:[NSNull class]]) {
         return nil;
     }
-    return item.user;
+    return fullDic[@"user"];
 }
 + (NSDictionary *)userBank{
     
-    MMDUserInfo *item = [self getCurrentUserInfo];
-    if ([item.userBank isKindOfClass:[NSNull class]]) {
+    NSDictionary *fullDic = [self unarchiveUserInfo];
+    if ([fullDic[@"userBank"] isKindOfClass:[NSNull class]]) {
         return nil;
     }
-    return item.userBank;
+    return fullDic[@"userBank"];
 }
 + (NSDictionary *)userInfo{
     
-    MMDUserInfo *item = [self getCurrentUserInfo];
-    if ([item.userInfo isKindOfClass:[NSNull class]]) {
+    NSDictionary *fullDic = [self unarchiveUserInfo];
+    if ([fullDic[@"userInfo"] isKindOfClass:[NSNull class]]) {
         return nil;
     }
-    return item.userInfo;
+    return fullDic[@"userInfo"];
 }
 + (NSDictionary *)userJob{
     
-    MMDUserInfo *item = [self getCurrentUserInfo];
-    if ([item.userJob isKindOfClass:[NSNull class]]) {
+    NSDictionary *fullDic = [self unarchiveUserInfo];
+    if ([fullDic[@"userJob"] isKindOfClass:[NSNull class]]) {
         return nil;
     }
-    return item.userJob;
+    return fullDic[@"userJob"];
 }
 + (NSDictionary *)creditRating{
     
-    MMDUserInfo *item = [self getCurrentUserInfo];
-    if ([item.creditRating isKindOfClass:[NSNull class]]) {
+    NSDictionary *fullDic = [self unarchiveUserInfo];
+    if ([fullDic[@"creditRating"] isKindOfClass:[NSNull class]]) {
         return nil;
     }
-    return item.creditRating;
+    return fullDic[@"creditRating"];
 }
 @end

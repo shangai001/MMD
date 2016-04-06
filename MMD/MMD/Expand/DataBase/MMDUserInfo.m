@@ -19,7 +19,6 @@
     static dispatch_once_t once;
     
     dispatch_once(&once, ^{
-        
         importer = [[MMDUserInfo alloc] init];
     });
     return importer;
@@ -33,12 +32,6 @@
         [SDUserDefault setBool:YES forKey:Loggin];
     }
     //更新
-    NSDictionary *dataDic = userDictionary[@"data"];
-    self.userInfo = dataDic[@"userInfo"];
-    self.user = dataDic[@"user"];
-    self.userBank = dataDic[@"userBank"];
-    self.userJob = dataDic[@"userJob"];
-    
     AppDelegate *app_delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     app_delegate.userInfo = self;
 }

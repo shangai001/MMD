@@ -16,8 +16,6 @@
 
 + (void)updateUserInfo:(NSDictionary *)info;
 
-+ (MMDUserInfo *)getCurrentUserInfo;
-
 + (NSDictionary *)userInfo;
 
 + (NSDictionary *)userBank;

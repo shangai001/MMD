@@ -43,7 +43,9 @@
     [[ZCAddressBook shareControl]showPhoneViewWithTarget:self Block:^(BOOL isSuccess, NSDictionary *dic) {
         NSArray *selectedPerson = dic[@"telphone"];
         NSString *phoneNumber = [NSString stringWithFormat:@"%@",[selectedPerson lastObject]];
+        NSString *fullName = [NSString stringWithFormat:@"%@%@",dic[@"first"],dic[@"last"]];
         self.contactPhoneNumberTextField.text = phoneNumber;
+        self.contactNameTextField.text = fullName;
     }];
 }
 #pragma mark STPickerAreaDelegate

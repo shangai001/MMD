@@ -13,10 +13,4 @@
 
 - (void)updateUserInfo:(NSDictionary *)userDictionary;
 
-@property (nonatomic, strong)NSDictionary *userInfo;
-@property (nonatomic, strong)NSDictionary *userBank;
-@property (nonatomic, strong)NSDictionary *userJob;
-@property (nonatomic, strong)NSDictionary *user;
-@property (nonatomic, strong)NSDictionary *creditRating;
-
 @end
