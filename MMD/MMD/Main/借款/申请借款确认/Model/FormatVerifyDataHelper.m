@@ -17,7 +17,7 @@
 
 + (NSMutableArray *)formatDatarefundMoth:(NSUInteger)month{
     
-    NSArray *originalArray = [ReadFiler readArrayFile:@"LoanVerifySectionTitle1" fileType:@"txt"];
+    NSArray *originalArray = [ReadFiler readArrayFile:@"LoanVerifySectionTitle" fileType:@"txt"];
     NSMutableArray *baseMutaleArray = [NSMutableArray arrayWithArray:originalArray];
     return baseMutaleArray;
 //    NSMutableArray *tempArray = [NSMutableArray array];
