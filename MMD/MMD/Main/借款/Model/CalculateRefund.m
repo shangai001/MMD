@@ -11,20 +11,11 @@
 
 @implementation CalculateRefund
 
-+ (NSString *)interestFilePath{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"InterestFile" ofType:@"text"];
-    return path;
-}
 + (NSDictionary *)interestDictionary{
-    
-    
-    NSString *path = [self interestFilePath];
-    NSError *error = nil;
-    NSString *text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
-    
-    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSLog(@"解析出来的字典是 %@  蚊子 %@",dic,text);
-    return dic;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"mmd" ofType:@"txt"];
+    NSData *mmdData = [NSData dataWithContentsOfFile:path];
+    NSDictionary *object = [NSJSONSerialization JSONObjectWithData:mmdData options:NSJSONReadingAllowFragments error:nil];
+    return object;
 }
 
 + (NSUInteger)calculateRefundWithNumber:(NSUInteger)loanNumber time:(NSUInteger)month{

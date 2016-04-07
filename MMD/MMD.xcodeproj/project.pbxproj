@@ -189,10 +189,10 @@
 		D6805EAF1CAD242500316925 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805EAE1CAD242500316925 /* BaseViewController.m */; };
 		D688B9101CB68F3B00CC80FF /* SecondVerifyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B90F1CB68F3B00CC80FF /* SecondVerifyItem.m */; };
 		D688B9131CB69BE500CC80FF /* AreaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9121CB69BE500CC80FF /* AreaHelper.m */; };
-		D688B9171CB6A0D400CC80FF /* IDVerify.text in Resources */ = {isa = PBXBuildFile; fileRef = D688B9161CB6A0D400CC80FF /* IDVerify.text */; };
+		D688B9171CB6A0D400CC80FF /* IDVerify.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9161CB6A0D400CC80FF /* IDVerify.txt */; };
 		D688B91B1CB6AAD100CC80FF /* FaceRecongnizeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9191CB6AAD100CC80FF /* FaceRecongnizeController.m */; };
 		D688B91C1CB6AAD100CC80FF /* FaceRecongnizeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D688B91A1CB6AAD100CC80FF /* FaceRecongnizeController.xib */; };
-		D688B91E1CB6B31400CC80FF /* InterestFile.text in Sources */ = {isa = PBXBuildFile; fileRef = D688B91D1CB6B31400CC80FF /* InterestFile.text */; };
+		D688B9221CB6C11B00CC80FF /* mmd.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9211CB6C11B00CC80FF /* mmd.txt */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
 		D6B031C41CB3920E00E2955A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C31CB3920E00E2955A /* UserInfo.m */; };
@@ -528,11 +528,11 @@
 		D688B90F1CB68F3B00CC80FF /* SecondVerifyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVerifyItem.m; sourceTree = "<group>"; };
 		D688B9111CB69BE500CC80FF /* AreaHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaHelper.h; sourceTree = "<group>"; };
 		D688B9121CB69BE500CC80FF /* AreaHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaHelper.m; sourceTree = "<group>"; };
-		D688B9161CB6A0D400CC80FF /* IDVerify.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = IDVerify.text; sourceTree = "<group>"; };
+		D688B9161CB6A0D400CC80FF /* IDVerify.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IDVerify.txt; sourceTree = "<group>"; };
 		D688B9181CB6AAD100CC80FF /* FaceRecongnizeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceRecongnizeController.h; sourceTree = "<group>"; };
 		D688B9191CB6AAD100CC80FF /* FaceRecongnizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceRecongnizeController.m; sourceTree = "<group>"; };
 		D688B91A1CB6AAD100CC80FF /* FaceRecongnizeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceRecongnizeController.xib; sourceTree = "<group>"; };
-		D688B91D1CB6B31400CC80FF /* InterestFile.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = InterestFile.text; sourceTree = "<group>"; };
+		D688B9211CB6C11B00CC80FF /* mmd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mmd.txt; sourceTree = "<group>"; };
 		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
@@ -697,7 +697,7 @@
 			children = (
 				D63356701CB10CBF000A321C /* CalculateRefund.h */,
 				D63356711CB10CBF000A321C /* CalculateRefund.m */,
-				D688B91D1CB6B31400CC80FF /* InterestFile.text */,
+				D688B9211CB6C11B00CC80FF /* mmd.txt */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1029,7 +1029,7 @@
 				D647FB9A1CAE87FD00CBF19E /* VerifyViewController.h */,
 				D647FB9B1CAE87FD00CBF19E /* VerifyViewController.m */,
 				D647FB9C1CAE87FD00CBF19E /* VerifyViewController.xib */,
-				D688B9161CB6A0D400CC80FF /* IDVerify.text */,
+				D688B9161CB6A0D400CC80FF /* IDVerify.txt */,
 				D688B9181CB6AAD100CC80FF /* FaceRecongnizeController.h */,
 				D688B9191CB6AAD100CC80FF /* FaceRecongnizeController.m */,
 				D688B91A1CB6AAD100CC80FF /* FaceRecongnizeController.xib */,
@@ -1667,7 +1667,7 @@
 				D6F01DE71C7C6BFA00EBC84E /* add@2x.png in Resources */,
 				D6F01DE61C7C6BFA00EBC84E /* add_press@3x.png in Resources */,
 				D6060A221C76FF0E000DB373 /* qq空间@2x.png in Resources */,
-				D688B9171CB6A0D400CC80FF /* IDVerify.text in Resources */,
+				D688B9171CB6A0D400CC80FF /* IDVerify.txt in Resources */,
 				D60609A81C76FF0E000DB373 /* 电话图标@3x.png in Resources */,
 				D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */,
 				D60609DE1C76FF0E000DB373 /* visible@3x.png in Resources */,
@@ -1736,6 +1736,7 @@
 				D633566C1CB04320000A321C /* SureViewController.xib in Resources */,
 				D60609F91C76FF0E000DB373 /* approve_off@3x.png in Resources */,
 				D606099E1C76FF0E000DB373 /* 步骤@2x.png in Resources */,
+				D688B9221CB6C11B00CC80FF /* mmd.txt in Resources */,
 				D60609F01C76FF0E000DB373 /* txweibo@3x.png in Resources */,
 				D6060A231C76FF0E000DB373 /* qq空间@3x.png in Resources */,
 				D6060A131C76FF0E000DB373 /* creditline@2x.png in Resources */,
@@ -1916,7 +1917,6 @@
 				D633567E1CB172E3000A321C /* FullUserInfo.m in Sources */,
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
 				D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */,
-				D688B91E1CB6B31400CC80FF /* InterestFile.text in Sources */,
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,
 				D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,

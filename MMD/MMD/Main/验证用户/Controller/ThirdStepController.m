@@ -26,10 +26,11 @@
 }
 - (void)setDefaultContentText{
     
-    NSString *textFilePath = [[NSBundle mainBundle] pathForResource:@"IDVerify" ofType:@"text"];
+    NSString *textFilePath = [[NSBundle mainBundle] pathForResource:@"IDVerify" ofType:@"txt"];
     NSError *fileError = nil;
     NSString *defaultText = [NSString stringWithContentsOfFile:textFilePath encoding:NSUTF8StringEncoding error:&fileError];
-    NSAssert1(fileError, @"解析默认身份验证文本出错", fileError);
+    NSLog(@"fileErrror %@",fileError);
+    NSAssert(!fileError, @"解析默认身份验证文本出错");
     self.contentLabel.text = defaultText;
 }
 - (void)addAutolayout{
