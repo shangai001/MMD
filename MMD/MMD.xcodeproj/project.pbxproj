@@ -193,6 +193,7 @@
 		D688B91B1CB6AAD100CC80FF /* FaceRecongnizeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9191CB6AAD100CC80FF /* FaceRecongnizeController.m */; };
 		D688B91C1CB6AAD100CC80FF /* FaceRecongnizeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D688B91A1CB6AAD100CC80FF /* FaceRecongnizeController.xib */; };
 		D688B9221CB6C11B00CC80FF /* mmd.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9211CB6C11B00CC80FF /* mmd.txt */; };
+		D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
 		D6B031C41CB3920E00E2955A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C31CB3920E00E2955A /* UserInfo.m */; };
@@ -533,6 +534,8 @@
 		D688B9191CB6AAD100CC80FF /* FaceRecongnizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceRecongnizeController.m; sourceTree = "<group>"; };
 		D688B91A1CB6AAD100CC80FF /* FaceRecongnizeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceRecongnizeController.xib; sourceTree = "<group>"; };
 		D688B9211CB6C11B00CC80FF /* mmd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mmd.txt; sourceTree = "<group>"; };
+		D688B9231CB6D12B00CC80FF /* RefundTextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundTextHelper.h; sourceTree = "<group>"; };
+		D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundTextHelper.m; sourceTree = "<group>"; };
 		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
@@ -883,6 +886,8 @@
 			isa = PBXGroup;
 			children = (
 				D647FB481CAE7F7A00CBF19E /* LoanHeader.h */,
+				D688B9231CB6D12B00CC80FF /* RefundTextHelper.h */,
+				D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */,
 				D647FB491CAE7F7A00CBF19E /* LoanViewController.h */,
 				D647FB4A1CAE7F7A00CBF19E /* LoanViewController.m */,
 				D647FB451CAE7F7A00CBF19E /* ActivityViewController.h */,
@@ -1889,6 +1894,7 @@
 				D647FBAD1CAE87FD00CBF19E /* SecondStaepController.m in Sources */,
 				D63356781CB12062000A321C /* BaseModel.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,
+				D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */,
 				D66B4FA21CB4EE820038F312 /* AppUserInfoHelper.m in Sources */,
 				D647FB831CAE80BE00CBF19E /* RegisterViewController.m in Sources */,
 				D647FBB11CAE87FD00CBF19E /* VerifyViewController.m in Sources */,
