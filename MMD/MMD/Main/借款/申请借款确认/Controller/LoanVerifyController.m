@@ -14,9 +14,10 @@
 #import "FormTableViewCell+PutValue.h"
 #import "SureViewController.h"
 #import "LoanInfoItem.h"
+#import "FormatVerifyDataHelper.h"
 
 
-#define EDGELENGTH 10
+#define EDGELENGTH 20
 #define SUREBOTTOMBARHEIGHT 94
 
 static NSString *cellReuseId = @"formTableCellId";
@@ -30,6 +31,20 @@ static NSString *cellReuseId = @"formTableCellId";
 
 @implementation LoanVerifyController
 
+- (NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
+- (LoanInfoItem *)infoItem{
+    if (!_infoItem) {
+        _infoItem = [LoanInfoItem new];
+        _infoItem.refundMoth = 0;
+        _infoItem.refundMoneyEveryMoth = 0.00;
+    }
+    return _infoItem;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -39,8 +54,9 @@ static NSString *cellReuseId = @"formTableCellId";
     [self addSureBottomBar];
 }
 - (void)requestSectionTitleData{
-    
-    
+    NSAssert(self.infoItem.refundMoth > 0, @"缺少还款期数");
+    self.dataArray = [FormatVerifyDataHelper formatDatarefundMoth:self.infoItem.refundMoth];
+    NSLog(@"组织完标题数据-->%@",self.dataArray);
     
 //    self.dataArray = [NSMutableArray array];
 //    for (NSUInteger k = 0; k < 3; k ++) {
@@ -89,8 +105,8 @@ static NSString *cellReuseId = @"formTableCellId";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseId forIndexPath:indexPath];
-    FormItem *item = [self currentItem:indexPath];
-    [cell putValue:item];
+//    FormItem *item = [self currentItem:indexPath];
+//    [cell putValue:item];
     return cell;
 }
 - (FormItem *)currentItem:(NSIndexPath *)indexPath{

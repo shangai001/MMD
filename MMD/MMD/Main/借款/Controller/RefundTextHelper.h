@@ -19,6 +19,6 @@
  *
  *  @return
  */
-+ (NSAttributedString *)formatAttributeStringWith:(NSUInteger)loanCount refundMonth:(NSUInteger)month;
++ (NSAttributedString *)formatAttributeStringWith:(NSUInteger)refundCount refundMonth:(NSUInteger)month;
 
 @end

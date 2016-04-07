@@ -19,7 +19,7 @@
 *
 *  @return 每月还款金额
 */
-+ (NSUInteger)calculateRefundWithNumber:(NSUInteger)loanMoney time:(NSUInteger)month;
++ (float)calculateRefundWithNumber:(NSUInteger)loanMoney time:(NSUInteger)month;
 /**
  *  返回实际到账金额
  *

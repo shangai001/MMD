@@ -53,6 +53,7 @@
                 <outlet property="detailLabel" destination="fHW-F1-HXM" id="aUT-xh-EMw"/>
                 <outlet property="titleLabel" destination="9rS-K6-Qis" id="4e1-mb-fdb"/>
                 <outlet property="titleLabelWidth" destination="veO-X2-KUS" id="SWk-l9-9zW"/>
+                <outlet property="titleWidth" destination="veO-X2-KUS" id="0cW-Ks-8oO"/>
             </connections>
         </tableViewCell>
     </objects>

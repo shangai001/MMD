@@ -8,6 +8,7 @@
 
 #import "CalculateRefund.h"
 #import "AppUserInfoHelper.h"
+#import "ReadFiler.h"
 
 
 #define MMDRate 0.0625
@@ -17,10 +18,8 @@
 @implementation CalculateRefund
 
 + (NSDictionary *)interestDictionary{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"mmd" ofType:@"txt"];
-    NSData *mmdData = [NSData dataWithContentsOfFile:path];
-    NSDictionary *object = [NSJSONSerialization JSONObjectWithData:mmdData options:NSJSONReadingAllowFragments error:nil];
-    return object;
+    NSDictionary *currentUserDic = [ReadFiler readDictionaryFile:@"mmd" fileType:@"txt"];
+    return currentUserDic;
 }
 
 /**
@@ -31,12 +30,12 @@
  *
  *  @return 每月还款金额
  */
-+ (NSUInteger)calculateRefundWithNumber:(NSUInteger)loanMoney time:(NSUInteger)month{
++ (float)calculateRefundWithNumber:(NSUInteger)loanMoney time:(NSUInteger)month{
     
     NSDictionary *currentUserDic = [self getCurrentUserRateDic];
 //    float rate = [currentUserDic[@"rate"] floatValue];
     float management = [currentUserDic[@"manageMent"] floatValue];
-    NSUInteger refundMoney = (loanMoney * MonthRate * month + management * month + loanMoney)/month;
+    float refundMoney = (loanMoney * MonthRate * month + management * month + loanMoney)/month;
     return refundMoney;
 }
 + (float)getActualMoney:(NSUInteger)loanMoney{

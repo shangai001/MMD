@@ -12,10 +12,9 @@
 
 @implementation RefundTextHelper
 
-+ (NSAttributedString *)formatAttributeStringWith:(NSUInteger)loanCount refundMonth:(NSUInteger)month{
++ (NSAttributedString *)formatAttributeStringWith:(NSUInteger)refundCount refundMonth:(NSUInteger)month{
     
-    NSUInteger refundCount = [CalculateRefund calculateRefundWithNumber:loanCount time:month];
-    
+//    NSUInteger refundCount = [CalculateRefund calculateRefundWithNumber:loanCount time:month];
     NSString *countString = [NSString stringWithFormat:@"%@",@(refundCount)];
     NSString *timeString = [NSString stringWithFormat:@"%@",@(month)];
     //借款到账日后30天还款，每期还款XXX元，共X期

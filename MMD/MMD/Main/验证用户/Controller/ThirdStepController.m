@@ -10,6 +10,7 @@
 #import <UIView+SDAutoLayout.h>
 #import "ColorHeader.h"
 #import "FaceRecongnizeController.h"
+#import "ReadFiler.h"
 
 
 @interface ThirdStepController ()
@@ -25,12 +26,7 @@
     [self addAutolayout];
 }
 - (void)setDefaultContentText{
-    
-    NSString *textFilePath = [[NSBundle mainBundle] pathForResource:@"IDVerify" ofType:@"txt"];
-    NSError *fileError = nil;
-    NSString *defaultText = [NSString stringWithContentsOfFile:textFilePath encoding:NSUTF8StringEncoding error:&fileError];
-    NSLog(@"fileErrror %@",fileError);
-    NSAssert(!fileError, @"解析默认身份验证文本出错");
+    NSString *defaultText = [ReadFiler readTextFile:@"IDVerify" fileType:@"txt"];
     self.contentLabel.text = defaultText;
 }
 - (void)addAutolayout{
