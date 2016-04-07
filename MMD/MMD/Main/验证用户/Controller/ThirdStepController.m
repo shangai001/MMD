@@ -21,7 +21,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self setDefaultContentText];
     [self addAutolayout];
+}
+- (void)setDefaultContentText{
+    
+    NSString *textFilePath = [[NSBundle mainBundle] pathForResource:@"IDVerify" ofType:@"text"];
+    NSError *fileError = nil;
+    NSString *defaultText = [NSString stringWithContentsOfFile:textFilePath encoding:NSUTF8StringEncoding error:&fileError];
+    NSAssert1(fileError, @"解析默认身份验证文本出错", fileError);
+    self.contentLabel.text = defaultText;
 }
 - (void)addAutolayout{
     

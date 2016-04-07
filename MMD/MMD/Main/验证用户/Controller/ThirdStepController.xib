@@ -23,11 +23,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My5-Pg-GL8">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My5-Pg-GL8">
                     <rect key="frame" x="17" y="135" width="286" height="299"/>
-                    <string key="text">第一步:点击"开始人脸扫描"按钮，然后将自己面部对准手机摄像头，按照提示进行拍照。待系统提示"真人检测成功"后，进入下一步;
-
-第二步:分别点击"身份证正面扫描"和"身份证背面扫描"按钮，按照提示分别对身份证正反面进行拍照。带系统识别通过后，喝茶个人姓名、性别及身份证号码是否正确，如信息有误，请勿选复查;如果信息核查无误，点击"身份验证"按钮，完成身份认证操作。</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
