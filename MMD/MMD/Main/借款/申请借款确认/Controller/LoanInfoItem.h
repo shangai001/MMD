@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface LoanInfoItem : NSObject
+
+@property (assign, nonatomic)float floatLoanMoney;
 @property (assign, nonatomic)NSUInteger refundMoth;
 @property (assign, nonatomic)float refundMoneyEveryMoth;
 

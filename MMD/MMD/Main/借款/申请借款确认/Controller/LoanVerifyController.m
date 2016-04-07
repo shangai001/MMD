@@ -25,13 +25,13 @@ static NSString *cellReuseId = @"formTableCellId";
 @interface LoanVerifyController ()<UITableViewDataSource,UITableViewDelegate,AgreeLoanProtro>
 
 @property (nonatomic, strong)UITableView *mainTableView;
-@property (nonatomic, strong)NSMutableArray *dataArray;
+@property (nonatomic, strong)NSMutableArray<FormItem *> *dataArray;
 
 @end
 
 @implementation LoanVerifyController
 
-- (NSMutableArray *)dataArray{
+- (NSMutableArray<FormItem *> *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
     }
@@ -55,20 +55,10 @@ static NSString *cellReuseId = @"formTableCellId";
 }
 - (void)requestSectionTitleData{
     NSAssert(self.infoItem.refundMoth > 0, @"缺少还款期数");
-    self.dataArray = [FormatVerifyDataHelper formatDatarefundMoth:self.infoItem.refundMoth];
+    NSMutableArray *keyValuesArray = [FormatVerifyDataHelper ez_itemsArrayForVerify:self.infoItem];
+    [self.dataArray removeAllObjects];
+    [self.dataArray addObjectsFromArray:keyValuesArray];
     NSLog(@"组织完标题数据-->%@",self.dataArray);
-    
-//    self.dataArray = [NSMutableArray array];
-//    for (NSUInteger k = 0; k < 3; k ++) {
-//        NSMutableArray *sectionArray = [NSMutableArray array];
-//        for (NSUInteger q = 0; q < 3; q ++) {
-//            FormItem *item = [FormItem new];
-//            item.pTitle = @"借款人信息";
-//            item.detailText = @"借钱是要还的";
-//            [sectionArray addObject:item];
-//        }
-//        [self.dataArray addObject:sectionArray];
-//    }
 }
 - (void)initTableView{
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(EDGELENGTH, 0, kScreenWidth- 2 * EDGELENGTH, kScreenHeight) style:UITableViewStyleGrouped];
@@ -104,10 +94,20 @@ static NSString *cellReuseId = @"formTableCellId";
     return 0;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    FormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseId forIndexPath:indexPath];
-//    FormItem *item = [self currentItem:indexPath];
-//    [cell putValue:item];
-    return cell;
+    if (indexPath.section == 0 | indexPath.section == 1) {
+        FormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseId forIndexPath:indexPath];
+        if (indexPath.section == 0) {
+            //样式不一样
+        }else{
+            
+        }
+        //    FormItem *item = [self currentItem:indexPath];
+        //    [cell putValue:item];
+        return cell;
+    }else if (indexPath.section == 2){
+        
+    }
+    return nil;
 }
 - (FormItem *)currentItem:(NSIndexPath *)indexPath{
     

@@ -32,9 +32,7 @@
  */
 + (float)calculateRefundWithNumber:(NSUInteger)loanMoney time:(NSUInteger)month{
     
-    NSDictionary *currentUserDic = [self getCurrentUserRateDic];
-//    float rate = [currentUserDic[@"rate"] floatValue];
-    float management = [currentUserDic[@"manageMent"] floatValue];
+    float management = [self manageMentMoney];
     float refundMoney = (loanMoney * MonthRate * month + management * month + loanMoney)/month;
     return refundMoney;
 }
@@ -55,5 +53,10 @@
     NSDictionary *interestDictionary = [self interestDictionary];
     NSDictionary *oneDic = interestDictionary[level];
     return oneDic;
+}
++ (float)manageMentMoney{
+    
+    NSDictionary *currentUserDic = [self getCurrentUserRateDic];
+    return [currentUserDic[@"manageMent"] floatValue];
 }
 @end

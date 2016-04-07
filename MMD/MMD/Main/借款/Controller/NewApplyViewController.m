@@ -140,6 +140,7 @@
             loanVerify.hidesBottomBarWhenPushed = YES;
             loanVerify.infoItem.refundMoth = self.refundMonth;
             loanVerify.infoItem.refundMoneyEveryMoth = self.refundEveryMoth;
+            loanVerify.infoItem.floatLoanMoney = (float)self.moneyCount;
             [self.navigationController pushViewController:loanVerify animated:YES];
         }
     }else{

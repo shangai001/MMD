@@ -35,4 +35,10 @@
  */
 + (NSDictionary *)interestDictionary;
 
+/**
+ *  当前用户等级的综合管理费
+ *
+ *  @return 
+ */
++ (float)manageMentMoney;
 @end
