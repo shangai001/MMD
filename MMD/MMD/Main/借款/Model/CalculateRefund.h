@@ -9,15 +9,25 @@
 #import <Foundation/Foundation.h>
 
 @interface CalculateRefund : NSObject
+
+
 /**
- *  计算每月还款数目
+*  每月还款额度(公式:每月还款数目=(本金 + 每月综合管理费 + 每月利率 x 本金)/月数)
+*
+*  @param loanMoney 借款数
+*  @param month     还款时间(月)
+*
+*  @return 每月还款金额
+*/
++ (NSUInteger)calculateRefundWithNumber:(NSUInteger)loanMoney time:(NSUInteger)month;
+/**
+ *  返回实际到账金额
  *
- *  @param loanNumber 借款数目
- *  @param month      还款时间
+ *  @param loanMoney 借款数目
  *
- *  @return 每月还款数目
+ *  @return 
  */
-+ (NSUInteger)calculateRefundWithNumber:(NSUInteger)loanNumber time:(NSUInteger)month;
++ (float)getActualMoney:(NSUInteger)loanMoney;
 /**
  *  利息字典
  *

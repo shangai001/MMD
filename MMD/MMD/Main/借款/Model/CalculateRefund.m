@@ -7,7 +7,12 @@
 //
 
 #import "CalculateRefund.h"
-//#import <MJExtension.h>
+#import "AppUserInfoHelper.h"
+
+
+#define MMDRate 0.0625
+#define MonthRate 0.02
+
 
 @implementation CalculateRefund
 
@@ -18,10 +23,38 @@
     return object;
 }
 
-+ (NSUInteger)calculateRefundWithNumber:(NSUInteger)loanNumber time:(NSUInteger)month{
+/**
+ *  每月还款额度(公式:每月还款数目=(综合管理费 + (1 +每月利率) x 本金)/月数)
+ *
+ *  @param loanMoney 借款数
+ *  @param month     还款时间(月)
+ *
+ *  @return 每月还款金额
+ */
++ (NSUInteger)calculateRefundWithNumber:(NSUInteger)loanMoney time:(NSUInteger)month{
     
-    NSUInteger refundNumber =  loanNumber * (1 + 0.8 + month * 0.1);
-    return refundNumber;
+    NSDictionary *currentUserDic = [self getCurrentUserRateDic];
+//    float rate = [currentUserDic[@"rate"] floatValue];
+    float management = [currentUserDic[@"manageMent"] floatValue];
+    NSUInteger refundMoney = (loanMoney * MonthRate * month + management * month + loanMoney)/month;
+    return refundMoney;
 }
-
++ (float)getActualMoney:(NSUInteger)loanMoney{
+    //一次性扣除综合管理费
+    float actualMone = loanMoney * (1 - MMDRate);
+    return actualMone;
+}
+/**
+ *  获取当前用户费率信息
+ *
+ *  @return
+ */
++ (NSDictionary *)getCurrentUserRateDic{
+    
+    NSDictionary *crediteDic = [AppUserInfoHelper creditRating];
+    NSString *level = crediteDic[@"name"];
+    NSDictionary *interestDictionary = [self interestDictionary];
+    NSDictionary *oneDic = interestDictionary[level];
+    return oneDic;
+}
 @end

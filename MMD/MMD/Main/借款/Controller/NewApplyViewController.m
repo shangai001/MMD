@@ -54,13 +54,13 @@
 }
 - (IBAction)decreaseCount:(id)sender {
     if (500 < self.moneyCount) {
-        self.moneyCount -= 500;
+        self.moneyCount -= 100;
     }
     [self updateRefundLabel];
 }
 - (IBAction)increaseCount:(id)sender {
     if (self.moneyCount < 5000) {
-        self.moneyCount += 500;
+        self.moneyCount += 100;
     }
     [self updateRefundLabel];
 }
