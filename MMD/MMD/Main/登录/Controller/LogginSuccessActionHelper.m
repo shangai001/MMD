@@ -41,6 +41,7 @@
         VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
         
         verifyer.status = status;
+        verifyer.hidesBottomBarWhenPushed = YES;
         [logger.navigationController pushViewController:verifyer animated:YES];
     }else{
         //已经完善信息，返回登录前的页面

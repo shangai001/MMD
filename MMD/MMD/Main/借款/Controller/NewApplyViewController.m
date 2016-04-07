@@ -130,6 +130,7 @@
     }else{
         //未登录
         MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
+        logger.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:logger animated:YES];
     }
     

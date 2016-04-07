@@ -108,13 +108,15 @@
     }
     [self.view endEditing:YES];
     NSDictionary *info = self.user.mj_keyValues;
-
+    [SVProgressHUD show];
     [LogginModel loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
             [self resetFailureValue];
             [self handleLoginResult:resultDictionary];
+            [SVProgressHUD dismiss];
         }else{
             [self logginFailure:nil];
+            [SVProgressHUD showInfoWithStatus:resultDictionary[@"msg"]];
         }
     } FailureHandler:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",error.localizedDescription]];
@@ -155,6 +157,7 @@
         .rightSpaceToView(self.view,self.iconToLeft.constant)
         .heightIs(INPUTROW_HEIGHT);
     }
+    
     [self refreshCodeImage];
 }
 - (void)refreshCodeImage{
@@ -166,6 +169,7 @@
         [GraphicVerification getGraphicVerification:info completation:^(UIImage *codeImage) {
             NSLog(@"图形验证码%@",codeImage);
             self.failureView.codeImage.image = codeImage;
+            [SVProgressHUD showInfoWithStatus:@"请输入验证码"];
         } failure:^(NSError *error) {
             NSLog(@"error %@",error);
         }];
@@ -231,12 +235,14 @@
 - (IBAction)forgetPassword:(id)sender {
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:NSStringFromClass([RegisterViewController class]) bundle:[NSBundle mainBundle]];
     registerController.type = kForgetPassword;
+    registerController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:registerController animated:YES];
 }
 
 - (IBAction)registerUser:(id)sender {
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:NSStringFromClass([RegisterViewController class]) bundle:[NSBundle mainBundle]];
     registerController.type = kRegisterType;
+    registerController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:registerController animated:YES];
 }
 #pragma mark UITextFieldDelegate

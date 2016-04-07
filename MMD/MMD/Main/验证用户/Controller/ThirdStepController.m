@@ -7,6 +7,10 @@
 //
 
 #import "ThirdStepController.h"
+#import <UIView+SDAutoLayout.h>
+#import "ColorHeader.h"
+#import "FaceRecongnizeController.h"
+
 
 @interface ThirdStepController ()
 
@@ -17,9 +21,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.view.backgroundColor = [UIColor blueColor];
+    [self addAutolayout];
 }
-
+- (void)addAutolayout{
+    
+    {
+        self.titleLabel.sd_layout
+        .leftEqualToView(self.view)
+        .rightEqualToView(self.view)
+        .topSpaceToView(self.view, 10)
+        .autoHeightRatio(0);
+    }
+    {
+        self.contentLabel.sd_layout
+        .leftSpaceToView(self.view, 30)
+        .rightSpaceToView(self.view,30)
+        .topSpaceToView(self.titleLabel, 10)
+        .autoHeightRatio(0);
+    }
+    {
+        self.nextButton.sd_layout
+        .leftSpaceToView(self.view,30)
+        .rightSpaceToView(self.view,30)
+        .heightIs(30)
+        .topSpaceToView(self.contentLabel, 20);
+        
+        
+        self.nextButton.layer.cornerRadius = 10.0f;
+        self.nextButton.backgroundColor = REDCOLOR;
+    }
+}
+- (IBAction)nextAction:(UIButton *)sender {
+    //人脸识别
+    FaceRecongnizeController *face = [[FaceRecongnizeController alloc] initWithNibName:NSStringFromClass([FaceRecongnizeController class]) bundle:[NSBundle mainBundle]];
+    [self.navigationController pushViewController:face animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
