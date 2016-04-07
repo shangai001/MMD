@@ -24,7 +24,7 @@
 
 @end
 
-#define StageHeight 60
+
 #define STAGETOLEFT 0
 
 @implementation VerifyViewController
@@ -97,6 +97,8 @@
         [self addSDautoLayout:self.third.view];
         [self.third didMoveToParentViewController:self];
     }
+    //更新上面的进度条
+    [self.stageView updateProsess:_status];
 }
 - (void)transitionFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL))completion{
     /*

@@ -224,8 +224,7 @@
 }
 - (void)checkoutUserCompleteInfo{
     
-    NSDictionary *user = [AppUserInfoHelper user];
-    NSInteger status = [[user objectForKey:AuditState] integerValue];
+    NSInteger status = [AppUserInfoHelper UserStatus];
     [LogginSuccessActionHelper jumpFromViewController:self userStatus:status];
 }
 #pragma mark ButtonOutletAction

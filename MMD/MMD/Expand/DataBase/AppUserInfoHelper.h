@@ -28,5 +28,11 @@
 
 + (NSMutableDictionary *)tokenAndUserIdDictionary;
 
+/**
+ *  查询当前登录用户status
+ *
+ *  @return 
+ */
++ (NSInteger)UserStatus;
 
 @end

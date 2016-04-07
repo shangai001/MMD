@@ -169,16 +169,63 @@
     return button;
 }
 - (void)updateProsess:(NSUInteger)stage{
-    UIButton *button = (UIButton *)[self viewWithTag:stage + 300];
-    button.selected = YES;
+//    UIButton *button = (UIButton *)[self viewWithTag:stage + 300];
+//    button.selected = YES;
     if (self.style == kHorizontalStyle) {
-        HorizontalDashLineView *lineView = (HorizontalDashLineView *)[self viewWithTag:100+stage-1];
-        lineView.lineType = kRedRealType;
-        [lineView setNeedsDisplay];
+//        HorizontalDashLineView *lineView = (HorizontalDashLineView *)[self viewWithTag:100+stage-1];
+//        lineView.lineType = kRedRealType;
+        NSArray *subViews = self.subviews;
+        for (UIView *view in subViews) {
+            if ([view isKindOfClass:[HorizontalDashLineView class]]) {
+                //变成红色实线
+                HorizontalDashLineView *lineView = (HorizontalDashLineView *)view;
+                if (view.tag <= 100 + stage) {
+                    if (view.tag == 100 +stage) {
+                        lineView.lineType = kRedDasheType;
+                    }else{
+                        lineView.lineType = kRedRealType;
+                    }
+                    
+                }else{
+                    lineView.lineType = kGrayRealType;
+                }
+                [lineView setNeedsDisplay];
+            }else if ([view isKindOfClass:[UIButton class]]){
+                UIButton *button = (UIButton *)view;
+                if (view.tag <= 300 + stage) {
+                    button.selected = YES;
+                }else{
+                    button.selected = NO;
+                }
+            }
+        }
     }else if (self.style == kverticalTypeStyle){
-        VerticalDashLineView *lineView = (VerticalDashLineView *)[self viewWithTag:200 + stage - 1];
-        lineView.lineType = kRedRealType;
-        [lineView setNeedsDisplay];
+        
+        NSArray *subViews = self.subviews;
+        for (UIView *view in subViews) {
+            if ([view isKindOfClass:[VerticalDashLineView class]]) {
+                //变成红色实线
+                VerticalDashLineView *lineView = (VerticalDashLineView *)view;
+                if (view.tag <= 100 + stage) {
+                    if (view.tag == 100 +stage) {
+                        lineView.lineType = kRedDasheType;
+                    }else{
+                        lineView.lineType = kRedRealType;
+                    }
+                    
+                }else{
+                    lineView.lineType = kGrayRealType;
+                }
+                [lineView setNeedsDisplay];
+            }else if ([view isKindOfClass:[UIButton class]]){
+                UIButton *button = (UIButton *)view;
+                if (view.tag <= 300 + stage) {
+                    button.selected = YES;
+                }else{
+                    button.selected = NO;
+                }
+            }
+        }
     }
 }
 

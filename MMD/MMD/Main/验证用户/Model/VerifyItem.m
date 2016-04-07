@@ -10,9 +10,4 @@
 
 @implementation VerifyItem
 
-- (NSString *)description{
-    NSString *des = [NSString stringWithFormat:@"cardNum=%@,bank=%@,city=%@,contactNum=%@,contactName=%@,contactRealtionship=%@",self.cardNum,self.bank,self.city,self.contactNum,self.contactName,self.contactRealtionship];
-    return des;
-}
-
 @end

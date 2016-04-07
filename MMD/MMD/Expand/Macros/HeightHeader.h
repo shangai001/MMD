@@ -14,6 +14,6 @@
 #define kNavigationBarHeight 44
 #define kStatusBarHeight 20
 #define kTopLayoutGuide 64
-
+#define StageHeight 60
 
 #endif /* HeightHeader_h */

@@ -45,6 +45,8 @@ typedef NS_ENUM(NSInteger, STPickerContentMode) {
 @property (nonatomic, assign)CGFloat heightPicker;
 /** 6.视图的显示模式 */
 @property (nonatomic, assign)STPickerContentMode contentMode;
+/** 7.标识符,用以区分不同pickerView ***/
+@property(nullable, nonatomic,copy) NSString          *identifier;
 
 
 /**

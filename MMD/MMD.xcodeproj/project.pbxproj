@@ -187,6 +187,8 @@
 		D6805EA81CAD1CF500316925 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = D6805EA41CAD1CF500316925 /* pinyin.c */; };
 		D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805EA71CAD1CF500316925 /* ZCAddressBook.m */; };
 		D6805EAF1CAD242500316925 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6805EAE1CAD242500316925 /* BaseViewController.m */; };
+		D688B9101CB68F3B00CC80FF /* SecondVerifyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B90F1CB68F3B00CC80FF /* SecondVerifyItem.m */; };
+		D688B9131CB69BE500CC80FF /* AreaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9121CB69BE500CC80FF /* AreaHelper.m */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
 		D6B031C41CB3920E00E2955A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C31CB3920E00E2955A /* UserInfo.m */; };
@@ -517,6 +519,11 @@
 		D6805EAD1CAD242500316925 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D6805EAE1CAD242500316925 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D68492231C7B08AC00227ACA /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
+		D688B90D1CB6621600CC80FF /* CategoryNameHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryNameHeader.h; sourceTree = "<group>"; };
+		D688B90E1CB68F3B00CC80FF /* SecondVerifyItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondVerifyItem.h; sourceTree = "<group>"; };
+		D688B90F1CB68F3B00CC80FF /* SecondVerifyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVerifyItem.m; sourceTree = "<group>"; };
+		D688B9111CB69BE500CC80FF /* AreaHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaHelper.h; sourceTree = "<group>"; };
+		D688B9121CB69BE500CC80FF /* AreaHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaHelper.m; sourceTree = "<group>"; };
 		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
@@ -1021,12 +1028,17 @@
 			children = (
 				D647FB9E1CAE87FD00CBF19E /* VerifyItem.h */,
 				D647FB9F1CAE87FD00CBF19E /* VerifyItem.m */,
+				D688B90E1CB68F3B00CC80FF /* SecondVerifyItem.h */,
+				D688B90F1CB68F3B00CC80FF /* SecondVerifyItem.m */,
 				D66B4FA61CB509280038F312 /* BankModel.h */,
 				D66B4FA71CB509280038F312 /* BankModel.m */,
 				D67D6DBE1CB53216003D4D2D /* IDCardModel.h */,
 				D67D6DBF1CB53216003D4D2D /* IDCardModel.m */,
 				D67D6DC41CB54CFA003D4D2D /* VerifyModel.h */,
 				D67D6DC51CB54CFA003D4D2D /* VerifyModel.m */,
+				D688B90D1CB6621600CC80FF /* CategoryNameHeader.h */,
+				D688B9111CB69BE500CC80FF /* AreaHelper.h */,
+				D688B9121CB69BE500CC80FF /* AreaHelper.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1818,9 +1830,11 @@
 				D63356611CB03ACE000A321C /* FormItem.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
 				D633566F1CB04E47000A321C /* LoanProtroWebController.m in Sources */,
+				D688B9101CB68F3B00CC80FF /* SecondVerifyItem.m in Sources */,
 				D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */,
 				D647FB821CAE80BE00CBF19E /* LimitInputWords.m in Sources */,
 				D63356371CB00481000A321C /* SupportCenterController.m in Sources */,
+				D688B9131CB69BE500CC80FF /* AreaHelper.m in Sources */,
 				D6B031D31CB3964200E2955A /* MessageModel.m in Sources */,
 				D66B4FA81CB509280038F312 /* BankModel.m in Sources */,
 				D633563F1CB016BE000A321C /* FailureView.m in Sources */,

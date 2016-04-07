@@ -93,7 +93,10 @@
 
 - (void)selectedOk
 {
-    [self.delegate pickerSingle:self selectedTitle:self.selectedTitle];
+    if ([self.delegate respondsToSelector:@selector(pickerSingle:selectedTitle:)]) {
+        
+        [self.delegate pickerSingle:self selectedTitle:self.selectedTitle];
+    }
     [super selectedOk];
 }
 

@@ -39,6 +39,7 @@
     }];
 }
 + (void)loginUser:(NSDictionary *)info completionHandler:(void (^)(NSDictionary *))completationBlock FailureHandler:(void (^)(NSError *))failureBlock{
+    
     NSString *URL = [NSString stringWithFormat:@"%@/user/login",kHostURL];
     [HttpRequest postWithURLString:URL parameters:info success:^(id responseObject) {
         if ([responseObject isKindOfClass:[NSDictionary class]]) {

@@ -13,11 +13,16 @@
 //@property (nonatomic, copy)NSString *name;
 //@property (nonatomic, copy)NSString *idCardNum;
 
-@property (nonatomic, copy)NSString *cardNum;
-@property (nonatomic, copy)NSString *bank;
-@property (nonatomic, copy)NSString *city;
-@property (nonatomic, copy)NSString *contactNum;
-@property (nonatomic, copy)NSString *contactName;
-@property (nonatomic, copy)NSString *contactRealtionship;
+@property (nonatomic, copy)NSString *bankCard;
+@property (nonatomic, copy)NSString *bankId;
+@property (nonatomic, copy)NSString *bankProvince;
+@property (nonatomic, copy)NSString *bankCity;
+@property (nonatomic, copy)NSString *bankArea;
+
+@property (nonatomic, copy)NSString *urgentPhone;
+@property (nonatomic, copy)NSString *urgentName;
+@property (nonatomic, copy)NSString *relationship;
+
+
 
 @end

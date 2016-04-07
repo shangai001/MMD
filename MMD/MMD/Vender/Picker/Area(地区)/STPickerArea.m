@@ -148,7 +148,9 @@
 
 - (void)selectedOk
 {
-    [self.delegate pickerArea:self province:self.province city:self.city area:self.area];
+    if ([self.delegate respondsToSelector:@selector(pickerArea:province:city:area:)]) {
+        [self.delegate pickerArea:self province:self.province city:self.city area:self.area];
+    }
     [super selectedOk];
 }
 

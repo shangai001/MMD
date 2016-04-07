@@ -118,16 +118,14 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)nextAction:(id)sender {
+    
     //判断是否登录
     BOOL isLogged = [SDUserDefault boolForKey:Loggin];
     if (isLogged) {
         //已经登录
-        NSDictionary *user = [AppUserInfoHelper user];
-        NSInteger status = [[user objectForKey:AuditState] integerValue];
         //跳转到父Controller
         VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
-#warning 此处需要修改
-        verifyer.status = 0;
+        verifyer.status = [AppUserInfoHelper UserStatus];
         [self.navigationController pushViewController:verifyer animated:YES];
     }else{
         //未登录

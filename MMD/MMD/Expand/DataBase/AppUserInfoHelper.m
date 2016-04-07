@@ -100,4 +100,12 @@
     NSMutableDictionary *infoDic = [NSMutableDictionary dictionaryWithDictionary:@{@"userId":userId,@"token":token}];
     return infoDic;
 }
++ (NSInteger)UserStatus{
+    
+    NSDictionary *user = [self user];
+    
+    NSInteger statusInterger = [[user objectForKey:AuditState] integerValue];
+    
+    return statusInterger;
+}
 @end

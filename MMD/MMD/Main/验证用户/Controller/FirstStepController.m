@@ -13,7 +13,7 @@
 #import "HeightHeader.h"
 #import "ColorHeader.h"
 #import "BankModel.h"
-//#import <NSArray+YYAdd.h>
+#import "AppUserInfoHelper.h"
 #import "VerifyModel.h"
 #import <MJExtension.h>
 #import "ZCAddressBook.h"
@@ -31,11 +31,17 @@
 @property (nonatomic, strong)STPickerArea *cityPickerView;
 @property (nonatomic, strong)STPickerSingle *backPickerView;
 @property (weak, nonatomic) IBOutlet UIButton *nextButon;
-
+@property (strong, nonatomic)NSArray *bankArray;
 @end
 
 @implementation FirstStepController
 
+- (NSArray *)bankArray{
+    if (!_bankArray) {
+        _bankArray = [NSArray array];
+    }
+    return _bankArray;
+}
 - (VerifyItem *)item{
     if (!_item) {
         _item = [VerifyItem new];
@@ -64,19 +70,21 @@
         NSString *fullName = [NSString stringWithFormat:@"%@%@",dic[@"first"],dic[@"last"]];
         self.contactPhoneNumberTextField.text = phoneNumber;
         self.contactNameTextField.text = fullName;
-        self.item.contactName = fullName;
-        self.item.contactNum = phoneNumber;
+        self.item.urgentName = fullName;
+        self.item.urgentPhone = phoneNumber;
     }];
 }
 #pragma mark STPickerAreaDelegate
 - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area{
     NSString *cityAddress = [NSString stringWithFormat:@"%@%@%@",province,city,area];
-    self.item.city = cityAddress;
+    self.item.bankArea = area;
+    self.item.bankCity = city;
+    self.item.bankProvince = province;
     self.cityTextField.text = cityAddress;
 }
 - (void)pickerSingle:(STPickerSingle *)pickerSingle selectedTitle:(NSString *)selectedTitle{
-    self.item.bank = selectedTitle;
     self.bankTextField.text = selectedTitle;
+    self.item.bankId = [self findBankIdWithBankName:selectedTitle];
 }
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     if ([textField isEqual:_cityTextField]) {
@@ -94,12 +102,25 @@
     return YES;
 }// return NO to disallow editing.
 - (NSMutableArray *)formatBankList:(NSArray *)data{
+    self.bankArray =  data;
     NSMutableArray *bankArray = [NSMutableArray arrayWithCapacity:data.count];
     for (NSDictionary *dic in data) {
         NSString *name = dic[@"name"];
         [bankArray addObject:name];
     }
     return bankArray;
+}
+- (NSString *)findBankIdWithBankName:(NSString *)name{
+    
+    for (NSInteger k = 0; k < self.bankArray.count; k ++) {
+        NSDictionary *bankDic = self.bankArray[k];
+        NSString *dicName = bankDic[@"name"];
+        if ([dicName isEqualToString:name]) {
+            NSString *bankId = [NSString stringWithFormat:@"%@",bankDic[@"id"]];
+            return bankId;
+        }
+    }
+    return nil;
 }
 #pragma mark ShowPickerView
 - (void)showAreaPicker{
@@ -186,20 +207,19 @@
         if (ShouldCheckoutCredit != 0) {
             [self checkoutCreditCard:_cardTextField.text];
         }
-        self.item.cardNum = _cardTextField.text;
+        self.item.bankCard = _cardTextField.text;
     }
     if ([textField isEqual:_bankTextField]) {
-        self.item.bank = _bankTextField.text;
+        self.item.bankId = [self findBankIdWithBankName:_bankTextField.text];;
     }
     if ([textField isEqual:_contactPhoneNumberTextField]) {
-//        self.item.contactNum = _contactPhoneNumberTextField.text;
         [self systemAddressClick:_contactPhoneNumberTextField];
     }
     if ([textField isEqual:_contactNameTextField]) {
-        self.item.contactName = _contactNameTextField.text;
+        self.item.urgentName = _contactNameTextField.text;
     }
     if ([textField isEqual:_contactRelationshipTextField]) {
-        self.item.contactRealtionship = _contactRelationshipTextField.text;
+        self.item.relationship = _contactRelationshipTextField.text;
     }
 }// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
 
@@ -216,11 +236,12 @@
 
 - (IBAction)nextPage:(UIButton *)sender {
     
-
-    NSLog(@"item = %@",self.item.description);
+    NSLog(@"item = %@",self.item.debugDescription);
     NSMutableDictionary *userItemDic = self.item.mj_keyValues;;
     [VerifyModel postFirstInformation:userItemDic success:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
+            
+            [AppUserInfoHelper updateUserInfo:resultDic];
             VerifyViewController *paVC = (VerifyViewController *)self.parentViewController;
             paVC.status = 1;
             
@@ -230,6 +251,9 @@
     } failure:^(NSError *error) {
         
     }];
+    
+//    VerifyViewController *paVC = (VerifyViewController *)self.parentViewController;
+//    paVC.status = 1;
 }
 
 

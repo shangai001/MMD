@@ -9,6 +9,8 @@
 NS_ASSUME_NONNULL_BEGIN
 @class STPickerSingle;
 @protocol  STPickerSingleDelegate<NSObject>
+@optional
+
 - (void)pickerSingle:(STPickerSingle *)pickerSingle selectedTitle:(NSString *)selectedTitle;
 @end
 

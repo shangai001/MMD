@@ -39,8 +39,8 @@
     if (status < 3 && status >= 0) {
         //跳转到父Controller
         VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
-#warning 此处需要修改
-        verifyer.status = 0;
+        
+        verifyer.status = status;
         [logger.navigationController pushViewController:verifyer animated:YES];
     }else{
         //已经完善信息，返回登录前的页面
