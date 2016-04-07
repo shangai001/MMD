@@ -170,6 +170,7 @@
 		D64A2D0B1C956168002654AC /* MMDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D0A1C956168002654AC /* MMDUserInfo.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
+		D65200191CB6FB9B0019C4CB /* LoanVerifySectionTitle1.txt in Resources */ = {isa = PBXBuildFile; fileRef = D65200181CB6FB9B0019C4CB /* LoanVerifySectionTitle1.txt */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
 		D66B4F981CB4263B0038F312 /* LogginSuccessActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F971CB4263B0038F312 /* LogginSuccessActionHelper.m */; };
 		D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F9A1CB42F570038F312 /* GraphicVerification.m */; };
@@ -492,6 +493,7 @@
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
 		D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatVerifyDataHelper.m; sourceTree = "<group>"; };
+		D65200181CB6FB9B0019C4CB /* LoanVerifySectionTitle1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoanVerifySectionTitle1.txt; sourceTree = "<group>"; };
 		D66B4F931CB4232F0038F312 /* MMDLoggin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDLoggin.h; sourceTree = "<group>"; };
 		D66B4F941CB4232F0038F312 /* MMDLoggin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDLoggin.m; sourceTree = "<group>"; };
 		D66B4F961CB4263B0038F312 /* LogginSuccessActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogginSuccessActionHelper.h; sourceTree = "<group>"; };
@@ -738,6 +740,7 @@
 				D633565D1CB0378F000A321C /* HeaderLabel.m */,
 				D633566D1CB04E47000A321C /* LoanProtroWebController.h */,
 				D633566E1CB04E47000A321C /* LoanProtroWebController.m */,
+				D65200181CB6FB9B0019C4CB /* LoanVerifySectionTitle1.txt */,
 				D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */,
 			);
 			path = Controller;
@@ -1768,6 +1771,7 @@
 				D60609C91C76FF0E000DB373 /* 还款页面go@3x.png in Resources */,
 				D6F5672C1C80056300B0612F /* 更多@2x.png in Resources */,
 				D6060A171C76FF0E000DB373 /* creditCardInfo@3x.png in Resources */,
+				D65200191CB6FB9B0019C4CB /* LoanVerifySectionTitle1.txt in Resources */,
 				D60609AE1C76FF0E000DB373 /* 分享@3x.png in Resources */,
 				D647FB871CAE80BE00CBF19E /* RegisterContentView.xib in Resources */,
 				D6060A141C76FF0E000DB373 /* creditline@3x.png in Resources */,
