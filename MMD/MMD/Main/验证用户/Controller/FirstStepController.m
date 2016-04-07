@@ -21,6 +21,8 @@
 #import <SVProgressHUD.h>
 #import "VerifyViewController.h"
 
+#define ShouldCheckoutCredit 0
+
 
 
 @interface FirstStepController ()<UITextFieldDelegate,STPickerAreaDelegate,STPickerSingleDelegate>
@@ -85,6 +87,10 @@
         [self showBankPicker];
         return NO;
     }
+    if ([textField isEqual:_contactPhoneNumberTextField]) {
+        [self systemAddressClick:_contactPhoneNumberTextField];
+        return NO;
+    }
     return YES;
 }// return NO to disallow editing.
 - (NSMutableArray *)formatBankList:(NSArray *)data{
@@ -129,6 +135,19 @@
         
     }];
 }
+
+#pragma mark CheckoutId
+- (void)checkoutCreditCard:(NSString *)crediteCardNumber{
+    
+    NSDictionary *cardDic = @{@"bankCard":crediteCardNumber};
+    
+    [BankModel checkCreditCard:cardDic completation:^(NSDictionary *resultDic) {
+        NSLog(@"检查银行卡是否注册%@",resultDic);
+    } failure:^(NSError *error) {
+        
+    }];
+}
+/*
 - (void)checkoutIDCard:(NSString *)idcard{
     
     NSDictionary *idcardInfo = @{@"idcard":idcard};
@@ -143,6 +162,8 @@
         NSAssert(error, @"验证身份证出错");
     }];
 }
+*/
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     
 }// became first responder
@@ -150,6 +171,8 @@
     return YES;
 }// return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
 - (void)textFieldDidEndEditing:(UITextField *)textField{
+    //安卓版本没有
+    /*
     if ([textField isEqual:_nameTextField]) {
         self.item.name = _nameTextField.text;
     }
@@ -157,9 +180,12 @@
         self.item.idCardNum = _idCardTextField.text;
         [self checkoutIDCard:_idCardTextField.text];
     }
+     */
     //银行卡信息---可以检查银行卡也可以不用检查
     if ([textField isEqual:_cardTextField]) {
-
+        if (ShouldCheckoutCredit != 0) {
+            [self checkoutCreditCard:_cardTextField.text];
+        }
         self.item.cardNum = _cardTextField.text;
     }
     if ([textField isEqual:_bankTextField]) {
@@ -190,20 +216,20 @@
 
 - (IBAction)nextPage:(UIButton *)sender {
     
-    VerifyViewController *paVC = (VerifyViewController *)self.parentViewController;
-    paVC.status = 1;
-    /*
+
     NSLog(@"item = %@",self.item.description);
     NSMutableDictionary *userItemDic = self.item.mj_keyValues;;
     [VerifyModel postFirstInformation:userItemDic success:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
+            VerifyViewController *paVC = (VerifyViewController *)self.parentViewController;
+            paVC.status = 1;
+            
         }else{
             [SVProgressHUD showInfoWithStatus:@"提交信息失败"];
         }
     } failure:^(NSError *error) {
         
     }];
-     */
 }
 
 

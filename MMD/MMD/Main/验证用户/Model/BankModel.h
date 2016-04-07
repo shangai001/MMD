@@ -20,7 +20,7 @@
        completation:(successHandler)success
             failure:(failureHandler)failure;
 /**
- *  检查银行卡是否已经注册
+ *  检查银行卡是否已经注册bankCard
  *
  *  @param info     bankCard
  *  @param success

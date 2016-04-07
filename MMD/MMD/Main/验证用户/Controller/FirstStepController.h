@@ -12,8 +12,8 @@
 
 @interface FirstStepController : BaseViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *idCardTextField;
+//@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+//@property (weak, nonatomic) IBOutlet UITextField *idCardTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cardTextField;
 @property (weak, nonatomic) IBOutlet UITextField *bankTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;
