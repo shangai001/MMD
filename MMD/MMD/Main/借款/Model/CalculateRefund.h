@@ -18,5 +18,11 @@
  *  @return 每月还款数目
  */
 + (NSUInteger)calculateRefundWithNumber:(NSUInteger)loanNumber time:(NSUInteger)month;
+/**
+ *  利息字典
+ *
+ *  @return 
+ */
++ (NSDictionary *)interestDictionary;
 
 @end

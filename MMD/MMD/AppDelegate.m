@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CalculateRefund.h"
 
 
 @interface AppDelegate ()
@@ -19,6 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //集成分享控件
+    NSDictionary *dic = [CalculateRefund interestDictionary];
+    NSLog(@"字典是 %@",dic);
     
     return YES;
 }

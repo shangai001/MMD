@@ -192,6 +192,7 @@
 		D688B9171CB6A0D400CC80FF /* IDVerify.text in Resources */ = {isa = PBXBuildFile; fileRef = D688B9161CB6A0D400CC80FF /* IDVerify.text */; };
 		D688B91B1CB6AAD100CC80FF /* FaceRecongnizeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9191CB6AAD100CC80FF /* FaceRecongnizeController.m */; };
 		D688B91C1CB6AAD100CC80FF /* FaceRecongnizeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D688B91A1CB6AAD100CC80FF /* FaceRecongnizeController.xib */; };
+		D688B91E1CB6B31400CC80FF /* InterestFile.text in Sources */ = {isa = PBXBuildFile; fileRef = D688B91D1CB6B31400CC80FF /* InterestFile.text */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
 		D6B031C41CB3920E00E2955A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C31CB3920E00E2955A /* UserInfo.m */; };
@@ -531,6 +532,7 @@
 		D688B9181CB6AAD100CC80FF /* FaceRecongnizeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceRecongnizeController.h; sourceTree = "<group>"; };
 		D688B9191CB6AAD100CC80FF /* FaceRecongnizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceRecongnizeController.m; sourceTree = "<group>"; };
 		D688B91A1CB6AAD100CC80FF /* FaceRecongnizeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceRecongnizeController.xib; sourceTree = "<group>"; };
+		D688B91D1CB6B31400CC80FF /* InterestFile.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = InterestFile.text; sourceTree = "<group>"; };
 		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
@@ -695,6 +697,7 @@
 			children = (
 				D63356701CB10CBF000A321C /* CalculateRefund.h */,
 				D63356711CB10CBF000A321C /* CalculateRefund.m */,
+				D688B91D1CB6B31400CC80FF /* InterestFile.text */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1913,6 +1916,7 @@
 				D633567E1CB172E3000A321C /* FullUserInfo.m in Sources */,
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
 				D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */,
+				D688B91E1CB6B31400CC80FF /* InterestFile.text in Sources */,
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,
 				D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
