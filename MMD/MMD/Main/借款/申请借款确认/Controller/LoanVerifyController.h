@@ -8,6 +8,10 @@
 
 #import "BaseViewController.h"
 
+@class LoanInfoItem;
+
 @interface LoanVerifyController : BaseViewController
+
+@property (strong, nonatomic)LoanInfoItem *infoItem;
 
 @end

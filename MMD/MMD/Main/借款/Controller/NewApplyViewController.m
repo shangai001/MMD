@@ -123,11 +123,20 @@
     //判断是否登录
     BOOL isLogged = [SDUserDefault boolForKey:Loggin];
     if (isLogged) {
-        //已经登录
-        //跳转到父Controller
-        VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
-        verifyer.status = [AppUserInfoHelper UserStatus];
-        [self.navigationController pushViewController:verifyer animated:YES];
+        //已经登录(查询用户状态)
+        NSInteger status = [AppUserInfoHelper UserStatus];
+        if (status > 0 && status < 3) {
+            //需要继续验证
+            VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
+            verifyer.status = status;
+            verifyer.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:verifyer animated:YES];
+        }else{
+            //直接到借款确认页面
+            LoanVerifyController *loanVerify = [[LoanVerifyController alloc] init];
+            loanVerify.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:loanVerify animated:YES];
+        }
     }else{
         //未登录
         MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];

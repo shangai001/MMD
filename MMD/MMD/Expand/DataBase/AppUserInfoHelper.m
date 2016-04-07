@@ -34,10 +34,10 @@
     NSString *fullPath = [filePath stringByAppendingPathComponent:@"UserInfo.data"];
     BOOL success = [NSKeyedArchiver archiveRootObject:info toFile:fullPath];
     if (success) {
-        //标记当前登录成功
-        //    if (![SDUserDefault boolForKey:Loggin]) {
-        //        [SDUserDefault setBool:YES forKey:Loggin];
-        //    }
+//        标记当前登录成功
+            if (![SDUserDefault boolForKey:Loggin]) {
+                [SDUserDefault setBool:YES forKey:Loggin];
+            }
     }
     NSAssert(success, @"归档用户信息失败");
 }

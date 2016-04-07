@@ -13,11 +13,11 @@
 #import "FormItem.h"
 #import "FormTableViewCell+PutValue.h"
 #import "SureViewController.h"
-
+#import "LoanInfoItem.h"
 
 
 #define EDGELENGTH 10
-#define SUREBOTTOMBARHEIGHT 74
+#define SUREBOTTOMBARHEIGHT 94
 
 static NSString *cellReuseId = @"formTableCellId";
 
@@ -35,21 +35,24 @@ static NSString *cellReuseId = @"formTableCellId";
     // Do any additional setup after loading the view.
     self.title = @"申请借款确认";
     [self initTableView];
-    [self requestData];
+    [self requestSectionTitleData];
     [self addSureBottomBar];
 }
-- (void)requestData{
-    self.dataArray = [NSMutableArray array];
-    for (NSUInteger k = 0; k < 3; k ++) {
-        NSMutableArray *sectionArray = [NSMutableArray array];
-        for (NSUInteger q = 0; q < 3; q ++) {
-            FormItem *item = [FormItem new];
-            item.pTitle = @"借款人信息";
-            item.detailText = @"借钱是要还的";
-            [sectionArray addObject:item];
-        }
-        [self.dataArray addObject:sectionArray];
-    }
+- (void)requestSectionTitleData{
+    
+    
+    
+//    self.dataArray = [NSMutableArray array];
+//    for (NSUInteger k = 0; k < 3; k ++) {
+//        NSMutableArray *sectionArray = [NSMutableArray array];
+//        for (NSUInteger q = 0; q < 3; q ++) {
+//            FormItem *item = [FormItem new];
+//            item.pTitle = @"借款人信息";
+//            item.detailText = @"借钱是要还的";
+//            [sectionArray addObject:item];
+//        }
+//        [self.dataArray addObject:sectionArray];
+//    }
 }
 - (void)initTableView{
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(EDGELENGTH, 0, kScreenWidth- 2 * EDGELENGTH, kScreenHeight) style:UITableViewStyleGrouped];
@@ -66,7 +69,7 @@ static NSString *cellReuseId = @"formTableCellId";
     SureViewController *sureVC = [[SureViewController alloc] initWithNibName:NSStringFromClass([SureViewController class]) bundle:[NSBundle mainBundle]];
     [self addChildViewController:sureVC];
     [self.view addSubview:sureVC.view];
-    sureVC.view.frame = CGRectMake(0, kScreenHeight - SUREBOTTOMBARHEIGHT - kTabbarHeight, kScreenWidth, SUREBOTTOMBARHEIGHT);
+    sureVC.view.frame = CGRectMake(0, kScreenHeight - SUREBOTTOMBARHEIGHT, kScreenWidth, SUREBOTTOMBARHEIGHT);
     [sureVC didMoveToParentViewController:self];
     sureVC.agreeDelegate = self;
 }
@@ -80,7 +83,7 @@ static NSString *cellReuseId = @"formTableCellId";
     }else if (section == 1){
         return 6;
     }else if (section == 2){
-        return 3;
+        return self.infoItem.refundMoth;
     }
     return 0;
 }
@@ -93,19 +96,20 @@ static NSString *cellReuseId = @"formTableCellId";
 - (FormItem *)currentItem:(NSIndexPath *)indexPath{
     
     if (indexPath.section >= self.dataArray.count)  return nil;
-    
     NSArray *sectionArray = self.dataArray[indexPath.section];
-    
-    NSLog(@"%ld",(long)indexPath.row);
     if (indexPath.row >= sectionArray.count)  return nil;
-    
     FormItem *item = (FormItem *)sectionArray[indexPath.row];
-    
     return item;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UILabel *label = [HeaderLabel initHeaderLabel:CGSizeMake(tableView.frame.size.width, 30)];
-    label.text = @"借款人信息";
+    if (section == 0) {
+        label.text = @"借款人信息";
+    }else if (section == 1){
+        label.text = @"借款概要";
+    }else if (section == 2){
+        label.text = @"还款概要";
+    }
     return label;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

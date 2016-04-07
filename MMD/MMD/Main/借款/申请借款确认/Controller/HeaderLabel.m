@@ -35,7 +35,7 @@
     UILabel *headerLabel = [UILabel new];
     headerLabel.font = [UIFont systemFontOfSize:15];
     headerLabel.textAlignment = NSTextAlignmentLeft;
-    headerLabel.textColor = [UIColor blackColor];
+    headerLabel.textColor = [UIColor redColor];
     headerLabel.frame = CGRectMake(0, 0, size.width, size.height);
     return headerLabel;
 }

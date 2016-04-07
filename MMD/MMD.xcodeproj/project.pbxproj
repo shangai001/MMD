@@ -194,6 +194,8 @@
 		D688B91C1CB6AAD100CC80FF /* FaceRecongnizeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D688B91A1CB6AAD100CC80FF /* FaceRecongnizeController.xib */; };
 		D688B9221CB6C11B00CC80FF /* mmd.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9211CB6C11B00CC80FF /* mmd.txt */; };
 		D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */; };
+		D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */; };
+		D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
 		D6B031C41CB3920E00E2955A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031C31CB3920E00E2955A /* UserInfo.m */; };
@@ -536,6 +538,9 @@
 		D688B9211CB6C11B00CC80FF /* mmd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mmd.txt; sourceTree = "<group>"; };
 		D688B9231CB6D12B00CC80FF /* RefundTextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundTextHelper.h; sourceTree = "<group>"; };
 		D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundTextHelper.m; sourceTree = "<group>"; };
+		D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoanVerifySectionTitle.txt; sourceTree = "<group>"; };
+		D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanInfoItem.h; path = ../Controller/LoanInfoItem.h; sourceTree = "<group>"; };
+		D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanInfoItem.m; path = ../Controller/LoanInfoItem.m; sourceTree = "<group>"; };
 		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
@@ -727,6 +732,7 @@
 				D633565D1CB0378F000A321C /* HeaderLabel.m */,
 				D633566D1CB04E47000A321C /* LoanProtroWebController.h */,
 				D633566E1CB04E47000A321C /* LoanProtroWebController.m */,
+				D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -734,6 +740,8 @@
 		D633564F1CB0336A000A321C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */,
+				D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */,
 				D633565F1CB03ACE000A321C /* FormItem.h */,
 				D63356601CB03ACE000A321C /* FormItem.m */,
 				D63356621CB03B2C000A321C /* FormTableViewCell+PutValue.h */,
@@ -1653,6 +1661,7 @@
 				D60609E11C76FF0E000DB373 /* no_visible@3x.png in Resources */,
 				D606099B1C76FF0E000DB373 /* 补充附件@2x.png in Resources */,
 				D688B91C1CB6AAD100CC80FF /* FaceRecongnizeController.xib in Resources */,
+				D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */,
 				D60609AD1C76FF0E000DB373 /* 分享@2x.png in Resources */,
 				D60609BC1C76FF0E000DB373 /* 关于@2x.png in Resources */,
 				D6F567281C80055800B0612F /* 我的@2x.png in Resources */,
@@ -1927,6 +1936,7 @@
 				D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
+				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,
 				D6805E9B1CAD1A3300316925 /* STPickerView.m in Sources */,
