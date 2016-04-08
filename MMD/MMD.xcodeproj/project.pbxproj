@@ -175,6 +175,7 @@
 		D64A4E2E1CB7998A00FB519B /* BottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E2C1CB7998A00FB519B /* BottomTableViewCell.m */; };
 		D64A4E2F1CB7998A00FB519B /* BottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E2D1CB7998A00FB519B /* BottomTableViewCell.xib */; };
 		D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */; };
+		D64A4E3A1CB7D62800FB519B /* SortIdDic.txt in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E391CB7D62800FB519B /* SortIdDic.txt */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
@@ -506,6 +507,7 @@
 		D64A4E2D1CB7998A00FB519B /* BottomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomTableViewCell.xib; sourceTree = "<group>"; };
 		D64A4E331CB79D1D00FB519B /* BottomTableViewCell+PutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BottomTableViewCell+PutValue.h"; sourceTree = "<group>"; };
 		D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BottomTableViewCell+PutValue.m"; sourceTree = "<group>"; };
+		D64A4E391CB7D62800FB519B /* SortIdDic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SortIdDic.txt; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -772,6 +774,7 @@
 				D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */,
 				D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */,
 				D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */,
+				D64A4E391CB7D62800FB519B /* SortIdDic.txt */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1782,6 +1785,7 @@
 				D633566C1CB04320000A321C /* SureViewController.xib in Resources */,
 				D60609F91C76FF0E000DB373 /* approve_off@3x.png in Resources */,
 				D606099E1C76FF0E000DB373 /* 步骤@2x.png in Resources */,
+				D64A4E3A1CB7D62800FB519B /* SortIdDic.txt in Resources */,
 				D688B9221CB6C11B00CC80FF /* mmd.txt in Resources */,
 				D60609F01C76FF0E000DB373 /* txweibo@3x.png in Resources */,
 				D6060A231C76FF0E000DB373 /* qq空间@3x.png in Resources */,

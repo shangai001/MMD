@@ -39,7 +39,6 @@
 
 + (NSMutableDictionary *)findValueForkey:(NSMutableDictionary *)dic item:(LoanInfoItem *)item{
     
-    
     NSDictionary *userInfo = [AppUserInfoHelper userInfo];
     NSDictionary *userBank = [AppUserInfoHelper userBank];
     NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithDictionary:dic];
@@ -95,7 +94,6 @@
     NSArray *data = [self itemsArrayForVerify:item];
     NSLog(@"字典数组是  ---> %@ ",data);
     
-    
     NSMutableArray *fullArray = [NSMutableArray array];
     [[self itemsArrayForVerify:item] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[NSDictionary class]]) {
@@ -104,19 +102,25 @@
             [fullArray addObject:sectionArray];
         }
     }];
+    [self sortedArray:fullArray];
     return [fullArray mutableCopy];
 }
 + (NSMutableArray *)makeupOneSectionArray:(NSDictionary *)onedic{
-    
     NSMutableArray *sectionArray  = [NSMutableArray array];
+    NSLog(@"字典---------%@",onedic);
     [onedic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         FormItem *formItem = [FormItem new];
         formItem.pTitle = key;
         formItem.detailText = obj;
-
+        [self setSortId:key forItem:formItem];
         [sectionArray addObject:formItem];
     }];
     return sectionArray;
+}
++ (void)setSortId:(NSString *)key forItem:(FormItem *)item{
+    NSDictionary *sortInfo = [ReadFiler readDictionaryFile:@"SortIdDic" fileType:@"txt"];
+    NSNumber *sortId = sortInfo[key];
+    item.sortId = sortId;
 }
 + (NSMutableArray *)ez_bottomItemArrayForBottomCell:(LoanInfoItem *)item{
     
@@ -138,5 +142,12 @@
     }
     return boItemArray;
 }
-
++ (void)sortedArray:(NSMutableArray *)itemArray{
+    
+    for (NSMutableArray *childArray in itemArray) {
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"sortId" ascending:YES];
+        [childArray sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    }
+    
+}
 @end

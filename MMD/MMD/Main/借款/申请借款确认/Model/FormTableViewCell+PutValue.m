@@ -14,6 +14,7 @@
 - (void)putValue:(FormItem *)item{
     self.titleLabel.text = item.pTitle;
     self.detailLabel.text = item.detailText;
+    NSLog(@"排序后的sortId = %@",item.sortId);
 }
 
 @end

@@ -10,7 +10,7 @@
 
 @interface FormItem : NSObject
 
-
+@property (nonatomic, strong)NSNumber *sortId;
 
 @property (nonatomic, copy)NSString *pTitle;
 
