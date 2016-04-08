@@ -7,7 +7,7 @@
 //
 
 #import "MMTabbarController.h"
-#import "TabbarTitleHeader.h"
+#import "ConstantTitle.h"
 #import "MMTabbar.h"
 #import "ColorHeader.h"
 
@@ -36,23 +36,23 @@
     
     
     UITabBarItem *loanItem = tabbar.items[0];
-    loanItem.title = LOAN_TITLE;
+    loanItem.title = LOAN_TABBARITEMTITLE;
     loanItem.image = self.imageHelper.loanOffImage;
     loanItem.selectedImage = self.imageHelper.loanOnImage;
     
     UITabBarItem *refundItem = tabbar.items[1];
-    refundItem.title = REFUND_TITLE;
+    refundItem.title = REFUND_TABBARITEMTITLE;
     refundItem.image = self.imageHelper.reOffImage;
     refundItem.selectedImage = self.imageHelper.reOnImage;
     
     UITabBarItem *mineItem = tabbar.items[2];
-    mineItem.title = MINE_TITLE;
+    mineItem.title = MINE_TABBARITEMTITLE;
     mineItem.image = self.imageHelper.mineOffImage;
     mineItem.selectedImage = self.imageHelper.mineOnImage;
 //    mineItem.badgeValue = @"9";
     
     UITabBarItem *moreItem = tabbar.items[3];
-    moreItem.title = MORE_TITLE;
+    moreItem.title = MORE_TABBARITEMTITLE;
     moreItem.image = self.imageHelper.moreOffImage;
     moreItem.selectedImage = self.imageHelper.mineOnImage;
 }

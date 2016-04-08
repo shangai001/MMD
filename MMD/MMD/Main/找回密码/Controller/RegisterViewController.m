@@ -17,15 +17,17 @@
 #import "RegisterContentView.h"
 #import "UIView+LoadViewFromNib.h"
 #import <MJExtension.h>
+#import <YYCGUtilities.h>
 #import "AppUserInfoHelper.h"
-#import "HeightHeader.h"
+#import "ConstantHeight.h"
 
 
 
 
-#define PHONENUM_LENGTH 11
-#define LONGESTPASSWORD_LENGTH 12
-#define SHORTESTPASSWORD_LENGTH 6
+static const CGFloat PHONENUM_LENGTH = 11;
+static const CGFloat LONGESTPASSWORD_LENGTH = 12;
+static const CGFloat SHORTESTPASSWORD_LENGTH  = 6;
+
 
 
 

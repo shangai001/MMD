@@ -9,11 +9,13 @@
 #import "VerifyViewController.h"
 #import "StageView.h"
 #import "ColorHeader.h"
-#import "HeightHeader.h"
+#import "ConstantHeight.h"
+#import "ConstantTitle.h"
 #import "FirstStepController.h"
 #import "SecondStaepController.h"
 #import "ThirdStepController.h"
 #import <UIView+SDAutoLayout.h>
+#import <YYCGUtilities.h>
 
 @interface VerifyViewController ()
 
@@ -25,7 +27,7 @@
 @end
 
 
-#define STAGETOLEFT 0
+static const CGFloat STAGETOLEFT = 0;
 
 @implementation VerifyViewController
 
@@ -56,7 +58,7 @@
     [self addDissmissKeyboardGesture];
 }
 - (void)initStageView{
-    self.stageView = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(STAGETOLEFT, kTopLayoutGuide, YYScreenSize().width - 2 * STAGETOLEFT , StageHeight)];
+    self.stageView = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(STAGETOLEFT, kTopLayoutGuide, YYScreenSize().width - 2 * STAGETOLEFT , kStageHeight)];
     [self.view addSubview:self.stageView];
 }
 - (void)addDissmissKeyboardGesture{
@@ -70,7 +72,7 @@
     view.sd_layout
     .leftEqualToView(self.view)
     .rightEqualToView(self.view)
-    .topSpaceToView(self.view,kTopLayoutGuide + StageHeight)
+    .topSpaceToView(self.view,kTopLayoutGuide + kStageHeight)
     .bottomEqualToView(self.view);
 }
 - (void)setStatus:(NSInteger)status{
@@ -121,7 +123,7 @@
         .leftEqualToView(self.view)
         .rightEqualToView(self.view)
         .bottomEqualToView(self.view)
-        .topSpaceToView(self.view,kTopLayoutGuide + StageHeight);
+        .topSpaceToView(self.view,kTopLayoutGuide + kStageHeight);
         
     } completion:^(BOOL finished) {
         [toViewController didMoveToParentViewController:self];

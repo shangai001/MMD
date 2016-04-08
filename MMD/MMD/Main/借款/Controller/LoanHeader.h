@@ -9,7 +9,7 @@
 #ifndef LoanHeader_h
 #define LoanHeader_h
 
-#import "SegmentTitleHeader.h"
+#import "ConstantTitle.h"
 #import "HeaderView.h"
 #import "UIView+LoadViewFromNib.h"
 #import "QueryViewController.h"

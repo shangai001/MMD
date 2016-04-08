@@ -10,7 +10,7 @@
 #import "VerifyItem.h"
 #import "STPickerSingle.h"
 #import "STPickerArea.h"
-#import "HeightHeader.h"
+#import "ConstantTitle.h"
 #import "ColorHeader.h"
 #import "BankModel.h"
 #import "AppUserInfoHelper.h"
@@ -21,7 +21,8 @@
 #import <SVProgressHUD.h>
 #import "VerifyViewController.h"
 
-#define ShouldCheckoutCredit 0
+
+static const NSInteger ShouldCheckoutCredit = 0;
 
 
 

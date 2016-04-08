@@ -7,13 +7,15 @@
 //
 
 #import "SecondStaepController.h"
-#import "HeightHeader.h"
+//#import "ConstantTitle.h"
+#import "ConstantHeight.h"
 #import "ColorHeader.h"
 #import "STPickerArea.h"
 #import "STPickerSingle.h"
 #import "VerifyModel.h"
 #import "SecondVerifyItem.h"
 #import <MJExtension.h>
+#import <YYCGUtilities.h>
 #import "VerifyModel.h"
 #import "AppUserInfoHelper.h"
 #import "VerifyViewController.h"
@@ -104,7 +106,7 @@
 }
 - (void)viewDidLayoutSubviews{
     self.contentWidth.constant = kScreenWidth;
-    self.contentHeight.constant = kScreenHeight - StageHeight;
+    self.contentHeight.constant = kScreenHeight - kStageHeight;
 }
 #pragma mark UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{

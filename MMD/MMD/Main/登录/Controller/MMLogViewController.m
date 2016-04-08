@@ -26,11 +26,8 @@
 #import "MMDLoggin.h"
 #import "AppUserInfoHelper.h"
 
-
-#define REMEMBERBUTTONTOTOP_DEFAULT 25
-#define INPUTROW_HEIGHT 30
-
-
+static const CGFloat REMEMBERBUTTONTOTOP_DEFAULT = 25;
+static const CGFloat INPUTROW_HEIGHT = 30;
 
 
 @interface MMLogViewController ()<UITextFieldDelegate,didEndInputCode>

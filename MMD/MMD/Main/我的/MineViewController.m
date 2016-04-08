@@ -7,10 +7,11 @@
 //
 
 #import "MineViewController.h"
-#import "HeightHeader.h"
+#import "ConstantTitle.h"
 #import "MoreTableViewCell.h"
 #import "MineHeaderTableViewCell.h"
 #import <NSArray+YYAdd.h>
+#import <YYCGUtilities.h>
 #import "ImagesTitles_Mine_Header.h"
 #import "MoreCellUIItem.h"
 #import "MoreTableViewCell+MineUIInfo.h"
@@ -18,7 +19,9 @@
 #import "MineCellActionHelper.h"
 
 
-#define EDGELENGTH 10
+
+static const CGFloat EDGELENGTH = 10;
+
 static NSString *headerCellId = @"MineHeaderCellId";
 static NSString *bodyCellId = @"moreCellId";
 

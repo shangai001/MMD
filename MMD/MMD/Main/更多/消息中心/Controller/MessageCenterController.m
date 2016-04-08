@@ -7,7 +7,7 @@
 //
 
 #import "MessageCenterController.h"
-#import "MoreWebTitle.h"
+#import "ConstantTitle.h"
 
 @interface MessageCenterController ()
 

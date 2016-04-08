@@ -12,7 +12,8 @@
 #import "ColorHeader.h"
 
 
-#define TOP_Y 108
+static CGFloat const TOP_Y = 108;
+
 
 @interface LoanViewController ()<HeaderViewDelegate>
 
