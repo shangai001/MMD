@@ -20,7 +20,7 @@
 
 
 
-static const CGFloat EDGELENGTH = 10;
+CGFloat const EDGELENGTH = 10;
 
 static NSString *headerCellId = @"MineHeaderCellId";
 static NSString *bodyCellId = @"moreCellId";

@@ -9,7 +9,6 @@
 #import "LimitInputWords.h"
 
 
-//#define MAX_STARWORDS_LENGTH 20
 
 @implementation LimitInputWords
 

@@ -23,3 +23,5 @@ NSString * const SUPPORTCENTER_TITLE = @"联系客服";
 NSString * const ABOUTMMD_TITLE = @"关于米米贷";
 NSString * const REFUND_TITLE = @"还款须知";
 NSString * const LOAN_TITLE = @"借款须知";
+
+NSString * const MORE_IMAGETITLE_FILENAME = @"ImagesTitles_More";

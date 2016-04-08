@@ -24,11 +24,9 @@
 
 
 
-static const CGFloat PHONENUM_LENGTH = 11;
-static const CGFloat LONGESTPASSWORD_LENGTH = 12;
-static const CGFloat SHORTESTPASSWORD_LENGTH  = 6;
-
-
+CGFloat const PHONENUM_LENGTH = 11;
+CGFloat const LONGESTPASSWORD_LENGTH = 12;
+CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
 
 
 @interface RegisterViewController ()<UITextFieldDelegate>

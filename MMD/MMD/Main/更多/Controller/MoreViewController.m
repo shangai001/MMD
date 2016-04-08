@@ -12,14 +12,15 @@
 #import <NSArray+YYAdd.h>
 #import "MoreCellUIItem.h"
 #import "MoreTableViewCell+InitMoreCellUI.h"
-#import "ImagesTitles_More_Header.h"
+#import "ConstantTitle.h"
 //将所有的(除了分享)跳转逻辑抽离到以下类
 #import "MoreCellActionHelper.h"
 
 
 
 
-static NSString *cellId = @"moreCellId";
+static NSString * const cellId = @"moreCellId";
+
 @interface MoreViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -34,7 +35,7 @@ static NSString *cellId = @"moreCellId";
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
         
-        NSString *titleListPath = [[NSBundle mainBundle] pathForResource:ImagesTitles_More ofType:@"plist"];
+        NSString *titleListPath = [[NSBundle mainBundle] pathForResource:MORE_IMAGETITLE_FILENAME ofType:@"plist"];
         NSData *imagesTitleData = [NSData dataWithContentsOfFile:titleListPath];
         NSArray *tempDataArray = [NSMutableArray arrayWithPlistData:imagesTitleData];
         NSLog(@"data转换  %@",tempDataArray);

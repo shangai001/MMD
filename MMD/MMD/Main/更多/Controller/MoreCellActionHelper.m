@@ -16,8 +16,6 @@
 #import "ImagesTitles_More_Header.h"
 
 
-//static UIViewController *moreVC;
-
 @implementation MoreCellActionHelper
 
 + (void)jumpFromViewController:(MoreViewController *)originalController

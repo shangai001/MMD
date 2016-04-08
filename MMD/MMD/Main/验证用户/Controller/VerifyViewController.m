@@ -27,7 +27,7 @@
 @end
 
 
-static const CGFloat STAGETOLEFT = 0;
+CGFloat const STAGETOLEFT = 0;
 
 @implementation VerifyViewController
 

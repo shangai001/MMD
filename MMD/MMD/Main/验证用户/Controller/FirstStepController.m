@@ -22,7 +22,7 @@
 #import "VerifyViewController.h"
 
 
-static const NSInteger ShouldCheckoutCredit = 0;
+NSInteger const ShouldCheckoutCredit = 0;
 
 
 

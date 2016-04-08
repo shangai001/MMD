@@ -394,7 +394,6 @@
 		D63356861CB179BA000A321C /* MineHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeaderTableViewCell.h; sourceTree = "<group>"; };
 		D63356871CB179BA000A321C /* MineHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHeaderTableViewCell.m; sourceTree = "<group>"; };
 		D63356881CB179BA000A321C /* MineHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		D633568C1CB18179000A321C /* ImagesTitles_More_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTitles_More_Header.h; sourceTree = "<group>"; };
 		D633568D1CB181BA000A321C /* ImagesTitles_Mine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImagesTitles_Mine.plist; sourceTree = "<group>"; };
 		D633568F1CB184E8000A321C /* MoreTableViewCell+MineUIInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MoreTableViewCell+MineUIInfo.h"; sourceTree = "<group>"; };
 		D63356901CB184E8000A321C /* MoreTableViewCell+MineUIInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MoreTableViewCell+MineUIInfo.m"; sourceTree = "<group>"; };
@@ -834,7 +833,6 @@
 				D647FB071CAE7E2D00CBF19E /* MoreViewController.m */,
 				D6ABF2491CB18F3C000A7A01 /* MoreCellActionHelper.h */,
 				D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */,
-				D633568C1CB18179000A321C /* ImagesTitles_More_Header.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

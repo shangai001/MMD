@@ -12,7 +12,7 @@
 #import "ColorHeader.h"
 
 
-static CGFloat const TOP_Y = 108;
+CGFloat const TOP_Y = 108;
 
 
 @interface LoanViewController ()<HeaderViewDelegate>
