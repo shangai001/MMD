@@ -170,6 +170,7 @@
 		D64A2D0B1C956168002654AC /* MMDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D0A1C956168002654AC /* MMDUserInfo.m */; };
 		D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E1E1CB761CB00FB519B /* ConstantTitle.m */; };
 		D64A4E241CB77F4200FB519B /* ConstantHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E231CB77F4200FB519B /* ConstantHeight.m */; };
+		D64A4E271CB789AF00FB519B /* ContantLength.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E261CB789AF00FB519B /* ContantLength.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
@@ -493,6 +494,8 @@
 		D64A4E1E1CB761CB00FB519B /* ConstantTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantTitle.m; sourceTree = "<group>"; };
 		D64A4E221CB77F4200FB519B /* ConstantHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantHeight.h; sourceTree = "<group>"; };
 		D64A4E231CB77F4200FB519B /* ConstantHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantHeight.m; sourceTree = "<group>"; };
+		D64A4E251CB789AF00FB519B /* ContantLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContantLength.h; sourceTree = "<group>"; };
+		D64A4E261CB789AF00FB519B /* ContantLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContantLength.m; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -552,7 +555,6 @@
 		D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoanVerifySectionTitle.txt; sourceTree = "<group>"; };
 		D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanInfoItem.h; path = ../Controller/LoanInfoItem.h; sourceTree = "<group>"; };
 		D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanInfoItem.m; path = ../Controller/LoanInfoItem.m; sourceTree = "<group>"; };
-		D6A0FB751C857363007D8DCB /* PasswordLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLength.h; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
 		D6ABF2491CB18F3C000A7A01 /* MoreCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreCellActionHelper.h; sourceTree = "<group>"; };
@@ -1362,7 +1364,8 @@
 				D64A4E1E1CB761CB00FB519B /* ConstantTitle.m */,
 				D64A4E221CB77F4200FB519B /* ConstantHeight.h */,
 				D64A4E231CB77F4200FB519B /* ConstantHeight.m */,
-				D6A0FB751C857363007D8DCB /* PasswordLength.h */,
+				D64A4E251CB789AF00FB519B /* ContantLength.h */,
+				D64A4E261CB789AF00FB519B /* ContantLength.m */,
 				D633562D1CAFE630000A321C /* ShareSDKAppkeyHeader.h */,
 			);
 			path = Const;
@@ -1924,6 +1927,7 @@
 				D647FBB11CAE87FD00CBF19E /* VerifyViewController.m in Sources */,
 				D647FBAF1CAE87FD00CBF19E /* ThirdStepController.m in Sources */,
 				D6805E941CAD1A3300316925 /* NSCalendar+ST.m in Sources */,
+				D64A4E271CB789AF00FB519B /* ContantLength.m in Sources */,
 				D647FBB41CAE87FD00CBF19E /* HorizontalDashLineView.m in Sources */,
 				D6B031D01CB3949400E2955A /* CreditRating.m in Sources */,
 				D647FB1A1CAE7E2D00CBF19E /* MoreCellUIItem.m in Sources */,

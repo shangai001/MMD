@@ -11,9 +11,9 @@
 #import "LoginUser.h"
 #import "LogginModel.h"
 #import <MJExtension.h>
+#import "ContantLength.h"
 #import "RegisterViewController.h"
 #import "BaseNavgationController.h"
-#import "PasswordLength.h"
 #import "ColorHeader.h"
 #import "VerifyViewController.h"
 #import "FailureView.h"
@@ -261,7 +261,7 @@ static const CGFloat INPUTROW_HEIGHT = 30;
         }
     }else if ([textField isEqual:self.passwordTextField]){
         NSString *text = textField.text;
-        if (text.length >= SHORTESTLENGTH && text.length <= LONGESTLENGTH) {
+        if (text.length >= MINPD_LENGTH && text.length <= MAXPD_LENGTH) {
             self.user.password = text;
         }
     }
@@ -295,7 +295,7 @@ static const CGFloat INPUTROW_HEIGHT = 30;
     }
     if (textField == self.passwordTextField) {
         NSString *text = textField.text;
-        if (text.length >= SHORTESTLENGTH && text.length <= LONGESTLENGTH) {
+        if (text.length >= MINPD_LENGTH && text.length <= MAXPD_LENGTH) {
             [textField resignFirstResponder];
             return YES;
         }
