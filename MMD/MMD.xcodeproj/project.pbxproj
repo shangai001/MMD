@@ -176,6 +176,7 @@
 		D64A4E2F1CB7998A00FB519B /* BottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E2D1CB7998A00FB519B /* BottomTableViewCell.xib */; };
 		D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */; };
 		D64A4E3A1CB7D62800FB519B /* SortIdDic.txt in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E391CB7D62800FB519B /* SortIdDic.txt */; };
+		D64A4E3D1CB7D99000FB519B /* SubmitLoanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E3C1CB7D99000FB519B /* SubmitLoanInfo.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
@@ -508,6 +509,8 @@
 		D64A4E331CB79D1D00FB519B /* BottomTableViewCell+PutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BottomTableViewCell+PutValue.h"; sourceTree = "<group>"; };
 		D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BottomTableViewCell+PutValue.m"; sourceTree = "<group>"; };
 		D64A4E391CB7D62800FB519B /* SortIdDic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SortIdDic.txt; sourceTree = "<group>"; };
+		D64A4E3B1CB7D99000FB519B /* SubmitLoanInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLoanInfo.h; sourceTree = "<group>"; };
+		D64A4E3C1CB7D99000FB519B /* SubmitLoanInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLoanInfo.m; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -775,6 +778,8 @@
 				D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */,
 				D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */,
 				D64A4E391CB7D62800FB519B /* SortIdDic.txt */,
+				D64A4E3B1CB7D99000FB519B /* SubmitLoanInfo.h */,
+				D64A4E3C1CB7D99000FB519B /* SubmitLoanInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1910,6 +1915,7 @@
 				D633563F1CB016BE000A321C /* FailureView.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
+				D64A4E3D1CB7D99000FB519B /* SubmitLoanInfo.m in Sources */,
 				D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D64A4E2A1CB7903100FB519B /* BottomItem.m in Sources */,

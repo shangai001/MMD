@@ -34,7 +34,7 @@
 - (void)setupSubViews{
     
     self.nextButton.backgroundColor = REDCOLOR;
-    [self.nextButton setTitle:@"确认本次申请" forState:UIControlStateNormal];
+    [self.nextButton setTitle:@"确认本次借款申请" forState:UIControlStateNormal];
     self.nextButton.layer.cornerRadius = 10.0f;
     
     [self.sureButton setImage:[UIImage imageNamed:@"步骤0"] forState:UIControlStateNormal];

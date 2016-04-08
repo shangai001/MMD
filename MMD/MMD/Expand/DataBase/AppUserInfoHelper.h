@@ -35,4 +35,14 @@
  */
 + (NSInteger)UserStatus;
 
+/**
+ *  向接口参数中注入userId/Token
+ *
+ *  @param info
+ *
+ *  @return 
+ */
++ (NSDictionary *)appendUserIdToken:(NSDictionary *)info;
+
+
 @end

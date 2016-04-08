@@ -107,7 +107,6 @@
 }
 + (NSMutableArray *)makeupOneSectionArray:(NSDictionary *)onedic{
     NSMutableArray *sectionArray  = [NSMutableArray array];
-    NSLog(@"字典---------%@",onedic);
     [onedic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         FormItem *formItem = [FormItem new];
         formItem.pTitle = key;

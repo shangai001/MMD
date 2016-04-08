@@ -13,11 +13,6 @@
 
 @implementation AppUserInfoHelper
 
-
-//TODO:优化字符串
-
-
-
 + (NSString *)getDocumentPath {
     
     NSArray *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -107,5 +102,14 @@
     NSInteger statusInterger = [[user objectForKey:AuditState] integerValue];
     
     return statusInterger;
+}
++ (NSDictionary *)appendUserIdToken:(NSDictionary *)info{
+    
+    NSMutableDictionary *userIdTokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+    for (NSString *key in [info allKeys]) {
+        id object = info[key];
+        [userIdTokenDic setObject:object forKey:key];
+    }
+    return userIdTokenDic;
 }
 @end

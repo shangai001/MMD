@@ -17,9 +17,11 @@
 #import "LoanInfoItem.h"
 #import "FormItem.h"
 #import "BottomItem.h"
-
+#import "SubmitLoanInfo.h"
 #import "FormatVerifyDataHelper.h"
 #import <YYCGUtilities.h>
+#import <SVProgressHUD.h>
+
 
 CGFloat const EDGELENGTH = 20;
 CGFloat const SUREBOTTOMBARHEIGHT = 64;
@@ -78,6 +80,7 @@ static NSString * const bottomCellId = @"BottomCellId";
 - (void)initTableView{
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(EDGELENGTH, 0, kScreenWidth- 2 * EDGELENGTH, kScreenHeight - SUREBOTTOMBARHEIGHT) style:UITableViewStyleGrouped];
     _mainTableView.backgroundColor = [UIColor whiteColor];
+    _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
     _mainTableView.estimatedRowHeight = 44;
@@ -112,11 +115,13 @@ static NSString * const bottomCellId = @"BottomCellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0 | indexPath.section == 1) {
         FormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseId forIndexPath:indexPath];
-//        if (indexPath.section == 0) {
-//            //样式不一样
-//        }else{
-//            
-//        }
+        if (indexPath.section == 0) {
+            
+            cell.titleLabelWidth.constant = 100;
+        }else{
+            cell.titleLabelWidth.constant = 140;
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         FormItem *item = [self currentItem:indexPath];
         [cell putValue:item];
         return cell;
@@ -124,6 +129,7 @@ static NSString * const bottomCellId = @"BottomCellId";
         BottomTableViewCell *boCell = [tableView dequeueReusableCellWithIdentifier:bottomCellId forIndexPath:indexPath];
         BottomItem *boItem = (BottomItem *)self.bottomDataArray[indexPath.row];
         [boCell putValue:boItem];
+        boCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return boCell;
     }
     return nil;
@@ -155,7 +161,18 @@ static NSString * const bottomCellId = @"BottomCellId";
 }
 #pragma AgreeProtro
 - (void)didAgreeLoanProto:(id)sender{
-    NSLog(@"去往下一个页面");
+    [SVProgressHUD show];
+    NSDictionary *info = @{@"capital":@(self.infoItem.floatLoanMoney),@"termLine":@(self.infoItem.refundMoth)};
+    [SubmitLoanInfo submitLoanInfo:info success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            NSLog(@"提交成功");
+        }else{
+            [SVProgressHUD showInfoWithStatus:resultDic[@"msg"]];
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"提交失败");
+        [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

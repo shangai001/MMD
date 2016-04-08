@@ -19,12 +19,8 @@
                      success:(successHandler)successHandler
                      failure:(failureHandler)failureHandler{
     
+    NSDictionary *userIdTokenDic = [AppUserInfoHelper appendUserIdToken:info];
     NSString *URL = [NSString stringWithFormat:@"%@/user/firstSaveUserInfoSecond",kHostURL];
-    NSMutableDictionary *userIdTokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
-    for (NSString *key in [info allKeys]) {
-        NSString *object = [info objectForKey:key];
-        [userIdTokenDic setObject:object forKey:key];
-    }
     
     [HttpRequest postWithURLString:URL parameters:userIdTokenDic success:^(id responseObject) {
         successHandler(responseObject);
@@ -38,12 +34,8 @@
                      success:(successHandler)successHandler
                       failure:(failureHandler)failureHandler{
     
+    NSDictionary *userIdTokenDic = [AppUserInfoHelper appendUserIdToken:info];
     NSString *URL = [NSString stringWithFormat:@"%@/user/secondSaveUserInfo",kHostURL];
-    NSMutableDictionary *userIdTokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
-    for (NSString *key in [info allKeys]) {
-        NSString *object = [info objectForKey:key];
-        [userIdTokenDic setObject:object forKey:key];
-    }
     
     [HttpRequest postWithURLString:URL parameters:userIdTokenDic success:^(id responseObject) {
         successHandler(responseObject);

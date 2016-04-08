@@ -15,9 +15,7 @@
           completation:(successHandler)success
                failure:(failureHandler)failure{
     
-    NSString *idcard = info[@"idcard"];
-    NSMutableDictionary *userIdTokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
-    [userIdTokenDic setObject:idcard forKey:@"idcard"];
+    NSDictionary *userIdTokenDic = [AppUserInfoHelper appendUserIdToken:info];
     
     NSString *URL = [NSString stringWithFormat:@"%@/user/checkIdCardRepeat",kHostURL];
     [HttpRequest postWithURLString:URL parameters:userIdTokenDic success:^(id responseObject) {

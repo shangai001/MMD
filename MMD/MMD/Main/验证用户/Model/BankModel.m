@@ -15,7 +15,7 @@
        completation:(successHandler)success
             failure:(failureHandler)failure{
     
-    NSMutableDictionary *userIdTokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+    NSDictionary *userIdTokenDic = [AppUserInfoHelper appendUserIdToken:info];
     
     NSString *URL = [NSString stringWithFormat:@"%@/user/getBanks",kHostURL];
     [HttpRequest postWithURLString:URL parameters:userIdTokenDic success:^(id responseObject) {
@@ -28,10 +28,7 @@
            completation:(successHandler)success
                 failure:(failureHandler)failure{
     
-    NSString *bankCard = info[@"bankCard"];
-    NSMutableDictionary *userIdTokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
-    [userIdTokenDic setObject:bankCard forKey:@"bankCard"];
-    
+    NSDictionary *userIdTokenDic = [AppUserInfoHelper appendUserIdToken:info];
     NSString *URL = [NSString stringWithFormat:@"%@/user/checkUserBankBinded",kHostURL];
     
     [HttpRequest postWithURLString:URL parameters:userIdTokenDic success:^(id responseObject) {

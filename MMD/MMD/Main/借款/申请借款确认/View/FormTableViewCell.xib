@@ -13,24 +13,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHW-F1-HXM">
-                        <rect key="frame" x="101" y="0.0" width="219" height="44"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjt-gL-ONg">
                         <rect key="frame" x="100" y="0.0" width="1" height="44"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="1" id="3v2-K9-lAW"/>
-                        </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rS-K6-Qis">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="veO-X2-KUS"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHW-F1-HXM">
+                        <rect key="frame" x="101" y="0.0" width="219" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -44,6 +41,7 @@
                     <constraint firstAttribute="bottom" secondItem="9rS-K6-Qis" secondAttribute="bottom" id="UhO-mG-Zeo"/>
                     <constraint firstItem="fHW-F1-HXM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gqQ-Po-A36"/>
                     <constraint firstAttribute="trailing" secondItem="fHW-F1-HXM" secondAttribute="trailing" id="hRI-cB-ePo"/>
+                    <constraint firstItem="fHW-F1-HXM" firstAttribute="leading" secondItem="zjt-gL-ONg" secondAttribute="trailing" id="oEe-4W-3ta"/>
                     <constraint firstItem="9rS-K6-Qis" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="soT-KS-uXD"/>
                     <constraint firstAttribute="bottom" secondItem="zjt-gL-ONg" secondAttribute="bottom" id="vXa-oh-Tix"/>
                     <constraint firstAttribute="bottom" secondItem="fHW-F1-HXM" secondAttribute="bottom" id="zEB-GC-TJ6"/>
@@ -52,8 +50,7 @@
             <connections>
                 <outlet property="detailLabel" destination="fHW-F1-HXM" id="aUT-xh-EMw"/>
                 <outlet property="titleLabel" destination="9rS-K6-Qis" id="4e1-mb-fdb"/>
-                <outlet property="titleLabelWidth" destination="veO-X2-KUS" id="SWk-l9-9zW"/>
-                <outlet property="titleWidth" destination="veO-X2-KUS" id="0cW-Ks-8oO"/>
+                <outlet property="titleLabelWidth" destination="veO-X2-KUS" id="A6g-0g-zpf"/>
             </connections>
         </tableViewCell>
     </objects>
