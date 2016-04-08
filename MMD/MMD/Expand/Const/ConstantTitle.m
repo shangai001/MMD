@@ -25,3 +25,5 @@ NSString * const REFUND_TITLE = @"还款须知";
 NSString * const LOAN_TITLE = @"借款须知";
 
 NSString * const MORE_IMAGETITLE_FILENAME = @"ImagesTitles_More";
+
+NSString * const APPROVE_TEXT = @"同意  <<米米贷微额贷款协议>>";

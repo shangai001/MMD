@@ -18,12 +18,10 @@
 #import "ColorHeader.h"
 #import "MineCellActionHelper.h"
 
+CGFloat const kEDGELENGTH = 20;
 
-
-CGFloat const EDGELENGTH = 10;
-
-static NSString *headerCellId = @"MineHeaderCellId";
-static NSString *bodyCellId = @"moreCellId";
+static NSString * const headerCellId = @"MineHeaderCellId";
+static NSString * const bodyCellId = @"moreCellId";
 
 @interface MineViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -66,7 +64,7 @@ static NSString *bodyCellId = @"moreCellId";
     [self initTableView];
 }
 - (void)initTableView{
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(EDGELENGTH, 0, kScreenWidth- 2 * EDGELENGTH, kScreenHeight) style:UITableViewStyleGrouped];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(kEDGELENGTH, 0, kScreenWidth- 2 * kEDGELENGTH, kScreenHeight) style:UITableViewStyleGrouped];
     _mainTableView.backgroundColor = [UIColor clearColor];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;

@@ -10,24 +10,24 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHW-F1-HXM">
-                        <rect key="frame" x="104" y="2" width="214" height="39.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHW-F1-HXM">
+                        <rect key="frame" x="101" y="0.0" width="219" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjt-gL-ONg">
-                        <rect key="frame" x="100" y="0.0" width="2" height="44"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="100" y="0.0" width="1" height="44"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="2" id="3v2-K9-lAW"/>
+                            <constraint firstAttribute="width" constant="1" id="3v2-K9-lAW"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rS-K6-Qis">
-                        <rect key="frame" x="2" y="2" width="100" height="39.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rS-K6-Qis">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="veO-X2-KUS"/>
                         </constraints>
@@ -37,16 +37,16 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fHW-F1-HXM" firstAttribute="leading" secondItem="9rS-K6-Qis" secondAttribute="trailing" constant="2" id="4B8-45-Tk7"/>
-                    <constraint firstItem="zjt-gL-ONg" firstAttribute="leading" secondItem="9rS-K6-Qis" secondAttribute="trailing" constant="-2" id="8Sc-v8-J5W"/>
+                    <constraint firstItem="fHW-F1-HXM" firstAttribute="leading" secondItem="9rS-K6-Qis" secondAttribute="trailing" constant="1" id="4B8-45-Tk7"/>
+                    <constraint firstItem="zjt-gL-ONg" firstAttribute="leading" secondItem="9rS-K6-Qis" secondAttribute="trailing" id="8Sc-v8-J5W"/>
                     <constraint firstItem="zjt-gL-ONg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="G0t-gU-vWj"/>
-                    <constraint firstItem="9rS-K6-Qis" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="QYh-RY-fB2"/>
-                    <constraint firstAttribute="bottom" secondItem="9rS-K6-Qis" secondAttribute="bottom" constant="2" id="UhO-mG-Zeo"/>
-                    <constraint firstItem="fHW-F1-HXM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="gqQ-Po-A36"/>
-                    <constraint firstAttribute="trailing" secondItem="fHW-F1-HXM" secondAttribute="trailing" constant="2" id="hRI-cB-ePo"/>
-                    <constraint firstItem="9rS-K6-Qis" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="soT-KS-uXD"/>
+                    <constraint firstItem="9rS-K6-Qis" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QYh-RY-fB2"/>
+                    <constraint firstAttribute="bottom" secondItem="9rS-K6-Qis" secondAttribute="bottom" id="UhO-mG-Zeo"/>
+                    <constraint firstItem="fHW-F1-HXM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gqQ-Po-A36"/>
+                    <constraint firstAttribute="trailing" secondItem="fHW-F1-HXM" secondAttribute="trailing" id="hRI-cB-ePo"/>
+                    <constraint firstItem="9rS-K6-Qis" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="soT-KS-uXD"/>
                     <constraint firstAttribute="bottom" secondItem="zjt-gL-ONg" secondAttribute="bottom" id="vXa-oh-Tix"/>
-                    <constraint firstAttribute="bottom" secondItem="fHW-F1-HXM" secondAttribute="bottom" constant="2" id="zEB-GC-TJ6"/>
+                    <constraint firstAttribute="bottom" secondItem="fHW-F1-HXM" secondAttribute="bottom" id="zEB-GC-TJ6"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

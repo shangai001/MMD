@@ -9,33 +9,47 @@
 #import "LoanVerifyController.h"
 #import "ConstantHeight.h"
 #import "FormTableViewCell.h"
+#import "BottomTableViewCell.h"
 #import "HeaderLabel.h"
-#import "FormItem.h"
 #import "FormTableViewCell+PutValue.h"
+#import "BottomTableViewCell+PutValue.h"
 #import "SureViewController.h"
 #import "LoanInfoItem.h"
+#import "FormItem.h"
+#import "BottomItem.h"
+
 #import "FormatVerifyDataHelper.h"
 #import <YYCGUtilities.h>
 
-#define EDGELENGTH 20
-#define SUREBOTTOMBARHEIGHT 94
+CGFloat const EDGELENGTH = 20;
+CGFloat const SUREBOTTOMBARHEIGHT = 64;
 
-static NSString *cellReuseId = @"formTableCellId";
+static NSString * const cellReuseId = @"formTableCellId";
+static NSString * const bottomCellId = @"BottomCellId";
 
 @interface LoanVerifyController ()<UITableViewDataSource,UITableViewDelegate,AgreeLoanProtro>
 
 @property (nonatomic, strong)UITableView *mainTableView;
-@property (nonatomic, strong)NSMutableArray<FormItem *> *dataArray;
+//前2个section数据原
+@property (nonatomic, strong)NSMutableArray *dataArray;
+//最后1个section数据源
+@property (nonatomic, strong)NSMutableArray *bottomDataArray;
 
 @end
 
 @implementation LoanVerifyController
 
-- (NSMutableArray<FormItem *> *)dataArray{
+- (NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
+}
+- (NSMutableArray *)bottomDataArray{
+    if (!_bottomDataArray) {
+        _bottomDataArray = [NSMutableArray array];
+    }
+    return _bottomDataArray;
 }
 - (LoanInfoItem *)infoItem{
     if (!_infoItem) {
@@ -58,10 +72,13 @@ static NSString *cellReuseId = @"formTableCellId";
     NSMutableArray *keyValuesArray = [FormatVerifyDataHelper ez_itemsArrayForVerify:self.infoItem];
     [self.dataArray removeAllObjects];
     [self.dataArray addObjectsFromArray:keyValuesArray];
-    NSLog(@"组织完标题数据-->%@",self.dataArray);
+    
+    NSMutableArray *boItems = [FormatVerifyDataHelper ez_bottomItemArrayForBottomCell:self.infoItem];
+    [self.bottomDataArray removeAllObjects];
+    [self.bottomDataArray addObjectsFromArray:boItems];
 }
 - (void)initTableView{
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(EDGELENGTH, 0, kScreenWidth- 2 * EDGELENGTH, kScreenHeight) style:UITableViewStyleGrouped];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(EDGELENGTH, 0, kScreenWidth- 2 * EDGELENGTH, kScreenHeight - SUREBOTTOMBARHEIGHT) style:UITableViewStyleGrouped];
     _mainTableView.backgroundColor = [UIColor whiteColor];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
@@ -69,6 +86,7 @@ static NSString *cellReuseId = @"formTableCellId";
     _mainTableView.estimatedSectionHeaderHeight = 30;
     _mainTableView.showsHorizontalScrollIndicator = _mainTableView.showsVerticalScrollIndicator = NO;
     [_mainTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FormTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellReuseId];
+    [_mainTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BottomTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:bottomCellId];
     [self.view addSubview:_mainTableView];
 }
 - (void)addSureBottomBar{
@@ -89,23 +107,26 @@ static NSString *cellReuseId = @"formTableCellId";
     }else if (section == 1){
         return 6;
     }else if (section == 2){
-        return self.infoItem.refundMoth;
+        return self.infoItem.refundMoth + 1;
     }
     return 0;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0 | indexPath.section == 1) {
         FormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseId forIndexPath:indexPath];
-        if (indexPath.section == 0) {
-            //样式不一样
-        }else{
-            
-        }
-        //    FormItem *item = [self currentItem:indexPath];
-        //    [cell putValue:item];
+//        if (indexPath.section == 0) {
+//            //样式不一样
+//        }else{
+//            
+//        }
+        FormItem *item = [self currentItem:indexPath];
+        [cell putValue:item];
         return cell;
     }else if (indexPath.section == 2){
-        
+        BottomTableViewCell *boCell = [tableView dequeueReusableCellWithIdentifier:bottomCellId forIndexPath:indexPath];
+        BottomItem *boItem = (BottomItem *)self.bottomDataArray[indexPath.row];
+        [boCell putValue:boItem];
+        return boCell;
     }
     return nil;
 }

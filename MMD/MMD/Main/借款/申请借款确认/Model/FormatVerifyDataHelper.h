@@ -12,10 +12,6 @@
 
 @interface FormatVerifyDataHelper : NSObject
 
-//+ (NSMutableArray *)formatDatarefundMoth:(NSUInteger)month;
-
-//+ (NSMutableArray *)itemsArrayForVerify:(LoanInfoItem *)item;
-
 /**
  *  返回item数组
  *
@@ -24,6 +20,15 @@
  *  @return
  */
 + (NSMutableArray *)ez_itemsArrayForVerify:(LoanInfoItem *)item;
+
+/**
+ *  返回最底部还款信息
+ *
+ *  @param item
+ *
+ *  @return 
+ */
++ (NSMutableArray *)ez_bottomItemArrayForBottomCell:(LoanInfoItem *)item;
 
 
 @end

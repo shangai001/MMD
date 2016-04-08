@@ -1,20 +1,19 @@
 //
-//  FormTableViewCell.m
+//  BottomTableViewCell.m
 //  MMD
 //
-//  Created by pencho on 16/4/3.
+//  Created by pencho on 16/4/8.
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "FormTableViewCell.h"
+#import "BottomTableViewCell.h"
 
-@implementation FormTableViewCell
+@implementation BottomTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
-    self.layer.borderColor = [UIColor darkGrayColor].CGColor;
     self.layer.borderWidth = 1.0f;
-    
+    self.layer.borderColor = [UIColor darkGrayColor].CGColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

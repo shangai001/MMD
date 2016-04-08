@@ -10,9 +10,8 @@
 #import "ColorHeader.h"
 #import "LoanProtroWebController.h"
 #import <SVProgressHUD.h>
+#import "ConstantTitle.h"
 
-
-#define SURETEXT @"同意  <<米米贷微额贷款协议>>"
 
 @interface SureViewController ()
 
@@ -29,6 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = BACKGROUNDCOLOR;
+    self.view.layer.cornerRadius = 10.0f;
     [self setupSubViews];
 }
 - (void)setupSubViews{
@@ -40,7 +40,7 @@
     [self.sureButton setImage:[UIImage imageNamed:@"步骤0"] forState:UIControlStateNormal];
     [self.sureButton setImage:[UIImage imageNamed:@"步骤"] forState:UIControlStateSelected];
     
-    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:SURETEXT];
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:APPROVE_TEXT];
     NSDictionary *attDic = @{NSForegroundColorAttributeName:[UIColor blueColor]};
     
     NSRange targetRange = NSMakeRange(4, attString.length - 4);

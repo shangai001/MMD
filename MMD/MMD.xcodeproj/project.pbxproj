@@ -171,6 +171,10 @@
 		D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E1E1CB761CB00FB519B /* ConstantTitle.m */; };
 		D64A4E241CB77F4200FB519B /* ConstantHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E231CB77F4200FB519B /* ConstantHeight.m */; };
 		D64A4E271CB789AF00FB519B /* ContantLength.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E261CB789AF00FB519B /* ContantLength.m */; };
+		D64A4E2A1CB7903100FB519B /* BottomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E291CB7903100FB519B /* BottomItem.m */; };
+		D64A4E2E1CB7998A00FB519B /* BottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E2C1CB7998A00FB519B /* BottomTableViewCell.m */; };
+		D64A4E2F1CB7998A00FB519B /* BottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E2D1CB7998A00FB519B /* BottomTableViewCell.xib */; };
+		D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
@@ -495,6 +499,13 @@
 		D64A4E231CB77F4200FB519B /* ConstantHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantHeight.m; sourceTree = "<group>"; };
 		D64A4E251CB789AF00FB519B /* ContantLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContantLength.h; sourceTree = "<group>"; };
 		D64A4E261CB789AF00FB519B /* ContantLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContantLength.m; sourceTree = "<group>"; };
+		D64A4E281CB7903100FB519B /* BottomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomItem.h; sourceTree = "<group>"; };
+		D64A4E291CB7903100FB519B /* BottomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomItem.m; sourceTree = "<group>"; };
+		D64A4E2B1CB7998A00FB519B /* BottomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomTableViewCell.h; sourceTree = "<group>"; };
+		D64A4E2C1CB7998A00FB519B /* BottomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomTableViewCell.m; sourceTree = "<group>"; };
+		D64A4E2D1CB7998A00FB519B /* BottomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomTableViewCell.xib; sourceTree = "<group>"; };
+		D64A4E331CB79D1D00FB519B /* BottomTableViewCell+PutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BottomTableViewCell+PutValue.h"; sourceTree = "<group>"; };
+		D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BottomTableViewCell+PutValue.m"; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -753,8 +764,12 @@
 				D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */,
 				D633565F1CB03ACE000A321C /* FormItem.h */,
 				D63356601CB03ACE000A321C /* FormItem.m */,
+				D64A4E281CB7903100FB519B /* BottomItem.h */,
+				D64A4E291CB7903100FB519B /* BottomItem.m */,
 				D63356621CB03B2C000A321C /* FormTableViewCell+PutValue.h */,
 				D63356631CB03B2C000A321C /* FormTableViewCell+PutValue.m */,
+				D64A4E331CB79D1D00FB519B /* BottomTableViewCell+PutValue.h */,
+				D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */,
 				D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */,
 				D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */,
 			);
@@ -767,6 +782,9 @@
 				D63356571CB035BF000A321C /* FormTableViewCell.h */,
 				D63356581CB035BF000A321C /* FormTableViewCell.m */,
 				D63356591CB035BF000A321C /* FormTableViewCell.xib */,
+				D64A4E2B1CB7998A00FB519B /* BottomTableViewCell.h */,
+				D64A4E2C1CB7998A00FB519B /* BottomTableViewCell.m */,
+				D64A4E2D1CB7998A00FB519B /* BottomTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1699,6 +1717,7 @@
 				D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */,
 				D60609DE1C76FF0E000DB373 /* visible@3x.png in Resources */,
 				D60609AB1C76FF0E000DB373 /* 返回@3x.png in Resources */,
+				D64A4E2F1CB7998A00FB519B /* BottomTableViewCell.xib in Resources */,
 				D60609D81C76FF0E000DB373 /* 借款须知@3x.png in Resources */,
 				D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */,
 				D60609E61C76FF0E000DB373 /* friendsCircle@2x.png in Resources */,
@@ -1874,6 +1893,7 @@
 				D63356611CB03ACE000A321C /* FormItem.m in Sources */,
 				D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
+				D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */,
 				D633566F1CB04E47000A321C /* LoanProtroWebController.m in Sources */,
 				D688B9101CB68F3B00CC80FF /* SecondVerifyItem.m in Sources */,
 				D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */,
@@ -1888,6 +1908,7 @@
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
 				D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
+				D64A4E2A1CB7903100FB519B /* BottomItem.m in Sources */,
 				D6805E951CAD1A3300316925 /* STPickerDate.m in Sources */,
 				D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */,
 				D63356971CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.m in Sources */,
@@ -1953,6 +1974,7 @@
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,
 				D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
+				D64A4E2E1CB7998A00FB519B /* BottomTableViewCell.m in Sources */,
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
 				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,

@@ -12,48 +12,39 @@
 #import "LoanInfoItem.h"
 #import "CalculateRefund.h"
 #import "FormItem.h"
+#import "BottomItem.h"
+
 
 @implementation FormatVerifyDataHelper
 
-+ (NSMutableArray *)formatDatarefundMoth:(NSUInteger)month{
++ (NSArray *)formatDatarefundMoth:(NSUInteger)month{
     
     NSArray *originalArray = [ReadFiler readArrayFile:@"LoanVerifySectionTitle" fileType:@"txt"];
-    NSMutableArray *baseMutaleArray = [NSMutableArray arrayWithArray:originalArray];
-    return baseMutaleArray;
-//    NSMutableArray *tempArray = [NSMutableArray array];
-    //是最后一个吗
-//    if (lastDic.count == 1) {
-//        for (NSInteger k = 0; k < month; k ++) {
-//            NSString *itemString = [NSString stringWithFormat:@"第%ld期",(long)k + 1];
-//            
-//        }
-//        [baseMutaleArray removeObjectAtIndex:baseMutaleArray.count - 1];
-//        [baseMutaleArray addObject:tempArray];
-//        return baseMutaleArray;
-//    }
-    return nil;
+    return originalArray;
 }
-+ (NSMutableArray *)itemsArrayForVerify:(LoanInfoItem *)item{
+//够造数组<字典>
++ (NSArray *)itemsArrayForVerify:(LoanInfoItem *)item{
     
-    NSMutableArray *titleArray = [self formatDatarefundMoth:item.refundMoth];
+    NSArray *titleArray = [self formatDatarefundMoth:item.refundMoth];
     NSMutableArray *keyValuesArray = [NSMutableArray arrayWithCapacity:titleArray.count];
+    
     [titleArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[NSDictionary class]]) {
             NSMutableDictionary *oneDic = (NSMutableDictionary *)obj;
-            NSMutableDictionary *keyValuesDic = [self findValueForkey:oneDic item:item];
+            NSDictionary *keyValuesDic = [self findValueForkey:oneDic item:item];
             [keyValuesArray addObject:keyValuesDic];
         }
     }];
     NSLog(@"找补完 ---> %@",keyValuesArray);
-    return titleArray;
+    return keyValuesArray;
 }
+
 + (NSMutableDictionary *)findValueForkey:(NSMutableDictionary *)dic item:(LoanInfoItem *)item{
     
     
     NSDictionary *userInfo = [AppUserInfoHelper userInfo];
     NSDictionary *userBank = [AppUserInfoHelper userBank];
     NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithDictionary:dic];
-    
     
     [tempDic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         if ([key isEqualToString:@"借款人"]) {
@@ -99,23 +90,54 @@
             [tempDic setObject:refundWay forKey:key];
         }
     }];
-    NSLog(@"找到值的字典 %@",tempDic);
-    return tempDic;
+    return [tempDic mutableCopy];
 }
 + (NSMutableArray *)ez_itemsArrayForVerify:(LoanInfoItem *)item{
-    NSMutableArray *data = [self itemsArrayForVerify:item];
-    NSMutableArray *itemsArray  = [NSMutableArray array];
-    [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    
+    NSArray *data = [self itemsArrayForVerify:item];
+    NSLog(@"字典数组是  ---> %@ ",data);
+    
+    
+    NSMutableArray *fullArray = [NSMutableArray array];
+    [[self itemsArrayForVerify:item] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[NSDictionary class]]) {
             NSDictionary *oneDic = (NSDictionary *)obj;
-            [oneDic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-                FormItem *formItem = [FormItem new];
-                formItem.pTitle = key;
-                formItem.detailText = obj;
-                [itemsArray addObject:formItem];
-            }];
+            NSMutableArray *sectionArray = [self makeupOneSectionArray:oneDic];
+            [fullArray addObject:sectionArray];
         }
     }];
-    return itemsArray;
+    return [fullArray mutableCopy];
+}
++ (NSMutableArray *)makeupOneSectionArray:(NSDictionary *)onedic{
+    
+    NSMutableArray *sectionArray  = [NSMutableArray array];
+    [onedic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        FormItem *formItem = [FormItem new];
+        formItem.pTitle = key;
+        formItem.detailText = obj;
+        [sectionArray addObject:formItem];
+        NSLog(@"ptext = %@ detailText = %@",key,obj);
+    }];
+    return sectionArray;
+}
++ (NSMutableArray *)ez_bottomItemArrayForBottomCell:(LoanInfoItem *)item{
+    
+    NSMutableArray *boItemArray = [NSMutableArray array];
+    float refundMoney = [CalculateRefund calculateRefundWith:item];
+    for (NSInteger k = 0; k < item.refundMoth + 1; k++) {
+        BottomItem *boItem = [BottomItem new];
+        if (k == 0) {
+            boItem.refundIndexMonth = @"还款期数";
+            boItem.refundMoneyString = @"还款金额";
+            boItem.timeLine = @"到期还款日";
+        }else{
+            NSString *indexMoth = [NSString stringWithFormat:@"第%ld期",k];
+            boItem.refundIndexMonth = indexMoth;
+            boItem.refundMoneyString= [NSString stringWithFormat:@"%0.2f元",refundMoney];
+            boItem.timeLine = [NSString stringWithFormat:@"%ld个月后",item.refundMoth];
+        }
+        [boItemArray addObject:boItem];
+    }
+    return boItemArray;
 }
 @end

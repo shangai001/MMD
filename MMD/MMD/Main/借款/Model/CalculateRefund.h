@@ -7,10 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+@class LoanInfoItem;
+
 
 @interface CalculateRefund : NSObject
 
-
+/**
+ *  每月还款数
+ *
+ *  @param item (借款信息模型)
+ *
+ *  @return
+ */
++ (float)calculateRefundWith:(LoanInfoItem *)item;
 /**
 *  每月还款数(公式:每月还款数目=(综合管理费 + (1 +每月利率) x 本金)/月数)
 *

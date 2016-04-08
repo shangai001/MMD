@@ -9,7 +9,7 @@
 #import "CalculateRefund.h"
 #import "AppUserInfoHelper.h"
 #import "ReadFiler.h"
-
+#import "LoanInfoItem.h"
 
 #define MMDRate 0.0625
 #define MonthRate 0.02
@@ -35,6 +35,9 @@
     float management = [self manageMentMoney];
     float refundMoney = (loanMoney * MonthRate * month + management * month + loanMoney)/month;
     return refundMoney;
+}
++ (float)calculateRefundWith:(LoanInfoItem *)item{
+    return [self calculateRefundWithNumber:item.floatLoanMoney time:item.refundMoth];
 }
 + (float)getActualMoney:(NSUInteger)loanMoney{
     //一次性扣除综合管理费
