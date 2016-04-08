@@ -13,7 +13,6 @@
 #import "MMDInfoWebController.h"
 #import "MessageCenterController.h"
 #import "SupportCenterController.h"
-#import "ImagesTitles_More_Header.h"
 
 
 @implementation MoreCellActionHelper
