@@ -70,12 +70,10 @@ static NSString * const bottomCellId = @"BottomCellId";
 - (void)requestSectionTitleData{
     NSAssert(self.infoItem.refundMoth > 0, @"缺少还款期数");
     NSMutableArray *keyValuesArray = [FormatVerifyDataHelper ez_itemsArrayForVerify:self.infoItem];
-    [self.dataArray removeAllObjects];
-    [self.dataArray addObjectsFromArray:keyValuesArray];
+    self.dataArray = keyValuesArray;
     
     NSMutableArray *boItems = [FormatVerifyDataHelper ez_bottomItemArrayForBottomCell:self.infoItem];
-    [self.bottomDataArray removeAllObjects];
-    [self.bottomDataArray addObjectsFromArray:boItems];
+    self.bottomDataArray = boItems;
 }
 - (void)initTableView{
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(EDGELENGTH, 0, kScreenWidth- 2 * EDGELENGTH, kScreenHeight - SUREBOTTOMBARHEIGHT) style:UITableViewStyleGrouped];
@@ -93,7 +91,7 @@ static NSString * const bottomCellId = @"BottomCellId";
     SureViewController *sureVC = [[SureViewController alloc] initWithNibName:NSStringFromClass([SureViewController class]) bundle:[NSBundle mainBundle]];
     [self addChildViewController:sureVC];
     [self.view addSubview:sureVC.view];
-    sureVC.view.frame = CGRectMake(0, kScreenHeight - SUREBOTTOMBARHEIGHT, kScreenWidth, SUREBOTTOMBARHEIGHT);
+    sureVC.view.frame = CGRectMake(0, kScreenHeight - SUREBOTTOMBARHEIGHT - 10, kScreenWidth, SUREBOTTOMBARHEIGHT + 10);
     [sureVC didMoveToParentViewController:self];
     sureVC.agreeDelegate = self;
 }

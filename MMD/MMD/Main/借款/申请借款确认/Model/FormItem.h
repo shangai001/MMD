@@ -10,8 +10,10 @@
 
 @interface FormItem : NSObject
 
+
+
 @property (nonatomic, copy)NSString *pTitle;
 
-@property (nonatomic,copy)NSString *detailText;
+@property (nonatomic, copy)NSString *detailText;
 
 @end

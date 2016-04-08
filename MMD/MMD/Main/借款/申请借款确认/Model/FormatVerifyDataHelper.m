@@ -26,8 +26,7 @@
 + (NSArray *)itemsArrayForVerify:(LoanInfoItem *)item{
     
     NSArray *titleArray = [self formatDatarefundMoth:item.refundMoth];
-    NSMutableArray *keyValuesArray = [NSMutableArray arrayWithCapacity:titleArray.count];
-    
+    __block NSMutableArray *keyValuesArray = [NSMutableArray arrayWithCapacity:titleArray.count];
     [titleArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[NSDictionary class]]) {
             NSMutableDictionary *oneDic = (NSMutableDictionary *)obj;
@@ -35,7 +34,6 @@
             [keyValuesArray addObject:keyValuesDic];
         }
     }];
-    NSLog(@"找补完 ---> %@",keyValuesArray);
     return keyValuesArray;
 }
 
@@ -115,8 +113,8 @@
         FormItem *formItem = [FormItem new];
         formItem.pTitle = key;
         formItem.detailText = obj;
+
         [sectionArray addObject:formItem];
-        NSLog(@"ptext = %@ detailText = %@",key,obj);
     }];
     return sectionArray;
 }
@@ -134,10 +132,11 @@
             NSString *indexMoth = [NSString stringWithFormat:@"第%ld期",k];
             boItem.refundIndexMonth = indexMoth;
             boItem.refundMoneyString= [NSString stringWithFormat:@"%0.2f元",refundMoney];
-            boItem.timeLine = [NSString stringWithFormat:@"%ld个月后",item.refundMoth];
+            boItem.timeLine = [NSString stringWithFormat:@"%ld个月后",(long)k];
         }
         [boItemArray addObject:boItem];
     }
     return boItemArray;
 }
+
 @end
