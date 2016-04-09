@@ -10,12 +10,14 @@
 #import "ColorHeader.h"
 #import "VerifyViewController.h"
 #import "BaseNavgationController.h"
-//#import "AppUserInfoHelper.h"
+#import "MMDLoggin.h"
+#import "AppUserInfoHelper.h"
+#import "MMLogViewController.h"
+#import "VerifyViewController.h"
 #import "LoanVerifyController.h"
 #import "CalculateRefund.h"
 #import "RefundTextHelper.h"
 #import "LoanInfoItem.h"
-#import "HandleUserStatus.h"
 
 
 @interface NewApplyViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
@@ -122,7 +124,22 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)nextAction:(id)sender {
-    [HandleUserStatus handleUserStatusAt:self];
+    //检查是否登录
+    if ([MMDLoggin isLoggin]) {
+        NSInteger status = [AppUserInfoHelper UserStatus];
+        if (status && status >= 0 && status < 3) {
+            //跳转到父Controller
+            VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
+            verifyer.status = status;
+            verifyer.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:verifyer animated:YES];
+        }
+    }else{
+        //去往登录页面
+        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
+        logger.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:logger animated:YES];
+    }
 }
 #pragma mark UpdateRefundNumber
 - (void)updateRefundLabel{
