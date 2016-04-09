@@ -86,7 +86,7 @@ static NSString * const cellId = @"moreCellId";
     MoreTableViewCell *moreCell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     NSArray *section = self.dataArray[indexPath.section];
     MoreCellUIItem *item = section[indexPath.row];
-    [moreCell putValue:item];
+    [moreCell putMoreUIValue:item];
     if (indexPath.section == 2 && indexPath.row == 2) {
         [moreCell addVersionLabelAfterHideGoButton];
         moreCell.selectionStyle = UITableViewCellSelectionStyleNone;

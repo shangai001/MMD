@@ -102,7 +102,7 @@ static NSString * const bodyCellId = @"moreCellId";
         MoreTableViewCell *bodyCell = [tableView dequeueReusableCellWithIdentifier:bodyCellId forIndexPath:indexPath];
         NSArray *section = self.dataArray[indexPath.section - 1];
         MoreCellUIItem *item = section[indexPath.row];
-        [bodyCell putValue:item];
+        [bodyCell putMineUIValue:item];
         return bodyCell;
     }
     return nil;

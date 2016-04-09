@@ -12,7 +12,7 @@
 @implementation MoreTableViewCell (InitMoreCellUI)
 
 
-- (void)putValue:(MoreCellUIItem *)item{
+- (void)putMoreUIValue:(MoreCellUIItem *)item{
     self.iconImageView.image = [UIImage imageNamed:item.imageName];
     self.titleLabel.text = item.title;
 }

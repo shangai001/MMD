@@ -11,7 +11,7 @@
 
 @implementation MoreTableViewCell (MineUIInfo)
 
-- (void)putValue:(MoreCellUIItem *)item{
+- (void)putMineUIValue:(MoreCellUIItem *)item{
     
     self.iconImageView.image = [UIImage imageNamed:item.imageName];
     self.titleLabel.text = item.title;

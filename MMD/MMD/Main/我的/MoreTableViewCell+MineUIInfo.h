@@ -11,6 +11,6 @@
 
 @interface MoreTableViewCell (MineUIInfo)
 
-- (void)putValue:(MoreCellUIItem *)item;
+- (void)putMineUIValue:(MoreCellUIItem *)item;
 
 @end

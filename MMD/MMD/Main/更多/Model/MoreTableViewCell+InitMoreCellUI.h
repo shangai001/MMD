@@ -11,5 +11,5 @@
 @class MoreCellUIItem;
 
 @interface MoreTableViewCell (InitMoreCellUI)
-- (void)putValue:(MoreCellUIItem *)item;
+- (void)putMoreUIValue:(MoreCellUIItem *)item;
 @end
