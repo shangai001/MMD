@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppInfo.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //集成分享控件
-    
+    NSLog(@"%@-%@-%@-%@-%@--->%@",[AppInfo app_Version],[AppInfo systemName],[AppInfo systemVersion],[AppInfo model],[AppInfo localizedModel],[AppInfo deviceName]);
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

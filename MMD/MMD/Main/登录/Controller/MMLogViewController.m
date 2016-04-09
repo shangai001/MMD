@@ -24,6 +24,9 @@
 #import "GraphicVerification.h"
 #import "MMDLoggin.h"
 #import "AppUserInfoHelper.h"
+#import "UploadDevice.h"
+
+
 
 CGFloat const REMEMBERBUTTONTOTOP_DEFAULT = 25;
 CGFloat const INPUTROW_HEIGHT = 30;
@@ -210,12 +213,27 @@ CGFloat const INPUTROW_HEIGHT = 30;
 }
 #pragma mark AfterLogin
 - (void)handleLoginResult:(NSDictionary *)resultDictionary{
+    //上传设备信息
+    [self uploadDeviceinfo:resultDictionary];
     //是否需要记住密码
     [self recordUserPassword];
     //记录用户信息(可以单独写出来)
     [AppUserInfoHelper updateUserInfo:resultDictionary];
     //检查用户资料完善情况
     [self checkoutUserCompleteInfo];
+}
+- (void)uploadDeviceinfo:(NSDictionary *)resultDictionary{
+    
+    //上传设备信息
+    NSDictionary *user = resultDictionary[@"data"][@"user"];
+    NSString *userId = user[@"id"];
+    NSString *token = user[@"token"];
+    NSMutableDictionary *userTokenDic = [NSMutableDictionary dictionaryWithObjects:@[userId,token] forKeys:@[@"userId",@"token"]];
+    [UploadDevice uploadDeviceInfo:userTokenDic success:^(NSDictionary *resultDic) {
+        NSLog(@"上传设备返回信息 %@",resultDic);
+    } failure:^(NSError *error) {
+        
+    }];
 }
 - (void)checkoutUserCompleteInfo{
     

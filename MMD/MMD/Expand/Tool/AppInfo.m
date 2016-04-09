@@ -7,6 +7,8 @@
 //
 
 #import "AppInfo.h"
+#import <UIDevice+YYAdd.h>
+
 
 @implementation AppInfo
 
@@ -15,5 +17,19 @@
     NSString *app_Version = [infoPlistDic objectForKey:@"CFBundleShortVersionString"];
     return app_Version;
 }
-
++ (NSString *)model{
+    return [[UIDevice currentDevice] model];
+}
++ (NSString *)systemVersion{
+    return [UIDevice currentDevice].systemVersion;
+}
++ (NSString *)systemName{
+    return [UIDevice currentDevice].systemName;
+}
++ (NSString *)localizedModel{
+    return [UIDevice currentDevice].localizedModel;
+}
++ (NSString *)deviceName{
+    return [UIDevice currentDevice].machineModelName;
+}
 @end

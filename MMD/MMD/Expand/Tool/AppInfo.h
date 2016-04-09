@@ -11,5 +11,7 @@
 @interface AppInfo : NSObject
 
 + (NSString *)app_Version;
++ (NSString *)systemVersion;
++ (NSString*)deviceName;
 
 @end

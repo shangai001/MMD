@@ -108,7 +108,6 @@
 		D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356711CB10CBF000A321C /* CalculateRefund.m */; };
 		D63356781CB12062000A321C /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356771CB12062000A321C /* BaseModel.m */; };
 		D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D633567A1CB121EE000A321C /* WarnLoginModel.m */; };
-		D633567E1CB172E3000A321C /* FullUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D633567D1CB172E3000A321C /* FullUserInfo.m */; };
 		D63356851CB17750000A321C /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356841CB17750000A321C /* MineViewController.m */; };
 		D63356891CB179BA000A321C /* MineHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356871CB179BA000A321C /* MineHeaderTableViewCell.m */; };
 		D633568A1CB179BA000A321C /* MineHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63356881CB179BA000A321C /* MineHeaderTableViewCell.xib */; };
@@ -223,6 +222,7 @@
 		D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */; };
 		D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921A1C8D7A8500B3877D /* key@2x.png */; };
 		D6B6921D1C8D7A8500B3877D /* key@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921B1C8D7A8500B3877D /* key@3x.png */; };
+		D6C5D70F1CB95214000C633B /* UploadDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C5D70E1CB95214000C633B /* UploadDevice.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -395,8 +395,6 @@
 		D63356771CB12062000A321C /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		D63356791CB121EE000A321C /* WarnLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarnLoginModel.h; sourceTree = "<group>"; };
 		D633567A1CB121EE000A321C /* WarnLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarnLoginModel.m; sourceTree = "<group>"; };
-		D633567C1CB172E3000A321C /* FullUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullUserInfo.h; sourceTree = "<group>"; };
-		D633567D1CB172E3000A321C /* FullUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullUserInfo.m; sourceTree = "<group>"; };
 		D63356831CB17750000A321C /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		D63356841CB17750000A321C /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		D63356861CB179BA000A321C /* MineHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeaderTableViewCell.h; sourceTree = "<group>"; };
@@ -607,6 +605,8 @@
 		D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@3x.png"; sourceTree = "<group>"; };
 		D6B6921A1C8D7A8500B3877D /* key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@2x.png"; sourceTree = "<group>"; };
 		D6B6921B1C8D7A8500B3877D /* key@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@3x.png"; sourceTree = "<group>"; };
+		D6C5D70D1CB95214000C633B /* UploadDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDevice.h; sourceTree = "<group>"; };
+		D6C5D70E1CB95214000C633B /* UploadDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDevice.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1004,8 +1004,8 @@
 				D647FB6E1CAE800100CBF19E /* LoginUser.m */,
 				D63356791CB121EE000A321C /* WarnLoginModel.h */,
 				D633567A1CB121EE000A321C /* WarnLoginModel.m */,
-				D633567C1CB172E3000A321C /* FullUserInfo.h */,
-				D633567D1CB172E3000A321C /* FullUserInfo.m */,
+				D6C5D70D1CB95214000C633B /* UploadDevice.h */,
+				D6C5D70E1CB95214000C633B /* UploadDevice.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2034,6 +2034,7 @@
 				D6B031D01CB3949400E2955A /* CreditRating.m in Sources */,
 				D647FB1A1CAE7E2D00CBF19E /* MoreCellUIItem.m in Sources */,
 				D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */,
+				D6C5D70F1CB95214000C633B /* UploadDevice.m in Sources */,
 				D63356531CB033B2000A321C /* LoanVerifyController.m in Sources */,
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,
@@ -2052,7 +2053,6 @@
 				D647FB631CAE7F7A00CBF19E /* MMSegmentControl.m in Sources */,
 				D63356291CAFE100000A321C /* RefundWebController.m in Sources */,
 				D688B91B1CB6AAD100CC80FF /* FaceRecongnizeController.m in Sources */,
-				D633567E1CB172E3000A321C /* FullUserInfo.m in Sources */,
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
 				D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */,
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,
