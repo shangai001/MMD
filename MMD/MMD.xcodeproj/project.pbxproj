@@ -114,6 +114,8 @@
 		D633568E1CB181BA000A321C /* ImagesTitles_Mine.plist in Resources */ = {isa = PBXBuildFile; fileRef = D633568D1CB181BA000A321C /* ImagesTitles_Mine.plist */; };
 		D63356911CB184E8000A321C /* MoreTableViewCell+MineUIInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356901CB184E8000A321C /* MoreTableViewCell+MineUIInfo.m */; };
 		D63356971CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356961CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.m */; };
+		D6465CB81CB991C600E4E570 /* NoInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6465CB71CB991C600E4E570 /* NoInfoView.m */; };
+		D6465CBA1CB991D400E4E570 /* NoInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6465CB91CB991D400E4E570 /* NoInfoView.xib */; };
 		D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB071CAE7E2D00CBF19E /* MoreViewController.m */; };
 		D647FB1A1CAE7E2D00CBF19E /* MoreCellUIItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0A1CAE7E2D00CBF19E /* MoreCellUIItem.m */; };
 		D647FB1C1CAE7E2D00CBF19E /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB0F1CAE7E2D00CBF19E /* MoreTableViewCell.m */; };
@@ -408,6 +410,9 @@
 		D63356951CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MoreTableViewCell+InitMoreCellUI.h"; sourceTree = "<group>"; };
 		D63356961CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MoreTableViewCell+InitMoreCellUI.m"; sourceTree = "<group>"; };
 		D63356981CB1870D000A321C /* ImagesTitles_Mine_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTitles_Mine_Header.h; sourceTree = "<group>"; };
+		D6465CB61CB991C600E4E570 /* NoInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoInfoView.h; sourceTree = "<group>"; };
+		D6465CB71CB991C600E4E570 /* NoInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoInfoView.m; sourceTree = "<group>"; };
+		D6465CB91CB991D400E4E570 /* NoInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoInfoView.xib; sourceTree = "<group>"; };
 		D647FB061CAE7E2D00CBF19E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		D647FB071CAE7E2D00CBF19E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		D647FB091CAE7E2D00CBF19E /* MoreCellUIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreCellUIItem.h; sourceTree = "<group>"; };
@@ -1244,6 +1249,9 @@
 				D64C99411CB91C7200C45936 /* QueryHeaderView.h */,
 				D64C99421CB91C7200C45936 /* QueryHeaderView.m */,
 				D64C99441CB91C8A00C45936 /* QueryHeaderView.xib */,
+				D6465CB61CB991C600E4E570 /* NoInfoView.h */,
+				D6465CB71CB991C600E4E570 /* NoInfoView.m */,
+				D6465CB91CB991D400E4E570 /* NoInfoView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1852,6 +1860,7 @@
 				D63356411CB016DC000A321C /* FailureView.xib in Resources */,
 				D60609C51C76FF0E000DB373 /* 还款须知@2x.png in Resources */,
 				D60609F61C76FF0E000DB373 /* approve_on@3x.png in Resources */,
+				D6465CBA1CB991D400E4E570 /* NoInfoView.xib in Resources */,
 				D647FBD71CAE92B200CBF19E /* BankList.plist in Resources */,
 				D60609F31C76FF0E000DB373 /* addPic@3x.png in Resources */,
 				D6F567201C8004ED00B0612F /* 借款@2x.png in Resources */,
@@ -2074,6 +2083,7 @@
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
 				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
+				D6465CB81CB991C600E4E570 /* NoInfoView.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,
 				D6805E9B1CAD1A3300316925 /* STPickerView.m in Sources */,
 			);

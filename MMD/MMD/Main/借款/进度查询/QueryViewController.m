@@ -256,6 +256,9 @@ CGFloat const cacleButtonHeight = 44;
     self.scrollView.backgroundColor = [UIColor orangeColor];
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.view.frame.size.height);
 }
+- (void)showNoInfoView{
+    
+}
 #pragma mark SeeDetail
 - (void)openLoanDetail:(id)sender{
     if ([MMDLoggin isLoggin]) {
