@@ -45,9 +45,9 @@ static int callback(void *connection, CFStringRef string, CFDictionaryRef dictio
         _CTServerConnectionCopyMobileEquipmentInfo(ctsc, &equipmentInfo, NULL);
 #endif
         if (equipmentInfo) {
-            CFStringRef value = CFDictionaryGetValue(equipmentInfo, key);
+            CFStringRef value = CFDictionaryGetValue(equipmentInfo, (__bridge const void *)(key));
             if (value) {
-                retVal = [NSString stringWithString:(id)value];
+                retVal = [NSString stringWithString:(__bridge id)value];
             }
             CFRelease(equipmentInfo);
         }

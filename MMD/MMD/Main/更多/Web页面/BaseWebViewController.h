@@ -12,5 +12,6 @@
 
 @property (copy, nonatomic)NSString *URLString;
 
+- (void)requestUrl:(NSString *)URL;
 
 @end

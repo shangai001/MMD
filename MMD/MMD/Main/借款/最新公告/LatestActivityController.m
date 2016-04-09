@@ -1,22 +1,22 @@
 //
-//  ActivityViewController.m
+//  QueryProgressController.m
 //  MMD
 //
-//  Created by pencho on 16/2/17.
+//  Created by pencho on 16/4/9.
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "ActivityViewController.h"
+#import "LatestActivityController.h"
 
-@interface ActivityViewController ()
+@interface LatestActivityController ()
 
 @end
 
-@implementation ActivityViewController
+@implementation LatestActivityController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

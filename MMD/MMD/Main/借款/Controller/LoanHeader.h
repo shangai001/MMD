@@ -13,7 +13,7 @@
 #import "HeaderView.h"
 #import "UIView+LoadViewFromNib.h"
 #import "QueryViewController.h"
-#import "ActivityViewController.h"
+#import "LatestActivityController.h"
 #import "NewApplyViewController.h"
 
 

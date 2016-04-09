@@ -13,23 +13,30 @@
 
 
 @interface BaseWebViewController ()<WKUIDelegate,WKNavigationDelegate>
-@property (strong, nonnull)WKWebView *webView;
+@property (nonatomic, strong, nonnull)WKWebView *webView;
 @end
 
 @implementation BaseWebViewController
 
+- (WKWebView *)webView{
+    if (!_webView) {
+        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+        _webView.navigationDelegate = self;
+    }
+    return _webView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
-    self.webView.navigationDelegate = self;
     //借款须知
-//    NSString *url = [NSString stringWithFormat:@"%@/webview/applyNotice",kHostURL];
-    //还款须知
-//    NSString *url = [NSString stringWithFormat:@"%@/webview/repaymentNotice",kHostURL];
     NSString *url = self.URLString;
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     [self.view addSubview:self.webView];
+}
+- (void)requestUrl:(NSString *)URL{
+    
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:URL]]];
 }
 #pragma mark WKNavigationDelegate
 

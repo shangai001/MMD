@@ -13,6 +13,7 @@
 # if SERVER_OPTION == 1
 //api.mimidai.com
 #define kHostURL @"http://api.mimidai.com"
+#define kProgressHostURL @"www.mimidai.com/webview/list"
 #endif
 
 #endif /* NetworkConstHeader_h */
