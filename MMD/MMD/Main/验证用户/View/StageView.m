@@ -9,8 +9,8 @@
 #import "StageView.h"
 #import "HorizontalDashLineView.h"
 #import "VerticalDashLineView.h"
-
-#import <Masonry.h>
+#import <UIView+SDAutoLayout.h>
+//#import <Masonry.h>
 
 #define buttonWidthHeight 30
 #define buttonToLeft 10
@@ -119,24 +119,25 @@
     if (self.style == kHorizontalStyle) {
         //第n+1个button左边距离第n个button左边距离
         CGFloat buttonLeftToButtonLeft = (superFrame.size.width - 2 * buttonToLeft - stage * buttonWidthHeight)/(_stage - 1);
-        
         CGFloat leftToSuper = buttonToLeft + buttonWidthHeight * j + buttonLeftToButtonLeft * j;
-        
-        [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight));
-            make.left.mas_equalTo(self.mas_left).with.offset(leftToSuper);
-            make.centerY.mas_equalTo(self);
-        }];
+        button.sd_layout.leftSpaceToView(self,leftToSuper).centerYEqualToView(self).widthIs(buttonWidthHeight).heightIs(buttonWidthHeight);
+//        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight));
+//            make.left.mas_equalTo(self.mas_left).with.offset(leftToSuper);
+//            make.centerY.mas_equalTo(self);
+//        }];
         [self addTitleLabel:j below:button];
     }else{
         //第n+1个button上边距离第n个button上边距离
         CGFloat buttonTopToButtonTop = (superFrame.size.height - 2 * buttonToLeft - stage * buttonWidthHeight)/(_stage - 1);
         CGFloat topToSuper = buttonToLeft + buttonWidthHeight * j + buttonTopToButtonTop * j;
-        [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight));
-            make.top.mas_equalTo(self.mas_top).with.offset(topToSuper);
-            make.centerX.mas_equalTo(self);
-        }];
+        
+        button.sd_layout.widthIs(buttonWidthHeight).heightIs(buttonWidthHeight).topSpaceToView(self,topToSuper).centerXEqualToView(self);
+//        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight));
+//            make.top.mas_equalTo(self.mas_top).with.offset(topToSuper);
+//            make.centerX.mas_equalTo(self);
+//        }];
     }
 }
 
@@ -151,11 +152,12 @@
     titleLabel.text = title;
     [self addSubview:titleLabel];
     
-    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight/2));
-        make.centerX.mas_equalTo(button);
-        make.top.mas_equalTo(button.mas_bottom);
-    }];
+    titleLabel.sd_layout.widthIs(buttonWidthHeight).heightIs(buttonWidthHeight/2).topEqualToView(button).centerXEqualToView(button);
+//    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight/2));
+//        make.centerX.mas_equalTo(button);
+//        make.top.mas_equalTo(button.mas_bottom);
+//    }];
 }
 
 + (UIButton *)initStageButton:(NSUInteger)j {

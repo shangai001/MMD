@@ -8,7 +8,8 @@
 
 #import "LoanViewController.h"
 #import "LoanHeader.h"
-#import "Masonry.h"
+#import "ConstantHeight.h"
+#import <UIView+SDAutoLayout.h>
 #import "ColorHeader.h"
 
 
@@ -71,12 +72,7 @@ CGFloat const TOP_Y = 108;
     //Masonry布局
     [self.view addSubview:self.headerView];
     UIView *superHeaderView = self.headerView.superview;
-    [_headerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(superHeaderView.mas_left);
-        make.right.equalTo(superHeaderView.mas_right);
-        make.top.equalTo(superHeaderView.mas_top).with.offset(64);
-        make.height.mas_equalTo(44);
-    }];
+    _headerView.sd_layout.leftEqualToView(superHeaderView).rightEqualToView(superHeaderView).topSpaceToView(superHeaderView,kTopLayoutGuide).heightIs(kNavigationBarHeight);
 }
 - (void)initViewControllers{
     
@@ -92,12 +88,7 @@ CGFloat const TOP_Y = 108;
 }
 - (void)setChildViewFrame:(UIView *)view{
     UIView *parentView = view.superview;
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(parentView.mas_top).with.offset(TOP_Y);
-        make.left.equalTo(parentView.mas_left);
-        make.right.equalTo(parentView.mas_right);
-        make.bottom.equalTo(parentView.mas_bottom);
-    }];
+    view.sd_layout.leftSpaceToView(parentView,TOP_Y).rightEqualToView(parentView).bottomEqualToView(parentView).topSpaceToView(parentView,TOP_Y);
 }
 #pragma mark HeaderViewDelegate
 - (void)didSelectButton:(UIButton *)button buttonIndex:(NSUInteger)index{
