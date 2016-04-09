@@ -19,19 +19,15 @@
 
 
 
-CGFloat const TOP_Y = 108;
+CGFloat const TOP_Y = 110;
 
 
 @interface LoanViewController ()<HeaderViewDelegate>
 
 @property (nonatomic, strong)HeaderView *headerView;
-
-
 @property (nonatomic, strong)NewApplyViewController *apply;
 @property (nonatomic, strong)LatestActivityController *activity;
 @property (nonatomic, strong)QueryViewController *query;
-
-
 @property (nonatomic,strong)UIViewController *currentViewController;
 
 @end
@@ -69,6 +65,7 @@ CGFloat const TOP_Y = 108;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BACKGROUNDCOLOR;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.title = @"借款";
     // Do any additional setup after loading the view.
     [self initHeaderView];
@@ -77,8 +74,9 @@ CGFloat const TOP_Y = 108;
 - (void)initHeaderView{
     //Masonry布局
     [self.view addSubview:self.headerView];
-    UIView *superHeaderView = self.headerView.superview;
+    UIView *superHeaderView = self.view;
     _headerView.sd_layout.leftEqualToView(superHeaderView).rightEqualToView(superHeaderView).topSpaceToView(superHeaderView,kTopLayoutGuide).heightIs(kNavigationBarHeight);
+    [_headerView updateLayout];
 }
 - (void)initViewControllers{
     
@@ -87,7 +85,7 @@ CGFloat const TOP_Y = 108;
     [self addChildViewController:self.query];
     
     [self.view addSubview:self.apply.view];
-    self.apply.view.frame = CGRectMake(0, TOP_Y, self.view.frame.size.width, self.view.frame.size.height - TOP_Y);
+    self.apply.view.sd_layout.leftEqualToView(self.view).topSpaceToView(self.view,TOP_Y).rightEqualToView(self.view).bottomEqualToView(self.view);
     [self.apply didMoveToParentViewController:self];
     self.currentViewController = self.apply;
     
@@ -153,7 +151,7 @@ CGFloat const TOP_Y = 108;
         if ([toViewController isEqual:self.query]) {
             [self.query requestLoanStatus];
         }
-        toViewController.view.frame = CGRectMake(0, TOP_Y, self.view.frame.size.width, self.view.frame.size.height - 108);
+        toViewController.view.sd_layout.leftEqualToView(self.view).topSpaceToView(self.view,TOP_Y).rightEqualToView(self.view).bottomEqualToView(self.view);
         self.currentViewController = toViewController;
         [toViewController didMoveToParentViewController:self];
     }];

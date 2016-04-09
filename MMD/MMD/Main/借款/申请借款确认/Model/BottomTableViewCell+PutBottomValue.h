@@ -10,7 +10,7 @@
 
 @class BottomItem;
 
-@interface BottomTableViewCell (PutValue)
+@interface BottomTableViewCell (PutBottomValue)
 
 - (void)putLabelValue:(BottomItem *)item;
 

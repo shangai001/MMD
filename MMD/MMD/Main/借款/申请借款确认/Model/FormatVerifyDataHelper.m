@@ -132,7 +132,7 @@
             boItem.refundMoneyString = @"还款金额";
             boItem.timeLine = @"到期还款日";
         }else{
-            NSString *indexMoth = [NSString stringWithFormat:@"第%ld期",k];
+            NSString *indexMoth = [NSString stringWithFormat:@"第%ld期",(long)k];
             boItem.refundIndexMonth = indexMoth;
             boItem.refundMoneyString= [NSString stringWithFormat:@"%0.2f元",refundMoney];
             boItem.timeLine = [NSString stringWithFormat:@"%ld个月后",(long)k];

@@ -168,9 +168,9 @@ CGFloat const cacleButtonHeight = 44;
     
     NSRange numberRange = NSMakeRange(0,numberLength);
     
-    NSDictionary *numberDic = @{NSFontAttributeName : [UIFont systemFontOfSize:18],NSForegroundColorAttributeName:numberColor};
+    NSDictionary *numberDic = @{NSFontAttributeName : [UIFont systemFontOfSize:15],NSForegroundColorAttributeName:numberColor};
     [loanAttributeString addAttributes:numberDic range:numberRange];
-    NSDictionary *textDic = @{NSFontAttributeName:[UIFont systemFontOfSize:13],NSForegroundColorAttributeName:[UIColor blackColor]};
+    NSDictionary *textDic = @{NSFontAttributeName:[UIFont systemFontOfSize:12],NSForegroundColorAttributeName:[UIColor blackColor]};
     NSRange textRange = NSMakeRange(numberLength, frontString.length - numberLength);
     [loanAttributeString addAttributes:textDic range:textRange];
     textLabel.attributedText = loanAttributeString;
@@ -183,13 +183,13 @@ CGFloat const cacleButtonHeight = 44;
     [self.view addSubview:self.scrollView];
     //添加autolayout
     CGSize viewSize = self.view.frame.size;
-    self.scrollView.contentSize = CGSizeMake(viewSize.width, viewSize.height + deltH);
     self.scrollView.sd_layout
     .leftSpaceToView(self.view,gapW)
     .rightSpaceToView(self.view,gapW)
     .topSpaceToView(self.view, gapW)
     .bottomSpaceToView(self.view, 0);
     [_scrollView updateLayout];
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, viewSize.height + deltH);
 }
 //配置头视图信息
 - (void)configureHeaderView{

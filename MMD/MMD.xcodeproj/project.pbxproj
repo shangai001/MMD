@@ -102,7 +102,7 @@
 		D633565B1CB035BF000A321C /* FormTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63356591CB035BF000A321C /* FormTableViewCell.xib */; };
 		D633565E1CB0378F000A321C /* HeaderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D633565D1CB0378F000A321C /* HeaderLabel.m */; };
 		D63356611CB03ACE000A321C /* FormItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356601CB03ACE000A321C /* FormItem.m */; };
-		D63356641CB03B2C000A321C /* FormTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356631CB03B2C000A321C /* FormTableViewCell+PutValue.m */; };
+		D63356641CB03B2C000A321C /* FormTableViewCell+PutFormValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356631CB03B2C000A321C /* FormTableViewCell+PutFormValue.m */; };
 		D633566B1CB04320000A321C /* SureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356691CB04320000A321C /* SureViewController.m */; };
 		D633566C1CB04320000A321C /* SureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D633566A1CB04320000A321C /* SureViewController.xib */; };
 		D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356711CB10CBF000A321C /* CalculateRefund.m */; };
@@ -167,7 +167,7 @@
 		D64A4E2A1CB7903100FB519B /* BottomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E291CB7903100FB519B /* BottomItem.m */; };
 		D64A4E2E1CB7998A00FB519B /* BottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E2C1CB7998A00FB519B /* BottomTableViewCell.m */; };
 		D64A4E2F1CB7998A00FB519B /* BottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E2D1CB7998A00FB519B /* BottomTableViewCell.xib */; };
-		D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */; };
+		D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m */; };
 		D64A4E3A1CB7D62800FB519B /* SortIdDic.txt in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E391CB7D62800FB519B /* SortIdDic.txt */; };
 		D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */; };
 		D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99231CB8DB9300C45936 /* QueryViewController.m */; };
@@ -386,8 +386,8 @@
 		D633565D1CB0378F000A321C /* HeaderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderLabel.m; sourceTree = "<group>"; };
 		D633565F1CB03ACE000A321C /* FormItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormItem.h; sourceTree = "<group>"; };
 		D63356601CB03ACE000A321C /* FormItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItem.m; sourceTree = "<group>"; };
-		D63356621CB03B2C000A321C /* FormTableViewCell+PutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FormTableViewCell+PutValue.h"; sourceTree = "<group>"; };
-		D63356631CB03B2C000A321C /* FormTableViewCell+PutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FormTableViewCell+PutValue.m"; sourceTree = "<group>"; };
+		D63356621CB03B2C000A321C /* FormTableViewCell+PutFormValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FormTableViewCell+PutFormValue.h"; sourceTree = "<group>"; };
+		D63356631CB03B2C000A321C /* FormTableViewCell+PutFormValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FormTableViewCell+PutFormValue.m"; sourceTree = "<group>"; };
 		D63356681CB04320000A321C /* SureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureViewController.h; sourceTree = "<group>"; };
 		D63356691CB04320000A321C /* SureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureViewController.m; sourceTree = "<group>"; };
 		D633566A1CB04320000A321C /* SureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureViewController.xib; sourceTree = "<group>"; };
@@ -500,8 +500,8 @@
 		D64A4E2B1CB7998A00FB519B /* BottomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomTableViewCell.h; sourceTree = "<group>"; };
 		D64A4E2C1CB7998A00FB519B /* BottomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomTableViewCell.m; sourceTree = "<group>"; };
 		D64A4E2D1CB7998A00FB519B /* BottomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomTableViewCell.xib; sourceTree = "<group>"; };
-		D64A4E331CB79D1D00FB519B /* BottomTableViewCell+PutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BottomTableViewCell+PutValue.h"; sourceTree = "<group>"; };
-		D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BottomTableViewCell+PutValue.m"; sourceTree = "<group>"; };
+		D64A4E331CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BottomTableViewCell+PutBottomValue.h"; sourceTree = "<group>"; };
+		D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BottomTableViewCell+PutBottomValue.m"; sourceTree = "<group>"; };
 		D64A4E391CB7D62800FB519B /* SortIdDic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SortIdDic.txt; sourceTree = "<group>"; };
 		D64A4E3B1CB7D99000FB519B /* SubmitLoanInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLoanInfoModel.h; sourceTree = "<group>"; };
 		D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLoanInfoModel.m; sourceTree = "<group>"; };
@@ -794,10 +794,10 @@
 				D63356601CB03ACE000A321C /* FormItem.m */,
 				D64A4E281CB7903100FB519B /* BottomItem.h */,
 				D64A4E291CB7903100FB519B /* BottomItem.m */,
-				D63356621CB03B2C000A321C /* FormTableViewCell+PutValue.h */,
-				D63356631CB03B2C000A321C /* FormTableViewCell+PutValue.m */,
-				D64A4E331CB79D1D00FB519B /* BottomTableViewCell+PutValue.h */,
-				D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */,
+				D63356621CB03B2C000A321C /* FormTableViewCell+PutFormValue.h */,
+				D63356631CB03B2C000A321C /* FormTableViewCell+PutFormValue.m */,
+				D64A4E331CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.h */,
+				D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m */,
 				D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */,
 				D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */,
 				D64A4E391CB7D62800FB519B /* SortIdDic.txt */,
@@ -1985,7 +1985,7 @@
 				D63356611CB03ACE000A321C /* FormItem.m in Sources */,
 				D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
-				D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */,
+				D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m in Sources */,
 				D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */,
 				D688B9101CB68F3B00CC80FF /* SecondVerifyItem.m in Sources */,
 				D64C99481CB9229000C45936 /* LoanDetaiController.m in Sources */,
@@ -2058,7 +2058,7 @@
 				D647FB611CAE7F7A00CBF19E /* HeaderView.m in Sources */,
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,
 				D647FBC71CAE920100CBF19E /* LogginModel.m in Sources */,
-				D63356641CB03B2C000A321C /* FormTableViewCell+PutValue.m in Sources */,
+				D63356641CB03B2C000A321C /* FormTableViewCell+PutFormValue.m in Sources */,
 				D647FBB51CAE87FD00CBF19E /* StageView.m in Sources */,
 				D64C993D1CB90A8A00C45936 /* QueryModel.m in Sources */,
 				D647FB861CAE80BE00CBF19E /* RegisterContentView.m in Sources */,

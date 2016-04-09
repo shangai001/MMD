@@ -35,7 +35,7 @@
 }
 //改变“获取手机验证码”状态-->"xxS后重新获取"
 - (void)changeSecurityButtonWaitingStatus:(NSInteger)seconds{
-    NSString *title = [NSString stringWithFormat:@"%ldS后重新获取",seconds];
+    NSString *title = [NSString stringWithFormat:@"%ldS后重新获取",(long)seconds];
     [self.getSecurityCodeButton setTitle:title forState:UIControlStateNormal];
     self.getSecurityCodeButton.enabled = NO;
 }

@@ -33,7 +33,7 @@
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = BACKGROUNDCOLOR;
     self.nextButton.backgroundColor = REDCOLOR;
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self configurePickerView];
     [self configureMoneyPicker];
     [self configureUI];

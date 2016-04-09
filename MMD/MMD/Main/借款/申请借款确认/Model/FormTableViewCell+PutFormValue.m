@@ -6,10 +6,10 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "FormTableViewCell+PutValue.h"
+#import "FormTableViewCell+PutFormValue.h"
 #import "FormItem.h"
 
-@implementation FormTableViewCell (PutValue)
+@implementation FormTableViewCell (PutFormValue)
 
 - (void)putTitleValue:(FormItem *)item{
     self.titleLabel.text = item.pTitle;

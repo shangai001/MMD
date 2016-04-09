@@ -10,7 +10,7 @@
 
 @class FormItem;
 
-@interface FormTableViewCell (PutValue)
+@interface FormTableViewCell (PutFormValue)
 
 - (void)putTitleValue:(FormItem *)item;
 

@@ -6,10 +6,10 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "BottomTableViewCell+PutValue.h"
+#import "BottomTableViewCell+PutBottomValue.h"
 #import "BottomItem.h"
 
-@implementation BottomTableViewCell (PutValue)
+@implementation BottomTableViewCell (PutBottomValue)
 
 - (void)putLabelValue:(BottomItem *)item{
     self.leftLabel.text = item.refundIndexMonth;

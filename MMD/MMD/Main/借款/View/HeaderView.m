@@ -7,7 +7,9 @@
 //
 
 #import "HeaderView.h"
-#define BUTTON_BASETAG 100
+
+CGFloat const BUTTON_BASETAG = 100;
+
 
 @implementation HeaderView
 
@@ -23,6 +25,7 @@
 */
 - (void)awakeFromNib{
     self.selectedIndex = -1;
+    [self bringSubviewToFront:self.bottomLineView];
 }
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
     _selectedIndex = selectedIndex;
@@ -33,7 +36,7 @@
         linePoint.x = selectButton.center.x;
         self.bottomLineView.center = linePoint;
     }];
-    
+    [self bringSubviewToFront:self.bottomLineView];
 }
 - (void)callHeaderDelegate:(UIButton *)selectedButton{
     if ([self.headerDelegate respondsToSelector:@selector(didSelectButton:buttonIndex:)]) {

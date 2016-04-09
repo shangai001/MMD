@@ -29,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.automaticallyAdjustsScrollViewInsets = NO;
     //借款须知
     NSString *url = self.URLString;
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
