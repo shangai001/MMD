@@ -28,7 +28,7 @@ PODS:
   - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.2.5)
   - ShareSDK3/ShareSDKPlatforms/WeChat (3.2.5)
   - ShareSDK3/ShareSDKUI (3.2.5)
-  - SVProgressHUD (2.0.2)
+  - SVProgressHUD (2.0.3)
   - YYKit (1.0.4):
     - YYKit/no-arc (= 1.0.4)
   - YYKit/no-arc (1.0.4)
@@ -59,7 +59,7 @@ SPEC CHECKSUMS:
   RealReachability: 9eb2aeccff2f26491dbaa9cf36f906ad28e8e7d9
   SDAutoLayout: 88b539a0c6204787d8e4084ef1b0db250241cc47
   ShareSDK3: ccdd8ec971044703e7722e19c2f3b38fb03775e2
-  SVProgressHUD: e4020e23badbd7cc61bc4a80d3c1da57f166a978
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   YYKit: 71f7e48cc5de6c69b5c35fee4d3978dac3267041
 
 COCOAPODS: 0.39.0
