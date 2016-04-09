@@ -414,8 +414,8 @@
 		D647FB0F1CAE7E2D00CBF19E /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
 		D647FB101CAE7E2D00CBF19E /* MoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		D647FB481CAE7F7A00CBF19E /* LoanHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHeader.h; sourceTree = "<group>"; };
-		D647FB491CAE7F7A00CBF19E /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewController.h; sourceTree = "<group>"; };
-		D647FB4A1CAE7F7A00CBF19E /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
+		D647FB491CAE7F7A00CBF19E /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanViewController.h; path = Controller/LoanViewController.h; sourceTree = "<group>"; };
+		D647FB4A1CAE7F7A00CBF19E /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanViewController.m; path = Controller/LoanViewController.m; sourceTree = "<group>"; };
 		D647FB4B1CAE7F7A00CBF19E /* NewApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewApplyViewController.h; sourceTree = "<group>"; };
 		D647FB4C1CAE7F7A00CBF19E /* NewApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewApplyViewController.m; sourceTree = "<group>"; };
 		D647FB4D1CAE7F7A00CBF19E /* NewApplyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewApplyViewController.xib; sourceTree = "<group>"; };
@@ -922,6 +922,8 @@
 		D647FB431CAE7F7A00CBF19E /* 借款 */ = {
 			isa = PBXGroup;
 			children = (
+				D647FB491CAE7F7A00CBF19E /* LoanViewController.h */,
+				D647FB4A1CAE7F7A00CBF19E /* LoanViewController.m */,
 				D64C991F1CB8DA9E00C45936 /* 进度查询 */,
 				D64C99181CB8D9BA00C45936 /* 最新公告 */,
 				D633564D1CB0336A000A321C /* 申请借款确认 */,
@@ -938,8 +940,6 @@
 				D647FB481CAE7F7A00CBF19E /* LoanHeader.h */,
 				D688B9231CB6D12B00CC80FF /* RefundTextHelper.h */,
 				D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */,
-				D647FB491CAE7F7A00CBF19E /* LoanViewController.h */,
-				D647FB4A1CAE7F7A00CBF19E /* LoanViewController.m */,
 				D647FB4B1CAE7F7A00CBF19E /* NewApplyViewController.h */,
 				D647FB4C1CAE7F7A00CBF19E /* NewApplyViewController.m */,
 				D647FB4D1CAE7F7A00CBF19E /* NewApplyViewController.xib */,
