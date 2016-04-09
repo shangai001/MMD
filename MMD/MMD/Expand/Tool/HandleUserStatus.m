@@ -16,29 +16,29 @@
 @implementation HandleUserStatus
 
 
-+ (void)handleUserStatusAt:(UIViewController *)viewController{
++ (BOOL)handleUserStatusAt:(UIViewController *)viewController{
     
-    //检查是否登录
-    if ([MMDLoggin isLoggin]) {
-        NSInteger status = [AppUserInfoHelper UserStatus];
-        if (status && status >= 0 && status < 3) {
-            //跳转到父Controller
-            VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
-            verifyer.status = status;
-            verifyer.hidesBottomBarWhenPushed = YES;
-            [viewController.navigationController pushViewController:verifyer animated:YES];
-        }
+    NSInteger status = [AppUserInfoHelper UserStatus];
+    if (status && status >= 0 && status < 3) {
+        //跳转到父Controller
+        VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
+        verifyer.status = status;
+        verifyer.hidesBottomBarWhenPushed = YES;
+        [viewController.navigationController pushViewController:verifyer animated:YES];
+        return NO;
     }else{
-        //去往登录页面
-        if (![viewController isKindOfClass:[UITabBarController class]]) {
-            
-            MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
-            logger.hidesBottomBarWhenPushed = YES;
-            [viewController.navigationController pushViewController:logger animated:YES];
-        }else{
-            NSLog(@"处于tabbarviewcontroller中特殊处理");
-        }
+        return YES;
     }
+    //        //去往登录页面
+    //        if (![viewController isKindOfClass:[UITabBarController class]]) {
+    //
+    //            MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
+    //            logger.hidesBottomBarWhenPushed = YES;
+    //            [viewController.navigationController pushViewController:logger animated:YES];
+    //        }else{
+    //            NSLog(@"处于tabbarviewcontroller中特殊处理");
+    //        }
+    return NO;
 }
 
 @end

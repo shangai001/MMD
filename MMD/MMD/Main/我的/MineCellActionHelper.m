@@ -8,7 +8,7 @@
 
 #import "MineCellActionHelper.h"
 #import "MineViewController.h"
-
+#import "HandleUserStatus.h"
 
 @implementation MineCellActionHelper
 
@@ -63,6 +63,9 @@
 }
 #pragma mark JumptoTarget
 + (void)jumpToXXXFrom:(MineViewController *)mine{
-    
+    //先检查用户身份验证状态
+    if ([HandleUserStatus handleUserStatusAt:mine]) {
+        
+    }
 }
 @end

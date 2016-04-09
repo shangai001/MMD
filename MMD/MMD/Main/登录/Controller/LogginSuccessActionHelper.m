@@ -43,6 +43,9 @@
         verifyer.status = status;
         verifyer.hidesBottomBarWhenPushed = YES;
         [logger.navigationController pushViewController:verifyer animated:YES];
+//        if (logger.presentationController) {
+//            [logger.navigationController dismissViewControllerAnimated:YES completion:nil];
+//        }
     }else{
         //已经完善信息，返回登录前的页面
         [logger.navigationController popViewControllerAnimated:YES];

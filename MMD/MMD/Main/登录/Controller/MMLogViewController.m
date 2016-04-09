@@ -59,7 +59,12 @@ CGFloat const INPUTROW_HEIGHT = 30;
     // Do any additional setup after loading the view from its nib.
     [self addButtonStatusImage];
     [self addDissmissKeyboardAction];
-    [self initDefaultValue];
+    [self initDefaultValue];    
+}
+- (void)ez_TurnBack:(id)sender{
+    
+    
+//    [self logIn:self.logButton];
 }
 - (void)initDefaultValue{
     if (!self.user) {

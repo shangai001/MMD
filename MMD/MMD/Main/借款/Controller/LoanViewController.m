@@ -21,7 +21,7 @@
 
 CGFloat const TOP_Y = 113;
 
-@interface LoanViewController ()<HeaderViewDelegate>
+@interface LoanViewController ()<HeaderViewDelegate,UITabBarControllerDelegate>
 
 @property (nonatomic, strong)HeaderView *headerView;
 @property (nonatomic, strong)NewApplyViewController *apply;
@@ -32,6 +32,27 @@ CGFloat const TOP_Y = 113;
 @end
 
 @implementation LoanViewController
+
+#pragma mark UITabBarControllerDelegate
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+
+    NSInteger index = [tabBarController.viewControllers indexOfObject:viewController];
+    UINavigationController *NAV = (UINavigationController *)tabBarController.selectedViewController;
+    if (index == 1 || index == 2) {
+        if ([MMDLoggin isLoggin]) {
+            //已经登录去完善页面
+            return [HandleUserStatus handleUserStatusAt:NAV.topViewController];
+        }else{
+            //未登录去登录页面
+            MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
+            logger.hidesBottomBarWhenPushed = YES;
+        
+            [NAV pushViewController:logger animated:YES];
+            return NO;
+        }
+    }
+    return YES;
+}
 #pragma mark LazyLoad
 - (HeaderView *)headerView{
     if (!_headerView) {
@@ -72,6 +93,8 @@ CGFloat const TOP_Y = 113;
     // Do any additional setup after loading the view.
     [self initHeaderView];
     [self initViewControllers];
+    
+    self.tabBarController.delegate = self;
 }
 - (void)initHeaderView{
     //Masonry布局
@@ -139,7 +162,7 @@ CGFloat const TOP_Y = 113;
         
         MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
         logger.hidesBottomBarWhenPushed = YES;
-        [logger.navigationController pushViewController:logger animated:YES];
+        [self.navigationController pushViewController:logger animated:YES];
     }
 }
 - (void)goFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController{

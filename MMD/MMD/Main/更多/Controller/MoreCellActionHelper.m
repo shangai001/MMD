@@ -13,6 +13,9 @@
 #import "MMDInfoWebController.h"
 #import "MessageCenterController.h"
 #import "SupportCenterController.h"
+#import "HandleUserStatus.h"
+#import "MMDLoggin.h"
+#import "MMLogViewController.h"
 
 
 @implementation MoreCellActionHelper
@@ -60,13 +63,34 @@
 #pragma mark GoToSubView
 + (void)gotoMessageCenter:(MoreViewController *)more{
     
-    MessageCenterController *messageCenter = [MessageCenterController new];
-    [more.navigationController pushViewController:messageCenter animated:YES];
+    if ([MMDLoggin isLoggin]) {
+        //检查用户状态
+        if ([HandleUserStatus handleUserStatusAt:more]) {
+            MessageCenterController *messageCenter = [MessageCenterController new];
+            [more.navigationController pushViewController:messageCenter animated:YES];
+        }
+    }else{
+        
+        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
+        logger.hidesBottomBarWhenPushed = YES;
+        [more.navigationController pushViewController:logger animated:YES];
+    }
+    
 }
 + (void)gotoSupportCenter:(MoreViewController *)more{
     
-    SupportCenterController *supportCenter = [SupportCenterController new];
-    [more.navigationController pushViewController:supportCenter animated:YES];
+    if ([MMDLoggin isLoggin]) {
+        
+        if ([HandleUserStatus handleUserStatusAt:more]) {
+            SupportCenterController *supportCenter = [SupportCenterController new];
+            [more.navigationController pushViewController:supportCenter animated:YES];
+        }
+
+    }else{
+        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
+        logger.hidesBottomBarWhenPushed = YES;
+        [more.navigationController pushViewController:logger animated:YES];
+    }
 }
 + (void)gotoLoanRules:(MoreViewController *)more{
     

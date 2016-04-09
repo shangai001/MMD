@@ -257,7 +257,6 @@
 		D6F5672C1C80056300B0612F /* 更多@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5672A1C80056300B0612F /* 更多@2x.png */; };
 		D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5672B1C80056300B0612F /* 更多@3x.png */; };
 		D6FE74331CB9690E002F3941 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE74321CB9690E002F3941 /* UIDevice+IdentifierAddition.m */; };
-		D6FE74361CB971F2002F3941 /* LoanNextActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE74351CB971F2002F3941 /* LoanNextActionHelper.m */; };
 		D6FE74391CB97529002F3941 /* QueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE74381CB97529002F3941 /* QueryItem.m */; };
 /* End PBXBuildFile section */
 
@@ -658,8 +657,6 @@
 		D6FDC4CD1C85B528003B2660 /* ServerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerOption.h; path = ../Const/ServerOption.h; sourceTree = "<group>"; };
 		D6FE74311CB9690E002F3941 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
 		D6FE74321CB9690E002F3941 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
-		D6FE74341CB971F2002F3941 /* LoanNextActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanNextActionHelper.h; sourceTree = "<group>"; };
-		D6FE74351CB971F2002F3941 /* LoanNextActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanNextActionHelper.m; sourceTree = "<group>"; };
 		D6FE74371CB97529002F3941 /* QueryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryItem.h; sourceTree = "<group>"; };
 		D6FE74381CB97529002F3941 /* QueryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryItem.m; sourceTree = "<group>"; };
 		D876B7B7F58349F963758341 /* libPods-MMD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -962,8 +959,6 @@
 				D647FB481CAE7F7A00CBF19E /* LoanHeader.h */,
 				D688B9231CB6D12B00CC80FF /* RefundTextHelper.h */,
 				D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */,
-				D6FE74341CB971F2002F3941 /* LoanNextActionHelper.h */,
-				D6FE74351CB971F2002F3941 /* LoanNextActionHelper.m */,
 				D647FB4B1CAE7F7A00CBF19E /* NewApplyViewController.h */,
 				D647FB4C1CAE7F7A00CBF19E /* NewApplyViewController.m */,
 				D647FB4D1CAE7F7A00CBF19E /* NewApplyViewController.xib */,
@@ -1983,7 +1978,6 @@
 				D6805EA81CAD1CF500316925 /* pinyin.c in Sources */,
 				D647FB8D1CAE814300CBF19E /* HttpRequest.m in Sources */,
 				D67D6DC61CB54CFA003D4D2D /* VerifyModel.m in Sources */,
-				D6FE74361CB971F2002F3941 /* LoanNextActionHelper.m in Sources */,
 				D647FB5D1CAE7F7A00CBF19E /* NewApplyViewController.m in Sources */,
 				D647FB5C1CAE7F7A00CBF19E /* LoanViewController.m in Sources */,
 				D64C99401CB9125800C45936 /* LoanProtroWebController.m in Sources */,

@@ -10,6 +10,8 @@
 #import "ConstantTitle.h"
 #import "MMTabbar.h"
 #import "ColorHeader.h"
+#import "MMDLoggin.h"
+#import "MMLogViewController.h"
 
 
 @interface MMTabbarController ()
@@ -55,6 +57,9 @@
     moreItem.title = MORE_TABBARITEMTITLE;
     moreItem.image = self.imageHelper.moreOffImage;
     moreItem.selectedImage = self.imageHelper.mineOnImage;
+}
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
