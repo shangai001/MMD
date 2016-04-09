@@ -13,6 +13,10 @@
 #import "ColorHeader.h"
 #import "MMDLoggin.h"
 #import "AppUserInfoHelper.h"
+#import "HandleUserStatus.h"
+#import "VerifyViewController.h"
+#import "MMLogViewController.h"
+
 
 
 CGFloat const TOP_Y = 108;
@@ -112,18 +116,34 @@ CGFloat const TOP_Y = 108;
         case 2:
         {
             toVC = self.query;
-            if ([MMDLoggin isLoggin]) {
-                //判断用户审核状态
-                NSInteger status = [AppUserInfoHelper UserStatus];
-            }
+            [self checkoutUserCanGo:toVC];
         }
             break;
         default:
             break;
     }
 }
-- (void)goFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController{
+- (void)checkoutUserCanGo:(UIViewController *)toVC{
     
+    NSInteger status = [AppUserInfoHelper UserStatus];
+    if ([MMDLoggin isLoggin]) {
+        if (status > 0 && status < 3) {
+            //跳转到父Controller
+            VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
+            verifyer.status = status;
+            verifyer.hidesBottomBarWhenPushed = YES;
+            [verifyer.navigationController pushViewController:verifyer animated:YES];
+        }else{
+            [self goFromViewController:self.currentViewController toViewController:toVC];
+        }
+    }else{
+        
+        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
+        logger.hidesBottomBarWhenPushed = YES;
+        [logger.navigationController pushViewController:logger animated:YES];
+    }
+}
+- (void)goFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController{
     
     [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.15 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
         

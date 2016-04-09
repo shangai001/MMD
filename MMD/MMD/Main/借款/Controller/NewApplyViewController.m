@@ -8,14 +8,14 @@
 
 #import "NewApplyViewController.h"
 #import "ColorHeader.h"
-#import "MMLogViewController.h"
 #import "VerifyViewController.h"
 #import "BaseNavgationController.h"
-#import "AppUserInfoHelper.h"
+//#import "AppUserInfoHelper.h"
 #import "LoanVerifyController.h"
 #import "CalculateRefund.h"
 #import "RefundTextHelper.h"
 #import "LoanInfoItem.h"
+#import "HandleUserStatus.h"
 
 
 @interface NewApplyViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
@@ -122,34 +122,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)nextAction:(id)sender {
-    
-    //判断是否登录
-    BOOL isLogged = [SDUserDefault boolForKey:Loggin];
-    if (isLogged) {
-        //已经登录(查询用户状态)
-        NSInteger status = [AppUserInfoHelper UserStatus];
-        if (status > 0 && status < 3) {
-            //需要继续验证
-            VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
-            verifyer.status = status;
-            verifyer.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:verifyer animated:YES];
-        }else{
-            //直接到借款确认页面
-            LoanVerifyController *loanVerify = [[LoanVerifyController alloc] init];
-            loanVerify.hidesBottomBarWhenPushed = YES;
-            loanVerify.infoItem.refundMoth = self.refundMonth;
-            loanVerify.infoItem.refundMoneyEveryMoth = self.refundEveryMoth;
-            loanVerify.infoItem.floatLoanMoney = (float)self.moneyCount;
-            [self.navigationController pushViewController:loanVerify animated:YES];
-        }
-    }else{
-        //未登录
-        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
-        logger.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:logger animated:YES];
-    }
-    
+    [HandleUserStatus handleUserStatusAt:self];
 }
 #pragma mark UpdateRefundNumber
 - (void)updateRefundLabel{

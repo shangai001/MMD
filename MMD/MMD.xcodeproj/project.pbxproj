@@ -180,6 +180,7 @@
 		D64C99431CB91C7200C45936 /* QueryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99421CB91C7200C45936 /* QueryHeaderView.m */; };
 		D64C99451CB91C8A00C45936 /* QueryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64C99441CB91C8A00C45936 /* QueryHeaderView.xib */; };
 		D64C99481CB9229000C45936 /* LoanDetaiController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99471CB9229000C45936 /* LoanDetaiController.m */; };
+		D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
@@ -525,6 +526,8 @@
 		D64C99441CB91C8A00C45936 /* QueryHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryHeaderView.xib; sourceTree = "<group>"; };
 		D64C99461CB9229000C45936 /* LoanDetaiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanDetaiController.h; sourceTree = "<group>"; };
 		D64C99471CB9229000C45936 /* LoanDetaiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDetaiController.m; sourceTree = "<group>"; };
+		D64C99491CB93D0A00C45936 /* HandleUserStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleUserStatus.h; sourceTree = "<group>"; };
+		D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleUserStatus.m; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -1142,6 +1145,8 @@
 				D647FBBF1CAE920100CBF19E /* LXMKeyboardManager.m */,
 				D65200121CB6EBC40019C4CB /* ReadFiler.h */,
 				D65200131CB6EBC40019C4CB /* ReadFiler.m */,
+				D64C99491CB93D0A00C45936 /* HandleUserStatus.h */,
+				D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1951,6 +1956,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */,
 				D64C99151CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m in Sources */,
 				D66B4F981CB4263B0038F312 /* LogginSuccessActionHelper.m in Sources */,
 				D6B031CD1CB3947300E2955A /* User.m in Sources */,

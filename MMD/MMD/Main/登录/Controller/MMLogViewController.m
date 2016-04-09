@@ -15,7 +15,6 @@
 #import "RegisterViewController.h"
 #import "BaseNavgationController.h"
 #import "ColorHeader.h"
-#import "VerifyViewController.h"
 #import "FailureView.h"
 #import "UIView+LoadViewFromNib.h"
 #import <SVProgressHUD.h>
@@ -35,14 +34,9 @@ CGFloat const INPUTROW_HEIGHT = 30;
 @property (nonatomic, strong)LoginUser *user;
 @property (nonatomic, assign)NSUInteger failureCount;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rememberButtonToTop;
-
-
-
 @property (nonatomic, strong)FailureView *failureView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *passwordToTop;
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconToLeft;
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconHeight;
 
 @end
