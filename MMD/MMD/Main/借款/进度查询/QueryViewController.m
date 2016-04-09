@@ -20,6 +20,7 @@
 #import "AppUserInfoHelper.h"
 #import "QueryItem.h"
 #import <SVProgressHUD.h>
+#import "NoInfoView.h"
 
 
 /*借款信息头部视图*/
@@ -49,12 +50,20 @@ CGFloat const cacleButtonHeight = 44;
 @property (nonatomic, strong)NSDictionary *dataDic;
 @property (nonatomic, strong)QueryItem *item;
 
+@property (nonatomic, strong)NoInfoView *noInfoView;
+
 
 @end
 
 @implementation QueryViewController
 
 #pragma mark SubViewGetter
+- (NoInfoView *)noInfoView{
+    if (!_noInfoView) {
+        _noInfoView = [NoInfoView loadViewFromNib];
+    }
+    return _noInfoView;
+}
 - (QueryItem *)item{
     if (!_item) {
         _item = [QueryItem new];
@@ -97,9 +106,9 @@ CGFloat const cacleButtonHeight = 44;
     if (!_cancleButon) {
         //创建button
         _cancleButon = [UIButton buttonWithType:UIButtonTypeSystem];
-        _cancleButon.backgroundColor = REDCOLOR;
+        _cancleButon.backgroundColor = [UIColor whiteColor];
         [_cancleButon setTitle:@"取消申请" forState:UIControlStateNormal];
-        [_cancleButon setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_cancleButon setTitleColor:REDCOLOR forState:UIControlStateNormal];
         _cancleButon.layer.cornerRadius = 5.0f;
         _cancleButon.layer.borderColor = [UIColor redColor].CGColor;
         _cancleButon.layer.borderWidth = 1.0f;
@@ -120,6 +129,7 @@ CGFloat const cacleButtonHeight = 44;
         [SVProgressHUD show];
         [QueryModel queryLoanStatus:nil success:^(NSDictionary *resultDic) {
             if ([resultDic[@"code"] integerValue] == 0) {
+
                 [self haveNoLoanStatusInfo:YES];
                 [self creatItem:resultDic];
                 [SVProgressHUD dismiss];
@@ -127,6 +137,7 @@ CGFloat const cacleButtonHeight = 44;
                 [self haveNoLoanStatusInfo:NO];
                 [SVProgressHUD dismiss];
             }
+
         } failure:^(NSError *error) {
             
         }];
@@ -147,6 +158,16 @@ CGFloat const cacleButtonHeight = 44;
     [self setLoanInfo:item label:self.headerView.loanTextLabel];
     //设置还款时间
     [self setLoanInfo:item label:self.headerView.loanTimeLabel];
+    
+ }
+//TODO:需要知道借款申请状态
+- (void)resetCancleButtonStatus:(NSInteger)state{
+    
+    if (state == 1) {
+        self.cancleButon.backgroundColor = [UIColor lightGrayColor];
+        self.cancleButon.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        [self.cancleButon setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    }
 }
 - (void)setLoanInfo:(QueryItem *)item label:(UILabel *)textLabel{
     
@@ -230,7 +251,35 @@ CGFloat const cacleButtonHeight = 44;
 //取消申请借款
 - (void)cancleLoanApply:(id)sender{
     
-    [self didNotGetLoanStatusInfo];
+    WeakSelf;
+    //弹出框
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确认取消" message:@"取消借款申请" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cacncleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf callCancleAction];
+    }];
+    [alert addAction:sureAction];
+    [alert addAction:cacncleAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+- (void)callCancleAction{
+    
+    
+    NSLog(@"借款申请状态%@",self.item.state);
+    //loanApplyId
+    NSDictionary *infoDic = @{@"loanApplyId":self.item.contractId};
+    
+    [QueryModel cancleLoanApply:infoDic success:^(NSDictionary *resultDic) {
+        NSLog(@"取消借款申请返回%@",resultDic);
+        [self resetCancleButtonStatus:1];
+        if ([resultDic[@"code"] integerValue] == 0) {
+//            [self resetCancleButtonStatus:1];
+        }else{
+            [SVProgressHUD showInfoWithStatus:resultDic[@"msg"]];
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"取消借款申请错误%@",error);
+    }];
 }
 #pragma mark 是否有借款信息
 - (void)haveNoLoanStatusInfo:(BOOL)have{
@@ -239,6 +288,7 @@ CGFloat const cacleButtonHeight = 44;
         [self didGetLoanStatusInfo];
     }else{
         [self didNotGetLoanStatusInfo];
+        [self showNoInfoView];
     }
 }
 - (void)didGetLoanStatusInfo{
@@ -248,16 +298,20 @@ CGFloat const cacleButtonHeight = 44;
     [self configurebottomContentView];
     [self configureStageView];
     [self configureCancelButton];
+    
+    [self.noInfoView removeFromSuperview];
 }
 - (void)didNotGetLoanStatusInfo{
     
     [self.headerView removeFromSuperview];
     [self.bottombottomContentView removeFromSuperview];
-    self.scrollView.backgroundColor = [UIColor orangeColor];
+    self.scrollView.backgroundColor = [UIColor clearColor];
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.view.frame.size.height);
 }
 - (void)showNoInfoView{
     
+    [self.view addSubview:self.noInfoView];
+    self.noInfoView.sd_layout.widthIs(150).heightIs(180).centerXEqualToView(self.view).topSpaceToView(self.view,100);
 }
 #pragma mark SeeDetail
 - (void)openLoanDetail:(id)sender{

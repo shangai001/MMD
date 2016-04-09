@@ -20,6 +20,15 @@
 + (void)queryLoanStatus:(NSDictionary *)info
                 success:(successHandler)successHandler
                 failure:(failureHandler)failureHandler;
-
+/**
+ *  取消借款申请  loanApplyId
+ *
+ *  @param info
+ *  @param successHandler
+ *  @param failureHandler 
+ */
++ (void)cancleLoanApply:(NSDictionary *)info
+                success:(successHandler)successHandler
+                failure:(failureHandler)failureHandler;
 
 @end
