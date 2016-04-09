@@ -18,6 +18,8 @@
 #import "UIView+LoadViewFromNib.h"
 #import "LoanDetaiController.h"
 #import "AppUserInfoHelper.h"
+#import "QueryItem.h"
+#import <SVProgressHUD.h>
 
 
 /*借款信息头部视图*/
@@ -43,11 +45,28 @@ CGFloat const cacleButtonHeight = 44;
 @property (nonatomic, strong)QueryHeaderView *headerView;
 @property (nonatomic, strong)StageView *stageView;
 @property (nonatomic, strong)UIButton *cancleButon;
+
+@property (nonatomic, strong)NSDictionary *dataDic;
+@property (nonatomic, strong)QueryItem *item;
+
+
 @end
 
 @implementation QueryViewController
 
 #pragma mark SubViewGetter
+- (QueryItem *)item{
+    if (!_item) {
+        _item = [QueryItem new];
+    }
+    return _item;
+}
+- (NSDictionary *)dataDic{
+    if (!_dataDic) {
+        _dataDic = [NSDictionary dictionary];
+    }
+    return _dataDic;
+}
 - (UIScrollView *)scrollView{
     if (!_scrollView) {
         _scrollView = [[UIScrollView alloc] init];
@@ -93,19 +112,70 @@ CGFloat const cacleButtonHeight = 44;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = BACKGROUNDCOLOR;
     //查询是否有借款进度
-    [self requestLoanStatus];
-    [self haveNoLoanStatusInfo:YES];
+//    [self haveNoLoanStatusInfo:YES];
 }
 //请求借款申请状态
 - (void)requestLoanStatus{
     if ([MMDLoggin isLoggin]) {
+        [SVProgressHUD show];
         [QueryModel queryLoanStatus:nil success:^(NSDictionary *resultDic) {
-            NSLog(@"查询借款结果  %@",resultDic);
+            if ([resultDic[@"code"] integerValue] == 0) {
+                [self haveNoLoanStatusInfo:YES];
+                [self creatItem:resultDic];
+                [SVProgressHUD dismiss];
+            }else{
+                [self haveNoLoanStatusInfo:NO];
+                [SVProgressHUD dismiss];
+            }
         } failure:^(NSError *error) {
             
         }];
     }
 }
+//构造数据
+- (void)creatItem:(NSDictionary *)resultDic{
+    NSDictionary *dataDic = resultDic[@"data"];
+    self.item.contractId = dataDic[@"contractId"];
+    self.item.state = dataDic[@"state"];
+    self.item.term = dataDic[@"term"];
+    self.item.loanCount = dataDic[@"amount"];
+    [self reloadProgressView:self.item];
+}
+//刷新视图
+- (void)reloadProgressView:(QueryItem *)item{
+    //设置借款数目
+    [self setLoanInfo:item label:self.headerView.loanTextLabel];
+    //设置还款时间
+    [self setLoanInfo:item label:self.headerView.loanTimeLabel];
+}
+- (void)setLoanInfo:(QueryItem *)item label:(UILabel *)textLabel{
+    
+    NSString *numberString = @"";
+    NSString *frontString = @"";
+    NSInteger numberLength = 0;
+    UIColor *numberColor = nil;
+    if ([textLabel isEqual:self.headerView.loanTextLabel]) {
+        numberString = [item.loanCount stringValue];
+        frontString =  [NSString stringWithFormat:@"%@元",numberString];
+        numberColor = Color(0.97, 0.43, 0.36, 1);
+    }else if([textLabel isEqual:self.headerView.loanTimeLabel]){
+        numberString = [item.term stringValue];
+        frontString =  [NSString stringWithFormat:@"%@个月",numberString];
+        numberColor = Color(0.24, 0.78, 0.94, 1);
+    }
+    numberLength = numberString.length;
+    NSMutableAttributedString *loanAttributeString = [[NSMutableAttributedString alloc] initWithString:frontString];
+    
+    NSRange numberRange = NSMakeRange(0,numberLength);
+    
+    NSDictionary *numberDic = @{NSFontAttributeName : [UIFont systemFontOfSize:18],NSForegroundColorAttributeName:numberColor};
+    [loanAttributeString addAttributes:numberDic range:numberRange];
+    NSDictionary *textDic = @{NSFontAttributeName:[UIFont systemFontOfSize:13],NSForegroundColorAttributeName:[UIColor blackColor]};
+    NSRange textRange = NSMakeRange(numberLength, frontString.length - numberLength);
+    [loanAttributeString addAttributes:textDic range:textRange];
+    textLabel.attributedText = loanAttributeString;
+}
+
 #pragma mark ConfigureSubViews
 //配置滑动视图
 - (void)configureScroolView{
@@ -183,7 +253,7 @@ CGFloat const cacleButtonHeight = 44;
     
     [self.headerView removeFromSuperview];
     [self.bottombottomContentView removeFromSuperview];
-    self.scrollView.backgroundColor = [UIColor cyanColor];
+    self.scrollView.backgroundColor = [UIColor orangeColor];
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.view.frame.size.height);
 }
 #pragma mark SeeDetail

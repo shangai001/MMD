@@ -23,6 +23,7 @@
 #import <SVProgressHUD.h>
 
 
+
 CGFloat const EDGELENGTH = 20;
 CGFloat const SUREBOTTOMBARHEIGHT = 64;
 
@@ -182,6 +183,7 @@ static NSString * const bottomCellId = @"BottomCellId";
     NSDictionary *info = @{@"capital":@(self.infoItem.floatLoanMoney),@"termLine":@(self.infoItem.refundMoth)};
     [SubmitLoanInfoModel submitLoanInfo:info success:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
+            [SVProgressHUD dismiss];
             NSLog(@"提交成功");
         }else{
             [SVProgressHUD showInfoWithStatus:resultDic[@"msg"]];

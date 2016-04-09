@@ -19,7 +19,6 @@
 #import "RefundTextHelper.h"
 #import "LoanInfoItem.h"
 
-
 @interface NewApplyViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
 
 @property (nonatomic, strong)NSArray *dataArray;
@@ -133,6 +132,12 @@
             verifyer.status = status;
             verifyer.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:verifyer animated:YES];
+        }else{
+            LoanVerifyController *loanVerifyer = [LoanVerifyController new];
+            loanVerifyer.infoItem.refundMoth = self.refundMonth;
+            loanVerifyer.infoItem.floatLoanMoney = (float)self.moneyCount;
+            loanVerifyer.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:loanVerifyer animated:YES];
         }
     }else{
         //去往登录页面

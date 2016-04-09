@@ -256,6 +256,7 @@
 		D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5672B1C80056300B0612F /* 更多@3x.png */; };
 		D6FE74331CB9690E002F3941 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE74321CB9690E002F3941 /* UIDevice+IdentifierAddition.m */; };
 		D6FE74361CB971F2002F3941 /* LoanNextActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE74351CB971F2002F3941 /* LoanNextActionHelper.m */; };
+		D6FE74391CB97529002F3941 /* QueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE74381CB97529002F3941 /* QueryItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -654,6 +655,8 @@
 		D6FE74321CB9690E002F3941 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
 		D6FE74341CB971F2002F3941 /* LoanNextActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanNextActionHelper.h; sourceTree = "<group>"; };
 		D6FE74351CB971F2002F3941 /* LoanNextActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanNextActionHelper.m; sourceTree = "<group>"; };
+		D6FE74371CB97529002F3941 /* QueryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryItem.h; sourceTree = "<group>"; };
+		D6FE74381CB97529002F3941 /* QueryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryItem.m; sourceTree = "<group>"; };
 		D876B7B7F58349F963758341 /* libPods-MMD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1229,6 +1232,8 @@
 			children = (
 				D64C993B1CB90A8A00C45936 /* QueryModel.h */,
 				D64C993C1CB90A8A00C45936 /* QueryModel.m */,
+				D6FE74371CB97529002F3941 /* QueryItem.h */,
+				D6FE74381CB97529002F3941 /* QueryItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -2048,6 +2053,7 @@
 				D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */,
 				D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */,
 				D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */,
+				D6FE74391CB97529002F3941 /* QueryItem.m in Sources */,
 				D6805E931CAD1A3300316925 /* STPickerArea.m in Sources */,
 				D647FB611CAE7F7A00CBF19E /* HeaderView.m in Sources */,
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,

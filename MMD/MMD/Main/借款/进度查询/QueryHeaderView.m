@@ -11,11 +11,7 @@
 
 @interface QueryHeaderView ()
 
-@property (weak, nonatomic) IBOutlet UIButton *loanNumberButton;
-@property (weak, nonatomic) IBOutlet UIButton *loanTimeButton;
-@property (weak, nonatomic) IBOutlet UILabel *loanTimeLabel;
-@property (weak, nonatomic) IBOutlet UIButton *detailButton;
-@property (weak, nonatomic) IBOutlet UILabel *loanTextLabel;
+
 
 @end
 @implementation QueryHeaderView
@@ -28,7 +24,6 @@
         [self.detailDelegate openLoanDetail:self];
     }
 }
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

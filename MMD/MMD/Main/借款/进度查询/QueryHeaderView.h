@@ -18,6 +18,11 @@
 
 @interface QueryHeaderView : UIView
 
+@property (weak, nonatomic) IBOutlet UIButton *loanNumberButton;
+@property (weak, nonatomic) IBOutlet UIButton *loanTimeButton;
+@property (weak, nonatomic) IBOutlet UILabel *loanTimeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *detailButton;
+@property (weak, nonatomic) IBOutlet UILabel *loanTextLabel;
 @property (nonatomic, assign)id<GoseeLoanDetailDelegate> detailDelegate;
 
 @end

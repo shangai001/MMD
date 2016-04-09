@@ -11,4 +11,7 @@
 
 @interface QueryViewController : BaseViewController
 
+- (void)requestLoanStatus;
+
+
 @end

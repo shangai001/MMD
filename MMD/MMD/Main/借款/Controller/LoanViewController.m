@@ -145,15 +145,15 @@ CGFloat const TOP_Y = 108;
 }
 - (void)goFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController{
     
-    [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.15 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
+    
+    [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.2 options:UIViewAnimationOptionTransitionNone animations:^{
         
         [fromViewController willMoveToParentViewController:nil];
-        
     } completion:^(BOOL finished) {
-        
-        [UIView animateWithDuration:0.15 delay:0.1 options:UIViewAnimationOptionCurveEaseInOut |UIViewAnimationOptionTransitionCurlDown animations:^{
-            toViewController.view.frame = CGRectMake(0, TOP_Y, self.view.frame.size.width, self.view.frame.size.height - 108);
-        } completion:nil];
+        if ([toViewController isEqual:self.query]) {
+            [self.query requestLoanStatus];
+        }
+        toViewController.view.frame = CGRectMake(0, TOP_Y, self.view.frame.size.width, self.view.frame.size.height - 108);
         self.currentViewController = toViewController;
         [toViewController didMoveToParentViewController:self];
     }];
