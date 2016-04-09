@@ -58,7 +58,7 @@ CGFloat const STAGETOLEFT = 0;
     [self addDissmissKeyboardGesture];
 }
 - (void)initStageView{
-    self.stageView = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(STAGETOLEFT, kTopLayoutGuide, YYScreenSize().width - 2 * STAGETOLEFT , kStageHeight)];
+    self.stageView = [[StageView alloc] initWithStyle:kHorizontalStyle stage:3 frame:CGRectMake(STAGETOLEFT, kTopLayoutGuide, kScreenSize.width - 2 * STAGETOLEFT , kStageHeight)];
     [self.view addSubview:self.stageView];
 }
 - (void)addDissmissKeyboardGesture{

@@ -123,13 +123,13 @@ CGFloat const TOP_Y = 108;
     }
     
     [self transitionFromViewController:self.currentViewController toViewController:toVC duration:0.15 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
-        
+        [self.currentViewController willMoveToParentViewController:nil];
     } completion:^(BOOL finished) {
         if (finished) {
-            [toVC didMoveToParentViewController:self];
             toVC.view.frame = CGRectMake(0, TOP_Y, self.view.frame.size.width, self.view.frame.size.height - 108);
             self.currentViewController = toVC;
         }
+        [toVC didMoveToParentViewController:self];
     }];
 }
 
