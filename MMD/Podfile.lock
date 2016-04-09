@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Masonry (1.0.0)
   - MJExtension (3.0.10)
   - MJRefresh (3.1.0)
   - MOBFoundation_IDFA (1.5.1)
@@ -35,7 +34,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - Masonry
   - MJExtension
   - MJRefresh
   - MOBFoundation_IDFA
@@ -52,7 +50,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   MOBFoundation_IDFA: f5d3d1f89166f60c6985e34b7d90e6fb5d58fb61

@@ -105,7 +105,6 @@
 		D63356641CB03B2C000A321C /* FormTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356631CB03B2C000A321C /* FormTableViewCell+PutValue.m */; };
 		D633566B1CB04320000A321C /* SureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356691CB04320000A321C /* SureViewController.m */; };
 		D633566C1CB04320000A321C /* SureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D633566A1CB04320000A321C /* SureViewController.xib */; };
-		D633566F1CB04E47000A321C /* LoanProtroWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633566E1CB04E47000A321C /* LoanProtroWebController.m */; };
 		D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356711CB10CBF000A321C /* CalculateRefund.m */; };
 		D63356781CB12062000A321C /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356771CB12062000A321C /* BaseModel.m */; };
 		D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D633567A1CB121EE000A321C /* WarnLoginModel.m */; };
@@ -385,8 +384,6 @@
 		D63356681CB04320000A321C /* SureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureViewController.h; sourceTree = "<group>"; };
 		D63356691CB04320000A321C /* SureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureViewController.m; sourceTree = "<group>"; };
 		D633566A1CB04320000A321C /* SureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureViewController.xib; sourceTree = "<group>"; };
-		D633566D1CB04E47000A321C /* LoanProtroWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanProtroWebController.h; path = "../申请借款确认/Controller/LoanProtroWebController.h"; sourceTree = "<group>"; };
-		D633566E1CB04E47000A321C /* LoanProtroWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanProtroWebController.m; path = "../申请借款确认/Controller/LoanProtroWebController.m"; sourceTree = "<group>"; };
 		D63356701CB10CBF000A321C /* CalculateRefund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateRefund.h; sourceTree = "<group>"; };
 		D63356711CB10CBF000A321C /* CalculateRefund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateRefund.m; sourceTree = "<group>"; };
 		D63356761CB12062000A321C /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
@@ -1185,13 +1182,35 @@
 		D64C991F1CB8DA9E00C45936 /* 进度查询 */ = {
 			isa = PBXGroup;
 			children = (
-				D633566D1CB04E47000A321C /* LoanProtroWebController.h */,
-				D633566E1CB04E47000A321C /* LoanProtroWebController.m */,
+				D64C993A1CB90A2E00C45936 /* View */,
+				D64C99391CB90A2700C45936 /* Model */,
+				D64C99381CB90A1E00C45936 /* Controller */,
+			);
+			path = "进度查询";
+			sourceTree = "<group>";
+		};
+		D64C99381CB90A1E00C45936 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				D64C99251CB8DB9300C45936 /* QueryViewController.h */,
 				D64C99231CB8DB9300C45936 /* QueryViewController.m */,
 				D64C99241CB8DB9300C45936 /* QueryViewController.xib */,
 			);
-			path = "进度查询";
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D64C99391CB90A2700C45936 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D64C993A1CB90A2E00C45936 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		D66B4F9F1CB4ED960038F312 /* Items */ = {
@@ -1931,7 +1950,6 @@
 				D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
 				D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */,
-				D633566F1CB04E47000A321C /* LoanProtroWebController.m in Sources */,
 				D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */,
 				D688B9101CB68F3B00CC80FF /* SecondVerifyItem.m in Sources */,
 				D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */,
