@@ -385,8 +385,8 @@
 		D63356681CB04320000A321C /* SureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureViewController.h; sourceTree = "<group>"; };
 		D63356691CB04320000A321C /* SureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureViewController.m; sourceTree = "<group>"; };
 		D633566A1CB04320000A321C /* SureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureViewController.xib; sourceTree = "<group>"; };
-		D633566D1CB04E47000A321C /* LoanProtroWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanProtroWebController.h; sourceTree = "<group>"; };
-		D633566E1CB04E47000A321C /* LoanProtroWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanProtroWebController.m; sourceTree = "<group>"; };
+		D633566D1CB04E47000A321C /* LoanProtroWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanProtroWebController.h; path = "../申请借款确认/Controller/LoanProtroWebController.h"; sourceTree = "<group>"; };
+		D633566E1CB04E47000A321C /* LoanProtroWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanProtroWebController.m; path = "../申请借款确认/Controller/LoanProtroWebController.m"; sourceTree = "<group>"; };
 		D63356701CB10CBF000A321C /* CalculateRefund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateRefund.h; sourceTree = "<group>"; };
 		D63356711CB10CBF000A321C /* CalculateRefund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateRefund.m; sourceTree = "<group>"; };
 		D63356761CB12062000A321C /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
@@ -761,8 +761,6 @@
 				D633566A1CB04320000A321C /* SureViewController.xib */,
 				D633565C1CB0378F000A321C /* HeaderLabel.h */,
 				D633565D1CB0378F000A321C /* HeaderLabel.m */,
-				D633566D1CB04E47000A321C /* LoanProtroWebController.h */,
-				D633566E1CB04E47000A321C /* LoanProtroWebController.m */,
 				D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */,
 			);
 			path = Controller;
@@ -1187,6 +1185,8 @@
 		D64C991F1CB8DA9E00C45936 /* 进度查询 */ = {
 			isa = PBXGroup;
 			children = (
+				D633566D1CB04E47000A321C /* LoanProtroWebController.h */,
+				D633566E1CB04E47000A321C /* LoanProtroWebController.m */,
 				D64C99251CB8DB9300C45936 /* QueryViewController.h */,
 				D64C99231CB8DB9300C45936 /* QueryViewController.m */,
 				D64C99241CB8DB9300C45936 /* QueryViewController.xib */,

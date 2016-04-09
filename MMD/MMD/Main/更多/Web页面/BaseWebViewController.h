@@ -12,6 +12,11 @@
 
 @property (copy, nonatomic)NSString *URLString;
 
+/**
+ *  用于更新URL地址
+ *
+ *  @param URL 
+ */
 - (void)requestUrl:(NSString *)URL;
 
 @end
