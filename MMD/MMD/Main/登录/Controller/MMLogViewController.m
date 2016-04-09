@@ -229,6 +229,7 @@ CGFloat const INPUTROW_HEIGHT = 30;
     NSString *userId = user[@"id"];
     NSString *token = user[@"token"];
     NSMutableDictionary *userTokenDic = [NSMutableDictionary dictionaryWithObjects:@[userId,token] forKeys:@[@"userId",@"token"]];
+    NSLog(@"此处需要修改");
     /*
     [UploadDevice uploadDeviceInfo:userTokenDic success:^(NSDictionary *resultDic) {
         NSLog(@"上传设备返回信息 %@",resultDic);

@@ -13,8 +13,9 @@
 
 @interface AppUserInfoHelper : NSObject
 
+NS_ASSUME_NONNULL_BEGIN
 
-+ (void)updateUserInfo:(NSDictionary *)info;
++ (void)updateUserInfo:( NSDictionary * _Nullable )info;
 
 + (NSDictionary *)userInfo;
 
@@ -44,5 +45,6 @@
  */
 + (NSDictionary *)appendUserIdToken:(nullable NSDictionary *)info;
 
+NS_ASSUME_NONNULL_END
 
 @end

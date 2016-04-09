@@ -18,7 +18,7 @@
     NSString *documentPath = documents[0];
     return documentPath;
 }
-+ (void)updateUserInfo:(NSDictionary *)info{
++ (void)updateUserInfo:( NSDictionary * _Nullable )info{
     
     NSDictionary *dataDic = info[@"data"];
     [self saveIno:dataDic path:[self getDocumentPath]];
@@ -28,10 +28,10 @@
     NSString *fullPath = [filePath stringByAppendingPathComponent:@"UserInfo.data"];
     BOOL success = [NSKeyedArchiver archiveRootObject:info toFile:fullPath];
     if (success) {
-//        标记当前登录成功
-            if (![SDUserDefault boolForKey:Loggin]) {
-                [SDUserDefault setBool:YES forKey:Loggin];
-            }
+        //        标记当前登录成功
+        if (![SDUserDefault boolForKey:Loggin]) {
+            [SDUserDefault setBool:YES forKey:Loggin];
+        }
     }
     NSAssert(success, @"归档用户信息失败");
 }

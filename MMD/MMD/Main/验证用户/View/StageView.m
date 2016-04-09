@@ -11,9 +11,10 @@
 #import "VerticalDashLineView.h"
 #import <UIView+SDAutoLayout.h>
 
-#define buttonWidthHeight 30
-#define buttonToLeft 10
-#define StageViewHeight 4
+CGFloat const buttonWidthHeight = 30;
+CGFloat const buttonToLeft = 10;
+CGFloat const StageViewHeight = 4;
+
 
 @interface StageView ()
 
@@ -140,7 +141,7 @@
     titleLabel.text = title;
     [self addSubview:titleLabel];
     
-    titleLabel.sd_layout.widthIs(buttonWidthHeight).heightIs(buttonWidthHeight/2).topEqualToView(button).centerXEqualToView(button);
+    titleLabel.sd_layout.widthIs(buttonWidthHeight).heightIs(buttonWidthHeight/2).topSpaceToView(button,buttonWidthHeight).centerXEqualToView(button);
 }
 
 + (UIButton *)initStageButton:(NSUInteger)j {
