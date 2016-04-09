@@ -29,7 +29,12 @@
 + (NSString *)localizedModel{
     return [UIDevice currentDevice].localizedModel;
 }
-+ (NSString *)deviceName{
+
+/**********/
++ (NSString *)machineModel{
+    return [UIDevice currentDevice].machineModel;
+}
++ (NSString *)machineModelName{
     return [UIDevice currentDevice].machineModelName;
 }
 @end

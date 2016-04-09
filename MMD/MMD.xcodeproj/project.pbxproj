@@ -170,7 +170,6 @@
 		D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */; };
 		D64A4E3A1CB7D62800FB519B /* SortIdDic.txt in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E391CB7D62800FB519B /* SortIdDic.txt */; };
 		D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */; };
-		D64C99151CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99101CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m */; };
 		D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99231CB8DB9300C45936 /* QueryViewController.m */; };
 		D64C99271CB8DB9300C45936 /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64C99241CB8DB9300C45936 /* QueryViewController.xib */; };
 		D64C992A1CB8DBA200C45936 /* LatestActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99291CB8DBA200C45936 /* LatestActivityController.m */; };
@@ -255,6 +254,7 @@
 		D6F567291C80055800B0612F /* 我的@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F567271C80055800B0612F /* 我的@3x.png */; };
 		D6F5672C1C80056300B0612F /* 更多@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5672A1C80056300B0612F /* 更多@2x.png */; };
 		D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5672B1C80056300B0612F /* 更多@3x.png */; };
+		D6FE74331CB9690E002F3941 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE74321CB9690E002F3941 /* UIDevice+IdentifierAddition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -503,8 +503,6 @@
 		D64A4E391CB7D62800FB519B /* SortIdDic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SortIdDic.txt; sourceTree = "<group>"; };
 		D64A4E3B1CB7D99000FB519B /* SubmitLoanInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLoanInfoModel.h; sourceTree = "<group>"; };
 		D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLoanInfoModel.m; sourceTree = "<group>"; };
-		D64C990F1CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CoreTelephonyCategory.h"; sourceTree = "<group>"; };
-		D64C99101CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CoreTelephonyCategory.m"; sourceTree = "<group>"; };
 		D64C991A1CB8DA6A00C45936 /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
 		D64C991B1CB8DA6A00C45936 /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
 		D64C991C1CB8DA6A00C45936 /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
@@ -651,6 +649,8 @@
 		D6F5672B1C80056300B0612F /* 更多@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多@3x.png"; sourceTree = "<group>"; };
 		D6FDC4CC1C85B485003B2660 /* ServerDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerDefine.h; path = ../Const/ServerDefine.h; sourceTree = "<group>"; };
 		D6FDC4CD1C85B528003B2660 /* ServerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerOption.h; path = ../Const/ServerOption.h; sourceTree = "<group>"; };
+		D6FE74311CB9690E002F3941 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		D6FE74321CB9690E002F3941 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
 		D876B7B7F58349F963758341 /* libPods-MMD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1154,8 +1154,8 @@
 		D647FBC91CAE925400CBF19E /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				D64C990F1CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.h */,
-				D64C99101CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m */,
+				D6FE74311CB9690E002F3941 /* UIDevice+IdentifierAddition.h */,
+				D6FE74321CB9690E002F3941 /* UIDevice+IdentifierAddition.m */,
 				D647FBCB1CAE925400CBF19E /* UIImage+Color.h */,
 				D647FBCC1CAE925400CBF19E /* UIImage+Color.m */,
 				D647FBCD1CAE925400CBF19E /* UIView+LoadViewFromNib.h */,
@@ -1957,7 +1957,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */,
-				D64C99151CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m in Sources */,
 				D66B4F981CB4263B0038F312 /* LogginSuccessActionHelper.m in Sources */,
 				D6B031CD1CB3947300E2955A /* User.m in Sources */,
 				D647FB711CAE800100CBF19E /* MMLogViewController.m in Sources */,
@@ -1982,6 +1981,7 @@
 				D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */,
 				D647FB821CAE80BE00CBF19E /* LimitInputWords.m in Sources */,
 				D63356371CB00481000A321C /* SupportCenterController.m in Sources */,
+				D6FE74331CB9690E002F3941 /* UIDevice+IdentifierAddition.m in Sources */,
 				D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */,
 				D688B9131CB69BE500CC80FF /* AreaHelper.m in Sources */,
 				D6B031D31CB3964200E2955A /* MessageModel.m in Sources */,

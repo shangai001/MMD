@@ -11,12 +11,14 @@
 #import <UIKit/UIKit.h>
 #import "UIDevice+CoreTelephonyCategory.h"
 
+
+
 @implementation UploadDevice
 
 + (void)uploadDeviceInfo:(NSDictionary *)userTokenDic success:(successHandler)successHandler failure:(failureHandler)failureHandler{
     
-    NSString *brand = [AppInfo model];
-    NSString *model = [AppInfo deviceName];
+    NSString *brand = [AppInfo machineModel];
+    NSString *model = [AppInfo machineModelName];
     NSString *imei =  [UIDevice IMEI];
     NSString *imsi =  [UIDevice IMSI];
     NSMutableDictionary *uploadDic = [NSMutableDictionary dictionaryWithDictionary:userTokenDic];
