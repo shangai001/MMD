@@ -9,7 +9,6 @@
 #import "UploadDevice.h"
 #import "AppInfo.h"
 #import <UIKit/UIKit.h>
-#import "UIDevice+CoreTelephonyCategory.h"
 
 
 
@@ -19,13 +18,13 @@
     
     NSString *brand = [AppInfo machineModel];
     NSString *model = [AppInfo machineModelName];
-    NSString *imei =  [UIDevice IMEI];
-    NSString *imsi =  [UIDevice IMSI];
+//    NSString *imei =  [UIDevice IMEI];
+//    NSString *imsi =  [UIDevice IMSI];
     NSMutableDictionary *uploadDic = [NSMutableDictionary dictionaryWithDictionary:userTokenDic];
     [uploadDic setObject:brand forKey:@"brand"];
     [uploadDic setObject:model forKey:@"model"];
-    [uploadDic setObject:imei forKey:@"imei"];
-    [uploadDic setObject:imsi forKey:@"imsi"];
+//    [uploadDic setObject:imei forKey:@"imei"];
+//    [uploadDic setObject:imsi forKey:@"imsi"];
     
     NSString *URL = [NSString stringWithFormat:@"%@/user/uploadDeviceInfo",kHostURL];
     [HttpRequest postWithURLString:URL parameters:uploadDic success:^(id responseObject) {
