@@ -11,9 +11,9 @@
 @implementation AppInfo
 
 + (NSString *)app_Version{
-    
     NSDictionary *infoPlistDic = [[NSBundle mainBundle] infoDictionary];
     NSString *app_Version = [infoPlistDic objectForKey:@"CFBundleShortVersionString"];
     return app_Version;
 }
+
 @end

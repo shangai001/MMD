@@ -177,6 +177,9 @@
 		D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */; };
 		D64A4E3A1CB7D62800FB519B /* SortIdDic.txt in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E391CB7D62800FB519B /* SortIdDic.txt */; };
 		D64A4E3D1CB7D99000FB519B /* SubmitLoanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E3C1CB7D99000FB519B /* SubmitLoanInfo.m */; };
+		D64C99151CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99101CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m */; };
+		D64C99161CB8D89C00C45936 /* UIDevice+EquipmentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99121CB8D89C00C45936 /* UIDevice+EquipmentInfo.m */; };
+		D64C99171CB8D89C00C45936 /* UIDevice+MobileGestaltCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99141CB8D89C00C45936 /* UIDevice+MobileGestaltCategory.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
@@ -511,6 +514,12 @@
 		D64A4E391CB7D62800FB519B /* SortIdDic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SortIdDic.txt; sourceTree = "<group>"; };
 		D64A4E3B1CB7D99000FB519B /* SubmitLoanInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLoanInfo.h; sourceTree = "<group>"; };
 		D64A4E3C1CB7D99000FB519B /* SubmitLoanInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLoanInfo.m; sourceTree = "<group>"; };
+		D64C990F1CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CoreTelephonyCategory.h"; sourceTree = "<group>"; };
+		D64C99101CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CoreTelephonyCategory.m"; sourceTree = "<group>"; };
+		D64C99111CB8D89C00C45936 /* UIDevice+EquipmentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+EquipmentInfo.h"; sourceTree = "<group>"; };
+		D64C99121CB8D89C00C45936 /* UIDevice+EquipmentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+EquipmentInfo.m"; sourceTree = "<group>"; };
+		D64C99131CB8D89C00C45936 /* UIDevice+MobileGestaltCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+MobileGestaltCategory.h"; sourceTree = "<group>"; };
+		D64C99141CB8D89C00C45936 /* UIDevice+MobileGestaltCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+MobileGestaltCategory.m"; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -1141,20 +1150,18 @@
 		D647FBC91CAE925400CBF19E /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				D647FBCA1CAE925400CBF19E /* Other */,
+				D64C990F1CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.h */,
+				D64C99101CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m */,
+				D64C99111CB8D89C00C45936 /* UIDevice+EquipmentInfo.h */,
+				D64C99121CB8D89C00C45936 /* UIDevice+EquipmentInfo.m */,
+				D64C99131CB8D89C00C45936 /* UIDevice+MobileGestaltCategory.h */,
+				D64C99141CB8D89C00C45936 /* UIDevice+MobileGestaltCategory.m */,
 				D647FBCB1CAE925400CBF19E /* UIImage+Color.h */,
 				D647FBCC1CAE925400CBF19E /* UIImage+Color.m */,
 				D647FBCD1CAE925400CBF19E /* UIView+LoadViewFromNib.h */,
 				D647FBCE1CAE925400CBF19E /* UIView+LoadViewFromNib.m */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		D647FBCA1CAE925400CBF19E /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 		D647FBD11CAE92B200CBF19E /* Plist */ = {
@@ -1886,6 +1893,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64C99151CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m in Sources */,
 				D66B4F981CB4263B0038F312 /* LogginSuccessActionHelper.m in Sources */,
 				D6B031CD1CB3947300E2955A /* User.m in Sources */,
 				D647FB711CAE800100CBF19E /* MMLogViewController.m in Sources */,
@@ -1948,6 +1956,7 @@
 				D6805E981CAD1A3300316925 /* STConst.m in Sources */,
 				D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */,
 				D647FBAD1CAE87FD00CBF19E /* SecondStaepController.m in Sources */,
+				D64C99171CB8D89C00C45936 /* UIDevice+MobileGestaltCategory.m in Sources */,
 				D63356781CB12062000A321C /* BaseModel.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,
 				D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */,
@@ -1989,6 +1998,7 @@
 				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,
+				D64C99161CB8D89C00C45936 /* UIDevice+EquipmentInfo.m in Sources */,
 				D6805E9B1CAD1A3300316925 /* STPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2082,7 +2092,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2121,7 +2131,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
