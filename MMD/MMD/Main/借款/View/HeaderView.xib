@@ -54,7 +54,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGj-o3-rZc" userLabel="Bottom View">
-                    <rect key="frame" x="15" y="37" width="64" height="2"/>
+                    <rect key="frame" x="15" y="40" width="64" height="2"/>
                     <color key="backgroundColor" red="0.81960784310000001" green="0.27058823529999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="2" id="8ui-hq-dGs"/>
@@ -63,7 +63,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="HGj-o3-rZc" secondAttribute="bottom" constant="5" id="40D-Bq-0xx"/>
+                <constraint firstAttribute="bottom" secondItem="HGj-o3-rZc" secondAttribute="bottom" constant="2" id="40D-Bq-0xx"/>
                 <constraint firstItem="mn1-ty-9KH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="8Ry-Ag-8Ts"/>
                 <constraint firstItem="mn1-ty-9KH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9mw-cU-nga"/>
                 <constraint firstItem="CHW-y9-og0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ao0-bI-oG2"/>

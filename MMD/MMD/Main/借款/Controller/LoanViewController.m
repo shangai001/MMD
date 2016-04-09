@@ -21,7 +21,6 @@
 
 CGFloat const TOP_Y = 110;
 
-
 @interface LoanViewController ()<HeaderViewDelegate>
 
 @property (nonatomic, strong)HeaderView *headerView;
@@ -33,7 +32,7 @@ CGFloat const TOP_Y = 110;
 @end
 
 @implementation LoanViewController
-#pragma LazyLoad
+#pragma mark LazyLoad
 - (HeaderView *)headerView{
     if (!_headerView) {
         _headerView = [HeaderView loadViewFromNib];
@@ -62,6 +61,9 @@ CGFloat const TOP_Y = 110;
     }
     return _query;
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BACKGROUNDCOLOR;
@@ -74,8 +76,7 @@ CGFloat const TOP_Y = 110;
 - (void)initHeaderView{
     //Masonry布局
     [self.view addSubview:self.headerView];
-    UIView *superHeaderView = self.view;
-    _headerView.sd_layout.leftEqualToView(superHeaderView).rightEqualToView(superHeaderView).topSpaceToView(superHeaderView,kTopLayoutGuide).heightIs(kNavigationBarHeight);
+    self.headerView.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).topSpaceToView(self.view,kTopLayoutGuide).heightIs(49);
     [_headerView updateLayout];
 }
 - (void)initViewControllers{
