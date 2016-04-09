@@ -10,7 +10,6 @@
 #import "HorizontalDashLineView.h"
 #import "VerticalDashLineView.h"
 #import <UIView+SDAutoLayout.h>
-//#import <Masonry.h>
 
 #define buttonWidthHeight 30
 #define buttonToLeft 10
@@ -121,23 +120,12 @@
         CGFloat buttonLeftToButtonLeft = (superFrame.size.width - 2 * buttonToLeft - stage * buttonWidthHeight)/(_stage - 1);
         CGFloat leftToSuper = buttonToLeft + buttonWidthHeight * j + buttonLeftToButtonLeft * j;
         button.sd_layout.leftSpaceToView(self,leftToSuper).centerYEqualToView(self).widthIs(buttonWidthHeight).heightIs(buttonWidthHeight);
-//        [button mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight));
-//            make.left.mas_equalTo(self.mas_left).with.offset(leftToSuper);
-//            make.centerY.mas_equalTo(self);
-//        }];
         [self addTitleLabel:j below:button];
     }else{
         //第n+1个button上边距离第n个button上边距离
         CGFloat buttonTopToButtonTop = (superFrame.size.height - 2 * buttonToLeft - stage * buttonWidthHeight)/(_stage - 1);
         CGFloat topToSuper = buttonToLeft + buttonWidthHeight * j + buttonTopToButtonTop * j;
-        
         button.sd_layout.widthIs(buttonWidthHeight).heightIs(buttonWidthHeight).topSpaceToView(self,topToSuper).centerXEqualToView(self);
-//        [button mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight));
-//            make.top.mas_equalTo(self.mas_top).with.offset(topToSuper);
-//            make.centerX.mas_equalTo(self);
-//        }];
     }
 }
 
@@ -153,11 +141,6 @@
     [self addSubview:titleLabel];
     
     titleLabel.sd_layout.widthIs(buttonWidthHeight).heightIs(buttonWidthHeight/2).topEqualToView(button).centerXEqualToView(button);
-//    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.size.mas_equalTo(CGSizeMake(buttonWidthHeight, buttonWidthHeight/2));
-//        make.centerX.mas_equalTo(button);
-//        make.top.mas_equalTo(button.mas_bottom);
-//    }];
 }
 
 + (UIButton *)initStageButton:(NSUInteger)j {
@@ -171,11 +154,8 @@
     return button;
 }
 - (void)updateProsess:(NSUInteger)stage{
-//    UIButton *button = (UIButton *)[self viewWithTag:stage + 300];
-//    button.selected = YES;
+
     if (self.style == kHorizontalStyle) {
-//        HorizontalDashLineView *lineView = (HorizontalDashLineView *)[self viewWithTag:100+stage-1];
-//        lineView.lineType = kRedRealType;
         NSArray *subViews = self.subviews;
         for (UIView *view in subViews) {
             if ([view isKindOfClass:[HorizontalDashLineView class]]) {
