@@ -17,7 +17,7 @@
 #import "LoanInfoItem.h"
 #import "FormItem.h"
 #import "BottomItem.h"
-#import "SubmitLoanInfo.h"
+#import "SubmitLoanInfoModel.h"
 #import "FormatVerifyDataHelper.h"
 #import <YYCGUtilities.h>
 #import <SVProgressHUD.h>
@@ -161,9 +161,26 @@ static NSString * const bottomCellId = @"BottomCellId";
 }
 #pragma AgreeProtro
 - (void)didAgreeLoanProto:(id)sender{
+    //检查能否提交
+    [SubmitLoanInfoModel checkIfUserCanSubmitLoanApplySuccess:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            NSInteger data = [resultDic[@"data"] integerValue];
+            if (data == 1) {
+                //可以提交
+                [self submitLoanApply];
+            }else if (data == 0){
+                [SVProgressHUD showInfoWithStatus:resultDic[@"msg"]];
+            }
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+}
+- (void)submitLoanApply{
+    
     [SVProgressHUD show];
     NSDictionary *info = @{@"capital":@(self.infoItem.floatLoanMoney),@"termLine":@(self.infoItem.refundMoth)};
-    [SubmitLoanInfo submitLoanInfo:info success:^(NSDictionary *resultDic) {
+    [SubmitLoanInfoModel submitLoanInfo:info success:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
             NSLog(@"提交成功");
         }else{

@@ -103,9 +103,11 @@
     
     return statusInterger;
 }
-+ (NSDictionary *)appendUserIdToken:(NSDictionary *)info{
++ (NSDictionary *)appendUserIdToken:(nullable NSDictionary *)info{
     
     NSMutableDictionary *userIdTokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+    if (info == nil) return userIdTokenDic;
+    
     for (NSString *key in [info allKeys]) {
         id object = info[key];
         [userIdTokenDic setObject:object forKey:key];

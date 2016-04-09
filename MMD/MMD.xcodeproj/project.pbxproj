@@ -171,11 +171,13 @@
 		D64A4E2F1CB7998A00FB519B /* BottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E2D1CB7998A00FB519B /* BottomTableViewCell.xib */; };
 		D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */; };
 		D64A4E3A1CB7D62800FB519B /* SortIdDic.txt in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E391CB7D62800FB519B /* SortIdDic.txt */; };
-		D64A4E3D1CB7D99000FB519B /* SubmitLoanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E3C1CB7D99000FB519B /* SubmitLoanInfo.m */; };
+		D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */; };
 		D64C99151CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99101CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m */; };
 		D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99231CB8DB9300C45936 /* QueryViewController.m */; };
 		D64C99271CB8DB9300C45936 /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64C99241CB8DB9300C45936 /* QueryViewController.xib */; };
 		D64C992A1CB8DBA200C45936 /* LatestActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99291CB8DBA200C45936 /* LatestActivityController.m */; };
+		D64C993D1CB90A8A00C45936 /* QueryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C993C1CB90A8A00C45936 /* QueryModel.m */; };
+		D64C99401CB9125800C45936 /* LoanProtroWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C993F1CB9125800C45936 /* LoanProtroWebController.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
@@ -500,8 +502,8 @@
 		D64A4E331CB79D1D00FB519B /* BottomTableViewCell+PutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BottomTableViewCell+PutValue.h"; sourceTree = "<group>"; };
 		D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BottomTableViewCell+PutValue.m"; sourceTree = "<group>"; };
 		D64A4E391CB7D62800FB519B /* SortIdDic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SortIdDic.txt; sourceTree = "<group>"; };
-		D64A4E3B1CB7D99000FB519B /* SubmitLoanInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLoanInfo.h; sourceTree = "<group>"; };
-		D64A4E3C1CB7D99000FB519B /* SubmitLoanInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLoanInfo.m; sourceTree = "<group>"; };
+		D64A4E3B1CB7D99000FB519B /* SubmitLoanInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLoanInfoModel.h; sourceTree = "<group>"; };
+		D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLoanInfoModel.m; sourceTree = "<group>"; };
 		D64C990F1CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CoreTelephonyCategory.h"; sourceTree = "<group>"; };
 		D64C99101CB8D89C00C45936 /* UIDevice+CoreTelephonyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CoreTelephonyCategory.m"; sourceTree = "<group>"; };
 		D64C991A1CB8DA6A00C45936 /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
@@ -514,6 +516,10 @@
 		D64C99251CB8DB9300C45936 /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryViewController.h; sourceTree = "<group>"; };
 		D64C99281CB8DBA200C45936 /* LatestActivityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatestActivityController.h; sourceTree = "<group>"; };
 		D64C99291CB8DBA200C45936 /* LatestActivityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LatestActivityController.m; sourceTree = "<group>"; };
+		D64C993B1CB90A8A00C45936 /* QueryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryModel.h; sourceTree = "<group>"; };
+		D64C993C1CB90A8A00C45936 /* QueryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryModel.m; sourceTree = "<group>"; };
+		D64C993E1CB9125800C45936 /* LoanProtroWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanProtroWebController.h; sourceTree = "<group>"; };
+		D64C993F1CB9125800C45936 /* LoanProtroWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanProtroWebController.m; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -751,6 +757,8 @@
 		D633564E1CB0336A000A321C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D64C993E1CB9125800C45936 /* LoanProtroWebController.h */,
+				D64C993F1CB9125800C45936 /* LoanProtroWebController.m */,
 				D63356511CB033B2000A321C /* LoanVerifyController.h */,
 				D63356521CB033B2000A321C /* LoanVerifyController.m */,
 				D63356681CB04320000A321C /* SureViewController.h */,
@@ -779,8 +787,8 @@
 				D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */,
 				D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */,
 				D64A4E391CB7D62800FB519B /* SortIdDic.txt */,
-				D64A4E3B1CB7D99000FB519B /* SubmitLoanInfo.h */,
-				D64A4E3C1CB7D99000FB519B /* SubmitLoanInfo.m */,
+				D64A4E3B1CB7D99000FB519B /* SubmitLoanInfoModel.h */,
+				D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1202,6 +1210,8 @@
 		D64C99391CB90A2700C45936 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D64C993B1CB90A8A00C45936 /* QueryModel.h */,
+				D64C993C1CB90A8A00C45936 /* QueryModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1942,6 +1952,7 @@
 				D67D6DC61CB54CFA003D4D2D /* VerifyModel.m in Sources */,
 				D647FB5D1CAE7F7A00CBF19E /* NewApplyViewController.m in Sources */,
 				D647FB5C1CAE7F7A00CBF19E /* LoanViewController.m in Sources */,
+				D64C99401CB9125800C45936 /* LoanProtroWebController.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D633566B1CB04320000A321C /* SureViewController.m in Sources */,
 				D63356891CB179BA000A321C /* MineHeaderTableViewCell.m in Sources */,
@@ -1962,7 +1973,7 @@
 				D633563F1CB016BE000A321C /* FailureView.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
-				D64A4E3D1CB7D99000FB519B /* SubmitLoanInfo.m in Sources */,
+				D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */,
 				D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D64A4E2A1CB7903100FB519B /* BottomItem.m in Sources */,
@@ -2020,6 +2031,7 @@
 				D647FBC71CAE920100CBF19E /* LogginModel.m in Sources */,
 				D63356641CB03B2C000A321C /* FormTableViewCell+PutValue.m in Sources */,
 				D647FBB51CAE87FD00CBF19E /* StageView.m in Sources */,
+				D64C993D1CB90A8A00C45936 /* QueryModel.m in Sources */,
 				D647FB861CAE80BE00CBF19E /* RegisterContentView.m in Sources */,
 				D647FB631CAE7F7A00CBF19E /* MMSegmentControl.m in Sources */,
 				D63356291CAFE100000A321C /* RefundWebController.m in Sources */,

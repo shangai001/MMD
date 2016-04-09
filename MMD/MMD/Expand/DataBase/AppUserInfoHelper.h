@@ -42,7 +42,7 @@
  *
  *  @return 
  */
-+ (NSDictionary *)appendUserIdToken:(NSDictionary *)info;
++ (NSDictionary *)appendUserIdToken:(nullable NSDictionary *)info;
 
 
 @end

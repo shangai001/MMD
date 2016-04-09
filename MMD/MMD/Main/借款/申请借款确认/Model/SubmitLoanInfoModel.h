@@ -8,7 +8,7 @@
 
 #import "BaseModel.h"
 
-@interface SubmitLoanInfo : BaseModel
+@interface SubmitLoanInfoModel : BaseModel
 
 /**
  *  申请借款和时间提交capital,capital
@@ -20,6 +20,12 @@
 + (void)submitLoanInfo:(NSDictionary *)info
                success:(successHandler)successHandler
                failure:(failureHandler)failureHandler;
-
-
+/**
+ *  检查用户是否可以提交借款申请(data = 1 可以提交,data = 0 不可以提交)
+ *
+ *  @param successHandler
+ *  @param failureHandler
+ */
++ (void)checkIfUserCanSubmitLoanApplySuccess:(successHandler)successHandler
+                                     failure:(failureHandler)failureHandler;
 @end
