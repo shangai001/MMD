@@ -12,6 +12,6 @@
 
 @interface BottomTableViewCell (PutValue)
 
-- (void)putValue:(BottomItem *)item;
+- (void)putLabelValue:(BottomItem *)item;
 
 @end

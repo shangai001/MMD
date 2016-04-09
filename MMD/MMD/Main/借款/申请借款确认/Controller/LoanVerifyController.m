@@ -123,12 +123,12 @@ static NSString * const bottomCellId = @"BottomCellId";
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         FormItem *item = [self currentItem:indexPath];
-        [cell putValue:item];
+        [cell putTitleValue:item];
         return cell;
     }else if (indexPath.section == 2){
         BottomTableViewCell *boCell = [tableView dequeueReusableCellWithIdentifier:bottomCellId forIndexPath:indexPath];
         BottomItem *boItem = (BottomItem *)self.bottomDataArray[indexPath.row];
-        [boCell putValue:boItem];
+        [boCell putLabelValue:boItem];
         boCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return boCell;
     }

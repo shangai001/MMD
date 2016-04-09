@@ -141,7 +141,7 @@ CGFloat const StageViewHeight = 4;
     titleLabel.text = title;
     [self addSubview:titleLabel];
     
-    titleLabel.sd_layout.widthIs(buttonWidthHeight).heightIs(buttonWidthHeight/2).topSpaceToView(button,buttonWidthHeight).centerXEqualToView(button);
+    titleLabel.sd_layout.widthIs(buttonWidthHeight).heightIs(buttonWidthHeight/2).topSpaceToView(button,0).centerXEqualToView(button);
 }
 
 + (UIButton *)initStageButton:(NSUInteger)j {

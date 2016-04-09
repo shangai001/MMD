@@ -11,7 +11,7 @@
 
 @implementation BottomTableViewCell (PutValue)
 
-- (void)putValue:(BottomItem *)item{
+- (void)putLabelValue:(BottomItem *)item{
     self.leftLabel.text = item.refundIndexMonth;
     self.middleLabel.text = item.refundMoneyString;
     self.rightLabel.text = item.timeLine;

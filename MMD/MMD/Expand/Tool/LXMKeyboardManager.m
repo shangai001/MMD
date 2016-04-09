@@ -74,7 +74,7 @@
     
     if (sender) {
         NSDictionary *userInfo = sender.userInfo;
-        CGRect keyboardRect = [(NSValue *)userInfo[UIKeyboardBoundsUserInfoKey] CGRectValue];
+        CGRect keyboardRect = [(NSValue *)userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
         self.keyboardState.keyboardRect = keyboardRect;
         self.keyboardState.keyboardAnimationDuration = [(NSNumber *)userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
     }

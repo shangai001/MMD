@@ -11,5 +11,7 @@
 @class FormItem;
 
 @interface FormTableViewCell (PutValue)
-- (void)putValue:(FormItem *)item;
+
+- (void)putTitleValue:(FormItem *)item;
+
 @end
