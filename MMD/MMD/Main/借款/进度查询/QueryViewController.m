@@ -158,6 +158,8 @@ CGFloat const cacleButtonHeight = 44;
     [self setLoanInfo:item label:self.headerView.loanTextLabel];
     //设置还款时间
     [self setLoanInfo:item label:self.headerView.loanTimeLabel];
+    //根据申请状态设置取消按钮状态
+    [self resetCancleButtonStatus:[item.state integerValue]];
     
  }
 //TODO:需要知道借款申请状态
@@ -271,9 +273,8 @@ CGFloat const cacleButtonHeight = 44;
     
     [QueryModel cancleLoanApply:infoDic success:^(NSDictionary *resultDic) {
         NSLog(@"取消借款申请返回%@",resultDic);
-        [self resetCancleButtonStatus:1];
         if ([resultDic[@"code"] integerValue] == 0) {
-//            [self resetCancleButtonStatus:1];
+            [self resetCancleButtonStatus:1];
         }else{
             [SVProgressHUD showInfoWithStatus:resultDic[@"msg"]];
         }
