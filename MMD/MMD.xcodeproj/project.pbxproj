@@ -162,7 +162,6 @@
 		D647FBD71CAE92B200CBF19E /* BankList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD31CAE92B200CBF19E /* BankList.plist */; };
 		D647FBD81CAE92B200CBF19E /* ContactList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD41CAE92B200CBF19E /* ContactList.plist */; };
 		D647FBD91CAE92B200CBF19E /* ImagesTitles_More.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD51CAE92B200CBF19E /* ImagesTitles_More.plist */; };
-		D64A2D0B1C956168002654AC /* MMDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A2D0A1C956168002654AC /* MMDUserInfo.m */; };
 		D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E1E1CB761CB00FB519B /* ConstantTitle.m */; };
 		D64A4E241CB77F4200FB519B /* ConstantHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E231CB77F4200FB519B /* ConstantHeight.m */; };
 		D64A4E271CB789AF00FB519B /* ContantLength.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E261CB789AF00FB519B /* ContantLength.m */; };
@@ -178,6 +177,9 @@
 		D64C992A1CB8DBA200C45936 /* LatestActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99291CB8DBA200C45936 /* LatestActivityController.m */; };
 		D64C993D1CB90A8A00C45936 /* QueryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C993C1CB90A8A00C45936 /* QueryModel.m */; };
 		D64C99401CB9125800C45936 /* LoanProtroWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C993F1CB9125800C45936 /* LoanProtroWebController.m */; };
+		D64C99431CB91C7200C45936 /* QueryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99421CB91C7200C45936 /* QueryHeaderView.m */; };
+		D64C99451CB91C8A00C45936 /* QueryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64C99441CB91C8A00C45936 /* QueryHeaderView.xib */; };
+		D64C99481CB9229000C45936 /* LoanDetaiController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99471CB9229000C45936 /* LoanDetaiController.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
@@ -486,8 +488,6 @@
 		D647FBD31CAE92B200CBF19E /* BankList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BankList.plist; sourceTree = "<group>"; };
 		D647FBD41CAE92B200CBF19E /* ContactList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ContactList.plist; sourceTree = "<group>"; };
 		D647FBD51CAE92B200CBF19E /* ImagesTitles_More.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImagesTitles_More.plist; sourceTree = "<group>"; };
-		D64A2D091C956168002654AC /* MMDUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDUserInfo.h; sourceTree = "<group>"; };
-		D64A2D0A1C956168002654AC /* MMDUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDUserInfo.m; sourceTree = "<group>"; };
 		D64A4E1D1CB761CB00FB519B /* ConstantTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantTitle.h; sourceTree = "<group>"; };
 		D64A4E1E1CB761CB00FB519B /* ConstantTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantTitle.m; sourceTree = "<group>"; };
 		D64A4E221CB77F4200FB519B /* ConstantHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantHeight.h; sourceTree = "<group>"; };
@@ -520,6 +520,11 @@
 		D64C993C1CB90A8A00C45936 /* QueryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryModel.m; sourceTree = "<group>"; };
 		D64C993E1CB9125800C45936 /* LoanProtroWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanProtroWebController.h; sourceTree = "<group>"; };
 		D64C993F1CB9125800C45936 /* LoanProtroWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanProtroWebController.m; sourceTree = "<group>"; };
+		D64C99411CB91C7200C45936 /* QueryHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryHeaderView.h; sourceTree = "<group>"; };
+		D64C99421CB91C7200C45936 /* QueryHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryHeaderView.m; sourceTree = "<group>"; };
+		D64C99441CB91C8A00C45936 /* QueryHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryHeaderView.xib; sourceTree = "<group>"; };
+		D64C99461CB9229000C45936 /* LoanDetaiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanDetaiController.h; sourceTree = "<group>"; };
+		D64C99471CB9229000C45936 /* LoanDetaiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDetaiController.m; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -1193,6 +1198,8 @@
 				D64C993A1CB90A2E00C45936 /* View */,
 				D64C99391CB90A2700C45936 /* Model */,
 				D64C99381CB90A1E00C45936 /* Controller */,
+				D64C99461CB9229000C45936 /* LoanDetaiController.h */,
+				D64C99471CB9229000C45936 /* LoanDetaiController.m */,
 			);
 			path = "进度查询";
 			sourceTree = "<group>";
@@ -1219,6 +1226,9 @@
 		D64C993A1CB90A2E00C45936 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D64C99411CB91C7200C45936 /* QueryHeaderView.h */,
+				D64C99421CB91C7200C45936 /* QueryHeaderView.m */,
+				D64C99441CB91C8A00C45936 /* QueryHeaderView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1458,8 +1468,6 @@
 				D647FBC11CAE920100CBF19E /* LogginModel.m */,
 				D66B4F931CB4232F0038F312 /* MMDLoggin.h */,
 				D66B4F941CB4232F0038F312 /* MMDLoggin.m */,
-				D64A2D091C956168002654AC /* MMDUserInfo.h */,
-				D64A2D0A1C956168002654AC /* MMDUserInfo.m */,
 				D66B4FA01CB4EE820038F312 /* AppUserInfoHelper.h */,
 				D66B4FA11CB4EE820038F312 /* AppUserInfoHelper.m */,
 				D66B4F9F1CB4ED960038F312 /* Items */,
@@ -1866,6 +1874,7 @@
 				D60609DB1C76FF0E000DB373 /* recommend@3x.png in Resources */,
 				D60609A41C76FF0E000DB373 /* 持证牌照信息@2x.png in Resources */,
 				D60609CE1C76FF0E000DB373 /* 检查更新@2x.png in Resources */,
+				D64C99451CB91C8A00C45936 /* QueryHeaderView.xib in Resources */,
 				D60609F81C76FF0E000DB373 /* approve_off@2x.png in Resources */,
 				D60609EF1C76FF0E000DB373 /* txweibo@2x.png in Resources */,
 				D6F567241C80054D00B0612F /* 还款@2x.png in Resources */,
@@ -1963,6 +1972,7 @@
 				D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutValue.m in Sources */,
 				D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */,
 				D688B9101CB68F3B00CC80FF /* SecondVerifyItem.m in Sources */,
+				D64C99481CB9229000C45936 /* LoanDetaiController.m in Sources */,
 				D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */,
 				D647FB821CAE80BE00CBF19E /* LimitInputWords.m in Sources */,
 				D63356371CB00481000A321C /* SupportCenterController.m in Sources */,
@@ -1985,7 +1995,6 @@
 				D6805EAF1CAD242500316925 /* BaseViewController.m in Sources */,
 				D633565E1CB0378F000A321C /* HeaderLabel.m in Sources */,
 				D647FBB61CAE87FD00CBF19E /* VerifyTableViewCell.m in Sources */,
-				D64A2D0B1C956168002654AC /* MMDUserInfo.m in Sources */,
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
 				D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */,
 				D63356341CB000D3000A321C /* MessageCenterController.m in Sources */,
@@ -2006,6 +2015,7 @@
 				D647FBAD1CAE87FD00CBF19E /* SecondStaepController.m in Sources */,
 				D63356781CB12062000A321C /* BaseModel.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,
+				D64C99431CB91C7200C45936 /* QueryHeaderView.m in Sources */,
 				D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */,
 				D66B4FA21CB4EE820038F312 /* AppUserInfoHelper.m in Sources */,
 				D64C992A1CB8DBA200C45936 /* LatestActivityController.m in Sources */,

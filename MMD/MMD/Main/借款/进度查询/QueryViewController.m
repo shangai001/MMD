@@ -14,6 +14,11 @@
 #import "ConstantHeight.h"
 #import "MMDLoggin.h"
 #import "QueryModel.h"
+#import "QueryHeaderView.h"
+#import "UIView+LoadViewFromNib.h"
+#import "LoanDetaiController.h"
+#import "AppUserInfoHelper.h"
+
 
 /*借款信息头部视图*/
 CGFloat const headerHeight = 100;
@@ -31,11 +36,11 @@ CGFloat const contenToBottom = 20;
 CGFloat const cacleButtonToBottom = 20;
 CGFloat const cacleButtonHeight = 44;
 
-@interface QueryViewController ()
+@interface QueryViewController ()<GoseeLoanDetailDelegate>
 
 @property (nonatomic, strong)UIScrollView *scrollView;
 @property (nonatomic, strong)UIView *bottombottomContentView;
-@property (nonatomic, strong)UIView *headerView;
+@property (nonatomic, strong)QueryHeaderView *headerView;
 @property (nonatomic, strong)StageView *stageView;
 @property (nonatomic, strong)UIButton *cancleButon;
 @end
@@ -60,12 +65,12 @@ CGFloat const cacleButtonHeight = 44;
     }
     return _bottombottomContentView;
 }
-- (UIView *)headerView{
+- (QueryHeaderView *)headerView{
     if (!_headerView) {
-        _headerView = [UIView new];
+        _headerView = [QueryHeaderView loadViewFromNib];
         _headerView.backgroundColor = [UIColor whiteColor];
         _headerView.layer.cornerRadius = 10.0f;
-        _headerView.backgroundColor = [UIColor whiteColor];
+        _headerView.detailDelegate = self;
     }
     return _headerView;
 }
@@ -89,6 +94,7 @@ CGFloat const cacleButtonHeight = 44;
     self.view.backgroundColor = BACKGROUNDCOLOR;
     //查询是否有借款进度
     [self requestLoanStatus];
+    [self haveNoLoanStatusInfo:YES];
 }
 //请求借款申请状态
 - (void)requestLoanStatus{
@@ -179,6 +185,19 @@ CGFloat const cacleButtonHeight = 44;
     [self.bottombottomContentView removeFromSuperview];
     self.scrollView.backgroundColor = [UIColor cyanColor];
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.view.frame.size.height);
+}
+#pragma mark SeeDetail
+- (void)openLoanDetail:(id)sender{
+    if ([MMDLoggin isLoggin]) {
+        
+        NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+        NSString *userId = tokenDic[@"userId"];
+        NSString *token = tokenDic[@"token"];
+        
+        LoanDetaiController *detail = [LoanDetaiController new];
+        detail.URLString = [NSString stringWithFormat:@"%@/webview/getApplyInfo?userId=%@&token=%@",kHostURL,userId,token];
+        [self.navigationController pushViewController:detail animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

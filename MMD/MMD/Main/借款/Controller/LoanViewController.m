@@ -11,6 +11,8 @@
 #import "ConstantHeight.h"
 #import <UIView+SDAutoLayout.h>
 #import "ColorHeader.h"
+#import "MMDLoggin.h"
+#import "AppUserInfoHelper.h"
 
 
 CGFloat const TOP_Y = 108;
@@ -98,33 +100,44 @@ CGFloat const TOP_Y = 108;
         case 0:
         {
             toVC = self.apply;
+            [self goFromViewController:self.currentViewController toViewController:toVC];
         }
             break;
         case 1:
         {
             toVC = self.activity;
+            [self goFromViewController:self.currentViewController toViewController:toVC];
         }
             break;
         case 2:
         {
             toVC = self.query;
+            if ([MMDLoggin isLoggin]) {
+                //判断用户审核状态
+                NSInteger status = [AppUserInfoHelper UserStatus];
+            }
         }
             break;
         default:
             break;
     }
+}
+- (void)goFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController{
     
-    [self transitionFromViewController:self.currentViewController toViewController:toVC duration:0.15 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
-        [self.currentViewController willMoveToParentViewController:nil];
+    
+    [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.15 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
+        
+        [fromViewController willMoveToParentViewController:nil];
+        
     } completion:^(BOOL finished) {
+        
         [UIView animateWithDuration:0.15 delay:0.1 options:UIViewAnimationOptionCurveEaseInOut |UIViewAnimationOptionTransitionCurlDown animations:^{
-            toVC.view.frame = CGRectMake(0, TOP_Y, self.view.frame.size.width, self.view.frame.size.height - 108);
+            toViewController.view.frame = CGRectMake(0, TOP_Y, self.view.frame.size.width, self.view.frame.size.height - 108);
         } completion:nil];
-        self.currentViewController = toVC;
-        [toVC didMoveToParentViewController:self];
+        self.currentViewController = toViewController;
+        [toViewController didMoveToParentViewController:self];
     }];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

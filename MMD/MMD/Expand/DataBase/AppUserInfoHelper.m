@@ -8,7 +8,6 @@
 
 #import "AppUserInfoHelper.h"
 #import "AppDelegate.h"
-#import "MMDUserInfo.h"
 
 
 @implementation AppUserInfoHelper
