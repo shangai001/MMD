@@ -31,9 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    
     [self requestUrl:self.URLString];
     [self.view addSubview:self.webView];
 }

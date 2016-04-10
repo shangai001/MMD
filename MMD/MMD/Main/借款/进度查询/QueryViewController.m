@@ -329,7 +329,7 @@ CGFloat const cacleButtonHeight = 44;
         NSString *token = tokenDic[@"token"];
         
         LoanDetaiController *detail = [LoanDetaiController new];
-        detail.URLString = [NSString stringWithFormat:@"%@/webview/getApplyInfo?userId=%@&token=%@",kHostURL,userId,token];
+        detail.URLString = [NSString stringWithFormat:@"%@/webview/getApplyInfo?userId=%@&token=%@&capital=%@&termLine=%@",kHostURL,userId,token,self.item.loanCount,self.item.term];
         [self.navigationController pushViewController:detail animated:YES];
     }
 }

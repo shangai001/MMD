@@ -146,12 +146,15 @@ CGFloat const TOP_Y = 113;
         //登录成功,检查用户用户状态
         if ([HandleUserStatus handleUserStatusAt:self]) {
             [self goFromViewController:self.currentViewController toViewController:toVC];
+        }else{
+            self.headerView.selectedIndex = [self.childViewControllers indexOfObject:self.currentViewController];
         }
     }else{
+        
+        self.headerView.selectedIndex = [self.childViewControllers indexOfObject:self.currentViewController];
         //去登录
         [LogginHandler shouldLogginAt:self];
     }
-    self.headerView.selectedIndex = [self.childViewControllers indexOfObject:self.currentViewController];
 }
 - (void)goFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController{
     

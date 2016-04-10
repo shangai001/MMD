@@ -224,6 +224,7 @@
 		D6BC3DCC1CBAC37500200BC7 /* LogoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DCB1CBAC37500200BC7 /* LogoutModel.m */; };
 		D6BC3DCF1CBAC80400200BC7 /* ConstantUserInfoKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DCE1CBAC80400200BC7 /* ConstantUserInfoKey.m */; };
 		D6BC3DD21CBAD0AD00200BC7 /* LogginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DD11CBAD0AD00200BC7 /* LogginHandler.m */; };
+		D6BC3DD51CBAE7C900200BC7 /* ConstantNotiName.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */; };
 		D6C5D70F1CB95214000C633B /* UploadDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C5D70E1CB95214000C633B /* UploadDevice.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
@@ -611,6 +612,8 @@
 		D6BC3DCE1CBAC80400200BC7 /* ConstantUserInfoKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantUserInfoKey.m; sourceTree = "<group>"; };
 		D6BC3DD01CBAD0AD00200BC7 /* LogginHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogginHandler.h; sourceTree = "<group>"; };
 		D6BC3DD11CBAD0AD00200BC7 /* LogginHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogginHandler.m; sourceTree = "<group>"; };
+		D6BC3DD31CBAE7C900200BC7 /* ConstantNotiName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantNotiName.h; sourceTree = "<group>"; };
+		D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantNotiName.m; sourceTree = "<group>"; };
 		D6C5D70D1CB95214000C633B /* UploadDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDevice.h; sourceTree = "<group>"; };
 		D6C5D70E1CB95214000C633B /* UploadDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDevice.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
@@ -1171,6 +1174,8 @@
 				D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */,
 				D6BC3DD01CBAD0AD00200BC7 /* LogginHandler.h */,
 				D6BC3DD11CBAD0AD00200BC7 /* LogginHandler.m */,
+				D6BC3DD31CBAE7C900200BC7 /* ConstantNotiName.h */,
+				D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -2134,6 +2139,7 @@
 				D6BC3DC81CBABE6F00200BC7 /* LoggoutTableViewCell.m in Sources */,
 				D6805E931CAD1A3300316925 /* STPickerArea.m in Sources */,
 				D647FB611CAE7F7A00CBF19E /* HeaderView.m in Sources */,
+				D6BC3DD51CBAE7C900200BC7 /* ConstantNotiName.m in Sources */,
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,
 				D647FBC71CAE920100CBF19E /* LogginModel.m in Sources */,
 				D63356641CB03B2C000A321C /* FormTableViewCell+PutFormValue.m in Sources */,
