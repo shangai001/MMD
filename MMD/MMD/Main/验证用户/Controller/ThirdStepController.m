@@ -11,6 +11,7 @@
 #import "ColorHeader.h"
 #import "FaceRecongnizeController.h"
 #import "ReadFiler.h"
+#import "BaseNextButton.h"
 
 
 @interface ThirdStepController ()
@@ -53,7 +54,6 @@
         .topSpaceToView(self.contentLabel, 20);
         
         
-        self.nextButton.layer.cornerRadius = 10.0f;
         self.nextButton.backgroundColor = REDCOLOR;
     }
 }

@@ -20,6 +20,7 @@
 #import "IDCardModel.h"
 #import <SVProgressHUD.h>
 #import "VerifyViewController.h"
+#import "BaseNextButton.h"
 
 
 NSInteger const ShouldCheckoutCredit = 0;
@@ -31,7 +32,7 @@ NSInteger const ShouldCheckoutCredit = 0;
 @property (nonatomic, strong)VerifyItem *item;
 @property (nonatomic, strong)STPickerArea *cityPickerView;
 @property (nonatomic, strong)STPickerSingle *backPickerView;
-@property (weak, nonatomic) IBOutlet UIButton *nextButon;
+@property (weak, nonatomic) IBOutlet BaseNextButton *nextButon;
 @property (strong, nonatomic)NSArray *bankArray;
 @end
 
@@ -57,7 +58,6 @@ NSInteger const ShouldCheckoutCredit = 0;
 }
 - (void)congureNextButton{
     self.nextButon.backgroundColor = REDCOLOR;
-    self.nextButon.layer.cornerRadius = 10.0f;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

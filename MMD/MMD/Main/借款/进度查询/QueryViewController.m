@@ -21,6 +21,7 @@
 #import "QueryItem.h"
 #import <SVProgressHUD.h>
 #import "NoInfoView.h"
+#import "BaseNextButton.h"
 
 
 /*借款信息头部视图*/
@@ -45,7 +46,7 @@ CGFloat const cacleButtonHeight = 44;
 @property (nonatomic, strong)UIView *bottombottomContentView;
 @property (nonatomic, strong)QueryHeaderView *headerView;
 @property (nonatomic, strong)StageView *stageView;
-@property (nonatomic, strong)UIButton *cancleButon;
+@property (nonatomic, strong)BaseNextButton *cancleButon;
 
 @property (nonatomic, strong)NSDictionary *dataDic;
 @property (nonatomic, strong)QueryItem *item;
@@ -102,10 +103,10 @@ CGFloat const cacleButtonHeight = 44;
     }
     return _headerView;
 }
-- (UIButton *)cancleButon{
+- (BaseNextButton *)cancleButon{
     if (!_cancleButon) {
         //创建button
-        _cancleButon = [UIButton buttonWithType:UIButtonTypeSystem];
+        _cancleButon = [[BaseNextButton alloc] init];
         _cancleButon.backgroundColor = [UIColor whiteColor];
         [_cancleButon setTitle:@"取消申请" forState:UIControlStateNormal];
         [_cancleButon setTitleColor:REDCOLOR forState:UIControlStateNormal];

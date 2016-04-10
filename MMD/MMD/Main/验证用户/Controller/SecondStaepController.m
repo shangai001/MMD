@@ -18,6 +18,7 @@
 #import "VerifyModel.h"
 #import "AppUserInfoHelper.h"
 #import "VerifyViewController.h"
+#import "BaseNextButton.h"
 
 
 @interface SecondStaepController ()<UITextFieldDelegate,STPickerSingleDelegate,STPickerAreaDelegate>
@@ -96,7 +97,6 @@
 }
 - (void)setDefaultValue{
     self.nextButton.backgroundColor = REDCOLOR;
-    self.nextButton.layer.cornerRadius = 10.0f;
     self.marriageArray = [NSArray array];
     self.lifeArray = [NSArray array];
     self.childrenArray = [NSArray array];

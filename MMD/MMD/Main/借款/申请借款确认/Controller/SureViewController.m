@@ -11,13 +11,13 @@
 #import "LoanProtroWebController.h"
 #import <SVProgressHUD.h>
 #import "ConstantTitle.h"
+#import "BaseNextButton.h"
 
 
 @interface SureViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *sureButton;
-@property (weak, nonatomic) IBOutlet UIButton *nextButton;
-
+@property (weak, nonatomic) IBOutlet BaseNextButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *showProtroButton;
 
 @end
@@ -35,8 +35,6 @@
     
     self.nextButton.backgroundColor = REDCOLOR;
     [self.nextButton setTitle:@"确认本次借款申请" forState:UIControlStateNormal];
-    self.nextButton.layer.cornerRadius = 10.0f;
-    
     [self.sureButton setImage:[UIImage imageNamed:@"步骤0"] forState:UIControlStateNormal];
     [self.sureButton setImage:[UIImage imageNamed:@"步骤"] forState:UIControlStateSelected];
     

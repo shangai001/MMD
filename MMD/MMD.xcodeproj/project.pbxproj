@@ -223,6 +223,7 @@
 		D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */; };
 		D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921A1C8D7A8500B3877D /* key@2x.png */; };
 		D6B6921D1C8D7A8500B3877D /* key@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B6921B1C8D7A8500B3877D /* key@3x.png */; };
+		D6BC3DBA1CBAA6DB00200BC7 /* BaseNextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DB91CBAA6DB00200BC7 /* BaseNextButton.m */; };
 		D6C5D70F1CB95214000C633B /* UploadDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C5D70E1CB95214000C633B /* UploadDevice.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
@@ -609,6 +610,8 @@
 		D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mmd_logo@3x.png"; sourceTree = "<group>"; };
 		D6B6921A1C8D7A8500B3877D /* key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@2x.png"; sourceTree = "<group>"; };
 		D6B6921B1C8D7A8500B3877D /* key@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@3x.png"; sourceTree = "<group>"; };
+		D6BC3DB81CBAA6DB00200BC7 /* BaseNextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNextButton.h; sourceTree = "<group>"; };
+		D6BC3DB91CBAA6DB00200BC7 /* BaseNextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNextButton.m; sourceTree = "<group>"; };
 		D6C5D70D1CB95214000C633B /* UploadDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDevice.h; sourceTree = "<group>"; };
 		D6C5D70E1CB95214000C633B /* UploadDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDevice.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
@@ -1343,6 +1346,37 @@
 			path = "联系人";
 			sourceTree = "<group>";
 		};
+		D6BC3DB51CBAA66300200BC7 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				D6BC3DB81CBAA6DB00200BC7 /* BaseNextButton.h */,
+				D6BC3DB91CBAA6DB00200BC7 /* BaseNextButton.m */,
+			);
+			name = BaseView;
+			sourceTree = "<group>";
+		};
+		D6BC3DB61CBAA66D00200BC7 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				D6805EAD1CAD242500316925 /* BaseViewController.h */,
+				D6805EAE1CAD242500316925 /* BaseViewController.m */,
+				D63356211CAFDF3A000A321C /* BaseWebViewController.h */,
+				D63356221CAFDF3A000A321C /* BaseWebViewController.m */,
+				D6060A2A1C770F5E000DB373 /* BaseNavgationController.h */,
+				D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */,
+			);
+			name = BaseController;
+			sourceTree = "<group>";
+		};
+		D6BC3DB71CBAA67A00200BC7 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				D63356761CB12062000A321C /* BaseModel.h */,
+				D63356771CB12062000A321C /* BaseModel.m */,
+			);
+			name = BaseModel;
+			sourceTree = "<group>";
+		};
 		D6E104B81C7320FD00049C3F = {
 			isa = PBXGroup;
 			children = (
@@ -1429,14 +1463,9 @@
 		D6E104FB1C73217C00049C3F /* Base(基类) */ = {
 			isa = PBXGroup;
 			children = (
-				D63356211CAFDF3A000A321C /* BaseWebViewController.h */,
-				D63356221CAFDF3A000A321C /* BaseWebViewController.m */,
-				D6060A2A1C770F5E000DB373 /* BaseNavgationController.h */,
-				D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */,
-				D6805EAD1CAD242500316925 /* BaseViewController.h */,
-				D6805EAE1CAD242500316925 /* BaseViewController.m */,
-				D63356761CB12062000A321C /* BaseModel.h */,
-				D63356771CB12062000A321C /* BaseModel.m */,
+				D6BC3DB71CBAA67A00200BC7 /* BaseModel */,
+				D6BC3DB61CBAA66D00200BC7 /* BaseController */,
+				D6BC3DB51CBAA66300200BC7 /* BaseView */,
 			);
 			path = "Base(基类)";
 			sourceTree = "<group>";
@@ -2001,6 +2030,7 @@
 				D6B031D31CB3964200E2955A /* MessageModel.m in Sources */,
 				D66B4FA81CB509280038F312 /* BankModel.m in Sources */,
 				D633563F1CB016BE000A321C /* FailureView.m in Sources */,
+				D6BC3DBA1CBAA6DB00200BC7 /* BaseNextButton.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
 				D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */,

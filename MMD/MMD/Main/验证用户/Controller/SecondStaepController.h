@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+@class BaseNextButton;
 
 @interface SecondStaepController : BaseViewController
 
@@ -25,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *companyPhoneNum;
 
 
-@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet BaseNextButton *nextButton;
+
 @end

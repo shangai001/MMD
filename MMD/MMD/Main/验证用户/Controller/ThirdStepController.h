@@ -8,10 +8,11 @@
 
 
 #import "BaseViewController.h"
+@class BaseNextButton;
 
 @interface ThirdStepController : BaseViewController
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
-@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet BaseNextButton *nextButton;
 
 @end
