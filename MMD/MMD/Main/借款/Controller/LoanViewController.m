@@ -151,6 +151,7 @@ CGFloat const TOP_Y = 113;
         //去登录
         [LogginHandler shouldLogginAt:self];
     }
+    self.headerView.selectedIndex = [self.childViewControllers indexOfObject:self.currentViewController];
 }
 - (void)goFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController{
     

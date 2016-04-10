@@ -37,11 +37,13 @@ CGFloat const BUTTON_BASETAG = 100;
 }
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
     _selectedIndex = selectedIndex;
+    UIButton *firstButton = (UIButton *)[self viewWithTag:BUTTON_BASETAG];
     UIButton *selectButton = (UIButton *)[self viewWithTag:_selectedIndex + BUTTON_BASETAG];
     [UIView animateWithDuration:0.15 animations:^{
         CGPoint linePoint = self.bottomLineView.center;
         linePoint.x = selectButton.center.x;
         self.bottomLineView.center = linePoint;
+        self.lineCenterX.constant = linePoint.x - firstButton.center.x;
     }];
     [self bringSubviewToFront:self.bottomLineView];
 }
