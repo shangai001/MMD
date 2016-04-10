@@ -9,7 +9,6 @@
 #import "BaseWebViewController.h"
 #import <WebKit/WebKit.h>
 #import <SVProgressHUD.h>
-//#import "ColorHeader.h"
 
 
 @interface BaseWebViewController ()<WKUIDelegate,WKNavigationDelegate>
@@ -37,7 +36,6 @@
     
     [self requestUrl:self.URLString];
     [self.view addSubview:self.webView];
-//    self.view.backgroundColor = BACKGROUNDCOLOR;
 }
 - (void)requestUrl:(NSString *)URL{
     if (URL) {
