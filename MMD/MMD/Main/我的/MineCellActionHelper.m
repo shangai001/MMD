@@ -9,6 +9,8 @@
 #import "MineCellActionHelper.h"
 #import "MineViewController.h"
 #import "HandleUserStatus.h"
+#import "LogginHandler.h"
+#import "MMDLoggin.h"
 
 @implementation MineCellActionHelper
 
@@ -23,6 +25,7 @@
         {
             if (row == 0) {
                 //身份证信息
+                [self jumpToController:nil from:originalController];
             }else if (row == 1){
                 //持证拍照信息
             }else if (row == 2){
@@ -62,10 +65,17 @@
     }
 }
 #pragma mark JumptoTarget
-+ (void)jumpToXXXFrom:(MineViewController *)mine{
-    //先检查用户身份验证状态
-    if ([HandleUserStatus handleUserStatusAt:mine]) {
-        
++ (void)jumpToController:(UIViewController *)targetController from:(MineViewController *)mine{
+    
+    //先检查用户登录状态
+    if ([MMDLoggin isLoggin]) {
+        //先检查用户身份验证状态
+        if ([HandleUserStatus handleUserStatusAt:mine]) {
+            NSLog(@"一切符合,可以进行下一步");
+        }
+    }else{
+        //去登录界面
+        [LogginHandler shouldLogginAt:mine];
     }
 }
 @end

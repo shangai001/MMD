@@ -46,7 +46,8 @@
 }
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated{
     //如果是在登录或者完善资料页面,后退事件改为[self popToRootViewControllerAnimated:YES]emi
-    if ([self.visibleViewController isKindOfClass:[VerifyViewController class]] | [self.visibleViewController isKindOfClass:[MMLogViewController class]]) {
+    //| [self.visibleViewController isKindOfClass:[MMLogViewController class]]
+    if ([self.visibleViewController isKindOfClass:[VerifyViewController class]]) {
         [self popToRootViewControllerAnimated:YES];
         return nil;
     }

@@ -10,4 +10,9 @@
 
 @interface MineHeaderTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *creditLineLabel;
+@property (weak, nonatomic) IBOutlet UILabel *creditLevelLabel;
+
+
 @end

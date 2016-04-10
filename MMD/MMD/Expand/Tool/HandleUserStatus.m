@@ -8,9 +8,7 @@
 
 #import "HandleUserStatus.h"
 #import "AppUserInfoHelper.h"
-#import "MMDLoggin.h"
 #import "VerifyViewController.h"
-#import "MMLogViewController.h"
 
 
 @implementation HandleUserStatus
@@ -29,15 +27,6 @@
     }else{
         return YES;
     }
-    //        //去往登录页面
-    //        if (![viewController isKindOfClass:[UITabBarController class]]) {
-    //
-    //            MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
-    //            logger.hidesBottomBarWhenPushed = YES;
-    //            [viewController.navigationController pushViewController:logger animated:YES];
-    //        }else{
-    //            NSLog(@"处于tabbarviewcontroller中特殊处理");
-    //        }
     return NO;
 }
 

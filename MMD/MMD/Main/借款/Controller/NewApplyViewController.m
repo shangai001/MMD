@@ -8,12 +8,11 @@
 
 #import "NewApplyViewController.h"
 #import "ColorHeader.h"
-#import "VerifyViewController.h"
+#import "HandleUserStatus.h"
 #import "BaseNavgationController.h"
 #import "MMDLoggin.h"
 #import "AppUserInfoHelper.h"
-#import "MMLogViewController.h"
-#import "VerifyViewController.h"
+#import "LogginHandler.h"
 #import "LoanVerifyController.h"
 #import "CalculateRefund.h"
 #import "RefundTextHelper.h"
@@ -126,26 +125,20 @@
 - (IBAction)nextAction:(id)sender {
     //检查是否登录
     if ([MMDLoggin isLoggin]) {
-        NSInteger status = [AppUserInfoHelper UserStatus];
-        if (status && status >= 0 && status < 3) {
-            //跳转到父Controller
-            VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
-            verifyer.status = status;
-            verifyer.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:verifyer animated:YES];
-        }else{
-            LoanVerifyController *loanVerifyer = [LoanVerifyController new];
-            loanVerifyer.infoItem.refundMoth = self.refundMonth;
-            loanVerifyer.infoItem.floatLoanMoney = (float)self.moneyCount;
-            loanVerifyer.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:loanVerifyer animated:YES];
+         if ([HandleUserStatus handleUserStatusAt:self]) {
+             [self moveToLoanVerify];
         }
     }else{
         //去往登录页面
-        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
-        logger.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:logger animated:YES];
+        [LogginHandler shouldLogginAt:self];
     }
+}
+- (void)moveToLoanVerify{
+    LoanVerifyController *loanVerifyer = [LoanVerifyController new];
+    loanVerifyer.infoItem.refundMoth = self.refundMonth;
+    loanVerifyer.infoItem.floatLoanMoney = (float)self.moneyCount;
+    loanVerifyer.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:loanVerifyer animated:YES];
 }
 #pragma mark UpdateRefundNumber
 - (void)updateRefundLabel{

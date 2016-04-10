@@ -20,7 +20,7 @@
 #import <SVProgressHUD.h>
 #import <UIView+SDAutoLayout.h>
 #import "WarnLoginModel.h"
-#import "LogginSuccessActionHelper.h"
+#import "HandleUserStatus.h"
 #import "GraphicVerification.h"
 #import "MMDLoggin.h"
 #import "AppUserInfoHelper.h"
@@ -245,8 +245,9 @@ CGFloat const INPUTROW_HEIGHT = 30;
 }
 - (void)checkoutUserCompleteInfo{
     
-    NSInteger status = [AppUserInfoHelper UserStatus];
-    [LogginSuccessActionHelper jumpFromViewController:self userStatus:status];
+    if ([HandleUserStatus handleUserStatusAt:self]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 #pragma mark ButtonOutletAction
 - (IBAction)forgetPassword:(id)sender {

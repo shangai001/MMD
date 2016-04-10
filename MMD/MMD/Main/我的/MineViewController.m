@@ -17,16 +17,24 @@
 #import "MoreTableViewCell+MineUIInfo.h"
 #import "ColorHeader.h"
 #import "MineCellActionHelper.h"
+#import "MineHeaderTableViewCell+UserInfo.h"
+#import "LoggoutTableViewCell.h"
+#import "MMDLoggin.h"
+#import "LogoutModel.h"
+
+
 
 CGFloat const kEDGELENGTH = 20;
 
 static NSString * const headerCellId = @"MineHeaderCellId";
 static NSString * const bodyCellId = @"moreCellId";
+static NSString * const loggoutCellId = @"loggoutCellId";
 
 @interface MineViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong)UITableView *mainTableView;
 @property (nonatomic, strong)NSMutableArray *dataArray;
+@property (nonatomic, assign)BOOL logStatus;
 
 @end
 
@@ -41,7 +49,6 @@ static NSString * const bodyCellId = @"moreCellId";
         NSLog(@"data转换  %@",tempDataArray);
         for (NSInteger k = 0; k < tempDataArray.count; k ++) {
             NSMutableArray *singleCellArray = [NSMutableArray array];
-            
             NSArray *oneSection = tempDataArray[k];
             NSLog(@"每一个组 %@",oneSection);
             for (NSInteger j = 0; j < oneSection.count; j ++) {
@@ -57,10 +64,15 @@ static NSString * const bodyCellId = @"moreCellId";
     }
     return _dataArray;
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BACKGROUNDCOLOR;
     // Do any additional setup after loading the view.
+    self.logStatus = [MMDLoggin isLoggin];
     [self initTableView];
 }
 - (void)initTableView{
@@ -73,10 +85,22 @@ static NSString * const bodyCellId = @"moreCellId";
     _mainTableView.showsHorizontalScrollIndicator = _mainTableView.showsVerticalScrollIndicator = NO;
     [_mainTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MineHeaderTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:headerCellId];
     [_mainTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MoreTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:bodyCellId];
+    [_mainTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LoggoutTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:loggoutCellId];
     [self.view addSubview:_mainTableView];
 }
+/*
+- (void)initLogoutButton{
+    _loggoutButton = [[BaseNextButton alloc] init];
+    _loggoutButton.backgroundColor = REDCOLOR;
+    [_loggoutButton setTitle:@"退出" forState:UIControlStateNormal];
+}
+ */
+
 #pragma mark UITableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    if (_logStatus) {
+        return 6;
+    }
     return 5;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -91,19 +115,34 @@ static NSString * const bodyCellId = @"moreCellId";
     }else if (section == 4){
         return 1;
     }
+    if (_logStatus && section == 5) {
+        return 1;
+    }
     return 0;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    WeakSelf;
     if (indexPath.section == 0) {
         MineHeaderTableViewCell *headerCell = [tableView dequeueReusableCellWithIdentifier:headerCellId forIndexPath:indexPath];
         headerCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        //本地查询用户信息
+        [headerCell setCurrentUserInfo];
         return headerCell;
     }else{
-        MoreTableViewCell *bodyCell = [tableView dequeueReusableCellWithIdentifier:bodyCellId forIndexPath:indexPath];
-        NSArray *section = self.dataArray[indexPath.section - 1];
-        MoreCellUIItem *item = section[indexPath.row];
-        [bodyCell putMineUIValue:item];
-        return bodyCell;
+        if (indexPath.section != 5) {
+            MoreTableViewCell *bodyCell = [tableView dequeueReusableCellWithIdentifier:bodyCellId forIndexPath:indexPath];
+            NSArray *section = self.dataArray[indexPath.section - 1];
+            MoreCellUIItem *item = section[indexPath.row];
+            [bodyCell putMineUIValue:item];
+            return bodyCell;
+        }else{
+            LoggoutTableViewCell *bottomCell = [tableView dequeueReusableCellWithIdentifier:loggoutCellId forIndexPath:indexPath];
+            bottomCell.logouHandler = ^(){
+                [weakSelf logoutAction:nil];
+            };
+            bottomCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return bottomCell;
+        }
     }
     return nil;
 }
@@ -118,9 +157,22 @@ static NSString * const bodyCellId = @"moreCellId";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //除了第一组cell(不响应点击事件)
-    if (indexPath.section != 0) {
+    if (indexPath.section != 0 && indexPath.section != 5) {
         [MineCellActionHelper jumpFromViewController:self atIndex:indexPath];
     }
+}
+- (void)logoutAction:(id)sender{
+    //退出
+    [LogoutModel logoutUserSuccess:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            self.logStatus = NO;
+            [SDUserDefault setBool:NO forKey:Loggin];
+            [self.mainTableView reloadData];
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

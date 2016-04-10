@@ -77,6 +77,9 @@
             <connections>
                 <outlet property="askLoanButton" destination="mn1-ty-9KH" id="JPs-cy-WAF"/>
                 <outlet property="bottomLineView" destination="HGj-o3-rZc" id="t4P-gd-05G"/>
+                <outlet property="buttonWidth" destination="3R0-te-bKC" id="OqP-2C-n5G"/>
+                <outlet property="firstToleft" destination="8Ry-Ag-8Ts" id="uG4-63-8Sc"/>
+                <outlet property="lineCenterX" destination="gUv-8K-2FL" id="F27-Dh-P1F"/>
                 <outlet property="promotionButton" destination="CHW-y9-og0" id="XBb-RY-vHc"/>
                 <outlet property="queryButton" destination="m0W-Z3-0sC" id="uQf-xe-psS"/>
                 <outletCollection property="buttonArray" destination="mn1-ty-9KH" id="69Y-wY-w7E"/>

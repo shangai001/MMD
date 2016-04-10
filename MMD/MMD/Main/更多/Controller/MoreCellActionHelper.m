@@ -15,7 +15,8 @@
 #import "SupportCenterController.h"
 #import "HandleUserStatus.h"
 #import "MMDLoggin.h"
-#import "MMLogViewController.h"
+#import "LogginHandler.h"
+
 
 
 @implementation MoreCellActionHelper
@@ -70,10 +71,7 @@
             [more.navigationController pushViewController:messageCenter animated:YES];
         }
     }else{
-        
-        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
-        logger.hidesBottomBarWhenPushed = YES;
-        [more.navigationController pushViewController:logger animated:YES];
+        [LogginHandler shouldLogginAt:more];
     }
     
 }
@@ -87,9 +85,7 @@
         }
 
     }else{
-        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
-        logger.hidesBottomBarWhenPushed = YES;
-        [more.navigationController pushViewController:logger animated:YES];
+        [LogginHandler shouldLogginAt:more];
     }
 }
 + (void)gotoLoanRules:(MoreViewController *)more{

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
@@ -44,7 +45,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张玉玲" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AH-vv-upm">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AH-vv-upm">
                         <rect key="frame" x="90" y="34" width="120" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="rgy-G7-2Fy"/>
@@ -55,7 +56,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信用额度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-Yq-rXt">
-                        <rect key="frame" x="40" y="82" width="119" height="25"/>
+                        <rect key="frame" x="60" y="82" width="99" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="a7z-pe-56J"/>
                         </constraints>
@@ -63,33 +64,33 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfB-tk-6O1">
-                        <rect key="frame" x="40" y="107" width="119" height="25"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfB-tk-6O1">
+                        <rect key="frame" x="60" y="107" width="99" height="25"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditline.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dy8-Y9-9zt">
-                        <rect key="frame" x="0.0" y="82" width="30" height="30"/>
+                        <rect key="frame" x="20" y="82" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="7Na-FB-oWa"/>
                             <constraint firstAttribute="height" constant="30" id="ZTa-PF-8Wm"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信用等级" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-O1-s5g">
-                        <rect key="frame" x="205" y="82" width="115" height="25"/>
+                        <rect key="frame" x="220" y="82" width="100" height="25"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDn-GI-z04">
-                        <rect key="frame" x="205" y="107" width="115" height="25"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDn-GI-z04">
+                        <rect key="frame" x="220" y="107" width="100" height="25"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditlevel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uri-m1-20b">
-                        <rect key="frame" x="165" y="82" width="30" height="30"/>
+                        <rect key="frame" x="180" y="82" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="0MS-Xt-RhS"/>
                             <constraint firstAttribute="width" constant="30" id="VHw-1P-R5u"/>
@@ -125,11 +126,16 @@
                     <constraint firstItem="96d-y8-9Ta" firstAttribute="top" secondItem="I0y-Xd-dgt" secondAttribute="bottom" id="rIj-rS-EZh"/>
                     <constraint firstAttribute="trailing" secondItem="I0A-O1-s5g" secondAttribute="trailing" id="s21-an-dRK"/>
                     <constraint firstItem="96d-y8-9Ta" firstAttribute="leading" secondItem="KfB-tk-6O1" secondAttribute="trailing" id="sPk-65-Uga"/>
-                    <constraint firstItem="Dy8-Y9-9zt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xBz-Su-bh9"/>
-                    <constraint firstItem="Uri-m1-20b" firstAttribute="leading" secondItem="96d-y8-9Ta" secondAttribute="trailing" constant="5" id="xfr-jE-Oxf"/>
+                    <constraint firstItem="Dy8-Y9-9zt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="xBz-Su-bh9"/>
+                    <constraint firstItem="Uri-m1-20b" firstAttribute="leading" secondItem="96d-y8-9Ta" secondAttribute="trailing" constant="20" id="xfr-jE-Oxf"/>
                     <constraint firstItem="7AH-vv-upm" firstAttribute="leading" secondItem="s2O-LJ-1ev" secondAttribute="leading" id="xjW-Ju-ihl"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="creditLevelLabel" destination="PDn-GI-z04" id="xAj-Gm-nEI"/>
+                <outlet property="creditLineLabel" destination="KfB-tk-6O1" id="6oT-l8-5XB"/>
+                <outlet property="userNameLabel" destination="7AH-vv-upm" id="TOr-Bn-Tb2"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

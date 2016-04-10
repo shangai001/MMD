@@ -29,9 +29,19 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:type];
     NSData *mmdData = [NSData dataWithContentsOfFile:path];
-//    BOOL isValid = [NSJSONSerialization isValidJSONObject:mmdData];
-//    NSAssert2(isValid, @"该文件%@%.@不能被解析~!", fileName,type);
+
     NSArray *object = [NSJSONSerialization JSONObjectWithData:mmdData options:NSJSONReadingAllowFragments error:nil];
     return object;
+}
++ (id)readCalss:(id)calssInfo File:(NSString *)fileName fileType:(NSString *)type{
+    
+    if ([calssInfo isKindOfClass:[NSDictionary class]]) {
+        return [self readDictionaryFile:fileName fileType:type];
+    }else if ([calssInfo isKindOfClass:[NSArray class]]){
+        return [self readArrayFile:fileName fileType:type];
+    }else if ([calssInfo isKindOfClass:[NSString class]]){
+        return [self readTextFile:fileName fileType:type];
+    }
+    return nil;
 }
 @end

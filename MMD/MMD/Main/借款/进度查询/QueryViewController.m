@@ -44,7 +44,7 @@ CGFloat const cacleButtonHeight = 44;
 
 @property (nonatomic, strong)UIScrollView *scrollView;
 @property (nonatomic, strong)UIView *bottombottomContentView;
-@property (nonatomic, strong)QueryHeaderView *headerView;
+@property (nonatomic, strong)QueryHeaderView *queryHeaderView;
 @property (nonatomic, strong)StageView *stageView;
 @property (nonatomic, strong)BaseNextButton *cancleButon;
 
@@ -94,14 +94,15 @@ CGFloat const cacleButtonHeight = 44;
     }
     return _bottombottomContentView;
 }
-- (QueryHeaderView *)headerView{
-    if (!_headerView) {
-        _headerView = [QueryHeaderView loadViewFromNib];
-        _headerView.backgroundColor = [UIColor whiteColor];
-        _headerView.layer.cornerRadius = 10.0f;
-        _headerView.detailDelegate = self;
+- (QueryHeaderView *)queryHeaderView{
+    if (!_queryHeaderView) {
+        _queryHeaderView = [QueryHeaderView loadViewFromNib];
+        _queryHeaderView.backgroundColor = [UIColor whiteColor];
+        _queryHeaderView.layer.cornerRadius = 10.0f;
+        _queryHeaderView.detailDelegate = self;
+        //查看借款详情已经通过协议实现
     }
-    return _headerView;
+    return _queryHeaderView;
 }
 - (BaseNextButton *)cancleButon{
     if (!_cancleButon) {
@@ -156,9 +157,9 @@ CGFloat const cacleButtonHeight = 44;
 //刷新视图
 - (void)reloadProgressView:(QueryItem *)item{
     //设置借款数目
-    [self setLoanInfo:item label:self.headerView.loanTextLabel];
+    [self setLoanInfo:item label:self.queryHeaderView.loanTextLabel];
     //设置还款时间
-    [self setLoanInfo:item label:self.headerView.loanTimeLabel];
+    [self setLoanInfo:item label:self.queryHeaderView.loanTimeLabel];
     //根据申请状态设置取消按钮状态
     [self resetCancleButtonStatus:[item.state integerValue]];
     
@@ -170,6 +171,9 @@ CGFloat const cacleButtonHeight = 44;
         self.cancleButon.backgroundColor = [UIColor lightGrayColor];
         self.cancleButon.layer.borderColor = [UIColor lightGrayColor].CGColor;
         [self.cancleButon setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.cancleButon.enabled = NO;
+    }else{
+        
     }
 }
 - (void)setLoanInfo:(QueryItem *)item label:(UILabel *)textLabel{
@@ -178,11 +182,11 @@ CGFloat const cacleButtonHeight = 44;
     NSString *frontString = @"";
     NSInteger numberLength = 0;
     UIColor *numberColor = nil;
-    if ([textLabel isEqual:self.headerView.loanTextLabel]) {
+    if ([textLabel isEqual:self.queryHeaderView.loanTextLabel]) {
         numberString = [item.loanCount stringValue];
         frontString =  [NSString stringWithFormat:@"%@元",numberString];
         numberColor = Color(0.97, 0.43, 0.36, 1);
-    }else if([textLabel isEqual:self.headerView.loanTimeLabel]){
+    }else if([textLabel isEqual:self.queryHeaderView.loanTimeLabel]){
         numberString = [item.term stringValue];
         frontString =  [NSString stringWithFormat:@"%@个月",numberString];
         numberColor = Color(0.24, 0.78, 0.94, 1);
@@ -217,8 +221,9 @@ CGFloat const cacleButtonHeight = 44;
 }
 //配置头视图信息
 - (void)configureHeaderView{
-    [self.scrollView addSubview:self.headerView];
-    self.headerView.sd_layout.leftSpaceToView(self.scrollView, 0).topSpaceToView(self.scrollView,0).rightSpaceToView(self.scrollView, 0).heightIs(headerHeight);
+    [self.scrollView addSubview:self.queryHeaderView];
+    self.queryHeaderView.sd_layout.leftSpaceToView(self.scrollView, 0).topSpaceToView(self.scrollView,0).rightSpaceToView(self.scrollView, 0).heightIs(headerHeight);
+
 }
 //配置内容视图
 - (void)configurebottomContentView{
@@ -229,7 +234,7 @@ CGFloat const cacleButtonHeight = 44;
     self.bottombottomContentView.sd_layout
     .leftEqualToView(_scrollView)
     .rightEqualToView(_scrollView)
-    .topSpaceToView(self.headerView, gapW)
+    .topSpaceToView(self.queryHeaderView, gapW)
     .heightIs(viewSize.height - gapW + deltH  - (contenToBottom + cacleButtonToBottom + headerHeight + gapW));
 }
 //配置步骤条
@@ -305,7 +310,7 @@ CGFloat const cacleButtonHeight = 44;
 }
 - (void)didNotGetLoanStatusInfo{
     
-    [self.headerView removeFromSuperview];
+    [self.queryHeaderView removeFromSuperview];
     [self.bottombottomContentView removeFromSuperview];
     self.scrollView.backgroundColor = [UIColor clearColor];
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.view.frame.size.height);

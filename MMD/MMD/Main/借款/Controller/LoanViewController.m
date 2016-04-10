@@ -12,10 +12,9 @@
 #import <UIView+SDAutoLayout.h>
 #import "ColorHeader.h"
 #import "MMDLoggin.h"
-#import "AppUserInfoHelper.h"
 #import "HandleUserStatus.h"
-#import "VerifyViewController.h"
-#import "MMLogViewController.h"
+#import "LogginHandler.h"
+
 
 
 
@@ -44,10 +43,7 @@ CGFloat const TOP_Y = 113;
             return [HandleUserStatus handleUserStatusAt:NAV.topViewController];
         }else{
             //未登录去登录页面
-            MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
-            logger.hidesBottomBarWhenPushed = YES;
-        
-            [NAV pushViewController:logger animated:YES];
+            [LogginHandler shouldLogginAt:NAV];
             return NO;
         }
     }
@@ -145,23 +141,15 @@ CGFloat const TOP_Y = 113;
     }
 }
 - (void)checkoutUserCanGo:(UIViewController *)toVC{
-    
-    NSInteger status = [AppUserInfoHelper UserStatus];
+    //检查是否登录
     if ([MMDLoggin isLoggin]) {
-        if (status > 0 && status < 3) {
-            //跳转到父Controller
-            VerifyViewController *verifyer = [[VerifyViewController alloc] initWithNibName:NSStringFromClass([VerifyViewController class]) bundle:[NSBundle mainBundle]];
-            verifyer.status = status;
-            verifyer.hidesBottomBarWhenPushed = YES;
-            [verifyer.navigationController pushViewController:verifyer animated:YES];
-        }else{
+        //登录成功,检查用户用户状态
+        if ([HandleUserStatus handleUserStatusAt:self]) {
             [self goFromViewController:self.currentViewController toViewController:toVC];
         }
     }else{
-        
-        MMLogViewController *logger = [[MMLogViewController alloc] initWithNibName:NSStringFromClass([MMLogViewController class]) bundle:[NSBundle mainBundle]];
-        logger.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:logger animated:YES];
+        //去登录
+        [LogginHandler shouldLogginAt:self];
     }
 }
 - (void)goFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController{

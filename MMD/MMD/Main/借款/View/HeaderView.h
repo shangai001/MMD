@@ -15,7 +15,9 @@
 @end
 
 @interface HeaderView : UIView
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineCenterX;
 
+@property (assign, nonatomic)CGFloat centerLength;
 
 @property (weak, nonatomic) IBOutlet UIButton *askLoanButton;
 @property (weak, nonatomic) IBOutlet UIButton *promotionButton;
@@ -24,5 +26,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonArray;
 @property (assign, nonatomic)NSUInteger selectedIndex;
 @property (weak, nonatomic)id<HeaderViewDelegate> headerDelegate;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *firstToleft;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonWidth;
 
 @end

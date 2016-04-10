@@ -23,14 +23,21 @@ CGFloat const BUTTON_BASETAG = 100;
 /**
 *  底部线条的宽度待定
 */
+//- (instancetype)init{
+//    self = [super init];
+//    if (self) {
+//        _selectedIndex = -1;
+//    }
+//    return self;
+//}
+
 - (void)awakeFromNib{
-    self.selectedIndex = -1;
+    _selectedIndex = 0;
     [self bringSubviewToFront:self.bottomLineView];
 }
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
     _selectedIndex = selectedIndex;
     UIButton *selectButton = (UIButton *)[self viewWithTag:_selectedIndex + BUTTON_BASETAG];
-
     [UIView animateWithDuration:0.15 animations:^{
         CGPoint linePoint = self.bottomLineView.center;
         linePoint.x = selectButton.center.x;

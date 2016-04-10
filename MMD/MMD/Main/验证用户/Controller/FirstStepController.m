@@ -252,9 +252,6 @@ NSInteger const ShouldCheckoutCredit = 0;
     } failure:^(NSError *error) {
         
     }];
-    
-//    VerifyViewController *paVC = (VerifyViewController *)self.parentViewController;
-//    paVC.status = 1;
 }
 
 

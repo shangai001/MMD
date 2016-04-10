@@ -37,5 +37,15 @@
  */
 + (NSArray *)readArrayFile:(NSString *)fileName fileType:(NSString *)type;
 
+/**
+ *  根据传参calssInfo决定返回什么类型的信息
+ *
+ *  @param calssInfo 欲解析成的数据类型
+ *  @param fileName
+ *  @param type
+ *
+ *  @return 
+ */
++ (id)readCalss:(id)calssInfo File:(NSString *)fileName fileType:(NSString *)type;
 
 @end

@@ -35,6 +35,18 @@
     }
     NSAssert(success, @"归档用户信息失败");
 }
++ (NSDictionary *)userData{
+    
+    return [self unarchiveUserInfo];
+}
++ (NSDictionary *)getChildUserInfo:(NSString *)childKey{
+    
+    NSDictionary *userData = [self userData];
+    if ([userData[childKey] isKindOfClass:[NSNull class]]) {
+        return nil;
+    }
+    return userData[childKey];
+}
 + (NSDictionary *)unarchiveUserInfo{
     
     NSString *filePath = [self getDocumentPath];

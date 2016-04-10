@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ConstantUserInfoKey.h"
 
 
 @class MMDUserInfo;
@@ -16,6 +17,22 @@
 NS_ASSUME_NONNULL_BEGIN
 
 + (void)updateUserInfo:( NSDictionary * _Nullable )info;
+
+/**
+ *  返回用户相信信息
+ *
+ *  @return
+ */
++ (NSDictionary *)userData;
+
+/**
+ *  根据childkey获取对应信息
+ *
+ *  @param childKey
+ *
+ *  @return 
+ */
++ (NSDictionary *)getChildUserInfo:(NSString *)childKey;
 
 + (NSDictionary *)userInfo;
 
