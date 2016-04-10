@@ -7,6 +7,7 @@
 //
 
 #import "LatestActivityController.h"
+#import "ColorHeader.h"
 
 @interface LatestActivityController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.webViewColor = BACKGROUNDCOLOR;
 }
 
 - (void)didReceiveMemoryWarning {

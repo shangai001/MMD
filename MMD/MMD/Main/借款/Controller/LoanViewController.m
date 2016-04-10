@@ -72,7 +72,6 @@ CGFloat const TOP_Y = 113;
 - (LatestActivityController *)activity{
     if (!_activity) {
         _activity = [LatestActivityController new];
-        _activity.URLString = kProgressHostURL;
     }
     return _activity;
 }
@@ -174,6 +173,9 @@ CGFloat const TOP_Y = 113;
     } completion:^(BOOL finished) {
         if ([toViewController isEqual:self.query]) {
             [self.query requestLoanStatus];
+        }else if ([toViewController isEqual:self.activity]){
+            self.activity.URLString = kProgressHostURL;
+            [self.activity requestUrl:kProgressHostURL];
         }
         toViewController.view.sd_layout.leftEqualToView(self.view).topSpaceToView(self.view,TOP_Y).rightEqualToView(self.view).bottomEqualToView(self.view);
         self.currentViewController = toViewController;

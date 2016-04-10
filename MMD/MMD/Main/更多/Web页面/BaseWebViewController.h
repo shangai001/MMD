@@ -10,6 +10,8 @@
 
 @interface BaseWebViewController : BaseViewController
 
+//webView背景颜色
+@property (strong, nonatomic)UIColor *webViewColor;
 @property (copy, nonatomic)NSString *URLString;
 
 /**

@@ -9,7 +9,7 @@
 #import "BaseWebViewController.h"
 #import <WebKit/WebKit.h>
 #import <SVProgressHUD.h>
-
+//#import "ColorHeader.h"
 
 
 @interface BaseWebViewController ()<WKUIDelegate,WKNavigationDelegate>
@@ -25,19 +25,24 @@
     }
     return _webView;
 }
-
+- (void)setWebViewColor:(UIColor *)webViewColor{
+    _webViewColor = webViewColor;
+    self.webView.backgroundColor = _webViewColor;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.automaticallyAdjustsScrollViewInsets = NO;
-    //借款须知
-    NSString *url = self.URLString;
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+    
+    
+    [self requestUrl:self.URLString];
     [self.view addSubview:self.webView];
+//    self.view.backgroundColor = BACKGROUNDCOLOR;
 }
 - (void)requestUrl:(NSString *)URL{
-    
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:URL]]];
+    if (URL) {
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:URL]]];
+    }
 }
 #pragma mark WKNavigationDelegate
 
