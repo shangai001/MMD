@@ -183,6 +183,10 @@
 		D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
+		D65E7F521CBB595D003AA72C /* login_code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65E7F501CBB595D003AA72C /* login_code@2x.png */; };
+		D65E7F531CBB595D003AA72C /* login_code@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65E7F511CBB595D003AA72C /* login_code@3x.png */; };
+		D65E7F561CBB596C003AA72C /* records@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65E7F541CBB596C003AA72C /* records@2x.png */; };
+		D65E7F571CBB596C003AA72C /* records@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65E7F551CBB596C003AA72C /* records@3x.png */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
 		D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F9A1CB42F570038F312 /* GraphicVerification.m */; };
 		D66B4FA21CB4EE820038F312 /* AppUserInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4FA11CB4EE820038F312 /* AppUserInfoHelper.m */; };
@@ -536,6 +540,10 @@
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
 		D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatVerifyDataHelper.m; sourceTree = "<group>"; };
+		D65E7F501CBB595D003AA72C /* login_code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_code@2x.png"; sourceTree = "<group>"; };
+		D65E7F511CBB595D003AA72C /* login_code@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_code@3x.png"; sourceTree = "<group>"; };
+		D65E7F541CBB596C003AA72C /* records@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "records@2x.png"; sourceTree = "<group>"; };
+		D65E7F551CBB596C003AA72C /* records@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "records@3x.png"; sourceTree = "<group>"; };
 		D66B4F931CB4232F0038F312 /* MMDLoggin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDLoggin.h; sourceTree = "<group>"; };
 		D66B4F941CB4232F0038F312 /* MMDLoggin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDLoggin.m; sourceTree = "<group>"; };
 		D66B4F991CB42F570038F312 /* GraphicVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicVerification.h; sourceTree = "<group>"; };
@@ -1711,6 +1719,10 @@
 		D6F5671D1C80048800B0612F /* TabbarImage */ = {
 			isa = PBXGroup;
 			children = (
+				D65E7F541CBB596C003AA72C /* records@2x.png */,
+				D65E7F551CBB596C003AA72C /* records@3x.png */,
+				D65E7F501CBB595D003AA72C /* login_code@2x.png */,
+				D65E7F511CBB595D003AA72C /* login_code@3x.png */,
 				D6E2FFF41CAE579800197B3E /* message@2x.png */,
 				D6E2FFF51CAE579800197B3E /* message@3x.png */,
 				D6F5671E1C8004ED00B0612F /* 借款@2x.png */,
@@ -1870,9 +1882,11 @@
 				D60609B31C76FF0E000DB373 /* 更多0@2x.png in Resources */,
 				D6060A1C1C76FF0E000DB373 /* logo@2x.png in Resources */,
 				D647FB1D1CAE7E2D00CBF19E /* MoreTableViewCell.xib in Resources */,
+				D65E7F571CBB596C003AA72C /* records@3x.png in Resources */,
 				D60609BA1C76FF0E000DB373 /* 工作信息@3x.png in Resources */,
 				D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */,
 				D633565B1CB035BF000A321C /* FormTableViewCell.xib in Resources */,
+				D65E7F561CBB596C003AA72C /* records@2x.png in Resources */,
 				D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */,
 				D60609E31C76FF0E000DB373 /* contact@2x.png in Resources */,
 				D606099F1C76FF0E000DB373 /* 步骤@3x.png in Resources */,
@@ -1887,6 +1901,7 @@
 				D60609A81C76FF0E000DB373 /* 电话图标@3x.png in Resources */,
 				D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */,
 				D60609DE1C76FF0E000DB373 /* visible@3x.png in Resources */,
+				D65E7F531CBB595D003AA72C /* login_code@3x.png in Resources */,
 				D60609AB1C76FF0E000DB373 /* 返回@3x.png in Resources */,
 				D64A4E2F1CB7998A00FB519B /* BottomTableViewCell.xib in Resources */,
 				D60609D81C76FF0E000DB373 /* 借款须知@3x.png in Resources */,
@@ -1945,6 +1960,7 @@
 				D60609B41C76FF0E000DB373 /* 更多0@3x.png in Resources */,
 				D6F567181C80047500B0612F /* 还款0@3x.png in Resources */,
 				D6060A0E1C76FF0E000DB373 /* notificationCenter@3x.png in Resources */,
+				D65E7F521CBB595D003AA72C /* login_code@2x.png in Resources */,
 				D6060A191C76FF0E000DB373 /* go@2x.png in Resources */,
 				D6F01DEB1C7C6BFA00EBC84E /* minus@2x.png in Resources */,
 				D60609DA1C76FF0E000DB373 /* recommend@2x.png in Resources */,
