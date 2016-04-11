@@ -18,7 +18,6 @@
 #import <MJExtension.h>
 #import "ZCAddressBook.h"
 #import "IDCardModel.h"
-#import <SVProgressHUD.h>
 #import "VerifyViewController.h"
 #import "BaseNextButton.h"
 

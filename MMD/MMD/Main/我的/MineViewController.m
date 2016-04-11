@@ -8,6 +8,7 @@
 
 #import "MineViewController.h"
 #import "ConstantTitle.h"
+#import "ConstantNotiName.h"
 #import "MoreTableViewCell.h"
 #import "MineHeaderTableViewCell.h"
 #import <NSArray+YYAdd.h>
@@ -21,7 +22,7 @@
 #import "LoggoutTableViewCell.h"
 #import "MMDLoggin.h"
 #import "LogoutModel.h"
-
+#import <SVProgressHUD.h>
 
 
 CGFloat const kEDGELENGTH = 20;
@@ -163,14 +164,17 @@ static NSString * const loggoutCellId = @"loggoutCellId";
 }
 - (void)logoutAction:(id)sender{
     //退出
+    [SVProgressHUD show];
     [LogoutModel logoutUserSuccess:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
             self.logStatus = NO;
             [SDUserDefault setBool:NO forKey:Loggin];
             [self.mainTableView reloadData];
         }
+        [[NSNotificationCenter defaultCenter] postNotificationName:UserDidLogout object:nil];
+        [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
-        
+        [SVProgressHUD dismiss];
     }];
 
 }

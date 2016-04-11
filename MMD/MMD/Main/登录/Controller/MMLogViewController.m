@@ -118,7 +118,7 @@ CGFloat const INPUTROW_HEIGHT = 30;
             [SVProgressHUD showInfoWithStatus:resultDictionary[@"msg"]];
         }
     } FailureHandler:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",error.localizedDescription]];
+        [SVProgressHUD dismiss];
         NSLog(@"error = %@",error);
     }];
     

@@ -9,6 +9,6 @@
 #import "ConstantNotiName.h"
 
 
-NSString * const UserLogin  = @"UserDidLoginNotification";
-NSString * const UserLogout = @"UserDidLogoutNotification" ;
-NSString * const UserGetMessage  = @"UserDidGetMessageNotification";
+NSString * const UserDidLogin  = @"UserDidLoginNotification";
+NSString * const UserDidLogout = @"UserDidLogoutNotification" ;
+NSString * const UserDidGetMessage  = @"UserDidGetMessageNotification";

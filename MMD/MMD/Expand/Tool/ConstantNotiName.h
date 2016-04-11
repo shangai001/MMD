@@ -11,8 +11,8 @@
 
 
 
-UIKIT_EXTERN NSString * const UserLogin ;
-UIKIT_EXTERN NSString * const UserLogout ;
-UIKIT_EXTERN NSString * const UserGetMessage ;
+UIKIT_EXTERN NSString * const UserDidLogin ;
+UIKIT_EXTERN NSString * const UserDidLogout ;
+UIKIT_EXTERN NSString * const UserDidGetMessage ;
 //UIKIT_EXTERN NSString * const UserLogin ;
 //UIKIT_EXTERN NSString * const UserLogin ;

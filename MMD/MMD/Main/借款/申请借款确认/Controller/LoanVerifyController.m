@@ -190,7 +190,7 @@ static NSString * const bottomCellId = @"BottomCellId";
         }
     } failure:^(NSError *error) {
         NSLog(@"提交失败");
-        [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+        [SVProgressHUD dismiss];
     }];
 }
 - (void)didReceiveMemoryWarning {
