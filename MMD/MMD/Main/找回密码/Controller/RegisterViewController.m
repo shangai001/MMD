@@ -10,7 +10,7 @@
 #import "RegisterItem.h"
 #import "checkoutPhoneNumber.h"
 #import "LimitInputWords.h"
-#import "LogginModel.h"
+#import "LoginModel.h"
 #import "MessageModel.h"
 #import <SVProgressHUD.h>
 #import "LXMKeyboardManager.h"
@@ -200,7 +200,7 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
 //找回密码时获取手机验证码
 - (void)getForgetPasswordMessageCode:(NSDictionary *)info{
     
-    [LogginModel forgetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
+    [LoginModel forgetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
         
     } FailureHandler:^(NSError *error) {
         
@@ -228,10 +228,10 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
     }
     if (self.type == kForgetPassword) {
         //找回密码，如果用户通过审核，必须输入身份证号码（缺失UI）
-        [LogginModel checkUserAuthorized:info completionHandler:^(NSDictionary *resultDictionary) {
+        [LoginModel checkUserAuthorized:info completionHandler:^(NSDictionary *resultDictionary) {
             
             if ([resultDictionary[@"code"] integerValue] != 0) {
-                [LogginModel resetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
+                [LoginModel resetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
                     [self handleResetResult:resultDictionary];
                 } FailureHandler:^(NSError *error) {
                     

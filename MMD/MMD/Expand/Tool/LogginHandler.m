@@ -9,6 +9,7 @@
 #import "LogginHandler.h"
 #import "MMLogViewController.h"
 
+
 @implementation LogginHandler
 
 
@@ -23,5 +24,4 @@
     }
     [currentVC.navigationController pushViewController:logger animated:YES];
 }
-
 @end

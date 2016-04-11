@@ -9,7 +9,7 @@
 #import "BaseModel.h"
 
 
-@interface LogginModel : BaseModel
+@interface LoginModel : BaseModel
 
 /**
  *  忘记密码，获取验证码重新设置密码

@@ -9,7 +9,7 @@
 #import "MMLogViewController.h"
 #import "checkoutPhoneNumber.h"
 #import "LoginUser.h"
-#import "LogginModel.h"
+#import "LoginModel.h"
 #import <MJExtension.h>
 #import "ContantLength.h"
 #import "RegisterViewController.h"
@@ -25,6 +25,7 @@
 #import "MMDLoggin.h"
 #import "AppUserInfoHelper.h"
 #import "UploadDevice.h"
+#import "LoginStauff.h"
 
 
 
@@ -108,7 +109,7 @@ CGFloat const INPUTROW_HEIGHT = 30;
     [self.view endEditing:YES];
     NSDictionary *info = self.user.mj_keyValues;
     [SVProgressHUD show];
-    [LogginModel loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
+    [LoginModel loginUser:info completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
             [self resetFailureValue];
             [self handleLoginResult:resultDictionary];
@@ -224,6 +225,8 @@ CGFloat const INPUTROW_HEIGHT = 30;
     [self recordUserPassword];
     //记录用户信息(可以单独写出来)
     [AppUserInfoHelper updateUserInfo:resultDictionary];
+    //绑定用户到真信
+    [self blindUserZXWithDictionary:resultDictionary];
     //检查用户资料完善情况
     [self checkoutUserCompleteInfo];
 }
@@ -248,6 +251,13 @@ CGFloat const INPUTROW_HEIGHT = 30;
     if ([HandleUserStatus handleUserStatusAt:self]) {
         [self.navigationController popViewControllerAnimated:YES];
     }
+}
+//绑定用户到真信SDK
+- (void)blindUserZXWithDictionary:(NSDictionary *)resultDic{
+    NSDictionary *userInfo = resultDic[mmdUserInfo];
+    [LoginStauff shouldBlindUser:userInfo[@"userId"] mobileId:userInfo[@"phone"] with:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
+        
+    }];
 }
 #pragma mark ButtonOutletAction
 - (IBAction)forgetPassword:(id)sender {

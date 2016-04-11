@@ -9,8 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
 @interface LogginHandler : NSObject
 
+/**
+ *  跳转到登录页面
+ *
+ *  @param currentVC
+ */
 + (void)shouldLogginAt:(UIViewController *)currentVC;
 
 

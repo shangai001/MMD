@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "AppInfo.h"
+#import "ConstantKeySecret.h"
+#import "ZXSDK.h"
+
 
 @interface AppDelegate ()
 
@@ -16,9 +18,17 @@
 @implementation AppDelegate
 
 
+#pragma mark ConfigureZXSDK
+
+- (void)configureZXSDK{
+    [ZXSDK configWithAppId:ZX_APIKEY withAppSecret:ZX_APISECRET];
+}
+
+#pragma mark AppDelegateMethod
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //集成分享控件
+    [self configureZXSDK];
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

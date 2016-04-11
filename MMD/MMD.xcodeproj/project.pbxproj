@@ -156,7 +156,7 @@
 		D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FBBB1CAE920100CBF19E /* AppInfo.m */; };
 		D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FBBD1CAE920100CBF19E /* DashLineHelper.m */; };
 		D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FBBF1CAE920100CBF19E /* LXMKeyboardManager.m */; };
-		D647FBC71CAE920100CBF19E /* LogginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FBC11CAE920100CBF19E /* LogginModel.m */; };
+		D647FBC71CAE920100CBF19E /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FBC11CAE920100CBF19E /* LoginModel.m */; };
 		D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FBCC1CAE925400CBF19E /* UIImage+Color.m */; };
 		D647FBD01CAE925400CBF19E /* UIView+LoadViewFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FBCE1CAE925400CBF19E /* UIView+LoadViewFromNib.m */; };
 		D647FBD61CAE92B200CBF19E /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD21CAE92B200CBF19E /* area.plist */; };
@@ -190,6 +190,8 @@
 		D65F2C421CBB7A57000817AE /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65F2C371CBB7A57000817AE /* libZXSDK.a */; };
 		D65F2C431CBB7A57000817AE /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65F2C401CBB7A57000817AE /* libZXSDK.a */; };
 		D65F2C441CBB7A57000817AE /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D65F2C411CBB7A57000817AE /* ZXSDK.bundle */; };
+		D65F2CA81CBBAF76000817AE /* ConstantKeySecret.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F2CA71CBBAF76000817AE /* ConstantKeySecret.m */; };
+		D65F2CAB1CBBB370000817AE /* LoginStauff.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F2CAA1CBBB370000817AE /* LoginStauff.m */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
 		D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F9A1CB42F570038F312 /* GraphicVerification.m */; };
 		D66B4FA21CB4EE820038F312 /* AppUserInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4FA11CB4EE820038F312 /* AppUserInfoHelper.m */; };
@@ -379,7 +381,6 @@
 		D63356281CAFE100000A321C /* RefundWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundWebController.m; sourceTree = "<group>"; };
 		D633562A1CAFE1FE000A321C /* MMDInfoWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDInfoWebController.h; sourceTree = "<group>"; };
 		D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDInfoWebController.m; sourceTree = "<group>"; };
-		D633562D1CAFE630000A321C /* ShareSDKAppkeyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSDKAppkeyHeader.h; sourceTree = "<group>"; };
 		D63356321CB000D3000A321C /* MessageCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCenterController.h; sourceTree = "<group>"; };
 		D63356331CB000D3000A321C /* MessageCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCenterController.m; sourceTree = "<group>"; };
 		D63356351CB00481000A321C /* SupportCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportCenterController.h; sourceTree = "<group>"; };
@@ -492,8 +493,8 @@
 		D647FBBD1CAE920100CBF19E /* DashLineHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashLineHelper.m; path = ../../../Expand/Tool/DashLineHelper.m; sourceTree = "<group>"; };
 		D647FBBE1CAE920100CBF19E /* LXMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMKeyboardManager.h; sourceTree = "<group>"; };
 		D647FBBF1CAE920100CBF19E /* LXMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMKeyboardManager.m; sourceTree = "<group>"; };
-		D647FBC01CAE920100CBF19E /* LogginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogginModel.h; path = ../Tool/LogginModel.h; sourceTree = "<group>"; };
-		D647FBC11CAE920100CBF19E /* LogginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogginModel.m; path = ../Tool/LogginModel.m; sourceTree = "<group>"; };
+		D647FBC01CAE920100CBF19E /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginModel.h; path = ../Tool/LoginModel.h; sourceTree = "<group>"; };
+		D647FBC11CAE920100CBF19E /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginModel.m; path = ../Tool/LoginModel.m; sourceTree = "<group>"; };
 		D647FBCB1CAE925400CBF19E /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		D647FBCC1CAE925400CBF19E /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		D647FBCD1CAE925400CBF19E /* UIView+LoadViewFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadViewFromNib.h"; sourceTree = "<group>"; };
@@ -518,7 +519,6 @@
 		D64A4E391CB7D62800FB519B /* SortIdDic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SortIdDic.txt; sourceTree = "<group>"; };
 		D64A4E3B1CB7D99000FB519B /* SubmitLoanInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLoanInfoModel.h; sourceTree = "<group>"; };
 		D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLoanInfoModel.m; sourceTree = "<group>"; };
-		D64C991E1CB8DA6A00C45936 /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
 		D64C99231CB8DB9300C45936 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryViewController.m; sourceTree = "<group>"; };
 		D64C99241CB8DB9300C45936 /* QueryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryViewController.xib; sourceTree = "<group>"; };
 		D64C99251CB8DB9300C45936 /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryViewController.h; sourceTree = "<group>"; };
@@ -556,6 +556,10 @@
 		D65F2C3F1CBB7A57000817AE /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
 		D65F2C401CBB7A57000817AE /* libZXSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libZXSDK.a; sourceTree = "<group>"; };
 		D65F2C411CBB7A57000817AE /* ZXSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSDK.bundle; sourceTree = "<group>"; };
+		D65F2CA61CBBAF76000817AE /* ConstantKeySecret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantKeySecret.h; sourceTree = "<group>"; };
+		D65F2CA71CBBAF76000817AE /* ConstantKeySecret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantKeySecret.m; sourceTree = "<group>"; };
+		D65F2CA91CBBB370000817AE /* LoginStauff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginStauff.h; sourceTree = "<group>"; };
+		D65F2CAA1CBBB370000817AE /* LoginStauff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginStauff.m; sourceTree = "<group>"; };
 		D66B4F931CB4232F0038F312 /* MMDLoggin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDLoggin.h; sourceTree = "<group>"; };
 		D66B4F941CB4232F0038F312 /* MMDLoggin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDLoggin.m; sourceTree = "<group>"; };
 		D66B4F991CB42F570038F312 /* GraphicVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicVerification.h; sourceTree = "<group>"; };
@@ -632,8 +636,8 @@
 		D6BC3DCE1CBAC80400200BC7 /* ConstantUserInfoKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantUserInfoKey.m; sourceTree = "<group>"; };
 		D6BC3DD01CBAD0AD00200BC7 /* LogginHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogginHandler.h; sourceTree = "<group>"; };
 		D6BC3DD11CBAD0AD00200BC7 /* LogginHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogginHandler.m; sourceTree = "<group>"; };
-		D6BC3DD31CBAE7C900200BC7 /* ConstantNotiName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantNotiName.h; sourceTree = "<group>"; };
-		D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantNotiName.m; sourceTree = "<group>"; };
+		D6BC3DD31CBAE7C900200BC7 /* ConstantNotiName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstantNotiName.h; path = ../Tool/ConstantNotiName.h; sourceTree = "<group>"; };
+		D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConstantNotiName.m; path = ../Tool/ConstantNotiName.m; sourceTree = "<group>"; };
 		D6C5D70D1CB95214000C633B /* UploadDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDevice.h; sourceTree = "<group>"; };
 		D6C5D70E1CB95214000C633B /* UploadDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDevice.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
@@ -1196,8 +1200,8 @@
 				D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */,
 				D6BC3DD01CBAD0AD00200BC7 /* LogginHandler.h */,
 				D6BC3DD11CBAD0AD00200BC7 /* LogginHandler.m */,
-				D6BC3DD31CBAE7C900200BC7 /* ConstantNotiName.h */,
-				D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */,
+				D65F2CA91CBBB370000817AE /* LoginStauff.h */,
+				D65F2CAA1CBBB370000817AE /* LoginStauff.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1239,7 +1243,6 @@
 		D64C99191CB8DA6A00C45936 /* ZXSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D64C991E1CB8DA6A00C45936 /* ZXSDK.h */,
 				D65F2C2F1CBB7A57000817AE /* Release-iphoneos */,
 				D65F2C381CBB7A57000817AE /* Release-iphonesimulator */,
 				D65F2C411CBB7A57000817AE /* ZXSDK.bundle */,
@@ -1626,13 +1629,16 @@
 		D6E105061C73219000049C3F /* Const */ = {
 			isa = PBXGroup;
 			children = (
+				D6BC3DD31CBAE7C900200BC7 /* ConstantNotiName.h */,
+				D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */,
 				D64A4E1D1CB761CB00FB519B /* ConstantTitle.h */,
 				D64A4E1E1CB761CB00FB519B /* ConstantTitle.m */,
 				D64A4E221CB77F4200FB519B /* ConstantHeight.h */,
 				D64A4E231CB77F4200FB519B /* ConstantHeight.m */,
 				D64A4E251CB789AF00FB519B /* ContantLength.h */,
 				D64A4E261CB789AF00FB519B /* ContantLength.m */,
-				D633562D1CAFE630000A321C /* ShareSDKAppkeyHeader.h */,
+				D65F2CA61CBBAF76000817AE /* ConstantKeySecret.h */,
+				D65F2CA71CBBAF76000817AE /* ConstantKeySecret.m */,
 				D6BC3DCD1CBAC80400200BC7 /* ConstantUserInfoKey.h */,
 				D6BC3DCE1CBAC80400200BC7 /* ConstantUserInfoKey.m */,
 			);
@@ -1642,8 +1648,8 @@
 		D6E105071C73219000049C3F /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				D647FBC01CAE920100CBF19E /* LogginModel.h */,
-				D647FBC11CAE920100CBF19E /* LogginModel.m */,
+				D647FBC01CAE920100CBF19E /* LoginModel.h */,
+				D647FBC11CAE920100CBF19E /* LoginModel.m */,
 				D66B4F931CB4232F0038F312 /* MMDLoggin.h */,
 				D66B4F941CB4232F0038F312 /* MMDLoggin.m */,
 				D66B4FA01CB4EE820038F312 /* AppUserInfoHelper.h */,
@@ -2162,6 +2168,7 @@
 				D647FB821CAE80BE00CBF19E /* LimitInputWords.m in Sources */,
 				D63356371CB00481000A321C /* SupportCenterController.m in Sources */,
 				D6FE74331CB9690E002F3941 /* UIDevice+IdentifierAddition.m in Sources */,
+				D65F2CA81CBBAF76000817AE /* ConstantKeySecret.m in Sources */,
 				D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */,
 				D688B9131CB69BE500CC80FF /* AreaHelper.m in Sources */,
 				D6B031D31CB3964200E2955A /* MessageModel.m in Sources */,
@@ -2220,6 +2227,7 @@
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,
 				D647FB8E1CAE814300CBF19E /* UploadParam.m in Sources */,
+				D65F2CAB1CBBB370000817AE /* LoginStauff.m in Sources */,
 				D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */,
 				D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */,
 				D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */,
@@ -2229,7 +2237,7 @@
 				D647FB611CAE7F7A00CBF19E /* HeaderView.m in Sources */,
 				D6BC3DD51CBAE7C900200BC7 /* ConstantNotiName.m in Sources */,
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,
-				D647FBC71CAE920100CBF19E /* LogginModel.m in Sources */,
+				D647FBC71CAE920100CBF19E /* LoginModel.m in Sources */,
 				D63356641CB03B2C000A321C /* FormTableViewCell+PutFormValue.m in Sources */,
 				D647FBB51CAE87FD00CBF19E /* StageView.m in Sources */,
 				D64C993D1CB90A8A00C45936 /* QueryModel.m in Sources */,

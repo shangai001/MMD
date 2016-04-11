@@ -6,10 +6,10 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "LogginModel.h"
+#import "LoginModel.h"
 #import "HttpRequest.h"
 
-@implementation LogginModel
+@implementation LoginModel
 
 + (void)checkUserAuthorized:(NSDictionary *)info
           completionHandler:(void (^)(NSDictionary *))completationBlock
