@@ -228,7 +228,7 @@ CGFloat const INPUTROW_HEIGHT = 30;
     [self checkoutUserCompleteInfo];
 }
 - (void)uploadDeviceinfo:(NSDictionary *)resultDictionary{
-    
+    //TODO:此处需要修改信息
     //上传设备信息
     NSDictionary *user = resultDictionary[@"data"][@"user"];
     NSString *userId = user[@"id"];

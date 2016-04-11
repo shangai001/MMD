@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="289" height="30"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qq.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Fj-AJ-SRc">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_code.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Fj-AJ-SRc">
                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="6iz-V9-9DL"/>
@@ -49,6 +49,6 @@
         </view>
     </objects>
     <resources>
-        <image name="qq.png" width="35" height="35"/>
+        <image name="login_code.png" width="13" height="15"/>
     </resources>
 </document>

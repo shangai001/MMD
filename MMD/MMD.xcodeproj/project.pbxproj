@@ -1616,6 +1616,10 @@
 				D6F5671D1C80048800B0612F /* TabbarImage */,
 				D6B6921A1C8D7A8500B3877D /* key@2x.png */,
 				D6B6921B1C8D7A8500B3877D /* key@3x.png */,
+				D65E7F541CBB596C003AA72C /* records@2x.png */,
+				D65E7F551CBB596C003AA72C /* records@3x.png */,
+				D65E7F501CBB595D003AA72C /* login_code@2x.png */,
+				D65E7F511CBB595D003AA72C /* login_code@3x.png */,
 				D6B692161C8D7A5B00B3877D /* mmd_logo@2x.png */,
 				D6B692171C8D7A5B00B3877D /* mmd_logo@3x.png */,
 				D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */,
@@ -1719,10 +1723,6 @@
 		D6F5671D1C80048800B0612F /* TabbarImage */ = {
 			isa = PBXGroup;
 			children = (
-				D65E7F541CBB596C003AA72C /* records@2x.png */,
-				D65E7F551CBB596C003AA72C /* records@3x.png */,
-				D65E7F501CBB595D003AA72C /* login_code@2x.png */,
-				D65E7F511CBB595D003AA72C /* login_code@3x.png */,
 				D6E2FFF41CAE579800197B3E /* message@2x.png */,
 				D6E2FFF51CAE579800197B3E /* message@3x.png */,
 				D6F5671E1C8004ED00B0612F /* 借款@2x.png */,
