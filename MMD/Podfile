@@ -11,7 +11,7 @@ target 'MMD' do
     pod 'MJExtension'
     pod 'YYKit'
     pod 'SDAutoLayout'
-    
+    pod 'SimpleKeychain'
     pod 'ShareSDK3'
     pod 'MOBFoundation_IDFA'
     pod 'ShareSDK3/ShareSDKUI'
