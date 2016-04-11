@@ -246,7 +246,6 @@ NSInteger const ShouldCheckoutCredit = 0;
             paVC.status = 1;
             
         }else{
-            [SVProgressHUD showInfoWithStatus:@"提交信息失败"];
         }
     } failure:^(NSError *error) {
         

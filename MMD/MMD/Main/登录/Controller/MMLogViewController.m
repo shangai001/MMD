@@ -226,7 +226,7 @@ CGFloat const INPUTROW_HEIGHT = 30;
     //记录用户信息(可以单独写出来)
     [AppUserInfoHelper updateUserInfo:resultDictionary];
     //绑定用户到真信
-    [self blindUserZXWithDictionary:resultDictionary];
+    [self blindUserZXWithDictionary:resultDictionary[@"data"]];
     //检查用户资料完善情况
     [self checkoutUserCompleteInfo];
 }
@@ -255,8 +255,9 @@ CGFloat const INPUTROW_HEIGHT = 30;
 //绑定用户到真信SDK
 - (void)blindUserZXWithDictionary:(NSDictionary *)resultDic{
     NSDictionary *userInfo = resultDic[mmdUserInfo];
+    NSLog(@"UserInfo  %@",userInfo);
     [LoginStauff shouldBlindUser:userInfo[@"userId"] mobileId:userInfo[@"phone"] with:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
-        
+        NSLog(@"绑定返回 code = %@ message = %@ detail = %@",@(code),message,memberDetail);
     }];
 }
 #pragma mark ButtonOutletAction
