@@ -192,6 +192,34 @@
 		D65F2C441CBB7A57000817AE /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D65F2C411CBB7A57000817AE /* ZXSDK.bundle */; };
 		D65F2CA81CBBAF76000817AE /* ConstantKeySecret.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F2CA71CBBAF76000817AE /* ConstantKeySecret.m */; };
 		D65F2CAB1CBBB370000817AE /* LoginStauff.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F2CAA1CBBB370000817AE /* LoginStauff.m */; };
+		D65F2CAF1CBBC1EE000817AE /* IDInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F2CAD1CBBC1EE000817AE /* IDInfoController.m */; };
+		D65F2CB01CBBC1EE000817AE /* IDInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CAE1CBBC1EE000817AE /* IDInfoController.xib */; };
+		D65F2CC01CBBC83E000817AE /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CB31CBBC83E000817AE /* Icon-60.png */; };
+		D65F2CC11CBBC83E000817AE /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CB41CBBC83E000817AE /* Icon-60@2x.png */; };
+		D65F2CC21CBBC83E000817AE /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CB51CBBC83E000817AE /* Icon-60@3x.png */; };
+		D65F2CC31CBBC83E000817AE /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CB61CBBC83E000817AE /* Icon-Small.png */; };
+		D65F2CC41CBBC83E000817AE /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CB71CBBC83E000817AE /* Icon-Small@2x.png */; };
+		D65F2CC51CBBC83E000817AE /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CB81CBBC83E000817AE /* Icon-Small@3x.png */; };
+		D65F2CC61CBBC83E000817AE /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CB91CBBC83E000817AE /* Icon-Spotlight-40.png */; };
+		D65F2CC71CBBC83E000817AE /* Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CBA1CBBC83E000817AE /* Icon-Spotlight-40@2x.png */; };
+		D65F2CC81CBBC83E000817AE /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CBB1CBBC83E000817AE /* Icon-Spotlight-40@3x.png */; };
+		D65F2CC91CBBC83E000817AE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CBC1CBBC83E000817AE /* Icon.png */; };
+		D65F2CCA1CBBC83E000817AE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CBD1CBBC83E000817AE /* Icon@2x.png */; };
+		D65F2CCB1CBBC83E000817AE /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CBE1CBBC83E000817AE /* iTunesArtwork */; };
+		D65F2CCC1CBBC83E000817AE /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CBF1CBBC83E000817AE /* iTunesArtwork@2x */; };
+		D65F2CDB1CBBC84B000817AE /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CCE1CBBC84B000817AE /* Icon-60.png */; };
+		D65F2CDC1CBBC84B000817AE /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CCF1CBBC84B000817AE /* Icon-60@2x.png */; };
+		D65F2CDD1CBBC84B000817AE /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD01CBBC84B000817AE /* Icon-60@3x.png */; };
+		D65F2CDE1CBBC84B000817AE /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD11CBBC84B000817AE /* Icon-Small.png */; };
+		D65F2CDF1CBBC84B000817AE /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD21CBBC84B000817AE /* Icon-Small@2x.png */; };
+		D65F2CE01CBBC84B000817AE /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD31CBBC84B000817AE /* Icon-Small@3x.png */; };
+		D65F2CE11CBBC84B000817AE /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD41CBBC84B000817AE /* Icon-Spotlight-40.png */; };
+		D65F2CE21CBBC84B000817AE /* Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD51CBBC84B000817AE /* Icon-Spotlight-40@2x.png */; };
+		D65F2CE31CBBC84B000817AE /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD61CBBC84B000817AE /* Icon-Spotlight-40@3x.png */; };
+		D65F2CE41CBBC84B000817AE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD71CBBC84B000817AE /* Icon.png */; };
+		D65F2CE51CBBC84B000817AE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD81CBBC84B000817AE /* Icon@2x.png */; };
+		D65F2CE61CBBC84B000817AE /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CD91CBBC84B000817AE /* iTunesArtwork */; };
+		D65F2CE71CBBC84B000817AE /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CDA1CBBC84B000817AE /* iTunesArtwork@2x */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
 		D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F9A1CB42F570038F312 /* GraphicVerification.m */; };
 		D66B4FA21CB4EE820038F312 /* AppUserInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4FA11CB4EE820038F312 /* AppUserInfoHelper.m */; };
@@ -560,6 +588,35 @@
 		D65F2CA71CBBAF76000817AE /* ConstantKeySecret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantKeySecret.m; sourceTree = "<group>"; };
 		D65F2CA91CBBB370000817AE /* LoginStauff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginStauff.h; sourceTree = "<group>"; };
 		D65F2CAA1CBBB370000817AE /* LoginStauff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginStauff.m; sourceTree = "<group>"; };
+		D65F2CAC1CBBC1EE000817AE /* IDInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDInfoController.h; sourceTree = "<group>"; };
+		D65F2CAD1CBBC1EE000817AE /* IDInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDInfoController.m; sourceTree = "<group>"; };
+		D65F2CAE1CBBC1EE000817AE /* IDInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDInfoController.xib; sourceTree = "<group>"; };
+		D65F2CB31CBBC83E000817AE /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		D65F2CB41CBBC83E000817AE /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		D65F2CB51CBBC83E000817AE /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		D65F2CB61CBBC83E000817AE /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		D65F2CB71CBBC83E000817AE /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		D65F2CB81CBBC83E000817AE /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		D65F2CB91CBBC83E000817AE /* Icon-Spotlight-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40.png"; sourceTree = "<group>"; };
+		D65F2CBA1CBBC83E000817AE /* Icon-Spotlight-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@2x.png"; sourceTree = "<group>"; };
+		D65F2CBB1CBBC83E000817AE /* Icon-Spotlight-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@3x.png"; sourceTree = "<group>"; };
+		D65F2CBC1CBBC83E000817AE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D65F2CBD1CBBC83E000817AE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D65F2CBE1CBBC83E000817AE /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		D65F2CBF1CBBC83E000817AE /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		D65F2CCE1CBBC84B000817AE /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		D65F2CCF1CBBC84B000817AE /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		D65F2CD01CBBC84B000817AE /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		D65F2CD11CBBC84B000817AE /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		D65F2CD21CBBC84B000817AE /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		D65F2CD31CBBC84B000817AE /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		D65F2CD41CBBC84B000817AE /* Icon-Spotlight-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40.png"; sourceTree = "<group>"; };
+		D65F2CD51CBBC84B000817AE /* Icon-Spotlight-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@2x.png"; sourceTree = "<group>"; };
+		D65F2CD61CBBC84B000817AE /* Icon-Spotlight-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@3x.png"; sourceTree = "<group>"; };
+		D65F2CD71CBBC84B000817AE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D65F2CD81CBBC84B000817AE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D65F2CD91CBBC84B000817AE /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		D65F2CDA1CBBC84B000817AE /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		D66B4F931CB4232F0038F312 /* MMDLoggin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDLoggin.h; sourceTree = "<group>"; };
 		D66B4F941CB4232F0038F312 /* MMDLoggin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDLoggin.m; sourceTree = "<group>"; };
 		D66B4F991CB42F570038F312 /* GraphicVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicVerification.h; sourceTree = "<group>"; };
@@ -1354,6 +1411,55 @@
 			path = ZXSDK;
 			sourceTree = "<group>";
 		};
+		D65F2CB11CBBC829000817AE /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				D65F2CCD1CBBC84B000817AE /* Shine */,
+				D65F2CB21CBBC83E000817AE /* NoShine */,
+			);
+			name = AppIcons;
+			sourceTree = "<group>";
+		};
+		D65F2CB21CBBC83E000817AE /* NoShine */ = {
+			isa = PBXGroup;
+			children = (
+				D65F2CB31CBBC83E000817AE /* Icon-60.png */,
+				D65F2CB41CBBC83E000817AE /* Icon-60@2x.png */,
+				D65F2CB51CBBC83E000817AE /* Icon-60@3x.png */,
+				D65F2CB61CBBC83E000817AE /* Icon-Small.png */,
+				D65F2CB71CBBC83E000817AE /* Icon-Small@2x.png */,
+				D65F2CB81CBBC83E000817AE /* Icon-Small@3x.png */,
+				D65F2CB91CBBC83E000817AE /* Icon-Spotlight-40.png */,
+				D65F2CBA1CBBC83E000817AE /* Icon-Spotlight-40@2x.png */,
+				D65F2CBB1CBBC83E000817AE /* Icon-Spotlight-40@3x.png */,
+				D65F2CBC1CBBC83E000817AE /* Icon.png */,
+				D65F2CBD1CBBC83E000817AE /* Icon@2x.png */,
+				D65F2CBE1CBBC83E000817AE /* iTunesArtwork */,
+				D65F2CBF1CBBC83E000817AE /* iTunesArtwork@2x */,
+			);
+			path = NoShine;
+			sourceTree = "<group>";
+		};
+		D65F2CCD1CBBC84B000817AE /* Shine */ = {
+			isa = PBXGroup;
+			children = (
+				D65F2CCE1CBBC84B000817AE /* Icon-60.png */,
+				D65F2CCF1CBBC84B000817AE /* Icon-60@2x.png */,
+				D65F2CD01CBBC84B000817AE /* Icon-60@3x.png */,
+				D65F2CD11CBBC84B000817AE /* Icon-Small.png */,
+				D65F2CD21CBBC84B000817AE /* Icon-Small@2x.png */,
+				D65F2CD31CBBC84B000817AE /* Icon-Small@3x.png */,
+				D65F2CD41CBBC84B000817AE /* Icon-Spotlight-40.png */,
+				D65F2CD51CBBC84B000817AE /* Icon-Spotlight-40@2x.png */,
+				D65F2CD61CBBC84B000817AE /* Icon-Spotlight-40@3x.png */,
+				D65F2CD71CBBC84B000817AE /* Icon.png */,
+				D65F2CD81CBBC84B000817AE /* Icon@2x.png */,
+				D65F2CD91CBBC84B000817AE /* iTunesArtwork */,
+				D65F2CDA1CBBC84B000817AE /* iTunesArtwork@2x */,
+			);
+			path = Shine;
+			sourceTree = "<group>";
+		};
 		D6805E791CAD1A3200316925 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1463,6 +1569,9 @@
 		D6BC3DBE1CBABD0C00200BC7 /* 身份证信息 */ = {
 			isa = PBXGroup;
 			children = (
+				D65F2CAC1CBBC1EE000817AE /* IDInfoController.h */,
+				D65F2CAD1CBBC1EE000817AE /* IDInfoController.m */,
+				D65F2CAE1CBBC1EE000817AE /* IDInfoController.xib */,
 			);
 			name = "身份证信息";
 			sourceTree = "<group>";
@@ -1690,6 +1799,7 @@
 		D6E1050E1C73219800049C3F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D65F2CB11CBBC829000817AE /* AppIcons */,
 				D6F5671D1C80048800B0612F /* TabbarImage */,
 				D6B6921A1C8D7A8500B3877D /* key@2x.png */,
 				D6B6921B1C8D7A8500B3877D /* key@3x.png */,
@@ -1930,7 +2040,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60609C61C76FF0E000DB373 /* 还款须知@3x.png in Resources */,
+				D65F2CCA1CBBC83E000817AE /* Icon@2x.png in Resources */,
 				D60609A11C76FF0E000DB373 /* 步骤0@2x.png in Resources */,
+				D65F2CC01CBBC83E000817AE /* Icon-60.png in Resources */,
 				D60609F21C76FF0E000DB373 /* addPic@2x.png in Resources */,
 				D6E104D71C7320FD00049C3F /* LaunchScreen.storyboard in Resources */,
 				D6F5671C1C80047500B0612F /* 借款0@3x.png in Resources */,
@@ -1939,14 +2051,18 @@
 				D60609E71C76FF0E000DB373 /* friendsCircle@3x.png in Resources */,
 				D60609B91C76FF0E000DB373 /* 工作信息@2x.png in Resources */,
 				D647FBD81CAE92B200CBF19E /* ContactList.plist in Resources */,
+				D65F2CE41CBBC84B000817AE /* Icon.png in Resources */,
 				D60609FE1C76FF0E000DB373 /* wechat@2x.png in Resources */,
 				D6060A1F1C76FF0E000DB373 /* qq@2x.png in Resources */,
+				D65F2CC61CBBC83E000817AE /* Icon-Spotlight-40.png in Resources */,
 				D633568E1CB181BA000A321C /* ImagesTitles_Mine.plist in Resources */,
 				D6F567291C80055800B0612F /* 我的@3x.png in Resources */,
 				D6060A021C76FF0E000DB373 /* folder@3x.png in Resources */,
 				D6060A0B1C76FF0E000DB373 /* pullDown@3x.png in Resources */,
+				D65F2CC11CBBC83E000817AE /* Icon-60@2x.png in Resources */,
 				D6060A1D1C76FF0E000DB373 /* logo@3x.png in Resources */,
 				D60609D71C76FF0E000DB373 /* 借款须知@2x.png in Resources */,
+				D65F2CC21CBBC83E000817AE /* Icon-60@3x.png in Resources */,
 				D6F01DEA1C7C6BFA00EBC84E /* minus_press@3x.png in Resources */,
 				D60609DD1C76FF0E000DB373 /* visible@2x.png in Resources */,
 				D60609E11C76FF0E000DB373 /* no_visible@3x.png in Resources */,
@@ -1954,7 +2070,9 @@
 				D688B91C1CB6AAD100CC80FF /* FaceRecongnizeController.xib in Resources */,
 				D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */,
 				D60609AD1C76FF0E000DB373 /* 分享@2x.png in Resources */,
+				D65F2CE01CBBC84B000817AE /* Icon-Small@3x.png in Resources */,
 				D60609BC1C76FF0E000DB373 /* 关于@2x.png in Resources */,
+				D65F2CE61CBBC84B000817AE /* iTunesArtwork in Resources */,
 				D6F567281C80055800B0612F /* 我的@2x.png in Resources */,
 				D60609B31C76FF0E000DB373 /* 更多0@2x.png in Resources */,
 				D6060A1C1C76FF0E000DB373 /* logo@2x.png in Resources */,
@@ -1964,9 +2082,12 @@
 				D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */,
 				D633565B1CB035BF000A321C /* FormTableViewCell.xib in Resources */,
 				D65E7F561CBB596C003AA72C /* records@2x.png in Resources */,
+				D65F2CE31CBBC84B000817AE /* Icon-Spotlight-40@3x.png in Resources */,
+				D65F2CC51CBBC83E000817AE /* Icon-Small@3x.png in Resources */,
 				D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */,
 				D60609E31C76FF0E000DB373 /* contact@2x.png in Resources */,
 				D606099F1C76FF0E000DB373 /* 步骤@3x.png in Resources */,
+				D65F2CCC1CBBC83E000817AE /* iTunesArtwork@2x in Resources */,
 				D647FB5E1CAE7F7A00CBF19E /* NewApplyViewController.xib in Resources */,
 				D647FBD91CAE92B200CBF19E /* ImagesTitles_More.plist in Resources */,
 				D65F2C441CBB7A57000817AE /* ZXSDK.bundle in Resources */,
@@ -1975,12 +2096,14 @@
 				D6F01DE71C7C6BFA00EBC84E /* add@2x.png in Resources */,
 				D6F01DE61C7C6BFA00EBC84E /* add_press@3x.png in Resources */,
 				D6060A221C76FF0E000DB373 /* qq空间@2x.png in Resources */,
+				D65F2CE21CBBC84B000817AE /* Icon-Spotlight-40@2x.png in Resources */,
 				D688B9171CB6A0D400CC80FF /* IDVerify.txt in Resources */,
 				D60609A81C76FF0E000DB373 /* 电话图标@3x.png in Resources */,
 				D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */,
 				D60609DE1C76FF0E000DB373 /* visible@3x.png in Resources */,
 				D65E7F531CBB595D003AA72C /* login_code@3x.png in Resources */,
 				D60609AB1C76FF0E000DB373 /* 返回@3x.png in Resources */,
+				D65F2CC81CBBC83E000817AE /* Icon-Spotlight-40@3x.png in Resources */,
 				D64A4E2F1CB7998A00FB519B /* BottomTableViewCell.xib in Resources */,
 				D60609D81C76FF0E000DB373 /* 借款须知@3x.png in Resources */,
 				D6B692191C8D7A5B00B3877D /* mmd_logo@3x.png in Resources */,
@@ -1991,8 +2114,12 @@
 				D647FB841CAE80BE00CBF19E /* RegisterViewController.xib in Resources */,
 				D647FBAE1CAE87FD00CBF19E /* SecondStaepController.xib in Resources */,
 				D6B692181C8D7A5B00B3877D /* mmd_logo@2x.png in Resources */,
+				D65F2CE71CBBC84B000817AE /* iTunesArtwork@2x in Resources */,
+				D65F2CC31CBBC83E000817AE /* Icon-Small.png in Resources */,
+				D65F2CDC1CBBC84B000817AE /* Icon-60@2x.png in Resources */,
 				D60609E91C76FF0E000DB373 /* IDInfo@2x.png in Resources */,
 				D647FBB21CAE87FD00CBF19E /* VerifyViewController.xib in Resources */,
+				D65F2CE11CBBC84B000817AE /* Icon-Spotlight-40.png in Resources */,
 				D6E104D41C7320FD00049C3F /* Assets.xcassets in Resources */,
 				D6060A081C76FF0E000DB373 /* mine_off@3x.png in Resources */,
 				D60609A71C76FF0E000DB373 /* 电话图标@2x.png in Resources */,
@@ -2002,9 +2129,11 @@
 				D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */,
 				D647FB721CAE800100CBF19E /* MMLogViewController.xib in Resources */,
 				D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */,
+				D65F2CCB1CBBC83E000817AE /* iTunesArtwork in Resources */,
 				D6060A071C76FF0E000DB373 /* mine_off@2x.png in Resources */,
 				D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */,
 				D60609AA1C76FF0E000DB373 /* 返回@2x.png in Resources */,
+				D65F2CC71CBBC83E000817AE /* Icon-Spotlight-40@2x.png in Resources */,
 				D647FB621CAE7F7A00CBF19E /* HeaderView.xib in Resources */,
 				D6F567211C8004ED00B0612F /* 借款@3x.png in Resources */,
 				D60609B71C76FF0E000DB373 /* 更改密码@3x.png in Resources */,
@@ -2017,6 +2146,7 @@
 				D647FBD61CAE92B200CBF19E /* area.plist in Resources */,
 				D60609A21C76FF0E000DB373 /* 步骤0@3x.png in Resources */,
 				D6F567171C80047500B0612F /* 还款0@2x.png in Resources */,
+				D65F2CE51CBBC84B000817AE /* Icon@2x.png in Resources */,
 				D60609CC1C76FF0E000DB373 /* 好评@3x.png in Resources */,
 				D6E2FFF71CAE579800197B3E /* message@3x.png in Resources */,
 				D6060A1A1C76FF0E000DB373 /* go@3x.png in Resources */,
@@ -2028,6 +2158,7 @@
 				D63356411CB016DC000A321C /* FailureView.xib in Resources */,
 				D60609C51C76FF0E000DB373 /* 还款须知@2x.png in Resources */,
 				D60609F61C76FF0E000DB373 /* approve_on@3x.png in Resources */,
+				D65F2CC91CBBC83E000817AE /* Icon.png in Resources */,
 				D6465CBA1CB991D400E4E570 /* NoInfoView.xib in Resources */,
 				D647FBD71CAE92B200CBF19E /* BankList.plist in Resources */,
 				D60609F31C76FF0E000DB373 /* addPic@3x.png in Resources */,
@@ -2048,22 +2179,28 @@
 				D60609F91C76FF0E000DB373 /* approve_off@3x.png in Resources */,
 				D606099E1C76FF0E000DB373 /* 步骤@2x.png in Resources */,
 				D64A4E3A1CB7D62800FB519B /* SortIdDic.txt in Resources */,
+				D65F2CC41CBBC83E000817AE /* Icon-Small@2x.png in Resources */,
 				D688B9221CB6C11B00CC80FF /* mmd.txt in Resources */,
 				D60609F01C76FF0E000DB373 /* txweibo@3x.png in Resources */,
 				D6060A231C76FF0E000DB373 /* qq空间@3x.png in Resources */,
 				D6060A131C76FF0E000DB373 /* creditline@2x.png in Resources */,
 				D60609CB1C76FF0E000DB373 /* 好评@2x.png in Resources */,
+				D65F2CB01CBBC1EE000817AE /* IDInfoController.xib in Resources */,
 				D60609C91C76FF0E000DB373 /* 还款页面go@3x.png in Resources */,
 				D6F5672C1C80056300B0612F /* 更多@2x.png in Resources */,
 				D6060A171C76FF0E000DB373 /* creditCardInfo@3x.png in Resources */,
 				D60609AE1C76FF0E000DB373 /* 分享@3x.png in Resources */,
 				D647FB871CAE80BE00CBF19E /* RegisterContentView.xib in Resources */,
+				D65F2CDD1CBBC84B000817AE /* Icon-60@3x.png in Resources */,
+				D65F2CDF1CBBC84B000817AE /* Icon-Small@2x.png in Resources */,
 				D6060A141C76FF0E000DB373 /* creditline@3x.png in Resources */,
 				D6060A201C76FF0E000DB373 /* qq@3x.png in Resources */,
 				D606099C1C76FF0E000DB373 /* 补充附件@3x.png in Resources */,
 				D64C99271CB8DB9300C45936 /* QueryViewController.xib in Resources */,
 				D60609BD1C76FF0E000DB373 /* 关于@3x.png in Resources */,
 				D647FBB01CAE87FD00CBF19E /* ThirdStepController.xib in Resources */,
+				D65F2CDB1CBBC84B000817AE /* Icon-60.png in Resources */,
+				D65F2CDE1CBBC84B000817AE /* Icon-Small.png in Resources */,
 				D60609A51C76FF0E000DB373 /* 持证牌照信息@3x.png in Resources */,
 				D60609DB1C76FF0E000DB373 /* recommend@3x.png in Resources */,
 				D60609A41C76FF0E000DB373 /* 持证牌照信息@2x.png in Resources */,
@@ -2155,6 +2292,7 @@
 				D64C99401CB9125800C45936 /* LoanProtroWebController.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D633566B1CB04320000A321C /* SureViewController.m in Sources */,
+				D65F2CAF1CBBC1EE000817AE /* IDInfoController.m in Sources */,
 				D63356891CB179BA000A321C /* MineHeaderTableViewCell.m in Sources */,
 				D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */,
 				D63356611CB03ACE000A321C /* FormItem.m in Sources */,
@@ -2412,7 +2550,7 @@
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphoneos",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MMD.com.MMD;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mimidai.MMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -2434,7 +2572,7 @@
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphoneos",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MMD.com.MMD;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mimidai.MMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
