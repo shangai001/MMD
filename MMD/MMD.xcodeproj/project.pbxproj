@@ -187,6 +187,9 @@
 		D65E7F531CBB595D003AA72C /* login_code@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65E7F511CBB595D003AA72C /* login_code@3x.png */; };
 		D65E7F561CBB596C003AA72C /* records@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65E7F541CBB596C003AA72C /* records@2x.png */; };
 		D65E7F571CBB596C003AA72C /* records@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65E7F551CBB596C003AA72C /* records@3x.png */; };
+		D65F2C421CBB7A57000817AE /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65F2C371CBB7A57000817AE /* libZXSDK.a */; };
+		D65F2C431CBB7A57000817AE /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65F2C401CBB7A57000817AE /* libZXSDK.a */; };
+		D65F2C441CBB7A57000817AE /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D65F2C411CBB7A57000817AE /* ZXSDK.bundle */; };
 		D66B4F951CB4232F0038F312 /* MMDLoggin.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F941CB4232F0038F312 /* MMDLoggin.m */; };
 		D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4F9A1CB42F570038F312 /* GraphicVerification.m */; };
 		D66B4FA21CB4EE820038F312 /* AppUserInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B4FA11CB4EE820038F312 /* AppUserInfoHelper.m */; };
@@ -515,10 +518,6 @@
 		D64A4E391CB7D62800FB519B /* SortIdDic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SortIdDic.txt; sourceTree = "<group>"; };
 		D64A4E3B1CB7D99000FB519B /* SubmitLoanInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLoanInfoModel.h; sourceTree = "<group>"; };
 		D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLoanInfoModel.m; sourceTree = "<group>"; };
-		D64C991A1CB8DA6A00C45936 /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
-		D64C991B1CB8DA6A00C45936 /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
-		D64C991C1CB8DA6A00C45936 /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
-		D64C991D1CB8DA6A00C45936 /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
 		D64C991E1CB8DA6A00C45936 /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
 		D64C99231CB8DB9300C45936 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryViewController.m; sourceTree = "<group>"; };
 		D64C99241CB8DB9300C45936 /* QueryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryViewController.xib; sourceTree = "<group>"; };
@@ -544,6 +543,19 @@
 		D65E7F511CBB595D003AA72C /* login_code@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_code@3x.png"; sourceTree = "<group>"; };
 		D65E7F541CBB596C003AA72C /* records@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "records@2x.png"; sourceTree = "<group>"; };
 		D65E7F551CBB596C003AA72C /* records@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "records@3x.png"; sourceTree = "<group>"; };
+		D65F2C321CBB7A57000817AE /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
+		D65F2C331CBB7A57000817AE /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
+		D65F2C341CBB7A57000817AE /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
+		D65F2C351CBB7A57000817AE /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
+		D65F2C361CBB7A57000817AE /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
+		D65F2C371CBB7A57000817AE /* libZXSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libZXSDK.a; sourceTree = "<group>"; };
+		D65F2C3B1CBB7A57000817AE /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
+		D65F2C3C1CBB7A57000817AE /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
+		D65F2C3D1CBB7A57000817AE /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
+		D65F2C3E1CBB7A57000817AE /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
+		D65F2C3F1CBB7A57000817AE /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
+		D65F2C401CBB7A57000817AE /* libZXSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libZXSDK.a; sourceTree = "<group>"; };
+		D65F2C411CBB7A57000817AE /* ZXSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSDK.bundle; sourceTree = "<group>"; };
 		D66B4F931CB4232F0038F312 /* MMDLoggin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDLoggin.h; sourceTree = "<group>"; };
 		D66B4F941CB4232F0038F312 /* MMDLoggin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDLoggin.m; sourceTree = "<group>"; };
 		D66B4F991CB42F570038F312 /* GraphicVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicVerification.h; sourceTree = "<group>"; };
@@ -680,6 +692,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65F2C421CBB7A57000817AE /* libZXSDK.a in Frameworks */,
+				D65F2C431CBB7A57000817AE /* libZXSDK.a in Frameworks */,
 				7C1C29D08DC8E5848D086672 /* libPods-MMD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1225,11 +1239,10 @@
 		D64C99191CB8DA6A00C45936 /* ZXSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D64C991A1CB8DA6A00C45936 /* ZXBaseModel.h */,
-				D64C991B1CB8DA6A00C45936 /* ZXIDcardModel.h */,
-				D64C991C1CB8DA6A00C45936 /* ZXMemberDetail.h */,
-				D64C991D1CB8DA6A00C45936 /* ZXMemberModel.h */,
 				D64C991E1CB8DA6A00C45936 /* ZXSDK.h */,
+				D65F2C2F1CBB7A57000817AE /* Release-iphoneos */,
+				D65F2C381CBB7A57000817AE /* Release-iphonesimulator */,
+				D65F2C411CBB7A57000817AE /* ZXSDK.bundle */,
 			);
 			path = ZXSDK;
 			sourceTree = "<group>";
@@ -1278,6 +1291,64 @@
 				D6465CB91CB991D400E4E570 /* NoInfoView.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		D65F2C2F1CBB7A57000817AE /* Release-iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				D65F2C301CBB7A57000817AE /* include */,
+				D65F2C371CBB7A57000817AE /* libZXSDK.a */,
+			);
+			path = "Release-iphoneos";
+			sourceTree = "<group>";
+		};
+		D65F2C301CBB7A57000817AE /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D65F2C311CBB7A57000817AE /* ZXSDK */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D65F2C311CBB7A57000817AE /* ZXSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D65F2C321CBB7A57000817AE /* ZXBaseModel.h */,
+				D65F2C331CBB7A57000817AE /* ZXIDcardModel.h */,
+				D65F2C341CBB7A57000817AE /* ZXMemberDetail.h */,
+				D65F2C351CBB7A57000817AE /* ZXMemberModel.h */,
+				D65F2C361CBB7A57000817AE /* ZXSDK.h */,
+			);
+			path = ZXSDK;
+			sourceTree = "<group>";
+		};
+		D65F2C381CBB7A57000817AE /* Release-iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				D65F2C391CBB7A57000817AE /* include */,
+				D65F2C401CBB7A57000817AE /* libZXSDK.a */,
+			);
+			path = "Release-iphonesimulator";
+			sourceTree = "<group>";
+		};
+		D65F2C391CBB7A57000817AE /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D65F2C3A1CBB7A57000817AE /* ZXSDK */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D65F2C3A1CBB7A57000817AE /* ZXSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D65F2C3B1CBB7A57000817AE /* ZXBaseModel.h */,
+				D65F2C3C1CBB7A57000817AE /* ZXIDcardModel.h */,
+				D65F2C3D1CBB7A57000817AE /* ZXMemberDetail.h */,
+				D65F2C3E1CBB7A57000817AE /* ZXMemberModel.h */,
+				D65F2C3F1CBB7A57000817AE /* ZXSDK.h */,
+			);
+			path = ZXSDK;
 			sourceTree = "<group>";
 		};
 		D6805E791CAD1A3200316925 /* Picker */ = {
@@ -1892,6 +1963,7 @@
 				D606099F1C76FF0E000DB373 /* 步骤@3x.png in Resources */,
 				D647FB5E1CAE7F7A00CBF19E /* NewApplyViewController.xib in Resources */,
 				D647FBD91CAE92B200CBF19E /* ImagesTitles_More.plist in Resources */,
+				D65F2C441CBB7A57000817AE /* ZXSDK.bundle in Resources */,
 				D6F567251C80054D00B0612F /* 还款@3x.png in Resources */,
 				D60609F51C76FF0E000DB373 /* approve_on@2x.png in Resources */,
 				D6F01DE71C7C6BFA00EBC84E /* add@2x.png in Resources */,
@@ -2327,6 +2399,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MMD/MMDPrefixHeader.pch";
 				INFOPLIST_FILE = MMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphoneos",
+					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MMD.com.MMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2344,6 +2421,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MMD/MMDPrefixHeader.pch";
 				INFOPLIST_FILE = MMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphoneos",
+					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MMD.com.MMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
