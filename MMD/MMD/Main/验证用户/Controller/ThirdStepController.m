@@ -14,6 +14,7 @@
 #import "BaseNextButton.h"
 #import "DistributeStauff.h"
 #import "AppUserInfoHelper.h"
+#import <SVProgressHUD.h>
 
 
 @interface ThirdStepController ()
@@ -61,12 +62,33 @@
 }
 - (IBAction)nextAction:(UIButton *)sender {
     //人脸识别
-    NSString *userId = [AppUserInfoHelper userInfo][@"userId"];
+    NSString *userId = @"24";
     NSString *phone = [AppUserInfoHelper userInfo][@"phone"];
     
     [DistributeStauff shouldBlindUser:userId mobileId:phone with:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
         NSLog(@"code = %@ message = %@ memberDetail = %@",@(code),message,memberDetail);
+        
+        if (code == ZXResult_IDCARD_ALREADY_EXIST) {
+            [SVProgressHUD showInfoWithStatus:@"身份证已经绑定!"];
+        }
+        if (code == ZXResult_INVALID_USERID) {
+            [SVProgressHUD showInfoWithStatus:@"未识别帐号!"];
+        }
+        if (code == ZXResult_MOBILENO_ALREADY_EXIST) {
+            [SVProgressHUD showInfoWithStatus:@"手机号已经注册!"];
+            
+            [DistributeStauff getMemberDetailByMobileNo:phone withCallback:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
+                NSLog(@"获取详情code = %@ message = %@ memberDetail = %@",@(code),message,memberDetail);
+            }];
+        }
+        if (code == ZXResult_USERID_ALREADY_EXIST || code == ZXResult_SUCCESSED) {
+            
+            [DistributeStauff idcardVerificationForUid:userId withCallback:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
+                 NSLog(@"获取详情code = %@ message = %@ memberDetail = %@",@(code),message,memberDetail);
+            }];
+        }
     }];
+    
 //    FaceRecongnizeController *face = [[FaceRecongnizeController alloc] initWithNibName:NSStringFromClass([FaceRecongnizeController class]) bundle:[NSBundle mainBundle]];
 //    [self.navigationController pushViewController:face animated:YES];
 }

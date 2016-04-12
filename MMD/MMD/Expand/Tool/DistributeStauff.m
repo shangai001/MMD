@@ -8,6 +8,8 @@
 
 #import "DistributeStauff.h"
 
+
+
 @implementation DistributeStauff
 
 + (void)shouldBlindUser:(NSString *)userId mobileId:(NSString *)phoneNumber with:(ZXCallback)callBack{
@@ -18,5 +20,23 @@
     
 }
 
++(void)idcardVerificationForUid:(NSString *)uid withCallback:(ZXCallback)callback{
+    
+    [ZXSDK idcardVerificationForUid:uid withCallback:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
+        callback(code,message,memberDetail);
+    }];
+}
++(void)getMemberDetailByMobileNo:(NSString *)mobileno withCallback:(ZXCallback)callback{
+    
+    [ZXSDK getMemberDetailByMobileNo:mobileno withCallback:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
+        callback(code,message,memberDetail);
+    }];
+}
 
++(void)getMemberDetailByIDCard:(NSString *)idcard withCallback:(ZXCallback)callback{
+    
+    [ZXSDK getMemberDetailByIDCard:idcard withCallback:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
+        callback(code,message,memberDetail);
+    }];
+}
 @end

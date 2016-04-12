@@ -21,4 +21,8 @@
  */
 + (void)shouldBlindUser:(NSString *)userId mobileId:(NSString *)phoneNumber with:(ZXCallback)callBack;
 
++(void)idcardVerificationForUid:(NSString *)uid withCallback:(ZXCallback)callback;
++(void)getMemberDetailByMobileNo:(NSString *)mobileno withCallback:(ZXCallback)callback;
++(void)getMemberDetailByIDCard:(NSString *)idcard withCallback:(ZXCallback)callback;
+
 @end
