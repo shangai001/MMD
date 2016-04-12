@@ -8,7 +8,7 @@
 
 #import "BaseModel.h"
 
-@interface IDCardModel : BaseModel
+@interface IDCard_Model : BaseModel
 
 /**
  *  检查身份证是否已经注册,传入idcard

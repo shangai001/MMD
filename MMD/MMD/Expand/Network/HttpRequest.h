@@ -80,7 +80,20 @@ typedef NS_ENUM(NSUInteger,HttpRequestType) {
                 uploadParam:(UploadParam *)uploadParam
                     success:(void (^)())success
                     failure:(void (^)(NSError *error))failure;
+/**
+ *  下载文件并以 baseName储存
+ *
+ *  @param fileUrl 文件地址
+ *  @param name    文件名字
+ *  @param success 下载成功回调
+ *  @param failure 下载失败回调
+ */
++ (void)downloadFile:(NSString *)fileUrl
+            baseName:(NSString *)name
+             success:(void (^)(id result))success
+             failure:(void (^)(NSError * error))failure;
 
+//上传 UUID
 + (void)postUUIDWithURLString:(NSString *)URLString
                        parameters:(id)parameters
                           success:(void (^)(id responseObject))success

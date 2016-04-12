@@ -9,7 +9,7 @@
 #import "IDCardModel.h"
 #import "AppUserInfoHelper.h"
 
-@implementation IDCardModel
+@implementation IDCard_Model
 
 + (void)checkoutIDCard:(NSDictionary *)info
           completation:(successHandler)success

@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "ConstantKeySecret.h"
 #import "ZXSDK.h"
+#import "HttpRequest.h"
+#import <SVProgressHUD.h>
+
 
 
 @interface AppDelegate ()
@@ -29,8 +32,21 @@
     // Override point for customization after application launch.
     //集成分享控件
     [self configureZXSDK];
+    
+    
+//    NSString *URL = @"http://img.hb.aicdn.com/2e23b63420eb8f711cf19ca24b6c7f913ff3311619d43-JB7TsC_fw658";
+//    NSString *URL = @"http://img.hb.aicdn.com/e1411b1f7dea8864aab04ca96899fab6718a52597222a-ZufWDd_fw658";
+    
+//    NSString *savePath = @"go.jpg";
+//    
+//    [HttpRequest downloadFile:URL saveToPath:savePath success:^(id result) {
+//        NSLog(@"结果= %@",result);
+//    } failure:^(NSError *error) {
+//        NSLog(@"error = %@",error);
+//    }];
     return YES;
 }
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

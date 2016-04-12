@@ -26,7 +26,11 @@
 @property int faceDetectionAge;          //人脸检测年龄 注册时通过人脸检测算法计算出来的平均年龄
 @property int faceDetectionAttractive;   //人脸检测颜值 注册时通过人脸检测算法推算出来的颜值，值为 1~100，值越大，表示颜值越高。结果仅供参考。
 @property NSString *faceDetectionSex;    //人脸检测性别 注册时通过人脸检测算法推算出来的性别 0：女 1：男
-@property NSArray *imgIds;               //拍摄的人脸图片
+@property NSArray *imgIds;               //拍摄的人脸图片id数组
+
+@property NSString *faceImgUrl1;         //拍摄的人脸第一张图片url(自动拍)
+@property NSString *faceImgUrl2;         //拍摄的人脸第二张图片url
+
 //nil
 @property NSString *uid;                 //用户ID
 @property int certifiedNum;              //被认证次数

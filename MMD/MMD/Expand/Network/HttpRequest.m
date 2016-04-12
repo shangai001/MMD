@@ -169,7 +169,44 @@
             failure(error);
         }
     }];
-
+    
+}
++ (void)downloadFile:(NSString *)fileUrl baseName:(NSString *)name success:(void (^)(id result))success failure:(void (^)(NSError * error))failure{
+    
+    //首先找到文件储存地址
+    NSString *documents = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *result = [documents stringByAppendingPathComponent:name];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    //删除原文件
+    if ([fileManager fileExistsAtPath:result]) {
+        NSLog(@"相同文件名已经存在");
+        NSError *error = nil;
+        if ([fileManager removeItemAtPath:result error:&error]) {
+            NSLog(@"原文件删除成功");
+        }else{
+            NSLog(@"错误 %@",error);
+        }
+    }
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:fileUrl]];
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
+    sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"image/jpeg", nil];
+    
+    NSURLSessionDownloadTask *downloadTask = [sessionManager downloadTaskWithRequest:urlRequest progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [documentsDirectoryURL URLByAppendingPathComponent:name];
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        if (!error) {
+            success(filePath);
+        }else{
+            failure(error);
+        }
+    }];
+    [downloadTask resume];
 }
 //GET  方法 添加版本号
 + (NSString *)appendVersionString:(NSString *)URLString{
@@ -192,6 +229,7 @@
     }
     return parameters;
 }
+//拦截 返回 code
 + (void)noticeReturnCode:(id)responseObject{
     
     if ([responseObject isKindOfClass:[NSDictionary class]]) {

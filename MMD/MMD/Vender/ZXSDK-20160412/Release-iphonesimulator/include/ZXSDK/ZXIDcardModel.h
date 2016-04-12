@@ -11,8 +11,14 @@
 @interface ZXIDcardModel : ZXBaseModel
 
 //font 身份证正面
-@property NSString *front_faceImgId;                    //人脸图像id
-@property NSString *front_imgId;                        //图像id
+@property NSString *front_faceImgId;                    //身份证正面人脸图像id
+
+@property NSString *front_faceImgUrl_user;              //身份证正面人脸图像url（用户自己拍照上传的）
+@property NSString *front_faceImgUrl_official;          //身份证正面人脸图像url（公安部的数据）
+
+@property NSString *front_imgId;                        //身份证正面图片id
+
+@property NSString *front_imgUrl;                       //身份证正面图片url
 
 @property NSString *front_info_name;                    //姓名
 @property NSString *front_info_year;                    //年
@@ -31,7 +37,10 @@
 @property BOOL front_validity_sex;                      //验证结果
 
 //back 身份证背面
-@property NSString *back_imgId;                         //身份证图片id
+@property NSString *back_imgId;                         //身份证背面图片id
+
+@property NSString *back_imgUrl;                        //身份证背面图片url
+
 @property float back_authorityConfidence;               //身份证签发机（authority）关可信度
 @property NSString *back_idcardWithinPeriod;            //身份证是否还在有效期内（0:未检测或有效期识别有误、1：在有效期内、2：不在有效期内
 
