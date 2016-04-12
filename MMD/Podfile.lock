@@ -27,7 +27,7 @@ PODS:
   - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.2.5)
   - ShareSDK3/ShareSDKPlatforms/WeChat (3.2.5)
   - ShareSDK3/ShareSDKUI (3.2.5)
-  - SimpleKeychain (0.7.0)
+  - SSKeychain (1.4.0)
   - SVProgressHUD (2.0.3)
   - YYKit (1.0.4):
     - YYKit/no-arc (= 1.0.4)
@@ -46,7 +46,7 @@ DEPENDENCIES:
   - ShareSDK3/ShareSDKPlatforms/SinaWeibo
   - ShareSDK3/ShareSDKPlatforms/WeChat
   - ShareSDK3/ShareSDKUI
-  - SimpleKeychain
+  - SSKeychain
   - SVProgressHUD
   - YYKit
 
@@ -58,7 +58,7 @@ SPEC CHECKSUMS:
   RealReachability: 9eb2aeccff2f26491dbaa9cf36f906ad28e8e7d9
   SDAutoLayout: 6b2b6d633076afc3e466dad89cdd7e63b5d59bcf
   ShareSDK3: ccdd8ec971044703e7722e19c2f3b38fb03775e2
-  SimpleKeychain: b50cef3b87939d480ea1143425c00f5b4b70fe21
+  SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   YYKit: 71f7e48cc5de6c69b5c35fee4d3978dac3267041
 

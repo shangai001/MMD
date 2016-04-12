@@ -13,5 +13,6 @@
 + (NSString *)app_Version;
 + (NSString *)machineModel;
 + (NSString*)machineModelName;
++ (NSString *)UUIDString;
 
 @end

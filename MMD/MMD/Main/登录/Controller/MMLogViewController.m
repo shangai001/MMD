@@ -25,7 +25,7 @@
 #import "MMDLoggin.h"
 #import "AppUserInfoHelper.h"
 #import "UploadDevice.h"
-
+#import "AppInfo.h"
 
 
 CGFloat const REMEMBERBUTTONTOTOP_DEFAULT = 25;
@@ -162,7 +162,7 @@ CGFloat const INPUTROW_HEIGHT = 30;
 - (void)refreshCodeImage{
     {
         //请求验证码
-        NSString *uuid = [[UIDevice currentDevice] identifierForVendor].UUIDString;
+        NSString *uuid = [AppInfo UUIDString];
         NSDictionary *info = @{@"uuid":uuid};
         self.user.uuid = uuid;
         [GraphicVerification getGraphicVerification:info completation:^(UIImage *codeImage) {

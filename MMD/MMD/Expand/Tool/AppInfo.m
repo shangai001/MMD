@@ -8,6 +8,7 @@
 
 #import "AppInfo.h"
 #import <UIDevice+YYAdd.h>
+#import <SSKeychain.h>
 
 
 @implementation AppInfo
@@ -36,5 +37,16 @@
 }
 + (NSString *)machineModelName{
     return [UIDevice currentDevice].machineModelName;
+}
++ (NSString *)UUIDString{
+    
+    NSString *savedUUIDString = [SSKeychain passwordForService:@"UUID" account:@"MMD"];
+    if (savedUUIDString == nil || [savedUUIDString isEqualToString:@""]) {
+        savedUUIDString = [UIDevice currentDevice].identifierForVendor.UUIDString;
+        NSError *error = nil;
+        [SSKeychain setPassword:savedUUIDString forService:@"UUID" account:@"MMD" error:&error];
+    }
+    NSLog(@"UUID ---> %@",savedUUIDString);
+    return savedUUIDString;
 }
 @end
