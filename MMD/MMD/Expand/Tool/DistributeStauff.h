@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ZXSDK.h"
 
-@interface LoginStauff : NSObject
+@interface DistributeStauff : NSObject
 
 
 /**

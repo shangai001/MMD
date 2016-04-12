@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Eric.Co.,Ltd. All rights reserved.
 //
 
-#import "LoginStauff.h"
+#import "DistributeStauff.h"
 
-@implementation LoginStauff
+@implementation DistributeStauff
 
 + (void)shouldBlindUser:(NSString *)userId mobileId:(NSString *)phoneNumber with:(ZXCallback)callBack{
     

@@ -12,6 +12,8 @@
 #import "FaceRecongnizeController.h"
 #import "ReadFiler.h"
 #import "BaseNextButton.h"
+#import "DistributeStauff.h"
+#import "AppUserInfoHelper.h"
 
 
 @interface ThirdStepController ()
@@ -59,8 +61,14 @@
 }
 - (IBAction)nextAction:(UIButton *)sender {
     //人脸识别
-    FaceRecongnizeController *face = [[FaceRecongnizeController alloc] initWithNibName:NSStringFromClass([FaceRecongnizeController class]) bundle:[NSBundle mainBundle]];
-    [self.navigationController pushViewController:face animated:YES];
+    NSString *userId = [AppUserInfoHelper userInfo][@"userId"];
+    NSString *phone = [AppUserInfoHelper userInfo][@"phone"];
+    
+    [DistributeStauff shouldBlindUser:userId mobileId:phone with:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
+        NSLog(@"code = %@ message = %@ memberDetail = %@",@(code),message,memberDetail);
+    }];
+//    FaceRecongnizeController *face = [[FaceRecongnizeController alloc] initWithNibName:NSStringFromClass([FaceRecongnizeController class]) bundle:[NSBundle mainBundle]];
+//    [self.navigationController pushViewController:face animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

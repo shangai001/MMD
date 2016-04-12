@@ -191,7 +191,7 @@
 		D65F2C431CBB7A57000817AE /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65F2C401CBB7A57000817AE /* libZXSDK.a */; };
 		D65F2C441CBB7A57000817AE /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D65F2C411CBB7A57000817AE /* ZXSDK.bundle */; };
 		D65F2CA81CBBAF76000817AE /* ConstantKeySecret.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F2CA71CBBAF76000817AE /* ConstantKeySecret.m */; };
-		D65F2CAB1CBBB370000817AE /* LoginStauff.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F2CAA1CBBB370000817AE /* LoginStauff.m */; };
+		D65F2CAB1CBBB370000817AE /* DistributeStauff.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F2CAA1CBBB370000817AE /* DistributeStauff.m */; };
 		D65F2CAF1CBBC1EE000817AE /* IDInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F2CAD1CBBC1EE000817AE /* IDInfoController.m */; };
 		D65F2CB01CBBC1EE000817AE /* IDInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65F2CAE1CBBC1EE000817AE /* IDInfoController.xib */; };
 		D65F2DA01CBBCAE2000817AE /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = D65F2D8D1CBBCAE2000817AE /* Icon-60.png */; };
@@ -580,8 +580,8 @@
 		D65F2C411CBB7A57000817AE /* ZXSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSDK.bundle; sourceTree = "<group>"; };
 		D65F2CA61CBBAF76000817AE /* ConstantKeySecret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantKeySecret.h; sourceTree = "<group>"; };
 		D65F2CA71CBBAF76000817AE /* ConstantKeySecret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantKeySecret.m; sourceTree = "<group>"; };
-		D65F2CA91CBBB370000817AE /* LoginStauff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginStauff.h; sourceTree = "<group>"; };
-		D65F2CAA1CBBB370000817AE /* LoginStauff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginStauff.m; sourceTree = "<group>"; };
+		D65F2CA91CBBB370000817AE /* DistributeStauff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistributeStauff.h; sourceTree = "<group>"; };
+		D65F2CAA1CBBB370000817AE /* DistributeStauff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistributeStauff.m; sourceTree = "<group>"; };
 		D65F2CAC1CBBC1EE000817AE /* IDInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDInfoController.h; sourceTree = "<group>"; };
 		D65F2CAD1CBBC1EE000817AE /* IDInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDInfoController.m; sourceTree = "<group>"; };
 		D65F2CAE1CBBC1EE000817AE /* IDInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDInfoController.xib; sourceTree = "<group>"; };
@@ -1246,8 +1246,8 @@
 				D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */,
 				D6BC3DD01CBAD0AD00200BC7 /* LogginHandler.h */,
 				D6BC3DD11CBAD0AD00200BC7 /* LogginHandler.m */,
-				D65F2CA91CBBB370000817AE /* LoginStauff.h */,
-				D65F2CAA1CBBB370000817AE /* LoginStauff.m */,
+				D65F2CA91CBBB370000817AE /* DistributeStauff.h */,
+				D65F2CAA1CBBB370000817AE /* DistributeStauff.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -2335,7 +2335,7 @@
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,
 				D647FB8E1CAE814300CBF19E /* UploadParam.m in Sources */,
-				D65F2CAB1CBBB370000817AE /* LoginStauff.m in Sources */,
+				D65F2CAB1CBBB370000817AE /* DistributeStauff.m in Sources */,
 				D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */,
 				D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */,
 				D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */,
