@@ -10,8 +10,10 @@
 #import "checkoutPhoneNumber.h"
 #import "LoginUser.h"
 #import "LoginModel.h"
+#import "LogginHandler.h"
 #import <MJExtension.h>
 #import "ContantLength.h"
+#import "ConstantNotiName.h"
 #import "RegisterViewController.h"
 #import "BaseNavgationController.h"
 #import "ColorHeader.h"
@@ -24,7 +26,6 @@
 #import "GraphicVerification.h"
 #import "MMDLoggin.h"
 #import "AppUserInfoHelper.h"
-#import "UploadDevice.h"
 #import "AppInfo.h"
 
 
@@ -218,30 +219,35 @@ CGFloat const INPUTROW_HEIGHT = 30;
 }
 #pragma mark AfterLogin
 - (void)handleLoginResult:(NSDictionary *)resultDictionary{
-    //上传设备信息
-    [self uploadDeviceinfo:resultDictionary];
-    //是否需要记住密码
-    [self recordUserPassword];
+
     //记录用户信息(可以单独写出来)
     [AppUserInfoHelper updateUserInfo:resultDictionary];
+    //是否需要记住密码
+    [self recordUserPassword];
     //检查用户资料完善情况
     [self checkoutUserCompleteInfo];
+    //上传用户联系人
+    [self uploadContacts];
+    //上传设备信息
+    [self uploadDeviceinfo:resultDictionary];
+    //发送已经登录通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:UserDidLogin object:nil];
 }
 - (void)uploadDeviceinfo:(NSDictionary *)resultDictionary{
-    //TODO:此处需要修改信息
-    //上传设备信息
-    NSDictionary *user = resultDictionary[@"data"][@"user"];
-    NSString *userId = user[@"id"];
-    NSString *token = user[@"token"];
-    NSMutableDictionary *userTokenDic = [NSMutableDictionary dictionaryWithObjects:@[userId,token] forKeys:@[@"userId",@"token"]];
-    NSLog(@"此处需要修改");
-    /*
-    [UploadDevice uploadDeviceInfo:userTokenDic success:^(NSDictionary *resultDic) {
-        NSLog(@"上传设备返回信息 %@",resultDic);
+    
+    [LogginHandler shouldUploadDeviceInfo:resultDictionary success:^(NSDictionary *resultDic) {
+        NSLog(@"上传设备信息 %@",resultDic);
     } failure:^(NSError *error) {
         
-    }]
-     */
+    }];
+}
+- (void)uploadContacts{
+    
+    [LogginHandler shouldUploadContacts:nil success:^(NSDictionary *resultDic) {
+        NSLog(@"上传用户联系人 %@",resultDic);
+    } failure:^(NSError *error) {
+        
+    }];
 }
 - (void)checkoutUserCompleteInfo{
     

@@ -258,7 +258,6 @@
 		D6BC3DCF1CBAC80400200BC7 /* ConstantUserInfoKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DCE1CBAC80400200BC7 /* ConstantUserInfoKey.m */; };
 		D6BC3DD21CBAD0AD00200BC7 /* LogginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DD11CBAD0AD00200BC7 /* LogginHandler.m */; };
 		D6BC3DD51CBAE7C900200BC7 /* ConstantNotiName.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */; };
-		D6C5D70F1CB95214000C633B /* UploadDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C5D70E1CB95214000C633B /* UploadDevice.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -690,8 +689,6 @@
 		D6BC3DD11CBAD0AD00200BC7 /* LogginHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogginHandler.m; sourceTree = "<group>"; };
 		D6BC3DD31CBAE7C900200BC7 /* ConstantNotiName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstantNotiName.h; path = ../Tool/ConstantNotiName.h; sourceTree = "<group>"; };
 		D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConstantNotiName.m; path = ../Tool/ConstantNotiName.m; sourceTree = "<group>"; };
-		D6C5D70D1CB95214000C633B /* UploadDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDevice.h; sourceTree = "<group>"; };
-		D6C5D70E1CB95214000C633B /* UploadDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDevice.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1175,8 +1172,6 @@
 				D647FB6E1CAE800100CBF19E /* LoginUser.m */,
 				D63356791CB121EE000A321C /* WarnLoginModel.h */,
 				D633567A1CB121EE000A321C /* WarnLoginModel.m */,
-				D6C5D70D1CB95214000C633B /* UploadDevice.h */,
-				D6C5D70E1CB95214000C633B /* UploadDevice.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1406,6 +1401,15 @@
 				D6465CB91CB991D400E4E570 /* NoInfoView.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		D65B6BD11CBEB656000F6F92 /* NSNullCategory */ = {
+			isa = PBXGroup;
+			children = (
+				D64036781CBE704B002009C3 /* NSNull+EZSafe.h */,
+				D64036791CBE704B002009C3 /* NSNull+EZSafe.m */,
+			);
+			name = NSNullCategory;
 			sourceTree = "<group>";
 		};
 		D65F2D8B1CBBCA74000817AE /* normalIcons */ = {
@@ -1884,8 +1888,7 @@
 		D6E105101C7321A000049C3F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				D64036781CBE704B002009C3 /* NSNull+EZSafe.h */,
-				D64036791CBE704B002009C3 /* NSNull+EZSafe.m */,
+				D65B6BD11CBEB656000F6F92 /* NSNullCategory */,
 				D62730721CBCFFC30024E735 /* ZXSDK-20160412 */,
 				D6805EA31CAD1CF500316925 /* 联系人 */,
 				D6805E791CAD1A3200316925 /* Picker */,
@@ -2341,7 +2344,6 @@
 				D647FBB41CAE87FD00CBF19E /* HorizontalDashLineView.m in Sources */,
 				D647FB1A1CAE7E2D00CBF19E /* MoreCellUIItem.m in Sources */,
 				D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */,
-				D6C5D70F1CB95214000C633B /* UploadDevice.m in Sources */,
 				D63356531CB033B2000A321C /* LoanVerifyController.m in Sources */,
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,

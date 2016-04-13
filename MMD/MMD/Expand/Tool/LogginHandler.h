@@ -50,6 +50,15 @@
 + (void)shouldUploadContacts:(id)info
                      success:(successHandler)successHandler
                      failure:(failureHandler)failureHandler;
-
+/**
+ *  更新用户信息
+ *
+ *  @param info
+ *  @param successHandler
+ *  @param failureHandler 
+ */
++ (void)shouldUpdateUserInfo:(NSDictionary *)info
+                     success:(successHandler)successHandler
+                     failure:(failureHandler)failureHandler;
 
 @end

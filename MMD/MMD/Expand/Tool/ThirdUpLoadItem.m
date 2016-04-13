@@ -12,8 +12,7 @@
 #import <NSData+YYAdd.h>
 #import "AppUserInfoHelper.h"
 #import "ConstantNotiName.h"
-#import "LoginModel.h"
-#import "MMDLoggin.h"
+#import "LogginHandler.h"
 #import <SVProgressHUD.h>
 
 
@@ -145,28 +144,18 @@ static NSString * const userTakeFaceImageName = @"userTakeImage";
 }
 - (void)didUpdateSuccess{
     
-    [self updateUserInfoCompletionHandler:^(NSDictionary *resultDictionary) {
-        if ([resultDictionary[@"code"] integerValue] == 0) {
+    [LogginHandler shouldUpdateUserInfo:nil success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
             [SVProgressHUD dismiss];
             //更新本地数据
-            [AppUserInfoHelper updateUserInfo:resultDictionary];
+            [AppUserInfoHelper updateUserInfo:resultDic];
+            EZLog(@"更新用户信息成功");
             [[NSNotificationCenter defaultCenter] postNotificationName:UserInfoUpdateSuccess object:nil];
         }
-    } FailureHandler:^(NSError *error) {
-        [SVProgressHUD dismiss];
-        NSLog(@"error %@",error);
+
+    } failure:^(NSError *error) {
+        EZLog(@"更新登录错误 %@",error);
     }];
 }
-- (void)updateUserInfoCompletionHandler:(void(^)(NSDictionary *resultDictionary))completationBlock
-                         FailureHandler:(void(^)(NSError *error))failureBlock{
-    
-    NSDictionary *infoDic = [MMDLoggin accountDic];
-    [LoginModel loginUser:infoDic completionHandler:^(NSDictionary *resultDictionary) {
-        if ([resultDictionary[@"code"] integerValue] == 0) {
-            completationBlock(resultDictionary);
-        }
-    } FailureHandler:^(NSError *error) {
-        failureBlock(error);
-    }];
-}
+
 @end

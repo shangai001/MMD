@@ -65,6 +65,9 @@ static NSString * const loggoutCellId = @"loggoutCellId";
     }
     return _dataArray;
 }
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
@@ -75,6 +78,7 @@ static NSString * const loggoutCellId = @"loggoutCellId";
     // Do any additional setup after loading the view.
     self.logStatus = [MMDLoggin isLoggin];
     [self initTableView];
+    [self registerNotifications];
 }
 - (void)initTableView{
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(kEDGELENGTH, 0, kScreenWidth- 2 * kEDGELENGTH, kScreenHeight) style:UITableViewStyleGrouped];
@@ -89,14 +93,13 @@ static NSString * const loggoutCellId = @"loggoutCellId";
     [_mainTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LoggoutTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:loggoutCellId];
     [self.view addSubview:_mainTableView];
 }
-/*
-- (void)initLogoutButton{
-    _loggoutButton = [[BaseNextButton alloc] init];
-    _loggoutButton.backgroundColor = REDCOLOR;
-    [_loggoutButton setTitle:@"退出" forState:UIControlStateNormal];
+- (void)registerNotifications{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLogin:) name:UserDidLogin object:nil];
 }
- */
-
+- (void)userLogin:(id)sender{
+    self.logStatus = YES;
+    [self.mainTableView reloadData];
+}
 #pragma mark UITableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     if (_logStatus) {

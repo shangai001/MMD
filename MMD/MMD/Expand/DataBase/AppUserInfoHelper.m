@@ -106,9 +106,11 @@
     
     NSString *userId = [self userInfo][@"userId"];
     NSString *token = [self user][@"token"];
-    
-    NSMutableDictionary *infoDic = [NSMutableDictionary dictionaryWithDictionary:@{@"userId":userId,@"token":token}];
-    return infoDic;
+    if (userId && token) {
+        NSMutableDictionary *infoDic = [NSMutableDictionary dictionaryWithDictionary:@{@"userId":userId,@"token":token}];
+        return infoDic;
+    }
+    return nil;
 }
 + (NSInteger)UserStatus{
     
@@ -125,7 +127,7 @@
     
     for (NSString *key in [info allKeys]) {
         id object = info[key];
-        if (![object isKindOfClass:[NSNull class]]) {
+        if (![object isKindOfClass:[NSNull class]] && userIdTokenDic) {
             [userIdTokenDic setObject:object forKey:key];
         }
     }
