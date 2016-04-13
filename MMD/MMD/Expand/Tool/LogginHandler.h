@@ -40,5 +40,16 @@
 + (void)blindDeviceInfo:(NSDictionary *)info
                 success:(successHandler)successHandler
                 failure:(failureHandler)failureHandler;
+/**
+ *  上传通讯录
+ *
+ *  @param info           通讯录信息
+ *  @param successHandler 上传成功回调
+ *  @param failureHandler 上传失败回调
+ */
++ (void)shouldUploadContacts:(id)info
+                     success:(successHandler)successHandler
+                     failure:(failureHandler)failureHandler;
+
 
 @end
