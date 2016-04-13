@@ -160,6 +160,7 @@
     
     
     NSDictionary *infoDic = [MMDLoggin accountDic];
+    NSAssert(infoDic, @"用户名密码空!");
     [LoginModel loginUser:infoDic completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
             successHandler(resultDictionary);

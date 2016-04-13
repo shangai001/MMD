@@ -22,7 +22,7 @@
 /*
  {
  @"LastPasswordKey":@"17710243738"
- @"LastPasswordValue":@"qqqqqq"
+ @"LastPasswordValue":@"qwtatq"
  }
  */
 #pragma mark Record/Delete Password
@@ -38,9 +38,11 @@
     
     NSString *userId = [SDUserDefault objectForKey:PASSWORD_KEY];
     NSString *password = [SDUserDefault objectForKey:PASSWORD_VALUE];
-    
-    NSDictionary *userIdPasswordDic = @{@"phone":userId,@"password":password};
-    return userIdPasswordDic;
+    if (userId && password) {
+        NSDictionary *userIdPasswordDic = @{@"phone":userId,@"password":password};
+        return userIdPasswordDic;
+    }
+    return nil;
 }
 + (void)ez_ResetStandardUserDefaults{
     
