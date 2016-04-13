@@ -46,48 +46,55 @@
     [tempDic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         if ([key isEqualToString:@"借款人"]) {
             NSString *userName = userInfo[@"name"];
-            [tempDic setObject:userName forKey:key];
+            [self setNonullObject:userName Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"身份证"]) {
-            [tempDic setObject:userInfo[@"idcard"] forKey:key];
+            [self setNonullObject:userInfo[@"idcard"] Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"银行卡"]) {
-            [tempDic setObject:userBank[@"bankCard"] forKey:key];
+            [self setNonullObject:userBank[@"bankCard"] Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"开户银行"]) {
             NSString *bankAdress = [NSString stringWithFormat:@"%@%@%@",userBank[@"province"],userBank[@"city"],userBank[@"area"]];
-            [tempDic setObject:bankAdress forKey:key];
+            [self setNonullObject:bankAdress Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"借款金额"]) {
             NSString *loanFloatString = [NSString stringWithFormat:@"%0.2f元",item.floatLoanMoney];
-            [tempDic setObject:loanFloatString forKey:key];
+            [self setNonullObject:loanFloatString Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"借款期限"]) {
             NSString *time = [NSString stringWithFormat:@"%ld个月",(long)item.refundMoth];
-            [tempDic setObject:time forKey:key];
+            [self setNonullObject:time Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"综合管理费"]) {
             float manageMent = [CalculateRefund manageMentMoney];
             float totalManageMent = manageMent * item.refundMoth;
             NSString *totalString = [NSString stringWithFormat:@"%0.2f元",totalManageMent];
-            [tempDic setObject:totalString forKey:key];
+            [self setNonullObject:totalString Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"月管理费"]) {
             float manageMent = [CalculateRefund manageMentMoney];
             NSString *singleString = [NSString stringWithFormat:@"%0.2f元",manageMent];
-            [tempDic setObject:singleString forKey:key];
+            [self setNonullObject:singleString Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"实际到账金额"]) {
             float actualMoney = [CalculateRefund getActualMoney:item.floatLoanMoney];
             NSString *actualString = [NSString stringWithFormat:@"%0.2f元",actualMoney];
-            [tempDic setObject:actualString forKey:key];
+            [self setNonullObject:actualString Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"还款方式"]) {
             NSString *refundWay = @"等额本息 按期还款";
-            [tempDic setObject:refundWay forKey:key];
+            [self setNonullObject:refundWay Forkey:key inDic:tempDic];
         }
     }];
     return [tempDic mutableCopy];
+}
++ (void)setNonullObject:(id)object Forkey:(NSString *)key inDic:(NSMutableDictionary *)tempDic{
+    
+    //非空判断
+    if (![object isKindOfClass:[NSNull class]]) {
+        [tempDic setObject:object forKey:key];
+    }
 }
 + (NSMutableArray *)ez_itemsArrayForVerify:(LoanInfoItem *)item{
     

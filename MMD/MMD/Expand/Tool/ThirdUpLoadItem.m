@@ -109,13 +109,24 @@ static NSString * const userTakeFaceImageName = @"userTakeImage";
     
     NSMutableDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
     
-    [tokenDic setObject:item.idcardHand forKey:@"idcardHand"];
-    [tokenDic setObject:item.idcardFront forKey:@"idcardFront"];
-    [tokenDic setObject:item.idcardBack forKey:@"idcardBack"];
-    
-    [tokenDic setObject:item.mobileIdCardHand forKey:@"mobileIdCardHand"];
-    [tokenDic setObject:item.mobileIdCardFront forKey:@"mobileIdCardFront"];
-    [tokenDic setObject:item.mobileIdCardBack forKey:@"mobileIdCardBack"];
+    if (![item.idcardFront isKindOfClass:[NSNull class]]) {
+        [tokenDic setObject:item.idcardFront forKey:@"idcardFront"];
+    }
+    if (![item.idcardBack isKindOfClass:[NSNull class]]) {
+        [tokenDic setObject:item.idcardBack forKey:@"idcardBack"];
+    }
+    if (![item.idcardHand isKindOfClass:[NSNull class]]) {
+        [tokenDic setObject:item.idcardHand forKey:@"idcardHand"];
+    }
+    if (![item.mobileIdCardFront isKindOfClass:[NSNull class]]) {
+        [tokenDic setObject:item.mobileIdCardFront forKey:@"mobileIdCardFront"];
+    }
+    if (![item.mobileIdCardBack isKindOfClass:[NSNull class]]) {
+        [tokenDic setObject:item.mobileIdCardBack forKey:@"mobileIdCardBack"];
+    }
+    if (![item.mobileIdCardHand isKindOfClass:[NSNull class]]) {
+        [tokenDic setObject:item.mobileIdCardHand forKey:@"mobileIdCardHand"];
+    }
     
     NSString *URL = [NSString stringWithFormat:@"%@/user/thirdSaveUserInfo",kHostURL];
     

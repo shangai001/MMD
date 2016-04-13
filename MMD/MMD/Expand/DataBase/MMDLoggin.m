@@ -28,9 +28,10 @@
 #pragma mark Record/Delete Password
 + (void)ez_RecordUser:(NSString *)key_Phone password:(NSString *)value_Password{
     
-    [SDUserDefault setObject:key_Phone forKey:PASSWORD_KEY];
-    [SDUserDefault setObject:value_Password forKey:PASSWORD_VALUE];
-    
+    if (![key_Phone isKindOfClass:[NSNull class]] && ![value_Password isKindOfClass:[NSNull class]]) {
+        [SDUserDefault setObject:key_Phone forKey:PASSWORD_KEY];
+        [SDUserDefault setObject:value_Password forKey:PASSWORD_VALUE];
+    }
     [SDUserDefault synchronize];
 }
 + (NSDictionary *)accountDic{

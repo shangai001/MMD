@@ -118,6 +118,7 @@
 		D63356911CB184E8000A321C /* MoreTableViewCell+MineUIInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356901CB184E8000A321C /* MoreTableViewCell+MineUIInfo.m */; };
 		D63356971CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356961CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.m */; };
 		D64036741CBD5EAD002009C3 /* ThirdUpLoadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D64036731CBD5EAD002009C3 /* ThirdUpLoadItem.m */; };
+		D640367A1CBE704B002009C3 /* NSNull+EZSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = D64036791CBE704B002009C3 /* NSNull+EZSafe.m */; };
 		D6465CB81CB991C600E4E570 /* NoInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6465CB71CB991C600E4E570 /* NoInfoView.m */; };
 		D6465CBA1CB991D400E4E570 /* NoInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6465CB91CB991D400E4E570 /* NoInfoView.xib */; };
 		D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D647FB071CAE7E2D00CBF19E /* MoreViewController.m */; };
@@ -457,6 +458,8 @@
 		D63356981CB1870D000A321C /* ImagesTitles_Mine_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTitles_Mine_Header.h; sourceTree = "<group>"; };
 		D64036721CBD5EAD002009C3 /* ThirdUpLoadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdUpLoadItem.h; sourceTree = "<group>"; };
 		D64036731CBD5EAD002009C3 /* ThirdUpLoadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdUpLoadItem.m; sourceTree = "<group>"; };
+		D64036781CBE704B002009C3 /* NSNull+EZSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+EZSafe.h"; sourceTree = "<group>"; };
+		D64036791CBE704B002009C3 /* NSNull+EZSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+EZSafe.m"; sourceTree = "<group>"; };
 		D6465CB61CB991C600E4E570 /* NoInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoInfoView.h; sourceTree = "<group>"; };
 		D6465CB71CB991C600E4E570 /* NoInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoInfoView.m; sourceTree = "<group>"; };
 		D6465CB91CB991D400E4E570 /* NoInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoInfoView.xib; sourceTree = "<group>"; };
@@ -1881,6 +1884,8 @@
 		D6E105101C7321A000049C3F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				D64036781CBE704B002009C3 /* NSNull+EZSafe.h */,
+				D64036791CBE704B002009C3 /* NSNull+EZSafe.m */,
 				D62730721CBCFFC30024E735 /* ZXSDK-20160412 */,
 				D6805EA31CAD1CF500316925 /* 联系人 */,
 				D6805E791CAD1A3200316925 /* Picker */,
@@ -2368,6 +2373,7 @@
 				D64A4E2E1CB7998A00FB519B /* BottomTableViewCell.m in Sources */,
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
 				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
+				D640367A1CBE704B002009C3 /* NSNull+EZSafe.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
 				D6465CB81CB991C600E4E570 /* NoInfoView.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,

@@ -125,7 +125,9 @@
     
     for (NSString *key in [info allKeys]) {
         id object = info[key];
-        [userIdTokenDic setObject:object forKey:key];
+        if (![object isKindOfClass:[NSNull class]]) {
+            [userIdTokenDic setObject:object forKey:key];
+        }
     }
     return userIdTokenDic;
 }

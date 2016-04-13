@@ -229,7 +229,9 @@
         NSDictionary *infoDic = (NSDictionary *)parameters;
         NSMutableDictionary *versionDic = [NSMutableDictionary dictionaryWithDictionary:infoDic];
         NSString *mimidaiVersion = [AppInfo app_Version];
-        [versionDic setObject:mimidaiVersion forKey:@"mimidaiVersion"];
+        if (![mimidaiVersion isKindOfClass:[NSNull class]]) {
+            [versionDic setObject:mimidaiVersion forKey:@"mimidaiVersion"];
+        }
         return versionDic;
     }
     return parameters;
