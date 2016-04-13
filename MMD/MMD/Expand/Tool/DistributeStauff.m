@@ -20,12 +20,7 @@
     
     [ZXSDK bindForUid:userId withMobile:phoneNumber withCallback:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
         
-        
-        
         ThirdUpLoadItem *item = [ThirdUpLoadItem new];
-        
-        NSLog(@"会员信息 -----> %@",memberDetail);
-        
         if (code == ZXResult_IDCARD_ALREADY_EXIST) {
             [SVProgressHUD showInfoWithStatus:@"身份证已经绑定!"];
         }
@@ -79,13 +74,6 @@
     [ZXSDK getMemberDetailByIDCard:idcard withCallback:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
         callback(code,message,memberDetail);
     }];
-}
-//下载图片
-+ (void)downloadImagesWith:(ZXMemberDetail *)detail{
-    
-}
-+ (void)formatItem:(BOOL)frontOK back:(BOOL)backOK user:(BOOL)userOK info:(ThirdUpLoadItem *)item{
-    
 }
 
 /*

@@ -16,6 +16,7 @@
 @property (copy, nonatomic)NSString *idcardFront;
 @property (copy, nonatomic)NSString *idcardBack;
 
+//储存路径
 @property (copy, nonatomic)NSString *mobileIdCardHand;
 @property (copy, nonatomic)NSString *mobileIdCardBack;
 @property (copy, nonatomic)NSString *mobileIdCardFront;

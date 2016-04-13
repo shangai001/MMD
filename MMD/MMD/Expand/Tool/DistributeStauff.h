@@ -24,12 +24,6 @@
 +(void)idcardVerificationForUid:(NSString *)uid withCallback:(ZXCallback)callback;
 +(void)getMemberDetailByMobileNo:(NSString *)mobileno withCallback:(ZXCallback)callback;
 +(void)getMemberDetailByIDCard:(NSString *)idcard withCallback:(ZXCallback)callback;
-/**
- *  下载成功返回的3张图片
- *
- *  @param detail 
- */
-+ (void)downloadImagesWith:(ZXMemberDetail *)detail;
-//+ (void)downloadImagesWith:(ZXMemberDetail *)detail;
+
 
 @end

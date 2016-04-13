@@ -8,6 +8,8 @@
 
 #import "LogginHandler.h"
 #import "MMLogViewController.h"
+#import "AppUserInfoHelper.h"
+
 
 
 @implementation LogginHandler
@@ -23,5 +25,32 @@
         return;
     }
     [currentVC.navigationController pushViewController:logger animated:YES];
+}
++ (void)shouldUploadDeviceInfo:(NSDictionary *)info
+                       success:(successHandler)successHandler
+                       failure:(failureHandler)failureHandler{
+    
+    NSString *deviceURL = [NSString stringWithFormat:@"%@/user/uploadDeviceInfo",kHostURL];
+    NSDictionary *tokenDic = [AppUserInfoHelper appendUserIdToken:info];
+    
+    [HttpRequest postWithURLString:deviceURL parameters:tokenDic success:^(id responseObject) {
+        successHandler(responseObject);
+    } failure:^(NSError *error) {
+        failureHandler(error);
+    }];
+}
++ (void)blindDeviceInfo:(NSDictionary *)info
+                success:(successHandler)successHandler
+                failure:(failureHandler)failureHandler{
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/user/bindChannelId",kHostURL];
+    NSDictionary *tokenDic = [AppUserInfoHelper appendUserIdToken:info];
+    
+    [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
+        successHandler(responseObject);
+    } failure:^(NSError *error) {
+        failureHandler(error);
+    }];
+    
 }
 @end

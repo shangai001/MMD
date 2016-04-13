@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
+#import "BaseModel.h"
 
 @interface LogginHandler : NSObject
 
@@ -19,5 +19,26 @@
  */
 + (void)shouldLogginAt:(UIViewController *)currentVC;
 
+/**
+ *  上传设备信息(brand/model/token/userId/uuid)
+ *
+ *  @param info           设备信息
+ *  @param successHandler 上传成功回调
+ *  @param failureHandler 上传失败回调
+ */
+
++ (void)shouldUploadDeviceInfo:(NSDictionary *)info
+                       success:(successHandler)successHandler
+                       failure:(failureHandler)failureHandler;
+/**
+ *  绑定设备信息用于百度推送
+ *
+ *  @param info           设备信息
+ *  @param successHandler
+ *  @param failureHandler 
+ */
++ (void)blindDeviceInfo:(NSDictionary *)info
+                success:(successHandler)successHandler
+                failure:(failureHandler)failureHandler;
 
 @end

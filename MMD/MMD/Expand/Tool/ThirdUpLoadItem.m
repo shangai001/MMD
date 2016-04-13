@@ -10,6 +10,7 @@
 #import "ZXMemberDetail.h"
 #import "HttpRequest.h"
 #import <NSData+YYAdd.h>
+#import "AppUserInfoHelper.h"
 
 
 //front_imgUrl 身份证整体照片
@@ -77,11 +78,31 @@ static NSString * const userTakeFaceImageName = @"userTakeImage";
     dispatch_group_notify(downloadGroup, dispatch_get_main_queue(), ^{
         // 汇总代码
         NSLog(@"item 属性 %@",item);
+        [item uploadThirdInfo:item];
         
     });
+}
+- (void)uploadThirdInfo:(ThirdUpLoadItem *)item{
+ 
+    NSMutableDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
     
-
+    [tokenDic setObject:item.idcardHand forKey:@"idcardHand"];
+    [tokenDic setObject:item.idcardFront forKey:@"idcardFront"];
+    [tokenDic setObject:item.idcardBack forKey:@"idcardBack"];
+    
+    [tokenDic setObject:item.mobileIdCardHand forKey:@"mobileIdCardHand"];
+    [tokenDic setObject:item.mobileIdCardFront forKey:@"mobileIdCardFront"];
+    [tokenDic setObject:item.mobileIdCardBack forKey:@"mobileIdCardBack"];
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/user/thirdSaveUserInfo",kHostURL];
+    
+    [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
+        if ([responseObject[@"code"] integerValue] == 0) {
+            NSLog(@"上传第三步信息成功");
+        }
+    } failure:^(NSError *error) {
+        
+    }];
     
 }
-
 @end
