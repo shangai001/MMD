@@ -75,7 +75,9 @@
         callback(code,message,memberDetail);
     }];
 }
-
++ (void)updateUserInfo{
+    
+}
 /*
  if (code == ZXResult_SUCCESSED) {
  

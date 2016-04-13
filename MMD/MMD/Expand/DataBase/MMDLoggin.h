@@ -15,6 +15,14 @@
  *  @return 登录状态
  */
 + (BOOL)isLoggin;
+
+/**
+ *  获取保存的用户名和密码
+ *
+ *  @return
+ */
++ (NSDictionary *)accountDic;
+
 /**
  *  登录成功后记录用户名和密码
  *

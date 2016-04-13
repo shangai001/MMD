@@ -14,6 +14,7 @@
 #import "BaseNextButton.h"
 #import "DistributeStauff.h"
 #import "AppUserInfoHelper.h"
+#import "ConstantNotiName.h"
 
 
 @interface ThirdStepController ()
@@ -22,11 +23,22 @@
 
 @implementation ThirdStepController
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setDefaultContentText];
     [self addAutolayout];
+}
+- (void)registerNotification{
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userInfoDicUpdateSuccess:) name:UserInfoUpdateSuccess object:nil];
+}
+- (void)userInfoDicUpdateSuccess:(id)sender{
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)setDefaultContentText{
     NSString *defaultText = [ReadFiler readTextFile:@"IDVerify" fileType:@"txt"];
@@ -65,13 +77,6 @@
     NSString *phone = [AppUserInfoHelper userInfo][@"phone"];
     
     [DistributeStauff shouldBlindUser:userId mobileId:phone];
-    
-//    [DistributeStauff shouldBlindUser:userId mobileId:phone with:^(ZXResultCode code, NSString *message, ZXMemberDetail *memberDetail) {
-//        //认证成功
-//        if (code == ZXResult_SUCCESSED) {
-//            [DistributeStauff downloadImagesWith:memberDetail];
-//        }
-//    }];
 }
 
 - (void)didReceiveMemoryWarning {

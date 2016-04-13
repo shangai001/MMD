@@ -33,6 +33,14 @@
     
     [SDUserDefault synchronize];
 }
++ (NSDictionary *)accountDic{
+    
+    NSString *userId = [SDUserDefault objectForKey:PASSWORD_KEY];
+    NSString *password = [SDUserDefault objectForKey:PASSWORD_VALUE];
+    
+    NSDictionary *userIdPasswordDic = @{@"phone":userId,@"password":password};
+    return userIdPasswordDic;
+}
 + (void)ez_ResetStandardUserDefaults{
     
     NSDictionary *userDefaultDic = [SDUserDefault dictionaryRepresentation];

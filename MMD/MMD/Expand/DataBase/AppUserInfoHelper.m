@@ -10,6 +10,10 @@
 #import "AppDelegate.h"
 
 
+
+//#define PASSWORD_KEY @"LastPasswordKey"
+//#define PASSWORD_VALUE @"LastPasswordValue"
+
 @implementation AppUserInfoHelper
 
 + (NSString *)getDocumentPath {
@@ -125,4 +129,15 @@
     }
     return userIdTokenDic;
 }
+/*
++ (NSDictionary *)accountDic{
+    
+    NSString *userId = [SDUserDefault objectForKey:PASSWORD_KEY];
+    NSString *password = [SDUserDefault objectForKey:PASSWORD_VALUE];
+    
+    NSDictionary *userIdPasswordDic = @{@"userId":userId,@"password":password};
+    return userIdPasswordDic;
+}
+*/
+
 @end

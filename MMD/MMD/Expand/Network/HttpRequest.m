@@ -194,9 +194,10 @@
     AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
     
     AFSecurityPolicy *policy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
-    policy.validatesDomainName = YES;
-    policy.allowInvalidCertificates = YES;
+    policy.validatesDomainName = NO;
+    policy.allowInvalidCertificates = NO;
     sessionManager.securityPolicy = policy;
+    sessionManager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
     
     NSURLSessionDownloadTask *downloadTask = [sessionManager downloadTaskWithRequest:urlRequest progress:^(NSProgress * _Nonnull downloadProgress) {
         

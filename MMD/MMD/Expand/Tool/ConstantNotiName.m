@@ -12,3 +12,4 @@
 NSString * const UserDidLogin  = @"UserDidLoginNotification";
 NSString * const UserDidLogout = @"UserDidLogoutNotification" ;
 NSString * const UserDidGetMessage  = @"UserDidGetMessageNotification";
+NSString * const UserInfoUpdateSuccess = @"UserInfoUpdateSuccess";
