@@ -266,6 +266,8 @@
 		D6DE71761CC0EC540037ED4D /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DE716A1CC0EC540037ED4D /* libZXSDK.a */; };
 		D6DE71771CC0EC540037ED4D /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DE71731CC0EC540037ED4D /* libZXSDK.a */; };
 		D6DE71781CC0EC540037ED4D /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6DE71741CC0EC540037ED4D /* ZXSDK.bundle */; };
+		D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C61CC10B0E0037ED4D /* RRViewController.m */; };
+		D6DE71CA1CC10B510037ED4D /* RRHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C91CC10B510037ED4D /* RRHeaderView.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -711,6 +713,10 @@
 		D6DE71721CC0EC540037ED4D /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
 		D6DE71731CC0EC540037ED4D /* libZXSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libZXSDK.a; sourceTree = "<group>"; };
 		D6DE71741CC0EC540037ED4D /* ZXSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSDK.bundle; sourceTree = "<group>"; };
+		D6DE71C51CC10B0E0037ED4D /* RRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRViewController.h; sourceTree = "<group>"; };
+		D6DE71C61CC10B0E0037ED4D /* RRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRViewController.m; sourceTree = "<group>"; };
+		D6DE71C81CC10B510037ED4D /* RRHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRHeaderView.h; sourceTree = "<group>"; };
+		D6DE71C91CC10B510037ED4D /* RRHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRHeaderView.m; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E104C71C7320FD00049C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1321,6 +1327,10 @@
 				D64B9C8D1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.m */,
 				D64B9C8F1CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.h */,
 				D64B9C901CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.m */,
+				D6DE71C51CC10B0E0037ED4D /* RRViewController.h */,
+				D6DE71C61CC10B0E0037ED4D /* RRViewController.m */,
+				D6DE71C81CC10B510037ED4D /* RRHeaderView.h */,
+				D6DE71C91CC10B510037ED4D /* RRHeaderView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2336,6 +2346,7 @@
 				D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */,
 				D647FB711CAE800100CBF19E /* MMLogViewController.m in Sources */,
 				D65B6BD41CBECB20000F6F92 /* PrepareDataWorker.m in Sources */,
+				D6DE71CA1CC10B510037ED4D /* RRHeaderView.m in Sources */,
 				D6805EA81CAD1CF500316925 /* pinyin.c in Sources */,
 				D647FB8D1CAE814300CBF19E /* HttpRequest.m in Sources */,
 				D67D6DC61CB54CFA003D4D2D /* VerifyModel.m in Sources */,
@@ -2441,6 +2452,7 @@
 				D688B91B1CB6AAD100CC80FF /* FaceRecongnizeController.m in Sources */,
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
 				D6BC3DD21CBAD0AD00200BC7 /* LogginHandler.m in Sources */,
+				D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */,
 				D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */,
 				D64B9C891CBFF38600B6B5A5 /* ShouldRefundView.m in Sources */,
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,

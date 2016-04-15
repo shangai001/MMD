@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="k5e-CV-SD4">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
@@ -101,7 +102,7 @@
         <!--还款-->
         <scene sceneID="9Sy-g0-d55">
             <objects>
-                <viewController title="还款" automaticallyAdjustsScrollViewInsets="NO" id="7ff-Ul-Mt3" customClass="RParentViewController" sceneMemberID="viewController">
+                <viewController title="还款" automaticallyAdjustsScrollViewInsets="NO" id="7ff-Ul-Mt3" customClass="RRViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dKa-q3-7Ov"/>
                         <viewControllerLayoutGuide type="bottom" id="C0L-Kd-2Af"/>
@@ -109,7 +110,49 @@
                     <view key="view" contentMode="scaleToFill" id="rTP-op-xxH">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVq-g2-1y4">
+                                <rect key="frame" x="20" y="0.0" width="560" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhB-2O-t2v">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihQ-4z-8aQ">
+                                        <rect key="frame" x="280" y="0.0" width="280" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-bW-neN" userLabel="lineView">
+                                        <rect key="frame" x="0.0" y="42" width="280" height="2"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="ouQ-WM-h0R"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ihQ-4z-8aQ" firstAttribute="top" secondItem="aVq-g2-1y4" secondAttribute="top" id="1JM-Gl-Byg"/>
+                                    <constraint firstItem="EhB-2O-t2v" firstAttribute="top" secondItem="aVq-g2-1y4" secondAttribute="top" id="2JM-jW-cjw"/>
+                                    <constraint firstAttribute="trailing" secondItem="ihQ-4z-8aQ" secondAttribute="trailing" id="2tk-Rd-mPH"/>
+                                    <constraint firstItem="lPW-bW-neN" firstAttribute="centerX" secondItem="EhB-2O-t2v" secondAttribute="centerX" id="2xN-Yz-Phb"/>
+                                    <constraint firstAttribute="height" constant="44" id="2zl-ud-bM5"/>
+                                    <constraint firstAttribute="bottom" secondItem="EhB-2O-t2v" secondAttribute="bottom" id="5GL-qn-UEg"/>
+                                    <constraint firstAttribute="bottom" secondItem="ihQ-4z-8aQ" secondAttribute="bottom" id="6Te-dF-k8G"/>
+                                    <constraint firstItem="ihQ-4z-8aQ" firstAttribute="width" secondItem="EhB-2O-t2v" secondAttribute="width" id="Gye-Yh-FgR"/>
+                                    <constraint firstItem="lPW-bW-neN" firstAttribute="width" secondItem="EhB-2O-t2v" secondAttribute="width" id="Ub5-5i-OaW"/>
+                                    <constraint firstItem="ihQ-4z-8aQ" firstAttribute="leading" secondItem="EhB-2O-t2v" secondAttribute="trailing" id="csm-e6-HO3"/>
+                                    <constraint firstAttribute="bottom" secondItem="lPW-bW-neN" secondAttribute="bottom" id="dwL-mG-Pfd"/>
+                                    <constraint firstItem="EhB-2O-t2v" firstAttribute="leading" secondItem="aVq-g2-1y4" secondAttribute="leading" id="iEn-Lh-HM2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aVq-g2-1y4" secondAttribute="trailing" constant="20" id="CeN-md-Tya"/>
+                            <constraint firstItem="aVq-g2-1y4" firstAttribute="leading" secondItem="rTP-op-xxH" secondAttribute="leading" constant="20" id="VV9-0w-Rnz"/>
+                            <constraint firstItem="aVq-g2-1y4" firstAttribute="top" secondItem="dKa-q3-7Ov" secondAttribute="bottom" id="jTz-8P-s8i"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="Zs1-5u-QPj"/>
