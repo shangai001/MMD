@@ -174,9 +174,6 @@
 		D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E341CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m */; };
 		D64A4E3A1CB7D62800FB519B /* SortIdDic.txt in Resources */ = {isa = PBXBuildFile; fileRef = D64A4E391CB7D62800FB519B /* SortIdDic.txt */; };
 		D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */; };
-		D64B9C801CBFEFF000B6B5A5 /* RefundParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C7E1CBFEFF000B6B5A5 /* RefundParentViewController.m */; };
-		D64B9C841CBFF04200B6B5A5 /* RefundHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C831CBFF04200B6B5A5 /* RefundHeaderView.m */; };
-		D64B9C861CBFF05500B6B5A5 /* RefundHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B9C851CBFF05500B6B5A5 /* RefundHeaderView.xib */; };
 		D64B9C891CBFF38600B6B5A5 /* ShouldRefundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C881CBFF38600B6B5A5 /* ShouldRefundView.m */; };
 		D64B9C8B1CBFF39700B6B5A5 /* ShouldRefundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B9C8A1CBFF39700B6B5A5 /* ShouldRefundView.xib */; };
 		D64B9C8E1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C8D1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.m */; };
@@ -557,11 +554,6 @@
 		D64A4E391CB7D62800FB519B /* SortIdDic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SortIdDic.txt; sourceTree = "<group>"; };
 		D64A4E3B1CB7D99000FB519B /* SubmitLoanInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLoanInfoModel.h; sourceTree = "<group>"; };
 		D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLoanInfoModel.m; sourceTree = "<group>"; };
-		D64B9C7D1CBFEFF000B6B5A5 /* RefundParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundParentViewController.h; sourceTree = "<group>"; };
-		D64B9C7E1CBFEFF000B6B5A5 /* RefundParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundParentViewController.m; sourceTree = "<group>"; };
-		D64B9C821CBFF04200B6B5A5 /* RefundHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundHeaderView.h; sourceTree = "<group>"; };
-		D64B9C831CBFF04200B6B5A5 /* RefundHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundHeaderView.m; sourceTree = "<group>"; };
-		D64B9C851CBFF05500B6B5A5 /* RefundHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefundHeaderView.xib; sourceTree = "<group>"; };
 		D64B9C871CBFF38600B6B5A5 /* ShouldRefundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouldRefundView.h; sourceTree = "<group>"; };
 		D64B9C881CBFF38600B6B5A5 /* ShouldRefundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouldRefundView.m; sourceTree = "<group>"; };
 		D64B9C8A1CBFF39700B6B5A5 /* ShouldRefundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShouldRefundView.xib; sourceTree = "<group>"; };
@@ -1325,8 +1317,6 @@
 		D64B9C7A1CBFEF9F00B6B5A5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D64B9C7D1CBFEFF000B6B5A5 /* RefundParentViewController.h */,
-				D64B9C7E1CBFEFF000B6B5A5 /* RefundParentViewController.m */,
 				D64B9C8C1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.h */,
 				D64B9C8D1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.m */,
 				D64B9C8F1CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.h */,
@@ -1345,9 +1335,6 @@
 		D64B9C7C1CBFEF9F00B6B5A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D64B9C821CBFF04200B6B5A5 /* RefundHeaderView.h */,
-				D64B9C831CBFF04200B6B5A5 /* RefundHeaderView.m */,
-				D64B9C851CBFF05500B6B5A5 /* RefundHeaderView.xib */,
 				D64B9C871CBFF38600B6B5A5 /* ShouldRefundView.h */,
 				D64B9C881CBFF38600B6B5A5 /* ShouldRefundView.m */,
 				D64B9C8A1CBFF39700B6B5A5 /* ShouldRefundView.xib */,
@@ -2262,7 +2249,6 @@
 				D64C99271CB8DB9300C45936 /* QueryViewController.xib in Resources */,
 				D6DE71781CC0EC540037ED4D /* ZXSDK.bundle in Resources */,
 				D60609BD1C76FF0E000DB373 /* 关于@3x.png in Resources */,
-				D64B9C861CBFF05500B6B5A5 /* RefundHeaderView.xib in Resources */,
 				D647FBB01CAE87FD00CBF19E /* ThirdStepController.xib in Resources */,
 				D65F2DB21CBBCAE2000817AE /* Icon@2x.png in Resources */,
 				D60609A51C76FF0E000DB373 /* 持证牌照信息@3x.png in Resources */,
@@ -2456,7 +2442,6 @@
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
 				D6BC3DD21CBAD0AD00200BC7 /* LogginHandler.m in Sources */,
 				D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */,
-				D64B9C801CBFEFF000B6B5A5 /* RefundParentViewController.m in Sources */,
 				D64B9C891CBFF38600B6B5A5 /* ShouldRefundView.m in Sources */,
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,
 				D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */,
@@ -2465,7 +2450,6 @@
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
 				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
 				D640367A1CBE704B002009C3 /* NSNull+EZSafe.m in Sources */,
-				D64B9C841CBFF04200B6B5A5 /* RefundHeaderView.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
 				D6465CB81CB991C600E4E570 /* NoInfoView.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,

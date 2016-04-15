@@ -163,6 +163,7 @@
     NSAssert(infoDic, @"用户名密码空!");
     [LoginModel loginUser:infoDic completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
+            [AppUserInfoHelper updateUserInfo:resultDictionary];
             successHandler(resultDictionary);
         }
     } FailureHandler:^(NSError *error) {

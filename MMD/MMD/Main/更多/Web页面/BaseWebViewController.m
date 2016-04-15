@@ -36,7 +36,8 @@
 }
 - (void)requestUrl:(NSString *)URL{
     if (URL) {
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:URL]]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:30];
+        [self.webView loadRequest:request];
     }
 }
 #pragma mark WKNavigationDelegate

@@ -158,21 +158,34 @@ CGFloat const TOP_Y = 113;
 }
 - (void)goFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController{
     
-    
-    [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.2 options:UIViewAnimationOptionTransitionNone animations:^{
+    if ([fromViewController isEqual:toViewController]) {
         
-        [fromViewController willMoveToParentViewController:nil];
-    } completion:^(BOOL finished) {
-        if ([toViewController isEqual:self.query]) {
-            [self.query requestLoanStatus];
-        }else if ([toViewController isEqual:self.activity]){
-            self.activity.URLString = kProgressHostURL;
-            [self.activity requestUrl:kProgressHostURL];
-        }
-        toViewController.view.sd_layout.leftEqualToView(self.view).topSpaceToView(self.view,TOP_Y).rightEqualToView(self.view).bottomEqualToView(self.view);
-        self.currentViewController = toViewController;
-        [toViewController didMoveToParentViewController:self];
-    }];
+        [self updateChildViewController:toViewController];
+        
+    }else{
+        
+        [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.2 options:UIViewAnimationOptionTransitionNone animations:^{
+            
+            [fromViewController willMoveToParentViewController:nil];
+        } completion:^(BOOL finished) {
+
+            [self updateChildViewController:toViewController];
+            
+            toViewController.view.sd_layout.leftEqualToView(self.view).topSpaceToView(self.view,TOP_Y).rightEqualToView(self.view).bottomEqualToView(self.view);
+            self.currentViewController = toViewController;
+            [toViewController didMoveToParentViewController:self];
+        }];
+
+    }
+ }
+- (void)updateChildViewController:(UIViewController *)toViewController{
+    
+    if ([toViewController isEqual:self.query]) {
+        [self.query requestLoanStatus];
+    }else if ([toViewController isEqual:self.activity]){
+        self.activity.URLString = kProgressHostURL;
+        [self.activity requestUrl:kProgressHostURL];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
