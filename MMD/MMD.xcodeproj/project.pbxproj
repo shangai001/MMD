@@ -250,10 +250,6 @@
 		D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */; };
 		D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */; };
 		D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */; };
-		D68CFF311CC0EA370019A63C /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D68CFF301CC0EA370019A63C /* ZXSDK.bundle */; };
-		D68CFF5A1CC0EA7B0019A63C /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D68CFF501CC0EA7B0019A63C /* libZXSDK.a */; };
-		D68CFF5B1CC0EA7B0019A63C /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D68CFF591CC0EA7B0019A63C /* libZXSDK.a */; };
-		D68CFF5D1CC0EA980019A63C /* libZXSDK-Universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D68CFF5C1CC0EA980019A63C /* libZXSDK-Universal.a */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
 		D6B031D31CB3964200E2955A /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031D21CB3964200E2955A /* MessageModel.m */; };
@@ -679,20 +675,6 @@
 		D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoanVerifySectionTitle.txt; sourceTree = "<group>"; };
 		D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanInfoItem.h; path = ../Controller/LoanInfoItem.h; sourceTree = "<group>"; };
 		D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanInfoItem.m; path = ../Controller/LoanInfoItem.m; sourceTree = "<group>"; };
-		D68CFF301CC0EA370019A63C /* ZXSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSDK.bundle; sourceTree = "<group>"; };
-		D68CFF4B1CC0EA7B0019A63C /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
-		D68CFF4C1CC0EA7B0019A63C /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
-		D68CFF4D1CC0EA7B0019A63C /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
-		D68CFF4E1CC0EA7B0019A63C /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
-		D68CFF4F1CC0EA7B0019A63C /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
-		D68CFF501CC0EA7B0019A63C /* libZXSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libZXSDK.a; sourceTree = "<group>"; };
-		D68CFF541CC0EA7B0019A63C /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
-		D68CFF551CC0EA7B0019A63C /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
-		D68CFF561CC0EA7B0019A63C /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
-		D68CFF571CC0EA7B0019A63C /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
-		D68CFF581CC0EA7B0019A63C /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
-		D68CFF591CC0EA7B0019A63C /* libZXSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libZXSDK.a; sourceTree = "<group>"; };
-		D68CFF5C1CC0EA980019A63C /* libZXSDK-Universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libZXSDK-Universal.a"; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
 		D6ABF2491CB18F3C000A7A01 /* MoreCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreCellActionHelper.h; sourceTree = "<group>"; };
@@ -774,9 +756,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D68CFF5D1CC0EA980019A63C /* libZXSDK-Universal.a in Frameworks */,
-				D68CFF5B1CC0EA7B0019A63C /* libZXSDK.a in Frameworks */,
-				D68CFF5A1CC0EA7B0019A63C /* libZXSDK.a in Frameworks */,
 				7C1C29D08DC8E5848D086672 /* libPods-MMD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1622,75 +1601,6 @@
 			path = "联系人";
 			sourceTree = "<group>";
 		};
-		D68CFF2F1CC0EA2B0019A63C /* ZX */ = {
-			isa = PBXGroup;
-			children = (
-				D68CFF5C1CC0EA980019A63C /* libZXSDK-Universal.a */,
-				D68CFF481CC0EA7B0019A63C /* Release-iphoneos */,
-				D68CFF511CC0EA7B0019A63C /* Release-iphonesimulator */,
-				D68CFF301CC0EA370019A63C /* ZXSDK.bundle */,
-			);
-			path = ZX;
-			sourceTree = "<group>";
-		};
-		D68CFF481CC0EA7B0019A63C /* Release-iphoneos */ = {
-			isa = PBXGroup;
-			children = (
-				D68CFF491CC0EA7B0019A63C /* include */,
-				D68CFF501CC0EA7B0019A63C /* libZXSDK.a */,
-			);
-			path = "Release-iphoneos";
-			sourceTree = "<group>";
-		};
-		D68CFF491CC0EA7B0019A63C /* include */ = {
-			isa = PBXGroup;
-			children = (
-				D68CFF4A1CC0EA7B0019A63C /* ZXSDK */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		D68CFF4A1CC0EA7B0019A63C /* ZXSDK */ = {
-			isa = PBXGroup;
-			children = (
-				D68CFF4B1CC0EA7B0019A63C /* ZXBaseModel.h */,
-				D68CFF4C1CC0EA7B0019A63C /* ZXIDcardModel.h */,
-				D68CFF4D1CC0EA7B0019A63C /* ZXMemberDetail.h */,
-				D68CFF4E1CC0EA7B0019A63C /* ZXMemberModel.h */,
-				D68CFF4F1CC0EA7B0019A63C /* ZXSDK.h */,
-			);
-			path = ZXSDK;
-			sourceTree = "<group>";
-		};
-		D68CFF511CC0EA7B0019A63C /* Release-iphonesimulator */ = {
-			isa = PBXGroup;
-			children = (
-				D68CFF521CC0EA7B0019A63C /* include */,
-				D68CFF591CC0EA7B0019A63C /* libZXSDK.a */,
-			);
-			path = "Release-iphonesimulator";
-			sourceTree = "<group>";
-		};
-		D68CFF521CC0EA7B0019A63C /* include */ = {
-			isa = PBXGroup;
-			children = (
-				D68CFF531CC0EA7B0019A63C /* ZXSDK */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		D68CFF531CC0EA7B0019A63C /* ZXSDK */ = {
-			isa = PBXGroup;
-			children = (
-				D68CFF541CC0EA7B0019A63C /* ZXBaseModel.h */,
-				D68CFF551CC0EA7B0019A63C /* ZXIDcardModel.h */,
-				D68CFF561CC0EA7B0019A63C /* ZXMemberDetail.h */,
-				D68CFF571CC0EA7B0019A63C /* ZXMemberModel.h */,
-				D68CFF581CC0EA7B0019A63C /* ZXSDK.h */,
-			);
-			path = ZXSDK;
-			sourceTree = "<group>";
-		};
 		D6BC3DB51CBAA66300200BC7 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1968,7 +1878,6 @@
 		D6E105101C7321A000049C3F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				D68CFF2F1CC0EA2B0019A63C /* ZX */,
 				D65B6BD11CBEB656000F6F92 /* NSNullCategory */,
 				D6805EA31CAD1CF500316925 /* 联系人 */,
 				D6805E791CAD1A3200316925 /* Picker */,
@@ -2260,7 +2169,6 @@
 				D6060A201C76FF0E000DB373 /* qq@3x.png in Resources */,
 				D606099C1C76FF0E000DB373 /* 补充附件@3x.png in Resources */,
 				D64C99271CB8DB9300C45936 /* QueryViewController.xib in Resources */,
-				D68CFF311CC0EA370019A63C /* ZXSDK.bundle in Resources */,
 				D60609BD1C76FF0E000DB373 /* 关于@3x.png in Resources */,
 				D64B9C861CBFF05500B6B5A5 /* RefundHeaderView.xib in Resources */,
 				D647FBB01CAE87FD00CBF19E /* ThirdStepController.xib in Resources */,
