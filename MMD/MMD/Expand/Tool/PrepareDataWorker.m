@@ -17,6 +17,7 @@
 
 #pragma mark ConfigureZXSDK
 + (void)configureZXSDK{
+    
     [ZXSDK configWithAppId:ZX_APIKEY withAppSecret:ZX_APISECRET];
 }
 + (void)reLoginIfHasUserIdPassword{

@@ -61,7 +61,6 @@ static NSString * const loggoutCellId = @"loggoutCellId";
             }
             [_dataArray addObject:singleCellArray];
         }
-        NSLog(@"构建玩  %@",_dataArray);
     }
     return _dataArray;
 }

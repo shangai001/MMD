@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import "UploadParam.h"
 #import "AppInfo.h"
+#import "LogginHandler.h"
 
 
 @implementation HttpRequest
@@ -244,8 +245,15 @@
         NSInteger code = [resultDic[@"code"] integerValue];
         if (code  == 9) {
             [SDUserDefault setBool:NO forKey:Loggin];
+            [LogginHandler shouldUpdateUserInfo:nil success:^(NSDictionary *resultDic) {
+                if ([resultDic[@"code"] integerValue] == 0) {
+                    NSLog(@"重新登录成功");
+                }
+            } failure:^(NSError *error) {
+                
+            }];
         }
-        NSAssert(code != 9, @"登录失效，请重新登录");
+//        NSAssert(code != 9, @"登录失效，请重新登录");
     }
 }
 @end

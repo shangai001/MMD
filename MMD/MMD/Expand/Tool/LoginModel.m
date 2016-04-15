@@ -47,6 +47,7 @@
             NSLog(@"登录响应 %@",responseObject);
         }
     } failure:^(NSError *error) {
+        [SDUserDefault setBool:NO forKey:Loggin];
         failureBlock(error);
     }];
 }

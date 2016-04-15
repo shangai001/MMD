@@ -20,16 +20,6 @@ CGFloat const BUTTON_BASETAG = 100;
     // Drawing code
 }
 */
-/**
-*  底部线条的宽度待定
-*/
-//- (instancetype)init{
-//    self = [super init];
-//    if (self) {
-//        _selectedIndex = -1;
-//    }
-//    return self;
-//}
 
 - (void)awakeFromNib{
     _selectedIndex = 0;
