@@ -59,24 +59,27 @@ CGFloat const Edge = 20;
     [self addchildVC];
 }
 - (void)initHeaderView{
-    
-    WeakSelf;
+
     self.reHeaderView.SwitchBlock= ^(NSInteger index){
-        weakSelf.index = index;
+        
     };
     [self.view addSubview:self.reHeaderView];
-    self.index = self.reHeaderView.selectedIndex;
-    self.reHeaderView.sd_layout.leftSpaceToView(self.view,Edge).topSpaceToView(self.view,Edge).heightIs(49).rightSpaceToView(self.view,Edge);
+
+    self.reHeaderView.sd_layout.leftSpaceToView(self.view,Edge).topSpaceToView(self.view,Edge).heightIs(44).rightSpaceToView(self.view,Edge);
 }
 - (void)addchildVC{
     
     [self addChildViewController:self.first];
     [self addChildViewController:self.second];
+    
     [self.view addSubview:self.first.view];
+    
     self.first.view.sd_layout.leftSpaceToView(self.view,Edge).topSpaceToView(self.reHeaderView,Edge).rightSpaceToView(self.view,Edge).bottomSpaceToView(self.view,Edge);
+    
     [self.first didMoveToParentViewController:self];
     self.currentViewController = self.first;
 }
+/*
 - (void)setIndex:(NSInteger)index{
     _index = index;
     if (![self.childViewControllers containsObject:self.first]) {
@@ -111,6 +114,8 @@ CGFloat const Edge = 20;
 
     }
  }
+ */
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
