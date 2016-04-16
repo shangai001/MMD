@@ -116,11 +116,11 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhB-2O-t2v">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="应还款"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihQ-4z-8aQ">
                                         <rect key="frame" x="280" y="0.0" width="280" height="44"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="已还款"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-bW-neN" userLabel="lineView">
                                         <rect key="frame" x="0.0" y="42" width="280" height="2"/>
