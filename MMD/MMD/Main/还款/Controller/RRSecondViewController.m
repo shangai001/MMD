@@ -8,6 +8,7 @@
 
 #import "RRSecondViewController.h"
 #import "RefundTableViewCell.h"
+#import "ConstantHeight.h"
 
 
 static CGFloat const GAP = 20;
@@ -33,13 +34,17 @@ static NSString * const reuseCellId = @"refudnCellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor clearColor];
+    [self configureTableView];
+}
+- (void)configureTableView{
+    
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RefundTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:reuseCellId];
     [self.view addSubview:self.tableView];
-    self.tableView.frame = self.view.bounds;
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.frame = CGRectMake(GAP, GAP, self.view.frame.size.width- 2 *GAP, self.view.frame.size.height - kTabbarHeight - GAP);
 }
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

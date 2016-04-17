@@ -52,7 +52,7 @@ CGFloat const gap = 20;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"还款";
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = BACKGROUNDCOLOR;
     [self configureButtons];
     [self addViewControllers];
 }

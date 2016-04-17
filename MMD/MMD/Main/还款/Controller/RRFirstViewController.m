@@ -10,7 +10,8 @@
 #import "RefundTableViewCell.h"
 #import "ShouldRefundView.h"
 #import "UIView+LoadViewFromNib.h"
-#import <UIView+SDAutoLayout.h>
+#import "ConstantHeight.h"
+
 
 static NSString * const reuseCellId = @"refudnCellId";
 static CGFloat const GAP = 20;
@@ -48,15 +49,15 @@ static CGFloat const HeaderHeight = 80;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self configureTableView];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 - (void)configureTableView{
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RefundTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:reuseCellId];
     [self.view addSubview:self.tableView];
-    self.tableView.backgroundColor = [UIColor cyanColor];
+    self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = self.headView;
-    self.tableView.frame = CGRectMake(GAP, GAP, self.view.frame.size.width - 2 * GAP, self.view.frame.size.height);
+    self.tableView.frame = CGRectMake(GAP, GAP, self.view.frame.size.width - 2 * GAP, self.view.frame.size.height - kTabbarHeight - GAP);
     self.headView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, HeaderHeight);
 }
 #pragma mark - Table view data source
