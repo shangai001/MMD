@@ -48,6 +48,7 @@ static CGFloat const HeaderHeight = 80;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self configureTableView];
     self.view.backgroundColor = [UIColor clearColor];
 }
@@ -57,7 +58,7 @@ static CGFloat const HeaderHeight = 80;
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = self.headView;
-    self.tableView.frame = CGRectMake(GAP, GAP, self.view.frame.size.width - 2 * GAP, self.view.frame.size.height - kTabbarHeight - GAP);
+    self.tableView.frame = CGRectMake(GAP, 0, self.view.frame.size.width - 2 * GAP, self.view.frame.size.height  - HeaderHeight - kTabbarHeight - kTopLayoutGuide);
     self.headView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, HeaderHeight);
 }
 #pragma mark - Table view data source
@@ -68,7 +69,7 @@ static CGFloat const HeaderHeight = 80;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 3;
 }
 
 

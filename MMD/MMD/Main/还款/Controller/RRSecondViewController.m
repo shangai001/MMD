@@ -9,6 +9,7 @@
 #import "RRSecondViewController.h"
 #import "RefundTableViewCell.h"
 #import "ConstantHeight.h"
+#import <UIView+SDAutoLayout.h>
 
 
 static CGFloat const GAP = 20;
@@ -34,6 +35,7 @@ static NSString * const reuseCellId = @"refudnCellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor clearColor];
     [self configureTableView];
 }
@@ -43,7 +45,7 @@ static NSString * const reuseCellId = @"refudnCellId";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RefundTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:reuseCellId];
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.frame = CGRectMake(GAP, GAP, self.view.frame.size.width- 2 *GAP, self.view.frame.size.height - kTabbarHeight - GAP);
+    self.tableView.sd_layout.leftSpaceToView(self.view, GAP).topEqualToView(self.view).rightSpaceToView(self.view, GAP).bottomSpaceToView(self.view, GAP + kTabbarHeight);
 }
 #pragma mark - Table view data source
 
@@ -54,7 +56,7 @@ static NSString * const reuseCellId = @"refudnCellId";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 2;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
