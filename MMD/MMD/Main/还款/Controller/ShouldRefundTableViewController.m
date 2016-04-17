@@ -8,15 +8,27 @@
 
 #import "ShouldRefundTableViewController.h"
 #import "RefundTableViewCell.h"
+#import "ShouldRefundView.h"
+#import "UIView+LoadViewFromNib.h"
+#import <UIView+SDAutoLayout.h>
+
+
 
 static NSString * const reuseCellId = @"refudnCellId";
 
 @interface ShouldRefundTableViewController ()
-
+@property (strong, nonatomic)ShouldRefundView *headView;
 @end
 
 @implementation ShouldRefundTableViewController
 
+- (ShouldRefundView *)headView{
+    if (!_headView) {
+        _headView = [ShouldRefundView loadViewFromNib];
+        _headView.backgroundColor = [UIColor redColor];
+    }
+    return _headView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -25,11 +37,16 @@ static NSString * const reuseCellId = @"refudnCellId";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RefundTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:reuseCellId];
+    [self configureTableView];
     
 }
-
+- (void)configureTableView{
+    
+    self.tableView.tableHeaderView = self.headView;
+    self.headView.sd_layout.leftEqualToView(self.tableView).topEqualToView(self.tableView).rightEqualToView(self.tableView).heightIs(80);
+    [self.tableView updateLayout];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RefundTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:reuseCellId];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -43,7 +60,7 @@ static NSString * const reuseCellId = @"refudnCellId";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 15;
+    return 5;
 }
 
 

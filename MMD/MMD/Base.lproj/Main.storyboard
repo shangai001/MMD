@@ -114,13 +114,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVq-g2-1y4">
                                 <rect key="frame" x="20" y="0.0" width="560" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhB-2O-t2v">
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhB-2O-t2v">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
                                         <state key="normal" title="应还款"/>
+                                        <connections>
+                                            <action selector="shouldAction:" destination="7ff-Ul-Mt3" eventType="touchUpInside" id="PY3-Xz-8G0"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihQ-4z-8aQ">
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihQ-4z-8aQ">
                                         <rect key="frame" x="280" y="0.0" width="280" height="44"/>
                                         <state key="normal" title="已还款"/>
+                                        <connections>
+                                            <action selector="alreadyAction:" destination="7ff-Ul-Mt3" eventType="touchUpInside" id="dV5-gL-4xt"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-bW-neN" userLabel="lineView">
                                         <rect key="frame" x="0.0" y="42" width="280" height="2"/>
@@ -158,6 +164,13 @@
                     <navigationItem key="navigationItem" id="Zs1-5u-QPj"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="alreadyButton" destination="ihQ-4z-8aQ" id="hB0-yB-QGC"/>
+                        <outlet property="bottomLineView" destination="lPW-bW-neN" id="xco-83-9Qv"/>
+                        <outlet property="buttonHeaderView" destination="aVq-g2-1y4" id="4eJ-ft-1m0"/>
+                        <outlet property="lineCenterX" destination="2xN-Yz-Phb" id="4cM-75-8Ek"/>
+                        <outlet property="shouldButton" destination="EhB-2O-t2v" id="Hzd-9x-WDb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Bn-bF-TMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
