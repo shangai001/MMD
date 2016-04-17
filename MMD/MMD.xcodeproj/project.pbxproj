@@ -176,8 +176,6 @@
 		D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E3C1CB7D99000FB519B /* SubmitLoanInfoModel.m */; };
 		D64B9C891CBFF38600B6B5A5 /* ShouldRefundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C881CBFF38600B6B5A5 /* ShouldRefundView.m */; };
 		D64B9C8B1CBFF39700B6B5A5 /* ShouldRefundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B9C8A1CBFF39700B6B5A5 /* ShouldRefundView.xib */; };
-		D64B9C8E1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C8D1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.m */; };
-		D64B9C911CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C901CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.m */; };
 		D64B9C951CBFFBE200B6B5A5 /* RefundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C931CBFFBE200B6B5A5 /* RefundTableViewCell.m */; };
 		D64B9C961CBFFBE200B6B5A5 /* RefundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B9C941CBFFBE200B6B5A5 /* RefundTableViewCell.xib */; };
 		D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99231CB8DB9300C45936 /* QueryViewController.m */; };
@@ -267,7 +265,6 @@
 		D6DE71771CC0EC540037ED4D /* libZXSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DE71731CC0EC540037ED4D /* libZXSDK.a */; };
 		D6DE71781CC0EC540037ED4D /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6DE71741CC0EC540037ED4D /* ZXSDK.bundle */; };
 		D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C61CC10B0E0037ED4D /* RRViewController.m */; };
-		D6DE71CA1CC10B510037ED4D /* RRHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C91CC10B510037ED4D /* RRHeaderView.m */; };
 		D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */; };
 		D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72211CC385170037ED4D /* RRSecondViewController.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
@@ -561,10 +558,6 @@
 		D64B9C871CBFF38600B6B5A5 /* ShouldRefundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouldRefundView.h; sourceTree = "<group>"; };
 		D64B9C881CBFF38600B6B5A5 /* ShouldRefundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouldRefundView.m; sourceTree = "<group>"; };
 		D64B9C8A1CBFF39700B6B5A5 /* ShouldRefundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShouldRefundView.xib; sourceTree = "<group>"; };
-		D64B9C8C1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouldRefundTableViewController.h; sourceTree = "<group>"; };
-		D64B9C8D1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouldRefundTableViewController.m; sourceTree = "<group>"; };
-		D64B9C8F1CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlreadyRefundTableViewController.h; sourceTree = "<group>"; };
-		D64B9C901CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlreadyRefundTableViewController.m; sourceTree = "<group>"; };
 		D64B9C921CBFFBE200B6B5A5 /* RefundTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundTableViewCell.h; sourceTree = "<group>"; };
 		D64B9C931CBFFBE200B6B5A5 /* RefundTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundTableViewCell.m; sourceTree = "<group>"; };
 		D64B9C941CBFFBE200B6B5A5 /* RefundTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefundTableViewCell.xib; sourceTree = "<group>"; };
@@ -717,8 +710,6 @@
 		D6DE71741CC0EC540037ED4D /* ZXSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSDK.bundle; sourceTree = "<group>"; };
 		D6DE71C51CC10B0E0037ED4D /* RRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRViewController.h; sourceTree = "<group>"; };
 		D6DE71C61CC10B0E0037ED4D /* RRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRViewController.m; sourceTree = "<group>"; };
-		D6DE71C81CC10B510037ED4D /* RRHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRHeaderView.h; sourceTree = "<group>"; };
-		D6DE71C91CC10B510037ED4D /* RRHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRHeaderView.m; sourceTree = "<group>"; };
 		D6DE721D1CC37E920037ED4D /* RRFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFirstViewController.h; sourceTree = "<group>"; };
 		D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFirstViewController.m; sourceTree = "<group>"; };
 		D6DE72201CC385170037ED4D /* RRSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRSecondViewController.h; sourceTree = "<group>"; };
@@ -1329,14 +1320,8 @@
 		D64B9C7A1CBFEF9F00B6B5A5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D64B9C8C1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.h */,
-				D64B9C8D1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.m */,
-				D64B9C8F1CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.h */,
-				D64B9C901CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.m */,
 				D6DE71C51CC10B0E0037ED4D /* RRViewController.h */,
 				D6DE71C61CC10B0E0037ED4D /* RRViewController.m */,
-				D6DE71C81CC10B510037ED4D /* RRHeaderView.h */,
-				D6DE71C91CC10B510037ED4D /* RRHeaderView.m */,
 				D6DE721D1CC37E920037ED4D /* RRFirstViewController.h */,
 				D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */,
 				D6DE72201CC385170037ED4D /* RRSecondViewController.h */,
@@ -2356,7 +2341,6 @@
 				D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */,
 				D647FB711CAE800100CBF19E /* MMLogViewController.m in Sources */,
 				D65B6BD41CBECB20000F6F92 /* PrepareDataWorker.m in Sources */,
-				D6DE71CA1CC10B510037ED4D /* RRHeaderView.m in Sources */,
 				D6805EA81CAD1CF500316925 /* pinyin.c in Sources */,
 				D647FB8D1CAE814300CBF19E /* HttpRequest.m in Sources */,
 				D67D6DC61CB54CFA003D4D2D /* VerifyModel.m in Sources */,
@@ -2372,7 +2356,6 @@
 				D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
 				D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m in Sources */,
-				D64B9C911CBFF57B00B6B5A5 /* AlreadyRefundTableViewController.m in Sources */,
 				D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */,
 				D688B9101CB68F3B00CC80FF /* SecondVerifyItem.m in Sources */,
 				D64C99481CB9229000C45936 /* LoanDetaiController.m in Sources */,
@@ -2436,7 +2419,6 @@
 				D647FBAF1CAE87FD00CBF19E /* ThirdStepController.m in Sources */,
 				D6805E941CAD1A3300316925 /* NSCalendar+ST.m in Sources */,
 				D64A4E271CB789AF00FB519B /* ContantLength.m in Sources */,
-				D64B9C8E1CBFF4E500B6B5A5 /* ShouldRefundTableViewController.m in Sources */,
 				D647FBB41CAE87FD00CBF19E /* HorizontalDashLineView.m in Sources */,
 				D647FB1A1CAE7E2D00CBF19E /* MoreCellUIItem.m in Sources */,
 				D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */,
