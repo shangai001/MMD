@@ -217,12 +217,51 @@ CGFloat const cacleButtonHeight = 44;
 }
 //设置状态指示文字
 - (void)setStateDetailText:(QueryItem *)item{
-    
+//TODO:还需要完善
     NSInteger state = [item.state integerValue];
     if (state == 0) {
-        self.firstLabel.textColor = [UIColor blackColor];
-        self.firstTimeLabel.text = [NSDate dateWithTimeIntervalSince1970:[item.applyTime doubleValue]];
+        [self setFirstLabelInfo:item];
+    }else if (state == 2 || state == 3 || state == 6){
+        [self setsecondLabelInfo:item];
+    }else if (state == 4 || state == 5 || state == 7){
+        [self setthirdLabelInfo:item];
+    }else if (state == 8){
+        [self setfourthLabelInfo:item];
     }
+}
+- (void)setFirstLabelInfo:(QueryItem *)item{
+    
+    self.firstLabel.textColor = [UIColor blackColor];
+    self.firstLabel.text = @"提交申请";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSTimeZone *tZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+    [formatter setTimeZone:tZone];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSDate *time = [NSDate dateWithTimeIntervalSince1970:[item.applyTime doubleValue]];
+    self.firstTimeLabel.text = [formatter stringFromDate:time];
+    self.firstTimeLabel.textColor = [UIColor blackColor];
+}
+- (void)setsecondLabelInfo:(QueryItem *)item{
+    
+    [self setFirstLabelInfo:item];
+    self.secondLabel.text = @"综合评估进行中";
+    self.secondLabel.textColor = [UIColor blackColor];
+}
+- (void)setthirdLabelInfo:(QueryItem *)item{
+
+    [self setsecondLabelInfo:item];
+    self.secondLabel.text = @"审核确认中";
+    self.secondLabel.textColor = [UIColor blackColor];
+}
+- (void)setfourthLabelInfo:(QueryItem *)item{
+    [self setthirdLabelInfo:item];
+    self.fourthLabel.text = @"发放借贷资金中";
+    self.fourthLabel.textColor = [UIColor blackColor];
+}
+- (void)setfifthLabelInfo:(QueryItem *)item{
+    [self setfourthLabelInfo:item];
+    self.fifthLabel.textColor = [UIColor blackColor];
+    self.fifthLabel.text = @"已完结";
 }
 #pragma mark ConfigureSubViews
 //配置滑动视图

@@ -268,6 +268,7 @@
 		D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */; };
 		D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72211CC385170037ED4D /* RRSecondViewController.m */; };
 		D6DE72281CC4B62E0037ED4D /* RefundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72271CC4B62E0037ED4D /* RefundModel.m */; };
+		D6DE72371CC500760037ED4D /* RefundItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72361CC500760037ED4D /* RefundItem.m */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -717,6 +718,8 @@
 		D6DE72211CC385170037ED4D /* RRSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRSecondViewController.m; sourceTree = "<group>"; };
 		D6DE72261CC4B62E0037ED4D /* RefundModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundModel.h; sourceTree = "<group>"; };
 		D6DE72271CC4B62E0037ED4D /* RefundModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundModel.m; sourceTree = "<group>"; };
+		D6DE72351CC500760037ED4D /* RefundItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundItem.h; sourceTree = "<group>"; };
+		D6DE72361CC500760037ED4D /* RefundItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundItem.m; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E104C71C7320FD00049C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1338,6 +1341,8 @@
 			children = (
 				D6DE72261CC4B62E0037ED4D /* RefundModel.h */,
 				D6DE72271CC4B62E0037ED4D /* RefundModel.m */,
+				D6DE72351CC500760037ED4D /* RefundItem.h */,
+				D6DE72361CC500760037ED4D /* RefundItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2465,6 +2470,7 @@
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
 				D6465CB81CB991C600E4E570 /* NoInfoView.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,
+				D6DE72371CC500760037ED4D /* RefundItem.m in Sources */,
 				D6805E9B1CAD1A3300316925 /* STPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

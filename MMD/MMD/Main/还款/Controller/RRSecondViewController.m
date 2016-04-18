@@ -14,17 +14,27 @@
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
 #import <MJRefresh.h>
+#import "NoInfoView.h"
+#import "UIView+LoadViewFromNib.h"
 
 
 static CGFloat const GAP = 20;
 static NSString * const reuseCellId = @"refudnCellId";
 @interface RRSecondViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic)UITableView *tableView;
+@property (strong, nonatomic)NoInfoView *infoView;
+
 @end
 
 
 @implementation RRSecondViewController
 
+- (NoInfoView *)infoView{
+    if (!_infoView) {
+        _infoView = [NoInfoView loadViewFromNib];
+    }
+    return _infoView;
+}
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, GAP, 300) style:UITableViewStylePlain];
@@ -77,6 +87,17 @@ static NSString * const reuseCellId = @"refudnCellId";
         
     }];
 }
+- (void)hideNofoView:(BOOL)hidden{
+    
+    if (hidden) {
+        //        self.infoView.hidden = YES;
+        [self.view sendSubviewToBack:self.infoView];
+    }else{
+        //        self.infoView.hidden = NO;
+        [self.view bringSubviewToFront:self.infoView];
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
