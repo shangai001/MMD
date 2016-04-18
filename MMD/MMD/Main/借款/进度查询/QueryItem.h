@@ -14,6 +14,7 @@
 @property (strong, nonatomic)NSNumber *state;
 @property (strong, nonatomic)NSNumber *term;
 @property (copy, nonatomic)NSString *contractId;
+@property (strong, nonatomic)NSNumber *applyTime;
 
 
 

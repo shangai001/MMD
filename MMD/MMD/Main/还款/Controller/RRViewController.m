@@ -118,6 +118,11 @@ CGFloat const gap = 20;
     } completion:^(BOOL finished) {
         [toViewController didMoveToParentViewController:self];
         self.currenrController = toViewController;
+        if ([toViewController isEqual:self.first]) {
+            [self.first headerRefresh];
+        }else if ([self.second isEqual:self.second]){
+            [self.second headerRefresh];
+        }
     }];
 }
 - (void)didReceiveMemoryWarning {

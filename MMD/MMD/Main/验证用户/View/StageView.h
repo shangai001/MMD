@@ -15,5 +15,6 @@
 - (instancetype)initWithStyle:(kDirectionStyle)style stage:(NSUInteger)stage frame:(CGRect)frame;
 //stage:几个button
 - (void)updateProsess:(NSUInteger)stage;
-
+//获得第几个 button
+- (UIButton *)getButtonWith:(NSInteger)tag;
 @end

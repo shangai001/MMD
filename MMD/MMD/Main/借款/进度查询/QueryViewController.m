@@ -27,7 +27,7 @@
 /*借款信息头部视图*/
 CGFloat const headerHeight = 100;
 /*步骤数目*/
-NSInteger const stageCount = 4;
+NSInteger const stageCount = 5;
 /*步骤图高度*/
 CGFloat const stageHeightY = 80;
 /*滑动距离*/
@@ -50,6 +50,17 @@ CGFloat const cacleButtonHeight = 44;
 
 @property (nonatomic, strong)NSDictionary *dataDic;
 @property (nonatomic, strong)QueryItem *item;
+
+@property (nonatomic, strong)UILabel *firstLabel;
+@property (nonatomic, strong)UILabel *firstTimeLabel;
+@property (nonatomic, strong)UILabel *secondLabel;
+@property (nonatomic, strong)UILabel *secondTimeLabel;
+@property (nonatomic, strong)UILabel *thirdLabel;
+@property (nonatomic, strong)UILabel *thirdTimeLabel;
+@property (nonatomic, strong)UILabel *fourthLabel;
+@property (nonatomic, strong)UILabel *fourthTimeLabel;
+@property (nonatomic, strong)UILabel *fifthLabel;
+@property (nonatomic, strong)UILabel *fifthTimeLabel;
 
 @property (nonatomic, strong)NoInfoView *noInfoView;
 
@@ -123,7 +134,6 @@ CGFloat const cacleButtonHeight = 44;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = BACKGROUNDCOLOR;
     //查询是否有借款进度
-//    [self haveNoLoanStatusInfo:YES];
 }
 //请求借款申请状态
 - (void)requestLoanStatus{
@@ -152,6 +162,7 @@ CGFloat const cacleButtonHeight = 44;
     self.item.state = dataDic[@"state"];
     self.item.term = dataDic[@"term"];
     self.item.loanCount = dataDic[@"amount"];
+    self.item.applyTime = dataDic[@"applyTime"];
     [self reloadProgressView:self.item];
 }
 //刷新视图
@@ -162,7 +173,8 @@ CGFloat const cacleButtonHeight = 44;
     [self setLoanInfo:item label:self.queryHeaderView.loanTimeLabel];
     //根据申请状态设置取消按钮状态
     [self resetCancleButtonStatus:[item.state integerValue]];
-    
+    //根据申请状态设置状态蚊子
+    [self setStateDetailText:item];
  }
 //TODO:需要知道借款申请状态
 - (void)resetCancleButtonStatus:(NSInteger)state{
@@ -172,8 +184,8 @@ CGFloat const cacleButtonHeight = 44;
         self.cancleButon.layer.borderColor = [UIColor lightGrayColor].CGColor;
         [self.cancleButon setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         self.cancleButon.enabled = NO;
-    }else{
-        
+    }else if(state == 10 || state == 11){
+        self.cancleButon.enabled = NO;
     }
 }
 - (void)setLoanInfo:(QueryItem *)item label:(UILabel *)textLabel{
@@ -203,7 +215,15 @@ CGFloat const cacleButtonHeight = 44;
     [loanAttributeString addAttributes:textDic range:textRange];
     textLabel.attributedText = loanAttributeString;
 }
-
+//设置状态指示文字
+- (void)setStateDetailText:(QueryItem *)item{
+    
+    NSInteger state = [item.state integerValue];
+    if (state == 0) {
+        self.firstLabel.textColor = [UIColor blackColor];
+        self.firstTimeLabel.text = [NSDate dateWithTimeIntervalSince1970:[item.applyTime doubleValue]];
+    }
+}
 #pragma mark ConfigureSubViews
 //配置滑动视图
 - (void)configureScroolView{
@@ -243,6 +263,56 @@ CGFloat const cacleButtonHeight = 44;
     //步骤图距离上端stageHeightY 距离取消按钮gaW
     self.stageView = [[StageView alloc] initWithStyle:kverticalTypeStyle stage:stageCount frame:CGRectMake(gapW, gapW/2, gapW, self.bottombottomContentView.frame.size.height - stageHeightY - cacleButtonToBottom - cacleButtonHeight - gapW)];
     [self.bottombottomContentView addSubview:self.stageView];
+}
+//创建详细文字指示 Label
+- (void)configureDetailTextLabel{
+
+    [self.stageView layoutIfNeeded];
+    for (NSInteger j = 0; j < 5; j ++) {
+        UILabel *textLabel = [UILabel new];
+        textLabel.font = [UIFont systemFontOfSize:14];
+        textLabel.textAlignment = NSTextAlignmentLeft;
+        textLabel.textColor = [UIColor blackColor];
+        textLabel.numberOfLines = 1;
+        
+        UIButton *button = [self.stageView getButtonWith:j];
+        CGFloat buttonY = button.frame.origin.y;
+        textLabel.frame = CGRectMake(gapW + gapW + 10, buttonY + gapW, self.bottombottomContentView.frame.size.width - self.stageView.frame.origin.x - gapW - 5, 20);
+        textLabel.tag = 1000 + j;
+        textLabel.text = @"正在综合审核";
+        [self.bottombottomContentView addSubview:textLabel];
+        NSLog(@"textLabel = %@",textLabel);
+        
+        UILabel *timeLabel = [UILabel new];
+        timeLabel.font = [UIFont systemFontOfSize:14];
+        timeLabel.textAlignment = NSTextAlignmentLeft;
+        timeLabel.textColor = [UIColor grayColor];
+        timeLabel.numberOfLines = 1;
+        timeLabel.tag = 2000 + j;
+        CGRect textFrame = textLabel.frame;
+        timeLabel.frame = CGRectMake(textFrame.origin.x, textFrame.origin.y + textFrame.size.height, textFrame.size.width, textFrame.size.height);
+        [self.bottombottomContentView addSubview:timeLabel];
+        
+        NSArray *texts = @[@"提交申请",@"综合评估申请中",@"审核确认进行中",@"发放信贷资金中",@"已完结"];
+        textLabel.text = texts[j];
+        
+        if (j == 0) {
+            self.firstLabel = textLabel;
+            self.firstTimeLabel = timeLabel;
+        }else if (j == 1){
+            self.secondLabel = textLabel;
+            self.secondLabel = timeLabel;
+        }else if (j == 2){
+            self.thirdLabel = textLabel;
+            self.thirdTimeLabel = timeLabel;
+        }else if (j == 3){
+            self.fourthLabel = textLabel;
+            self.fourthTimeLabel = timeLabel;
+        }else if (j == 4){
+            self.fifthLabel = textLabel;
+            self.fifthTimeLabel = timeLabel;
+        }
+    }
 }
 //配置取消按钮
 - (void)configureCancelButton{
@@ -304,6 +374,7 @@ CGFloat const cacleButtonHeight = 44;
     [self configureHeaderView];
     [self configurebottomContentView];
     [self configureStageView];
+    [self configureDetailTextLabel];
     [self configureCancelButton];
     
     [self.noInfoView removeFromSuperview];

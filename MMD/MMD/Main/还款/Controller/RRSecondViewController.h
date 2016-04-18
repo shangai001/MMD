@@ -10,4 +10,6 @@
 
 @interface RRSecondViewController : BaseViewController
 
+- (void)headerRefresh;
+
 @end

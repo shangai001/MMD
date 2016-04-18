@@ -25,15 +25,11 @@
     
     
     //1.设置状态栏颜色
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     //2.设置bar北京
     UINavigationBar *navBar = [UINavigationBar appearance];
     UIColor *barBackColor = REDCOLOR;
-    UIImage *barBackImage = [UIImage imageWithColor:barBackColor size:CGSizeMake(kScreenWidth, 44)];
-    [navBar setBackgroundImage:barBackImage forBarMetrics:UIBarMetricsDefault];
-    
-    
+    [navBar setBarTintColor:barBackColor];
     // 3.设置文字样式
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
@@ -43,6 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.extendedLayoutIncludesOpaqueBars = YES;
 }
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated{
     //如果是在登录或者完善资料页面,后退事件改为[self popToRootViewControllerAnimated:YES]emi

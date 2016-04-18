@@ -211,5 +211,10 @@ CGFloat const StageViewHeight = 4;
         }
     }
 }
-
+- (UIButton *)getButtonWith:(NSInteger)tag{
+    
+    UIButton *button = (UIButton *)[self viewWithTag:300 + tag];
+    
+    return button;
+}
 @end

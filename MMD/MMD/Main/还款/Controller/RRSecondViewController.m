@@ -10,6 +10,10 @@
 #import "RefundTableViewCell.h"
 #import "ConstantHeight.h"
 #import <UIView+SDAutoLayout.h>
+#import "RefundModel.h"
+#import <MJRefresh.h>
+#import <SVProgressHUD.h>
+#import <MJRefresh.h>
 
 
 static CGFloat const GAP = 20;
@@ -38,6 +42,10 @@ static NSString * const reuseCellId = @"refudnCellId";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor clearColor];
     [self configureTableView];
+    [self headerRefresh];
+}
+- (void)headerRefresh{
+    [self.tableView.mj_header beginRefreshing];
 }
 - (void)configureTableView{
     
@@ -46,6 +54,28 @@ static NSString * const reuseCellId = @"refudnCellId";
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.sd_layout.leftSpaceToView(self.view, GAP).topEqualToView(self.view).rightSpaceToView(self.view, GAP).bottomSpaceToView(self.view, GAP + kTabbarHeight);
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self requestData];
+    }];
+}
+- (void)requestData{
+    
+    [RefundModel queryDidRefundInfo:nil success:^(NSDictionary *resultDic) {
+        NSLog(@"已经还款信息 %@",resultDic);
+        NSArray *data = resultDic[@"data"];
+        if (![data isEqual:[NSNull null]]) {
+            
+        }else{
+            //显示没有借款
+            
+        }
+        if ([self.tableView.mj_header isRefreshing]) {
+            [self.tableView.mj_header endRefreshing];
+        }
+    } failure:^(NSError *error) {
+        
+    }];
 }
 #pragma mark - Table view data source
 
