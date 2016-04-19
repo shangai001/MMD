@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface RefundItem : NSObject
+
+//loanId
+@property (nonatomic, strong)NSNumber *loanId;
 @property (nonatomic, strong)NSNumber *repayAmount;
 @property (nonatomic, strong)NSNumber *remainAmount;
 @property (nonatomic, strong)NSNumber *term;

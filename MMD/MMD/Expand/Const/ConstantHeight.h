@@ -20,6 +20,9 @@ UIKIT_EXTERN CGFloat const kTopLayoutGuide;
 /*步骤图高度*/
 UIKIT_EXTERN CGFloat const kStageHeight;
 
+extern CGFloat const InfoViewWidth;
+extern CGFloat const InfoViewHeight;
+
 
 
 

@@ -9,6 +9,7 @@
 #import "RRSecondViewController.h"
 #import "RefundTableViewCell.h"
 #import "ConstantHeight.h"
+#import <Masonry.h>
 #import <UIView+SDAutoLayout.h>
 #import "RefundModel.h"
 #import <MJRefresh.h>
@@ -16,19 +17,33 @@
 #import <MJRefresh.h>
 #import "NoInfoView.h"
 #import "UIView+LoadViewFromNib.h"
+#import "RefundItem.h"
+#import <SVProgressHUD.h>
+#import "RefundTableViewCell+PutUIinfo.h"
+#import "RefundWebVController.h"
+#import "AppUserInfoHelper.h"
 
 
-static CGFloat const GAP = 20;
+CGFloat const GAP1 = 20;
 static NSString * const reuseCellId = @"refudnCellId";
+
+
 @interface RRSecondViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic)UITableView *tableView;
 @property (strong, nonatomic)NoInfoView *infoView;
+@property (strong, nonatomic)NSMutableArray *dataArray;
 
 @end
 
 
 @implementation RRSecondViewController
 
+- (NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 - (NoInfoView *)infoView{
     if (!_infoView) {
         _infoView = [NoInfoView loadViewFromNib];
@@ -37,9 +52,10 @@ static NSString * const reuseCellId = @"refudnCellId";
 }
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, GAP, 300) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, GAP1, 300) style:UITableViewStylePlain];
         _tableView.estimatedRowHeight = 140;
         _tableView.directionalLockEnabled = YES;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = _tableView.showsHorizontalScrollIndicator = NO;
@@ -61,7 +77,7 @@ static NSString * const reuseCellId = @"refudnCellId";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RefundTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:reuseCellId];
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.sd_layout.leftSpaceToView(self.view, GAP).topEqualToView(self.view).rightSpaceToView(self.view, GAP).bottomSpaceToView(self.view, GAP + kTabbarHeight);
+    self.tableView.sd_layout.leftSpaceToView(self.view, GAP1).topEqualToView(self.view).rightSpaceToView(self.view, GAP1).bottomSpaceToView(self.view, GAP1 + kTabbarHeight);
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self requestData];
@@ -69,31 +85,65 @@ static NSString * const reuseCellId = @"refudnCellId";
 }
 - (void)requestData{
     
+    [SVProgressHUD show];
     [RefundModel queryDidRefundInfo:nil success:^(NSDictionary *resultDic) {
-        NSLog(@"已经还款信息 %@",resultDic);
-        NSArray *data = resultDic[@"data"];
-        if (![data isEqual:[NSNull null]]) {
-            
+        
+        NSDictionary *data = resultDic[@"data"];
+        BOOL same = [data isEqual:[NSNull null]];
+        [self hideNofoView:!same];
+        if (!same) {
+            [self initItemsArrayWith:data];
+            [self.tableView reloadData];
         }else{
             //显示没有借款
-            
+            [self.dataArray removeAllObjects];
         }
         if ([self.tableView.mj_header isRefreshing]) {
             [self.tableView.mj_header endRefreshing];
         }
+        [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
-        
+        [SVProgressHUD dismiss];
+        [self hideNofoView:NO];
     }];
 }
+- (void)initItemsArrayWith:(NSDictionary *)data{
+    
+    [self.dataArray removeAllObjects];
+    NSArray *repays = data[@"repays"];
+    for (NSInteger j = 0; j < repays.count; j ++) {
+        
+        RefundItem *item = [RefundItem new];
+        item.repayAmount = data[@"repayAmount"];
+        item.remainAmount = data[@"remainAmount"];
+        
+        NSDictionary *oneDic = repays[j];
+        item.term = oneDic[@"term"];
+        item.overdue = oneDic[@"overdue"];
+        item.playdate = oneDic[@"playdate"];
+        item.loanId = oneDic[@"loanId"];
+        [self.dataArray addObject:item];
+    }
+}
+
 - (void)hideNofoView:(BOOL)hidden{
     
     if (hidden) {
-        //        self.infoView.hidden = YES;
-        [self.view sendSubviewToBack:self.infoView];
+        [self.infoView removeFromSuperview];
     }else{
-        //        self.infoView.hidden = NO;
+        if (![self.view.subviews containsObject:self.infoView]) {
+            [self.view addSubview:self.infoView];
+        }
+        
+        [self.infoView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(InfoViewWidth);
+            make.height.mas_equalTo(InfoViewHeight);
+            make.center.mas_equalTo(self.tableView);
+        }];
+        self.infoView.infLabel.text = @"暂时没有该款项信息";
         [self.view bringSubviewToFront:self.infoView];
     }
+
 }
 
 #pragma mark - Table view data source
@@ -105,19 +155,36 @@ static NSString * const reuseCellId = @"refudnCellId";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RefundTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseCellId forIndexPath:indexPath];
-    
     // Configure the cell...
-    
+    cell.cellType = kDidRefundType;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    RefundItem *item = self.dataArray[indexPath.row];
+    [cell putItemInfo:item];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 200;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row < self.dataArray.count) {
+        
+        NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+        NSString *userId = tokenDic[@"userId"];
+        NSString *token = tokenDic[@"token"];
+        
+        RefundItem *item = self.dataArray[indexPath.row];
+        RefundWebVController *webVC = [RefundWebVController new];
+        webVC.URLString = [NSString stringWithFormat:@"%@/webview/getLoanInfoOfRepay?userId=%@&token=%@&loanId=%@&terms=%@",kHostURL,userId,token,item.loanId,item.term];
+        webVC.detaiType = kDidRefundDetailType;
+        [self.navigationController pushViewController:webVC animated:YES];
+    }
 }
 /*
  // Override to support conditional editing of the table view.

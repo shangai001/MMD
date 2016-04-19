@@ -83,6 +83,7 @@ CGFloat const gap = 20;
     
     if (self.currenrController == self.first) {
         //刷新数据
+        [self.first requestData];
     }else{
         [self goFrom:self.currenrController to:self.first];
     }
@@ -91,7 +92,7 @@ CGFloat const gap = 20;
 - (IBAction)alreadyAction:(id)sender {
     if (self.currenrController == self.second) {
         //刷新数据
-        
+        [self.second requestData];
     }else{
         [self goFrom:self.currenrController to:self.second];
     }
@@ -119,7 +120,7 @@ CGFloat const gap = 20;
         [toViewController didMoveToParentViewController:self];
         self.currenrController = toViewController;
         if ([toViewController isEqual:self.first]) {
-            [self.first checkoutRefresh];
+            [self.first requestData];
         }else if ([self.second isEqual:self.second]){
             [self.second requestData];
         }

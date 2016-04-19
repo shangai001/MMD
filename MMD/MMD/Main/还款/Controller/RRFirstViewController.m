@@ -17,13 +17,18 @@
 #import <SVProgressHUD.h>
 #import "RefundItem.h"
 #import "RefundTableViewCell+PutUIinfo.h"
-#import <YYCGUtilities.h>
+#import <Masonry.h>
+#import "AppUserInfoHelper.h"
+#import "RefundWebVController.h"
 
 
-
+#define MAS_SHORTHAND
 static NSString * const reuseCellId = @"refudnCellId";
-static CGFloat const GAP = 20;
-static CGFloat const HeaderHeight = 80;
+
+CGFloat const GAP = 20;
+CGFloat const HeaderHeight = 80;
+
+
 
 @interface RRFirstViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -47,8 +52,8 @@ static CGFloat const HeaderHeight = 80;
 - (NoInfoView *)infoView{
     if (!_infoView) {
         _infoView = [NoInfoView loadViewFromNib];
-        CGRect viewFrame = self.view.frame;
-        _infoView.frame = CGRectMake(40, 100, viewFrame.size.width - 40 * 2,viewFrame.size.height - 40 * 2 + 30);
+//        CGRect viewFrame = self.view.frame;
+//        _infoView.frame = CGRectMake(40, 100, viewFrame.size.width - 40 * 2,viewFrame.size.height - 40 * 2 + 30);
     }
     return _infoView;
 }
@@ -57,6 +62,7 @@ static CGFloat const HeaderHeight = 80;
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 300) style:UITableViewStylePlain];
         _tableView.estimatedRowHeight = 140;
         _tableView.directionalLockEnabled = YES;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = _tableView.showsHorizontalScrollIndicator = NO;
@@ -121,12 +127,11 @@ static CGFloat const HeaderHeight = 80;
         }
         [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
+        [self hideNofoView:NO];
         [SVProgressHUD dismiss];
     }];
 }
-- (void)checkoutRefresh{
-    [self requestData];
-}
+
 - (void)initItemsArrayWith:(NSDictionary *)data{
     
     [self.dataArray removeAllObjects];
@@ -141,6 +146,7 @@ static CGFloat const HeaderHeight = 80;
         item.term = oneDic[@"term"];
         item.overdue = oneDic[@"overdue"];
         item.playdate = oneDic[@"playdate"];
+        item.loanId = oneDic[@"loanId"];
         [self.dataArray addObject:item];
     }
 }
@@ -153,11 +159,14 @@ static CGFloat const HeaderHeight = 80;
         if (![self.view.subviews containsObject:self.infoView]) {
             [self.view addSubview:self.infoView];
         }
-        CGRect viewFrame = self.view.frame;
-        self.infoView.frame = CGRectMake(40, 100, viewFrame.size.width - 40 * 2,viewFrame.size.height - 40 * 2 + 30);
+        
+        [self.infoView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(InfoViewWidth);
+            make.height.mas_equalTo(InfoViewHeight);
+            make.center.mas_equalTo(self.tableView);
+        }];
         self.infoView.infLabel.text = @"暂时没有该款项信息";
         [self.view bringSubviewToFront:self.infoView];
-        
         self.headView.hidden = YES;
     }
 }
@@ -172,6 +181,8 @@ static CGFloat const HeaderHeight = 80;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RefundTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseCellId forIndexPath:indexPath];
     // Configure the cell...
+    cell.cellType = kRefundType;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     RefundItem *item = self.dataArray[indexPath.row];
     [cell putItemInfo:item];
     return cell;
@@ -180,12 +191,24 @@ static CGFloat const HeaderHeight = 80;
     
     return 140;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row < self.dataArray.count) {
+        
+        NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+        NSString *userId = tokenDic[@"userId"];
+        NSString *token = tokenDic[@"token"];
+        
+        RefundItem *item = self.dataArray[indexPath.row];
+        RefundWebVController *webVC = [RefundWebVController new];
+        webVC.URLString = [NSString stringWithFormat:@"%@/webview/getLoanInfoOfRepay?userId=%@&token=%@&loanId=%@&terms=%@",kHostURL,userId,token,item.loanId,item.term];
+        webVC.detaiType = kRefundDetailType;
+        [self.navigationController pushViewController:webVC animated:YES];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 

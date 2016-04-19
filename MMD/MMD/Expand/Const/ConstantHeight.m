@@ -15,3 +15,5 @@ CGFloat const kStatusBarHeight = 20;
 CGFloat const kTopLayoutGuide = 64;
 CGFloat const kStageHeight = 60;
 
+CGFloat const InfoViewWidth = 200;
+CGFloat const InfoViewHeight = InfoViewWidth + 30;
