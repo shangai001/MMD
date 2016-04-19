@@ -276,7 +276,6 @@ CGFloat const cacleButtonHeight = 44;
 //设置提交审核时间
 - (void)setBeforeTimeLabelInfo:(QueryItem *)item{
     self.firstTimeLabel.text = [self convertDateToString:[item.applyTime doubleValue]];
-    
 }
 //设置综合评审进行中
 - (void)setZongheCheckInfo:(QueryItem *)item{
@@ -299,12 +298,14 @@ CGFloat const cacleButtonHeight = 44;
     self.fourthLabel.textColor = self.fourthTimeLabel.textColor = [UIColor blackColor];
     self.fourthTimeLabel.text = [self convertDateToString:[item.grantFundsTime doubleValue]];
 }
+//设置正常完结状态
 - (void)setNormalFinishLabelInfo:(QueryItem *)item{
     [self setSetLoanLabelInfo:item];
     self.fifthLabel.text = @"已经完结";
     self.fifthLabel.textColor = self.fifthTimeLabel.textColor =[UIColor blackColor];
     self.fifthTimeLabel.text = [self convertDateToString:[item.cancelTime doubleValue]];
 }
+//设置非正常完结状态
 - (void)setUnNormalFinishLabelInfo:(QueryItem *)item{
     [self setSetLoanLabelInfo:item];
     self.fifthLabel.textColor = self.fifthTimeLabel.textColor = [UIColor blackColor];
@@ -341,7 +342,6 @@ CGFloat const cacleButtonHeight = 44;
 - (void)configureHeaderView{
     [self.scrollView addSubview:self.queryHeaderView];
     self.queryHeaderView.sd_layout.leftSpaceToView(self.scrollView, 0).topSpaceToView(self.scrollView,0).rightSpaceToView(self.scrollView, 0).heightIs(headerHeight);
-
 }
 //配置内容视图
 - (void)configurebottomContentView{
