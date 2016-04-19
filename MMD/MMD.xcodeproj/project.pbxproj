@@ -260,14 +260,14 @@
 		D6BC3DCF1CBAC80400200BC7 /* ConstantUserInfoKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DCE1CBAC80400200BC7 /* ConstantUserInfoKey.m */; };
 		D6BC3DD21CBAD0AD00200BC7 /* LogginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DD11CBAD0AD00200BC7 /* LogginHandler.m */; };
 		D6BC3DD51CBAE7C900200BC7 /* ConstantNotiName.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */; };
-		D6DE71751CC0EC540037ED4D /* libZXSDK-Universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DE71611CC0EC540037ED4D /* libZXSDK-Universal.a */; };
-		D6DE71781CC0EC540037ED4D /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6DE71741CC0EC540037ED4D /* ZXSDK.bundle */; };
 		D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C61CC10B0E0037ED4D /* RRViewController.m */; };
 		D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */; };
 		D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72211CC385170037ED4D /* RRSecondViewController.m */; };
 		D6DE72281CC4B62E0037ED4D /* RefundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72271CC4B62E0037ED4D /* RefundModel.m */; };
 		D6DE72371CC500760037ED4D /* RefundItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72361CC500760037ED4D /* RefundItem.m */; };
 		D6DE723A1CC535110037ED4D /* ConstantApplyState.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72391CC535110037ED4D /* ConstantApplyState.m */; };
+		D6DE724E1CC6351C0037ED4D /* libZXSDK-Universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DE723C1CC6351C0037ED4D /* libZXSDK-Universal.a */; };
+		D6DE724F1CC6351C0037ED4D /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6DE724D1CC6351C0037ED4D /* ZXSDK.bundle */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
 		D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E104CD1C7320FD00049C3F /* Main.storyboard */; };
@@ -695,18 +695,6 @@
 		D6BC3DD31CBAE7C900200BC7 /* ConstantNotiName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstantNotiName.h; path = ../Tool/ConstantNotiName.h; sourceTree = "<group>"; };
 		D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConstantNotiName.m; path = ../Tool/ConstantNotiName.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
-		D6DE71611CC0EC540037ED4D /* libZXSDK-Universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libZXSDK-Universal.a"; sourceTree = "<group>"; };
-		D6DE71651CC0EC540037ED4D /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
-		D6DE71661CC0EC540037ED4D /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
-		D6DE71671CC0EC540037ED4D /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
-		D6DE71681CC0EC540037ED4D /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
-		D6DE71691CC0EC540037ED4D /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
-		D6DE716E1CC0EC540037ED4D /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
-		D6DE716F1CC0EC540037ED4D /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
-		D6DE71701CC0EC540037ED4D /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
-		D6DE71711CC0EC540037ED4D /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
-		D6DE71721CC0EC540037ED4D /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
-		D6DE71741CC0EC540037ED4D /* ZXSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSDK.bundle; sourceTree = "<group>"; };
 		D6DE71C51CC10B0E0037ED4D /* RRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRViewController.h; sourceTree = "<group>"; };
 		D6DE71C61CC10B0E0037ED4D /* RRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRViewController.m; sourceTree = "<group>"; };
 		D6DE721D1CC37E920037ED4D /* RRFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFirstViewController.h; sourceTree = "<group>"; };
@@ -719,6 +707,18 @@
 		D6DE72361CC500760037ED4D /* RefundItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundItem.m; sourceTree = "<group>"; };
 		D6DE72381CC535110037ED4D /* ConstantApplyState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantApplyState.h; sourceTree = "<group>"; };
 		D6DE72391CC535110037ED4D /* ConstantApplyState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantApplyState.m; sourceTree = "<group>"; };
+		D6DE723C1CC6351C0037ED4D /* libZXSDK-Universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libZXSDK-Universal.a"; sourceTree = "<group>"; };
+		D6DE72401CC6351C0037ED4D /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
+		D6DE72411CC6351C0037ED4D /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
+		D6DE72421CC6351C0037ED4D /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
+		D6DE72431CC6351C0037ED4D /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
+		D6DE72441CC6351C0037ED4D /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
+		D6DE72481CC6351C0037ED4D /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
+		D6DE72491CC6351C0037ED4D /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
+		D6DE724A1CC6351C0037ED4D /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
+		D6DE724B1CC6351C0037ED4D /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
+		D6DE724C1CC6351C0037ED4D /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
+		D6DE724D1CC6351C0037ED4D /* ZXSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSDK.bundle; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E104C71C7320FD00049C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -774,7 +774,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DE71751CC0EC540037ED4D /* libZXSDK-Universal.a in Frameworks */,
+				D6DE724E1CC6351C0037ED4D /* libZXSDK-Universal.a in Frameworks */,
 				7C1C29D08DC8E5848D086672 /* libPods-MMD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1708,69 +1708,69 @@
 			name = "历史申请记录";
 			sourceTree = "<group>";
 		};
-		D6DE71601CC0EC540037ED4D /* ZXSDK */ = {
+		D6DE723B1CC6351C0037ED4D /* ZXSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D6DE71611CC0EC540037ED4D /* libZXSDK-Universal.a */,
-				D6DE71621CC0EC540037ED4D /* Release-iphoneos */,
-				D6DE716B1CC0EC540037ED4D /* Release-iphonesimulator */,
-				D6DE71741CC0EC540037ED4D /* ZXSDK.bundle */,
+				D6DE723C1CC6351C0037ED4D /* libZXSDK-Universal.a */,
+				D6DE723D1CC6351C0037ED4D /* Release-iphoneos */,
+				D6DE72451CC6351C0037ED4D /* Release-iphonesimulator */,
+				D6DE724D1CC6351C0037ED4D /* ZXSDK.bundle */,
 			);
 			path = ZXSDK;
 			sourceTree = "<group>";
 		};
-		D6DE71621CC0EC540037ED4D /* Release-iphoneos */ = {
+		D6DE723D1CC6351C0037ED4D /* Release-iphoneos */ = {
 			isa = PBXGroup;
 			children = (
-				D6DE71631CC0EC540037ED4D /* include */,
+				D6DE723E1CC6351C0037ED4D /* include */,
 			);
 			path = "Release-iphoneos";
 			sourceTree = "<group>";
 		};
-		D6DE71631CC0EC540037ED4D /* include */ = {
+		D6DE723E1CC6351C0037ED4D /* include */ = {
 			isa = PBXGroup;
 			children = (
-				D6DE71641CC0EC540037ED4D /* ZXSDK */,
+				D6DE723F1CC6351C0037ED4D /* ZXSDK */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		D6DE71641CC0EC540037ED4D /* ZXSDK */ = {
+		D6DE723F1CC6351C0037ED4D /* ZXSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D6DE71651CC0EC540037ED4D /* ZXBaseModel.h */,
-				D6DE71661CC0EC540037ED4D /* ZXIDcardModel.h */,
-				D6DE71671CC0EC540037ED4D /* ZXMemberDetail.h */,
-				D6DE71681CC0EC540037ED4D /* ZXMemberModel.h */,
-				D6DE71691CC0EC540037ED4D /* ZXSDK.h */,
+				D6DE72401CC6351C0037ED4D /* ZXBaseModel.h */,
+				D6DE72411CC6351C0037ED4D /* ZXIDcardModel.h */,
+				D6DE72421CC6351C0037ED4D /* ZXMemberDetail.h */,
+				D6DE72431CC6351C0037ED4D /* ZXMemberModel.h */,
+				D6DE72441CC6351C0037ED4D /* ZXSDK.h */,
 			);
 			path = ZXSDK;
 			sourceTree = "<group>";
 		};
-		D6DE716B1CC0EC540037ED4D /* Release-iphonesimulator */ = {
+		D6DE72451CC6351C0037ED4D /* Release-iphonesimulator */ = {
 			isa = PBXGroup;
 			children = (
-				D6DE716C1CC0EC540037ED4D /* include */,
+				D6DE72461CC6351C0037ED4D /* include */,
 			);
 			path = "Release-iphonesimulator";
 			sourceTree = "<group>";
 		};
-		D6DE716C1CC0EC540037ED4D /* include */ = {
+		D6DE72461CC6351C0037ED4D /* include */ = {
 			isa = PBXGroup;
 			children = (
-				D6DE716D1CC0EC540037ED4D /* ZXSDK */,
+				D6DE72471CC6351C0037ED4D /* ZXSDK */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		D6DE716D1CC0EC540037ED4D /* ZXSDK */ = {
+		D6DE72471CC6351C0037ED4D /* ZXSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D6DE716E1CC0EC540037ED4D /* ZXBaseModel.h */,
-				D6DE716F1CC0EC540037ED4D /* ZXIDcardModel.h */,
-				D6DE71701CC0EC540037ED4D /* ZXMemberDetail.h */,
-				D6DE71711CC0EC540037ED4D /* ZXMemberModel.h */,
-				D6DE71721CC0EC540037ED4D /* ZXSDK.h */,
+				D6DE72481CC6351C0037ED4D /* ZXBaseModel.h */,
+				D6DE72491CC6351C0037ED4D /* ZXIDcardModel.h */,
+				D6DE724A1CC6351C0037ED4D /* ZXMemberDetail.h */,
+				D6DE724B1CC6351C0037ED4D /* ZXMemberModel.h */,
+				D6DE724C1CC6351C0037ED4D /* ZXSDK.h */,
 			);
 			path = ZXSDK;
 			sourceTree = "<group>";
@@ -1967,7 +1967,7 @@
 		D6E105101C7321A000049C3F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				D6DE71601CC0EC540037ED4D /* ZXSDK */,
+				D6DE723B1CC6351C0037ED4D /* ZXSDK */,
 				D65B6BD11CBEB656000F6F92 /* NSNullCategory */,
 				D6805EA31CAD1CF500316925 /* 联系人 */,
 				D6805E791CAD1A3200316925 /* Picker */,
@@ -2199,6 +2199,7 @@
 				D60609B71C76FF0E000DB373 /* 更改密码@3x.png in Resources */,
 				D60609C81C76FF0E000DB373 /* 还款页面go@2x.png in Resources */,
 				D6F01DE91C7C6BFA00EBC84E /* minus_press@2x.png in Resources */,
+				D6DE724F1CC6351C0037ED4D /* ZXSDK.bundle in Resources */,
 				D60609FB1C76FF0E000DB373 /* weibo@2x.png in Resources */,
 				D60609FC1C76FF0E000DB373 /* weibo@3x.png in Resources */,
 				D60609E41C76FF0E000DB373 /* contact@3x.png in Resources */,
@@ -2259,7 +2260,6 @@
 				D6060A201C76FF0E000DB373 /* qq@3x.png in Resources */,
 				D606099C1C76FF0E000DB373 /* 补充附件@3x.png in Resources */,
 				D64C99271CB8DB9300C45936 /* QueryViewController.xib in Resources */,
-				D6DE71781CC0EC540037ED4D /* ZXSDK.bundle in Resources */,
 				D60609BD1C76FF0E000DB373 /* 关于@3x.png in Resources */,
 				D647FBB01CAE87FD00CBF19E /* ThirdStepController.xib in Resources */,
 				D65F2DB21CBBCAE2000817AE /* Icon@2x.png in Resources */,
@@ -2623,16 +2623,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphoneos",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
-					"$(PROJECT_DIR)/MMD/Vender/ZXSDK-20160412/Release-iphoneos",
-					"$(PROJECT_DIR)/MMD/Vender/ZXSDK-20160412/Release-iphonesimulator",
-					"$(PROJECT_DIR)/MMD/Vender/ZXSDK1.1/Release-iphoneos",
-					"$(PROJECT_DIR)/MMD/Vender/ZXSDK1.1/Release-iphonesimulator",
 					"$(PROJECT_DIR)/MMD/Vender",
-					"$(PROJECT_DIR)/MMD/Vender/Release-iphoneos",
-					"$(PROJECT_DIR)/MMD/Vender/Release-iphonesimulator",
-					"$(PROJECT_DIR)/MMD/Vender/ZX/Release-iphoneos",
-					"$(PROJECT_DIR)/MMD/Vender/ZX/Release-iphonesimulator",
-					"$(PROJECT_DIR)/MMD/Vender/ZX",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mimidai.MMD;
@@ -2656,16 +2647,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphoneos",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
-					"$(PROJECT_DIR)/MMD/Vender/ZXSDK-20160412/Release-iphoneos",
-					"$(PROJECT_DIR)/MMD/Vender/ZXSDK-20160412/Release-iphonesimulator",
-					"$(PROJECT_DIR)/MMD/Vender/ZXSDK1.1/Release-iphoneos",
-					"$(PROJECT_DIR)/MMD/Vender/ZXSDK1.1/Release-iphonesimulator",
 					"$(PROJECT_DIR)/MMD/Vender",
-					"$(PROJECT_DIR)/MMD/Vender/Release-iphoneos",
-					"$(PROJECT_DIR)/MMD/Vender/Release-iphonesimulator",
-					"$(PROJECT_DIR)/MMD/Vender/ZX/Release-iphoneos",
-					"$(PROJECT_DIR)/MMD/Vender/ZX/Release-iphonesimulator",
-					"$(PROJECT_DIR)/MMD/Vender/ZX",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mimidai.MMD;
