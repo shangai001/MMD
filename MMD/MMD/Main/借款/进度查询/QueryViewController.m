@@ -22,6 +22,7 @@
 #import <SVProgressHUD.h>
 #import "NoInfoView.h"
 #import "BaseNextButton.h"
+#import "ConstantApplyState.h"
 
 
 /*借款信息头部视图*/
@@ -158,11 +159,21 @@ CGFloat const cacleButtonHeight = 44;
 //构造数据
 - (void)creatItem:(NSDictionary *)resultDic{
     NSDictionary *dataDic = resultDic[@"data"];
+    self.dataDic = dataDic;
+    
     self.item.contractId = dataDic[@"contractId"];
     self.item.state = dataDic[@"state"];
     self.item.term = dataDic[@"term"];
     self.item.loanCount = dataDic[@"amount"];
     self.item.applyTime = dataDic[@"applyTime"];
+    
+    NSDictionary *loanStateTimeDic = dataDic[@"loanStateTime"];
+    self.item.applyConfirmTime = loanStateTimeDic[@"applyConfirmTime"];
+    self.item.auditTime = loanStateTimeDic[@"auditTime"];
+    self.item.auditConfirmTime = loanStateTimeDic[@"auditConfirmTime"];
+    self.item.grantFundsTime = loanStateTimeDic[@"grantFundsTime"];
+    self.item.cancelTime = loanStateTimeDic[@"cancelTime"];
+    
     [self reloadProgressView:self.item];
 }
 //刷新视图
@@ -217,51 +228,92 @@ CGFloat const cacleButtonHeight = 44;
 }
 //设置状态指示文字
 - (void)setStateDetailText:(QueryItem *)item{
-//TODO:还需要完善
+    
     NSInteger state = [item.state integerValue];
-    if (state == 0) {
-        [self setFirstLabelInfo:item];
-    }else if (state == 2 || state == 3 || state == 6){
-        [self setsecondLabelInfo:item];
-    }else if (state == 4 || state == 5 || state == 7){
-        [self setthirdLabelInfo:item];
-    }else if (state == 8){
-        [self setfourthLabelInfo:item];
+//    NSInteger state = 1;
+    if (state == LOAN_APPLY_CONFIRM
+        || state == LOAN_AUDIT_WAITING
+        || state == LAON_AUDIT_CONFIRM_FAIL
+        || state == LAON_FINACE_AUDIT_FAIL) {
+        //刚刚提交申请状态
+        [self setBeforeTimeLabelInfo:item];
+        [self.stageView updateProsess:1];
+    }else if (state == LOAN_AUDIT_SUCCESS){
+        //审核确认进行中
+        [self setCheckLabelInfo:item];
+        [self.stageView updateProsess:2];
+    }else if (state == LAON_AUDIT_CONFIRM_SUCCESS ||
+              state == LAON_FINACE_AUDIT_SUCCESS){
+        //发放贷款资金中
+        [self setSetLoanLabelInfo:item];
+        [self.stageView updateProsess:3];
+    }else if (state == LAON_CRANT_FUNDS_SUCCESS){
+        //已经完结
+        [self setNormalFinishLabelInfo:item];
+        [self.stageView updateProsess:4];
+    }else if (state == LOAN_APPLY_CANCLE ||
+              state == LOAN_AUDIT_FAIL ||
+              state == LAON_AUDIT_CANCLE){
+        //显示不正常完结
+        [self setUnNormalFinishLabelInfo:item];
+        [self.stageView updateProsess:4];
     }
 }
-- (void)setFirstLabelInfo:(QueryItem *)item{
+- (NSString *)convertDateToString:(double)internal{
     
-    self.firstLabel.textColor = [UIColor blackColor];
-    self.firstLabel.text = @"提交申请";
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    NSTimeZone *tZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
-    [formatter setTimeZone:tZone];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
-    NSDate *time = [NSDate dateWithTimeIntervalSince1970:[item.applyTime doubleValue]];
-    self.firstTimeLabel.text = [formatter stringFromDate:time];
-    self.firstTimeLabel.textColor = [UIColor blackColor];
+    if (internal != 0) {
+        NSTimeInterval _interval= internal/1000;
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        NSTimeZone *tZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+        [formatter setTimeZone:tZone];
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        NSString *timeString =[formatter stringFromDate:date];
+        return timeString;
+    }
+    return nil;
 }
-- (void)setsecondLabelInfo:(QueryItem *)item{
-    
-    [self setFirstLabelInfo:item];
-    self.secondLabel.text = @"综合评估进行中";
-    self.secondLabel.textColor = [UIColor blackColor];
+//设置提交审核时间
+- (void)setBeforeTimeLabelInfo:(QueryItem *)item{
+    self.firstTimeLabel.text = [self convertDateToString:[item.applyTime doubleValue]];
+    self.secondTimeLabel.text = [self convertDateToString:[item.auditTime doubleValue]];
 }
-- (void)setthirdLabelInfo:(QueryItem *)item{
-
-    [self setsecondLabelInfo:item];
-    self.secondLabel.text = @"审核确认中";
-    self.secondLabel.textColor = [UIColor blackColor];
+//设置审核确认进行中
+- (void)setCheckLabelInfo:(QueryItem *)item{
+    [self setBeforeTimeLabelInfo:item];
+    self.thirdLabel.text = @"审核确认进行中";
+    self.thirdLabel.textColor = self.thirdTimeLabel.textColor = [UIColor blackColor];
+    self.thirdTimeLabel.text = [self convertDateToString:[item.auditConfirmTime doubleValue]];
 }
-- (void)setfourthLabelInfo:(QueryItem *)item{
-    [self setthirdLabelInfo:item];
-    self.fourthLabel.text = @"发放借贷资金中";
-    self.fourthLabel.textColor = [UIColor blackColor];
+//设置发放贷款资金中
+- (void)setSetLoanLabelInfo:(QueryItem *)item{
+    [self setCheckLabelInfo:item];
+    self.secondLabel.text = @"发放借贷资金中";
+    self.secondLabel.textColor = self.secondTimeLabel.textColor = [UIColor blackColor];
+    self.secondTimeLabel.text = [self convertDateToString:[item.grantFundsTime doubleValue]];
 }
-- (void)setfifthLabelInfo:(QueryItem *)item{
-    [self setfourthLabelInfo:item];
-    self.fifthLabel.textColor = [UIColor blackColor];
-    self.fifthLabel.text = @"已完结";
+- (void)setNormalFinishLabelInfo:(QueryItem *)item{
+    [self setSetLoanLabelInfo:item];
+    self.fourthLabel.text = @"已经完结";
+    self.fourthLabel.textColor = self.fourthTimeLabel.textColor =[UIColor blackColor];
+    self.fourthTimeLabel.text = [self convertDateToString:[item.cancelTime doubleValue]];
+}
+- (void)setUnNormalFinishLabelInfo:(QueryItem *)item{
+    [self setSetLoanLabelInfo:item];
+    self.fifthLabel.textColor = self.fifthTimeLabel.textColor = [UIColor blackColor];
+    /*
+     LoanConstants.LOAN_APPLY_CANCEL  申请已取消
+     LoanConstants.LOAN_AUDIT_CANCEL 审核取消
+     LoanConstants.LOAN_AUDIT_FAIL  审核拒绝
+     */
+    if ([item.state integerValue] == LOAN_AUDIT_FAIL) {
+        self.fifthLabel.text = @"审核拒绝";
+    }else if ([item.state integerValue] == LAON_AUDIT_CANCLE){
+        self.fifthLabel.text = @"审核取消";
+    }else if ([item.state integerValue] == LOAN_APPLY_CANCLE){
+        self.fifthLabel.text = @"申请已取消";
+    }
+    self.fourthTimeLabel.text = [self convertDateToString:[item.cancelTime doubleValue]];
 }
 #pragma mark ConfigureSubViews
 //配置滑动视图
@@ -311,7 +363,7 @@ CGFloat const cacleButtonHeight = 44;
         UILabel *textLabel = [UILabel new];
         textLabel.font = [UIFont systemFontOfSize:14];
         textLabel.textAlignment = NSTextAlignmentLeft;
-        textLabel.textColor = [UIColor blackColor];
+        textLabel.textColor = [UIColor grayColor];
         textLabel.numberOfLines = 1;
         
         UIButton *button = [self.stageView getButtonWith:j];
@@ -334,13 +386,17 @@ CGFloat const cacleButtonHeight = 44;
         
         NSArray *texts = @[@"提交申请",@"综合评估申请中",@"审核确认进行中",@"发放信贷资金中",@"已完结"];
         textLabel.text = texts[j];
-        
+        UIColor *blackColor =  [UIColor blackColor];
         if (j == 0) {
             self.firstLabel = textLabel;
+            self.firstLabel.textColor = blackColor;
             self.firstTimeLabel = timeLabel;
+            self.firstTimeLabel.textColor = blackColor;
         }else if (j == 1){
             self.secondLabel = textLabel;
-            self.secondLabel = timeLabel;
+            self.secondLabel.textColor = blackColor;
+            self.secondTimeLabel = timeLabel;
+            self.secondTimeLabel.textColor = blackColor;
         }else if (j == 2){
             self.thirdLabel = textLabel;
             self.thirdTimeLabel = timeLabel;
@@ -439,7 +495,7 @@ CGFloat const cacleButtonHeight = 44;
         NSString *token = tokenDic[@"token"];
         
         LoanDetaiController *detail = [LoanDetaiController new];
-        detail.URLString = [NSString stringWithFormat:@"%@/webview/getApplyInfo?userId=%@&token=%@&capital=%@&termLine=%@",kHostURL,userId,token,self.item.loanCount,self.item.term];
+        detail.URLString = [NSString stringWithFormat:@"%@/webview/getApplyInfo?userId=%@&token=%@&id=%@",kHostURL,userId,token,self.dataDic[@"contractId"]];
         [self.navigationController pushViewController:detail animated:YES];
     }
 }

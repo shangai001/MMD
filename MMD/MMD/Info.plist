@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSContactsUsageDescription</key>
-	<string>米米贷将上传手机通讯录至服务器以综合审核信用评级.</string>
+	<string>米米贷需要获取您的手机通讯录以审核信用评级</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleExecutable</key>

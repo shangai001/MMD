@@ -99,14 +99,14 @@ CGFloat const StageViewHeight = 4;
                 CGFloat leftToSuper = buttonToLeft + buttonWidthHeight + (buttonWidthHeight + buttonLeftToButtonLeft) * k;
                 HorizontalDashLineView *lineView = [[HorizontalDashLineView alloc] initWithFrame:CGRectMake(leftToSuper, (superFrame.size.height - StageViewHeight)/2, buttonLeftToButtonLeft, StageViewHeight)];
                 lineView.lineType = k == 0 ? kRedDasheType : kGrayRealType;
-                lineView.tag = 100 + k;
+                lineView.tag = 1000 + k;
                 [self addSubview:lineView];
             }else{
                 CGFloat buttonTopToButtonTop = (superFrame.size.height - 2 * buttonToLeft - _stage * buttonWidthHeight)/(_stage - 1);
                 CGFloat topToSuper = buttonToLeft + buttonWidthHeight + (buttonTopToButtonTop + buttonWidthHeight) * k;
                 VerticalDashLineView *lineView = [[VerticalDashLineView alloc] initWithFrame:CGRectMake((superFrame.size.width - StageViewHeight)/2, topToSuper,StageViewHeight , buttonTopToButtonTop)];
                 lineView.lineType = k == 0 ? kRedDasheType : kGrayRealType;
-                lineView.tag = 200 + k;
+                lineView.tag = 2000 + k;
                 [self addSubview:lineView];
             }
         }
@@ -162,8 +162,8 @@ CGFloat const StageViewHeight = 4;
             if ([view isKindOfClass:[HorizontalDashLineView class]]) {
                 //变成红色实线
                 HorizontalDashLineView *lineView = (HorizontalDashLineView *)view;
-                if (view.tag <= 100 + stage) {
-                    if (view.tag == 100 +stage) {
+                if (view.tag <= 1000 + stage) {
+                    if (view.tag == 1000 +stage) {
                         lineView.lineType = kRedDasheType;
                     }else{
                         lineView.lineType = kRedRealType;
@@ -189,8 +189,8 @@ CGFloat const StageViewHeight = 4;
             if ([view isKindOfClass:[VerticalDashLineView class]]) {
                 //变成红色实线
                 VerticalDashLineView *lineView = (VerticalDashLineView *)view;
-                if (view.tag <= 100 + stage) {
-                    if (view.tag == 100 +stage) {
+                if (view.tag <= 2000 + stage) {
+                    if (view.tag == 2000 +stage) {
                         lineView.lineType = kRedDasheType;
                     }else{
                         lineView.lineType = kRedRealType;

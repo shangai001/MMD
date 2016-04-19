@@ -19,15 +19,12 @@
     
     NSMutableDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
     [tokenDic setObject:@(0) forKey:@"state"];
-    
     NSString *URL = [NSString stringWithFormat:@"%@/repay/list",kHostURL];
-    
     [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
         successHandler(responseObject);
     } failure:^(NSError *error) {
         failureHandler(error);
     }];
-    
 }
 + (void)queryDidRefundInfo:(NSDictionary *)info
                     success:(successHandler)successHandler
@@ -35,9 +32,7 @@
     
     NSMutableDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
     [tokenDic setObject:@(1) forKey:@"state"];
-    
     NSString *URL = [NSString stringWithFormat:@"%@/repay/list",kHostURL];
-    
     [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
         successHandler(responseObject);
     } failure:^(NSError *error) {

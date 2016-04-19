@@ -97,9 +97,9 @@ static CGFloat const HeaderHeight = 80;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self requestData];
     }];
-    
 }
 - (void)requestData{
+    
     [SVProgressHUD show];
     [RefundModel queryWillRefundInfo:nil success:^(NSDictionary *resultDic) {
         NSArray *data = resultDic[@"data"];
