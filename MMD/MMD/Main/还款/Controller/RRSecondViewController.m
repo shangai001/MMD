@@ -52,7 +52,7 @@ static NSString * const reuseCellId = @"refudnCellId";
 }
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, GAP1, 300) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, GAP1, 300) style:UITableViewStyleGrouped];
         _tableView.estimatedRowHeight = 140;
         _tableView.directionalLockEnabled = YES;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -122,6 +122,7 @@ static NSString * const reuseCellId = @"refudnCellId";
         item.overdue = oneDic[@"overdue"];
         item.playdate = oneDic[@"playdate"];
         item.loanId = oneDic[@"loanId"];
+        item.repayTotal = oneDic[@"repayTotal"];
         [self.dataArray addObject:item];
     }
 }
@@ -150,12 +151,12 @@ static NSString * const reuseCellId = @"refudnCellId";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 1;
+    return self.dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.dataArray.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

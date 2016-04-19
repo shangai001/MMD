@@ -57,6 +57,10 @@
                 <constraint firstItem="383-iT-TED" firstAttribute="width" secondItem="1vu-m3-MUL" secondAttribute="width" id="zo8-Ys-TQR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="firtLabel" destination="hDG-Uh-wdn" id="xaf-ih-hQ4"/>
+                <outlet property="secondLabel" destination="Dnf-K8-Izz" id="yOS-fb-QLv"/>
+            </connections>
         </view>
     </objects>
 </document>

@@ -59,7 +59,7 @@ CGFloat const HeaderHeight = 80;
 }
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 300) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 300) style:UITableViewStyleGrouped];
         _tableView.estimatedRowHeight = 140;
         _tableView.directionalLockEnabled = YES;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -113,6 +113,8 @@ CGFloat const HeaderHeight = 80;
         
         NSDictionary *data = resultDic[@"data"];
         BOOL result = [data isEqual:[NSNull null]];
+        //TODO:debug
+        result = NO;
         //如果是空，不隐藏 view（显示 View）
         [self hideNofoView:!result];
         if (!result) {
@@ -135,20 +137,36 @@ CGFloat const HeaderHeight = 80;
 - (void)initItemsArrayWith:(NSDictionary *)data{
     
     [self.dataArray removeAllObjects];
-    NSArray *repays = data[@"repays"];
+//    NSArray *repays = data[@"repays"];
+    NSArray *repays = @[@"1",@"2",@"3"];
     for (NSInteger j = 0; j < repays.count; j ++) {
         
         RefundItem *item = [RefundItem new];
-        item.repayAmount = data[@"repayAmount"];
-        item.remainAmount = data[@"remainAmount"];
+//        item.repayAmount = data[@"repayAmount"];
+//        item.remainAmount = data[@"remainAmount"];
+
+        item.repayAmount = @(0);
+        item.remainAmount = @(500);
         
-        NSDictionary *oneDic = repays[j];
-        item.term = oneDic[@"term"];
-        item.overdue = oneDic[@"overdue"];
-        item.playdate = oneDic[@"playdate"];
-        item.loanId = oneDic[@"loanId"];
+//        NSDictionary *oneDic = repays[j];
+//        item.term = oneDic[@"term"];
+//        item.overdue = oneDic[@"overdue"];
+//        item.playdate = oneDic[@"playdate"];
+//        item.loanId = oneDic[@"loanId"];
+//        item.repayTotal = oneDic[@"repayTotal"];
+        item.term = @(3);
+        item.overdue = @(0);
+        item.playdate = @(1461110400);
+        item.loanId = @(3225);
+        item.repayTotal = @(582);
         [self.dataArray addObject:item];
     }
+    NSLog(@"data = %@",self.dataArray);
+}
+- (void)setHeaderViewInfo:(RefundItem *)item{
+    
+    self.headView.firtLabel.text = [NSString stringWithFormat:@"%@",item.repayAmount];
+    self.headView.secondLabel.text = [NSString stringWithFormat:@"%@",item.remainAmount];
 }
 - (void)hideNofoView:(BOOL)hidden{
     
@@ -173,10 +191,10 @@ CGFloat const HeaderHeight = 80;
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.dataArray.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
+    return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RefundTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseCellId forIndexPath:indexPath];
@@ -192,6 +210,7 @@ CGFloat const HeaderHeight = 80;
     return 140;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     if (indexPath.row < self.dataArray.count) {
         
         NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];

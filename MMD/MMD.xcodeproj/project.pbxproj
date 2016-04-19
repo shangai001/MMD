@@ -249,6 +249,7 @@
 		D6A600961CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */; };
 		D6A600991CC697920014C3C4 /* TransferDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600981CC697920014C3C4 /* TransferDate.m */; };
 		D6A6009C1CC6995B0014C3C4 /* RefundWebVController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6009B1CC6995B0014C3C4 /* RefundWebVController.m */; };
+		D6A600A31CC6ABEA0014C3C4 /* OnlineRepayController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600A21CC6ABEA0014C3C4 /* OnlineRepayController.m */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
 		D6B031D31CB3964200E2955A /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031D21CB3964200E2955A /* MessageModel.m */; };
@@ -680,6 +681,8 @@
 		D6A600981CC697920014C3C4 /* TransferDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferDate.m; sourceTree = "<group>"; };
 		D6A6009A1CC6995B0014C3C4 /* RefundWebVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundWebVController.h; sourceTree = "<group>"; };
 		D6A6009B1CC6995B0014C3C4 /* RefundWebVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundWebVController.m; sourceTree = "<group>"; };
+		D6A600A11CC6ABEA0014C3C4 /* OnlineRepayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineRepayController.h; sourceTree = "<group>"; };
+		D6A600A21CC6ABEA0014C3C4 /* OnlineRepayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineRepayController.m; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
 		D6ABF2491CB18F3C000A7A01 /* MoreCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreCellActionHelper.h; sourceTree = "<group>"; };
@@ -1326,6 +1329,7 @@
 		D64B9C791CBFEF9F00B6B5A5 /* 还款 */ = {
 			isa = PBXGroup;
 			children = (
+				D6A6009D1CC6AB9D0014C3C4 /* 在线支付 */,
 				D64B9C7A1CBFEF9F00B6B5A5 /* Controller */,
 				D64B9C7B1CBFEF9F00B6B5A5 /* Model */,
 				D64B9C7C1CBFEF9F00B6B5A5 /* View */,
@@ -1638,6 +1642,39 @@
 				D6805EA71CAD1CF500316925 /* ZCAddressBook.m */,
 			);
 			path = "联系人";
+			sourceTree = "<group>";
+		};
+		D6A6009D1CC6AB9D0014C3C4 /* 在线支付 */ = {
+			isa = PBXGroup;
+			children = (
+				D6A600A01CC6ABBE0014C3C4 /* Model */,
+				D6A6009F1CC6ABB80014C3C4 /* View */,
+				D6A6009E1CC6ABAB0014C3C4 /* Controller */,
+			);
+			name = "在线支付";
+			sourceTree = "<group>";
+		};
+		D6A6009E1CC6ABAB0014C3C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6A600A11CC6ABEA0014C3C4 /* OnlineRepayController.h */,
+				D6A600A21CC6ABEA0014C3C4 /* OnlineRepayController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D6A6009F1CC6ABB80014C3C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D6A600A01CC6ABBE0014C3C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		D6BC3DB51CBAA66300200BC7 /* BaseView */ = {
@@ -2402,6 +2439,7 @@
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
 				D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */,
 				D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */,
+				D6A600A31CC6ABEA0014C3C4 /* OnlineRepayController.m in Sources */,
 				D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6BC3DCC1CBAC37500200BC7 /* LogoutModel.m in Sources */,

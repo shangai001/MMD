@@ -10,10 +10,11 @@
 
 @interface RefundItem : NSObject
 
-//loanId
+
 @property (nonatomic, strong)NSNumber *loanId;
 @property (nonatomic, strong)NSNumber *repayAmount;
 @property (nonatomic, strong)NSNumber *remainAmount;
+@property (nonatomic, strong)NSNumber *repayTotal;
 @property (nonatomic, strong)NSNumber *term;
 @property (nonatomic, strong)NSNumber *overdue;
 @property (nonatomic, strong)NSNumber *playdate;

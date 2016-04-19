@@ -11,11 +11,6 @@
 #import "ColorHeader.h"
 #import "TransferDate.h"
 
-@interface RefundTableViewCell ()
-
-@property (nonatomic, strong)UIColor *typeColor;//(0.42,0.78,0.52-G)---(0.90,0.24,0.10---R)
-
-@end
 
 @implementation RefundTableViewCell (PutUIinfo)
 
@@ -36,10 +31,11 @@
     }else{
         self.typeColor = REDCOLOR;
     }
+    self.rightBackView.backgroundColor = self.typeColor;
 }
 //设置数字文字
 - (void)setRepayAmountInfo:(RefundItem *)item{
-    float repayFloat = [item.repayAmount floatValue];
+    float repayFloat = [item.repayTotal floatValue];
     NSString *repayAmountString = [NSString stringWithFormat:@"%0.2f元",repayFloat];
     self.repayAmountLabel.text = nil;
     self.repayAmountLabel.attributedText = [self repayAttributedStringWith:repayAmountString];

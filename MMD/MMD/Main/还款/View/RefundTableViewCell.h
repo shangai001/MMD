@@ -22,6 +22,6 @@ typedef NS_ENUM(NSInteger,kCelltype) {
 @property (weak, nonatomic) IBOutlet UIView *rightBackView;
 
 @property kCelltype cellType;
-
+@property (nonatomic, strong)UIColor *typeColor;//(0.42,0.78,0.52-G)---(0.90,0.24,0.10---R)
 
 @end

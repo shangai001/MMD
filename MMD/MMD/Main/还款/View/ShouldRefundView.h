@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ShouldRefundView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *firtLabel;
+@property (weak, nonatomic) IBOutlet UILabel *secondLabel;
 
 @end

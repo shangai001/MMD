@@ -23,19 +23,21 @@
 
 + (void)initialize{
     
-    
     //1.设置状态栏颜色
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     //2.设置bar北京
-    UINavigationBar *navBar = [UINavigationBar appearance];
+    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:self, nil];
     UIColor *barBackColor = REDCOLOR;
     [navBar setBarTintColor:barBackColor];
-    // 3.设置文字样式
+    // 3.设置标题文字样式
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
     attrs[NSFontAttributeName] =[UIFont systemFontOfSize:18];
     [navBar setTitleTextAttributes:attrs];
+    //4.设置后退文字颜色
+    [navBar setTintColor:[UIColor whiteColor]];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

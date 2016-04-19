@@ -9,7 +9,7 @@
 #import "ConstantHeight.h"
 
 
-CGFloat const kTabbarHeight = 44;
+CGFloat const kTabbarHeight = 49;
 CGFloat const kNavigationBarHeight = 44;
 CGFloat const kStatusBarHeight = 20;
 CGFloat const kTopLayoutGuide = 64;

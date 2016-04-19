@@ -10,6 +10,8 @@
 #import "ColorHeader.h"
 #import <UIView+SDAutoLayout.h>
 
+CGFloat buttonHeight = 44;
+
 @interface RefundWebVController ()
 
 @property (nonatomic, strong)UIButton *repayButton;
@@ -22,6 +24,7 @@
     if (!_repayButton) {
         _repayButton =[UIButton buttonWithType:UIButtonTypeRoundedRect];
         [_repayButton setTitle:@"在线支付" forState:UIControlStateNormal];
+        [_repayButton setTintColor:[UIColor whiteColor]];
         _repayButton.backgroundColor = REDCOLOR;
         [_repayButton addTarget:self action:@selector(moveToRepay:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -30,12 +33,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"借款详情";
     [self decideRepay];
 }
 - (void)decideRepay{
     if (self.detaiType == kRefundDetailType) {
         [self.view addSubview:self.repayButton];
-        self.repayButton.sd_layout.leftEqualToView(self.view).heightIs(60).rightEqualToView(self.view).bottomEqualToView(self.view);
+        self.repayButton.sd_layout.leftSpaceToView(self.view,10).heightIs(buttonHeight).rightSpaceToView(self.view,10).bottomSpaceToView(self.view,0);
+        self.repayButton.layer.cornerRadius = 10;
+        self.repayButton.layer.masksToBounds = YES;
         [self.repayButton updateLayout];
     }
 }

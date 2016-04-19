@@ -14,6 +14,33 @@
 
 @implementation BaseViewController
 
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        [self initBackBarItem];
+    }
+    return self;
+}
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self =[super initWithCoder:aDecoder];
+    if (self) {
+        [self initBackBarItem];
+    }
+    return self;
+}
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self initBackBarItem];
+    }
+    return self;
+}
+//自定义返回按钮
+- (void)initBackBarItem{
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
