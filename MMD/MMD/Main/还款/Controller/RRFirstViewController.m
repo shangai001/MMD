@@ -47,7 +47,8 @@ static CGFloat const HeaderHeight = 80;
 - (NoInfoView *)infoView{
     if (!_infoView) {
         _infoView = [NoInfoView loadViewFromNib];
-        _infoView.frame = CGRectMake(40, 100, kScreenWidth - 40 * 2,kScreenHeight - 40 * 2 + 30);
+        CGRect viewFrame = self.view.frame;
+        _infoView.frame = CGRectMake(40, 100, viewFrame.size.width - 40 * 2,viewFrame.size.height - 40 * 2 + 30);
     }
     return _infoView;
 }
@@ -66,7 +67,6 @@ static CGFloat const HeaderHeight = 80;
     if (!_headView) {
         _headView = [ShouldRefundView loadViewFromNib];
         _headView.backgroundColor = [UIColor whiteColor];
-        
     }
     return _headView;
 }
@@ -153,7 +153,8 @@ static CGFloat const HeaderHeight = 80;
         if (![self.view.subviews containsObject:self.infoView]) {
             [self.view addSubview:self.infoView];
         }
-        self.infoView.frame = CGRectMake(40, 100, kScreenWidth - 40 * 2,kScreenHeight - 40 * 2 + 30);
+        CGRect viewFrame = self.view.frame;
+        self.infoView.frame = CGRectMake(40, 100, viewFrame.size.width - 40 * 2,viewFrame.size.height - 40 * 2 + 30);
         self.infoView.infLabel.text = @"暂时没有该款项信息";
         [self.view bringSubviewToFront:self.infoView];
         
