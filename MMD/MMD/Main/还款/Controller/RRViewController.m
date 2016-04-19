@@ -111,7 +111,7 @@ CGFloat const gap = 20;
 //切换子控制器
 - (void)goFrom:(UIViewController *)fromController to:(UIViewController *)toViewController{
     
-    [self transitionFromViewController:fromController toViewController:toViewController duration:0.35 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+    [self transitionFromViewController:fromController toViewController:toViewController duration:0.35 options:UIViewAnimationOptionTransitionNone animations:^{
         
         [fromController willMoveToParentViewController:nil];
         [self addLayoutToView:toViewController.view];
@@ -119,9 +119,9 @@ CGFloat const gap = 20;
         [toViewController didMoveToParentViewController:self];
         self.currenrController = toViewController;
         if ([toViewController isEqual:self.first]) {
-            [self.first headerRefresh];
+            [self.first checkoutRefresh];
         }else if ([self.second isEqual:self.second]){
-            [self.second headerRefresh];
+            [self.second requestData];
         }
     }];
 }

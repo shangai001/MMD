@@ -245,6 +245,8 @@
 		D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */; };
 		D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */; };
 		D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */; };
+		D6A600931CC64B3F0014C3C4 /* SBJson in Resources */ = {isa = PBXBuildFile; fileRef = D6A600921CC64B3F0014C3C4 /* SBJson */; };
+		D6A600961CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
 		D6B031D31CB3964200E2955A /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031D21CB3964200E2955A /* MessageModel.m */; };
@@ -669,6 +671,9 @@
 		D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoanVerifySectionTitle.txt; sourceTree = "<group>"; };
 		D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanInfoItem.h; path = ../Controller/LoanInfoItem.h; sourceTree = "<group>"; };
 		D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanInfoItem.m; path = ../Controller/LoanInfoItem.m; sourceTree = "<group>"; };
+		D6A600921CC64B3F0014C3C4 /* SBJson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SBJson; sourceTree = "<group>"; };
+		D6A600941CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RefundTableViewCell+PutUIinfo.h"; sourceTree = "<group>"; };
+		D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RefundTableViewCell+PutUIinfo.m"; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
 		D6ABF2491CB18F3C000A7A01 /* MoreCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreCellActionHelper.h; sourceTree = "<group>"; };
@@ -1353,6 +1358,8 @@
 				D64B9C921CBFFBE200B6B5A5 /* RefundTableViewCell.h */,
 				D64B9C931CBFFBE200B6B5A5 /* RefundTableViewCell.m */,
 				D64B9C941CBFFBE200B6B5A5 /* RefundTableViewCell.xib */,
+				D6A600941CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.h */,
+				D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1802,6 +1809,7 @@
 			children = (
 				D6E104C71C7320FD00049C3F /* AppDelegate.h */,
 				D6E104C81C7320FD00049C3F /* AppDelegate.m */,
+				D6A600921CC64B3F0014C3C4 /* SBJson */,
 				D6E104CD1C7320FD00049C3F /* Main.storyboard */,
 				D6E105101C7321A000049C3F /* Vender */,
 				D6E1050C1C73219800049C3F /* Resourses */,
@@ -2263,6 +2271,7 @@
 				D60609BD1C76FF0E000DB373 /* 关于@3x.png in Resources */,
 				D647FBB01CAE87FD00CBF19E /* ThirdStepController.xib in Resources */,
 				D65F2DB21CBBCAE2000817AE /* Icon@2x.png in Resources */,
+				D6A600931CC64B3F0014C3C4 /* SBJson in Resources */,
 				D60609A51C76FF0E000DB373 /* 持证牌照信息@3x.png in Resources */,
 				D60609DB1C76FF0E000DB373 /* recommend@3x.png in Resources */,
 				D60609A41C76FF0E000DB373 /* 持证牌照信息@2x.png in Resources */,
@@ -2422,6 +2431,7 @@
 				D64C992A1CB8DBA200C45936 /* LatestActivityController.m in Sources */,
 				D647FB831CAE80BE00CBF19E /* RegisterViewController.m in Sources */,
 				D647FBB11CAE87FD00CBF19E /* VerifyViewController.m in Sources */,
+				D6A600961CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m in Sources */,
 				D6BC3DBD1CBAB6DE00200BC7 /* MineHeaderTableViewCell+UserInfo.m in Sources */,
 				D6BC3DCF1CBAC80400200BC7 /* ConstantUserInfoKey.m in Sources */,
 				D647FBAF1CAE87FD00CBF19E /* ThirdStepController.m in Sources */,

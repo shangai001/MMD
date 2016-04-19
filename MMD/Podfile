@@ -12,6 +12,7 @@ target 'MMD' do
     pod 'YYKit'
     pod 'SDAutoLayout'
     pod 'SSKeychain'
+    pod 'Masonry'
     
     pod 'ShareSDK3'
     pod 'MOBFoundation_IDFA'

@@ -10,7 +10,7 @@
 
 @interface RRFirstViewController : BaseViewController
 
-- (void)headerRefresh;
+- (void)checkoutRefresh;
 
 
 @end

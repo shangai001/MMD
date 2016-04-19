@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8M9-K2-rjy">
@@ -97,6 +97,13 @@
                     <constraint firstItem="Yi8-Wy-WbK" firstAttribute="leading" secondItem="8M9-K2-rjy" secondAttribute="trailing" id="zfq-Ix-u3B"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="NumberLabel" destination="zsR-lL-rqM" id="iZR-lN-Xwy"/>
+                <outlet property="repayAmountLabel" destination="ivW-6N-gZw" id="dJP-FD-0Gh"/>
+                <outlet property="repayStatusLabel" destination="kk5-jr-Fx9" id="HM2-9m-1xh"/>
+                <outlet property="repayTimeLabel" destination="Yi8-Wy-WbK" id="wP9-dN-OJG"/>
+                <outlet property="rightBackView" destination="QeQ-iW-g4s" id="jUd-1z-N7k"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

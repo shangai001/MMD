@@ -52,11 +52,9 @@ static NSString * const reuseCellId = @"refudnCellId";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor clearColor];
     [self configureTableView];
-    [self headerRefresh];
+    [self requestData];
 }
-- (void)headerRefresh{
-    [self.tableView.mj_header beginRefreshing];
-}
+
 - (void)configureTableView{
     
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
