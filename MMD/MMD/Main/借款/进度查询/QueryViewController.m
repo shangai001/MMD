@@ -276,11 +276,18 @@ CGFloat const cacleButtonHeight = 44;
 //设置提交审核时间
 - (void)setBeforeTimeLabelInfo:(QueryItem *)item{
     self.firstTimeLabel.text = [self convertDateToString:[item.applyTime doubleValue]];
+    
+}
+//设置综合评审进行中
+- (void)setZongheCheckInfo:(QueryItem *)item{
+    [self setBeforeTimeLabelInfo:item];
+    self.secondLabel.text = @"综合评估进行中";
+    self.secondTimeLabel.textColor = self.secondLabel.textColor = [UIColor blackColor];
     self.secondTimeLabel.text = [self convertDateToString:[item.auditTime doubleValue]];
 }
 //设置审核确认进行中
 - (void)setCheckLabelInfo:(QueryItem *)item{
-    [self setBeforeTimeLabelInfo:item];
+    [self setZongheCheckInfo:item];
     self.thirdLabel.text = @"审核确认进行中";
     self.thirdLabel.textColor = self.thirdTimeLabel.textColor = [UIColor blackColor];
     self.thirdTimeLabel.text = [self convertDateToString:[item.auditConfirmTime doubleValue]];
@@ -288,15 +295,15 @@ CGFloat const cacleButtonHeight = 44;
 //设置发放贷款资金中
 - (void)setSetLoanLabelInfo:(QueryItem *)item{
     [self setCheckLabelInfo:item];
-    self.secondLabel.text = @"发放借贷资金中";
-    self.secondLabel.textColor = self.secondTimeLabel.textColor = [UIColor blackColor];
-    self.secondTimeLabel.text = [self convertDateToString:[item.grantFundsTime doubleValue]];
+    self.fourthLabel.text = @"发放借贷资金中";
+    self.fourthLabel.textColor = self.fourthTimeLabel.textColor = [UIColor blackColor];
+    self.fourthTimeLabel.text = [self convertDateToString:[item.grantFundsTime doubleValue]];
 }
 - (void)setNormalFinishLabelInfo:(QueryItem *)item{
     [self setSetLoanLabelInfo:item];
-    self.fourthLabel.text = @"已经完结";
-    self.fourthLabel.textColor = self.fourthTimeLabel.textColor =[UIColor blackColor];
-    self.fourthTimeLabel.text = [self convertDateToString:[item.cancelTime doubleValue]];
+    self.fifthLabel.text = @"已经完结";
+    self.fifthLabel.textColor = self.fifthTimeLabel.textColor =[UIColor blackColor];
+    self.fifthTimeLabel.text = [self convertDateToString:[item.cancelTime doubleValue]];
 }
 - (void)setUnNormalFinishLabelInfo:(QueryItem *)item{
     [self setSetLoanLabelInfo:item];

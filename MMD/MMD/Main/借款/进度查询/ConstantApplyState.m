@@ -22,7 +22,6 @@ NSInteger const LOAN_AUDIT_FAIL                     = 4;
 NSInteger const LAON_AUDIT_CANCLE                   = 5;
 
 NSInteger const LAON_AUDIT_CONFIRM_SUCCESS          = 6;
-
 NSInteger const LAON_AUDIT_CONFIRM_FAIL             = 7;
 
 NSInteger const LAON_FINACE_AUDIT_SUCCESS           = 8;
