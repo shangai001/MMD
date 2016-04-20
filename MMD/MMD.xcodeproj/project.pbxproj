@@ -250,6 +250,11 @@
 		D6A600991CC697920014C3C4 /* TransferDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600981CC697920014C3C4 /* TransferDate.m */; };
 		D6A6009C1CC6995B0014C3C4 /* RefundWebVController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6009B1CC6995B0014C3C4 /* RefundWebVController.m */; };
 		D6A600A31CC6ABEA0014C3C4 /* OnlineRepayController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600A21CC6ABEA0014C3C4 /* OnlineRepayController.m */; };
+		D6A600E51CC7A80B0014C3C4 /* RBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600E41CC7A80B0014C3C4 /* RBViewController.m */; };
+		D6A600EB1CC7ACCD0014C3C4 /* BankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600EA1CC7ACCD0014C3C4 /* BankViewController.m */; };
+		D6A600EF1CC7ADA70014C3C4 /* BankAliPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600ED1CC7ADA70014C3C4 /* BankAliPayViewController.m */; };
+		D6A600F01CC7ADA70014C3C4 /* BankAliPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A600EE1CC7ADA70014C3C4 /* BankAliPayViewController.xib */; };
+		D6A600F31CC7B12D0014C3C4 /* AliPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600F21CC7B12D0014C3C4 /* AliPayViewController.m */; };
 		D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */; };
 		D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF24A1CB18F3C000A7A01 /* MoreCellActionHelper.m */; };
 		D6B031D31CB3964200E2955A /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B031D21CB3964200E2955A /* MessageModel.m */; };
@@ -683,6 +688,15 @@
 		D6A6009B1CC6995B0014C3C4 /* RefundWebVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundWebVController.m; sourceTree = "<group>"; };
 		D6A600A11CC6ABEA0014C3C4 /* OnlineRepayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineRepayController.h; sourceTree = "<group>"; };
 		D6A600A21CC6ABEA0014C3C4 /* OnlineRepayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineRepayController.m; sourceTree = "<group>"; };
+		D6A600E31CC7A80B0014C3C4 /* RBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBViewController.h; sourceTree = "<group>"; };
+		D6A600E41CC7A80B0014C3C4 /* RBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBViewController.m; sourceTree = "<group>"; };
+		D6A600E91CC7ACCD0014C3C4 /* BankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankViewController.h; sourceTree = "<group>"; };
+		D6A600EA1CC7ACCD0014C3C4 /* BankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankViewController.m; sourceTree = "<group>"; };
+		D6A600EC1CC7ADA70014C3C4 /* BankAliPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAliPayViewController.h; sourceTree = "<group>"; };
+		D6A600ED1CC7ADA70014C3C4 /* BankAliPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAliPayViewController.m; sourceTree = "<group>"; };
+		D6A600EE1CC7ADA70014C3C4 /* BankAliPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankAliPayViewController.xib; sourceTree = "<group>"; };
+		D6A600F11CC7B12D0014C3C4 /* AliPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliPayViewController.h; sourceTree = "<group>"; };
+		D6A600F21CC7B12D0014C3C4 /* AliPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliPayViewController.m; sourceTree = "<group>"; };
 		D6ABF2461CB18E91000A7A01 /* MineCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCellActionHelper.h; sourceTree = "<group>"; };
 		D6ABF2471CB18E91000A7A01 /* MineCellActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCellActionHelper.m; sourceTree = "<group>"; };
 		D6ABF2491CB18F3C000A7A01 /* MoreCellActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreCellActionHelper.h; sourceTree = "<group>"; };
@@ -1348,6 +1362,15 @@
 				D6DE72211CC385170037ED4D /* RRSecondViewController.m */,
 				D6A6009A1CC6995B0014C3C4 /* RefundWebVController.h */,
 				D6A6009B1CC6995B0014C3C4 /* RefundWebVController.m */,
+				D6A600E31CC7A80B0014C3C4 /* RBViewController.h */,
+				D6A600E41CC7A80B0014C3C4 /* RBViewController.m */,
+				D6A600EC1CC7ADA70014C3C4 /* BankAliPayViewController.h */,
+				D6A600ED1CC7ADA70014C3C4 /* BankAliPayViewController.m */,
+				D6A600EE1CC7ADA70014C3C4 /* BankAliPayViewController.xib */,
+				D6A600E91CC7ACCD0014C3C4 /* BankViewController.h */,
+				D6A600EA1CC7ACCD0014C3C4 /* BankViewController.m */,
+				D6A600F11CC7B12D0014C3C4 /* AliPayViewController.h */,
+				D6A600F21CC7B12D0014C3C4 /* AliPayViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2242,6 +2265,7 @@
 				D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */,
 				D6060A0A1C76FF0E000DB373 /* pullDown@2x.png in Resources */,
 				D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */,
+				D6A600F01CC7ADA70014C3C4 /* BankAliPayViewController.xib in Resources */,
 				D647FB721CAE800100CBF19E /* MMLogViewController.xib in Resources */,
 				D65F2DAB1CBBCAE2000817AE /* Icon-Small.png in Resources */,
 				D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */,
@@ -2402,6 +2426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6DE723A1CC535110037ED4D /* ConstantApplyState.m in Sources */,
+				D6A600F31CC7B12D0014C3C4 /* AliPayViewController.m in Sources */,
 				D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */,
 				D647FB711CAE800100CBF19E /* MMLogViewController.m in Sources */,
 				D65B6BD41CBECB20000F6F92 /* PrepareDataWorker.m in Sources */,
@@ -2411,6 +2436,7 @@
 				D647FB5D1CAE7F7A00CBF19E /* NewApplyViewController.m in Sources */,
 				D647FB5C1CAE7F7A00CBF19E /* LoanViewController.m in Sources */,
 				D64C99401CB9125800C45936 /* LoanProtroWebController.m in Sources */,
+				D6A600E51CC7A80B0014C3C4 /* RBViewController.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D633566B1CB04320000A321C /* SureViewController.m in Sources */,
 				D65F2CAF1CBBC1EE000817AE /* IDInfoController.m in Sources */,
@@ -2418,6 +2444,7 @@
 				D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */,
 				D63356611CB03ACE000A321C /* FormItem.m in Sources */,
 				D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */,
+				D6A600EB1CC7ACCD0014C3C4 /* BankViewController.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
 				D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m in Sources */,
 				D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */,
@@ -2455,6 +2482,7 @@
 				D633565E1CB0378F000A321C /* HeaderLabel.m in Sources */,
 				D647FBB61CAE87FD00CBF19E /* VerifyTableViewCell.m in Sources */,
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
+				D6A600EF1CC7ADA70014C3C4 /* BankAliPayViewController.m in Sources */,
 				D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */,
 				D65F2DB51CBBCCB0000817AE /* QueryIdModel.m in Sources */,
 				D63356341CB000D3000A321C /* MessageCenterController.m in Sources */,

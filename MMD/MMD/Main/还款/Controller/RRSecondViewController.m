@@ -70,10 +70,8 @@ static NSString * const reuseCellId = @"refudnCellId";
     [self configureTableView];
     [self requestData];
 }
-
 - (void)configureTableView{
     
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RefundTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:reuseCellId];
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor clearColor];
@@ -170,10 +168,12 @@ static NSString * const reuseCellId = @"refudnCellId";
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 200;
+    return 120;
 }
+//已还款 不能点击
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+ 
     if (indexPath.row < self.dataArray.count) {
         
         NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
@@ -187,6 +187,7 @@ static NSString * const reuseCellId = @"refudnCellId";
         [self.navigationController pushViewController:webVC animated:YES];
     }
 }
+*/
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

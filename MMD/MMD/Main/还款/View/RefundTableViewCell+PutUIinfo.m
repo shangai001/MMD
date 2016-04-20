@@ -16,6 +16,8 @@
 
 - (void)putItemInfo:(RefundItem *)item{
     
+    self.layer.cornerRadius = 10.0f;
+    
     [self makeSureTypeColor];
     [self setRepayAmountInfo:item];
     [self setOverDueInfo:item];

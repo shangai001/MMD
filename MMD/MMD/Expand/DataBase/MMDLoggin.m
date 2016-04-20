@@ -44,6 +44,18 @@
     }
     return nil;
 }
++ (NSString *)userId{
+    
+    NSString *userId = [SDUserDefault objectForKey:PASSWORD_KEY];
+    
+    return userId;
+}
++ (NSString *)token{
+    
+    NSString *password = [SDUserDefault objectForKey:PASSWORD_VALUE];
+    
+    return password;
+}
 + (void)ez_ResetStandardUserDefaults{
     
     NSDictionary *userDefaultDic = [SDUserDefault dictionaryRepresentation];

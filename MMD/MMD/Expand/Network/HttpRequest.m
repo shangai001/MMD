@@ -252,8 +252,9 @@
             } failure:^(NSError *error) {
                 
             }];
+        }else{
+            NSLog(@"token 失效 重新登录");
         }
-//        NSAssert(code != 9, @"登录失效，请重新登录");
     }
 }
 @end

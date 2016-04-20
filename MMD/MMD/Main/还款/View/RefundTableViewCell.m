@@ -7,11 +7,16 @@
 //
 
 #import "RefundTableViewCell.h"
+#import "ColorHeader.h"
 
 @implementation RefundTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+    self.layer.cornerRadius = 10.0f;
+    self.layer.masksToBounds = YES;
+    self.layer.borderWidth = 0.5f;
+    self.layer.borderColor =[REDCOLOR CGColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

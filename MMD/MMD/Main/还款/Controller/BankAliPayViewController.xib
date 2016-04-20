@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BankAliPayViewController">
+            <connections>
+                <outlet property="aliPayButton" destination="gRa-t3-cZi" id="aku-yg-dDX"/>
+                <outlet property="bankButton" destination="tZg-fk-h5h" id="MId-xb-STm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZg-fk-h5h">
+                    <rect key="frame" x="20" y="20" width="280" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ExV-Mg-yOl"/>
+                    </constraints>
+                    <state key="normal" title="银行卡转账汇款"/>
+                    <connections>
+                        <action selector="bankPayAction:" destination="-1" eventType="touchUpInside" id="r7K-dS-gvZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRa-t3-cZi">
+                    <rect key="frame" x="20" y="90" width="280" height="30"/>
+                    <state key="normal" title="支付宝转账"/>
+                    <connections>
+                        <action selector="aliPayAction:" destination="-1" eventType="touchUpInside" id="7Qx-kg-XDb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tZg-fk-h5h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="OB1-0r-Ybb"/>
+                <constraint firstItem="gRa-t3-cZi" firstAttribute="width" secondItem="tZg-fk-h5h" secondAttribute="width" id="UYT-zM-t7w"/>
+                <constraint firstItem="gRa-t3-cZi" firstAttribute="centerX" secondItem="tZg-fk-h5h" secondAttribute="centerX" id="XRl-El-2xU"/>
+                <constraint firstItem="tZg-fk-h5h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ZYD-SQ-BeY"/>
+                <constraint firstAttribute="trailing" secondItem="tZg-fk-h5h" secondAttribute="trailing" constant="20" id="hE1-qp-Ctx"/>
+                <constraint firstItem="gRa-t3-cZi" firstAttribute="top" secondItem="tZg-fk-h5h" secondAttribute="bottom" constant="40" id="m2n-hj-HFr"/>
+                <constraint firstItem="gRa-t3-cZi" firstAttribute="height" secondItem="tZg-fk-h5h" secondAttribute="height" id="qb8-lj-rBZ"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

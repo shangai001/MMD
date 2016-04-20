@@ -8,14 +8,16 @@
 
 #import "BaseWebViewController.h"
 
-typedef NS_ENUM(NSInteger,kDetailType) {
-    kRefundDetailType= 0,
-    kDidRefundDetailType
-};
+//typedef NS_ENUM(NSInteger,kDetailType) {
+//    kRefundDetailType= 0,
+//    kDidRefundDetailType
+//};
 
 @interface RefundWebVController : BaseWebViewController
 
-@property kDetailType detaiType;
+
+@property (nonatomic, strong)NSNumber *totalFee;
+@property (nonatomic, strong)NSNumber *orderNo;
 
 
 @end

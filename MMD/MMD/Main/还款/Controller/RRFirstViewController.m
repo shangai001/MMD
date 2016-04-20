@@ -113,8 +113,6 @@ CGFloat const HeaderHeight = 80;
         
         NSDictionary *data = resultDic[@"data"];
         BOOL result = [data isEqual:[NSNull null]];
-        //TODO:debug
-        result = NO;
         //如果是空，不隐藏 view（显示 View）
         [self hideNofoView:!result];
         if (!result) {
@@ -137,28 +135,30 @@ CGFloat const HeaderHeight = 80;
 - (void)initItemsArrayWith:(NSDictionary *)data{
     
     [self.dataArray removeAllObjects];
-//    NSArray *repays = data[@"repays"];
-    NSArray *repays = @[@"1",@"2",@"3"];
+    NSArray *repays = data[@"repays"];
+//    NSArray *repays = @[@"1",@"2",@"3"];
     for (NSInteger j = 0; j < repays.count; j ++) {
         
         RefundItem *item = [RefundItem new];
-//        item.repayAmount = data[@"repayAmount"];
-//        item.remainAmount = data[@"remainAmount"];
+        item.repayAmount = data[@"repayAmount"];
+        item.remainAmount = data[@"remainAmount"];
 
         item.repayAmount = @(0);
         item.remainAmount = @(500);
         
-//        NSDictionary *oneDic = repays[j];
-//        item.term = oneDic[@"term"];
-//        item.overdue = oneDic[@"overdue"];
-//        item.playdate = oneDic[@"playdate"];
-//        item.loanId = oneDic[@"loanId"];
-//        item.repayTotal = oneDic[@"repayTotal"];
-        item.term = @(3);
-        item.overdue = @(0);
-        item.playdate = @(1461110400);
-        item.loanId = @(3225);
-        item.repayTotal = @(582);
+        NSDictionary *oneDic = repays[j];
+        item.term = oneDic[@"term"];
+        item.overdue = oneDic[@"overdue"];
+        item.playdate = oneDic[@"playdate"];
+        item.loanId = oneDic[@"loanId"];
+        item.repayTotal = oneDic[@"repayTotal"];
+        
+        
+//        item.term = @(3);
+//        item.overdue = @(0);
+//        item.playdate = @(1461110400);
+//        item.loanId = @(3225);
+//        item.repayTotal = @(582);
         [self.dataArray addObject:item];
     }
     NSLog(@"data = %@",self.dataArray);
@@ -170,9 +170,9 @@ CGFloat const HeaderHeight = 80;
 }
 - (void)hideNofoView:(BOOL)hidden{
     
+    self.headView.hidden = hidden;
     if (hidden) {
         [self.infoView removeFromSuperview];
-        self.headView.hidden = NO;
     }else{
         if (![self.view.subviews containsObject:self.infoView]) {
             [self.view addSubview:self.infoView];
@@ -185,7 +185,6 @@ CGFloat const HeaderHeight = 80;
         }];
         self.infoView.infLabel.text = @"暂时没有该款项信息";
         [self.view bringSubviewToFront:self.infoView];
-        self.headView.hidden = YES;
     }
 }
 #pragma mark - Table view data source
@@ -207,11 +206,24 @@ CGFloat const HeaderHeight = 80;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 140;
+    return 120;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 40;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    UIView *seHeaderView = [UIView new];
+    seHeaderView.backgroundColor = [UIColor clearColor];
+    
+    return seHeaderView;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    
     if (indexPath.row < self.dataArray.count) {
+        RefundItem *firstItem = self.dataArray[0];
+        NSNumber *firstTerms = firstItem.term;
         
         NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
         NSString *userId = tokenDic[@"userId"];
@@ -219,8 +231,11 @@ CGFloat const HeaderHeight = 80;
         
         RefundItem *item = self.dataArray[indexPath.row];
         RefundWebVController *webVC = [RefundWebVController new];
+        
+        webVC.totalFee = item.repayTotal;
+        webVC.orderNo = firstTerms;
+        
         webVC.URLString = [NSString stringWithFormat:@"%@/webview/getLoanInfoOfRepay?userId=%@&token=%@&loanId=%@&terms=%@",kHostURL,userId,token,item.loanId,item.term];
-        webVC.detaiType = kRefundDetailType;
         [self.navigationController pushViewController:webVC animated:YES];
     }
 }
