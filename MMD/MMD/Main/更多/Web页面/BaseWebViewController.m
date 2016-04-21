@@ -7,18 +7,24 @@
 //
 
 #import "BaseWebViewController.h"
-#import <WebKit/WebKit.h>
 #import <SVProgressHUD.h>
 
 
-@interface BaseWebViewController ()<WKUIDelegate,WKNavigationDelegate>
-@property (nonatomic, strong, nonnull)WKWebView *webView;
+@interface BaseWebViewController ()<WKNavigationDelegate,WKScriptMessageHandler>
+
 @end
 
 @implementation BaseWebViewController
 
 - (WKWebView *)webView{
     if (!_webView) {
+        if ([self.identifier isEqualToString:@"Bank"]) {
+            WKWebViewConfiguration *config = [WKWebViewConfiguration new];
+            [config.userContentController addScriptMessageHandler:self name:@"didRepayByBank"];
+            _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+            _webView.navigationDelegate = self;
+            return _webView;
+        }
         _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
         _webView.navigationDelegate = self;
     }
@@ -48,7 +54,6 @@
     }
 }
 #pragma mark WKNavigationDelegate
-
 // 页面开始加载时调用
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
     [SVProgressHUD show];
@@ -66,8 +71,6 @@
     [SVProgressHUD popActivity];
     [SVProgressHUD showErrorWithStatus:@"网络错误"];
 }
-
-
 // 接收到服务器跳转请求之后调用
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation{
     
@@ -80,11 +83,19 @@
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
     decisionHandler(WKNavigationActionPolicyAllow);
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark WKUIdeleagte
+- (nullable WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures{
+    return nil;
 }
+
+#pragma mark WKScriptMessageHandler
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+    NSLog(@"message  ---  %@",message);
+}
+//- (void)didReceiveMemoryWarning {
+//    [super didReceiveMemoryWarning];
+//    // Dispose of any resources that can be recreated.
+//}
 
 /*
 #pragma mark - Navigation

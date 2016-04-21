@@ -15,9 +15,23 @@
 @implementation BankViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+//    [config.userContentController addScriptMessageHandler:self name:@"didRepayByBank"];
+//    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
 }
+/*
+#pragma mark WKScriptMessageHandler
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+    
+    NSLog(@"接受到消息  %@",message);
+//    if ([message isEqualToString:@"hello"]) {
+//        NSLog(@"跳转到相应页面！");
+//    }
+}
+*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

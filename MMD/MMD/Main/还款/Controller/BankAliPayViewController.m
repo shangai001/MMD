@@ -35,9 +35,11 @@
     
     BankViewController *bank = [BankViewController new];
     bank.title = @"银行还款";
+    bank.identifier = @"Bank";
     NSString *userId = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
     NSString *token =  [AppUserInfoHelper tokenAndUserIdDictionary][@"token"];
     bank.URLString = [NSString stringWithFormat:@"%@/webview/repayByBank?repayAmount=%@&userId=%@&token=%@",kHostURL,self.repayAmount,userId,token];
+//    bank.URLString = @"http://192.168.0.190:8020/backbone/new_file1.html";
     [self.navigationController pushViewController:bank animated:YES];
     
 }
