@@ -8,6 +8,8 @@
 
 #import "BaseWebViewController.h"
 #import <SVProgressHUD.h>
+#import "ConstantNotiName.h"
+
 
 
 @interface BaseWebViewController ()<WKNavigationDelegate,WKScriptMessageHandler>
@@ -20,7 +22,7 @@
     if (!_webView) {
         if ([self.identifier isEqualToString:@"Bank"]) {
             WKWebViewConfiguration *config = [WKWebViewConfiguration new];
-            [config.userContentController addScriptMessageHandler:self name:@"didRepayByBank"];
+            [config.userContentController addScriptMessageHandler:self name:UserDidRepayByBank];
             _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
             _webView.navigationDelegate = self;
             return _webView;
@@ -87,10 +89,14 @@
 - (nullable WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures{
     return nil;
 }
-
 #pragma mark WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
-    NSLog(@"message  ---  %@",message);
+    
+    NSLog(@"m  name=%@--body= %@",message.name,message.body);
+    
+    if ([message.name isEqualToString:UserDidRepayByBank]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:UserDidRepayByBank object:nil];
+    }
 }
 //- (void)didReceiveMemoryWarning {
 //    [super didReceiveMemoryWarning];

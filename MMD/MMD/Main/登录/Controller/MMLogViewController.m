@@ -59,13 +59,7 @@ CGFloat const INPUTROW_HEIGHT = 30;
     self.title = @"登录";
     // Do any additional setup after loading the view from its nib.
     [self addButtonStatusImage];
-    [self addDissmissKeyboardAction];
     [self initDefaultValue];    
-}
-- (void)ez_TurnBack:(id)sender{
-    
-    
-//    [self logIn:self.logButton];
 }
 - (void)initDefaultValue{
     if (!self.user) {
@@ -73,12 +67,8 @@ CGFloat const INPUTROW_HEIGHT = 30;
     }
     self.failureCount = 0;
 }
-- (void)addDissmissKeyboardAction{
-    
-    UITapGestureRecognizer *disTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(disKeyboard:)];
-    [self.view addGestureRecognizer:disTap];
-}
-- (void)disKeyboard:(id)sender{
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
     [self.view endEditing:YES];
 }
 - (void)addButtonStatusImage{

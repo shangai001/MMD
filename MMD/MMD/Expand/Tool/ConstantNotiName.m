@@ -13,3 +13,7 @@ NSString * const UserDidLogin  = @"UserDidLoginNotification";
 NSString * const UserDidLogout = @"UserDidLogoutNotification" ;
 NSString * const UserDidGetMessage  = @"UserDidGetMessageNotification";
 NSString * const UserInfoUpdateSuccess = @"UserInfoUpdateSuccess";
+
+
+NSString * const UserDidRepayByBank = @"didRepayByBank";
+NSString * const UserDidRepayByAliPay = @"didRepayByAliPay";

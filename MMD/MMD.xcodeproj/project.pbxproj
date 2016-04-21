@@ -165,6 +165,10 @@
 		D647FBD71CAE92B200CBF19E /* BankList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD31CAE92B200CBF19E /* BankList.plist */; };
 		D647FBD81CAE92B200CBF19E /* ContactList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD41CAE92B200CBF19E /* ContactList.plist */; };
 		D647FBD91CAE92B200CBF19E /* ImagesTitles_More.plist in Resources */ = {isa = PBXBuildFile; fileRef = D647FBD51CAE92B200CBF19E /* ImagesTitles_More.plist */; };
+		D648E8AA1CC8E09800B85DD8 /* PostRepayController.m in Sources */ = {isa = PBXBuildFile; fileRef = D648E8A81CC8E09800B85DD8 /* PostRepayController.m */; };
+		D648E8AB1CC8E09800B85DD8 /* PostRepayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D648E8A91CC8E09800B85DD8 /* PostRepayController.xib */; };
+		D648E8AE1CC8E60500B85DD8 /* RepayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D648E8AD1CC8E60500B85DD8 /* RepayItem.m */; };
+		D648E8B11CC923C200B85DD8 /* UITextField+DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D648E8B01CC923C200B85DD8 /* UITextField+DatePicker.m */; };
 		D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E1E1CB761CB00FB519B /* ConstantTitle.m */; };
 		D64A4E241CB77F4200FB519B /* ConstantHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E231CB77F4200FB519B /* ConstantHeight.m */; };
 		D64A4E271CB789AF00FB519B /* ContantLength.m in Sources */ = {isa = PBXBuildFile; fileRef = D64A4E261CB789AF00FB519B /* ContantLength.m */; };
@@ -550,6 +554,13 @@
 		D647FBD31CAE92B200CBF19E /* BankList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BankList.plist; sourceTree = "<group>"; };
 		D647FBD41CAE92B200CBF19E /* ContactList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ContactList.plist; sourceTree = "<group>"; };
 		D647FBD51CAE92B200CBF19E /* ImagesTitles_More.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImagesTitles_More.plist; sourceTree = "<group>"; };
+		D648E8A71CC8E09800B85DD8 /* PostRepayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostRepayController.h; sourceTree = "<group>"; };
+		D648E8A81CC8E09800B85DD8 /* PostRepayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostRepayController.m; sourceTree = "<group>"; };
+		D648E8A91CC8E09800B85DD8 /* PostRepayController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostRepayController.xib; sourceTree = "<group>"; };
+		D648E8AC1CC8E60500B85DD8 /* RepayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepayItem.h; sourceTree = "<group>"; };
+		D648E8AD1CC8E60500B85DD8 /* RepayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepayItem.m; sourceTree = "<group>"; };
+		D648E8AF1CC923C200B85DD8 /* UITextField+DatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DatePicker.h"; sourceTree = "<group>"; };
+		D648E8B01CC923C200B85DD8 /* UITextField+DatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DatePicker.m"; sourceTree = "<group>"; };
 		D64A4E1D1CB761CB00FB519B /* ConstantTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantTitle.h; sourceTree = "<group>"; };
 		D64A4E1E1CB761CB00FB519B /* ConstantTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantTitle.m; sourceTree = "<group>"; };
 		D64A4E221CB77F4200FB519B /* ConstantHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantHeight.h; sourceTree = "<group>"; };
@@ -1340,6 +1351,42 @@
 			path = Plist;
 			sourceTree = "<group>";
 		};
+		D648E8A31CC8E05200B85DD8 /* 还款通知 */ = {
+			isa = PBXGroup;
+			children = (
+				D648E8A61CC8E06F00B85DD8 /* Modle */,
+				D648E8A51CC8E06800B85DD8 /* View */,
+				D648E8A41CC8E06100B85DD8 /* Controller */,
+			);
+			name = "还款通知";
+			sourceTree = "<group>";
+		};
+		D648E8A41CC8E06100B85DD8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D648E8A71CC8E09800B85DD8 /* PostRepayController.h */,
+				D648E8A81CC8E09800B85DD8 /* PostRepayController.m */,
+				D648E8A91CC8E09800B85DD8 /* PostRepayController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D648E8A51CC8E06800B85DD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D648E8A61CC8E06F00B85DD8 /* Modle */ = {
+			isa = PBXGroup;
+			children = (
+				D648E8AC1CC8E60500B85DD8 /* RepayItem.h */,
+				D648E8AD1CC8E60500B85DD8 /* RepayItem.m */,
+			);
+			name = Modle;
+			sourceTree = "<group>";
+		};
 		D64B9C791CBFEF9F00B6B5A5 /* 还款 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1595,6 +1642,8 @@
 		D6805E791CAD1A3200316925 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				D648E8AF1CC923C200B85DD8 /* UITextField+DatePicker.h */,
+				D648E8B01CC923C200B85DD8 /* UITextField+DatePicker.m */,
 				D6805E7A1CAD1A3300316925 /* Area(地区) */,
 				D6805E7E1CAD1A3300316925 /* Date(日期) */,
 				D6805E831CAD1A3300316925 /* Single(单数组) */,
@@ -1924,6 +1973,7 @@
 		D6E104FA1C73217C00049C3F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D648E8A31CC8E05200B85DD8 /* 还款通知 */,
 				D64B9C791CBFEF9F00B6B5A5 /* 还款 */,
 				D633567F1CB17717000A321C /* 我的 */,
 				D647FB8F1CAE87FD00CBF19E /* 验证用户 */,
@@ -2225,6 +2275,7 @@
 				D65E7F571CBB596C003AA72C /* records@3x.png in Resources */,
 				D60609BA1C76FF0E000DB373 /* 工作信息@3x.png in Resources */,
 				D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */,
+				D648E8AB1CC8E09800B85DD8 /* PostRepayController.xib in Resources */,
 				D633565B1CB035BF000A321C /* FormTableViewCell.xib in Resources */,
 				D65E7F561CBB596C003AA72C /* records@2x.png in Resources */,
 				D6F5672D1C80056300B0612F /* 更多@3x.png in Resources */,
@@ -2514,12 +2565,14 @@
 				D647FBAF1CAE87FD00CBF19E /* ThirdStepController.m in Sources */,
 				D6805E941CAD1A3300316925 /* NSCalendar+ST.m in Sources */,
 				D64A4E271CB789AF00FB519B /* ContantLength.m in Sources */,
+				D648E8B11CC923C200B85DD8 /* UITextField+DatePicker.m in Sources */,
 				D647FBB41CAE87FD00CBF19E /* HorizontalDashLineView.m in Sources */,
 				D647FB1A1CAE7E2D00CBF19E /* MoreCellUIItem.m in Sources */,
 				D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */,
 				D63356531CB033B2000A321C /* LoanVerifyController.m in Sources */,
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,
+				D648E8AE1CC8E60500B85DD8 /* RepayItem.m in Sources */,
 				D647FB8E1CAE814300CBF19E /* UploadParam.m in Sources */,
 				D65F2CAB1CBBB370000817AE /* DistributeStauff.m in Sources */,
 				D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */,
@@ -2528,6 +2581,7 @@
 				D6FE74391CB97529002F3941 /* QueryItem.m in Sources */,
 				D6BC3DC81CBABE6F00200BC7 /* LoggoutTableViewCell.m in Sources */,
 				D6805E931CAD1A3300316925 /* STPickerArea.m in Sources */,
+				D648E8AA1CC8E09800B85DD8 /* PostRepayController.m in Sources */,
 				D647FB611CAE7F7A00CBF19E /* HeaderView.m in Sources */,
 				D6BC3DD51CBAE7C900200BC7 /* ConstantNotiName.m in Sources */,
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,

@@ -7,6 +7,9 @@
 //
 
 #import "BankViewController.h"
+#import "ConstantNotiName.h"
+#import "PostRepayController.h"
+
 
 @interface BankViewController ()
 
@@ -14,25 +17,22 @@
 
 @implementation BankViewController
 
+
+- (void)dealloc{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-//    [config.userContentController addScriptMessageHandler:self name:@"didRepayByBank"];
-//    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRepayByBank:) name:UserDidRepayByBank object:nil];
 }
-/*
-#pragma mark WKScriptMessageHandler
-- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+- (void)didRepayByBank:(id)sender{
     
-    NSLog(@"接受到消息  %@",message);
-//    if ([message isEqualToString:@"hello"]) {
-//        NSLog(@"跳转到相应页面！");
-//    }
+    PostRepayController *poster = [[PostRepayController alloc] initWithNibName:NSStringFromClass([PostRepayController class]) bundle:[NSBundle mainBundle]];
+    [self.navigationController pushViewController:poster animated:YES];
 }
-*/
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

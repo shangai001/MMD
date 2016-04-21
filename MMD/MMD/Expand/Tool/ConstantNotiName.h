@@ -16,4 +16,6 @@ UIKIT_EXTERN NSString * const UserDidLogout ;
 UIKIT_EXTERN NSString * const UserDidGetMessage ;
 UIKIT_EXTERN NSString * const UserInfoUpdateSuccess;
 
-//UIKIT_EXTERN NSString * const UserLogin ;
+//已经使用银行还款
+UIKIT_EXTERN NSString * const UserDidRepayByBank;
+UIKIT_EXTERN NSString * const UserDidRepayByAliPay;
