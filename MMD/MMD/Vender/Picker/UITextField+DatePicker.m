@@ -9,7 +9,9 @@
 #import "UITextField+DatePicker.h"
 
 @implementation UITextField (DatePicker)
-@dynamic maxDate;
+
+
+//@dynamic maxDate;
 
 // 1
 + (UIDatePicker *)sharedDatePicker;
@@ -59,5 +61,10 @@
 - (void)setMaxDate:(NSDate *)maxDate{
     
     [UITextField sharedDatePicker].maximumDate = maxDate;
+}
+- (NSDate *)maxDate{
+    
+    return [NSDate date];
+    
 }
 @end

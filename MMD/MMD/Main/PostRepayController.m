@@ -10,6 +10,8 @@
 #import "ColorHeader.h"
 #import "RepayItem.h"
 #import "UITextField+DatePicker.h"
+#import "RepayIUploadModel.h"
+#import <SVProgressHUD.h>
 
 
 @interface PostRepayController ()<UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -27,7 +29,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *addPicture;
 
 @property (nonatomic, strong)UIImagePickerController *picker;
+
 @property (strong, nonatomic)RepayItem *item;
+@property (weak, nonatomic) IBOutlet UIImageView *selectedImageView;
 
 @end
 
@@ -85,6 +89,11 @@
 }
 - (IBAction)sureAction:(id)sender {
     
+    if (self.selectedImageView.image) {
+        [self uploadRepayInfo:self.selectedImageView.image];
+    }else{
+        [SVProgressHUD showErrorWithStatus:@"请选择上传图片"];
+    }
 }
 - (IBAction)addPictureAction:(id)sender {
     
@@ -92,7 +101,6 @@
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
-        [self dismissViewControllerAnimated:actionViewController completion:nil];
     }];
     //如果允许相册
     UIAlertAction *albumAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -118,16 +126,37 @@
 #pragma mark UIImagePickerViewDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
-    [picker dismissViewControllerAnimated:YES completion:^{
-        
-    }];
     UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     if (originalImage) {
-        
+        self.selectedImageView.image = originalImage;
+    }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo{
+    
+    self.selectedImageView.image = image;
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)uploadRepayInfo:(id)content{
+    if ([content isKindOfClass:[UIImage class]]) {
+        UIImage *upImage = (UIImage *)content;
+        [SVProgressHUD show];
+        [RepayIUploadModel uploadRepayInfo:upImage success:^(NSDictionary *resultDic) {
+            [SVProgressHUD dismiss];
+            if ([resultDic[@"code"] integerValue] == 0) {
+                NSLog(@"上传汇款凭证成功");
+            }
+        } failure:^(NSError *error) {
+            [SVProgressHUD dismiss];
+            [SVProgressHUD showErrorWithStatus:@"上传失败,请检查网络"];
+        }];
     }
 }
 #pragma mark UITextFieldDelegate
-
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     return YES;
 }// return NO to disallow editing.

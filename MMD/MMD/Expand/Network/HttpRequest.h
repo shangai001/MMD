@@ -78,7 +78,7 @@ typedef NS_ENUM(NSUInteger,HttpRequestType) {
 + (void)uploadWithURLString:(NSString *)URLString
                  parameters:(id)parameters
                 uploadParam:(UploadParam *)uploadParam
-                    success:(void (^)())success
+                    success:(void (^)(id responseObject))success
                     failure:(void (^)(NSError *error))failure;
 /**
  *  下载文件并以 baseName储存

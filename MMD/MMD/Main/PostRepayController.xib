@@ -13,6 +13,7 @@
                 <outlet property="cardIdNumLabel" destination="Ryy-lk-5Xw" id="YtS-WP-BVy"/>
                 <outlet property="middleView" destination="rlY-F5-SEJ" id="4Uw-6r-ggZ"/>
                 <outlet property="numTextField" destination="B9g-di-Qbn" id="IOU-X5-iOE"/>
+                <outlet property="selectedImageView" destination="QOx-a7-WdJ" id="n4O-86-SsJ"/>
                 <outlet property="sureButton" destination="5Mc-YV-ZY6" id="Ux2-aa-yQW"/>
                 <outlet property="timeLabel" destination="Dk6-Ae-ObZ" id="4qR-VX-SOs"/>
                 <outlet property="timeTextField" destination="U5x-Eb-SD0" id="pA4-tY-Qic"/>
@@ -58,17 +59,24 @@
                                 <action selector="addPictureAction:" destination="-1" eventType="touchUpInside" id="TWn-ln-jOg"/>
                             </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QOx-a7-WdJ">
+                            <rect key="frame" x="152" y="20" width="123" height="60"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="c6U-rT-Sny" firstAttribute="top" secondItem="rlY-F5-SEJ" secondAttribute="top" constant="20" id="2en-nO-h93"/>
                         <constraint firstItem="FBl-q3-cS5" firstAttribute="width" secondItem="c6U-rT-Sny" secondAttribute="width" id="3PS-es-JBp"/>
+                        <constraint firstItem="QOx-a7-WdJ" firstAttribute="height" secondItem="FBl-q3-cS5" secondAttribute="height" id="BKC-vM-vOS"/>
                         <constraint firstItem="FBl-q3-cS5" firstAttribute="leading" secondItem="c6U-rT-Sny" secondAttribute="trailing" constant="22" id="BfI-gu-ijb"/>
                         <constraint firstItem="FBl-q3-cS5" firstAttribute="height" secondItem="c6U-rT-Sny" secondAttribute="height" id="Btb-ni-NU4"/>
                         <constraint firstItem="c6U-rT-Sny" firstAttribute="leading" secondItem="rlY-F5-SEJ" secondAttribute="leading" constant="5" id="KrT-Vt-W7y"/>
+                        <constraint firstItem="QOx-a7-WdJ" firstAttribute="leading" secondItem="FBl-q3-cS5" secondAttribute="trailing" constant="5" id="MN5-oz-Qtz"/>
                         <constraint firstAttribute="bottom" secondItem="c6U-rT-Sny" secondAttribute="bottom" constant="20" id="Vqw-FA-hNt"/>
+                        <constraint firstItem="QOx-a7-WdJ" firstAttribute="centerY" secondItem="FBl-q3-cS5" secondAttribute="centerY" id="a4P-5m-TnD"/>
                         <constraint firstAttribute="height" constant="100" id="kbY-zo-1SO"/>
                         <constraint firstItem="FBl-q3-cS5" firstAttribute="centerY" secondItem="c6U-rT-Sny" secondAttribute="centerY" id="pwz-mN-MPa"/>
+                        <constraint firstAttribute="trailing" secondItem="QOx-a7-WdJ" secondAttribute="trailing" constant="5" id="qqv-Kn-aHc"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5G-CS-ZAX">

@@ -130,7 +130,7 @@
 + (void)uploadWithURLString:(NSString *)URLString
                  parameters:(id)parameters
                 uploadParam:(UploadParam *)uploadParam
-                    success:(void (^)())success
+                    success:(void (^)(id responseObject))success
                     failure:(void (^)(NSError *))failure {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
