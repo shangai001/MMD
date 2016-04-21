@@ -9,14 +9,18 @@
 #import <Foundation/Foundation.h>
 
 @interface RefundItem : NSObject
+//还款 Id
+@property (nonatomic, strong)NSNumber *refundId;
 
-
+//借款 Id
 @property (nonatomic, strong)NSNumber *loanId;
-@property (nonatomic, strong)NSNumber *repayAmount;
-@property (nonatomic, strong)NSNumber *remainAmount;
-@property (nonatomic, strong)NSNumber *repayTotal;
+//每期还款
+@property (nonatomic, strong)NSNumber *totalFee;
+//第几期
 @property (nonatomic, strong)NSNumber *term;
+//是否逾期
 @property (nonatomic, strong)NSNumber *overdue;
+//还款日
 @property (nonatomic, strong)NSNumber *playdate;
 
 @end

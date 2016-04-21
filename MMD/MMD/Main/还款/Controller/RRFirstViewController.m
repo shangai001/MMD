@@ -38,6 +38,9 @@ CGFloat const HeaderHeight = 80;
 @property (strong, nonatomic)NSMutableArray *dataArray;
 
 
+@property (nonatomic, strong)NSNumber *repayAmount;
+@property (nonatomic, strong)NSNumber *remainAmount;
+
 @end
 
 
@@ -116,6 +119,7 @@ CGFloat const HeaderHeight = 80;
         //如果是空，不隐藏 view（显示 View）
         [self hideNofoView:!result];
         if (!result) {
+            
             //刷新 tableView
             [self initItemsArrayWith:data];
             [self.tableView reloadData];
@@ -135,42 +139,33 @@ CGFloat const HeaderHeight = 80;
 - (void)initItemsArrayWith:(NSDictionary *)data{
     
     [self.dataArray removeAllObjects];
+    self.repayAmount = data[@"repayAmount"];
+    self.remainAmount = data[@"remainAmount"];
+
     NSArray *repays = data[@"repays"];
-//    NSArray *repays = @[@"1",@"2",@"3"];
     for (NSInteger j = 0; j < repays.count; j ++) {
         
         RefundItem *item = [RefundItem new];
-        item.repayAmount = data[@"repayAmount"];
-        item.remainAmount = data[@"remainAmount"];
-
-        item.repayAmount = @(0);
-        item.remainAmount = @(500);
-        
         NSDictionary *oneDic = repays[j];
-        item.term = oneDic[@"term"];
-        item.overdue = oneDic[@"overdue"];
-        item.playdate = oneDic[@"playdate"];
+        item.refundId = oneDic[@"id"];
         item.loanId = oneDic[@"loanId"];
-        item.repayTotal = oneDic[@"repayTotal"];
+        item.term = oneDic[@"terms"];
+        item.overdue = oneDic[@"overdue"];
+        item.playdate = oneDic[@"playDate"];
+        item.totalFee = oneDic[@"totalFee"];
         
-        
-//        item.term = @(3);
-//        item.overdue = @(0);
-//        item.playdate = @(1461110400);
-//        item.loanId = @(3225);
-//        item.repayTotal = @(582);
         [self.dataArray addObject:item];
     }
     NSLog(@"data = %@",self.dataArray);
 }
 - (void)setHeaderViewInfo:(RefundItem *)item{
     
-    self.headView.firtLabel.text = [NSString stringWithFormat:@"%@",item.repayAmount];
-    self.headView.secondLabel.text = [NSString stringWithFormat:@"%@",item.remainAmount];
+    self.headView.firtLabel.text = [NSString stringWithFormat:@"%@",self.repayAmount];
+    self.headView.secondLabel.text = [NSString stringWithFormat:@"%@",self.remainAmount];
 }
 - (void)hideNofoView:(BOOL)hidden{
     
-    self.headView.hidden = hidden;
+    self.headView.hidden = !hidden;
     if (hidden) {
         [self.infoView removeFromSuperview];
     }else{
@@ -222,9 +217,8 @@ CGFloat const HeaderHeight = 80;
     
     
     if (indexPath.row < self.dataArray.count) {
+        //保证先还第一个
         RefundItem *firstItem = self.dataArray[0];
-        NSNumber *firstTerms = firstItem.term;
-        
         NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
         NSString *userId = tokenDic[@"userId"];
         NSString *token = tokenDic[@"token"];
@@ -232,8 +226,9 @@ CGFloat const HeaderHeight = 80;
         RefundItem *item = self.dataArray[indexPath.row];
         RefundWebVController *webVC = [RefundWebVController new];
         
-        webVC.totalFee = item.repayTotal;
-        webVC.orderNo = firstTerms;
+        webVC.totalFee = item.totalFee;
+        webVC.orderNo = firstItem.refundId;
+        webVC.terms = firstItem.term;
         
         webVC.URLString = [NSString stringWithFormat:@"%@/webview/getLoanInfoOfRepay?userId=%@&token=%@&loanId=%@&terms=%@",kHostURL,userId,token,item.loanId,item.term];
         [self.navigationController pushViewController:webVC animated:YES];

@@ -33,6 +33,9 @@ static NSString * const reuseCellId = @"refudnCellId";
 @property (strong, nonatomic)NoInfoView *infoView;
 @property (strong, nonatomic)NSMutableArray *dataArray;
 
+@property (nonatomic, strong)NSNumber *repayAmount;
+@property (nonatomic, strong)NSNumber *remainAmount;
+
 @end
 
 
@@ -108,19 +111,23 @@ static NSString * const reuseCellId = @"refudnCellId";
 - (void)initItemsArrayWith:(NSDictionary *)data{
     
     [self.dataArray removeAllObjects];
+    self.repayAmount = data[@"repayAmount"];
+    self.remainAmount = data[@"remainAmount"];
+    
     NSArray *repays = data[@"repays"];
     for (NSInteger j = 0; j < repays.count; j ++) {
         
         RefundItem *item = [RefundItem new];
-        item.repayAmount = data[@"repayAmount"];
-        item.remainAmount = data[@"remainAmount"];
         
         NSDictionary *oneDic = repays[j];
-        item.term = oneDic[@"term"];
+ 
+        item.refundId = oneDic[@"id"];
+        item.loanId = oneDic[@"loanId"];
+        item.term = oneDic[@"terms"];
         item.overdue = oneDic[@"overdue"];
         item.playdate = oneDic[@"playdate"];
-        item.loanId = oneDic[@"loanId"];
-        item.repayTotal = oneDic[@"repayTotal"];
+        item.totalFee = oneDic[@"totalFee"];
+        
         [self.dataArray addObject:item];
     }
 }

@@ -11,7 +11,7 @@
 #import <UIView+SDAutoLayout.h>
 #import "RBViewController.h"
 #import "BankAliPayViewController.h"
-#import "MMDLoggin.h"
+#import "AppUserInfoHelper.h"
 #import "AppInfo.h"
 
 CGFloat buttonHeight = 44;
@@ -85,18 +85,31 @@ CGFloat buttonHeight = 44;
 }
 - (void)moveToOnlineRepay:(id)sender{
     
-    //
+    //融宝支付 H5
     RBViewController *rb = [RBViewController new];
-    NSString *title = @"还款";
-    NSString *body = @"还款";
+    NSString *title = @"米米贷借贷还款";
+    NSString *body = [NSString stringWithFormat:@"偿还借款第%@期",self.terms];
     NSString *imei = [AppInfo UUIDString];
-    rb.URLString = [NSString stringWithFormat:@"%@/reapal/pay?title=%@&body=%@&totalFee=%@&userId=%@&orderNo=%@&imei=%@",kHostURL,title,body,self.totalFee,[MMDLoggin userId],self.orderNo,imei];
+    NSString *userId = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
+    NSString *token = [AppUserInfoHelper tokenAndUserIdDictionary][@"token"];
+    rb.URLString = [NSString stringWithFormat:@"%@/reapal/pay?title=%@&body=%@&totalFee=%@&userId=%@&token=%@&orderNo=%@&imei=%@",kHostURL,title,body,self.totalFee,userId,token,self.orderNo,imei];
+    rb.URLString = [self encodeToPercentEscapeString:rb.URLString];
+    NSLog(@"融宝 H5 = %@",rb.URLString);
     [self.navigationController pushViewController:rb animated:YES];
+}
+//将 URL 中的 中文 编码
+- (NSString *)encodeToPercentEscapeString: (NSString *) input
+{
+    NSString *outputStr = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                                       NULL, /* allocator */
+                                                                                       (__bridge CFStringRef)input,
+                                                                                       NULL, /* charactersToLeaveUnescaped */
+                                                                                       (CFStringRef)@"!*'();@+$,#[]",kCFStringEncodingUTF8);
+    return outputStr;
 }
 - (void)moveToBankRepay:(id)sender{
     
     BankAliPayViewController *baPay = [BankAliPayViewController new];
-    
     baPay.repayAmount = self.totalFee;
     [self.navigationController pushViewController:baPay animated:YES];
   

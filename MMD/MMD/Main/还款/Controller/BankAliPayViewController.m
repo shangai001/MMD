@@ -9,7 +9,7 @@
 #import "BankAliPayViewController.h"
 #import "ColorHeader.h"
 #import "BankViewController.h"
-#import "MMDLoggin.h"
+#import "AppUserInfoHelper.h"
 #import "AliPayViewController.h"
 
 
@@ -34,9 +34,9 @@
 - (IBAction)bankPayAction:(id)sender {
     
     BankViewController *bank = [BankViewController new];
-    
-    NSString *userId = [MMDLoggin userId];
-    NSString *token =  [MMDLoggin token];
+    bank.title = @"银行还款";
+    NSString *userId = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
+    NSString *token =  [AppUserInfoHelper tokenAndUserIdDictionary][@"token"];
     bank.URLString = [NSString stringWithFormat:@"%@/webview/repayByBank?repayAmount=%@&userId=%@&token=%@",kHostURL,self.repayAmount,userId,token];
     [self.navigationController pushViewController:bank animated:YES];
     
@@ -44,8 +44,9 @@
 - (IBAction)aliPayAction:(id)sender {
     
     AliPayViewController *aliPay = [AliPayViewController new];
-    NSString *userId = [MMDLoggin userId];
-    NSString *token =  [MMDLoggin token];
+    aliPay.title = @"支付宝还款";
+    NSString *userId = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
+    NSString *token =  [AppUserInfoHelper tokenAndUserIdDictionary][@"token"];
     aliPay.URLString = [NSString stringWithFormat:@"%@/webview/repayByZfb?repayAmount=%@&userId=%@&token=%@",kHostURL,self.repayAmount,userId,token];
     [self.navigationController pushViewController:aliPay animated:YES];
 }

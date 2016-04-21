@@ -37,7 +37,7 @@
 }
 //设置数字文字
 - (void)setRepayAmountInfo:(RefundItem *)item{
-    float repayFloat = [item.repayTotal floatValue];
+    float repayFloat = [item.totalFee floatValue];
     NSString *repayAmountString = [NSString stringWithFormat:@"%0.2f元",repayFloat];
     self.repayAmountLabel.text = nil;
     self.repayAmountLabel.attributedText = [self repayAttributedStringWith:repayAmountString];
@@ -69,7 +69,7 @@
         if (item.overdue && [item.overdue integerValue] > 0) {
             string = [NSString stringWithFormat:@"已逾期%@天",item.overdue];
         }else{
-            string = @"未逾期";
+            string = @"等待还款，未逾期";
         }
     }else if (self.cellType == kDidRefundType){
         if (item.overdue && [item.overdue integerValue] > 0) {

@@ -39,6 +39,8 @@
 //自定义返回按钮
 - (void)initBackBarItem{
     
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 - (void)viewDidLoad {

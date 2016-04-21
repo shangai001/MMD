@@ -15,8 +15,10 @@
 
 @interface RefundWebVController : BaseWebViewController
 
-
+@property (nonatomic, strong)NSNumber *terms;
+//还款金额
 @property (nonatomic, strong)NSNumber *totalFee;
+//还款计划 Id
 @property (nonatomic, strong)NSNumber *orderNo;
 
 

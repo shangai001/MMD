@@ -22,8 +22,6 @@
  *  @return
  */
 + (NSDictionary *)accountDic;
-+ (NSString *)userId;
-+ (NSString *)token;
 
 /**
  *  登录成功后记录用户名和密码
