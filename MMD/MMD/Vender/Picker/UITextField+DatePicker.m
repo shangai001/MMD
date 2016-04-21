@@ -9,6 +9,7 @@
 #import "UITextField+DatePicker.h"
 
 @implementation UITextField (DatePicker)
+@dynamic maxDate;
 
 // 1
 + (UIDatePicker *)sharedDatePicker;

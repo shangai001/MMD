@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface PostRepayController : BaseViewController
+//是否可以拍照
+@property (assign, nonatomic)BOOL albumOptional;
 
 @end

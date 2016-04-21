@@ -12,7 +12,7 @@
 #import "UITextField+DatePicker.h"
 
 
-@interface PostRepayController ()<UITextFieldDelegate>
+@interface PostRepayController ()<UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -26,12 +26,35 @@
 @property (weak, nonatomic) IBOutlet UITextField *timeTextField;
 @property (weak, nonatomic) IBOutlet UIButton *addPicture;
 
-
+@property (nonatomic, strong)UIImagePickerController *picker;
 @property (strong, nonatomic)RepayItem *item;
 
 @end
 
 @implementation PostRepayController
+
+- (UIImagePickerController *)picker{
+    if (!_picker) {
+        _picker = [[UIImagePickerController alloc] init];
+        UIImagePickerControllerSourceType sourcheType = UIImagePickerControllerSourceTypePhotoLibrary;
+        _picker.sourceType = sourcheType;
+        _picker.delegate = self;
+        _picker.allowsEditing = NO;
+        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+        {
+            NSLog(@"支持相机");
+        }
+        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
+        {
+            NSLog(@"支持图库");
+        }
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+        {
+            NSLog(@"支持相片库");
+        }
+    }
+    return _picker;
+}
 
 -(RepayItem *)item{
     if (!_item) {
@@ -61,10 +84,48 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)sureAction:(id)sender {
+    
 }
 - (IBAction)addPictureAction:(id)sender {
-}
+    
+    UIAlertController *actionViewController = [UIAlertController alertControllerWithTitle:@"汇款通知" message:@"请从以下方式选择上传您的汇款凭证" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self dismissViewControllerAnimated:actionViewController completion:nil];
+    }];
+    //如果允许相册
+    UIAlertAction *albumAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        [self presentViewController:self.picker animated:YES completion:^{
+            
+        }];
+    }];
 
+    UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"照相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:self.picker animated:YES completion:^{
+            
+        }];
+    }];
+    [actionViewController addAction:cancelAction];
+    if (self.albumOptional) {
+       [actionViewController addAction:albumAction];
+    }
+    [actionViewController addAction:takePhotoAction];
+    [self presentViewController:actionViewController animated:YES completion:nil];
+}
+#pragma mark UIImagePickerViewDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    [picker dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    if (originalImage) {
+        
+    }
+}
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
