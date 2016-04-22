@@ -9,7 +9,7 @@
 #import "MoreCellActionHelper.h"
 #import "MoreViewController.h"
 #import "LoanRulesWebController.h"
-#import "RefundWebController.h"
+#import "RefundProtocolWebController.h"
 #import "MMDInfoWebController.h"
 #import "MessageCenterController.h"
 #import "SupportCenterController.h"
@@ -91,19 +91,19 @@
 + (void)gotoLoanRules:(MoreViewController *)more{
     
     LoanRulesWebController *loanRuler = [[LoanRulesWebController alloc] init];
-    loanRuler.URLString = [NSString stringWithFormat:@"%@/webview/applyNotice",kHostURL];
+
     [more.navigationController pushViewController:loanRuler animated:YES];
 }
 + (void)gotoRefundRules:(MoreViewController *)more{
     
     RefundWebController *refunder = [[RefundWebController alloc] init];
-    refunder.URLString = [NSString stringWithFormat:@"%@/webview/repaymentNotice",kHostURL];
+ 
     [more.navigationController pushViewController:refunder animated:YES];
 }
 + (void)aboutMMD:(MoreViewController *)more{
     
     MMDInfoWebController *mmdInfoer = [[MMDInfoWebController alloc] init];
-    mmdInfoer.URLString = [NSString stringWithFormat:@"%@/webview/about",kHostURL];
+
     [more.navigationController pushViewController:mmdInfoer animated:YES];
 }
 @end

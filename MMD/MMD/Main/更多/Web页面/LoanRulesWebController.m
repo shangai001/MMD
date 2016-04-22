@@ -18,6 +18,9 @@
 @implementation LoanRulesWebController
 
 - (void)viewDidLoad {
+    
+    self.URLString = [NSString stringWithFormat:@"%@/webview/applyNotice",kHostURL];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = LOAN_TITLE;

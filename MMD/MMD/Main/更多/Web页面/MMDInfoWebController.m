@@ -17,6 +17,9 @@
 @implementation MMDInfoWebController
 
 - (void)viewDidLoad {
+    
+    self.URLString = [NSString stringWithFormat:@"%@/webview/about",kHostURL];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = ABOUTMMD_TITLE;
