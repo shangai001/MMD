@@ -9,7 +9,7 @@
 #import "MoreCellActionHelper.h"
 #import "MoreViewController.h"
 #import "LoanRulesWebController.h"
-#import "RefundProtocolWebController.h"
+#import "ProtocoRefundlWebController.h"
 #import "MMDInfoWebController.h"
 #import "MessageCenterController.h"
 #import "SupportCenterController.h"
@@ -96,7 +96,7 @@
 }
 + (void)gotoRefundRules:(MoreViewController *)more{
     
-    RefundWebController *refunder = [[RefundWebController alloc] init];
+    ProtocoRefundlWebController *refunder = [[ProtocoRefundlWebController alloc] init];
  
     [more.navigationController pushViewController:refunder animated:YES];
 }
