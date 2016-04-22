@@ -58,7 +58,7 @@
     
     LoanProtroWebController *protroWebController = [LoanProtroWebController new];
     [self.navigationController pushViewController:protroWebController animated:YES];
-    protroWebController.URLString = [NSString stringWithFormat:@"%@/webview/applyProtocol",kHostURL];
+
 }
 - (IBAction)nextAction:(UIButton *)sender {
     

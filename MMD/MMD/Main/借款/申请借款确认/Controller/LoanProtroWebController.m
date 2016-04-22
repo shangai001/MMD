@@ -15,6 +15,8 @@
 @implementation LoanProtroWebController
 
 - (void)viewDidLoad {
+    
+    self.URLString = [NSString stringWithFormat:@"%@/webview/applyProtocol",kHostURL];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

@@ -19,3 +19,4 @@ UIKIT_EXTERN NSString * const UserInfoUpdateSuccess;
 //已经使用银行还款
 UIKIT_EXTERN NSString * const UserDidRepayByBank;
 UIKIT_EXTERN NSString * const UserDidRepayByAliPay;
+UIKIT_EXTERN NSString * const UserMoveToApplyProtrol;

@@ -17,3 +17,4 @@ NSString * const UserInfoUpdateSuccess = @"UserInfoUpdateSuccess";
 
 NSString * const UserDidRepayByBank = @"didRepayByBank";
 NSString * const UserDidRepayByAliPay = @"didRepayByAliPay";
+NSString * const UserMoveToApplyProtrol = @"moveToApplyProtocol";

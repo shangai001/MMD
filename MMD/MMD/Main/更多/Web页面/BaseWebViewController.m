@@ -20,23 +20,32 @@
 
 - (WKWebView *)webView{
     if (!_webView) {
-        if (self.identifier) {
-            WKWebViewConfiguration *config = [WKWebViewConfiguration new];
-            NSString *name = @"";
-            if ([self.identifier isEqualToString:@"Bank"]) {
-                name = UserDidRepayByBank;
-            }else if ([self.identifier isEqualToString:@"AliPay"]){
-                name = UserDidRepayByAliPay;
-            }
-            [config.userContentController addScriptMessageHandler:self name:name];
-            _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
-            _webView.navigationDelegate = self;
-            return _webView;
-        }
+        
+        _webView = [self scriptWkWebView];
+        if (_webView) return _webView;
+        
         _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
         _webView.navigationDelegate = self;
     }
     return _webView;
+}
+- (WKWebView *)scriptWkWebView{
+    if (self.identifier) {
+        WKWebViewConfiguration *config = [WKWebViewConfiguration new];
+        NSString *name = @"";
+        if ([self.identifier isEqualToString:@"Bank"]) {
+            name = UserDidRepayByBank;
+        }else if ([self.identifier isEqualToString:@"AliPay"]){
+            name = UserDidRepayByAliPay;
+        }else if ([self.identifier isEqualToString:@"LoanDetailId"]){
+            name = UserMoveToApplyProtrol;
+        }
+        [config.userContentController addScriptMessageHandler:self name:name];
+        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+        _webView.navigationDelegate = self;
+        return _webView;
+    }
+    return nil;
 }
 - (void)setWebViewColor:(UIColor *)webViewColor{
     _webViewColor = webViewColor;
