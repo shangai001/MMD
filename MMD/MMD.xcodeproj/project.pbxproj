@@ -91,7 +91,6 @@
 		D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */; };
 		D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356221CAFDF3A000A321C /* BaseWebViewController.m */; };
 		D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356251CAFE036000A321C /* LoanRulesWebController.m */; };
-		D63356291CAFE100000A321C /* RefundWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356281CAFE100000A321C /* RefundWebController.m */; };
 		D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */; };
 		D63356341CB000D3000A321C /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356331CB000D3000A321C /* MessageCenterController.m */; };
 		D63356371CB00481000A321C /* SupportCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356361CB00481000A321C /* SupportCenterController.m */; };
@@ -425,8 +424,6 @@
 		D63356221CAFDF3A000A321C /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseWebViewController.m; path = "../更多/Web页面/BaseWebViewController.m"; sourceTree = "<group>"; };
 		D63356241CAFE036000A321C /* LoanRulesWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanRulesWebController.h; sourceTree = "<group>"; };
 		D63356251CAFE036000A321C /* LoanRulesWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanRulesWebController.m; sourceTree = "<group>"; };
-		D63356271CAFE100000A321C /* RefundWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundWebController.h; sourceTree = "<group>"; };
-		D63356281CAFE100000A321C /* RefundWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundWebController.m; sourceTree = "<group>"; };
 		D633562A1CAFE1FE000A321C /* MMDInfoWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDInfoWebController.h; sourceTree = "<group>"; };
 		D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDInfoWebController.m; sourceTree = "<group>"; };
 		D63356321CB000D3000A321C /* MessageCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCenterController.h; sourceTree = "<group>"; };
@@ -1078,8 +1075,6 @@
 			children = (
 				D63356241CAFE036000A321C /* LoanRulesWebController.h */,
 				D63356251CAFE036000A321C /* LoanRulesWebController.m */,
-				D63356271CAFE100000A321C /* RefundWebController.h */,
-				D63356281CAFE100000A321C /* RefundWebController.m */,
 				D633562A1CAFE1FE000A321C /* MMDInfoWebController.h */,
 				D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */,
 			);
@@ -2598,7 +2593,6 @@
 				D64C993D1CB90A8A00C45936 /* QueryModel.m in Sources */,
 				D647FB861CAE80BE00CBF19E /* RegisterContentView.m in Sources */,
 				D647FB631CAE7F7A00CBF19E /* MMSegmentControl.m in Sources */,
-				D63356291CAFE100000A321C /* RefundWebController.m in Sources */,
 				D688B91B1CB6AAD100CC80FF /* FaceRecongnizeController.m in Sources */,
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
 				D6BC3DD21CBAD0AD00200BC7 /* LogginHandler.m in Sources */,
