@@ -10,9 +10,12 @@
 
 @interface RepayItem : NSObject
 
-@property (copy, nonatomic)NSString *cardNumber;
-@property (copy, nonatomic)NSString *amount;
-@property (copy, nonatomic)NSString *time;
+@property (copy, nonatomic)NSString *account;
+@property (copy, nonatomic)NSString *repayMoney;
+@property (copy, nonatomic)NSString *repayTime;
+@property (copy, nonatomic)NSString *repayId;
+//1-支付宝  2-银行卡
+@property (strong, nonatomic)NSNumber *type;
 
 
 @end

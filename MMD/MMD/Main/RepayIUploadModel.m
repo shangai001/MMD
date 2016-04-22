@@ -10,31 +10,39 @@
 #import "HttpRequest.h"
 #import "UploadParam.h"
 #import "AppUserInfoHelper.h"
+#import <NSData+YYAdd.h>
+
 
 
 @implementation RepayIUploadModel
 
-+ (void)uploadRepayInfo:(id)content
++ (void)uploadRepayInfo:(NSDictionary *)info Image:(UIImage *)content
                 success:(successHandler)successHandler
                 failure:(failureHandler)failureHandler{
-    if ([content isKindOfClass:[UIImage class]]) {
-        UIImage *targetImage = (UIImage *)content;
-        UploadParam *param = [UploadParam new];
-        param.data = UIImageJPEGRepresentation(targetImage, 1.0);
-        param.name = @"需要修改";
-        param.mimeType = @"image/jpg";
-        param.filename = @"evidence.jpg";
-        
-        NSString *URL = [NSString stringWithFormat:@"%@",kHostURL];
-        NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
-        //tokenDic
-        [HttpRequest uploadWithURLString:URL parameters:tokenDic uploadParam:param success:^(id responseObject) {
-            successHandler(responseObject);
-        } failure:^(NSError *error) {
-            failureHandler(error);
-        }];
-    }
     
+    
+    NSMutableDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+    
+    UIImage *targetImage = (UIImage *)content;
+    NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.75);
+    NSString *baseString = [imageData base64EncodedString];
+    
+    
+    [info enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        [tokenDic setObject:obj forKey:key];
+    }];
+    
+    [tokenDic setObject:baseString forKey:@"voucherPic"];
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/repay/offlineRepay",kHostURL];
+    
+    [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
+        
+        successHandler(responseObject);
+    } failure:^(NSError *error) {
+        failureHandler(error);
+        
+    }];
 }
 
 @end

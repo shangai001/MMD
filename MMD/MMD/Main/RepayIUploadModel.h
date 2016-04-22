@@ -11,8 +11,9 @@
 
 @interface RepayIUploadModel : BaseModel
 
-+ (void)uploadRepayInfo:(id)content
++ (void)uploadRepayInfo:(NSDictionary *)info Image:(UIImage *)content
                 success:(successHandler)successHandler
                 failure:(failureHandler)failureHandler;
+
 
 @end

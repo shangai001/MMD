@@ -11,6 +11,7 @@
 @interface BankAliPayViewController : BaseViewController
 
 @property (nonatomic, strong)NSNumber *repayAmount;
+@property (nonatomic, copy)NSString *repayId;
 
 
 @end

@@ -14,6 +14,10 @@
  */
 @property (nonatomic, strong) NSData *data;
 /**
+ *  图片二进制数据的 base64 编码字符串
+ */
+@property (nonatomic, strong) NSString *base64String;
+/**
  *  服务器对应的参数名称
  */
 @property (nonatomic, copy) NSString *name;

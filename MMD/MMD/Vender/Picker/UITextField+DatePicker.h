@@ -14,5 +14,6 @@
 @property (nonatomic, strong)NSDate *maxDate;
 
 + (UIDatePicker *)sharedDatePicker;
-
+//获取默认时间
+- (void)getDefaultRightDate;
 @end

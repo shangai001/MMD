@@ -32,6 +32,7 @@
     
     PostRepayController *poster = [[PostRepayController alloc] initWithNibName:NSStringFromClass([PostRepayController class]) bundle:[NSBundle mainBundle]];
     poster.albumOptional = NO;
+    poster.repayId = self.repayId;
     [self.navigationController pushViewController:poster animated:YES];
 }
 - (void)didReceiveMemoryWarning {

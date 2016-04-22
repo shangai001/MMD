@@ -67,4 +67,9 @@
     return [NSDate date];
     
 }
+- (void)getDefaultRightDate{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    self.text = [formatter stringFromDate:self.maxDate];
+}
 @end

@@ -111,6 +111,7 @@ CGFloat buttonHeight = 44;
     
     BankAliPayViewController *baPay = [BankAliPayViewController new];
     baPay.repayAmount = self.totalFee;
+    baPay.repayId = [self.orderNo stringValue];
     [self.navigationController pushViewController:baPay animated:YES];
   
 }

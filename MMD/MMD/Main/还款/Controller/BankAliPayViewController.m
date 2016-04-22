@@ -36,6 +36,7 @@
     BankViewController *bank = [BankViewController new];
     bank.title = @"银行还款";
     bank.identifier = @"Bank";
+    bank.repayId = self.repayId;
     NSString *userId = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
     NSString *token =  [AppUserInfoHelper tokenAndUserIdDictionary][@"token"];
     bank.URLString = [NSString stringWithFormat:@"%@/webview/repayByBank?repayAmount=%@&userId=%@&token=%@",kHostURL,self.repayAmount,userId,token];

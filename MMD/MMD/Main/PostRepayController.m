@@ -1,4 +1,4 @@
-//
+ //
 //  PostRepayController.m
 //  MMD
 //
@@ -12,6 +12,7 @@
 #import "UITextField+DatePicker.h"
 #import "RepayIUploadModel.h"
 #import <SVProgressHUD.h>
+#import <MJExtension.h>
 
 
 @interface PostRepayController ()<UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -71,6 +72,7 @@
     // Do any additional setup after loading the view from its nib.
     [self configureButton];
     [self configureTextField];
+    self.item.repayId = self.repayId;
 }
 - (void)configureButton{
     
@@ -97,6 +99,8 @@
 }
 - (IBAction)addPictureAction:(id)sender {
     
+    [self.view endEditing:YES];
+    
     UIAlertController *actionViewController = [UIAlertController alertControllerWithTitle:@"汇款通知" message:@"请从以下方式选择上传您的汇款凭证" preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -109,7 +113,6 @@
             
         }];
     }];
-
     UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"照相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         [self presentViewController:self.picker animated:YES completion:^{
@@ -141,23 +144,37 @@
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
-- (void)uploadRepayInfo:(id)content{
-    if ([content isKindOfClass:[UIImage class]]) {
-        UIImage *upImage = (UIImage *)content;
-        [SVProgressHUD show];
-        [RepayIUploadModel uploadRepayInfo:upImage success:^(NSDictionary *resultDic) {
-            [SVProgressHUD dismiss];
-            if ([resultDic[@"code"] integerValue] == 0) {
-                NSLog(@"上传汇款凭证成功");
-            }
-        } failure:^(NSError *error) {
-            [SVProgressHUD dismiss];
-            [SVProgressHUD showErrorWithStatus:@"上传失败,请检查网络"];
-        }];
+- (void)setAlbumOptional:(BOOL)albumOptional{
+    _albumOptional = albumOptional;
+    if (_albumOptional) {
+        //支付宝
+        self.item.type = @(1);
+    }else{
+        //银行卡
+        self.item.type = @(2);
     }
+}
+//上传 Image
+- (void)uploadRepayInfo:(UIImage *)contentImage{
+    
+    NSMutableDictionary *infoDic = [self.item mj_keyValues];
+    [SVProgressHUD show];
+    [RepayIUploadModel uploadRepayInfo:infoDic Image:contentImage success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            NSLog(@"还款成功 %@",resultDic);
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        [SVProgressHUD dismiss];
+    } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:@"请检查网络"];
+    }];
 }
 #pragma mark UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if ([textField isEqual:self.timeTextField]) {
+        [textField getDefaultRightDate];
+    }
     return YES;
 }// return NO to disallow editing.
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
@@ -169,12 +186,15 @@
 }// return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     
-    if ([textField isEqual:self.cardIdNumLabel]) {
-        self.item.cardNumber = textField.text;
+    if ([textField isEqual:self.amountTextField]) {
+        self.item.account = textField.text;
     }
     if ([textField isEqual:self.numTextField]) {
-        self.item.amount = textField.text;
+        self.item.repayMoney = textField.text;
      }
+    if ([textField isEqual:self.timeTextField]) {
+        self.item.repayTime = textField.text;
+    }
 
 }// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
 

@@ -11,5 +11,6 @@
 @interface PostRepayController : BaseViewController
 //是否可以拍照
 @property (assign, nonatomic)BOOL albumOptional;
+@property (copy, nonatomic)NSString *repayId;
 
 @end
