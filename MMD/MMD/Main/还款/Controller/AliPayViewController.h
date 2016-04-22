@@ -10,4 +10,6 @@
 
 @interface AliPayViewController : BaseWebViewController
 
+@property (copy, nonatomic)NSString *repayId;
+
 @end

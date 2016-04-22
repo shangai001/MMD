@@ -27,6 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRepayByBank:) name:UserDidRepayByBank object:nil];
+
 }
 - (void)didRepayByBank:(id)sender{
     
@@ -35,6 +36,7 @@
     poster.repayId = self.repayId;
     [self.navigationController pushViewController:poster animated:YES];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

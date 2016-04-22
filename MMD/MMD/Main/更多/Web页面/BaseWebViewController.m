@@ -20,9 +20,15 @@
 
 - (WKWebView *)webView{
     if (!_webView) {
-        if ([self.identifier isEqualToString:@"Bank"]) {
+        if (self.identifier) {
             WKWebViewConfiguration *config = [WKWebViewConfiguration new];
-            [config.userContentController addScriptMessageHandler:self name:UserDidRepayByBank];
+            NSString *name = @"";
+            if ([self.identifier isEqualToString:@"Bank"]) {
+                name = UserDidRepayByBank;
+            }else if ([self.identifier isEqualToString:@"AliPay"]){
+                name = UserDidRepayByAliPay;
+            }
+            [config.userContentController addScriptMessageHandler:self name:name];
             _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
             _webView.navigationDelegate = self;
             return _webView;
@@ -93,10 +99,7 @@
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
     
     NSLog(@"m  name=%@--body= %@",message.name,message.body);
-    
-    if ([message.name isEqualToString:UserDidRepayByBank]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:UserDidRepayByBank object:nil];
-    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:message.name object:nil];
 }
 //- (void)didReceiveMemoryWarning {
 //    [super didReceiveMemoryWarning];

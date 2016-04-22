@@ -40,7 +40,6 @@
     NSString *userId = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
     NSString *token =  [AppUserInfoHelper tokenAndUserIdDictionary][@"token"];
     bank.URLString = [NSString stringWithFormat:@"%@/webview/repayByBank?repayAmount=%@&userId=%@&token=%@",kHostURL,self.repayAmount,userId,token];
-//    bank.URLString = @"http://192.168.0.190:8020/backbone/new_file1.html";
     [self.navigationController pushViewController:bank animated:YES];
     
 }
@@ -48,6 +47,8 @@
     
     AliPayViewController *aliPay = [AliPayViewController new];
     aliPay.title = @"支付宝还款";
+    aliPay.identifier = @"AliPay";
+    aliPay.repayId = self.repayId;
     NSString *userId = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
     NSString *token =  [AppUserInfoHelper tokenAndUserIdDictionary][@"token"];
     aliPay.URLString = [NSString stringWithFormat:@"%@/webview/repayByZfb?repayAmount=%@&userId=%@&token=%@",kHostURL,self.repayAmount,userId,token];

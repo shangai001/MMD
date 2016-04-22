@@ -7,6 +7,9 @@
 //
 
 #import "AliPayViewController.h"
+#import "ConstantNotiName.h"
+#import "PostRepayController.h"
+
 
 @interface AliPayViewController ()
 
@@ -17,8 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRepayByAliPay:) name:UserDidRepayByAliPay object:nil];
 }
-
+- (void)didRepayByAliPay:(id)sender{
+    
+    PostRepayController *poster = [[PostRepayController alloc] initWithNibName:NSStringFromClass([PostRepayController class]) bundle:[NSBundle mainBundle]];
+    poster.albumOptional = YES;
+    poster.repayId = self.repayId;
+    [self.navigationController pushViewController:poster animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
