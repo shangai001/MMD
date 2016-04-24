@@ -12,6 +12,8 @@
 #import "LogginHandler.h"
 #import "MMDLoggin.h"
 #import "IDInfoController.h"
+#import "IDPhotoController.h"
+#import "BankInfoController.h"
 
 
 
@@ -33,8 +35,12 @@
                 
             }else if (row == 1){
                 //持证拍照信息
+                IDPhotoController *idPhotoVc = [[IDPhotoController alloc] initWithNibName:NSStringFromClass([IDPhotoController class]) bundle:[NSBundle mainBundle]];
+                [self jumpToController:idPhotoVc from:originalController];
             }else if (row == 2){
                 //银行卡信息
+                BankInfoController *bankInfoVc = [[BankInfoController alloc] initWithNibName:NSStringFromClass([BankInfoController class]) bundle:[NSBundle mainBundle]];
+                [self jumpToController:bankInfoVc from:originalController];
             }
         }
             break;

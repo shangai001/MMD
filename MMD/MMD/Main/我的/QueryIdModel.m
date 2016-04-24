@@ -67,5 +67,21 @@
 //查询持证拍照信息
 //查询银行卡是否开通快捷支付
 
++ (void)queryIDPhoto:(NSDictionary *)info
+                success:(successHandler)successHandler
+                failure:(failureHandler)failureHandler{
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/user/idPhotoInfo",kHostURL];
+    
+    NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+    
+    [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
+        
+        successHandler(responseObject);
+    } failure:^(NSError *error) {
+        
+        failureHandler(error);
+    }];
+}
 
 @end

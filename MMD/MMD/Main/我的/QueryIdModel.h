@@ -42,6 +42,16 @@
  */
 + (void)queryAttachmentsSuccess:(successHandler)successHandler
                         failure:(failureHandler)failureHandler;
+/**
+ *  查询持证拍照信息
+ *
+ *  @param info
+ *  @param successHandler
+ *  @param failureHandler 
+ */
++ (void)queryIDPhoto:(NSDictionary *)info
+                success:(successHandler)successHandler
+                failure:(failureHandler)failureHandler;
 
 
 @end

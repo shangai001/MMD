@@ -277,6 +277,12 @@
 		D6C39D061CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D051CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.m */; };
 		D6C39D0A1CCA1F5300B5C1B6 /* EditeIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D081CCA1F5300B5C1B6 /* EditeIdViewController.m */; };
 		D6C39D0B1CCA1F5300B5C1B6 /* EditeIdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D091CCA1F5300B5C1B6 /* EditeIdViewController.xib */; };
+		D6C39D0F1CCC9C6900B5C1B6 /* IDPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D0D1CCC9C6900B5C1B6 /* IDPhotoController.m */; };
+		D6C39D101CCC9C6900B5C1B6 /* IDPhotoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D0E1CCC9C6900B5C1B6 /* IDPhotoController.xib */; };
+		D6C39D131CCCA1E000B5C1B6 /* IDPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D121CCCA1E000B5C1B6 /* IDPhotoItem.m */; };
+		D6C39D171CCCA8D800B5C1B6 /* BankInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D151CCCA8D800B5C1B6 /* BankInfoController.m */; };
+		D6C39D181CCCA8D800B5C1B6 /* BankInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D161CCCA8D800B5C1B6 /* BankInfoController.xib */; };
+		D6C39D1B1CCCB3BF00B5C1B6 /* BankItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D1A1CCCB3BF00B5C1B6 /* BankItem.m */; };
 		D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C61CC10B0E0037ED4D /* RRViewController.m */; };
 		D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */; };
 		D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72211CC385170037ED4D /* RRSecondViewController.m */; };
@@ -741,6 +747,16 @@
 		D6C39D071CCA1F5300B5C1B6 /* EditeIdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditeIdViewController.h; sourceTree = "<group>"; };
 		D6C39D081CCA1F5300B5C1B6 /* EditeIdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditeIdViewController.m; sourceTree = "<group>"; };
 		D6C39D091CCA1F5300B5C1B6 /* EditeIdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditeIdViewController.xib; sourceTree = "<group>"; };
+		D6C39D0C1CCC9C6900B5C1B6 /* IDPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPhotoController.h; sourceTree = "<group>"; };
+		D6C39D0D1CCC9C6900B5C1B6 /* IDPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPhotoController.m; sourceTree = "<group>"; };
+		D6C39D0E1CCC9C6900B5C1B6 /* IDPhotoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPhotoController.xib; sourceTree = "<group>"; };
+		D6C39D111CCCA1E000B5C1B6 /* IDPhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPhotoItem.h; sourceTree = "<group>"; };
+		D6C39D121CCCA1E000B5C1B6 /* IDPhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPhotoItem.m; sourceTree = "<group>"; };
+		D6C39D141CCCA8D800B5C1B6 /* BankInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankInfoController.h; sourceTree = "<group>"; };
+		D6C39D151CCCA8D800B5C1B6 /* BankInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankInfoController.m; sourceTree = "<group>"; };
+		D6C39D161CCCA8D800B5C1B6 /* BankInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankInfoController.xib; sourceTree = "<group>"; };
+		D6C39D191CCCB3BF00B5C1B6 /* BankItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankItem.h; sourceTree = "<group>"; };
+		D6C39D1A1CCCB3BF00B5C1B6 /* BankItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankItem.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6DE71C51CC10B0E0037ED4D /* RRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRViewController.h; sourceTree = "<group>"; };
 		D6DE71C61CC10B0E0037ED4D /* RRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRViewController.m; sourceTree = "<group>"; };
@@ -1808,6 +1824,11 @@
 		D6BC3DBF1CBABD1400200BC7 /* 持证拍照信息 */ = {
 			isa = PBXGroup;
 			children = (
+				D6C39D0C1CCC9C6900B5C1B6 /* IDPhotoController.h */,
+				D6C39D0D1CCC9C6900B5C1B6 /* IDPhotoController.m */,
+				D6C39D0E1CCC9C6900B5C1B6 /* IDPhotoController.xib */,
+				D6C39D111CCCA1E000B5C1B6 /* IDPhotoItem.h */,
+				D6C39D121CCCA1E000B5C1B6 /* IDPhotoItem.m */,
 			);
 			name = "持证拍照信息";
 			sourceTree = "<group>";
@@ -1815,6 +1836,11 @@
 		D6BC3DC01CBABD3B00200BC7 /* 银行卡信息 */ = {
 			isa = PBXGroup;
 			children = (
+				D6C39D141CCCA8D800B5C1B6 /* BankInfoController.h */,
+				D6C39D151CCCA8D800B5C1B6 /* BankInfoController.m */,
+				D6C39D161CCCA8D800B5C1B6 /* BankInfoController.xib */,
+				D6C39D191CCCB3BF00B5C1B6 /* BankItem.h */,
+				D6C39D1A1CCCB3BF00B5C1B6 /* BankItem.m */,
 			);
 			name = "银行卡信息";
 			sourceTree = "<group>";
@@ -2252,6 +2278,7 @@
 				D65F2DB01CBBCAE2000817AE /* Icon-Spotlight-40@3x.png in Resources */,
 				D60609A11C76FF0E000DB373 /* 步骤0@2x.png in Resources */,
 				D65F2DA01CBBCAE2000817AE /* Icon-60.png in Resources */,
+				D6C39D101CCC9C6900B5C1B6 /* IDPhotoController.xib in Resources */,
 				D60609F21C76FF0E000DB373 /* addPic@2x.png in Resources */,
 				D6E104D71C7320FD00049C3F /* LaunchScreen.storyboard in Resources */,
 				D6F5671C1C80047500B0612F /* 借款0@3x.png in Resources */,
@@ -2322,6 +2349,7 @@
 				D647FBB21CAE87FD00CBF19E /* VerifyViewController.xib in Resources */,
 				D6E104D41C7320FD00049C3F /* Assets.xcassets in Resources */,
 				D6060A081C76FF0E000DB373 /* mine_off@3x.png in Resources */,
+				D6C39D181CCCA8D800B5C1B6 /* BankInfoController.xib in Resources */,
 				D64B9C8B1CBFF39700B6B5A5 /* ShouldRefundView.xib in Resources */,
 				D65F2DAC1CBBCAE2000817AE /* Icon-Small@2x.png in Resources */,
 				D60609A71C76FF0E000DB373 /* 电话图标@2x.png in Resources */,
@@ -2530,6 +2558,7 @@
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
 				D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */,
+				D6C39D0F1CCC9C6900B5C1B6 /* IDPhotoController.m in Sources */,
 				D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */,
 				D6A600A31CC6ABEA0014C3C4 /* OnlineRepayController.m in Sources */,
 				D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */,
@@ -2555,6 +2584,7 @@
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,
 				D6E104C61C7320FD00049C3F /* main.m in Sources */,
 				D66B4FA51CB502970038F312 /* GetCodesAndAreas.m in Sources */,
+				D6C39D131CCCA1E000B5C1B6 /* IDPhotoItem.m in Sources */,
 				D63356911CB184E8000A321C /* MoreTableViewCell+MineUIInfo.m in Sources */,
 				D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */,
 				D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */,
@@ -2606,6 +2636,7 @@
 				D63356641CB03B2C000A321C /* FormTableViewCell+PutFormValue.m in Sources */,
 				D6DE72281CC4B62E0037ED4D /* RefundModel.m in Sources */,
 				D647FBB51CAE87FD00CBF19E /* StageView.m in Sources */,
+				D6C39D1B1CCCB3BF00B5C1B6 /* BankItem.m in Sources */,
 				D64C993D1CB90A8A00C45936 /* QueryModel.m in Sources */,
 				D647FB861CAE80BE00CBF19E /* RegisterContentView.m in Sources */,
 				D647FB631CAE7F7A00CBF19E /* MMSegmentControl.m in Sources */,
@@ -2618,6 +2649,7 @@
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,
 				D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */,
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
+				D6C39D171CCCA8D800B5C1B6 /* BankInfoController.m in Sources */,
 				D64A4E2E1CB7998A00FB519B /* BottomTableViewCell.m in Sources */,
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
 				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,

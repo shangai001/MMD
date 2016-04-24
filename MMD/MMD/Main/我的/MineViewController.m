@@ -134,6 +134,7 @@ static NSString * const loggoutCellId = @"loggoutCellId";
     }else{
         if (indexPath.section != 5) {
             MoreTableViewCell *bodyCell = [tableView dequeueReusableCellWithIdentifier:bodyCellId forIndexPath:indexPath];
+            bodyCell.selectionStyle = UITableViewCellSelectionStyleNone;
             NSArray *section = self.dataArray[indexPath.section - 1];
             MoreCellUIItem *item = section[indexPath.row];
             [bodyCell putMineUIValue:item];
@@ -158,6 +159,8 @@ static NSString * const loggoutCellId = @"loggoutCellId";
     return 0;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //除了第一组cell(不响应点击事件)
     if (indexPath.section != 0 && indexPath.section != 5) {
