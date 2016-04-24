@@ -275,8 +275,6 @@
 		D6BC3DD51CBAE7C900200BC7 /* ConstantNotiName.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */; };
 		D6C39CFD1CC9523B00B5C1B6 /* RepayIUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39CFC1CC9523B00B5C1B6 /* RepayIUploadModel.m */; };
 		D6C39D061CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D051CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.m */; };
-		D6C39D0A1CCA1F5300B5C1B6 /* EditeIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D081CCA1F5300B5C1B6 /* EditeIdViewController.m */; };
-		D6C39D0B1CCA1F5300B5C1B6 /* EditeIdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D091CCA1F5300B5C1B6 /* EditeIdViewController.xib */; };
 		D6C39D0F1CCC9C6900B5C1B6 /* IDPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D0D1CCC9C6900B5C1B6 /* IDPhotoController.m */; };
 		D6C39D101CCC9C6900B5C1B6 /* IDPhotoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D0E1CCC9C6900B5C1B6 /* IDPhotoController.xib */; };
 		D6C39D131CCCA1E000B5C1B6 /* IDPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D121CCCA1E000B5C1B6 /* IDPhotoItem.m */; };
@@ -286,6 +284,9 @@
 		D6C39D1F1CCCBBB800B5C1B6 /* EditeBankController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D1D1CCCBBB800B5C1B6 /* EditeBankController.m */; };
 		D6C39D201CCCBBB800B5C1B6 /* EditeBankController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D1E1CCCBBB800B5C1B6 /* EditeBankController.xib */; };
 		D6C39D231CCCCC7B00B5C1B6 /* NewBankItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D221CCCCC7B00B5C1B6 /* NewBankItem.m */; };
+		D6C39D271CCCF24000B5C1B6 /* JobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D251CCCF24000B5C1B6 /* JobViewController.m */; };
+		D6C39D281CCCF24000B5C1B6 /* JobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D261CCCF24000B5C1B6 /* JobViewController.xib */; };
+		D6C39D2B1CCD06E300B5C1B6 /* JobItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D2A1CCD06E300B5C1B6 /* JobItem.m */; };
 		D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C61CC10B0E0037ED4D /* RRViewController.m */; };
 		D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */; };
 		D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72211CC385170037ED4D /* RRSecondViewController.m */; };
@@ -747,9 +748,6 @@
 		D6C39CFC1CC9523B00B5C1B6 /* RepayIUploadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepayIUploadModel.m; sourceTree = "<group>"; };
 		D6C39D041CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocoRefundlWebController.h; sourceTree = "<group>"; };
 		D6C39D051CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocoRefundlWebController.m; sourceTree = "<group>"; };
-		D6C39D071CCA1F5300B5C1B6 /* EditeIdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditeIdViewController.h; sourceTree = "<group>"; };
-		D6C39D081CCA1F5300B5C1B6 /* EditeIdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditeIdViewController.m; sourceTree = "<group>"; };
-		D6C39D091CCA1F5300B5C1B6 /* EditeIdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditeIdViewController.xib; sourceTree = "<group>"; };
 		D6C39D0C1CCC9C6900B5C1B6 /* IDPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPhotoController.h; sourceTree = "<group>"; };
 		D6C39D0D1CCC9C6900B5C1B6 /* IDPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPhotoController.m; sourceTree = "<group>"; };
 		D6C39D0E1CCC9C6900B5C1B6 /* IDPhotoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPhotoController.xib; sourceTree = "<group>"; };
@@ -765,6 +763,11 @@
 		D6C39D1E1CCCBBB800B5C1B6 /* EditeBankController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditeBankController.xib; sourceTree = "<group>"; };
 		D6C39D211CCCCC7B00B5C1B6 /* NewBankItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewBankItem.h; sourceTree = "<group>"; };
 		D6C39D221CCCCC7B00B5C1B6 /* NewBankItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBankItem.m; sourceTree = "<group>"; };
+		D6C39D241CCCF24000B5C1B6 /* JobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobViewController.h; sourceTree = "<group>"; };
+		D6C39D251CCCF24000B5C1B6 /* JobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobViewController.m; sourceTree = "<group>"; };
+		D6C39D261CCCF24000B5C1B6 /* JobViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobViewController.xib; sourceTree = "<group>"; };
+		D6C39D291CCD06E300B5C1B6 /* JobItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobItem.h; sourceTree = "<group>"; };
+		D6C39D2A1CCD06E300B5C1B6 /* JobItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobItem.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6DE71C51CC10B0E0037ED4D /* RRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRViewController.h; sourceTree = "<group>"; };
 		D6DE71C61CC10B0E0037ED4D /* RRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRViewController.m; sourceTree = "<group>"; };
@@ -1822,9 +1825,6 @@
 				D65F2CAE1CBBC1EE000817AE /* IDInfoController.xib */,
 				D65F2DB31CBBCCB0000817AE /* QueryIdModel.h */,
 				D65F2DB41CBBCCB0000817AE /* QueryIdModel.m */,
-				D6C39D071CCA1F5300B5C1B6 /* EditeIdViewController.h */,
-				D6C39D081CCA1F5300B5C1B6 /* EditeIdViewController.m */,
-				D6C39D091CCA1F5300B5C1B6 /* EditeIdViewController.xib */,
 			);
 			name = "身份证信息";
 			sourceTree = "<group>";
@@ -1861,6 +1861,11 @@
 		D6BC3DC11CBABD4600200BC7 /* 工作信息 */ = {
 			isa = PBXGroup;
 			children = (
+				D6C39D241CCCF24000B5C1B6 /* JobViewController.h */,
+				D6C39D251CCCF24000B5C1B6 /* JobViewController.m */,
+				D6C39D261CCCF24000B5C1B6 /* JobViewController.xib */,
+				D6C39D291CCD06E300B5C1B6 /* JobItem.h */,
+				D6C39D2A1CCD06E300B5C1B6 /* JobItem.m */,
 			);
 			name = "工作信息";
 			sourceTree = "<group>";
@@ -2369,7 +2374,6 @@
 				D60609A71C76FF0E000DB373 /* 电话图标@2x.png in Resources */,
 				D60609ED1C76FF0E000DB373 /* phoneNumber@3x.png in Resources */,
 				D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */,
-				D6C39D0B1CCA1F5300B5C1B6 /* EditeIdViewController.xib in Resources */,
 				D6060A0A1C76FF0E000DB373 /* pullDown@2x.png in Resources */,
 				D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */,
 				D6A600F01CC7ADA70014C3C4 /* BankAliPayViewController.xib in Resources */,
@@ -2393,6 +2397,7 @@
 				D647FBD61CAE92B200CBF19E /* area.plist in Resources */,
 				D60609A21C76FF0E000DB373 /* 步骤0@3x.png in Resources */,
 				D6F567171C80047500B0612F /* 还款0@2x.png in Resources */,
+				D6C39D281CCCF24000B5C1B6 /* JobViewController.xib in Resources */,
 				D60609CC1C76FF0E000DB373 /* 好评@3x.png in Resources */,
 				D6E2FFF71CAE579800197B3E /* message@3x.png in Resources */,
 				D6060A1A1C76FF0E000DB373 /* go@3x.png in Resources */,
@@ -2593,7 +2598,6 @@
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
 				D6A600EF1CC7ADA70014C3C4 /* BankAliPayViewController.m in Sources */,
 				D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */,
-				D6C39D0A1CCA1F5300B5C1B6 /* EditeIdViewController.m in Sources */,
 				D65F2DB51CBBCCB0000817AE /* QueryIdModel.m in Sources */,
 				D63356341CB000D3000A321C /* MessageCenterController.m in Sources */,
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,
@@ -2614,6 +2618,7 @@
 				D63356781CB12062000A321C /* BaseModel.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,
 				D64C99431CB91C7200C45936 /* QueryHeaderView.m in Sources */,
+				D6C39D2B1CCD06E300B5C1B6 /* JobItem.m in Sources */,
 				D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */,
 				D66B4FA21CB4EE820038F312 /* AppUserInfoHelper.m in Sources */,
 				D64C992A1CB8DBA200C45936 /* LatestActivityController.m in Sources */,
@@ -2637,6 +2642,7 @@
 				D647FB8E1CAE814300CBF19E /* UploadParam.m in Sources */,
 				D65F2CAB1CBBB370000817AE /* DistributeStauff.m in Sources */,
 				D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */,
+				D6C39D271CCCF24000B5C1B6 /* JobViewController.m in Sources */,
 				D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */,
 				D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */,
 				D6FE74391CB97529002F3941 /* QueryItem.m in Sources */,

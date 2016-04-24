@@ -11,6 +11,9 @@
 #import "ColorHeader.h"
 #import "IDPhotoItem.h"
 #import <UIImageView+AFNetworking.h>
+#import "AppUserInfoHelper.h"
+#import "DistributeStauff.h"
+
 
 
 @interface IDPhotoController ()
@@ -19,9 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *frontImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
-
 @property (strong, nonatomic)IDPhotoItem *item;
-
+@property (weak, nonatomic) IBOutlet UIButton *recheckButton;
 
 @end
 
@@ -37,12 +39,18 @@
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = BACKGROUNDCOLOR;
     [self queryUserInfo];
+    [self configureButtons];
+}
+- (void)configureButtons{
+    
+    self.recheckButton.layer.cornerRadius = 10.0f;
+    self.recheckButton.backgroundColor = REDCOLOR;
+    self.recheckButton.hidden = YES;
 }
 - (void)queryUserInfo{
     
     [QueryIdModel queryIDPhoto:nil success:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
-            
             NSDictionary *data = resultDic[@"data"];
             self.item.cardFrontUrl = data[@"cardFrontUrl"];
             self.item.cardBackUrl = data[@"cardBackUrl"];
@@ -66,14 +74,26 @@
     [self.faceImageView setImageWithURL:cardHandUrl];
     
     if ([self.item.state isEqualToString:@"1"]) {
-        self.resultLabel.text = @"已审核";
-    }else if ([self.item.state isEqualToString:@"2"]){
+        self.resultLabel.text = @"已通过审核";
+        self.recheckButton.hidden = YES;
+    }else if([self.item.state isEqualToString:@"2"]){
+        self.resultLabel.text = @"未通过审核";
+        self.recheckButton.hidden = NO;
+    }else{
         self.resultLabel.text = @"未审核";
     }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)reCheckoutAction:(id)sender {
+    
+    if ([self.item.state isEqualToString:@"2"]) {
+        NSString *userId = [AppUserInfoHelper userInfo][@"userId"];
+        NSString *phone = [AppUserInfoHelper userInfo][@"phone"];
+        [DistributeStauff shouldReBlindUser:userId mobileId:phone];
+    }
 }
 
 /*

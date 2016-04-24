@@ -21,8 +21,27 @@
 @property (copy, nonatomic)NSString *mobileIdCardBack;
 @property (copy, nonatomic)NSString *mobileIdCardFront;
 
+/**
+ *  身份证官方照片
+ */
+@property (copy,nonatomic)NSString *idcardPhoto;
 
+@property (copy, nonatomic)NSString *name;
+@property (copy, nonatomic)NSString *idcard;
+@property (copy,nonatomic)NSString *address;
+
+/**
+ *  第三步上传真信数据
+ *
+ *  @param detail
+ */
 - (void)downloadImagesWith:(ZXMemberDetail *)detail;
+/**
+ *  重新更改持证拍照信息
+ *
+ *  @param detail 
+ */
+- (void)reDownloadImagesWith:(ZXMemberDetail *)detail;
 
 
 @end

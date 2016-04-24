@@ -81,6 +81,7 @@
     //先检查用户是否登录
     if ([MMDLoggin isLoggin]) {
         if ([HandleUserStatus handleUserStatusAt:mine]) {
+            targetController.hidesBottomBarWhenPushed = YES;
             //前往对应页面
             [mine.navigationController pushViewController:targetController animated:YES];
         }

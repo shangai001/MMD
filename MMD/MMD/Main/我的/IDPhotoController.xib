@@ -10,6 +10,7 @@
                 <outlet property="backImageView" destination="fgm-zD-o4d" id="Rvj-gW-xFC"/>
                 <outlet property="faceImageView" destination="JvZ-k7-fZO" id="f4m-6T-Kot"/>
                 <outlet property="frontImageView" destination="nmJ-nk-khI" id="dUH-m0-wKe"/>
+                <outlet property="recheckButton" destination="Y10-kv-x4Z" id="yfk-e6-H3W"/>
                 <outlet property="resultLabel" destination="hdY-vp-rDL" id="na8-E6-skl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,6 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证正反面照片" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMN-Ee-zGB">
+                    <rect key="frame" x="20" y="146" width="80" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wq0-cl-8CS">
                     <rect key="frame" x="100" y="84" width="200" height="60"/>
                     <subviews>
@@ -62,6 +70,17 @@
                         <constraint firstItem="nmJ-nk-khI" firstAttribute="top" secondItem="bcV-LA-ESb" secondAttribute="top" constant="5" id="lKp-Aq-ZIs"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本人照片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9m-j3-3rl">
+                    <rect key="frame" x="20" y="84" width="80" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="34c-a2-uGa"/>
+                        <constraint firstAttribute="width" constant="80" id="Yr5-pp-ixr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mau-tf-U9q">
                     <rect key="frame" x="20" y="226" width="280" height="50"/>
                     <subviews>
@@ -93,24 +112,18 @@
                         <constraint firstAttribute="height" constant="50" id="qfD-id-fan"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证正反面照片" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMN-Ee-zGB">
-                    <rect key="frame" x="20" y="146" width="80" height="60"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本人照片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9m-j3-3rl">
-                    <rect key="frame" x="20" y="84" width="80" height="60"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y10-kv-x4Z">
+                    <rect key="frame" x="20" y="306" width="280" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="34c-a2-uGa"/>
-                        <constraint firstAttribute="width" constant="80" id="Yr5-pp-ixr"/>
+                        <constraint firstAttribute="height" constant="40" id="icd-3c-oi9"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <state key="normal" title="重新审核">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="reCheckoutAction:" destination="-1" eventType="touchUpInside" id="oHI-M5-lEJ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -121,9 +134,12 @@
                 <constraint firstItem="AMN-Ee-zGB" firstAttribute="centerX" secondItem="E9m-j3-3rl" secondAttribute="centerX" id="Qj9-Nw-ulj"/>
                 <constraint firstItem="Wq0-cl-8CS" firstAttribute="height" secondItem="E9m-j3-3rl" secondAttribute="height" id="W33-dP-vHB"/>
                 <constraint firstItem="Mau-tf-U9q" firstAttribute="top" secondItem="bcV-LA-ESb" secondAttribute="bottom" constant="20" id="XHa-rj-U86"/>
+                <constraint firstItem="Y10-kv-x4Z" firstAttribute="top" secondItem="Mau-tf-U9q" secondAttribute="bottom" constant="30" id="YKK-sa-JGP"/>
+                <constraint firstAttribute="trailing" secondItem="Y10-kv-x4Z" secondAttribute="trailing" constant="20" id="ZNy-L3-EWP"/>
                 <constraint firstItem="Wq0-cl-8CS" firstAttribute="centerY" secondItem="E9m-j3-3rl" secondAttribute="centerY" id="ZzF-SR-cgp"/>
                 <constraint firstItem="Mau-tf-U9q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="cd9-7N-wPF"/>
                 <constraint firstItem="bcV-LA-ESb" firstAttribute="centerY" secondItem="AMN-Ee-zGB" secondAttribute="centerY" id="dPj-xj-G6r"/>
+                <constraint firstItem="Y10-kv-x4Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="gZD-ok-F3Z"/>
                 <constraint firstAttribute="trailing" secondItem="Wq0-cl-8CS" secondAttribute="trailing" constant="20" id="hkW-kd-Y9u"/>
                 <constraint firstItem="Wq0-cl-8CS" firstAttribute="leading" secondItem="E9m-j3-3rl" secondAttribute="trailing" id="ld0-9b-K4o"/>
                 <constraint firstItem="bcV-LA-ESb" firstAttribute="leading" secondItem="AMN-Ee-zGB" secondAttribute="trailing" id="nsK-2p-ceA"/>

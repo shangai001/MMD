@@ -21,6 +21,16 @@
  */
 + (void)shouldBlindUser:(NSString *)userId mobileId:(NSString *)phoneNumber;
 
+
+/**
+ *  修改持证拍照信息
+ *
+ *  @param userId
+ *  @param phoneNumber
+ */
++ (void)shouldReBlindUser:(NSString *)userId mobileId:(NSString *)phoneNumber;
+
+
 +(void)idcardVerificationForUid:(NSString *)uid withCallback:(ZXCallback)callback;
 +(void)getMemberDetailByMobileNo:(NSString *)mobileno withCallback:(ZXCallback)callback;
 +(void)getMemberDetailByIDCard:(NSString *)idcard withCallback:(ZXCallback)callback;

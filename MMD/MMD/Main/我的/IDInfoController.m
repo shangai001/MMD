@@ -65,10 +65,13 @@
     
     NSString *status = dic[@"checkState"];
     if ([status isEqualToString:@"1"]) {
-        self.statusLabel.text = @"未审核";
+        self.statusLabel.text = @"未通过审核";
         self.reCheckButotn.hidden = NO;
     }else if ([status isEqualToString:@"2"]){
-        self.statusLabel.text = @"已审核";
+        self.statusLabel.text = @"已通过审核";
+        self.reCheckButotn.hidden = YES;
+    }else{
+        self.statusLabel.text = @"未审核";
         self.reCheckButotn.hidden = YES;
     }
     
@@ -81,7 +84,7 @@
     
     NSString *userId = [AppUserInfoHelper userInfo][@"userId"];
     NSString *phone = [AppUserInfoHelper userInfo][@"phone"];
-    
+    //真信认证
     [DistributeStauff shouldBlindUser:userId mobileId:phone];
 }
 
