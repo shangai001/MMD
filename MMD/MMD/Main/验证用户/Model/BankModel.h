@@ -29,5 +29,14 @@
 + (void)checkCreditCard:(NSDictionary *)info
            completation:(successHandler)success
                 failure:(failureHandler)failure;
-
+/**
+ *  上传修改银行卡信息
+ *
+ *  @param info
+ *  @param success
+ *  @param failure 
+ */
++ (void)changeBankIdInfo:(NSDictionary *)info
+            completation:(successHandler)success
+                 failure:(failureHandler)failure;
 @end

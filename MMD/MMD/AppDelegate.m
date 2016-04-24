@@ -23,7 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //如果储存过用户名密码，重新登录一下
-    [PrepareDataWorker reLoginIfHasUserIdPassword];
+//    [PrepareDataWorker reLoginIfHasUserIdPassword];
     //配置 ZX
     [PrepareDataWorker configureZXSDK];
     //集成分享控件

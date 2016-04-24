@@ -37,4 +37,19 @@
         failure(error);
     }];
 }
++ (void)changeBankIdInfo:(NSDictionary *)info
+            completation:(successHandler)success
+                 failure:(failureHandler)failure{
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/user/changeBankCard",kHostURL];
+    
+    NSDictionary *tokenDic = [AppUserInfoHelper appendUserIdToken:info];
+    
+    [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
 @end

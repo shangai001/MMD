@@ -11,6 +11,7 @@
 #import "QueryIdModel.h"
 #import "BankItem.h"
 #import "AppUserInfoHelper.h"
+#import "EditeBankController.h"
 
 
 @interface BankInfoController ()
@@ -89,6 +90,11 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)changeBankInfoAction:(id)sender {
+    
+    EditeBankController *editeVC = [[EditeBankController alloc] initWithNibName:NSStringFromClass([EditeBankController class]) bundle:[NSBundle mainBundle]];
+    
+    editeVC.item = self.item;
+    [self.navigationController pushViewController:editeVC animated:YES];
 }
 
 /*

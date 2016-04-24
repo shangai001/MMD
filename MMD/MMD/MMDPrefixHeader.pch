@@ -16,11 +16,7 @@
 #define AuditState @"auditState"
 #define WeakSelf __weak typeof(self)weakSelf = self
 
-#ifdef DEBUG
-#define EZLog(s, ... ) NSLog( @"[%@ in line %d] ===============>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
-#else
-#define HYBAppLog(s, ... )
-#endif
+
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

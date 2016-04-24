@@ -26,7 +26,7 @@
     if (userIdPassword) {
         [LogginHandler shouldUpdateUserInfo:nil success:^(NSDictionary *resultDic) {
             if ([resultDic[@"code"] integerValue] == 1) {
-                EZLog(@"启动时候重新登录成功");
+                NSLog(@"启动时候重新登录成功");
             }
         } failure:^(NSError *error) {
             
