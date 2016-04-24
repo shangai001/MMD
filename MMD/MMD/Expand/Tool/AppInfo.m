@@ -47,6 +47,8 @@
         [SSKeychain setPassword:savedUUIDString forService:@"UUID" account:@"MMD" error:&error];
     }
     NSLog(@"UUID ---> %@",savedUUIDString);
+    savedUUIDString = [savedUUIDString stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    NSLog(@"UUID ---> %@",savedUUIDString);
     return savedUUIDString;
 }
 @end

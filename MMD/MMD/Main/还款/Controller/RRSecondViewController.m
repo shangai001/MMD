@@ -90,7 +90,8 @@ static NSString * const reuseCellId = @"refudnCellId";
     [RefundModel queryDidRefundInfo:nil success:^(NSDictionary *resultDic) {
         
         NSDictionary *data = resultDic[@"data"];
-        BOOL same = [data isEqual:[NSNull null]];
+        NSArray *repays = data[@"repays"];
+        BOOL same = [data isEqual:[NSNull null]] || repays.count == 0;
         [self hideNofoView:!same];
         if (!same) {
             [self initItemsArrayWith:data];
@@ -135,6 +136,7 @@ static NSString * const reuseCellId = @"refudnCellId";
 - (void)hideNofoView:(BOOL)hidden{
     
     if (hidden) {
+        
         [self.infoView removeFromSuperview];
     }else{
         if (![self.view.subviews containsObject:self.infoView]) {

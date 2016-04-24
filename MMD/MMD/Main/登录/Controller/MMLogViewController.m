@@ -27,6 +27,7 @@
 #import "MMDLoggin.h"
 #import "AppUserInfoHelper.h"
 #import "AppInfo.h"
+#import "MessageModel.h"
 
 
 CGFloat const REMEMBERBUTTONTOTOP_DEFAULT = 25;
@@ -164,7 +165,6 @@ CGFloat const INPUTROW_HEIGHT = 30;
             NSLog(@"error %@",error);
         }];
     }
-
 }
 //登录成功
 - (void)resetFailureValue{
@@ -183,14 +183,22 @@ CGFloat const INPUTROW_HEIGHT = 30;
 //发送异常登录警告
 - (void)sendUnusualMessage:(id)sender{
     
-    NSDictionary *phoneDic = @{@"phone":self.user.phone};
-    [WarnLoginModel postWarnningMessageToPhone:phoneDic success:^(NSDictionary *resultDic) {
+    [MessageModel getSecurityMessageToken:nil completion:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
-            NSLog(@"%@",resultDic[@"msg"]);
+            NSString *messageToken = resultDic[@"data"];
+            NSDictionary *phoneDic = @{@"phone":self.user.phone,@"token":messageToken};
+            [WarnLoginModel postWarnningMessageToPhone:phoneDic success:^(NSDictionary *resultDic) {
+                if ([resultDic[@"code"] integerValue] == 0) {
+                    NSLog(@"%@",resultDic[@"msg"]);
+                }
+            } failure:^(NSError *error) {
+                NSLog(@"异常登录短信发送失败");
+            }];
         }
     } failure:^(NSError *error) {
-        NSLog(@"异常登录短信发送失败");
+        
     }];
+
 }
 #pragma mark DidEndInputCode
 - (void)didEndInputCode:(NSString *)codeString{

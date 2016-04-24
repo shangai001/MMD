@@ -275,6 +275,8 @@
 		D6BC3DD51CBAE7C900200BC7 /* ConstantNotiName.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3DD41CBAE7C900200BC7 /* ConstantNotiName.m */; };
 		D6C39CFD1CC9523B00B5C1B6 /* RepayIUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39CFC1CC9523B00B5C1B6 /* RepayIUploadModel.m */; };
 		D6C39D061CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D051CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.m */; };
+		D6C39D0A1CCA1F5300B5C1B6 /* EditeIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D081CCA1F5300B5C1B6 /* EditeIdViewController.m */; };
+		D6C39D0B1CCA1F5300B5C1B6 /* EditeIdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D091CCA1F5300B5C1B6 /* EditeIdViewController.xib */; };
 		D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C61CC10B0E0037ED4D /* RRViewController.m */; };
 		D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */; };
 		D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72211CC385170037ED4D /* RRSecondViewController.m */; };
@@ -736,6 +738,9 @@
 		D6C39CFC1CC9523B00B5C1B6 /* RepayIUploadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepayIUploadModel.m; sourceTree = "<group>"; };
 		D6C39D041CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocoRefundlWebController.h; sourceTree = "<group>"; };
 		D6C39D051CCA1D2C00B5C1B6 /* ProtocoRefundlWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocoRefundlWebController.m; sourceTree = "<group>"; };
+		D6C39D071CCA1F5300B5C1B6 /* EditeIdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditeIdViewController.h; sourceTree = "<group>"; };
+		D6C39D081CCA1F5300B5C1B6 /* EditeIdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditeIdViewController.m; sourceTree = "<group>"; };
+		D6C39D091CCA1F5300B5C1B6 /* EditeIdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditeIdViewController.xib; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6DE71C51CC10B0E0037ED4D /* RRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRViewController.h; sourceTree = "<group>"; };
 		D6DE71C61CC10B0E0037ED4D /* RRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRViewController.m; sourceTree = "<group>"; };
@@ -1793,6 +1798,9 @@
 				D65F2CAE1CBBC1EE000817AE /* IDInfoController.xib */,
 				D65F2DB31CBBCCB0000817AE /* QueryIdModel.h */,
 				D65F2DB41CBBCCB0000817AE /* QueryIdModel.m */,
+				D6C39D071CCA1F5300B5C1B6 /* EditeIdViewController.h */,
+				D6C39D081CCA1F5300B5C1B6 /* EditeIdViewController.m */,
+				D6C39D091CCA1F5300B5C1B6 /* EditeIdViewController.xib */,
 			);
 			name = "身份证信息";
 			sourceTree = "<group>";
@@ -2319,6 +2327,7 @@
 				D60609A71C76FF0E000DB373 /* 电话图标@2x.png in Resources */,
 				D60609ED1C76FF0E000DB373 /* phoneNumber@3x.png in Resources */,
 				D6B6921C1C8D7A8500B3877D /* key@2x.png in Resources */,
+				D6C39D0B1CCA1F5300B5C1B6 /* EditeIdViewController.xib in Resources */,
 				D6060A0A1C76FF0E000DB373 /* pullDown@2x.png in Resources */,
 				D6060A161C76FF0E000DB373 /* creditCardInfo@2x.png in Resources */,
 				D6A600F01CC7ADA70014C3C4 /* BankAliPayViewController.xib in Resources */,
@@ -2540,6 +2549,7 @@
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
 				D6A600EF1CC7ADA70014C3C4 /* BankAliPayViewController.m in Sources */,
 				D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */,
+				D6C39D0A1CCA1F5300B5C1B6 /* EditeIdViewController.m in Sources */,
 				D65F2DB51CBBCCB0000817AE /* QueryIdModel.m in Sources */,
 				D63356341CB000D3000A321C /* MessageCenterController.m in Sources */,
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,

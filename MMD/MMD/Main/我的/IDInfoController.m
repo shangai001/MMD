@@ -7,13 +7,23 @@
 //
 
 #import "IDInfoController.h"
+#import "QueryIdModel.h"
+#import "AppUserInfoHelper.h"
+#import "ColorHeader.h"
+#import "DistributeStauff.h"
+
+
 
 @interface IDInfoController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *idTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+
+@property (strong,nonatomic)NSDictionary *infoDic;
+@property (weak, nonatomic) IBOutlet UIButton *reCheckButotn;
 
 @end
 
@@ -22,11 +32,57 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.view.backgroundColor = BACKGROUNDCOLOR;
+    [self queryStatus];
+    [self configureButtons];
 }
-
+- (void)configureButtons{
+    
+    self.reCheckButotn.layer.cornerRadius = 10.0f;
+    self.reCheckButotn.backgroundColor = REDCOLOR;
+    self.reCheckButotn.hidden = YES;
+}
+- (void)queryStatus{
+    
+    [QueryIdModel queryUserCheckSuccess:^(NSDictionary *resultDic) {
+        
+        if ([resultDic[@"code"] integerValue] == 0) {
+            NSDictionary *data = resultDic[@"data"];
+            self.infoDic = data;
+            [self setLabelText:self.infoDic];
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+}
+- (void)setLabelText:(NSDictionary *)dic{
+    
+    NSDictionary *userInfo = [AppUserInfoHelper userInfo];
+    NSString *name = userInfo[@"name"];
+    NSString *idNumber = userInfo[@"idcard"];
+    self.nameLabel.text = name;
+    self.idLabel.text = idNumber;
+    
+    NSString *status = dic[@"checkState"];
+    if ([status isEqualToString:@"1"]) {
+        self.statusLabel.text = @"未审核";
+        self.reCheckButotn.hidden = NO;
+    }else if ([status isEqualToString:@"2"]){
+        self.statusLabel.text = @"已审核";
+        self.reCheckButotn.hidden = YES;
+    }
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)reCheckAction:(id)sender {
+    
+    NSString *userId = [AppUserInfoHelper userInfo][@"userId"];
+    NSString *phone = [AppUserInfoHelper userInfo][@"phone"];
+    
+    [DistributeStauff shouldBlindUser:userId mobileId:phone];
 }
 
 /*

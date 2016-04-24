@@ -11,6 +11,9 @@
 #import "HandleUserStatus.h"
 #import "LogginHandler.h"
 #import "MMDLoggin.h"
+#import "IDInfoController.h"
+
+
 
 @implementation MineCellActionHelper
 
@@ -25,7 +28,9 @@
         {
             if (row == 0) {
                 //身份证信息
-                [self jumpToController:nil from:originalController];
+                IDInfoController *idVC = [[IDInfoController alloc] initWithNibName:NSStringFromClass([IDInfoController class]) bundle:[NSBundle mainBundle]];
+                [self jumpToController:idVC from:originalController];
+                
             }else if (row == 1){
                 //持证拍照信息
             }else if (row == 2){
@@ -67,11 +72,11 @@
 #pragma mark JumptoTarget
 + (void)jumpToController:(UIViewController *)targetController from:(MineViewController *)mine{
     
-    //先检查用户登录状态
+    //先检查用户是否登录
     if ([MMDLoggin isLoggin]) {
-        //先检查用户身份验证状态
         if ([HandleUserStatus handleUserStatusAt:mine]) {
-            NSLog(@"一切符合,可以进行下一步");
+            //前往对应页面
+            [mine.navigationController pushViewController:targetController animated:YES];
         }
     }else{
         //去登录界面

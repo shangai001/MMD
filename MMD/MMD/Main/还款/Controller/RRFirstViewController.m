@@ -115,7 +115,9 @@ CGFloat const HeaderHeight = 80;
     [RefundModel queryWillRefundInfo:nil success:^(NSDictionary *resultDic) {
         
         NSDictionary *data = resultDic[@"data"];
-        BOOL result = [data isEqual:[NSNull null]];
+        NSArray *repays = data[@"repays"];
+        
+        BOOL result = [data isEqual:[NSNull null]] || repays.count == 0;
         //如果是空，不隐藏 view（显示 View）
         [self hideNofoView:!result];
         if (!result) {

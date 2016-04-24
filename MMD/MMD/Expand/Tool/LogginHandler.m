@@ -100,9 +100,9 @@
             if (phoneNum) {
                 [makePersonDic setObject:phoneNum forKey:@"phoneNum"];
             }
-            //联系人 id
-            NSString *contactId = [NSString stringWithFormat:@"%@%ld",key,(long)j];
-            [makePersonDic setObject:contactId forKey:@"contactId"];
+//            //联系人 id
+//            NSString *contactId = [NSString stringWithFormat:@"%@%ld",key,(long)j];
+//            [makePersonDic setObject:contactId forKey:@"contactId"];
             //上一次联系时间
             NSDate * today = [NSDate date];
             NSTimeZone *zone = [NSTimeZone systemTimeZone];
@@ -119,6 +119,7 @@
             //联系次数
             NSString *timesContacted = @"0";
             [makePersonDic setObject:timesContacted forKey:@"timesContacted"];
+            [makePersonDic setObject:@(0) forKey:@"contactId"];
             [uploadArray addObject:makePersonDic];
         }
     }
@@ -164,7 +165,6 @@
     if (infoDic == nil) {
         return;
     }
-    
     [LoginModel loginUser:infoDic completionHandler:^(NSDictionary *resultDictionary) {
         if ([resultDictionary[@"code"] integerValue] == 0) {
             [AppUserInfoHelper updateUserInfo:resultDictionary];
