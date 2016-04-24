@@ -287,6 +287,7 @@
 		D6C39D271CCCF24000B5C1B6 /* JobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D251CCCF24000B5C1B6 /* JobViewController.m */; };
 		D6C39D281CCCF24000B5C1B6 /* JobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D261CCCF24000B5C1B6 /* JobViewController.xib */; };
 		D6C39D2B1CCD06E300B5C1B6 /* JobItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D2A1CCD06E300B5C1B6 /* JobItem.m */; };
+		D6C39D2E1CCD6FA900B5C1B6 /* JobModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D2D1CCD6FA900B5C1B6 /* JobModel.m */; };
 		D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C61CC10B0E0037ED4D /* RRViewController.m */; };
 		D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */; };
 		D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72211CC385170037ED4D /* RRSecondViewController.m */; };
@@ -768,6 +769,8 @@
 		D6C39D261CCCF24000B5C1B6 /* JobViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobViewController.xib; sourceTree = "<group>"; };
 		D6C39D291CCD06E300B5C1B6 /* JobItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobItem.h; sourceTree = "<group>"; };
 		D6C39D2A1CCD06E300B5C1B6 /* JobItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobItem.m; sourceTree = "<group>"; };
+		D6C39D2C1CCD6FA900B5C1B6 /* JobModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobModel.h; sourceTree = "<group>"; };
+		D6C39D2D1CCD6FA900B5C1B6 /* JobModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobModel.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6DE71C51CC10B0E0037ED4D /* RRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRViewController.h; sourceTree = "<group>"; };
 		D6DE71C61CC10B0E0037ED4D /* RRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRViewController.m; sourceTree = "<group>"; };
@@ -1866,6 +1869,8 @@
 				D6C39D261CCCF24000B5C1B6 /* JobViewController.xib */,
 				D6C39D291CCD06E300B5C1B6 /* JobItem.h */,
 				D6C39D2A1CCD06E300B5C1B6 /* JobItem.m */,
+				D6C39D2C1CCD6FA900B5C1B6 /* JobModel.h */,
+				D6C39D2D1CCD6FA900B5C1B6 /* JobModel.m */,
 			);
 			name = "工作信息";
 			sourceTree = "<group>";
@@ -2614,6 +2619,7 @@
 				D647FBAB1CAE87FD00CBF19E /* FirstStepController.m in Sources */,
 				D6805E981CAD1A3300316925 /* STConst.m in Sources */,
 				D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */,
+				D6C39D2E1CCD6FA900B5C1B6 /* JobModel.m in Sources */,
 				D647FBAD1CAE87FD00CBF19E /* SecondStaepController.m in Sources */,
 				D63356781CB12062000A321C /* BaseModel.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,

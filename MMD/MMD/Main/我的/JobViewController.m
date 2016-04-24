@@ -13,6 +13,8 @@
 #import "STPickerArea.h"
 #import "AppUserInfoHelper.h"
 #import "ColorHeader.h"
+#import "JobModel.h"
+#import <MJExtension.h>
 
 
 @interface JobViewController ()<UITextFieldDelegate,STPickerSingleDelegate,STPickerAreaDelegate>
@@ -60,7 +62,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self initDefault];
+    [self getJobData];
     [self getOldJobInfo];
+}
+- (void)getJobData{
+    
+    
+    NSDictionary *oneDic = self.picerDic[@"Job"];
+    
+    NSInteger type = [oneDic[@"type"] integerValue];
+    
+    [VerifyModel getPicerData:type success:^(NSDictionary *resultDic) {
+        NSArray *data = resultDic[@"data"];
+        //持有对应的数组数据
+        [self keepKeyArray:type data:data];
+        self.item.jobkey = [self findoutKeyId:self.jobTextField.text inside:self.jobArray];
+    } failure:^(NSError *error) {
+        
+    }];
 }
 - (void)getOldJobInfo{
     
@@ -68,16 +87,26 @@
     NSString *jobName = userJob[@"jobName"];
     self.jobTextField.text = jobName;
     
+    
     NSString *company = userJob[@"company"];
     self.compangyName.text = company;
+    self.item.compangy = company;
+    
     NSString *province = userJob[@"province"];
+    self.item.province = province;
     NSString *city = userJob[@"city"];
+    self.item.city = city;
     NSString *area = userJob[@"area"];
+    self.item.area = area;
     NSString *fullAdress = [NSString stringWithFormat:@"%@%@%@",province,city,area];
     self.cityTextField.text = fullAdress;
     
+    
     self.compangyAdressTextField.text = userJob[@"address"];
+    self.item.adress = userJob[@"address"];
+    
     self.companyPhone.text = userJob[@"phone"];
+    self.item.phone = userJob[@"phone"];
     
     self.phoneTipLabel.hidden = YES;
 }
@@ -116,7 +145,7 @@
     _isEditing = isEditing;
     
     self.phoneTipLabel.hidden = !_isEditing;
-    self.jobTextField.userInteractionEnabled=self.compangyName.userInteractionEnabled=self.cityTextField.userInteractionEnabled=self.compangyAdressTextField.userInteractionEnabled=self.companyPhone.userInteractionEnabled = !_isEditing;
+    self.jobTextField.userInteractionEnabled=self.compangyName.userInteractionEnabled=self.cityTextField.userInteractionEnabled=self.compangyAdressTextField.userInteractionEnabled=self.companyPhone.userInteractionEnabled = _isEditing;
 }
 //显示单项选择器(sender必须是Ma/Ch/LS/Job其一)
 - (void)showSinglePcikerView:(id)sender{
@@ -127,8 +156,16 @@
         
         NSInteger pickerTag = [oneDic[@"tag"] integerValue];
         NSString *title = oneDic[@"title"];
-        NSInteger type = [oneDic[@"type"] integerValue];
+//        NSInteger type = [oneDic[@"type"] integerValue];
         
+        NSMutableArray *currentPickerArray = [self getSingleDataArray:self.jobArray];
+        [self.singlePickerView setArrayData:currentPickerArray];
+        [self.singlePickerView ez_reloadAllComponents];
+        [self.singlePickerView setTitle:title];
+        self.singlePickerView.tag = pickerTag;
+        [self.singlePickerView show];
+        
+        /*
         [VerifyModel getPicerData:type success:^(NSDictionary *resultDic) {
             NSArray *data = resultDic[@"data"];
             //持有对应的数组数据
@@ -142,6 +179,7 @@
         } failure:^(NSError *error) {
             
         }];
+         */
     }
 }
 #pragma mark ShowPicker
@@ -183,9 +221,24 @@
 - (void)findOutWhichTextField:(NSString *)key text:(NSString *)inputText{
     if ([key isEqualToString:@"Job"]) {
         self.jobTextField.text = inputText;
-        self.item.jobkey = key;
+        self.item.jobkey = [self findoutKeyId:inputText inside:self.jobArray];
         self.isChanged = YES;
     }
+}
+//找出选中单项的对应Id
+- (NSString *)findoutKeyId:(NSString *)text inside:(NSArray *)data{
+    
+    __block NSString *keyId = nil;
+    [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *oneDic = (NSDictionary *)obj;
+            NSString *valueString = oneDic[@"value"];
+            if ([valueString isEqualToString:text]) {
+                keyId = [NSString stringWithFormat:@"%@",oneDic[@"key"]];
+            }
+        }
+    }];
+    return keyId;
 }
 #pragma mark ShowPickerView
 - (void)showAreaPicker{
@@ -218,6 +271,7 @@
             [self showAreaPicker];
             return NO;
         }
+        return YES;
     }else{
         return NO;
     }
@@ -231,8 +285,15 @@
     return YES;
 }// return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-    
-    
+    if ([textField isEqual:self.compangyName]) {
+        self.item.compangy  = textField.text;
+    }
+    if ([textField isEqual:self.companyPhone]) {
+        self.item.phone = textField.text;
+    }
+    if ([textField isEqual:self.compangyAdressTextField]) {
+        self.item.adress = textField.text;
+    }
 }// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
@@ -256,6 +317,20 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)doneAction:(id)sender {
+    
+    if (self.isEditing && self.isChanged) {
+        //更新工作信息
+        NSMutableDictionary *itemDic = [self.item mj_keyValues];
+        [JobModel updateJobInfo:itemDic success:^(NSDictionary *resultDic) {
+            if ([resultDic[@"code"] integerValue] == 0) {
+                self.sureButton.selected = NO;
+                self.isEditing = NO;
+                self.isChanged = NO;
+            }
+        } failure:^(NSError *error) {
+            
+        }];
+    }
     self.sureButton.selected = !self.sureButton.selected;
     self.isEditing = self.sureButton.selected;
 }
