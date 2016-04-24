@@ -125,7 +125,9 @@ NSInteger const ShouldCheckoutCredit = 0;
 #pragma mark ShowPickerView
 - (void)showAreaPicker{
     [self.view endEditing:YES];
-    self.cityPickerView = [[STPickerArea alloc]init];
+    if (!self.cityPickerView) {
+        self.cityPickerView = [[STPickerArea alloc]init];
+    }
     [self.cityPickerView setDelegate:self];
     [self.cityPickerView setContentMode:STPickerContentModeBottom];
     [self.cityPickerView show];

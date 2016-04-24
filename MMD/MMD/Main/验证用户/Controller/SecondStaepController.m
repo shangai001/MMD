@@ -218,6 +218,7 @@
         self.jobArray = dataArray;
     }
 }
+
 - (void)showCityPicker:(id)sender{
     [self.view endEditing:YES];
     [self.cityPickerView show];

@@ -14,6 +14,7 @@
 #import "IDInfoController.h"
 #import "IDPhotoController.h"
 #import "BankInfoController.h"
+#import "JobViewController.h"
 
 
 
@@ -48,6 +49,8 @@
         {
             if (row == 0) {
                 //工作信息
+                JobViewController *jobVc = [[JobViewController alloc] initWithNibName:NSStringFromClass([JobViewController class]) bundle:[NSBundle mainBundle]];
+                [self jumpToController:jobVc from:originalController];
             }else if (row == 1){
                 //联系人信息
             }else if (row == 2){
