@@ -255,6 +255,11 @@
 		D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */; };
 		D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */; };
 		D6961AA61CCE99E30044F337 /* ChangePhoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6961AA51CCE99E30044F337 /* ChangePhoneModel.m */; };
+		D6961AA91CCE9F7B0044F337 /* LoanHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6961AA81CCE9F7B0044F337 /* LoanHistoryTableViewController.m */; };
+		D6961AAD1CCEA0050044F337 /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6961AAB1CCEA0050044F337 /* HistoryTableViewCell.m */; };
+		D6961AAE1CCEA0050044F337 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6961AAC1CCEA0050044F337 /* HistoryTableViewCell.xib */; };
+		D6961AB11CCEA1420044F337 /* HistoryTableViewCell+PutHistoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6961AB01CCEA1420044F337 /* HistoryTableViewCell+PutHistoryInfo.m */; };
+		D6961AB41CCEA25B0044F337 /* QueryHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6961AB31CCEA25B0044F337 /* QueryHistoryModel.m */; };
 		D6A600961CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */; };
 		D6A600991CC697920014C3C4 /* TransferDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600981CC697920014C3C4 /* TransferDate.m */; };
 		D6A6009C1CC6995B0014C3C4 /* RefundWebVController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6009B1CC6995B0014C3C4 /* RefundWebVController.m */; };
@@ -736,6 +741,15 @@
 		D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanInfoItem.m; path = ../Controller/LoanInfoItem.m; sourceTree = "<group>"; };
 		D6961AA41CCE99E30044F337 /* ChangePhoneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneModel.h; sourceTree = "<group>"; };
 		D6961AA51CCE99E30044F337 /* ChangePhoneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneModel.m; sourceTree = "<group>"; };
+		D6961AA71CCE9F7B0044F337 /* LoanHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHistoryTableViewController.h; sourceTree = "<group>"; };
+		D6961AA81CCE9F7B0044F337 /* LoanHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanHistoryTableViewController.m; sourceTree = "<group>"; };
+		D6961AAA1CCEA0050044F337 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewCell.h; sourceTree = "<group>"; };
+		D6961AAB1CCEA0050044F337 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewCell.m; sourceTree = "<group>"; };
+		D6961AAC1CCEA0050044F337 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		D6961AAF1CCEA1420044F337 /* HistoryTableViewCell+PutHistoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HistoryTableViewCell+PutHistoryInfo.h"; sourceTree = "<group>"; };
+		D6961AB01CCEA1420044F337 /* HistoryTableViewCell+PutHistoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HistoryTableViewCell+PutHistoryInfo.m"; sourceTree = "<group>"; };
+		D6961AB21CCEA25B0044F337 /* QueryHistoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryHistoryModel.h; sourceTree = "<group>"; };
+		D6961AB31CCEA25B0044F337 /* QueryHistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryHistoryModel.m; sourceTree = "<group>"; };
 		D6A600941CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RefundTableViewCell+PutUIinfo.h"; sourceTree = "<group>"; };
 		D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RefundTableViewCell+PutUIinfo.m"; sourceTree = "<group>"; };
 		D6A600971CC697920014C3C4 /* TransferDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferDate.h; sourceTree = "<group>"; };
@@ -2009,6 +2023,15 @@
 		D6BC3DC41CBABD6800200BC7 /* 历史申请记录 */ = {
 			isa = PBXGroup;
 			children = (
+				D6961AA71CCE9F7B0044F337 /* LoanHistoryTableViewController.h */,
+				D6961AA81CCE9F7B0044F337 /* LoanHistoryTableViewController.m */,
+				D6961AB21CCEA25B0044F337 /* QueryHistoryModel.h */,
+				D6961AB31CCEA25B0044F337 /* QueryHistoryModel.m */,
+				D6961AAA1CCEA0050044F337 /* HistoryTableViewCell.h */,
+				D6961AAB1CCEA0050044F337 /* HistoryTableViewCell.m */,
+				D6961AAC1CCEA0050044F337 /* HistoryTableViewCell.xib */,
+				D6961AAF1CCEA1420044F337 /* HistoryTableViewCell+PutHistoryInfo.h */,
+				D6961AB01CCEA1420044F337 /* HistoryTableViewCell+PutHistoryInfo.m */,
 			);
 			name = "历史申请记录";
 			sourceTree = "<group>";
@@ -2507,6 +2530,7 @@
 				D65F2DA61CBBCAE2000817AE /* Icon-76@2x.png in Resources */,
 				D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */,
 				D60609AA1C76FF0E000DB373 /* 返回@2x.png in Resources */,
+				D6961AAE1CCEA0050044F337 /* HistoryTableViewCell.xib in Resources */,
 				D647FB621CAE7F7A00CBF19E /* HeaderView.xib in Resources */,
 				D6F567211C8004ED00B0612F /* 借款@3x.png in Resources */,
 				D60609B71C76FF0E000DB373 /* 更改密码@3x.png in Resources */,
@@ -2702,6 +2726,7 @@
 				D6B031D31CB3964200E2955A /* MessageModel.m in Sources */,
 				D66B4FA81CB509280038F312 /* BankModel.m in Sources */,
 				D633563F1CB016BE000A321C /* FailureView.m in Sources */,
+				D6961AB11CCEA1420044F337 /* HistoryTableViewCell+PutHistoryInfo.m in Sources */,
 				D6BC3DBA1CBAA6DB00200BC7 /* BaseNextButton.m in Sources */,
 				D64B9C951CBFFBE200B6B5A5 /* RefundTableViewCell.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
@@ -2743,6 +2768,7 @@
 				D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */,
 				D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */,
 				D647FB641CAE7F7A00CBF19E /* UpdateLoanInfo.m in Sources */,
+				D6961AAD1CCEA0050044F337 /* HistoryTableViewCell.m in Sources */,
 				D647FB731CAE800100CBF19E /* LoginUser.m in Sources */,
 				D647FB1C1CAE7E2D00CBF19E /* MoreTableViewCell.m in Sources */,
 				D64A4E241CB77F4200FB519B /* ConstantHeight.m in Sources */,
@@ -2802,6 +2828,7 @@
 				D6C39D1B1CCCB3BF00B5C1B6 /* BankItem.m in Sources */,
 				D64C993D1CB90A8A00C45936 /* QueryModel.m in Sources */,
 				D647FB861CAE80BE00CBF19E /* RegisterContentView.m in Sources */,
+				D6961AB41CCEA25B0044F337 /* QueryHistoryModel.m in Sources */,
 				D647FB631CAE7F7A00CBF19E /* MMSegmentControl.m in Sources */,
 				D688B91B1CB6AAD100CC80FF /* FaceRecongnizeController.m in Sources */,
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
@@ -2815,6 +2842,7 @@
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
 				D6C39D171CCCA8D800B5C1B6 /* BankInfoController.m in Sources */,
 				D64A4E2E1CB7998A00FB519B /* BottomTableViewCell.m in Sources */,
+				D6961AA91CCE9F7B0044F337 /* LoanHistoryTableViewController.m in Sources */,
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
 				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
 				D640367A1CBE704B002009C3 /* NSNull+EZSafe.m in Sources */,

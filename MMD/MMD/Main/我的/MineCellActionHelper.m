@@ -20,6 +20,7 @@
 #import "UIViewController+LoadFromNib.h"
 #import "ChangeCodeController.h"
 #import "ChangePhoneController.h"
+#import "LoanHistoryTableViewController.h"
 
 
 
@@ -86,6 +87,8 @@
         {
             if (row == 0) {
                 //历史申请记录
+                LoanHistoryTableViewController *historyVc = [[LoanHistoryTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                [self jumpToController:historyVc from:originalController];
             }
         }
             break;

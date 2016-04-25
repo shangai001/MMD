@@ -10,6 +10,13 @@
 
 @interface TransferDate : NSObject
 
+/**
+ *  根据时间戳换算成现在的时间,注意interval单位 s
+ *
+ *  @param interval 秒
+ *
+ *  @return 
+ */
 + (NSString *)getYYYYMMDD_DateWith:(NSTimeInterval)interval;
 
 @end
