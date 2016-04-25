@@ -34,16 +34,16 @@
         {
             if (row == 0) {
                 //身份证信息
-                IDInfoController *idVC = [[IDInfoController alloc] initWithNibName:NSStringFromClass([IDInfoController class]) bundle:[NSBundle mainBundle]];
+                IDInfoController *idVC = [IDInfoController loadFromNib];
                 [self jumpToController:idVC from:originalController];
                 
             }else if (row == 1){
                 //持证拍照信息
-                IDPhotoController *idPhotoVc = [[IDPhotoController alloc] initWithNibName:NSStringFromClass([IDPhotoController class]) bundle:[NSBundle mainBundle]];
+                IDPhotoController *idPhotoVc = [IDPhotoController loadFromNib];
                 [self jumpToController:idPhotoVc from:originalController];
             }else if (row == 2){
                 //银行卡信息
-                BankInfoController *bankInfoVc = [[BankInfoController alloc] initWithNibName:NSStringFromClass([BankInfoController class]) bundle:[NSBundle mainBundle]];
+                BankInfoController *bankInfoVc = [BankInfoController loadFromNib];
                 [self jumpToController:bankInfoVc from:originalController];
             }
         }
@@ -52,9 +52,7 @@
         {
             if (row == 0) {
                 //工作信息
-//                JobViewController *jobVc = [[JobViewController alloc] initWithNibName:NSStringFromClass([JobViewController class]) bundle:[NSBundle mainBundle]];
                 JobViewController *newJob = [JobViewController loadFromNib];
-                
                 [self jumpToController:newJob from:originalController];
                 
             }else if (row == 1){

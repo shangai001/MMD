@@ -10,7 +10,11 @@
 
 @interface UIViewController (LoadFromNib)
 
-
+/**
+ *  nib 中加载
+ *
+ *  @return
+ */
 + (instancetype)loadFromNib;
 
 
