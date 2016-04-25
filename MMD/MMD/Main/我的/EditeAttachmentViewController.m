@@ -66,6 +66,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = BACKGROUNDCOLOR;
+    self.title = @"编辑/添加附件";
     [self setDefaultValue];
     [self configureButton];
 }

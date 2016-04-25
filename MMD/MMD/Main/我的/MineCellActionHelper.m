@@ -19,6 +19,7 @@
 #import "AttachmentTableViewController.h"
 #import "UIViewController+LoadFromNib.h"
 #import "ChangeCodeController.h"
+#import "ChangePhoneController.h"
 
 
 
@@ -76,6 +77,8 @@
                 [self jumpToController:changeVC from:originalController];
             }else if (row == 1){
                 //手机号码
+                ChangePhoneController *changePhone = [ChangePhoneController loadFromNib];
+                [self jumpToController:changePhone from:originalController];
             }
         }
             break;

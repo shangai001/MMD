@@ -61,6 +61,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"工作信息";
     [self initDefault];
     [self getJobData];
     [self getOldJobInfo];

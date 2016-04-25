@@ -41,6 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = BACKGROUNDCOLOR;
+    self.title = @"持证拍照信息";
     [self queryUserInfo];
     [self configureButtons];
 }

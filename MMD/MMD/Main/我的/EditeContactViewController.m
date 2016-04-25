@@ -35,7 +35,7 @@
     // Do any additional setup after loading the view from its nib.
     [self configureButtons];
     [self initDefaultValue];
-    self.title = @"添加联系人";
+    self.title = @"编辑/添加联系人";
     [self setDefaultValue];
 }
 - (void)setDefaultValue{

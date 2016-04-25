@@ -193,6 +193,9 @@
 		D6512FAB1CCE84BE008279B9 /* ChangeCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6512FA91CCE84BE008279B9 /* ChangeCodeController.m */; };
 		D6512FAC1CCE84BE008279B9 /* ChangeCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6512FAA1CCE84BE008279B9 /* ChangeCodeController.xib */; };
 		D6512FAF1CCE8A9A008279B9 /* ChangePasswordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6512FAE1CCE8A9A008279B9 /* ChangePasswordModel.m */; };
+		D6512FB41CCE8D92008279B9 /* ChangePhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6512FB21CCE8D92008279B9 /* ChangePhoneController.m */; };
+		D6512FB51CCE8D92008279B9 /* ChangePhoneController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6512FB31CCE8D92008279B9 /* ChangePhoneController.xib */; };
+		D6512FB81CCE91DD008279B9 /* ChnagePhoneItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6512FB71CCE91DD008279B9 /* ChnagePhoneItem.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D65B6BD41CBECB20000F6F92 /* PrepareDataWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = D65B6BD31CBECB20000F6F92 /* PrepareDataWorker.m */; };
@@ -251,6 +254,7 @@
 		D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */; };
 		D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */; };
 		D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */; };
+		D6961AA61CCE99E30044F337 /* ChangePhoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6961AA51CCE99E30044F337 /* ChangePhoneModel.m */; };
 		D6A600961CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */; };
 		D6A600991CC697920014C3C4 /* TransferDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600981CC697920014C3C4 /* TransferDate.m */; };
 		D6A6009C1CC6995B0014C3C4 /* RefundWebVController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6009B1CC6995B0014C3C4 /* RefundWebVController.m */; };
@@ -634,6 +638,11 @@
 		D6512FAA1CCE84BE008279B9 /* ChangeCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeCodeController.xib; sourceTree = "<group>"; };
 		D6512FAD1CCE8A9A008279B9 /* ChangePasswordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordModel.h; sourceTree = "<group>"; };
 		D6512FAE1CCE8A9A008279B9 /* ChangePasswordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordModel.m; sourceTree = "<group>"; };
+		D6512FB11CCE8D92008279B9 /* ChangePhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneController.h; sourceTree = "<group>"; };
+		D6512FB21CCE8D92008279B9 /* ChangePhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneController.m; sourceTree = "<group>"; };
+		D6512FB31CCE8D92008279B9 /* ChangePhoneController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePhoneController.xib; sourceTree = "<group>"; };
+		D6512FB61CCE91DD008279B9 /* ChnagePhoneItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChnagePhoneItem.h; sourceTree = "<group>"; };
+		D6512FB71CCE91DD008279B9 /* ChnagePhoneItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChnagePhoneItem.m; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -725,6 +734,8 @@
 		D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoanVerifySectionTitle.txt; sourceTree = "<group>"; };
 		D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanInfoItem.h; path = ../Controller/LoanInfoItem.h; sourceTree = "<group>"; };
 		D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanInfoItem.m; path = ../Controller/LoanInfoItem.m; sourceTree = "<group>"; };
+		D6961AA41CCE99E30044F337 /* ChangePhoneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneModel.h; sourceTree = "<group>"; };
+		D6961AA51CCE99E30044F337 /* ChangePhoneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneModel.m; sourceTree = "<group>"; };
 		D6A600941CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RefundTableViewCell+PutUIinfo.h"; sourceTree = "<group>"; };
 		D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RefundTableViewCell+PutUIinfo.m"; sourceTree = "<group>"; };
 		D6A600971CC697920014C3C4 /* TransferDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferDate.h; sourceTree = "<group>"; };
@@ -1062,6 +1073,7 @@
 			children = (
 				D65F2DB31CBBCCB0000817AE /* QueryIdModel.h */,
 				D65F2DB41CBBCCB0000817AE /* QueryIdModel.m */,
+				D6512FB01CCE8D72008279B9 /* 更改手机号 */,
 				D6512FA71CCE8491008279B9 /* 更改密码 */,
 				D6BC3DC41CBABD6800200BC7 /* 历史申请记录 */,
 				D6BC3DC31CBABD5E00200BC7 /* 补充附件 */,
@@ -1610,6 +1622,20 @@
 				D6512FAE1CCE8A9A008279B9 /* ChangePasswordModel.m */,
 			);
 			name = "更改密码";
+			sourceTree = "<group>";
+		};
+		D6512FB01CCE8D72008279B9 /* 更改手机号 */ = {
+			isa = PBXGroup;
+			children = (
+				D6512FB11CCE8D92008279B9 /* ChangePhoneController.h */,
+				D6512FB21CCE8D92008279B9 /* ChangePhoneController.m */,
+				D6512FB31CCE8D92008279B9 /* ChangePhoneController.xib */,
+				D6512FB61CCE91DD008279B9 /* ChnagePhoneItem.h */,
+				D6512FB71CCE91DD008279B9 /* ChnagePhoneItem.m */,
+				D6961AA41CCE99E30044F337 /* ChangePhoneModel.h */,
+				D6961AA51CCE99E30044F337 /* ChangePhoneModel.m */,
+			);
+			name = "更改手机号";
 			sourceTree = "<group>";
 		};
 		D65B6BD11CBEB656000F6F92 /* NSNullCategory */ = {
@@ -2507,6 +2533,7 @@
 				D647FBB71CAE87FD00CBF19E /* VerifyTableViewCell.xib in Resources */,
 				D63356411CB016DC000A321C /* FailureView.xib in Resources */,
 				D60609C51C76FF0E000DB373 /* 还款须知@2x.png in Resources */,
+				D6512FB51CCE8D92008279B9 /* ChangePhoneController.xib in Resources */,
 				D60609F61C76FF0E000DB373 /* approve_on@3x.png in Resources */,
 				D6465CBA1CB991D400E4E570 /* NoInfoView.xib in Resources */,
 				D647FBD71CAE92B200CBF19E /* BankList.plist in Resources */,
@@ -2701,6 +2728,7 @@
 				D633565E1CB0378F000A321C /* HeaderLabel.m in Sources */,
 				D647FBB61CAE87FD00CBF19E /* VerifyTableViewCell.m in Sources */,
 				D6E104D21C7320FD00049C3F /* MMD.xcdatamodeld in Sources */,
+				D6512FB81CCE91DD008279B9 /* ChnagePhoneItem.m in Sources */,
 				D6A600EF1CC7ADA70014C3C4 /* BankAliPayViewController.m in Sources */,
 				D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */,
 				D65F2DB51CBBCCB0000817AE /* QueryIdModel.m in Sources */,
@@ -2755,6 +2783,7 @@
 				D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */,
 				D6C39D271CCCF24000B5C1B6 /* JobViewController.m in Sources */,
 				D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */,
+				D6512FB41CCE8D92008279B9 /* ChangePhoneController.m in Sources */,
 				D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */,
 				D6FE74391CB97529002F3941 /* QueryItem.m in Sources */,
 				D6C39D1F1CCCBBB800B5C1B6 /* EditeBankController.m in Sources */,
@@ -2792,6 +2821,7 @@
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
 				D6512FAF1CCE8A9A008279B9 /* ChangePasswordModel.m in Sources */,
 				D6465CB81CB991C600E4E570 /* NoInfoView.m in Sources */,
+				D6961AA61CCE99E30044F337 /* ChangePhoneModel.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,
 				D6A600991CC697920014C3C4 /* TransferDate.m in Sources */,
 				D6DE72371CC500760037ED4D /* RefundItem.m in Sources */,

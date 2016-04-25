@@ -74,6 +74,7 @@ static NSString * const loggoutCellId = @"loggoutCellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BACKGROUNDCOLOR;
+    self.title = @"我的";
     // Do any additional setup after loading the view.
     self.logStatus = [MMDLoggin isLoggin];
     [self initTableView];
