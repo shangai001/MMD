@@ -248,7 +248,6 @@
 		D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */; };
 		D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */; };
 		D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */; };
-		D6A600931CC64B3F0014C3C4 /* SBJson in Resources */ = {isa = PBXBuildFile; fileRef = D6A600921CC64B3F0014C3C4 /* SBJson */; };
 		D6A600961CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */; };
 		D6A600991CC697920014C3C4 /* TransferDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A600981CC697920014C3C4 /* TransferDate.m */; };
 		D6A6009C1CC6995B0014C3C4 /* RefundWebVController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A6009B1CC6995B0014C3C4 /* RefundWebVController.m */; };
@@ -710,7 +709,6 @@
 		D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoanVerifySectionTitle.txt; sourceTree = "<group>"; };
 		D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanInfoItem.h; path = ../Controller/LoanInfoItem.h; sourceTree = "<group>"; };
 		D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanInfoItem.m; path = ../Controller/LoanInfoItem.m; sourceTree = "<group>"; };
-		D6A600921CC64B3F0014C3C4 /* SBJson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SBJson; sourceTree = "<group>"; };
 		D6A600941CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RefundTableViewCell+PutUIinfo.h"; sourceTree = "<group>"; };
 		D6A600951CC650260014C3C4 /* RefundTableViewCell+PutUIinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RefundTableViewCell+PutUIinfo.m"; sourceTree = "<group>"; };
 		D6A600971CC697920014C3C4 /* TransferDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferDate.h; sourceTree = "<group>"; };
@@ -2026,7 +2024,6 @@
 			children = (
 				D6E104C71C7320FD00049C3F /* AppDelegate.h */,
 				D6E104C81C7320FD00049C3F /* AppDelegate.m */,
-				D6A600921CC64B3F0014C3C4 /* SBJson */,
 				D6E104CD1C7320FD00049C3F /* Main.storyboard */,
 				D6E105101C7321A000049C3F /* Vender */,
 				D6E1050C1C73219800049C3F /* Resourses */,
@@ -2497,7 +2494,6 @@
 				D60609BD1C76FF0E000DB373 /* 关于@3x.png in Resources */,
 				D647FBB01CAE87FD00CBF19E /* ThirdStepController.xib in Resources */,
 				D65F2DB21CBBCAE2000817AE /* Icon@2x.png in Resources */,
-				D6A600931CC64B3F0014C3C4 /* SBJson in Resources */,
 				D60609A51C76FF0E000DB373 /* 持证牌照信息@3x.png in Resources */,
 				D60609DB1C76FF0E000DB373 /* recommend@3x.png in Resources */,
 				D60609A41C76FF0E000DB373 /* 持证牌照信息@2x.png in Resources */,
