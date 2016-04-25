@@ -11,11 +11,16 @@
 #import "ZXSDK.h"
 #import "LogginHandler.h"
 #import "MMDLoggin.h"
+#import <AFNetworkActivityIndicatorManager.h>
 
 
 @implementation PrepareDataWorker
 
 #pragma mark ConfigureZXSDK
++ (void)showStatusIndictorView{
+    
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+}
 + (void)configureZXSDK{
     
     [ZXSDK configWithAppId:ZX_APIKEY withAppSecret:ZX_APISECRET];
@@ -32,6 +37,7 @@
             
         }];
     }else{
+        
         NSLog(@"没有记住用户名字和密码!");
     }
 }

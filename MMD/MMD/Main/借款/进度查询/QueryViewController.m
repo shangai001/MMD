@@ -187,16 +187,19 @@ CGFloat const cacleButtonHeight = 44;
     //根据申请状态设置状态蚊子
     [self setStateDetailText:item];
  }
-//TODO:需要知道借款申请状态
 - (void)resetCancleButtonStatus:(NSInteger)state{
     
-    if (state == 1) {
+    //TODO:取消按钮状态调整
+    if (state == LAON_CRANT_FUNDS_SUCCESS ||
+        state == LOAN_APPLY_CANCLE ||
+        state == LOAN_AUDIT_FAIL ||
+        state == LAON_AUDIT_CANCLE ) {
         self.cancleButon.backgroundColor = [UIColor lightGrayColor];
         self.cancleButon.layer.borderColor = [UIColor lightGrayColor].CGColor;
         [self.cancleButon setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         self.cancleButon.enabled = NO;
-    }else if(state == 10 || state == 11){
-        self.cancleButon.enabled = NO;
+    }else{
+        self.cancleButon.enabled = YES;
     }
 }
 - (void)setLoanInfo:(QueryItem *)item label:(UILabel *)textLabel{
@@ -444,8 +447,6 @@ CGFloat const cacleButtonHeight = 44;
 }
 - (void)callCancleAction{
     
-    
-    NSLog(@"借款申请状态%@",self.item.state);
     //loanApplyId
     NSDictionary *infoDic = @{@"loanApplyId":self.item.contractId};
     

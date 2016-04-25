@@ -11,6 +11,10 @@
 @interface PrepareDataWorker : NSObject
 
 /**
+ *  显示状态栏上网络指示器
+ */
++ (void)showStatusIndictorView;
+/**
  *  配置 ZXSDK
  */
 + (void)configureZXSDK;

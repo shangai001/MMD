@@ -11,6 +11,7 @@
 #import "UploadParam.h"
 #import "AppInfo.h"
 #import "LogginHandler.h"
+#import <AFNetworkActivityIndicatorManager.h>
 
 
 @implementation HttpRequest
@@ -50,6 +51,10 @@
                parameters:(id)parameters
                   success:(void (^)(id))success
                   failure:(void (^)(NSError *))failure {
+    
+    AFNetworkActivityIndicatorManager *indictorManager = [AFNetworkActivityIndicatorManager sharedManager];
+    indictorManager.enabled = YES;
+    
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];

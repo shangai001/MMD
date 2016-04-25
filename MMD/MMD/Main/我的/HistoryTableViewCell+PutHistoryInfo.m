@@ -45,7 +45,7 @@
     }
     if (stateInter == LAON_CRANT_FUNDS_SUCCESS) {
         //正常完结
-        status = @"正常完结";
+        status = @"已完结";
     }
     if (stateInter == LOAN_AUDIT_FAIL) {
         //审核拒绝
