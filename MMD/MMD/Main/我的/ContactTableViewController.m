@@ -46,6 +46,7 @@ static NSString *reuseCellId = @"contectCellId";
     self.title = @"联系人";
     [self configureTableView];
     [self queryContacts];
+    [self initAddItem];
 }
 - (void)initAddItem{
     

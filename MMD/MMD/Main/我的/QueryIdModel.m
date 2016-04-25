@@ -39,6 +39,7 @@
                          failure:(failureHandler)failureHandler{
     NSString *URL = [NSString stringWithFormat:@"%@/user/userContacts",kHostURL];
     NSDictionary *userInfo = [AppUserInfoHelper tokenAndUserIdDictionary];
+    
     [HttpRequest postWithURLString:URL parameters:userInfo success:^(id responseObject) {
         successHandler(responseObject);
     } failure:^(NSError *error) {
