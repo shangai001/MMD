@@ -190,6 +190,9 @@
 		D64C99451CB91C8A00C45936 /* QueryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64C99441CB91C8A00C45936 /* QueryHeaderView.xib */; };
 		D64C99481CB9229000C45936 /* LoanDetaiController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99471CB9229000C45936 /* LoanDetaiController.m */; };
 		D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */; };
+		D6512FAB1CCE84BE008279B9 /* ChangeCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6512FA91CCE84BE008279B9 /* ChangeCodeController.m */; };
+		D6512FAC1CCE84BE008279B9 /* ChangeCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6512FAA1CCE84BE008279B9 /* ChangeCodeController.xib */; };
+		D6512FAF1CCE8A9A008279B9 /* ChangePasswordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6512FAE1CCE8A9A008279B9 /* ChangePasswordModel.m */; };
 		D65200141CB6EBC40019C4CB /* ReadFiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200131CB6EBC40019C4CB /* ReadFiler.m */; };
 		D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D65200161CB6F1560019C4CB /* FormatVerifyDataHelper.m */; };
 		D65B6BD41CBECB20000F6F92 /* PrepareDataWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = D65B6BD31CBECB20000F6F92 /* PrepareDataWorker.m */; };
@@ -626,6 +629,11 @@
 		D64C99471CB9229000C45936 /* LoanDetaiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDetaiController.m; sourceTree = "<group>"; };
 		D64C99491CB93D0A00C45936 /* HandleUserStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleUserStatus.h; sourceTree = "<group>"; };
 		D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleUserStatus.m; sourceTree = "<group>"; };
+		D6512FA81CCE84BE008279B9 /* ChangeCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeCodeController.h; sourceTree = "<group>"; };
+		D6512FA91CCE84BE008279B9 /* ChangeCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeCodeController.m; sourceTree = "<group>"; };
+		D6512FAA1CCE84BE008279B9 /* ChangeCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeCodeController.xib; sourceTree = "<group>"; };
+		D6512FAD1CCE8A9A008279B9 /* ChangePasswordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordModel.h; sourceTree = "<group>"; };
+		D6512FAE1CCE8A9A008279B9 /* ChangePasswordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordModel.m; sourceTree = "<group>"; };
 		D65200121CB6EBC40019C4CB /* ReadFiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFiler.h; sourceTree = "<group>"; };
 		D65200131CB6EBC40019C4CB /* ReadFiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFiler.m; sourceTree = "<group>"; };
 		D65200151CB6F1560019C4CB /* FormatVerifyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatVerifyDataHelper.h; sourceTree = "<group>"; };
@@ -1054,6 +1062,7 @@
 			children = (
 				D65F2DB31CBBCCB0000817AE /* QueryIdModel.h */,
 				D65F2DB41CBBCCB0000817AE /* QueryIdModel.m */,
+				D6512FA71CCE8491008279B9 /* 更改密码 */,
 				D6BC3DC41CBABD6800200BC7 /* 历史申请记录 */,
 				D6BC3DC31CBABD5E00200BC7 /* 补充附件 */,
 				D6BC3DC21CBABD5000200BC7 /* 联系人信息 */,
@@ -1589,6 +1598,18 @@
 				D6465CB91CB991D400E4E570 /* NoInfoView.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		D6512FA71CCE8491008279B9 /* 更改密码 */ = {
+			isa = PBXGroup;
+			children = (
+				D6512FA81CCE84BE008279B9 /* ChangeCodeController.h */,
+				D6512FA91CCE84BE008279B9 /* ChangeCodeController.m */,
+				D6512FAA1CCE84BE008279B9 /* ChangeCodeController.xib */,
+				D6512FAD1CCE8A9A008279B9 /* ChangePasswordModel.h */,
+				D6512FAE1CCE8A9A008279B9 /* ChangePasswordModel.m */,
+			);
+			name = "更改密码";
 			sourceTree = "<group>";
 		};
 		D65B6BD11CBEB656000F6F92 /* NSNullCategory */ = {
@@ -2521,6 +2542,7 @@
 				D65F2DAD1CBBCAE2000817AE /* Icon-Small@3x.png in Resources */,
 				D64B9C961CBFFBE200B6B5A5 /* RefundTableViewCell.xib in Resources */,
 				D6060A171C76FF0E000DB373 /* creditCardInfo@3x.png in Resources */,
+				D6512FAC1CCE84BE008279B9 /* ChangeCodeController.xib in Resources */,
 				D60609AE1C76FF0E000DB373 /* 分享@3x.png in Resources */,
 				D65F2DA51CBBCAE2000817AE /* Icon-76.png in Resources */,
 				D647FB871CAE80BE00CBF19E /* RegisterContentView.xib in Resources */,
@@ -2635,6 +2657,7 @@
 				D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */,
 				D63356611CB03ACE000A321C /* FormItem.m in Sources */,
 				D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */,
+				D6512FAB1CCE84BE008279B9 /* ChangeCodeController.m in Sources */,
 				D6A600EB1CC7ACCD0014C3C4 /* BankViewController.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
 				D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m in Sources */,
@@ -2767,6 +2790,7 @@
 				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
 				D640367A1CBE704B002009C3 /* NSNull+EZSafe.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
+				D6512FAF1CCE8A9A008279B9 /* ChangePasswordModel.m in Sources */,
 				D6465CB81CB991C600E4E570 /* NoInfoView.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,
 				D6A600991CC697920014C3C4 /* TransferDate.m in Sources */,
