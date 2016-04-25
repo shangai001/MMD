@@ -12,13 +12,17 @@
 #import "QueryAttachmentModel.h"
 #import "AttachmentTableViewCell+PutUIInfo.h"
 #import "EditeAttachmentViewController.h"
-
+#import "NoInfoView.h"
+#import "UIView+LoadViewFromNib.h"
+#import <UIView+SDAutoLayout.h>
+#import <SVProgressHUD.h>
 
 static NSString *reuseCellId  = @"attachmentCellId";
 
 @interface AttachmentTableViewController ()
 
 @property (nonatomic, strong)NSMutableArray *dataArray;
+@property (nonatomic, strong)NoInfoView *infoView;
 
 @end
 
@@ -29,6 +33,12 @@ static NSString *reuseCellId  = @"attachmentCellId";
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
+}
+- (NoInfoView *)infoView{
+    if (!_infoView) {
+        _infoView = [NoInfoView loadViewFromNib];
+    }
+    return _infoView;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,7 +63,14 @@ static NSString *reuseCellId  = @"attachmentCellId";
 }
 - (void)requestAttachmentList{
     
+    if (![self.tableView.subviews containsObject:self.infoView]) {
+        [self.tableView addSubview:self.infoView];
+    }
+    self.infoView.sd_layout.widthIs(200).heightIs(230).centerXEqualToView(self.tableView).centerYEqualToView(self.tableView);
+    /*
+    [SVProgressHUD show];
     [QueryAttachmentModel queryAttachment:nil success:^(NSDictionary *resultDic) {
+
         if ([resultDic[@"code"] integerValue] == 0) {
             [self.dataArray removeAllObjects];
             NSArray *data = resultDic[@"data"];
@@ -62,10 +79,18 @@ static NSString *reuseCellId  = @"attachmentCellId";
                 [self.dataArray addObject:oneDic];
             }
             [self.tableView reloadData];
+            [self.infoView removeFromSuperview];
+        }else{
+            if (![self.tableView.subviews containsObject:self.infoView]) {
+                [self.tableView addSubview:self.infoView];
+            }
+            self.infoView.sd_layout.widthIs(200).heightIs(230).centerXEqualToView(self.tableView);
         }
+        [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
-        
+        [SVProgressHUD dismiss];
     }];
+     */
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

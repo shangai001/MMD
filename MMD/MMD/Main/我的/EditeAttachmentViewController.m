@@ -16,10 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *attImageButton;
 @property (weak, nonatomic) IBOutlet UIButton *sureButton;
 
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
-
-
-
 @end
 
 @implementation EditeAttachmentViewController
@@ -29,8 +25,17 @@
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = BACKGROUNDCOLOR;
     [self setDefaultValue];
+    [self configureButton];
 }
 - (void)setDefaultValue{
+    
+    self.nameTextField.text = self.attDic[@"title"];
+    NSURL *imageURL = [NSURL URLWithString:self.attDic[@"url"]];
+    [self.attImageButton setImageForState:UIControlStateNormal withURL:imageURL];
+}
+- (void)configureButton{
+    self.sureButton.layer.cornerRadius = 10.0f;
+    self.sureButton.backgroundColor = REDCOLOR;
     
     
 }
@@ -38,7 +43,6 @@
     
     
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

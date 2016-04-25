@@ -8,7 +8,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditeAttachmentViewController">
             <connections>
                 <outlet property="attImageButton" destination="i69-5i-VMl" id="yf9-Hm-AKf"/>
-                <outlet property="indicator" destination="xMX-PS-ODm" id="jNL-mQ-tGy"/>
                 <outlet property="nameTextField" destination="Qpv-oR-awh" id="tqH-cy-txV"/>
                 <outlet property="sureButton" destination="4za-B0-jze" id="KPF-3i-4RP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -62,25 +61,20 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i69-5i-VMl">
+                        <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i69-5i-VMl">
                             <rect key="frame" x="89" y="10" width="132" height="80"/>
                             <connections>
                                 <action selector="clickAttachment:" destination="-1" eventType="touchUpInside" id="KHQ-eK-yBG"/>
                             </connections>
                         </button>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xMX-PS-ODm">
-                            <rect key="frame" x="94" y="40" width="20" height="20"/>
-                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="xfC-3y-0ln" firstAttribute="leading" secondItem="bVk-68-aap" secondAttribute="leading" constant="1" id="6JG-Hw-elt"/>
                         <constraint firstItem="i69-5i-VMl" firstAttribute="leading" secondItem="xfC-3y-0ln" secondAttribute="trailing" constant="20" id="JAP-Fl-mee"/>
                         <constraint firstAttribute="height" constant="100" id="Jqr-Iy-9HA"/>
-                        <constraint firstItem="xMX-PS-ODm" firstAttribute="centerY" secondItem="bVk-68-aap" secondAttribute="centerY" id="TwE-Y8-r5w"/>
                         <constraint firstItem="xfC-3y-0ln" firstAttribute="centerY" secondItem="bVk-68-aap" secondAttribute="centerY" id="U7z-4k-bjE"/>
                         <constraint firstItem="i69-5i-VMl" firstAttribute="top" secondItem="bVk-68-aap" secondAttribute="top" constant="10" id="Uef-Xe-RE4"/>
-                        <constraint firstItem="xMX-PS-ODm" firstAttribute="centerX" secondItem="i69-5i-VMl" secondAttribute="centerX" id="cWg-Ua-Uac"/>
                         <constraint firstAttribute="bottom" secondItem="i69-5i-VMl" secondAttribute="bottom" constant="10" id="ezT-3w-SAr"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i69-5i-VMl" secondAttribute="trailing" constant="20" id="yks-WC-YhA"/>
                     </constraints>
