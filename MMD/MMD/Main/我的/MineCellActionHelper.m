@@ -15,6 +15,7 @@
 #import "IDPhotoController.h"
 #import "BankInfoController.h"
 #import "JobViewController.h"
+#import "ContactTableViewController.h"
 
 
 
@@ -53,6 +54,9 @@
                 [self jumpToController:jobVc from:originalController];
             }else if (row == 1){
                 //联系人信息
+                ContactTableViewController *contactVC = [[ContactTableViewController alloc] initWithStyle:UITableViewStylePlain];
+                [self jumpToController:contactVC from:originalController];
+                
             }else if (row == 2){
                 //补充附件
             }

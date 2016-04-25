@@ -288,6 +288,14 @@
 		D6C39D281CCCF24000B5C1B6 /* JobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D261CCCF24000B5C1B6 /* JobViewController.xib */; };
 		D6C39D2B1CCD06E300B5C1B6 /* JobItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D2A1CCD06E300B5C1B6 /* JobItem.m */; };
 		D6C39D2E1CCD6FA900B5C1B6 /* JobModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D2D1CCD6FA900B5C1B6 /* JobModel.m */; };
+		D6C39D311CCD793700B5C1B6 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D301CCD793700B5C1B6 /* ContactTableViewController.m */; };
+		D6C39D341CCDE7C800B5C1B6 /* ContactsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D331CCDE7C800B5C1B6 /* ContactsItem.m */; };
+		D6C39D381CCDEA8700B5C1B6 /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D361CCDEA8700B5C1B6 /* ContactsTableViewCell.m */; };
+		D6C39D391CCDEA8700B5C1B6 /* ContactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D371CCDEA8700B5C1B6 /* ContactsTableViewCell.xib */; };
+		D6C39D3C1CCDEDE900B5C1B6 /* ContactsTableViewCell+PutContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D3B1CCDEDE900B5C1B6 /* ContactsTableViewCell+PutContentInfo.m */; };
+		D6C39D401CCDFC7B00B5C1B6 /* EditeContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D3E1CCDFC7B00B5C1B6 /* EditeContactViewController.m */; };
+		D6C39D411CCDFC7B00B5C1B6 /* EditeContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D3F1CCDFC7B00B5C1B6 /* EditeContactViewController.xib */; };
+		D6C39D441CCE04AF00B5C1B6 /* EditeContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D431CCE04AF00B5C1B6 /* EditeContactModel.m */; };
 		D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C61CC10B0E0037ED4D /* RRViewController.m */; };
 		D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */; };
 		D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72211CC385170037ED4D /* RRSecondViewController.m */; };
@@ -771,6 +779,20 @@
 		D6C39D2A1CCD06E300B5C1B6 /* JobItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobItem.m; sourceTree = "<group>"; };
 		D6C39D2C1CCD6FA900B5C1B6 /* JobModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobModel.h; sourceTree = "<group>"; };
 		D6C39D2D1CCD6FA900B5C1B6 /* JobModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobModel.m; sourceTree = "<group>"; };
+		D6C39D2F1CCD793700B5C1B6 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
+		D6C39D301CCD793700B5C1B6 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
+		D6C39D321CCDE7C800B5C1B6 /* ContactsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsItem.h; sourceTree = "<group>"; };
+		D6C39D331CCDE7C800B5C1B6 /* ContactsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsItem.m; sourceTree = "<group>"; };
+		D6C39D351CCDEA8700B5C1B6 /* ContactsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewCell.h; sourceTree = "<group>"; };
+		D6C39D361CCDEA8700B5C1B6 /* ContactsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewCell.m; sourceTree = "<group>"; };
+		D6C39D371CCDEA8700B5C1B6 /* ContactsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsTableViewCell.xib; sourceTree = "<group>"; };
+		D6C39D3A1CCDEDE900B5C1B6 /* ContactsTableViewCell+PutContentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ContactsTableViewCell+PutContentInfo.h"; sourceTree = "<group>"; };
+		D6C39D3B1CCDEDE900B5C1B6 /* ContactsTableViewCell+PutContentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ContactsTableViewCell+PutContentInfo.m"; sourceTree = "<group>"; };
+		D6C39D3D1CCDFC7B00B5C1B6 /* EditeContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditeContactViewController.h; sourceTree = "<group>"; };
+		D6C39D3E1CCDFC7B00B5C1B6 /* EditeContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditeContactViewController.m; sourceTree = "<group>"; };
+		D6C39D3F1CCDFC7B00B5C1B6 /* EditeContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditeContactViewController.xib; sourceTree = "<group>"; };
+		D6C39D421CCE04AF00B5C1B6 /* EditeContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditeContactModel.h; sourceTree = "<group>"; };
+		D6C39D431CCE04AF00B5C1B6 /* EditeContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditeContactModel.m; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6DE71C51CC10B0E0037ED4D /* RRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRViewController.h; sourceTree = "<group>"; };
 		D6DE71C61CC10B0E0037ED4D /* RRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRViewController.m; sourceTree = "<group>"; };
@@ -1010,6 +1032,8 @@
 		D633567F1CB17717000A321C /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				D65F2DB31CBBCCB0000817AE /* QueryIdModel.h */,
+				D65F2DB41CBBCCB0000817AE /* QueryIdModel.m */,
 				D6BC3DC41CBABD6800200BC7 /* 历史申请记录 */,
 				D6BC3DC31CBABD5E00200BC7 /* 补充附件 */,
 				D6BC3DC21CBABD5000200BC7 /* 联系人信息 */,
@@ -1826,8 +1850,6 @@
 				D65F2CAC1CBBC1EE000817AE /* IDInfoController.h */,
 				D65F2CAD1CBBC1EE000817AE /* IDInfoController.m */,
 				D65F2CAE1CBBC1EE000817AE /* IDInfoController.xib */,
-				D65F2DB31CBBCCB0000817AE /* QueryIdModel.h */,
-				D65F2DB41CBBCCB0000817AE /* QueryIdModel.m */,
 			);
 			name = "身份证信息";
 			sourceTree = "<group>";
@@ -1878,6 +1900,20 @@
 		D6BC3DC21CBABD5000200BC7 /* 联系人信息 */ = {
 			isa = PBXGroup;
 			children = (
+				D6C39D2F1CCD793700B5C1B6 /* ContactTableViewController.h */,
+				D6C39D301CCD793700B5C1B6 /* ContactTableViewController.m */,
+				D6C39D3D1CCDFC7B00B5C1B6 /* EditeContactViewController.h */,
+				D6C39D3E1CCDFC7B00B5C1B6 /* EditeContactViewController.m */,
+				D6C39D3F1CCDFC7B00B5C1B6 /* EditeContactViewController.xib */,
+				D6C39D421CCE04AF00B5C1B6 /* EditeContactModel.h */,
+				D6C39D431CCE04AF00B5C1B6 /* EditeContactModel.m */,
+				D6C39D321CCDE7C800B5C1B6 /* ContactsItem.h */,
+				D6C39D331CCDE7C800B5C1B6 /* ContactsItem.m */,
+				D6C39D3A1CCDEDE900B5C1B6 /* ContactsTableViewCell+PutContentInfo.h */,
+				D6C39D3B1CCDEDE900B5C1B6 /* ContactsTableViewCell+PutContentInfo.m */,
+				D6C39D351CCDEA8700B5C1B6 /* ContactsTableViewCell.h */,
+				D6C39D361CCDEA8700B5C1B6 /* ContactsTableViewCell.m */,
+				D6C39D371CCDEA8700B5C1B6 /* ContactsTableViewCell.xib */,
 			);
 			name = "联系人信息";
 			sourceTree = "<group>";
@@ -2313,6 +2349,7 @@
 				D647FBD81CAE92B200CBF19E /* ContactList.plist in Resources */,
 				D60609FE1C76FF0E000DB373 /* wechat@2x.png in Resources */,
 				D6060A1F1C76FF0E000DB373 /* qq@2x.png in Resources */,
+				D6C39D391CCDEA8700B5C1B6 /* ContactsTableViewCell.xib in Resources */,
 				D633568E1CB181BA000A321C /* ImagesTitles_Mine.plist in Resources */,
 				D6F567291C80055800B0612F /* 我的@3x.png in Resources */,
 				D6060A021C76FF0E000DB373 /* folder@3x.png in Resources */,
@@ -2410,6 +2447,7 @@
 				D65F2DA31CBBCAE2000817AE /* Icon-72.png in Resources */,
 				D60609FF1C76FF0E000DB373 /* wechat@3x.png in Resources */,
 				D647FBAC1CAE87FD00CBF19E /* FirstStepController.xib in Resources */,
+				D6C39D411CCDFC7B00B5C1B6 /* EditeContactViewController.xib in Resources */,
 				D60609E01C76FF0E000DB373 /* no_visible@2x.png in Resources */,
 				D647FBB71CAE87FD00CBF19E /* VerifyTableViewCell.xib in Resources */,
 				D63356411CB016DC000A321C /* FailureView.xib in Resources */,
@@ -2550,6 +2588,7 @@
 				D6805EA81CAD1CF500316925 /* pinyin.c in Sources */,
 				D647FB8D1CAE814300CBF19E /* HttpRequest.m in Sources */,
 				D67D6DC61CB54CFA003D4D2D /* VerifyModel.m in Sources */,
+				D6C39D3C1CCDEDE900B5C1B6 /* ContactsTableViewCell+PutContentInfo.m in Sources */,
 				D647FB5D1CAE7F7A00CBF19E /* NewApplyViewController.m in Sources */,
 				D647FB5C1CAE7F7A00CBF19E /* LoanViewController.m in Sources */,
 				D64C99401CB9125800C45936 /* LoanProtroWebController.m in Sources */,
@@ -2597,6 +2636,8 @@
 				D63356851CB17750000A321C /* MineViewController.m in Sources */,
 				D6ABF24B1CB18F3C000A7A01 /* MoreCellActionHelper.m in Sources */,
 				D64036741CBD5EAD002009C3 /* ThirdUpLoadItem.m in Sources */,
+				D6C39D341CCDE7C800B5C1B6 /* ContactsItem.m in Sources */,
+				D6C39D381CCDEA8700B5C1B6 /* ContactsTableViewCell.m in Sources */,
 				D6805EAF1CAD242500316925 /* BaseViewController.m in Sources */,
 				D633565E1CB0378F000A321C /* HeaderLabel.m in Sources */,
 				D647FBB61CAE87FD00CBF19E /* VerifyTableViewCell.m in Sources */,
@@ -2609,6 +2650,7 @@
 				D6E104C61C7320FD00049C3F /* main.m in Sources */,
 				D66B4FA51CB502970038F312 /* GetCodesAndAreas.m in Sources */,
 				D6C39D131CCCA1E000B5C1B6 /* IDPhotoItem.m in Sources */,
+				D6C39D441CCE04AF00B5C1B6 /* EditeContactModel.m in Sources */,
 				D63356911CB184E8000A321C /* MoreTableViewCell+MineUIInfo.m in Sources */,
 				D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */,
 				D647FB191CAE7E2D00CBF19E /* MoreViewController.m in Sources */,
@@ -2627,6 +2669,7 @@
 				D6C39D2B1CCD06E300B5C1B6 /* JobItem.m in Sources */,
 				D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */,
 				D66B4FA21CB4EE820038F312 /* AppUserInfoHelper.m in Sources */,
+				D6C39D311CCD793700B5C1B6 /* ContactTableViewController.m in Sources */,
 				D64C992A1CB8DBA200C45936 /* LatestActivityController.m in Sources */,
 				D647FB831CAE80BE00CBF19E /* RegisterViewController.m in Sources */,
 				D647FBB11CAE87FD00CBF19E /* VerifyViewController.m in Sources */,
@@ -2644,6 +2687,7 @@
 				D63356531CB033B2000A321C /* LoanVerifyController.m in Sources */,
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,
+				D6C39D401CCDFC7B00B5C1B6 /* EditeContactViewController.m in Sources */,
 				D648E8AE1CC8E60500B85DD8 /* RepayItem.m in Sources */,
 				D647FB8E1CAE814300CBF19E /* UploadParam.m in Sources */,
 				D65F2CAB1CBBB370000817AE /* DistributeStauff.m in Sources */,

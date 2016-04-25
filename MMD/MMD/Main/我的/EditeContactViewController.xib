@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditeContactViewController">
+            <connections>
+                <outlet property="contactButton" destination="kjT-3f-vo5" id="Wek-fc-GwC"/>
+                <outlet property="contactName" destination="wf9-Tp-fTn" id="vj2-qf-YAn"/>
+                <outlet property="phoneLabel" destination="GcP-oN-unU" id="TlX-m6-ise"/>
+                <outlet property="relationTextField" destination="0NK-Z9-TwA" id="80t-XG-Peh"/>
+                <outlet property="sureButton" destination="yoj-iU-9xZ" id="9ho-9N-CNr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系人电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYB-IZ-h7Q">
+                    <rect key="frame" x="20" y="84" width="70" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="gda-GB-cN1"/>
+                        <constraint firstAttribute="height" constant="40" id="xzr-I9-VXb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系人姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffp-3C-kHX">
+                    <rect key="frame" x="20" y="126" width="70" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系人关系" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfB-0l-1YH">
+                    <rect key="frame" x="20" y="168" width="70" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjT-3f-vo5">
+                    <rect key="frame" x="260" y="84" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3dh-cb-J6X"/>
+                        <constraint firstAttribute="width" constant="40" id="UQw-hn-AO3"/>
+                    </constraints>
+                    <state key="normal" image="contact.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="getContactAction:" destination="-1" eventType="touchUpInside" id="Ide-rl-bJd"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcP-oN-unU">
+                    <rect key="frame" x="90" y="84" width="170" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wf9-Tp-fTn">
+                    <rect key="frame" x="90" y="126" width="210" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="7dh-HA-icu"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoj-iU-9xZ">
+                    <rect key="frame" x="20" y="238" width="280" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0cs-v8-Ohm"/>
+                    </constraints>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sureAction:" destination="-1" eventType="touchUpInside" id="oRe-Dg-5Mu"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0NK-Z9-TwA">
+                    <rect key="frame" x="90" y="168" width="210" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wf9-Tp-fTn" secondAttribute="trailing" constant="20" id="07a-q9-E3G"/>
+                <constraint firstItem="wf9-Tp-fTn" firstAttribute="height" secondItem="ffp-3C-kHX" secondAttribute="height" id="0v6-Dt-5jD"/>
+                <constraint firstItem="QfB-0l-1YH" firstAttribute="centerX" secondItem="ffp-3C-kHX" secondAttribute="centerX" id="3b7-Yh-v7h"/>
+                <constraint firstItem="QfB-0l-1YH" firstAttribute="width" secondItem="ffp-3C-kHX" secondAttribute="width" id="3dD-Qg-NjM"/>
+                <constraint firstItem="0NK-Z9-TwA" firstAttribute="height" secondItem="QfB-0l-1YH" secondAttribute="height" id="Ac8-GH-Vlc"/>
+                <constraint firstItem="kjT-3f-vo5" firstAttribute="centerY" secondItem="yYB-IZ-h7Q" secondAttribute="centerY" id="EPd-AH-gfc"/>
+                <constraint firstItem="ffp-3C-kHX" firstAttribute="width" secondItem="yYB-IZ-h7Q" secondAttribute="width" id="ERJ-gp-L9d"/>
+                <constraint firstItem="yoj-iU-9xZ" firstAttribute="top" secondItem="0NK-Z9-TwA" secondAttribute="bottom" constant="30" id="Eab-yq-b7i"/>
+                <constraint firstItem="kjT-3f-vo5" firstAttribute="leading" secondItem="GcP-oN-unU" secondAttribute="trailing" id="Efu-SZ-WK1"/>
+                <constraint firstItem="yoj-iU-9xZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Id0-EH-bor"/>
+                <constraint firstAttribute="trailing" secondItem="yoj-iU-9xZ" secondAttribute="trailing" constant="20" id="J36-um-3IX"/>
+                <constraint firstItem="GcP-oN-unU" firstAttribute="leading" secondItem="yYB-IZ-h7Q" secondAttribute="trailing" id="JyC-NF-3q9"/>
+                <constraint firstItem="QfB-0l-1YH" firstAttribute="height" secondItem="ffp-3C-kHX" secondAttribute="height" id="OYF-pc-1jC"/>
+                <constraint firstItem="yYB-IZ-h7Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Oeg-ea-v7Q"/>
+                <constraint firstItem="ffp-3C-kHX" firstAttribute="top" secondItem="yYB-IZ-h7Q" secondAttribute="bottom" constant="2" id="Q0d-SU-Yh7"/>
+                <constraint firstItem="0NK-Z9-TwA" firstAttribute="leading" secondItem="QfB-0l-1YH" secondAttribute="trailing" id="T95-Py-bT6"/>
+                <constraint firstItem="GcP-oN-unU" firstAttribute="centerY" secondItem="yYB-IZ-h7Q" secondAttribute="centerY" id="UdE-xZ-L4T"/>
+                <constraint firstItem="QfB-0l-1YH" firstAttribute="top" secondItem="ffp-3C-kHX" secondAttribute="bottom" constant="2" id="Vo2-jz-Zmj"/>
+                <constraint firstAttribute="trailing" secondItem="0NK-Z9-TwA" secondAttribute="trailing" constant="20" id="YR7-Is-7bx"/>
+                <constraint firstItem="ffp-3C-kHX" firstAttribute="height" secondItem="yYB-IZ-h7Q" secondAttribute="height" id="Yqh-Hs-sdR"/>
+                <constraint firstItem="ffp-3C-kHX" firstAttribute="centerX" secondItem="yYB-IZ-h7Q" secondAttribute="centerX" id="ZlV-zH-Oos"/>
+                <constraint firstItem="0NK-Z9-TwA" firstAttribute="centerY" secondItem="QfB-0l-1YH" secondAttribute="centerY" id="e2o-N5-3aJ"/>
+                <constraint firstItem="GcP-oN-unU" firstAttribute="height" secondItem="yYB-IZ-h7Q" secondAttribute="height" id="gTf-yl-Dwd"/>
+                <constraint firstAttribute="trailing" secondItem="kjT-3f-vo5" secondAttribute="trailing" constant="20" id="iU6-sM-N0U"/>
+                <constraint firstItem="wf9-Tp-fTn" firstAttribute="leading" secondItem="ffp-3C-kHX" secondAttribute="trailing" id="lZ1-Am-SnG"/>
+                <constraint firstItem="yYB-IZ-h7Q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="oDL-pk-Yz5"/>
+                <constraint firstItem="wf9-Tp-fTn" firstAttribute="centerY" secondItem="ffp-3C-kHX" secondAttribute="centerY" id="uoL-ec-Qdp"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="contact.png" width="25" height="25"/>
+    </resources>
+</document>
