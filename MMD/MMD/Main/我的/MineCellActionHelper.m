@@ -16,6 +16,8 @@
 #import "BankInfoController.h"
 #import "JobViewController.h"
 #import "ContactTableViewController.h"
+#import "AttachmentTableViewController.h"
+#import "UIViewController+LoadFromNib.h"
 
 
 
@@ -50,8 +52,11 @@
         {
             if (row == 0) {
                 //工作信息
-                JobViewController *jobVc = [[JobViewController alloc] initWithNibName:NSStringFromClass([JobViewController class]) bundle:[NSBundle mainBundle]];
-                [self jumpToController:jobVc from:originalController];
+//                JobViewController *jobVc = [[JobViewController alloc] initWithNibName:NSStringFromClass([JobViewController class]) bundle:[NSBundle mainBundle]];
+                JobViewController *newJob = [JobViewController loadFromNib];
+                
+                [self jumpToController:newJob from:originalController];
+                
             }else if (row == 1){
                 //联系人信息
                 ContactTableViewController *contactVC = [[ContactTableViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -59,6 +64,8 @@
                 
             }else if (row == 2){
                 //补充附件
+                AttachmentTableViewController *attachVC = [[AttachmentTableViewController alloc] initWithStyle:UITableViewStylePlain];
+                [self jumpToController:attachVC from:originalController];
             }
         }
             break;

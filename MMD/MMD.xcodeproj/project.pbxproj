@@ -295,6 +295,14 @@
 		D6C39D401CCDFC7B00B5C1B6 /* EditeContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D3E1CCDFC7B00B5C1B6 /* EditeContactViewController.m */; };
 		D6C39D411CCDFC7B00B5C1B6 /* EditeContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D3F1CCDFC7B00B5C1B6 /* EditeContactViewController.xib */; };
 		D6C39D441CCE04AF00B5C1B6 /* EditeContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D431CCE04AF00B5C1B6 /* EditeContactModel.m */; };
+		D6C39D4C1CCE182900B5C1B6 /* AttachmentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D4B1CCE182900B5C1B6 /* AttachmentTableViewController.m */; };
+		D6C39D501CCE18D300B5C1B6 /* AttachmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D4E1CCE18D300B5C1B6 /* AttachmentTableViewCell.m */; };
+		D6C39D511CCE18D300B5C1B6 /* AttachmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D4F1CCE18D300B5C1B6 /* AttachmentTableViewCell.xib */; };
+		D6C39D541CCE19E000B5C1B6 /* AttachmentTableViewCell+PutUIInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D531CCE19E000B5C1B6 /* AttachmentTableViewCell+PutUIInfo.m */; };
+		D6C39D571CCE1D1700B5C1B6 /* QueryAttachmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D561CCE1D1700B5C1B6 /* QueryAttachmentModel.m */; };
+		D6C39D5B1CCE258600B5C1B6 /* EditeAttachmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D591CCE258600B5C1B6 /* EditeAttachmentViewController.m */; };
+		D6C39D5C1CCE258600B5C1B6 /* EditeAttachmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C39D5A1CCE258600B5C1B6 /* EditeAttachmentViewController.xib */; };
+		D6C39D5F1CCE34A900B5C1B6 /* UIViewController+LoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C39D5E1CCE34A900B5C1B6 /* UIViewController+LoadFromNib.m */; };
 		D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE71C61CC10B0E0037ED4D /* RRViewController.m */; };
 		D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE721E1CC37E920037ED4D /* RRFirstViewController.m */; };
 		D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72211CC385170037ED4D /* RRSecondViewController.m */; };
@@ -791,6 +799,20 @@
 		D6C39D3F1CCDFC7B00B5C1B6 /* EditeContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditeContactViewController.xib; sourceTree = "<group>"; };
 		D6C39D421CCE04AF00B5C1B6 /* EditeContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditeContactModel.h; sourceTree = "<group>"; };
 		D6C39D431CCE04AF00B5C1B6 /* EditeContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditeContactModel.m; sourceTree = "<group>"; };
+		D6C39D4A1CCE182900B5C1B6 /* AttachmentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachmentTableViewController.h; sourceTree = "<group>"; };
+		D6C39D4B1CCE182900B5C1B6 /* AttachmentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachmentTableViewController.m; sourceTree = "<group>"; };
+		D6C39D4D1CCE18D300B5C1B6 /* AttachmentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachmentTableViewCell.h; sourceTree = "<group>"; };
+		D6C39D4E1CCE18D300B5C1B6 /* AttachmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachmentTableViewCell.m; sourceTree = "<group>"; };
+		D6C39D4F1CCE18D300B5C1B6 /* AttachmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentTableViewCell.xib; sourceTree = "<group>"; };
+		D6C39D521CCE19E000B5C1B6 /* AttachmentTableViewCell+PutUIInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AttachmentTableViewCell+PutUIInfo.h"; sourceTree = "<group>"; };
+		D6C39D531CCE19E000B5C1B6 /* AttachmentTableViewCell+PutUIInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AttachmentTableViewCell+PutUIInfo.m"; sourceTree = "<group>"; };
+		D6C39D551CCE1D1700B5C1B6 /* QueryAttachmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryAttachmentModel.h; sourceTree = "<group>"; };
+		D6C39D561CCE1D1700B5C1B6 /* QueryAttachmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryAttachmentModel.m; sourceTree = "<group>"; };
+		D6C39D581CCE258600B5C1B6 /* EditeAttachmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditeAttachmentViewController.h; sourceTree = "<group>"; };
+		D6C39D591CCE258600B5C1B6 /* EditeAttachmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditeAttachmentViewController.m; sourceTree = "<group>"; };
+		D6C39D5A1CCE258600B5C1B6 /* EditeAttachmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditeAttachmentViewController.xib; sourceTree = "<group>"; };
+		D6C39D5D1CCE34A900B5C1B6 /* UIViewController+LoadFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+LoadFromNib.h"; path = "../../Main/我的/UIViewController+LoadFromNib.h"; sourceTree = "<group>"; };
+		D6C39D5E1CCE34A900B5C1B6 /* UIViewController+LoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+LoadFromNib.m"; path = "../../Main/我的/UIViewController+LoadFromNib.m"; sourceTree = "<group>"; };
 		D6DD24A41C8745930042E263 /* MMDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDPrefixHeader.pch; sourceTree = "<group>"; };
 		D6DE71C51CC10B0E0037ED4D /* RRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRViewController.h; sourceTree = "<group>"; };
 		D6DE71C61CC10B0E0037ED4D /* RRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRViewController.m; sourceTree = "<group>"; };
@@ -1389,6 +1411,8 @@
 		D647FBC91CAE925400CBF19E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D6C39D5D1CCE34A900B5C1B6 /* UIViewController+LoadFromNib.h */,
+				D6C39D5E1CCE34A900B5C1B6 /* UIViewController+LoadFromNib.m */,
 				D6FE74311CB9690E002F3941 /* UIDevice+IdentifierAddition.h */,
 				D6FE74321CB9690E002F3941 /* UIDevice+IdentifierAddition.m */,
 				D647FBCB1CAE925400CBF19E /* UIImage+Color.h */,
@@ -1919,6 +1943,18 @@
 		D6BC3DC31CBABD5E00200BC7 /* 补充附件 */ = {
 			isa = PBXGroup;
 			children = (
+				D6C39D4A1CCE182900B5C1B6 /* AttachmentTableViewController.h */,
+				D6C39D4B1CCE182900B5C1B6 /* AttachmentTableViewController.m */,
+				D6C39D581CCE258600B5C1B6 /* EditeAttachmentViewController.h */,
+				D6C39D591CCE258600B5C1B6 /* EditeAttachmentViewController.m */,
+				D6C39D5A1CCE258600B5C1B6 /* EditeAttachmentViewController.xib */,
+				D6C39D551CCE1D1700B5C1B6 /* QueryAttachmentModel.h */,
+				D6C39D561CCE1D1700B5C1B6 /* QueryAttachmentModel.m */,
+				D6C39D4D1CCE18D300B5C1B6 /* AttachmentTableViewCell.h */,
+				D6C39D4E1CCE18D300B5C1B6 /* AttachmentTableViewCell.m */,
+				D6C39D4F1CCE18D300B5C1B6 /* AttachmentTableViewCell.xib */,
+				D6C39D521CCE19E000B5C1B6 /* AttachmentTableViewCell+PutUIInfo.h */,
+				D6C39D531CCE19E000B5C1B6 /* AttachmentTableViewCell+PutUIInfo.m */,
 			);
 			name = "补充附件";
 			sourceTree = "<group>";
@@ -2370,6 +2406,7 @@
 				D65F2DA41CBBCAE2000817AE /* Icon-72@2x.png in Resources */,
 				D647FB1D1CAE7E2D00CBF19E /* MoreTableViewCell.xib in Resources */,
 				D65F2DAF1CBBCAE2000817AE /* Icon-Spotlight-40@2x.png in Resources */,
+				D6C39D511CCE18D300B5C1B6 /* AttachmentTableViewCell.xib in Resources */,
 				D65E7F571CBB596C003AA72C /* records@3x.png in Resources */,
 				D60609BA1C76FF0E000DB373 /* 工作信息@3x.png in Resources */,
 				D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */,
@@ -2488,6 +2525,7 @@
 				D65F2DA51CBBCAE2000817AE /* Icon-76.png in Resources */,
 				D647FB871CAE80BE00CBF19E /* RegisterContentView.xib in Resources */,
 				D6060A141C76FF0E000DB373 /* creditline@3x.png in Resources */,
+				D6C39D5C1CCE258600B5C1B6 /* EditeAttachmentViewController.xib in Resources */,
 				D6060A201C76FF0E000DB373 /* qq@3x.png in Resources */,
 				D606099C1C76FF0E000DB373 /* 补充附件@3x.png in Resources */,
 				D64C99271CB8DB9300C45936 /* QueryViewController.xib in Resources */,
@@ -2591,6 +2629,7 @@
 				D6A600E51CC7A80B0014C3C4 /* RBViewController.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D633566B1CB04320000A321C /* SureViewController.m in Sources */,
+				D6C39D5B1CCE258600B5C1B6 /* EditeAttachmentViewController.m in Sources */,
 				D65F2CAF1CBBC1EE000817AE /* IDInfoController.m in Sources */,
 				D63356891CB179BA000A321C /* MineHeaderTableViewCell.m in Sources */,
 				D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */,
@@ -2621,6 +2660,7 @@
 				D6C39D0F1CCC9C6900B5C1B6 /* IDPhotoController.m in Sources */,
 				D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */,
 				D6A600A31CC6ABEA0014C3C4 /* OnlineRepayController.m in Sources */,
+				D6C39D571CCE1D1700B5C1B6 /* QueryAttachmentModel.m in Sources */,
 				D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */,
 				D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */,
 				D6BC3DCC1CBAC37500200BC7 /* LogoutModel.m in Sources */,
@@ -2641,6 +2681,7 @@
 				D6A600EF1CC7ADA70014C3C4 /* BankAliPayViewController.m in Sources */,
 				D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */,
 				D65F2DB51CBBCCB0000817AE /* QueryIdModel.m in Sources */,
+				D6C39D4C1CCE182900B5C1B6 /* AttachmentTableViewController.m in Sources */,
 				D63356341CB000D3000A321C /* MessageCenterController.m in Sources */,
 				D6E105011C73217C00049C3F /* MMTabbar.m in Sources */,
 				D6E104C61C7320FD00049C3F /* main.m in Sources */,
@@ -2685,6 +2726,7 @@
 				D647FB701CAE800100CBF19E /* checkoutPhoneNumber.m in Sources */,
 				D6C39D401CCDFC7B00B5C1B6 /* EditeContactViewController.m in Sources */,
 				D648E8AE1CC8E60500B85DD8 /* RepayItem.m in Sources */,
+				D6C39D501CCE18D300B5C1B6 /* AttachmentTableViewCell.m in Sources */,
 				D647FB8E1CAE814300CBF19E /* UploadParam.m in Sources */,
 				D65F2CAB1CBBB370000817AE /* DistributeStauff.m in Sources */,
 				D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */,
@@ -2694,6 +2736,7 @@
 				D6FE74391CB97529002F3941 /* QueryItem.m in Sources */,
 				D6C39D1F1CCCBBB800B5C1B6 /* EditeBankController.m in Sources */,
 				D6BC3DC81CBABE6F00200BC7 /* LoggoutTableViewCell.m in Sources */,
+				D6C39D5F1CCE34A900B5C1B6 /* UIViewController+LoadFromNib.m in Sources */,
 				D6805E931CAD1A3300316925 /* STPickerArea.m in Sources */,
 				D648E8AA1CC8E09800B85DD8 /* PostRepayController.m in Sources */,
 				D6C39CFD1CC9523B00B5C1B6 /* RepayIUploadModel.m in Sources */,
@@ -2711,6 +2754,7 @@
 				D688B91B1CB6AAD100CC80FF /* FaceRecongnizeController.m in Sources */,
 				D647FBC41CAE920100CBF19E /* AppInfo.m in Sources */,
 				D6BC3DD21CBAD0AD00200BC7 /* LogginHandler.m in Sources */,
+				D6C39D541CCE19E000B5C1B6 /* AttachmentTableViewCell+PutUIInfo.m in Sources */,
 				D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */,
 				D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */,
 				D64B9C891CBFF38600B6B5A5 /* ShouldRefundView.m in Sources */,
