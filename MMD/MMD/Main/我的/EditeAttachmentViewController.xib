@@ -7,7 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditeAttachmentViewController">
             <connections>
-                <outlet property="attImageButton" destination="i69-5i-VMl" id="yf9-Hm-AKf"/>
+                <outlet property="attImageView" destination="nCM-to-SVr" id="UXF-4C-1Do"/>
+                <outlet property="indicator" destination="5z5-Ag-51t" id="XYH-D1-b5F"/>
                 <outlet property="nameTextField" destination="Qpv-oR-awh" id="tqH-cy-txV"/>
                 <outlet property="sureButton" destination="4za-B0-jze" id="KPF-3i-4RP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,18 +22,21 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-sw-Y1T">
                     <rect key="frame" x="20" y="84" width="280" height="40"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qpv-oR-awh">
-                            <rect key="frame" x="60" y="0.0" width="210" height="40"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qpv-oR-awh">
+                            <rect key="frame" x="75" y="0.0" width="195" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="pMm-vB-BDy"/>
+                            </connections>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMX-0R-bjh">
-                            <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="附件名称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMX-0R-bjh">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="60" id="Yag-Qy-nvv"/>
+                                <constraint firstAttribute="width" constant="75" id="Yag-Qy-nvv"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -58,25 +62,32 @@
                                 <constraint firstAttribute="height" constant="48" id="eIA-IB-mih"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i69-5i-VMl">
-                            <rect key="frame" x="89" y="10" width="132" height="80"/>
+                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-to-SVr">
+                            <rect key="frame" x="81" y="10" width="179" height="80"/>
+                            <gestureRecognizers/>
                             <connections>
-                                <action selector="clickAttachment:" destination="-1" eventType="touchUpInside" id="KHQ-eK-yBG"/>
+                                <outletCollection property="gestureRecognizers" destination="chE-23-10H" appends="YES" id="smE-2d-61t"/>
                             </connections>
-                        </button>
+                        </imageView>
+                        <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5z5-Ag-51t">
+                            <rect key="frame" x="160" y="40" width="20" height="20"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="nCM-to-SVr" secondAttribute="trailing" constant="20" id="1dh-WL-4J9"/>
+                        <constraint firstItem="5z5-Ag-51t" firstAttribute="centerY" secondItem="nCM-to-SVr" secondAttribute="centerY" id="5AZ-eR-UFI"/>
                         <constraint firstItem="xfC-3y-0ln" firstAttribute="leading" secondItem="bVk-68-aap" secondAttribute="leading" constant="1" id="6JG-Hw-elt"/>
-                        <constraint firstItem="i69-5i-VMl" firstAttribute="leading" secondItem="xfC-3y-0ln" secondAttribute="trailing" constant="20" id="JAP-Fl-mee"/>
+                        <constraint firstAttribute="bottom" secondItem="nCM-to-SVr" secondAttribute="bottom" constant="10" id="HHf-SF-mNq"/>
+                        <constraint firstItem="nCM-to-SVr" firstAttribute="top" secondItem="bVk-68-aap" secondAttribute="top" constant="10" id="HOv-4p-DU1"/>
                         <constraint firstAttribute="height" constant="100" id="Jqr-Iy-9HA"/>
                         <constraint firstItem="xfC-3y-0ln" firstAttribute="centerY" secondItem="bVk-68-aap" secondAttribute="centerY" id="U7z-4k-bjE"/>
-                        <constraint firstItem="i69-5i-VMl" firstAttribute="top" secondItem="bVk-68-aap" secondAttribute="top" constant="10" id="Uef-Xe-RE4"/>
-                        <constraint firstAttribute="bottom" secondItem="i69-5i-VMl" secondAttribute="bottom" constant="10" id="ezT-3w-SAr"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i69-5i-VMl" secondAttribute="trailing" constant="20" id="yks-WC-YhA"/>
+                        <constraint firstItem="5z5-Ag-51t" firstAttribute="centerX" secondItem="nCM-to-SVr" secondAttribute="centerX" id="e9e-KO-8fI"/>
+                        <constraint firstItem="nCM-to-SVr" firstAttribute="centerY" secondItem="xfC-3y-0ln" secondAttribute="centerY" id="eib-DN-bMm"/>
+                        <constraint firstItem="nCM-to-SVr" firstAttribute="leading" secondItem="xfC-3y-0ln" secondAttribute="trailing" constant="12" id="q3F-UU-hc1"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4za-B0-jze">
@@ -84,9 +95,13 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="q3o-xh-Des"/>
                     </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="确定">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="sureAction:" destination="-1" eventType="touchUpInside" id="t3e-jb-GBO"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -103,5 +118,10 @@
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
+        <tapGestureRecognizer id="chE-23-10H">
+            <connections>
+                <action selector="clickAttachment:" destination="-1" id="eIg-xc-L7h"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

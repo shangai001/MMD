@@ -107,13 +107,6 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }];
-    //如果允许相册
-    UIAlertAction *albumAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-        [self presentViewController:self.picker animated:YES completion:^{
-            
-        }];
-    }];
     UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"照相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         [self presentViewController:self.picker animated:YES completion:^{
@@ -122,6 +115,13 @@
     }];
     [actionViewController addAction:cancelAction];
     if (self.albumOptional) {
+        //如果允许相册
+        UIAlertAction *albumAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            self.picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            [self presentViewController:self.picker animated:YES completion:^{
+                
+            }];
+        }];
        [actionViewController addAction:albumAction];
     }
     [actionViewController addAction:takePhotoAction];

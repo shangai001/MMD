@@ -20,5 +20,15 @@
 + (void)queryAttachment:(NSDictionary *)info
                 success:(successHandler)successHandler
                 failure:(failureHandler)failureHandler;
+/**
+ *  上传修改附件
+ *
+ *  @param info
+ *  @param successHandler
+ *  @param failureHandler 
+ */
++ (void)uploadAttachment:(NSDictionary *)info
+                 success:(successHandler)successHandler
+                 failure:(failureHandler)failureHandler;
 
 @end

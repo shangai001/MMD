@@ -10,13 +10,16 @@
 #import "QueryIdModel.h"
 #import "ColorHeader.h"
 #import "IDPhotoItem.h"
-#import <UIImageView+AFNetworking.h>
+#import <UIImageView+YYWebImage.h>
 #import "AppUserInfoHelper.h"
 #import "DistributeStauff.h"
 
 
 
 @interface IDPhotoController ()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *frontIndictor;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *frontIDIndictor;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *backIndictor;
 
 @property (weak, nonatomic) IBOutlet UIImageView *faceImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *frontImageView;
@@ -64,14 +67,29 @@
 }
 - (void)setIDPhotoInfo{
     
+    [self.frontIDIndictor startAnimating];
     NSURL *cardFrontUrl = [NSURL URLWithString:self.item.cardFrontUrl];
-    [self.frontImageView setImageWithURL:cardFrontUrl];
+    [self.frontImageView setImageWithURL:cardFrontUrl placeholder:nil options:YYWebImageOptionProgressive completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        if (image) {
+            [self.frontIDIndictor stopAnimating];
+        }
+    }];
     
+    [self.backIndictor startAnimating];
     NSURL *cardBackUrl = [NSURL URLWithString:self.item.cardBackUrl];
-    [self.backImageView setImageWithURL:cardBackUrl];
-    
+
+    [self.backImageView setImageWithURL:cardBackUrl placeholder:nil options:YYWebImageOptionProgressive completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        if (image) {
+            [self.backIndictor stopAnimating];
+        }
+    }];
+    [self.frontIndictor startAnimating];
     NSURL *cardHandUrl = [NSURL URLWithString:self.item.cardHandUrl];
-    [self.faceImageView setImageWithURL:cardHandUrl];
+    [self.faceImageView setImageWithURL:cardHandUrl placeholder:nil options:YYWebImageOptionProgressive completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        if (image) {
+            [self.frontIndictor stopAnimating];
+        }
+    }];
     
     if ([self.item.state isEqualToString:@"1"]) {
         self.resultLabel.text = @"已通过审核";

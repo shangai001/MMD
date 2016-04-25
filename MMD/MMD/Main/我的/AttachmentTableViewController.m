@@ -14,8 +14,11 @@
 #import "EditeAttachmentViewController.h"
 #import "NoInfoView.h"
 #import "UIView+LoadViewFromNib.h"
-#import <UIView+SDAutoLayout.h>
+#import "UIViewController+LoadFromNib.h"
+#import <YYCGUtilities.h>
 #import <SVProgressHUD.h>
+#import "EditeAttachmentViewController.h"
+
 
 static NSString *reuseCellId  = @"attachmentCellId";
 
@@ -50,6 +53,7 @@ static NSString *reuseCellId  = @"attachmentCellId";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self configureTableView];
     [self requestAttachmentList];
+    [self initAddItem];
 }
 - (void)initAddItem{
     
@@ -60,14 +64,11 @@ static NSString *reuseCellId  = @"attachmentCellId";
 }
 - (void)moveToAddAttachment:(id)sender{
     
+    EditeAttachmentViewController *editeAttVc = [EditeAttachmentViewController loadFromNib];
+    [self.navigationController pushViewController:editeAttVc animated:YES];
 }
 - (void)requestAttachmentList{
     
-    if (![self.tableView.subviews containsObject:self.infoView]) {
-        [self.tableView addSubview:self.infoView];
-    }
-    self.infoView.sd_layout.widthIs(200).heightIs(230).centerXEqualToView(self.tableView).centerYEqualToView(self.tableView);
-    /*
     [SVProgressHUD show];
     [QueryAttachmentModel queryAttachment:nil success:^(NSDictionary *resultDic) {
 
@@ -81,16 +82,22 @@ static NSString *reuseCellId  = @"attachmentCellId";
             [self.tableView reloadData];
             [self.infoView removeFromSuperview];
         }else{
-            if (![self.tableView.subviews containsObject:self.infoView]) {
-                [self.tableView addSubview:self.infoView];
-            }
-            self.infoView.sd_layout.widthIs(200).heightIs(230).centerXEqualToView(self.tableView);
+            //显示没有附件
+            [self showNoInfoView];
         }
         [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];
     }];
-     */
+}
+- (void)showNoInfoView{
+    if (![self.tableView.subviews containsObject:self.infoView]) {
+        [self.tableView addSubview:self.infoView];
+    }
+    
+    self.infoView.frame = CGRectMake((kScreenWidth - 200)/2, (kScreenHeight - 230 - 64)/2 , 200, 230);
+    self.infoView.infLabel.text = @"请点击'添加'添加附件";
+    self.infoView.infLabel.textColor = [UIColor lightGrayColor];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
