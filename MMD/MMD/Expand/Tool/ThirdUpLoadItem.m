@@ -43,7 +43,7 @@ static NSString * const userTakeFaceImageName = @"userTakeImage";
     ZXIDcardModel *idModel = detail.idcardModel;
     __block ThirdUpLoadItem *item = [ThirdUpLoadItem new];
     
-    item.idcardPhoto = idModel.front_faceImgUrl_official;
+    item.idcardPhoto = idModel.front_faceImgUrl_official;//非下载
     item.name  = idModel.front_info_name;
     item.idcard = idModel.front_info_number;
     item.address = idModel.front_info_address;
@@ -116,7 +116,7 @@ static NSString * const userTakeFaceImageName = @"userTakeImage";
     dispatch_group_notify(downloadGroup, dispatch_get_main_queue(), ^{
         // 汇总代码
         [SVProgressHUD dismiss];
-        
+        [self reUploadThirdInfo:item];
     });
 
     
@@ -128,7 +128,7 @@ static NSString * const userTakeFaceImageName = @"userTakeImage";
     ZXIDcardModel *idModel = detail.idcardModel;
     __block ThirdUpLoadItem *item = [ThirdUpLoadItem new];
     
-    item.idcardPhoto = idModel.front_faceImgUrl_official;
+    item.idcardPhoto = idModel.front_faceImgUrl_official;//非下载
     item.name  = idModel.front_info_name;
     item.idcard = idModel.front_info_number;
     item.address = idModel.front_info_address;
