@@ -19,6 +19,12 @@
 
 
 #pragma mark AppDelegateMethod
+- (void)applicationDidFinishLaunching:(UIApplication *)application{
+    
+}
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions{
+    return YES;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    [PrepareDataWorker showStatusIndictorView];
