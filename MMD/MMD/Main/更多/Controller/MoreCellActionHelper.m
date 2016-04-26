@@ -12,7 +12,7 @@
 #import "ProtocoRefundlWebController.h"
 #import "MMDInfoWebController.h"
 #import "MessageCenterController.h"
-#import "SupportCenterController.h"
+#import "ServiceCenterController.h"
 #import "HandleUserStatus.h"
 #import "MMDLoggin.h"
 #import "LogginHandler.h"
@@ -81,9 +81,9 @@
     if ([MMDLoggin isLoggin]) {
         
         if ([HandleUserStatus handleUserStatusAt:more]) {
-            SupportCenterController *supportCenter = [SupportCenterController new];
-            supportCenter.hidesBottomBarWhenPushed = YES;
-            [more.navigationController pushViewController:supportCenter animated:YES];
+            ServiceCenterController *service = [ServiceCenterController loadFromNib];
+            service.hidesBottomBarWhenPushed = YES;
+            [more.navigationController pushViewController:service animated:YES];
         }
 
     }else{
