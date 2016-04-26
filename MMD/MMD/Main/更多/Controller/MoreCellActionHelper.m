@@ -68,6 +68,7 @@
         //检查用户状态
         if ([HandleUserStatus handleUserStatusAt:more]) {
             MessageCenterController *messageCenter = [MessageCenterController new];
+            messageCenter.hidesBottomBarWhenPushed = YES;
             [more.navigationController pushViewController:messageCenter animated:YES];
         }
     }else{
@@ -81,6 +82,7 @@
         
         if ([HandleUserStatus handleUserStatusAt:more]) {
             SupportCenterController *supportCenter = [SupportCenterController new];
+            supportCenter.hidesBottomBarWhenPushed = YES;
             [more.navigationController pushViewController:supportCenter animated:YES];
         }
 

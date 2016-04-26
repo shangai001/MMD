@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MessageTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fromLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @end

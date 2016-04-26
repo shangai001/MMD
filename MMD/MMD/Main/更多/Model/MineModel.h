@@ -42,5 +42,19 @@
                         success:(successHandler)successHandler
                         failure:(failureHandler)failureHandler;
 
+/**
+ *  查询用户历史消息
+ *
+ *  @param info
+ *  @param numer
+ *  @param successHandler
+ *  @param failureHandler
+ */
+
++ (void)queryUserMessage:(NSDictionary *)info
+              pageNumber:(NSInteger)numer
+                 success:(successHandler)successHandler
+                 failure:(failureHandler)failureHandler;
+
 
 @end

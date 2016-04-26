@@ -53,4 +53,22 @@
         failureHandler(error);
     }];
 }
++ (void)queryUserMessage:(NSDictionary *)info
+              pageNumber:(NSInteger)numer
+                 success:(successHandler)successHandler
+                 failure:(failureHandler)failureHandler{
+    
+    CGFloat const size = 10;
+    NSMutableDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+    [tokenDic setObject:@(size) forKey:@"size"];
+    [tokenDic setObject:@(numer) forKey:@"pageNo"];
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/message/sysMessage",kHostURL];
+    [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
+        successHandler(responseObject);
+    } failure:^(NSError *error) {
+        failureHandler(error);
+    }];
+    
+}
 @end
