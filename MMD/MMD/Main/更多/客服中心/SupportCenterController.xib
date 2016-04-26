@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SupportCenterController">
+            <connections>
+                <outlet property="chatTableToBottom" destination="y2V-9O-jRF" id="qXn-zY-Hcv"/>
+                <outlet property="chatTableView" destination="Snd-cm-6ZD" id="wiH-zE-SHs"/>
+                <outlet property="inputToolBar" destination="Z0g-Ke-JFM" id="su9-qY-fdt"/>
+                <outlet property="toolBarBottom" destination="XxO-bl-Qqw" id="TYN-zc-fhI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Snd-cm-6ZD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0g-Ke-JFM">
+                    <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Nsb-I9-7rL"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="Item" id="4Cv-DM-Nmv"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Z0g-Ke-JFM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0bb-IG-UXk"/>
+                <constraint firstItem="Snd-cm-6ZD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4uB-LW-nHm"/>
+                <constraint firstAttribute="trailing" secondItem="Snd-cm-6ZD" secondAttribute="trailing" id="6x9-lh-OCi"/>
+                <constraint firstAttribute="trailing" secondItem="Z0g-Ke-JFM" secondAttribute="trailing" id="7q5-bp-hV2"/>
+                <constraint firstAttribute="bottom" secondItem="Z0g-Ke-JFM" secondAttribute="bottom" id="XxO-bl-Qqw"/>
+                <constraint firstItem="Snd-cm-6ZD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kEQ-Wh-bGa"/>
+                <constraint firstAttribute="bottom" secondItem="Snd-cm-6ZD" secondAttribute="bottom" constant="44" id="y2V-9O-jRF"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
