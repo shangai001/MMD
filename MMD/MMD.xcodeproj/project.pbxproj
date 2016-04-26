@@ -324,7 +324,6 @@
 		D6DE72281CC4B62E0037ED4D /* RefundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72271CC4B62E0037ED4D /* RefundModel.m */; };
 		D6DE72371CC500760037ED4D /* RefundItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72361CC500760037ED4D /* RefundItem.m */; };
 		D6DE723A1CC535110037ED4D /* ConstantApplyState.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE72391CC535110037ED4D /* ConstantApplyState.m */; };
-		D6DE724E1CC6351C0037ED4D /* libZXSDK-Universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DE723C1CC6351C0037ED4D /* libZXSDK-Universal.a */; };
 		D6DE724F1CC6351C0037ED4D /* ZXSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6DE724D1CC6351C0037ED4D /* ZXSDK.bundle */; };
 		D6E104C61C7320FD00049C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C51C7320FD00049C3F /* main.m */; };
 		D6E104C91C7320FD00049C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E104C81C7320FD00049C3F /* AppDelegate.m */; };
@@ -865,17 +864,6 @@
 		D6DE72361CC500760037ED4D /* RefundItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundItem.m; sourceTree = "<group>"; };
 		D6DE72381CC535110037ED4D /* ConstantApplyState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantApplyState.h; sourceTree = "<group>"; };
 		D6DE72391CC535110037ED4D /* ConstantApplyState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantApplyState.m; sourceTree = "<group>"; };
-		D6DE723C1CC6351C0037ED4D /* libZXSDK-Universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libZXSDK-Universal.a"; sourceTree = "<group>"; };
-		D6DE72401CC6351C0037ED4D /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
-		D6DE72411CC6351C0037ED4D /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
-		D6DE72421CC6351C0037ED4D /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
-		D6DE72431CC6351C0037ED4D /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
-		D6DE72441CC6351C0037ED4D /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
-		D6DE72481CC6351C0037ED4D /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
-		D6DE72491CC6351C0037ED4D /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
-		D6DE724A1CC6351C0037ED4D /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
-		D6DE724B1CC6351C0037ED4D /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
-		D6DE724C1CC6351C0037ED4D /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
 		D6DE724D1CC6351C0037ED4D /* ZXSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSDK.bundle; sourceTree = "<group>"; };
 		D6E104C11C7320FD00049C3F /* MMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E104C51C7320FD00049C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -932,7 +920,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DE724E1CC6351C0037ED4D /* libZXSDK-Universal.a in Frameworks */,
 				7C1C29D08DC8E5848D086672 /* libPods-MMD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2038,66 +2025,7 @@
 		D6DE723B1CC6351C0037ED4D /* ZXSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D6DE723C1CC6351C0037ED4D /* libZXSDK-Universal.a */,
-				D6DE723D1CC6351C0037ED4D /* Release-iphoneos */,
-				D6DE72451CC6351C0037ED4D /* Release-iphonesimulator */,
 				D6DE724D1CC6351C0037ED4D /* ZXSDK.bundle */,
-			);
-			path = ZXSDK;
-			sourceTree = "<group>";
-		};
-		D6DE723D1CC6351C0037ED4D /* Release-iphoneos */ = {
-			isa = PBXGroup;
-			children = (
-				D6DE723E1CC6351C0037ED4D /* include */,
-			);
-			path = "Release-iphoneos";
-			sourceTree = "<group>";
-		};
-		D6DE723E1CC6351C0037ED4D /* include */ = {
-			isa = PBXGroup;
-			children = (
-				D6DE723F1CC6351C0037ED4D /* ZXSDK */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		D6DE723F1CC6351C0037ED4D /* ZXSDK */ = {
-			isa = PBXGroup;
-			children = (
-				D6DE72401CC6351C0037ED4D /* ZXBaseModel.h */,
-				D6DE72411CC6351C0037ED4D /* ZXIDcardModel.h */,
-				D6DE72421CC6351C0037ED4D /* ZXMemberDetail.h */,
-				D6DE72431CC6351C0037ED4D /* ZXMemberModel.h */,
-				D6DE72441CC6351C0037ED4D /* ZXSDK.h */,
-			);
-			path = ZXSDK;
-			sourceTree = "<group>";
-		};
-		D6DE72451CC6351C0037ED4D /* Release-iphonesimulator */ = {
-			isa = PBXGroup;
-			children = (
-				D6DE72461CC6351C0037ED4D /* include */,
-			);
-			path = "Release-iphonesimulator";
-			sourceTree = "<group>";
-		};
-		D6DE72461CC6351C0037ED4D /* include */ = {
-			isa = PBXGroup;
-			children = (
-				D6DE72471CC6351C0037ED4D /* ZXSDK */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		D6DE72471CC6351C0037ED4D /* ZXSDK */ = {
-			isa = PBXGroup;
-			children = (
-				D6DE72481CC6351C0037ED4D /* ZXBaseModel.h */,
-				D6DE72491CC6351C0037ED4D /* ZXIDcardModel.h */,
-				D6DE724A1CC6351C0037ED4D /* ZXMemberDetail.h */,
-				D6DE724B1CC6351C0037ED4D /* ZXMemberModel.h */,
-				D6DE724C1CC6351C0037ED4D /* ZXSDK.h */,
 			);
 			path = ZXSDK;
 			sourceTree = "<group>";
