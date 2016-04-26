@@ -30,6 +30,7 @@ PODS:
   - ShareSDK3/ShareSDKUI (3.2.5)
   - SSKeychain (1.4.0)
   - SVProgressHUD (2.0.3)
+  - WZLBadge (1.2.4)
   - YYKit (1.0.5):
     - YYKit/no-arc (= 1.0.5)
   - YYKit/no-arc (1.0.5)
@@ -50,6 +51,7 @@ DEPENDENCIES:
   - ShareSDK3/ShareSDKUI
   - SSKeychain
   - SVProgressHUD
+  - WZLBadge
   - YYKit
 
 SPEC CHECKSUMS:
@@ -63,6 +65,7 @@ SPEC CHECKSUMS:
   ShareSDK3: ccdd8ec971044703e7722e19c2f3b38fb03775e2
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  WZLBadge: 6c63f68fa5943d472fe6b1048929a4e479f6e43d
   YYKit: f2654fe525de2283648db957bddb37ddd8e06549
 
 COCOAPODS: 0.39.0
