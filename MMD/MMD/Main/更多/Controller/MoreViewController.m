@@ -15,6 +15,8 @@
 #import "ConstantTitle.h"
 //将所有的(除了分享)跳转逻辑抽离到以下类
 #import "MoreCellActionHelper.h"
+#import "MineModel.h"
+#import <UIView+WZLBadge.h>
 
 
 
@@ -26,6 +28,9 @@ static NSString * const cellId = @"moreCellId";
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic)NSMutableArray *dataArray;
 
+
+@property (assign, nonatomic)NSInteger centerUnReadCount;
+@property (assign, nonatomic)NSInteger servicesUnReadCount;
 @end
 
 @implementation MoreViewController
@@ -56,6 +61,39 @@ static NSString * const cellId = @"moreCellId";
         
     }
     return _dataArray;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self queryNoCenterUnreadCount];
+    [self queryServiceUnReadCount];
+}
+//查询消息中心未读数目
+- (void)queryNoCenterUnreadCount{
+    [MineModel queryNotificationCenter:nil success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            self.centerUnReadCount = [resultDic[@"data"] integerValue];
+        }
+        //TEST
+//        self.centerUnReadCount = 2;
+    } failure:^(NSError *error) {
+        
+    }];
+}
+- (void)queryServiceUnReadCount{
+    [MineModel queryServiceUnReadCount:nil success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            NSNumber *unRead = resultDic[@"data"][@"userNoRead"];
+            self.servicesUnReadCount = [unRead integerValue];
+        }
+        //TEST
+//        self.servicesUnReadCount = 2;
+    } failure:^(NSError *error) {
+        
+    }];
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -88,10 +126,50 @@ static NSString * const cellId = @"moreCellId";
     MoreCellUIItem *item = section[indexPath.row];
     [moreCell putMoreUIValue:item];
     moreCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+//    [self setUnReadInfo:indexPath cell:moreCell];
     if (indexPath.section == 2 && indexPath.row == 2) {
         [moreCell addVersionLabelAfterHideGoButton];
     }
     return moreCell;
+}
+- (void)setCenterUnReadCount:(NSInteger)centerUnReadCount{
+    _centerUnReadCount = centerUnReadCount;
+    if (_centerUnReadCount > 0) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        MoreTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        [self setUnReadInfo:indexPath cell:cell];
+    }
+}
+- (void)setServicesUnReadCount:(NSInteger)servicesUnReadCount{
+    _servicesUnReadCount = servicesUnReadCount;
+    if (_servicesUnReadCount > 0) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
+        MoreTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        [self setUnReadInfo:indexPath cell:cell];
+    }
+}
+- (void)setUnReadInfo:(NSIndexPath *)indexPath cell:(MoreTableViewCell *)cell{
+    
+    if (indexPath.section == 0) {
+        cell.titleLabel.badgeCenterOffset = CGPointMake(20, 20);
+        if (indexPath.row == 0) {
+            //消息中心
+            if (self.centerUnReadCount > 0) {
+                [cell.titleLabel showBadge];
+            }else{
+                [cell.titleLabel clearBadge];
+            }
+        }
+        if (indexPath.row == 1) {
+            //客服中心
+            if (self.servicesUnReadCount > 0) {
+                [cell.titleLabel showBadge];
+            }else{
+                [cell.titleLabel clearBadge];
+            }
+        }
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;

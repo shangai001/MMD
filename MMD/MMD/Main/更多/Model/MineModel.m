@@ -26,5 +26,31 @@
     }];
     
 }
-
++ (void)queryNotificationCenter:(NSDictionary *)info
+                        success:(successHandler)successHandler
+                        failure:(failureHandler)failureHandler{
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/message/noReadSysMsgSize",kHostURL];
+    NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+    
+    [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
+        successHandler(responseObject);
+    } failure:^(NSError *error) {
+        failureHandler(error);
+    }];
+    
+}
++ (void)queryServiceUnReadCount:(NSDictionary *)info
+                        success:(successHandler)successHandler
+                        failure:(failureHandler)failureHandler{
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/message/getMessageState",kHostURL];
+    NSDictionary *tokenDic = [AppUserInfoHelper tokenAndUserIdDictionary];
+    
+    [HttpRequest postWithURLString:URL parameters:tokenDic success:^(id responseObject) {
+        successHandler(responseObject);
+    } failure:^(NSError *error) {
+        failureHandler(error);
+    }];
+}
 @end

@@ -21,6 +21,26 @@
 + (void)queryAllNotifications:(NSDictionary *)info
                       success:(successHandler)successHandler
                       failure:(failureHandler)failureHandler;
+/**
+ *  查询消息中心未读消息
+ *
+ *  @param info
+ *  @param successHandler
+ *  @param failureHandler
+ */
++ (void)queryNotificationCenter:(NSDictionary *)info
+                        success:(successHandler)successHandler
+                        failure:(failureHandler)failureHandler;
+/**
+ *  查询客服中心未读消息
+ *
+ *  @param info
+ *  @param successHandler
+ *  @param failureHandler 
+ */
++ (void)queryServiceUnReadCount:(NSDictionary *)info
+                        success:(successHandler)successHandler
+                        failure:(failureHandler)failureHandler;
 
 
 @end
