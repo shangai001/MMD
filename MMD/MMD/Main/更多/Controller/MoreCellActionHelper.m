@@ -12,12 +12,7 @@
 #import "ProtocoRefundlWebController.h"
 #import "MMDInfoWebController.h"
 #import "MessageCenterController.h"
-//#import "SupportCenterController.h"
-#import "ColorHeader.h"
-
-#import "MQChatViewManager.h"
-#import "MQAssetUtil.h"
-
+#import "SupportCenterController.h"
 #import "HandleUserStatus.h"
 #import "MMDLoggin.h"
 #import "LogginHandler.h"
@@ -86,34 +81,9 @@
     if ([MMDLoggin isLoggin]) {
         
         if ([HandleUserStatus handleUserStatusAt:more]) {
-            MQChatViewManager *chatViewManager = [[MQChatViewManager alloc] init];
-            //隐藏底部 tabbar
-            [chatViewManager hidesBottomBarWhenPushed:YES];
-
-            //默认欢迎短语
-            [chatViewManager setChatWelcomeText:@"您好,请问有什么可以帮助您？"];
-            [chatViewManager setAgentName:@"米米贷客服"];
-            [chatViewManager setNavTitleText:@"客服中心"];
-            
-            
-            [chatViewManager enableSendVoiceMessage:false];
-            [chatViewManager enableSendImageMessage:NO];
-            //圆角头像
-            [chatViewManager enableRoundAvatar:YES];
-            [chatViewManager enableIncomingAvatar:YES];
-            //底部刷新
-            [chatViewManager enableBottomPullRefresh:YES];
-            [chatViewManager setIncomingBubbleColor:Color(0.52, 0.75, 0.93, 1)];
-            [chatViewManager setIncomingMessageTextColor:Color(0.50, 0.59, 0.65, 1)];
-            //底部新消息提示
-            [chatViewManager enableShowNewMessageAlert:true];
-            [chatViewManager setOutgoingBubbleColor:Color(0.52, 0.75, 0.93, 1)];
-            [chatViewManager setOutgoingMessageTextColor:[UIColor darkTextColor]];
-            [chatViewManager pushMQChatViewControllerInViewController:more];
-            
-//            SupportCenterController *supportCenter = [SupportCenterController new];
-//            supportCenter.hidesBottomBarWhenPushed = YES;
-//            [more.navigationController pushViewController:supportCenter animated:YES];
+            SupportCenterController *supportCenter = [SupportCenterController new];
+            supportCenter.hidesBottomBarWhenPushed = YES;
+            [more.navigationController pushViewController:supportCenter animated:YES];
         }
 
     }else{
