@@ -90,6 +90,8 @@
 		D6060A231C76FF0E000DB373 /* qq空间@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609991C76FF0E000DB373 /* qq空间@3x.png */; };
 		D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */; };
 		D62E09BD1CCF521500C5805E /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E09BC1CCF521500C5805E /* MineModel.m */; };
+		D62E09C11CCF68DA00C5805E /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E09BF1CCF68DA00C5805E /* MessageTableViewCell.m */; };
+		D62E09C21CCF68DA00C5805E /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E09C01CCF68DA00C5805E /* MessageTableViewCell.xib */; };
 		D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356221CAFDF3A000A321C /* BaseWebViewController.m */; };
 		D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356251CAFE036000A321C /* LoanRulesWebController.m */; };
 		D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */; };
@@ -467,6 +469,9 @@
 		D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavgationController.m; sourceTree = "<group>"; };
 		D62E09BB1CCF521500C5805E /* MineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
 		D62E09BC1CCF521500C5805E /* MineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
+		D62E09BE1CCF68DA00C5805E /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		D62E09BF1CCF68DA00C5805E /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		D62E09C01CCF68DA00C5805E /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		D63356211CAFDF3A000A321C /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseWebViewController.h; path = "../更多/Web页面/BaseWebViewController.h"; sourceTree = "<group>"; };
 		D63356221CAFDF3A000A321C /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseWebViewController.m; path = "../更多/Web页面/BaseWebViewController.m"; sourceTree = "<group>"; };
 		D63356241CAFE036000A321C /* LoanRulesWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanRulesWebController.h; sourceTree = "<group>"; };
@@ -989,6 +994,9 @@
 			children = (
 				D63356321CB000D3000A321C /* MessageCenterController.h */,
 				D63356331CB000D3000A321C /* MessageCenterController.m */,
+				D62E09BE1CCF68DA00C5805E /* MessageTableViewCell.h */,
+				D62E09BF1CCF68DA00C5805E /* MessageTableViewCell.m */,
+				D62E09C01CCF68DA00C5805E /* MessageTableViewCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2584,6 +2592,7 @@
 				D6060A191C76FF0E000DB373 /* go@2x.png in Resources */,
 				D6F01DEB1C7C6BFA00EBC84E /* minus@2x.png in Resources */,
 				D60609DA1C76FF0E000DB373 /* recommend@2x.png in Resources */,
+				D62E09C21CCF68DA00C5805E /* MessageTableViewCell.xib in Resources */,
 				D6060A011C76FF0E000DB373 /* folder@2x.png in Resources */,
 				D6060A101C76FF0E000DB373 /* creditlevel@2x.png in Resources */,
 				D633566C1CB04320000A321C /* SureViewController.xib in Resources */,
@@ -2862,6 +2871,7 @@
 				D6961AA61CCE99E30044F337 /* ChangePhoneModel.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,
 				D6A600991CC697920014C3C4 /* TransferDate.m in Sources */,
+				D62E09C11CCF68DA00C5805E /* MessageTableViewCell.m in Sources */,
 				D6DE72371CC500760037ED4D /* RefundItem.m in Sources */,
 				D6805E9B1CAD1A3300316925 /* STPickerView.m in Sources */,
 			);

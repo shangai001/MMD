@@ -14,6 +14,7 @@ target 'MMD' do
     pod 'SDAutoLayout'
     pod 'SSKeychain'
     pod 'Masonry'
+    pod 'UITableView+FDTemplateLayoutCell'
     
     pod 'ShareSDK3'
     pod 'MOBFoundation_IDFA'
