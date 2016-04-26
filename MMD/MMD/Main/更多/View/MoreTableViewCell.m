@@ -8,6 +8,7 @@
 
 #import "MoreTableViewCell.h"
 #import "AppInfo.h"
+#import <Masonry.h>
 
 @implementation MoreTableViewCell
 
@@ -21,13 +22,19 @@
     // Configure the view for the selected state
 }
 - (void)addVersionLabelAfterHideGoButton{
-    UIButton *button = self.goButton;
-    self.goButton.hidden = YES;
-    CGRect buttonFrame = button.frame;
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(buttonFrame.origin.x - 20, buttonFrame.origin.y, buttonFrame.size.width, buttonFrame.size.height)];
+    
+    self.accessoryType = UITableViewCellAccessoryNone;
+    UILabel *label = [[UILabel alloc] init];
+    label.backgroundColor = [UIColor whiteColor];
     label.text = [AppInfo app_Version];
     label.font = [UIFont systemFontOfSize:12];
     label.textAlignment = NSTextAlignmentLeft;
     [self.contentView addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(120);
+        make.height.mas_equalTo(30);
+        make.centerY.mas_equalTo(self.contentView.mas_centerY);
+        make.right.mas_equalTo(self.contentView.mas_right);
+    }];
 }
 @end

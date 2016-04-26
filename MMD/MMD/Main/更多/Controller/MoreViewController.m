@@ -87,9 +87,9 @@ static NSString * const cellId = @"moreCellId";
     NSArray *section = self.dataArray[indexPath.section];
     MoreCellUIItem *item = section[indexPath.row];
     [moreCell putMoreUIValue:item];
+    moreCell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.section == 2 && indexPath.row == 2) {
         [moreCell addVersionLabelAfterHideGoButton];
-        moreCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return moreCell;
 }

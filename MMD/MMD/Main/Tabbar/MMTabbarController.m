@@ -11,6 +11,7 @@
 #import "MMTabbar.h"
 #import "ColorHeader.h"
 #import "MMDLoggin.h"
+#import "MineModel.h"
 
 
 @interface MMTabbarController ()
@@ -59,6 +60,24 @@
 }
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
+    NSInteger index = [tabBar.items indexOfObject:item];
+    if (index == 3) {
+        [self queryAllNotifications:item];
+    }
+}
+- (void)queryAllNotifications:(UITabBarItem *)mineItem{
+    
+    [MineModel queryAllNotifications:nil success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            NSInteger count = [resultDic[@"data"] integerValue];
+            if (count != 0) {
+                mineItem.badgeValue = [NSString stringWithFormat:@"%@",resultDic[@"data"]];
+            }
+        }
+        mineItem.badgeValue = @"0";
+    } failure:^(NSError *error) {
+        
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

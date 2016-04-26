@@ -89,6 +89,7 @@
 		D6060A221C76FF0E000DB373 /* qq空间@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609981C76FF0E000DB373 /* qq空间@2x.png */; };
 		D6060A231C76FF0E000DB373 /* qq空间@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D60609991C76FF0E000DB373 /* qq空间@3x.png */; };
 		D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */; };
+		D62E09BD1CCF521500C5805E /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E09BC1CCF521500C5805E /* MineModel.m */; };
 		D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356221CAFDF3A000A321C /* BaseWebViewController.m */; };
 		D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63356251CAFE036000A321C /* LoanRulesWebController.m */; };
 		D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633562B1CAFE1FE000A321C /* MMDInfoWebController.m */; };
@@ -464,6 +465,8 @@
 		D60609991C76FF0E000DB373 /* qq空间@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq空间@3x.png"; sourceTree = "<group>"; };
 		D6060A2A1C770F5E000DB373 /* BaseNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavgationController.h; sourceTree = "<group>"; };
 		D6060A2B1C770F5E000DB373 /* BaseNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavgationController.m; sourceTree = "<group>"; };
+		D62E09BB1CCF521500C5805E /* MineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
+		D62E09BC1CCF521500C5805E /* MineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
 		D63356211CAFDF3A000A321C /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseWebViewController.h; path = "../更多/Web页面/BaseWebViewController.h"; sourceTree = "<group>"; };
 		D63356221CAFDF3A000A321C /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseWebViewController.m; path = "../更多/Web页面/BaseWebViewController.m"; sourceTree = "<group>"; };
 		D63356241CAFE036000A321C /* LoanRulesWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanRulesWebController.h; sourceTree = "<group>"; };
@@ -1179,6 +1182,8 @@
 				D647FB0A1CAE7E2D00CBF19E /* MoreCellUIItem.m */,
 				D63356951CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.h */,
 				D63356961CB18669000A321C /* MoreTableViewCell+InitMoreCellUI.m */,
+				D62E09BB1CCF521500C5805E /* MineModel.h */,
+				D62E09BC1CCF521500C5805E /* MineModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2707,6 +2712,7 @@
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D633566B1CB04320000A321C /* SureViewController.m in Sources */,
 				D6C39D5B1CCE258600B5C1B6 /* EditeAttachmentViewController.m in Sources */,
+				D62E09BD1CCF521500C5805E /* MineModel.m in Sources */,
 				D65F2CAF1CBBC1EE000817AE /* IDInfoController.m in Sources */,
 				D63356891CB179BA000A321C /* MineHeaderTableViewCell.m in Sources */,
 				D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */,
