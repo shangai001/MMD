@@ -23,6 +23,10 @@
 #define ChatContentFont [UIFont systemFontOfSize:14]//内容字体
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "ACMacros.h"
+
+
 @class UUMessage;
 
 @interface UUMessageFrame : NSObject

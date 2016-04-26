@@ -9,6 +9,10 @@
 #import "UUInputFunctionView.h"
 #import "Mp3Recorder.h"
 #import "UUProgressHUD.h"
+#import "ACMacros.h"
+
+
+
 @interface UUInputFunctionView ()<UITextViewDelegate,Mp3RecorderDelegate>
 {
     BOOL isbeginVoiceRecord;

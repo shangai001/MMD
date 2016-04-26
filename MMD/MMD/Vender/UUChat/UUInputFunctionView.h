@@ -6,7 +6,9 @@
 //  Copyright (c) 2014年 uyiuyao. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 
 @class UUInputFunctionView;
 

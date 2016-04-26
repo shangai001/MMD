@@ -8,6 +8,7 @@
 
 #import "UUAVAudioPlayer.h"
 #import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
 
 
 @interface UUAVAudioPlayer ()<AVAudioPlayerDelegate>
