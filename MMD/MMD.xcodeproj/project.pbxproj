@@ -3129,7 +3129,6 @@
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
 					"$(PROJECT_DIR)/MMD/Vender",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK",
-					"$(PROJECT_DIR)/MMD/Main/更多/客服中心/UUChat/VoiceLib",
 					"$(PROJECT_DIR)/MMD/Vender/UUChat/VoiceLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mimidai.MMD;
@@ -3155,7 +3154,6 @@
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
 					"$(PROJECT_DIR)/MMD/Vender",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK",
-					"$(PROJECT_DIR)/MMD/Main/更多/客服中心/UUChat/VoiceLib",
 					"$(PROJECT_DIR)/MMD/Vender/UUChat/VoiceLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mimidai.MMD;
