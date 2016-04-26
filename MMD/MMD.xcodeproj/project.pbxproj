@@ -180,6 +180,7 @@
 		D64B99A51CCF194100192368 /* iPhoneStart.png in Resources */ = {isa = PBXBuildFile; fileRef = D64B99A21CCF194100192368 /* iPhoneStart.png */; };
 		D64B99A61CCF194100192368 /* iPhoneStart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D64B99A31CCF194100192368 /* iPhoneStart@2x.png */; };
 		D64B99A71CCF194100192368 /* iPhoneStart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D64B99A41CCF194100192368 /* iPhoneStart@3x.png */; };
+		D64B99B91CCF430F00192368 /* libZXSDK-Universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D64B99A81CCF430F00192368 /* libZXSDK-Universal.a */; };
 		D64B9C891CBFF38600B6B5A5 /* ShouldRefundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C881CBFF38600B6B5A5 /* ShouldRefundView.m */; };
 		D64B9C8B1CBFF39700B6B5A5 /* ShouldRefundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B9C8A1CBFF39700B6B5A5 /* ShouldRefundView.xib */; };
 		D64B9C951CBFFBE200B6B5A5 /* RefundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B9C931CBFFBE200B6B5A5 /* RefundTableViewCell.m */; };
@@ -621,6 +622,17 @@
 		D64B99A21CCF194100192368 /* iPhoneStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneStart.png; sourceTree = "<group>"; };
 		D64B99A31CCF194100192368 /* iPhoneStart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneStart@2x.png"; sourceTree = "<group>"; };
 		D64B99A41CCF194100192368 /* iPhoneStart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneStart@3x.png"; sourceTree = "<group>"; };
+		D64B99A81CCF430F00192368 /* libZXSDK-Universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libZXSDK-Universal.a"; sourceTree = "<group>"; };
+		D64B99AC1CCF430F00192368 /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
+		D64B99AD1CCF430F00192368 /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
+		D64B99AE1CCF430F00192368 /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
+		D64B99AF1CCF430F00192368 /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
+		D64B99B01CCF430F00192368 /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
+		D64B99B41CCF430F00192368 /* ZXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXBaseModel.h; sourceTree = "<group>"; };
+		D64B99B51CCF430F00192368 /* ZXIDcardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXIDcardModel.h; sourceTree = "<group>"; };
+		D64B99B61CCF430F00192368 /* ZXMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberDetail.h; sourceTree = "<group>"; };
+		D64B99B71CCF430F00192368 /* ZXMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMemberModel.h; sourceTree = "<group>"; };
+		D64B99B81CCF430F00192368 /* ZXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXSDK.h; sourceTree = "<group>"; };
 		D64B9C871CBFF38600B6B5A5 /* ShouldRefundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouldRefundView.h; sourceTree = "<group>"; };
 		D64B9C881CBFF38600B6B5A5 /* ShouldRefundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouldRefundView.m; sourceTree = "<group>"; };
 		D64B9C8A1CBFF39700B6B5A5 /* ShouldRefundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShouldRefundView.xib; sourceTree = "<group>"; };
@@ -920,6 +932,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64B99B91CCF430F00192368 /* libZXSDK-Universal.a in Frameworks */,
 				7C1C29D08DC8E5848D086672 /* libPods-MMD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1501,6 +1514,62 @@
 			name = Modle;
 			sourceTree = "<group>";
 		};
+		D64B99A91CCF430F00192368 /* Release-iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				D64B99AA1CCF430F00192368 /* include */,
+			);
+			path = "Release-iphoneos";
+			sourceTree = "<group>";
+		};
+		D64B99AA1CCF430F00192368 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D64B99AB1CCF430F00192368 /* ZXSDK */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D64B99AB1CCF430F00192368 /* ZXSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D64B99AC1CCF430F00192368 /* ZXBaseModel.h */,
+				D64B99AD1CCF430F00192368 /* ZXIDcardModel.h */,
+				D64B99AE1CCF430F00192368 /* ZXMemberDetail.h */,
+				D64B99AF1CCF430F00192368 /* ZXMemberModel.h */,
+				D64B99B01CCF430F00192368 /* ZXSDK.h */,
+			);
+			path = ZXSDK;
+			sourceTree = "<group>";
+		};
+		D64B99B11CCF430F00192368 /* Release-iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				D64B99B21CCF430F00192368 /* include */,
+			);
+			path = "Release-iphonesimulator";
+			sourceTree = "<group>";
+		};
+		D64B99B21CCF430F00192368 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D64B99B31CCF430F00192368 /* ZXSDK */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D64B99B31CCF430F00192368 /* ZXSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D64B99B41CCF430F00192368 /* ZXBaseModel.h */,
+				D64B99B51CCF430F00192368 /* ZXIDcardModel.h */,
+				D64B99B61CCF430F00192368 /* ZXMemberDetail.h */,
+				D64B99B71CCF430F00192368 /* ZXMemberModel.h */,
+				D64B99B81CCF430F00192368 /* ZXSDK.h */,
+			);
+			path = ZXSDK;
+			sourceTree = "<group>";
+		};
 		D64B9C791CBFEF9F00B6B5A5 /* 还款 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2025,6 +2094,9 @@
 		D6DE723B1CC6351C0037ED4D /* ZXSDK */ = {
 			isa = PBXGroup;
 			children = (
+				D64B99A81CCF430F00192368 /* libZXSDK-Universal.a */,
+				D64B99A91CCF430F00192368 /* Release-iphoneos */,
+				D64B99B11CCF430F00192368 /* Release-iphonesimulator */,
 				D6DE724D1CC6351C0037ED4D /* ZXSDK.bundle */,
 			);
 			path = ZXSDK;
