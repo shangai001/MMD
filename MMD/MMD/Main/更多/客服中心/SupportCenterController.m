@@ -8,15 +8,31 @@
 
 #import "SupportCenterController.h"
 #import "ConstantTitle.h"
+#import "ColorHeader.h"
 
 
 
 @interface SupportCenterController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *chatTableView;
+@property (weak, nonatomic) IBOutlet UIToolbar *inputToolBar;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *chatTableToBottom;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *toolBarBottom;
+
+
 @end
 
 @implementation SupportCenterController
 
+//- (UITableView *)chatTableView{
+//    if (!_chatTableView) {
+//        CGRect viewFrame = self.view.frame;
+//        _chatTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, viewFrame.size.width, viewFrame.size.height - 44) style:UITableViewStylePlain];
+//        _chatTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        _chatTableView.backgroundColor = BACKGROUNDCOLOR;
+//    }
+//    return _chatTableView;
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

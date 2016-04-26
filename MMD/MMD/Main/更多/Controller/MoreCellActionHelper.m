@@ -16,7 +16,7 @@
 #import "HandleUserStatus.h"
 #import "MMDLoggin.h"
 #import "LogginHandler.h"
-
+#import "UIViewController+LoadFromNib.h"
 
 
 @implementation MoreCellActionHelper
@@ -67,7 +67,7 @@
     if ([MMDLoggin isLoggin]) {
         //检查用户状态
         if ([HandleUserStatus handleUserStatusAt:more]) {
-            MessageCenterController *messageCenter = [MessageCenterController new];
+            MessageCenterController *messageCenter = [MessageCenterController loadFromNib];
             messageCenter.hidesBottomBarWhenPushed = YES;
             [more.navigationController pushViewController:messageCenter animated:YES];
         }

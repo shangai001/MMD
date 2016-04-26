@@ -263,14 +263,18 @@
 		D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */; };
 		D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */; };
 		D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */; };
-		D68F029C1CD01E3500772644 /* UUAVAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F028D1CD01E3500772644 /* UUAVAudioPlayer.m */; };
-		D68F029D1CD01E3500772644 /* UUImageAvatarBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F028F1CD01E3500772644 /* UUImageAvatarBrowser.m */; };
-		D68F029E1CD01E3500772644 /* UUInputFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02911CD01E3500772644 /* UUInputFunctionView.m */; };
-		D68F029F1CD01E3500772644 /* UUMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02931CD01E3500772644 /* UUMessage.m */; };
-		D68F02A01CD01E3500772644 /* UUMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02951CD01E3500772644 /* UUMessageCell.m */; };
-		D68F02A11CD01E3500772644 /* UUMessageContentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02971CD01E3500772644 /* UUMessageContentButton.m */; };
-		D68F02A21CD01E3500772644 /* UUMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02991CD01E3500772644 /* UUMessageFrame.m */; };
-		D68F02A31CD01E3500772644 /* UUProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F029B1CD01E3500772644 /* UUProgressHUD.m */; };
+		D68F02A51CD0217300772644 /* SupportCenterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68F02A41CD0217300772644 /* SupportCenterController.xib */; };
+		D68F02CA1CD0249B00772644 /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02B41CD0249A00772644 /* NSDate+Utils.m */; };
+		D68F02CB1CD0249B00772644 /* UUAVAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02B61CD0249A00772644 /* UUAVAudioPlayer.m */; };
+		D68F02CC1CD0249B00772644 /* UUImageAvatarBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02B81CD0249A00772644 /* UUImageAvatarBrowser.m */; };
+		D68F02CD1CD0249B00772644 /* UUInputFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02BA1CD0249A00772644 /* UUInputFunctionView.m */; };
+		D68F02CE1CD0249B00772644 /* UUMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02BC1CD0249A00772644 /* UUMessage.m */; };
+		D68F02CF1CD0249B00772644 /* UUMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02BE1CD0249A00772644 /* UUMessageCell.m */; };
+		D68F02D01CD0249B00772644 /* UUMessageContentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02C01CD0249A00772644 /* UUMessageContentButton.m */; };
+		D68F02D11CD0249B00772644 /* UUMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02C21CD0249A00772644 /* UUMessageFrame.m */; };
+		D68F02D21CD0249B00772644 /* UUProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02C41CD0249A00772644 /* UUProgressHUD.m */; };
+		D68F02D31CD0249B00772644 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D68F02C71CD0249A00772644 /* libmp3lame.a */; };
+		D68F02D41CD0249B00772644 /* Mp3Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02C91CD0249B00772644 /* Mp3Recorder.m */; };
 		D6961AA61CCE99E30044F337 /* ChangePhoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6961AA51CCE99E30044F337 /* ChangePhoneModel.m */; };
 		D6961AA91CCE9F7B0044F337 /* LoanHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6961AA81CCE9F7B0044F337 /* LoanHistoryTableViewController.m */; };
 		D6961AAD1CCEA0050044F337 /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6961AAB1CCEA0050044F337 /* HistoryTableViewCell.m */; };
@@ -778,22 +782,30 @@
 		D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoanVerifySectionTitle.txt; sourceTree = "<group>"; };
 		D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanInfoItem.h; path = ../Controller/LoanInfoItem.h; sourceTree = "<group>"; };
 		D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanInfoItem.m; path = ../Controller/LoanInfoItem.m; sourceTree = "<group>"; };
-		D68F028C1CD01E3500772644 /* UUAVAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUAVAudioPlayer.h; sourceTree = "<group>"; };
-		D68F028D1CD01E3500772644 /* UUAVAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUAVAudioPlayer.m; sourceTree = "<group>"; };
-		D68F028E1CD01E3500772644 /* UUImageAvatarBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUImageAvatarBrowser.h; sourceTree = "<group>"; };
-		D68F028F1CD01E3500772644 /* UUImageAvatarBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUImageAvatarBrowser.m; sourceTree = "<group>"; };
-		D68F02901CD01E3500772644 /* UUInputFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUInputFunctionView.h; sourceTree = "<group>"; };
-		D68F02911CD01E3500772644 /* UUInputFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUInputFunctionView.m; sourceTree = "<group>"; };
-		D68F02921CD01E3500772644 /* UUMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessage.h; sourceTree = "<group>"; };
-		D68F02931CD01E3500772644 /* UUMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessage.m; sourceTree = "<group>"; };
-		D68F02941CD01E3500772644 /* UUMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageCell.h; sourceTree = "<group>"; };
-		D68F02951CD01E3500772644 /* UUMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageCell.m; sourceTree = "<group>"; };
-		D68F02961CD01E3500772644 /* UUMessageContentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageContentButton.h; sourceTree = "<group>"; };
-		D68F02971CD01E3500772644 /* UUMessageContentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageContentButton.m; sourceTree = "<group>"; };
-		D68F02981CD01E3500772644 /* UUMessageFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageFrame.h; sourceTree = "<group>"; };
-		D68F02991CD01E3500772644 /* UUMessageFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageFrame.m; sourceTree = "<group>"; };
-		D68F029A1CD01E3500772644 /* UUProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUProgressHUD.h; sourceTree = "<group>"; };
-		D68F029B1CD01E3500772644 /* UUProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUProgressHUD.m; sourceTree = "<group>"; };
+		D68F02A41CD0217300772644 /* SupportCenterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SupportCenterController.xib; sourceTree = "<group>"; };
+		D68F02B21CD0249A00772644 /* ACMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMacros.h; sourceTree = "<group>"; };
+		D68F02B31CD0249A00772644 /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
+		D68F02B41CD0249A00772644 /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
+		D68F02B51CD0249A00772644 /* UUAVAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUAVAudioPlayer.h; sourceTree = "<group>"; };
+		D68F02B61CD0249A00772644 /* UUAVAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUAVAudioPlayer.m; sourceTree = "<group>"; };
+		D68F02B71CD0249A00772644 /* UUImageAvatarBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUImageAvatarBrowser.h; sourceTree = "<group>"; };
+		D68F02B81CD0249A00772644 /* UUImageAvatarBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUImageAvatarBrowser.m; sourceTree = "<group>"; };
+		D68F02B91CD0249A00772644 /* UUInputFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUInputFunctionView.h; sourceTree = "<group>"; };
+		D68F02BA1CD0249A00772644 /* UUInputFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUInputFunctionView.m; sourceTree = "<group>"; };
+		D68F02BB1CD0249A00772644 /* UUMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessage.h; sourceTree = "<group>"; };
+		D68F02BC1CD0249A00772644 /* UUMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessage.m; sourceTree = "<group>"; };
+		D68F02BD1CD0249A00772644 /* UUMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageCell.h; sourceTree = "<group>"; };
+		D68F02BE1CD0249A00772644 /* UUMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageCell.m; sourceTree = "<group>"; };
+		D68F02BF1CD0249A00772644 /* UUMessageContentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageContentButton.h; sourceTree = "<group>"; };
+		D68F02C01CD0249A00772644 /* UUMessageContentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageContentButton.m; sourceTree = "<group>"; };
+		D68F02C11CD0249A00772644 /* UUMessageFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageFrame.h; sourceTree = "<group>"; };
+		D68F02C21CD0249A00772644 /* UUMessageFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageFrame.m; sourceTree = "<group>"; };
+		D68F02C31CD0249A00772644 /* UUProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUProgressHUD.h; sourceTree = "<group>"; };
+		D68F02C41CD0249A00772644 /* UUProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUProgressHUD.m; sourceTree = "<group>"; };
+		D68F02C61CD0249A00772644 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		D68F02C71CD0249A00772644 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		D68F02C81CD0249A00772644 /* Mp3Recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3Recorder.h; sourceTree = "<group>"; };
+		D68F02C91CD0249B00772644 /* Mp3Recorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3Recorder.m; sourceTree = "<group>"; };
 		D6961AA41CCE99E30044F337 /* ChangePhoneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneModel.h; sourceTree = "<group>"; };
 		D6961AA51CCE99E30044F337 /* ChangePhoneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneModel.m; sourceTree = "<group>"; };
 		D6961AA71CCE9F7B0044F337 /* LoanHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHistoryTableViewController.h; sourceTree = "<group>"; };
@@ -970,6 +982,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68F02D31CD0249B00772644 /* libmp3lame.a in Frameworks */,
 				D64B99B91CCF430F00192368 /* libZXSDK-Universal.a in Frameworks */,
 				7C1C29D08DC8E5848D086672 /* libPods-MMD.a in Frameworks */,
 			);
@@ -1263,9 +1276,9 @@
 		D647FB171CAE7E2D00CBF19E /* 客服中心 */ = {
 			isa = PBXGroup;
 			children = (
-				D68F028B1CD01E3500772644 /* UUChat */,
 				D63356351CB00481000A321C /* SupportCenterController.h */,
 				D63356361CB00481000A321C /* SupportCenterController.m */,
+				D68F02A41CD0217300772644 /* SupportCenterController.xib */,
 			);
 			path = "客服中心";
 			sourceTree = "<group>";
@@ -1966,27 +1979,42 @@
 			path = "联系人";
 			sourceTree = "<group>";
 		};
-		D68F028B1CD01E3500772644 /* UUChat */ = {
+		D68F02B11CD0249A00772644 /* UUChat */ = {
 			isa = PBXGroup;
 			children = (
-				D68F028C1CD01E3500772644 /* UUAVAudioPlayer.h */,
-				D68F028D1CD01E3500772644 /* UUAVAudioPlayer.m */,
-				D68F028E1CD01E3500772644 /* UUImageAvatarBrowser.h */,
-				D68F028F1CD01E3500772644 /* UUImageAvatarBrowser.m */,
-				D68F02901CD01E3500772644 /* UUInputFunctionView.h */,
-				D68F02911CD01E3500772644 /* UUInputFunctionView.m */,
-				D68F02921CD01E3500772644 /* UUMessage.h */,
-				D68F02931CD01E3500772644 /* UUMessage.m */,
-				D68F02941CD01E3500772644 /* UUMessageCell.h */,
-				D68F02951CD01E3500772644 /* UUMessageCell.m */,
-				D68F02961CD01E3500772644 /* UUMessageContentButton.h */,
-				D68F02971CD01E3500772644 /* UUMessageContentButton.m */,
-				D68F02981CD01E3500772644 /* UUMessageFrame.h */,
-				D68F02991CD01E3500772644 /* UUMessageFrame.m */,
-				D68F029A1CD01E3500772644 /* UUProgressHUD.h */,
-				D68F029B1CD01E3500772644 /* UUProgressHUD.m */,
+				D68F02B21CD0249A00772644 /* ACMacros.h */,
+				D68F02B31CD0249A00772644 /* NSDate+Utils.h */,
+				D68F02B41CD0249A00772644 /* NSDate+Utils.m */,
+				D68F02B51CD0249A00772644 /* UUAVAudioPlayer.h */,
+				D68F02B61CD0249A00772644 /* UUAVAudioPlayer.m */,
+				D68F02B71CD0249A00772644 /* UUImageAvatarBrowser.h */,
+				D68F02B81CD0249A00772644 /* UUImageAvatarBrowser.m */,
+				D68F02B91CD0249A00772644 /* UUInputFunctionView.h */,
+				D68F02BA1CD0249A00772644 /* UUInputFunctionView.m */,
+				D68F02BB1CD0249A00772644 /* UUMessage.h */,
+				D68F02BC1CD0249A00772644 /* UUMessage.m */,
+				D68F02BD1CD0249A00772644 /* UUMessageCell.h */,
+				D68F02BE1CD0249A00772644 /* UUMessageCell.m */,
+				D68F02BF1CD0249A00772644 /* UUMessageContentButton.h */,
+				D68F02C01CD0249A00772644 /* UUMessageContentButton.m */,
+				D68F02C11CD0249A00772644 /* UUMessageFrame.h */,
+				D68F02C21CD0249A00772644 /* UUMessageFrame.m */,
+				D68F02C31CD0249A00772644 /* UUProgressHUD.h */,
+				D68F02C41CD0249A00772644 /* UUProgressHUD.m */,
+				D68F02C51CD0249A00772644 /* VoiceLib */,
 			);
 			path = UUChat;
+			sourceTree = "<group>";
+		};
+		D68F02C51CD0249A00772644 /* VoiceLib */ = {
+			isa = PBXGroup;
+			children = (
+				D68F02C61CD0249A00772644 /* lame.h */,
+				D68F02C71CD0249A00772644 /* libmp3lame.a */,
+				D68F02C81CD0249A00772644 /* Mp3Recorder.h */,
+				D68F02C91CD0249B00772644 /* Mp3Recorder.m */,
+			);
+			path = VoiceLib;
 			sourceTree = "<group>";
 		};
 		D6A6009D1CC6AB9D0014C3C4 /* 在线支付 */ = {
@@ -2368,6 +2396,7 @@
 		D6E105101C7321A000049C3F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				D68F02B11CD0249A00772644 /* UUChat */,
 				D6DE723B1CC6351C0037ED4D /* ZXSDK */,
 				D65B6BD11CBEB656000F6F92 /* NSNullCategory */,
 				D6805EA31CAD1CF500316925 /* 联系人 */,
@@ -2554,6 +2583,7 @@
 				D65E7F571CBB596C003AA72C /* records@3x.png in Resources */,
 				D60609BA1C76FF0E000DB373 /* 工作信息@3x.png in Resources */,
 				D6060A111C76FF0E000DB373 /* creditlevel@3x.png in Resources */,
+				D68F02A51CD0217300772644 /* SupportCenterController.xib in Resources */,
 				D648E8AB1CC8E09800B85DD8 /* PostRepayController.xib in Resources */,
 				D633565B1CB035BF000A321C /* FormTableViewCell.xib in Resources */,
 				D65E7F561CBB596C003AA72C /* records@2x.png in Resources */,
@@ -2767,8 +2797,8 @@
 				D6A600F31CC7B12D0014C3C4 /* AliPayViewController.m in Sources */,
 				D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */,
 				D647FB711CAE800100CBF19E /* MMLogViewController.m in Sources */,
+				D68F02CB1CD0249B00772644 /* UUAVAudioPlayer.m in Sources */,
 				D65B6BD41CBECB20000F6F92 /* PrepareDataWorker.m in Sources */,
-				D68F029E1CD01E3500772644 /* UUInputFunctionView.m in Sources */,
 				D6805EA81CAD1CF500316925 /* pinyin.c in Sources */,
 				D647FB8D1CAE814300CBF19E /* HttpRequest.m in Sources */,
 				D67D6DC61CB54CFA003D4D2D /* VerifyModel.m in Sources */,
@@ -2779,17 +2809,17 @@
 				D6A600E51CC7A80B0014C3C4 /* RBViewController.m in Sources */,
 				D6E105021C73217C00049C3F /* MMTabbarController.m in Sources */,
 				D633566B1CB04320000A321C /* SureViewController.m in Sources */,
+				D68F02D11CD0249B00772644 /* UUMessageFrame.m in Sources */,
 				D6C39D5B1CCE258600B5C1B6 /* EditeAttachmentViewController.m in Sources */,
 				D62E09BD1CCF521500C5805E /* MineModel.m in Sources */,
 				D65F2CAF1CBBC1EE000817AE /* IDInfoController.m in Sources */,
 				D63356891CB179BA000A321C /* MineHeaderTableViewCell.m in Sources */,
 				D63356231CAFDF3A000A321C /* BaseWebViewController.m in Sources */,
+				D68F02CE1CD0249B00772644 /* UUMessage.m in Sources */,
 				D63356611CB03ACE000A321C /* FormItem.m in Sources */,
 				D64A4E1F1CB761CB00FB519B /* ConstantTitle.m in Sources */,
 				D6512FAB1CCE84BE008279B9 /* ChangeCodeController.m in Sources */,
-				D68F02A31CD01E3500772644 /* UUProgressHUD.m in Sources */,
 				D6A600EB1CC7ACCD0014C3C4 /* BankViewController.m in Sources */,
-				D68F029F1CD01E3500772644 /* UUMessage.m in Sources */,
 				D647FBC61CAE920100CBF19E /* LXMKeyboardManager.m in Sources */,
 				D64A4E351CB79D1D00FB519B /* BottomTableViewCell+PutBottomValue.m in Sources */,
 				D64C99261CB8DB9300C45936 /* QueryViewController.m in Sources */,
@@ -2811,9 +2841,11 @@
 				D64B9C951CBFFBE200B6B5A5 /* RefundTableViewCell.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
+				D68F02D01CD0249B00772644 /* UUMessageContentButton.m in Sources */,
 				D6DE721F1CC37E920037ED4D /* RRFirstViewController.m in Sources */,
 				D6C39D0F1CCC9C6900B5C1B6 /* IDPhotoController.m in Sources */,
 				D64A4E3D1CB7D99000FB519B /* SubmitLoanInfoModel.m in Sources */,
+				D68F02CD1CD0249B00772644 /* UUInputFunctionView.m in Sources */,
 				D6A600A31CC6ABEA0014C3C4 /* OnlineRepayController.m in Sources */,
 				D6C39D571CCE1D1700B5C1B6 /* QueryAttachmentModel.m in Sources */,
 				D66B4F9B1CB42F570038F312 /* GraphicVerification.m in Sources */,
@@ -2837,7 +2869,6 @@
 				D6512FB81CCE91DD008279B9 /* ChnagePhoneItem.m in Sources */,
 				D6A600EF1CC7ADA70014C3C4 /* BankAliPayViewController.m in Sources */,
 				D67D6DC01CB53216003D4D2D /* IDCardModel.m in Sources */,
-				D68F02A01CD01E3500772644 /* UUMessageCell.m in Sources */,
 				D65F2DB51CBBCCB0000817AE /* QueryIdModel.m in Sources */,
 				D6C39D4C1CCE182900B5C1B6 /* AttachmentTableViewController.m in Sources */,
 				D63356341CB000D3000A321C /* MessageCenterController.m in Sources */,
@@ -2845,7 +2876,6 @@
 				D6E104C61C7320FD00049C3F /* main.m in Sources */,
 				D66B4FA51CB502970038F312 /* GetCodesAndAreas.m in Sources */,
 				D6C39D131CCCA1E000B5C1B6 /* IDPhotoItem.m in Sources */,
-				D68F02A21CD01E3500772644 /* UUMessageFrame.m in Sources */,
 				D6C39D441CCE04AF00B5C1B6 /* EditeContactModel.m in Sources */,
 				D63356911CB184E8000A321C /* MoreTableViewCell+MineUIInfo.m in Sources */,
 				D6DE72221CC385170037ED4D /* RRSecondViewController.m in Sources */,
@@ -2859,6 +2889,7 @@
 				D6805E981CAD1A3300316925 /* STConst.m in Sources */,
 				D63356721CB10CBF000A321C /* CalculateRefund.m in Sources */,
 				D6C39D2E1CCD6FA900B5C1B6 /* JobModel.m in Sources */,
+				D68F02CF1CD0249B00772644 /* UUMessageCell.m in Sources */,
 				D647FBAD1CAE87FD00CBF19E /* SecondStaepController.m in Sources */,
 				D63356781CB12062000A321C /* BaseModel.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,
@@ -2881,6 +2912,7 @@
 				D648E8B11CC923C200B85DD8 /* UITextField+DatePicker.m in Sources */,
 				D647FBB41CAE87FD00CBF19E /* HorizontalDashLineView.m in Sources */,
 				D647FB1A1CAE7E2D00CBF19E /* MoreCellUIItem.m in Sources */,
+				D68F02D41CD0249B00772644 /* Mp3Recorder.m in Sources */,
 				D633567B1CB121EE000A321C /* WarnLoginModel.m in Sources */,
 				D63356531CB033B2000A321C /* LoanVerifyController.m in Sources */,
 				D647FBB31CAE87FD00CBF19E /* VerifyItem.m in Sources */,
@@ -2888,7 +2920,6 @@
 				D6C39D401CCDFC7B00B5C1B6 /* EditeContactViewController.m in Sources */,
 				D648E8AE1CC8E60500B85DD8 /* RepayItem.m in Sources */,
 				D6C39D501CCE18D300B5C1B6 /* AttachmentTableViewCell.m in Sources */,
-				D68F029C1CD01E3500772644 /* UUAVAudioPlayer.m in Sources */,
 				D647FB8E1CAE814300CBF19E /* UploadParam.m in Sources */,
 				D65F2CAB1CBBB370000817AE /* DistributeStauff.m in Sources */,
 				D647FBC51CAE920100CBF19E /* DashLineHelper.m in Sources */,
@@ -2897,6 +2928,7 @@
 				D6512FB41CCE8D92008279B9 /* ChangePhoneController.m in Sources */,
 				D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */,
 				D6FE74391CB97529002F3941 /* QueryItem.m in Sources */,
+				D68F02D21CD0249B00772644 /* UUProgressHUD.m in Sources */,
 				D6C39D1F1CCCBBB800B5C1B6 /* EditeBankController.m in Sources */,
 				D6BC3DC81CBABE6F00200BC7 /* LoggoutTableViewCell.m in Sources */,
 				D6C39D5F1CCE34A900B5C1B6 /* UIViewController+LoadFromNib.m in Sources */,
@@ -2907,7 +2939,6 @@
 				D6BC3DD51CBAE7C900200BC7 /* ConstantNotiName.m in Sources */,
 				D6805E9A1CAD1A3300316925 /* UIView+ST.m in Sources */,
 				D647FBC71CAE920100CBF19E /* LoginModel.m in Sources */,
-				D68F02A11CD01E3500772644 /* UUMessageContentButton.m in Sources */,
 				D63356641CB03B2C000A321C /* FormTableViewCell+PutFormValue.m in Sources */,
 				D6DE72281CC4B62E0037ED4D /* RefundModel.m in Sources */,
 				D647FBB51CAE87FD00CBF19E /* StageView.m in Sources */,
@@ -2928,17 +2959,18 @@
 				D6060A2C1C770F5E000DB373 /* BaseNavgationController.m in Sources */,
 				D6C39D171CCCA8D800B5C1B6 /* BankInfoController.m in Sources */,
 				D64A4E2E1CB7998A00FB519B /* BottomTableViewCell.m in Sources */,
-				D68F029D1CD01E3500772644 /* UUImageAvatarBrowser.m in Sources */,
 				D6961AA91CCE9F7B0044F337 /* LoanHistoryTableViewController.m in Sources */,
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
 				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
 				D640367A1CBE704B002009C3 /* NSNull+EZSafe.m in Sources */,
+				D68F02CC1CD0249B00772644 /* UUImageAvatarBrowser.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
 				D6512FAF1CCE8A9A008279B9 /* ChangePasswordModel.m in Sources */,
 				D6465CB81CB991C600E4E570 /* NoInfoView.m in Sources */,
 				D6961AA61CCE99E30044F337 /* ChangePhoneModel.m in Sources */,
 				D647FBB81CAE87FD00CBF19E /* VerticalDashLineView.m in Sources */,
 				D6A600991CC697920014C3C4 /* TransferDate.m in Sources */,
+				D68F02CA1CD0249B00772644 /* NSDate+Utils.m in Sources */,
 				D62E09C61CCF6A8500C5805E /* MessageTableViewCell.m in Sources */,
 				D6DE72371CC500760037ED4D /* RefundItem.m in Sources */,
 				D6805E9B1CAD1A3300316925 /* STPickerView.m in Sources */,
@@ -3097,6 +3129,8 @@
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
 					"$(PROJECT_DIR)/MMD/Vender",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK",
+					"$(PROJECT_DIR)/MMD/Main/更多/客服中心/UUChat/VoiceLib",
+					"$(PROJECT_DIR)/MMD/Vender/UUChat/VoiceLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mimidai.MMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3121,6 +3155,8 @@
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK/Release-iphonesimulator",
 					"$(PROJECT_DIR)/MMD/Vender",
 					"$(PROJECT_DIR)/MMD/Vender/ZXSDK",
+					"$(PROJECT_DIR)/MMD/Main/更多/客服中心/UUChat/VoiceLib",
+					"$(PROJECT_DIR)/MMD/Vender/UUChat/VoiceLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mimidai.MMD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
