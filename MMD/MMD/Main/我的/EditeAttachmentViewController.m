@@ -129,7 +129,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo{
     
     self.attImage = image;
-    self.type = @"0";
+    self.type = @"拍照";
     self.attImageView.image = image;
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
@@ -138,7 +138,11 @@
     UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     if (originalImage) {
         self.attImage = originalImage;
-        self.type = @"0";
+        if (picker.sourceType == UIImagePickerControllerSourceTypeSavedPhotosAlbum) {
+            self.type = @"相册";
+        }else if (picker.sourceType == UIImagePickerControllerSourceTypeCamera){
+            self.type = @"拍照";
+        }
         self.attImageView.image = originalImage;
     }
     [picker dismissViewControllerAnimated:YES completion:nil];
