@@ -81,18 +81,37 @@ static NSString * const messageFile = @"Message";
     [super viewDidDisappear:animated];
     [[YYTextKeyboardManager defaultManager] removeObserver:self];
 }
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = SUPPORTCENTER_TITLE;
     self.view.backgroundColor = BACKGROUNDCOLOR;
+    
     [self configureTableView];
     //请求聊天记录
     [self queryMessageList];
     [self addTimerForQueryData];
+    [self registerNotification];
 }
 - (void)addTimerForQueryData{
     
+}
+- (void)registerNotification{
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+}
+- (void)keyboardWillShow:(NSNotification *)sender{
+    
+    NSDictionary* info = [sender userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    NSLog(@"height:%f",kbSize.height);
+    if (kbSize.height > 0) {
+        self.toolBarBottom.constant = kbSize.height;
+        [self tableViewScrollToBottomAfterDelay:1];
+    }
 }
 - (void)saveMessagesList:(NSArray *)messages{
     
@@ -219,11 +238,13 @@ static NSString * const messageFile = @"Message";
 }
 #pragma mark YYTextKeyboardObserver
 - (void)keyboardChangedWithTransition:(YYTextKeyboardTransition)transition{
-    
+    /*
     YYTextKeyboardManager *manager = [YYTextKeyboardManager defaultManager];
     CGRect toFrame =  [manager convertRect:transition.toFrame toView:self.view];
     BOOL fromVisible = transition.fromVisible;
     BOOL toVisible = transition.toVisible;
+    UIView *keyboardView = manager.keyboardView;
+    NSLog(@"view 高度 %@",keyboardView);
     if (!fromVisible && toVisible) {
         self.toolBarBottom.constant = toFrame.size.height;
         [self tableViewScrollToBottomAfterDelay:1];
@@ -231,6 +252,7 @@ static NSString * const messageFile = @"Message";
     if (fromVisible && !toVisible) {
         self.toolBarBottom.constant = 0;
     }
+     */
 }
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -238,6 +260,7 @@ static NSString * const messageFile = @"Message";
     return self.chatModel.dataSource.count;
 }
 #pragma mark UITextFieldDelegate
+
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     if ([textField isEqual:self.inputField]) {
         NSString *message = textField.text;
