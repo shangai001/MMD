@@ -249,7 +249,9 @@
         NSDictionary *resultDic = (NSDictionary *)responseObject;
         NSInteger code = [resultDic[@"code"] integerValue];
         if (code  == 9) {
-            [SDUserDefault setBool:NO forKey:Loggin];
+            @synchronized (@"user") {
+                [SDUserDefault setBool:NO forKey:Loggin];
+            }
             [LogginHandler shouldUpdateUserInfo:nil success:^(NSDictionary *resultDic) {
                 if ([resultDic[@"code"] integerValue] == 0) {
                     NSLog(@"重新登录成功");

@@ -174,7 +174,9 @@ static NSString * const loggoutCellId = @"loggoutCellId";
     [LogoutModel logoutUserSuccess:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
             self.logStatus = NO;
-            [SDUserDefault setBool:NO forKey:Loggin];
+            @synchronized (self) {
+                [SDUserDefault setBool:NO forKey:Loggin];
+            }
             [self.mainTableView reloadData];
         }
         [[NSNotificationCenter defaultCenter] postNotificationName:UserDidLogout object:nil];

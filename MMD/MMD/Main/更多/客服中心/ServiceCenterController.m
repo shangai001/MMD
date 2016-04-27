@@ -16,8 +16,6 @@
 #import "UUMessageFrame.h"
 #import "QueryMessageModel.h"
 #import "TrasferMessageDic.h"
-#import <YYCache.h>
-#import <YYDiskCache.h>
 #import "AppUserInfoHelper.h"
 #import "TransferDate.h"
 #import <SVProgressHUD.h>
@@ -41,7 +39,6 @@ static NSString * const messageFile = @"Message";
 
 @property (strong, nonatomic)ChatModel *chatModel;
 
-//@property (strong, nonatomic)YYCache *fileCache;
 @property (assign, nonatomic)NSInteger pageNum;
 @property (strong, nonatomic)NSTimer *timer;
 
@@ -57,15 +54,6 @@ static NSString * const messageFile = @"Message";
     }
     return _mesDic;
 }
-
-//- (YYCache *)fileCache{
-//    if (!_fileCache) {
-//        NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-//        NSString *path = [cacheFolder stringByAppendingPathComponent:messageFile];
-//        _fileCache = [YYCache cacheWithPath:path];
-//    }
-//    return _fileCache;
-//}
 - (ChatModel *)chatModel{
     if (!_chatModel) {
         _chatModel = [ChatModel new];
@@ -158,46 +146,6 @@ static NSString * const messageFile = @"Message";
             [self tableViewScrollToBottomAfterDelay:1];
         }
     }
-    /*
-    BOOL exist = [self.fileCache containsObjectForKey:self.userId];
-    //如果存在
-    if (exist) {
-        NSMutableDictionary *messageDic = (NSMutableDictionary *)[self.fileCache objectForKey:self.userId];
-        NSArray *data = messageDic[@"messages"];
-        NSMutableArray *muData = [NSMutableArray arrayWithArray:data];
-        for (NSInteger k = 0; k < messages.count; k ++) {
-            NSDictionary *oneMessageDic = messages[k];
-            [muData addObject:oneMessageDic];
-        }
-        [self.fileCache removeAllObjects];
-        [messageDic setObject:muData forKey:@"messages"];
-        [self.fileCache setObject:messageDic forKey:self.userId];
-    }else{
-        //不存在
-        NSMutableDictionary *baseDic = [NSMutableDictionary dictionaryWithObject:self.userId forKey:@"userId"];
-        [baseDic setObject:messages forKey:@"messages"];
-        [self.fileCache setObject:baseDic forKey:self.userId];
-    }
-//    WeakSelf;
-//    self.fileCache.diskCache.customFileNameBlock = ^(NSString *key){
-//        return weakSelf.userId;
-//    };
-    
-    //增加数据
-    NSDictionary *currentDic = (NSDictionary *)[self.fileCache objectForKey:self.userId];
-    NSArray *data = currentDic[@"messages"];
-    
-    [self.chatModel.dataSource removeAllObjects];
-    for (NSInteger k = 0; k < data.count; k ++) {
-        NSDictionary *oneMessageDic = data[k];
-        [self.chatModel addSpecifiedItem:oneMessageDic];
-    }
-    [self.chatTableView reloadData];
-    if (self.toolBarBottom.constant == 0) {
-        [self tableViewScrollToBottomAfterDelay:1];
-    }
-     */
-    
 }
 - (void)queryMessageList{
     

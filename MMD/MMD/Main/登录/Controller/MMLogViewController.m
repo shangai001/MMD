@@ -230,6 +230,10 @@ CGFloat const INPUTROW_HEIGHT = 30;
     [self uploadDeviceinfo:resultDictionary];
     //发送已经登录通知
     [[NSNotificationCenter defaultCenter] postNotificationName:UserDidLogin object:nil];
+    
+    @synchronized (self) {
+        [SDUserDefault setBool:YES forKey:Loggin];
+    }
 }
 - (void)uploadDeviceinfo:(NSDictionary *)resultDictionary{
     
