@@ -58,6 +58,10 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
     }
     return  _contentView;
 }
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self endTimer:nil];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -106,6 +110,9 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
 }
 //获取验证码/确定 点击事件
 - (void)addButtonAction{
+    
+    self.contentView.sureButton.layer.cornerRadius = 10.0f;
+    
     [self.contentView.getSecurityCodeButton addTarget:self action:@selector(getSecurityCode:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView.sureButton addTarget:self action:@selector(doneUser:) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -153,6 +160,7 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
 - (void)getSecurityCode:(id)sender {
     BOOL isPhoneNum = [checkoutPhoneNumber checkTelNumber:self.contentView.phoneNumberField.text];
     if (!isPhoneNum) return;
+    [self.view endEditing:YES];
     //注册
     if (self.type == kRegisterType) {
         //先去请求message token
@@ -176,6 +184,8 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
                 NSString *token = resultDic[@"data"];
                 NSDictionary *info = @{@"phone":phoneNumber,@"token":token};
                 [self getForgetPasswordMessageCode:info];
+            }else{
+                [SVProgressHUD showInfoWithStatus:resultDic[@"msg"]];
             }
         } failure:^(NSError *error) {
             [SVProgressHUD showErrorWithStatus:@"获取短信验证码失败"];
@@ -183,7 +193,7 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
         }];
 
     }
-    [self startTimer:sender];
+//    [self startTimer:sender];
 }
 //注册时获取手机验证码
 - (void)getMessageCode:(NSDictionary *)info{
@@ -192,6 +202,8 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
         NSLog(@"resultDic");
         if ([resultDic[@"code"] integerValue] != 0) {
             [SVProgressHUD showInfoWithStatus:resultDic[@"msg"]];
+        }else{
+            [self startTimer:nil];
         }
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:error.localizedDescription];
@@ -201,6 +213,11 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
 - (void)getForgetPasswordMessageCode:(NSDictionary *)info{
     
     [LoginModel forgetPassword:info completionHandler:^(NSDictionary *resultDictionary) {
+        if ([resultDictionary[@"code"] integerValue] == 0) {
+            [self startTimer:nil];
+        }else{
+            [SVProgressHUD showInfoWithStatus:resultDictionary[@"msg"]];
+        }
         
     } FailureHandler:^(NSError *error) {
         
@@ -260,9 +277,9 @@ CGFloat const SHORTESTPASSWORD_LENGTH  = 6;
 }
 //处理重设密码结果
 - (void)handleResetResult:(NSDictionary *)resultDictionary{
-    NSLog(@"%@",resultDictionary[@"msg"]);
     if ([resultDictionary[@"code"] integerValue] == 0) {
         NSLog(@"密码重置成功");
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 -(void)ez_TextFiledEditChanged:(NSNotification *)obj{
