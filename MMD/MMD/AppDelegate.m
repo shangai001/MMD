@@ -16,8 +16,6 @@
 @implementation AppDelegate
 
 
-
-
 #pragma mark AppDelegateMethod
 - (void)applicationDidFinishLaunching:(UIApplication *)application{
     
