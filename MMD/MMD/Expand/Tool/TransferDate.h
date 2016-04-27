@@ -18,5 +18,6 @@
  *  @return 
  */
 + (NSString *)getYYYYMMDD_DateWith:(NSTimeInterval)interval;
++ (NSString *)getYYYYMMDDHHMMSS_DateWith:(NSTimeInterval)interval;
 
 @end

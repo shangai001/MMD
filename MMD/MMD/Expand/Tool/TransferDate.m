@@ -22,5 +22,17 @@
     }
     return nil;
 }
-
++ (NSString *)getYYYYMMDDHHMMSS_DateWith:(NSTimeInterval)interval{
+    
+    if (interval != 0) {
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:interval];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        NSTimeZone *tZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+        [formatter setTimeZone:tZone];
+        [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSString *timeString =[formatter stringFromDate:date];
+        return timeString;
+    }
+    return nil;
+}
 @end

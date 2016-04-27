@@ -18,14 +18,18 @@
 #import "TrasferMessageDic.h"
 #import <YYCache.h>
 #import <YYDiskCache.h>
-
 #import "AppUserInfoHelper.h"
+#import "TransferDate.h"
+#import <SVProgressHUD.h>
 
-static NSInteger const size = 10;
+
+
+
+//static NSInteger const size = 10;
 static NSString *testCellId = @"messageCell";
 static NSString * const messageFile = @"Message";
 
-@interface ServiceCenterController ()<UITableViewDataSource,UITableViewDelegate,YYTextKeyboardObserver>
+@interface ServiceCenterController ()<UITableViewDataSource,UITableViewDelegate,YYTextKeyboardObserver,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
@@ -38,16 +42,23 @@ static NSString * const messageFile = @"Message";
 
 @property (strong, nonatomic)YYCache *fileCache;
 @property (assign, nonatomic)NSInteger pageNum;
+@property (strong, nonatomic)NSTimer *timer;
 
-
+@property (strong, nonatomic)NSMutableDictionary *mesDic;
+@property (copy, nonatomic)NSString *userId;
 @end
 
 @implementation ServiceCenterController
 
+- (NSMutableDictionary *)mesDic{
+    if (!_mesDic) {
+        _mesDic = [NSMutableDictionary dictionary];
+    }
+    return _mesDic;
+}
+
 - (YYCache *)fileCache{
-    
     if (!_fileCache) {
-        
         NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
         NSString *path = [cacheFolder stringByAppendingPathComponent:messageFile];
         _fileCache = [YYCache cacheWithPath:path];
@@ -62,7 +73,6 @@ static NSString * const messageFile = @"Message";
     }
     return _chatModel;
 }
-
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [[YYTextKeyboardManager defaultManager] addObserver:self];
@@ -79,20 +89,20 @@ static NSString * const messageFile = @"Message";
     [self configureTableView];
     //请求聊天记录
     [self queryMessageList];
+    [self addTimerForQueryData];
 }
-
+- (void)addTimerForQueryData{
+    
+}
 - (void)saveMessagesList:(NSArray *)messages{
     
     if (!messages) {
         messages = [NSArray array];
     }
-    NSNumber *userIdNum = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
-    NSString *userId  = [userIdNum stringValue];
-    
-    BOOL exist = [self.fileCache containsObjectForKey:userId];
+    BOOL exist = [self.fileCache containsObjectForKey:self.userId];
     //如果存在
     if (exist) {
-        NSMutableDictionary *messageDic = (NSMutableDictionary *)[self.fileCache objectForKey:userId];
+        NSMutableDictionary *messageDic = (NSMutableDictionary *)[self.fileCache objectForKey:self.userId];
         NSArray *data = messageDic[@"messages"];
         NSMutableArray *muData = [NSMutableArray arrayWithArray:data];
         for (NSInteger k = 0; k < messages.count; k ++) {
@@ -100,25 +110,30 @@ static NSString * const messageFile = @"Message";
             [muData addObject:oneMessageDic];
         }
         [messageDic setObject:muData forKey:@"messages"];
-        [self.fileCache setObject:messageDic forKey:userId];
+        [self.fileCache setObject:messageDic forKey:self.userId];
     }else{
         //不存在
-        NSMutableDictionary *baseDic = [NSMutableDictionary dictionaryWithObject:userId forKey:@"userId"];
+        NSMutableDictionary *baseDic = [NSMutableDictionary dictionaryWithObject:self.userId forKey:@"userId"];
         [baseDic setObject:messages forKey:@"messages"];
-        [self.fileCache setObject:baseDic forKey:userId];
+        [self.fileCache setObject:baseDic forKey:self.userId];
     }
+    WeakSelf;
     self.fileCache.diskCache.customFileNameBlock = ^(NSString *key){
-        return userId;
+        return weakSelf.userId;
     };
     //增加数据
+    NSDictionary *currentDic = (NSDictionary *)[self.fileCache objectForKey:self.userId];
+    NSArray *data = currentDic[@"messages"];
     
-    NSArray *data = [self.fileCache objectForKey:userId][@"messages"];
+    [self.chatModel.dataSource removeAllObjects];
     for (NSInteger k = 0; k < data.count; k ++) {
         NSDictionary *oneMessageDic = data[k];
         [self.chatModel addSpecifiedItem:oneMessageDic];
     }
     [self.chatTableView reloadData];
-    [self tableViewScrollToBottom];
+    if (self.toolBarBottom.constant == 0) {
+        [self tableViewScrollToBottomAfterDelay:1];
+    }
 }
 - (void)queryMessageList{
     
@@ -133,17 +148,18 @@ static NSString * const messageFile = @"Message";
 }
 - (void)configureTableView{
     
-    [self.chatTableView registerClass:[EZMessageCell class] forCellReuseIdentifier:testCellId];
+    NSNumber *userIdNum = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
+    self.userId = [NSString stringWithFormat:@"%@",userIdNum];
     
-    self.chatTableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
-        [self requestPreviousData:YES];
-    }];
-    self.chatTableView.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
-        [self requestPreviousData:NO];
-    }];
-    self.chatTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    [self.chatTableView registerClass:[EZMessageCell class] forCellReuseIdentifier:testCellId];
+//    self.chatTableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+//        [self requestPreviousData:YES];
+//    }];
+//    self.chatTableView.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
+//        [self requestPreviousData:NO];
+//    }];
+//    self.chatTableView.separatorStyle = UITableViewCellSelectionStyleNone;
 //    self.chatTableView.mj_header.backgroundColor = self.chatTableView.mj_footer.backgroundColor = [UIColor clearColor];
-    NSLog(@"刷新头 = %@  尾部 = %@",self.chatTableView.mj_header,self.chatTableView.mj_footer);
 }
 - (void)requestPreviousData:(BOOL)isPrevious{
     
@@ -160,22 +176,46 @@ static NSString * const messageFile = @"Message";
 {
     if (self.chatModel.dataSource.count==0)
         return;
-    
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.chatModel.dataSource.count-1 inSection:0];
-    [self.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    [self.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
 }
 - (void)dealTheFunctionData:(NSDictionary *)dic
 {
-    [self.chatModel addSpecifiedItem:dic];
-    [self.chatTableView reloadData];
-    [self tableViewScrollToBottom];
+    NSArray *oneMessageArry = @[dic];
+    [self saveMessagesList:oneMessageArry];
+}
+//延迟几秒滑到底部
+- (void)tableViewScrollToBottomAfterDelay:(NSTimeInterval)seconds{
+    
+    WeakSelf;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(seconds * NSEC_PER_SEC)),
+                   dispatch_get_main_queue(), ^{
+                       [weakSelf tableViewScrollToBottom];
+        
+    });
 }
 - (IBAction)inputAction:(id)sender {
     [self.inputField becomeFirstResponder];
 }
 - (IBAction)sendMessageAction:(id)sender {
+    
     [self.inputField resignFirstResponder];
-    [self dealTheFunctionData:nil];
+    //构造 dic,用户发送的 dic
+    [SVProgressHUD show];
+    NSTimeInterval interval = [[NSDate date] timeIntervalSince1970];
+    NSString *currentTime = [TransferDate getYYYYMMDDHHMMSS_DateWith:interval];
+    [self.mesDic setObject:currentTime forKey:@"createTimeStr"];
+    [self.mesDic setObject:self.userId forKey:@"userId"];
+    [self.mesDic setObject:@(0) forKey:@"type"];
+    
+    [QueryMessageModel sendMessage:self.mesDic success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            [self dealTheFunctionData:self.mesDic];
+        }
+        [SVProgressHUD dismiss];
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"请检查网络"];
+    }];
 }
 #pragma mark YYTextKeyboardObserver
 - (void)keyboardChangedWithTransition:(YYTextKeyboardTransition)transition{
@@ -186,7 +226,7 @@ static NSString * const messageFile = @"Message";
     BOOL toVisible = transition.toVisible;
     if (!fromVisible && toVisible) {
         self.toolBarBottom.constant = toFrame.size.height;
-        [self tableViewScrollToBottom];
+        [self tableViewScrollToBottomAfterDelay:1];
     }
     if (fromVisible && !toVisible) {
         self.toolBarBottom.constant = 0;
@@ -197,7 +237,14 @@ static NSString * const messageFile = @"Message";
     
     return self.chatModel.dataSource.count;
 }
-
+#pragma mark UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if ([textField isEqual:self.inputField]) {
+        NSString *message = textField.text;
+        [self.mesDic setObject:message forKey:@"content"];
+        textField.text = nil;
+    }
+}
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
@@ -205,7 +252,6 @@ static NSString * const messageFile = @"Message";
     
     EZMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:testCellId forIndexPath:indexPath];
     [cell setMessageFrame:self.chatModel.dataSource[indexPath.row]];
-//    cell.messageFrame = self.chatModel.dataSource[indexPath.row];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

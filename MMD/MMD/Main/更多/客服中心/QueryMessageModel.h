@@ -15,4 +15,8 @@
                success:(successHandler)successHandler
                failure:(failureHandler)failureHandler;
 
+//发送消息
++ (void)sendMessage:(NSDictionary *)info
+            success:(successHandler)successHandler
+            failure:(failureHandler)failureHandler;
 @end

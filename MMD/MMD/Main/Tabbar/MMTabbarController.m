@@ -74,8 +74,6 @@
                 mineItem.badgeValue = [NSString stringWithFormat:@"%@",resultDic[@"data"]];
             }
         }
-        //测试
-        mineItem.badgeValue = @"0";
     } failure:^(NSError *error) {
         
     }];

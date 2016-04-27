@@ -67,7 +67,7 @@
     if ([MMDLoggin isLoggin]) {
         //检查用户状态
         if ([HandleUserStatus handleUserStatusAt:more]) {
-            MessageCenterController *messageCenter = [MessageCenterController loadFromNib];
+            MessageCenterController *messageCenter = [MessageCenterController new];
             messageCenter.hidesBottomBarWhenPushed = YES;
             [more.navigationController pushViewController:messageCenter animated:YES];
         }
