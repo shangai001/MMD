@@ -10,4 +10,6 @@
 
 @interface EZMessageCell : UUMessageCell
 
+
+
 @end

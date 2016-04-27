@@ -7,15 +7,23 @@
 //
 
 #import "ServiceCenterController.h"
+#import "ColorHeader.h"
 #import "ConstantTitle.h"
 #import <YYTextKeyboardManager.h>
 #import "ChatModel.h"
 #import <MJRefresh.h>
 #import "EZMessageCell.h"
 #import "UUMessageFrame.h"
+#import "QueryMessageModel.h"
+#import "TrasferMessageDic.h"
+#import <YYCache.h>
+#import <YYDiskCache.h>
 
+#import "AppUserInfoHelper.h"
 
-static NSString *reuseCellId = @"messageCell";
+static NSInteger const size = 10;
+static NSString *testCellId = @"messageCell";
+static NSString * const messageFile = @"Message";
 
 @interface ServiceCenterController ()<UITableViewDataSource,UITableViewDelegate,YYTextKeyboardObserver>
 
@@ -28,9 +36,32 @@ static NSString *reuseCellId = @"messageCell";
 
 @property (strong, nonatomic)ChatModel *chatModel;
 
+@property (strong, nonatomic)YYCache *fileCache;
+@property (assign, nonatomic)NSInteger pageNum;
+
+
 @end
 
 @implementation ServiceCenterController
+
+- (YYCache *)fileCache{
+    
+    if (!_fileCache) {
+        
+        NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+        NSString *path = [cacheFolder stringByAppendingPathComponent:messageFile];
+        _fileCache = [YYCache cacheWithPath:path];
+    }
+    return _fileCache;
+}
+- (ChatModel *)chatModel{
+    if (!_chatModel) {
+        _chatModel = [ChatModel new];
+        _chatModel.isGroupChat = NO;
+        _chatModel.dataSource = [NSMutableArray array];
+    }
+    return _chatModel;
+}
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -44,22 +75,79 @@ static NSString *reuseCellId = @"messageCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = SUPPORTCENTER_TITLE;
+    self.view.backgroundColor = BACKGROUNDCOLOR;
     [self configureTableView];
+    //请求聊天记录
+    [self queryMessageList];
+}
+
+- (void)saveMessagesList:(NSArray *)messages{
+    
+    if (!messages) {
+        messages = [NSArray array];
+    }
+    NSNumber *userIdNum = [AppUserInfoHelper tokenAndUserIdDictionary][@"userId"];
+    NSString *userId  = [userIdNum stringValue];
+    
+    BOOL exist = [self.fileCache containsObjectForKey:userId];
+    //如果存在
+    if (exist) {
+        NSMutableDictionary *messageDic = (NSMutableDictionary *)[self.fileCache objectForKey:userId];
+        NSArray *data = messageDic[@"messages"];
+        NSMutableArray *muData = [NSMutableArray arrayWithArray:data];
+        for (NSInteger k = 0; k < messages.count; k ++) {
+            NSDictionary *oneMessageDic = messages[k];
+            [muData addObject:oneMessageDic];
+        }
+        [messageDic setObject:muData forKey:@"messages"];
+        [self.fileCache setObject:messageDic forKey:userId];
+    }else{
+        //不存在
+        NSMutableDictionary *baseDic = [NSMutableDictionary dictionaryWithObject:userId forKey:@"userId"];
+        [baseDic setObject:messages forKey:@"messages"];
+        [self.fileCache setObject:baseDic forKey:userId];
+    }
+    self.fileCache.diskCache.customFileNameBlock = ^(NSString *key){
+        return userId;
+    };
+    //增加数据
+    
+    NSArray *data = [self.fileCache objectForKey:userId][@"messages"];
+    for (NSInteger k = 0; k < data.count; k ++) {
+        NSDictionary *oneMessageDic = data[k];
+        [self.chatModel addSpecifiedItem:oneMessageDic];
+    }
+    [self.chatTableView reloadData];
+    [self tableViewScrollToBottom];
+}
+- (void)queryMessageList{
+    
+    [QueryMessageModel getMessageList:nil success:^(NSDictionary *resultDic) {
+        if ([resultDic[@"code"] integerValue] == 0) {
+            NSArray *data = resultDic[@"data"];
+            [self saveMessagesList:data];
+        }
+    } failure:^(NSError *error) {
+        [self saveMessagesList:nil];
+    }];
 }
 - (void)configureTableView{
     
-    [self.chatTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuseCellId];
+    [self.chatTableView registerClass:[EZMessageCell class] forCellReuseIdentifier:testCellId];
+    
     self.chatTableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
         [self requestPreviousData:YES];
     }];
     self.chatTableView.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
         [self requestPreviousData:NO];
-    }];;
+    }];
+    self.chatTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+//    self.chatTableView.mj_header.backgroundColor = self.chatTableView.mj_footer.backgroundColor = [UIColor clearColor];
+    NSLog(@"刷新头 = %@  尾部 = %@",self.chatTableView.mj_header,self.chatTableView.mj_footer);
 }
 - (void)requestPreviousData:(BOOL)isPrevious{
     
     //请求消息
-    
     if ([self.chatTableView.mj_header isRefreshing]) {
         [self.chatTableView.mj_header endRefreshing];
     }
@@ -115,11 +203,9 @@ static NSString *reuseCellId = @"messageCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    EZMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseCellId forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[EZMessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseCellId];
-    }
+    EZMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:testCellId forIndexPath:indexPath];
     [cell setMessageFrame:self.chatModel.dataSource[indexPath.row]];
+//    cell.messageFrame = self.chatModel.dataSource[indexPath.row];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -13,23 +13,43 @@
 
 @implementation ChatModel
 
-// 添加聊天item（一个cell内容）
+
+- (NSMutableArray *)dataSource{
+    if (!_dataSource) {
+        _dataSource  = [NSMutableArray array];
+    }
+    return _dataSource;
+}
+
 static NSString *previousTime = nil;
+// 添加聊天item（一个cell内容）
 - (void)addSpecifiedItem:(NSDictionary *)dic{
     
     UUMessageFrame *messageFrame = [[UUMessageFrame alloc]init];
     UUMessage *message = [[UUMessage alloc] init];
-    NSMutableDictionary *dataDic = [NSMutableDictionary dictionaryWithDictionary:dic];
+    message.type = UUMessageTypeText;
     
-    NSString *URLStr = @"http://img0.bdstatic.com/img/image/shouye/xinshouye/mingxing16.jpg";
-    [dataDic setObject:@(UUMessageFromMe) forKey:@"from"];
-    [dataDic setObject:[[NSDate date] description] forKey:@"strTime"];
-    [dataDic setObject:@"Hello,Sister" forKey:@"strName"];
-    [dataDic setObject:URLStr forKey:@"strIcon"];
+    NSMutableDictionary *dataDic = [NSMutableDictionary dictionary];
+    
+    if ([dic[@"type"] integerValue] == 0) {
+        
+        [dataDic setObject:@(UUMessageFromMe) forKey:@"from"];
+        
+    }else if ([dic[@"type"] integerValue] == 1){
+        
+        [dataDic setObject:@"米米贷客服" forKey:@"strName"];
+        [dataDic setObject:@(UUMessageFromOther) forKey:@"from"];
+    }
+    NSString *content = dic[@"content"];
+    [dataDic setObject:content forKey:@"strContent"];
+    
+    NSString *messageTime = dic[@"createTimeStr"];
+    [dataDic setObject:messageTime forKey:@"strTime"];
     
     [message setWithDict:dataDic];
     [message minuteOffSetStart:previousTime end:dataDic[@"strTime"]];
-    messageFrame.showTime = message.showDateLabel;
+    
+    messageFrame.showTime = message.showDateLabel = YES;
     [messageFrame setMessage:message];
     
     if (message.showDateLabel) {
@@ -38,4 +58,5 @@ static NSString *previousTime = nil;
     [self.dataSource addObject:messageFrame];
 
 }
+
 @end

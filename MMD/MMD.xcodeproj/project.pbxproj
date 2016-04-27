@@ -360,6 +360,12 @@
 		D6E622471CD03A0900C77A32 /* QueryMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E622461CD03A0900C77A32 /* QueryMessageModel.m */; };
 		D6E6224A1CD0432B00C77A32 /* ShareWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E622491CD0432B00C77A32 /* ShareWorker.m */; };
 		D6E6224D1CD0433A00C77A32 /* PushWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E6224C1CD0433A00C77A32 /* PushWorker.m */; };
+		D6E622501CD07CCE00C77A32 /* ThirdAppKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E6224F1CD07CCE00C77A32 /* ThirdAppKey.m */; };
+		D6E622531CD08C4600C77A32 /* TrasferMessageDic.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E622521CD08C4600C77A32 /* TrasferMessageDic.m */; };
+		D6E622551CD08F2500C77A32 /* chatto_bg_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E622541CD08F2500C77A32 /* chatto_bg_normal.png */; };
+		D6E622571CD08F3600C77A32 /* chatfrom_bg_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E622561CD08F3600C77A32 /* chatfrom_bg_normal.png */; };
+		D6E622A41CD0A4D600C77A32 /* head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E622A21CD0A4D600C77A32 /* head@2x.png */; };
+		D6E622A51CD0A4D600C77A32 /* head@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E622A31CD0A4D600C77A32 /* head@3x.png */; };
 		D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */; };
 		D6F01DE61C7C6BFA00EBC84E /* add_press@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDE1C7C6BFA00EBC84E /* add_press@3x.png */; };
 		D6F01DE71C7C6BFA00EBC84E /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDF1C7C6BFA00EBC84E /* add@2x.png */; };
@@ -963,6 +969,14 @@
 		D6E622491CD0432B00C77A32 /* ShareWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWorker.m; sourceTree = "<group>"; };
 		D6E6224B1CD0433A00C77A32 /* PushWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushWorker.h; sourceTree = "<group>"; };
 		D6E6224C1CD0433A00C77A32 /* PushWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushWorker.m; sourceTree = "<group>"; };
+		D6E6224E1CD07CCE00C77A32 /* ThirdAppKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdAppKey.h; sourceTree = "<group>"; };
+		D6E6224F1CD07CCE00C77A32 /* ThirdAppKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdAppKey.m; sourceTree = "<group>"; };
+		D6E622511CD08C4600C77A32 /* TrasferMessageDic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrasferMessageDic.h; sourceTree = "<group>"; };
+		D6E622521CD08C4600C77A32 /* TrasferMessageDic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrasferMessageDic.m; sourceTree = "<group>"; };
+		D6E622541CD08F2500C77A32 /* chatto_bg_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatto_bg_normal.png; sourceTree = "<group>"; };
+		D6E622561CD08F3600C77A32 /* chatfrom_bg_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatfrom_bg_normal.png; sourceTree = "<group>"; };
+		D6E622A21CD0A4D600C77A32 /* head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head@2x.png"; sourceTree = "<group>"; };
+		D6E622A31CD0A4D600C77A32 /* head@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head@3x.png"; sourceTree = "<group>"; };
 		D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_press@2x.png"; sourceTree = "<group>"; };
 		D6F01DDE1C7C6BFA00EBC84E /* add_press@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_press@3x.png"; sourceTree = "<group>"; };
 		D6F01DDF1C7C6BFA00EBC84E /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
@@ -1291,6 +1305,8 @@
 		D647FB171CAE7E2D00CBF19E /* 客服中心 */ = {
 			isa = PBXGroup;
 			children = (
+				D6E622A21CD0A4D600C77A32 /* head@2x.png */,
+				D6E622A31CD0A4D600C77A32 /* head@3x.png */,
 				D6E6223A1CD02A7000C77A32 /* ServiceCenterController.h */,
 				D6E6223B1CD02A7000C77A32 /* ServiceCenterController.m */,
 				D6E6223C1CD02A7000C77A32 /* ServiceCenterController.xib */,
@@ -1300,6 +1316,10 @@
 				D6E622431CD0380200C77A32 /* EZMessageCell.m */,
 				D6E622451CD03A0900C77A32 /* QueryMessageModel.h */,
 				D6E622461CD03A0900C77A32 /* QueryMessageModel.m */,
+				D6E622561CD08F3600C77A32 /* chatfrom_bg_normal.png */,
+				D6E622541CD08F2500C77A32 /* chatto_bg_normal.png */,
+				D6E622511CD08C4600C77A32 /* TrasferMessageDic.h */,
+				D6E622521CD08C4600C77A32 /* TrasferMessageDic.m */,
 			);
 			path = "客服中心";
 			sourceTree = "<group>";
@@ -1528,6 +1548,8 @@
 				D6A600971CC697920014C3C4 /* TransferDate.h */,
 				D6A600981CC697920014C3C4 /* TransferDate.m */,
 				D6E622481CD0432B00C77A32 /* ShareWorker.h */,
+				D6E6224E1CD07CCE00C77A32 /* ThirdAppKey.h */,
+				D6E6224F1CD07CCE00C77A32 /* ThirdAppKey.m */,
 				D6E622491CD0432B00C77A32 /* ShareWorker.m */,
 				D6E6224B1CD0433A00C77A32 /* PushWorker.h */,
 				D6E6224C1CD0433A00C77A32 /* PushWorker.m */,
@@ -2641,6 +2663,7 @@
 				D6B692181C8D7A5B00B3877D /* mmd_logo@2x.png in Resources */,
 				D60609E91C76FF0E000DB373 /* IDInfo@2x.png in Resources */,
 				D647FBB21CAE87FD00CBF19E /* VerifyViewController.xib in Resources */,
+				D6E622A51CD0A4D600C77A32 /* head@3x.png in Resources */,
 				D6E104D41C7320FD00049C3F /* Assets.xcassets in Resources */,
 				D6060A081C76FF0E000DB373 /* mine_off@3x.png in Resources */,
 				D6C39D181CCCA8D800B5C1B6 /* BankInfoController.xib in Resources */,
@@ -2655,6 +2678,7 @@
 				D647FB721CAE800100CBF19E /* MMLogViewController.xib in Resources */,
 				D65F2DAB1CBBCAE2000817AE /* Icon-Small.png in Resources */,
 				D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */,
+				D6E622A41CD0A4D600C77A32 /* head@2x.png in Resources */,
 				D6060A071C76FF0E000DB373 /* mine_off@2x.png in Resources */,
 				D65F2DA61CBBCAE2000817AE /* Icon-76@2x.png in Resources */,
 				D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */,
@@ -2681,9 +2705,11 @@
 				D6B6921D1C8D7A8500B3877D /* key@3x.png in Resources */,
 				D65F2DA31CBBCAE2000817AE /* Icon-72.png in Resources */,
 				D60609FF1C76FF0E000DB373 /* wechat@3x.png in Resources */,
+				D6E622571CD08F3600C77A32 /* chatfrom_bg_normal.png in Resources */,
 				D647FBAC1CAE87FD00CBF19E /* FirstStepController.xib in Resources */,
 				D6C39D411CCDFC7B00B5C1B6 /* EditeContactViewController.xib in Resources */,
 				D60609E01C76FF0E000DB373 /* no_visible@2x.png in Resources */,
+				D6E622551CD08F2500C77A32 /* chatto_bg_normal.png in Resources */,
 				D647FBB71CAE87FD00CBF19E /* VerifyTableViewCell.xib in Resources */,
 				D63356411CB016DC000A321C /* FailureView.xib in Resources */,
 				D60609C51C76FF0E000DB373 /* 还款须知@2x.png in Resources */,
@@ -2920,6 +2946,7 @@
 				D6E622441CD0380200C77A32 /* EZMessageCell.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,
 				D64C99431CB91C7200C45936 /* QueryHeaderView.m in Sources */,
+				D6E622531CD08C4600C77A32 /* TrasferMessageDic.m in Sources */,
 				D6E6223D1CD02A7000C77A32 /* ServiceCenterController.m in Sources */,
 				D6C39D2B1CCD06E300B5C1B6 /* JobItem.m in Sources */,
 				D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */,
@@ -2954,6 +2981,7 @@
 				D6C39D271CCCF24000B5C1B6 /* JobViewController.m in Sources */,
 				D65200171CB6F1560019C4CB /* FormatVerifyDataHelper.m in Sources */,
 				D6512FB41CCE8D92008279B9 /* ChangePhoneController.m in Sources */,
+				D6E622501CD07CCE00C77A32 /* ThirdAppKey.m in Sources */,
 				D633562C1CAFE1FE000A321C /* MMDInfoWebController.m in Sources */,
 				D6FE74391CB97529002F3941 /* QueryItem.m in Sources */,
 				D68F02D21CD0249B00772644 /* UUProgressHUD.m in Sources */,

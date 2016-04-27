@@ -15,7 +15,8 @@
     self.strIcon = dict[@"strIcon"];
     self.strName = dict[@"strName"];
     self.strId = dict[@"strId"];
-    self.strTime = [self changeTheDateString:dict[@"strTime"]];
+//    self.strTime = [self changeTheDateString:dict[@"strTime"]];
+    self.strTime = dict[@"strTime"];
     self.from = [dict[@"from"] intValue];
     
     switch ([dict[@"type"] integerValue]) {

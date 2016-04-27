@@ -10,4 +10,9 @@
 
 @interface QueryMessageModel : BaseModel
 
+//获取消息列表
++ (void)getMessageList:(NSDictionary *)info
+               success:(successHandler)successHandler
+               failure:(failureHandler)failureHandler;
+
 @end

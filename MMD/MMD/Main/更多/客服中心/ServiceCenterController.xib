@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceCenterController">
             <connections>
-                <outlet property="chatTableView" destination="dWj-R3-wyD" id="hZ0-65-BQu"/>
+                <outlet property="chatTableView" destination="dWj-R3-wyD" id="oTa-5W-7ZR"/>
                 <outlet property="inputField" destination="L8y-oL-hJe" id="z6W-QY-5PD"/>
                 <outlet property="inputTextItem" destination="jGe-hA-4tI" id="iXj-Sx-cg8"/>
                 <outlet property="toolBar" destination="hna-HZ-DtI" id="CtB-k9-ade"/>
@@ -20,14 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dWj-R3-wyD">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="0Us-R9-RWb"/>
-                        <outlet property="delegate" destination="-1" id="HfV-8V-fYD"/>
-                    </connections>
-                </tableView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hna-HZ-DtI">
                     <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                     <constraints>
@@ -53,14 +45,23 @@
                         </barButtonItem>
                     </items>
                 </toolbar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dWj-R3-wyD">
+                    <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0Us-R9-RWb"/>
+                        <outlet property="delegate" destination="-1" id="HfV-8V-fYD"/>
+                    </connections>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="dWj-R3-wyD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2QK-zp-RHR"/>
+                <constraint firstItem="dWj-R3-wyD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="2QK-zp-RHR"/>
                 <constraint firstItem="dWj-R3-wyD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2m1-4U-QlV"/>
+                <constraint firstItem="hna-HZ-DtI" firstAttribute="top" secondItem="dWj-R3-wyD" secondAttribute="bottom" id="IUF-pk-gDk"/>
                 <constraint firstItem="hna-HZ-DtI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RaX-Cz-B3U"/>
                 <constraint firstAttribute="bottom" secondItem="hna-HZ-DtI" secondAttribute="bottom" id="ahv-C9-GuT"/>
-                <constraint firstItem="hna-HZ-DtI" firstAttribute="top" secondItem="dWj-R3-wyD" secondAttribute="bottom" id="bSC-nK-eh3"/>
                 <constraint firstAttribute="trailing" secondItem="hna-HZ-DtI" secondAttribute="trailing" id="bab-fy-XOu"/>
                 <constraint firstAttribute="trailing" secondItem="dWj-R3-wyD" secondAttribute="trailing" id="hKt-wp-Rtb"/>
             </constraints>
