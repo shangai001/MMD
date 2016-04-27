@@ -8,7 +8,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceCenterController">
             <connections>
                 <outlet property="chatTableView" destination="dWj-R3-wyD" id="hZ0-65-BQu"/>
+                <outlet property="inputField" destination="L8y-oL-hJe" id="z6W-QY-5PD"/>
+                <outlet property="inputTextItem" destination="jGe-hA-4tI" id="iXj-Sx-cg8"/>
                 <outlet property="toolBar" destination="hna-HZ-DtI" id="CtB-k9-ade"/>
+                <outlet property="toolBarBottom" destination="ahv-C9-GuT" id="a4a-8j-RxN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,7 +34,23 @@
                         <constraint firstAttribute="height" constant="44" id="L1S-jl-irW"/>
                     </constraints>
                     <items>
-                        <barButtonItem title="Item" id="OuD-GF-6n6"/>
+                        <barButtonItem style="plain" id="jGe-hA-4tI">
+                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="L8y-oL-hJe">
+                                <rect key="frame" x="16" y="7" width="229" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <connections>
+                                <action selector="inputAction:" destination="-1" id="Sew-IR-rjM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="发送" width="62" style="plain" id="OuD-GF-6n6">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sendMessageAction:" destination="-1" id="Pj4-i8-3nM"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                 </toolbar>
             </subviews>
