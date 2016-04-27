@@ -358,6 +358,8 @@
 		D6E622411CD033F100C77A32 /* ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E622401CD033F100C77A32 /* ChatModel.m */; };
 		D6E622441CD0380200C77A32 /* EZMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E622431CD0380200C77A32 /* EZMessageCell.m */; };
 		D6E622471CD03A0900C77A32 /* QueryMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E622461CD03A0900C77A32 /* QueryMessageModel.m */; };
+		D6E6224A1CD0432B00C77A32 /* ShareWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E622491CD0432B00C77A32 /* ShareWorker.m */; };
+		D6E6224D1CD0433A00C77A32 /* PushWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E6224C1CD0433A00C77A32 /* PushWorker.m */; };
 		D6F01DE51C7C6BFA00EBC84E /* add_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */; };
 		D6F01DE61C7C6BFA00EBC84E /* add_press@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDE1C7C6BFA00EBC84E /* add_press@3x.png */; };
 		D6F01DE71C7C6BFA00EBC84E /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F01DDF1C7C6BFA00EBC84E /* add@2x.png */; };
@@ -957,6 +959,10 @@
 		D6E622431CD0380200C77A32 /* EZMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZMessageCell.m; sourceTree = "<group>"; };
 		D6E622451CD03A0900C77A32 /* QueryMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryMessageModel.h; sourceTree = "<group>"; };
 		D6E622461CD03A0900C77A32 /* QueryMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryMessageModel.m; sourceTree = "<group>"; };
+		D6E622481CD0432B00C77A32 /* ShareWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWorker.h; sourceTree = "<group>"; };
+		D6E622491CD0432B00C77A32 /* ShareWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWorker.m; sourceTree = "<group>"; };
+		D6E6224B1CD0433A00C77A32 /* PushWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushWorker.h; sourceTree = "<group>"; };
+		D6E6224C1CD0433A00C77A32 /* PushWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushWorker.m; sourceTree = "<group>"; };
 		D6F01DDD1C7C6BFA00EBC84E /* add_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_press@2x.png"; sourceTree = "<group>"; };
 		D6F01DDE1C7C6BFA00EBC84E /* add_press@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_press@3x.png"; sourceTree = "<group>"; };
 		D6F01DDF1C7C6BFA00EBC84E /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
@@ -1521,6 +1527,10 @@
 				D65B6BD31CBECB20000F6F92 /* PrepareDataWorker.m */,
 				D6A600971CC697920014C3C4 /* TransferDate.h */,
 				D6A600981CC697920014C3C4 /* TransferDate.m */,
+				D6E622481CD0432B00C77A32 /* ShareWorker.h */,
+				D6E622491CD0432B00C77A32 /* ShareWorker.m */,
+				D6E6224B1CD0433A00C77A32 /* PushWorker.h */,
+				D6E6224C1CD0433A00C77A32 /* PushWorker.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -2905,6 +2915,7 @@
 				D6C39D2E1CCD6FA900B5C1B6 /* JobModel.m in Sources */,
 				D68F02CF1CD0249B00772644 /* UUMessageCell.m in Sources */,
 				D647FBAD1CAE87FD00CBF19E /* SecondStaepController.m in Sources */,
+				D6E6224D1CD0433A00C77A32 /* PushWorker.m in Sources */,
 				D63356781CB12062000A321C /* BaseModel.m in Sources */,
 				D6E622441CD0380200C77A32 /* EZMessageCell.m in Sources */,
 				D633565A1CB035BF000A321C /* FormTableViewCell.m in Sources */,
@@ -2971,6 +2982,7 @@
 				D6DE71C71CC10B0E0037ED4D /* RRViewController.m in Sources */,
 				D6E622411CD033F100C77A32 /* ChatModel.m in Sources */,
 				D6ABF2481CB18E91000A7A01 /* MineCellActionHelper.m in Sources */,
+				D6E6224A1CD0432B00C77A32 /* ShareWorker.m in Sources */,
 				D64B9C891CBFF38600B6B5A5 /* ShouldRefundView.m in Sources */,
 				D647FB851CAE80BE00CBF19E /* RegisterItem.m in Sources */,
 				D63356261CAFE036000A321C /* LoanRulesWebController.m in Sources */,
