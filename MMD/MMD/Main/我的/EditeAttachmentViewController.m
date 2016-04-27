@@ -12,6 +12,7 @@
 #import <NSData+YYAdd.h>
 #import "QueryAttachmentModel.h"
 #import <SVProgressHUD.h>
+#import "UUImageAvatarBrowser.h"
 
 
 
@@ -118,8 +119,10 @@
         [alertVC addAction:takePhotoAction];
         [alertVC addAction:albumAction];
     }else{
+        //只有通过了审核才可以预览大图
         UIAlertAction *previewAction = [UIAlertAction actionWithTitle:@"预览大图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
+            [UUImageAvatarBrowser showImage:self.attImageView];
         }];
         [alertVC addAction:previewAction];
     }
