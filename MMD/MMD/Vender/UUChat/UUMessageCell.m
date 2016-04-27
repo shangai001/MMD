@@ -164,7 +164,11 @@
                                               withURL:[NSURL URLWithString:message.strIcon]
                                      placeholderImage:[UIImage imageNamed:@"head"]];
     }else{
-        [self.btnHeadImage setBackgroundImage:[UIImage imageNamed:@"head"] forState:UIControlStateNormal];
+        if (message.type == UUMessageFromOther) {
+            [self.btnHeadImage setBackgroundImage:[UIImage imageNamed:@"head"] forState:UIControlStateNormal];
+        }else if(message.type == UUMessageFromMe){
+            [self.btnHeadImage setBackgroundImage:[UIImage imageNamed:@"head_mine"] forState:UIControlStateNormal];
+        }
     }
     // 3、设置下标
     self.labelNum.text = message.strName;

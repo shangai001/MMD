@@ -21,6 +21,7 @@
 #import "AppUserInfoHelper.h"
 #import "TransferDate.h"
 #import <SVProgressHUD.h>
+#import "MessageSaver.h"
 
 
 
@@ -40,7 +41,7 @@ static NSString * const messageFile = @"Message";
 
 @property (strong, nonatomic)ChatModel *chatModel;
 
-@property (strong, nonatomic)YYCache *fileCache;
+//@property (strong, nonatomic)YYCache *fileCache;
 @property (assign, nonatomic)NSInteger pageNum;
 @property (strong, nonatomic)NSTimer *timer;
 
@@ -57,14 +58,14 @@ static NSString * const messageFile = @"Message";
     return _mesDic;
 }
 
-- (YYCache *)fileCache{
-    if (!_fileCache) {
-        NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-        NSString *path = [cacheFolder stringByAppendingPathComponent:messageFile];
-        _fileCache = [YYCache cacheWithPath:path];
-    }
-    return _fileCache;
-}
+//- (YYCache *)fileCache{
+//    if (!_fileCache) {
+//        NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+//        NSString *path = [cacheFolder stringByAppendingPathComponent:messageFile];
+//        _fileCache = [YYCache cacheWithPath:path];
+//    }
+//    return _fileCache;
+//}
 - (ChatModel *)chatModel{
     if (!_chatModel) {
         _chatModel = [ChatModel new];
@@ -89,7 +90,6 @@ static NSString * const messageFile = @"Message";
     // Do any additional setup after loading the view from its nib.
     self.title = SUPPORTCENTER_TITLE;
     self.view.backgroundColor = BACKGROUNDCOLOR;
-    
     [self configureTableView];
     //请求聊天记录
     [self queryMessageList];
@@ -102,6 +102,9 @@ static NSString * const messageFile = @"Message";
 - (void)registerNotification{
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
 }
 - (void)keyboardWillShow:(NSNotification *)sender{
     
@@ -113,11 +116,49 @@ static NSString * const messageFile = @"Message";
         [self tableViewScrollToBottomAfterDelay:1];
     }
 }
+- (void)keyboardWillHide:(id)sender{
+    self.toolBarBottom.constant = 0;
+    [self tableViewScrollToBottomAfterDelay:1];
+}
 - (void)saveMessagesList:(NSArray *)messages{
     
     if (!messages) {
         messages = [NSArray array];
     }
+    //先取聊天记录
+    NSMutableDictionary *messageDic = [MessageSaver messageListWithUser:self.userId];
+    NSMutableArray *data = [NSMutableArray array];
+    
+    if (messageDic) {
+        //如果有
+        data = messageDic[@"data"];
+    }else{
+        //如果没有
+        messageDic = [NSMutableDictionary dictionary];
+    }
+    
+    for (NSInteger k = 0; k < messages.count; k ++) {
+        NSDictionary *oneDic = messages[k];
+        [data addObject:oneDic];
+    }
+    [messageDic removeObjectForKey:@"data"];
+    [messageDic setObject:data forKey:@"data"];
+    [messageDic setObject:self.userId forKey:@"userId"];
+    
+    if ([MessageSaver saveMessages:messageDic user:self.userId]) {
+        [self.chatModel.dataSource removeAllObjects];
+        NSArray *dataArray = [MessageSaver messageListWithUser:self.userId][@"data"];
+        for (NSInteger j = 0; j < dataArray.count; j ++) {
+            
+            NSDictionary *oneMessageDic = data[j];
+            [self.chatModel addSpecifiedItem:oneMessageDic];
+        }
+        [self.chatTableView reloadData];
+        if (self.toolBarBottom.constant == 0) {
+            [self tableViewScrollToBottomAfterDelay:1];
+        }
+    }
+    /*
     BOOL exist = [self.fileCache containsObjectForKey:self.userId];
     //如果存在
     if (exist) {
@@ -128,6 +169,7 @@ static NSString * const messageFile = @"Message";
             NSDictionary *oneMessageDic = messages[k];
             [muData addObject:oneMessageDic];
         }
+        [self.fileCache removeAllObjects];
         [messageDic setObject:muData forKey:@"messages"];
         [self.fileCache setObject:messageDic forKey:self.userId];
     }else{
@@ -136,10 +178,11 @@ static NSString * const messageFile = @"Message";
         [baseDic setObject:messages forKey:@"messages"];
         [self.fileCache setObject:baseDic forKey:self.userId];
     }
-    WeakSelf;
-    self.fileCache.diskCache.customFileNameBlock = ^(NSString *key){
-        return weakSelf.userId;
-    };
+//    WeakSelf;
+//    self.fileCache.diskCache.customFileNameBlock = ^(NSString *key){
+//        return weakSelf.userId;
+//    };
+    
     //增加数据
     NSDictionary *currentDic = (NSDictionary *)[self.fileCache objectForKey:self.userId];
     NSArray *data = currentDic[@"messages"];
@@ -153,6 +196,8 @@ static NSString * const messageFile = @"Message";
     if (self.toolBarBottom.constant == 0) {
         [self tableViewScrollToBottomAfterDelay:1];
     }
+     */
+    
 }
 - (void)queryMessageList{
     

@@ -198,6 +198,9 @@
 		D64C99451CB91C8A00C45936 /* QueryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64C99441CB91C8A00C45936 /* QueryHeaderView.xib */; };
 		D64C99481CB9229000C45936 /* LoanDetaiController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C99471CB9229000C45936 /* LoanDetaiController.m */; };
 		D64C994B1CB93D0A00C45936 /* HandleUserStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */; };
+		D65098471CD11714006FF130 /* MessageSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = D65098461CD11714006FF130 /* MessageSaver.m */; };
+		D65098541CD1245C006FF130 /* head_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65098521CD1245C006FF130 /* head_mine@2x.png */; };
+		D65098551CD1245C006FF130 /* head_mine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65098531CD1245C006FF130 /* head_mine@3x.png */; };
 		D6512FAB1CCE84BE008279B9 /* ChangeCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6512FA91CCE84BE008279B9 /* ChangeCodeController.m */; };
 		D6512FAC1CCE84BE008279B9 /* ChangeCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6512FAA1CCE84BE008279B9 /* ChangeCodeController.xib */; };
 		D6512FAF1CCE8A9A008279B9 /* ChangePasswordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6512FAE1CCE8A9A008279B9 /* ChangePasswordModel.m */; };
@@ -690,6 +693,10 @@
 		D64C99471CB9229000C45936 /* LoanDetaiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDetaiController.m; sourceTree = "<group>"; };
 		D64C99491CB93D0A00C45936 /* HandleUserStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleUserStatus.h; sourceTree = "<group>"; };
 		D64C994A1CB93D0A00C45936 /* HandleUserStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleUserStatus.m; sourceTree = "<group>"; };
+		D65098451CD11714006FF130 /* MessageSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageSaver.h; sourceTree = "<group>"; };
+		D65098461CD11714006FF130 /* MessageSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSaver.m; sourceTree = "<group>"; };
+		D65098521CD1245C006FF130 /* head_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head_mine@2x.png"; sourceTree = "<group>"; };
+		D65098531CD1245C006FF130 /* head_mine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head_mine@3x.png"; sourceTree = "<group>"; };
 		D6512FA81CCE84BE008279B9 /* ChangeCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeCodeController.h; sourceTree = "<group>"; };
 		D6512FA91CCE84BE008279B9 /* ChangeCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeCodeController.m; sourceTree = "<group>"; };
 		D6512FAA1CCE84BE008279B9 /* ChangeCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeCodeController.xib; sourceTree = "<group>"; };
@@ -1305,6 +1312,8 @@
 		D647FB171CAE7E2D00CBF19E /* 客服中心 */ = {
 			isa = PBXGroup;
 			children = (
+				D65098521CD1245C006FF130 /* head_mine@2x.png */,
+				D65098531CD1245C006FF130 /* head_mine@3x.png */,
 				D6E622A21CD0A4D600C77A32 /* head@2x.png */,
 				D6E622A31CD0A4D600C77A32 /* head@3x.png */,
 				D6E6223A1CD02A7000C77A32 /* ServiceCenterController.h */,
@@ -1320,6 +1329,8 @@
 				D6E622541CD08F2500C77A32 /* chatto_bg_normal.png */,
 				D6E622511CD08C4600C77A32 /* TrasferMessageDic.h */,
 				D6E622521CD08C4600C77A32 /* TrasferMessageDic.m */,
+				D65098451CD11714006FF130 /* MessageSaver.h */,
+				D65098461CD11714006FF130 /* MessageSaver.m */,
 			);
 			path = "客服中心";
 			sourceTree = "<group>";
@@ -2680,6 +2691,7 @@
 				D60609EA1C76FF0E000DB373 /* IDInfo@3x.png in Resources */,
 				D6E622A41CD0A4D600C77A32 /* head@2x.png in Resources */,
 				D6060A071C76FF0E000DB373 /* mine_off@2x.png in Resources */,
+				D65098551CD1245C006FF130 /* head_mine@3x.png in Resources */,
 				D65F2DA61CBBCAE2000817AE /* Icon-76@2x.png in Resources */,
 				D6E104CF1C7320FD00049C3F /* Main.storyboard in Resources */,
 				D60609AA1C76FF0E000DB373 /* 返回@2x.png in Resources */,
@@ -2748,6 +2760,7 @@
 				D60609C91C76FF0E000DB373 /* 还款页面go@3x.png in Resources */,
 				D6F5672C1C80056300B0612F /* 更多@2x.png in Resources */,
 				D65F2DAD1CBBCAE2000817AE /* Icon-Small@3x.png in Resources */,
+				D65098541CD1245C006FF130 /* head_mine@2x.png in Resources */,
 				D64B9C961CBFFBE200B6B5A5 /* RefundTableViewCell.xib in Resources */,
 				D6060A171C76FF0E000DB373 /* creditCardInfo@3x.png in Resources */,
 				D6512FAC1CCE84BE008279B9 /* ChangeCodeController.xib in Resources */,
@@ -2889,6 +2902,7 @@
 				D6961AB11CCEA1420044F337 /* HistoryTableViewCell+PutHistoryInfo.m in Sources */,
 				D6BC3DBA1CBAA6DB00200BC7 /* BaseNextButton.m in Sources */,
 				D64B9C951CBFFBE200B6B5A5 /* RefundTableViewCell.m in Sources */,
+				D65098471CD11714006FF130 /* MessageSaver.m in Sources */,
 				D6805EA91CAD1CF500316925 /* ZCAddressBook.m in Sources */,
 				D6805E991CAD1A3300316925 /* STUI.m in Sources */,
 				D68F02D01CD0249B00772644 /* UUMessageContentButton.m in Sources */,
