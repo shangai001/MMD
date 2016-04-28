@@ -135,15 +135,15 @@
 }
 - (void)moveToLoanVerify{
     LoanVerifyController *loanVerifyer = [LoanVerifyController new];
-    loanVerifyer.infoItem.refundMoth = self.refundMonth;
-    loanVerifyer.infoItem.floatLoanMoney = (float)self.moneyCount;
+    loanVerifyer.infoItem.refundMoth = [NSDecimalNumber decimalNumberWithMantissa:self.refundMonth exponent:0 isNegative:NO];
+    loanVerifyer.infoItem.loanMoney = [NSDecimalNumber decimalNumberWithMantissa:self.refundMonth exponent:0 isNegative:NO];
     loanVerifyer.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:loanVerifyer animated:YES];
 }
 #pragma mark UpdateRefundNumber
 - (void)updateRefundLabel{
     //计算每月还款数
-    self.refundEveryMoth = [CalculateRefund calculateRefundWithNumber:self.moneyCount time:self.refundMonth];
+    self.refundEveryMoth = [[CalculateRefund shouldRepayEveryMonthPrincipal:self.moneyCount mothCount:self.refundMonth] integerValue];
     //组织属性字符串
     NSAttributedString *string = [RefundTextHelper formatAttributeStringWith:self.refundEveryMoth refundMonth:self.refundMonth];
     self.infoLabel.attributedText = string;

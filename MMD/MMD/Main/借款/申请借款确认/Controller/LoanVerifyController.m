@@ -58,7 +58,7 @@ static NSString * const bottomCellId = @"BottomCellId";
     if (!_infoItem) {
         _infoItem = [LoanInfoItem new];
         _infoItem.refundMoth = 0;
-        _infoItem.refundMoneyEveryMoth = 0.00;
+        _infoItem.refundMoneyEveryMoth = [NSDecimalNumber zero];
     }
     return _infoItem;
 }
@@ -109,7 +109,7 @@ static NSString * const bottomCellId = @"BottomCellId";
     }else if (section == 1){
         return 6;
     }else if (section == 2){
-        return self.infoItem.refundMoth + 1;
+        return [self.infoItem.refundMoth integerValue] + 1;
     }
     return 0;
 }
@@ -180,7 +180,7 @@ static NSString * const bottomCellId = @"BottomCellId";
 - (void)submitLoanApply{
     
     [SVProgressHUD show];
-    NSDictionary *info = @{@"capital":@(self.infoItem.floatLoanMoney),@"termLine":@(self.infoItem.refundMoth)};
+    NSDictionary *info = @{@"capital":self.infoItem.loanMoney,@"termLine":self.infoItem.refundMoth};
     [SubmitLoanInfoModel submitLoanInfo:info success:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
             [SVProgressHUD dismiss];

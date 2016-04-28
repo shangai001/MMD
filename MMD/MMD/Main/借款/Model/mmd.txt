@@ -1,30 +1,6 @@
 {
-    "AA":{
-        "rate":"1.00",
-        "manageMent":"20.00"
-    },
-    "A":{
-        "rate":"1.50",
-        "manageMent":"20.00"
-        },
-    "B":{
-        "rate":"2.00",
-        "manageMent":"20.00"
-        },
-    "C":{
-        "rate":"3.00",
-        "manageMent":"30.00"
-        },
-    "D":{
-        "rate":"4.00",
-        "manageMent":"30.00"
-        },
-    "E":{
-        "rate":"5.00",
-        "manageMent":"30.00"
-        },
-    "HR":{
-        "rate":"10.00",
-        "manageMent":"40.00"
-        }
+    "termLine": 6,
+    "creditLine": 5000,
+    "manageFee": 40,
+    "yearRate": 0.24,
 }

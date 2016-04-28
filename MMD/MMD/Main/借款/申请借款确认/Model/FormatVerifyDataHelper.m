@@ -59,7 +59,9 @@
             [self setNonullObject:bankAdress Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"借款金额"]) {
-            NSString *loanFloatString = [NSString stringWithFormat:@"%0.2f元",item.floatLoanMoney];
+            
+            NSDecimalNumber *loanNumber = item.loanMoney;
+            NSString *loanFloatString = [NSString stringWithFormat:@"%0.2f元",[loanNumber doubleValue]];
             [self setNonullObject:loanFloatString Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"借款期限"]) {
@@ -67,19 +69,23 @@
             [self setNonullObject:time Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"综合管理费"]) {
-            float manageMent = [CalculateRefund manageMentMoney];
-            float totalManageMent = manageMent * item.refundMoth;
-            NSString *totalString = [NSString stringWithFormat:@"%0.2f元",totalManageMent];
+        
+            NSDecimalNumber *manageMentNum = [CalculateRefund overHeadMentMoney:[item.loanMoney integerValue]];
+            NSDecimalNumber *totalManageMentNum = [manageMentNum decimalNumberByMultiplyingBy:item.refundMoth];
+            NSString *totalString = [NSString stringWithFormat:@"%0.2f元",[totalManageMentNum doubleValue]];
+            
             [self setNonullObject:totalString Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"月管理费"]) {
-            float manageMent = [CalculateRefund manageMentMoney];
-            NSString *singleString = [NSString stringWithFormat:@"%0.2f元",manageMent];
+            NSDecimalNumber *manageMent = [CalculateRefund manageFeeEveryMonth];
+            NSString *singleString = [NSString stringWithFormat:@"%0.2f元",[manageMent doubleValue]];
             [self setNonullObject:singleString Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"实际到账金额"]) {
-            float actualMoney = [CalculateRefund getActualMoney:item.floatLoanMoney];
-            NSString *actualString = [NSString stringWithFormat:@"%0.2f元",actualMoney];
+            
+            NSInteger pricipalInter = [item.loanMoney integerValue];
+            NSDecimalNumber *actualMoney = [CalculateRefund realMoneyPrincipal:pricipalInter mothCount:[item.refundMoth integerValue]];
+            NSString *actualString = [NSString stringWithFormat:@"%0.2f元",[actualMoney doubleValue]];
             [self setNonullObject:actualString Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"还款方式"]) {
@@ -131,8 +137,8 @@
 + (NSMutableArray *)ez_bottomItemArrayForBottomCell:(LoanInfoItem *)item{
     
     NSMutableArray *boItemArray = [NSMutableArray array];
-    float refundMoney = [CalculateRefund calculateRefundWith:item];
-    for (NSInteger k = 0; k < item.refundMoth + 1; k++) {
+    double refundMoney = [[CalculateRefund shouldRepayEveryMonthPrincipal:[item.loanMoney integerValue] mothCount:[item.refundMoth integerValue]] doubleValue];
+    for (NSInteger k = 0; k < [item.refundMoth integerValue] + 1; k++) {
         BottomItem *boItem = [BottomItem new];
         if (k == 0) {
             boItem.refundIndexMonth = @"还款期数";

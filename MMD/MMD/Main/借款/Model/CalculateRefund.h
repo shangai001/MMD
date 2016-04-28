@@ -7,47 +7,48 @@
 //
 
 #import <Foundation/Foundation.h>
-@class LoanInfoItem;
 
 
 @interface CalculateRefund : NSObject
 
 /**
- *  每月还款数
+ *  计算每月还款
  *
- *  @param item (借款信息模型)
+ *  @param principal 本金
+ *  @param count     借款期数
+ *
+ *  @return 每月应还数
+ */
++ (NSDecimalNumber *)shouldRepayEveryMonthPrincipal:(NSInteger)principal mothCount:(NSInteger)count;
+/**
+ *  获取当前用户费率字典
  *
  *  @return
  */
-+ (float)calculateRefundWith:(LoanInfoItem *)item;
-/**
-*  每月还款数(公式:每月还款数目=(综合管理费 + (1 +每月利率) x 本金)/月数)
-*
-*  @param loanMoney 借款数
-*  @param month     还款时间(月)
-*
-*  @return 每月还款金额
-*/
-+ (float)calculateRefundWithNumber:(NSUInteger)loanMoney time:(NSUInteger)month;
-/**
- *  返回实际到账金额
- *
- *  @param loanMoney 借款数目
- *
- *  @return 
- */
-+ (float)getActualMoney:(NSUInteger)loanMoney;
-/**
- *  利息字典
- *
- *  @return 
- */
-+ (NSDictionary *)interestDictionary;
++ (NSDictionary *)getCurrentUserRateDic;
 
 /**
- *  当前用户等级的综合管理费
+ *  综合管理费率
  *
- *  @return 
+ *  @param principal 本金
+ *
+ *  @return 综合管理费率
  */
-+ (float)manageMentMoney;
++ (NSDecimalNumber *)overHeadMentMoney:(NSInteger)principal;
+/**
+ *  月管理费
+ *
+ *  @return
+ */
++ (NSDecimalNumber *)manageFeeEveryMonth;
+/**
+ *  实际到账金额
+ *
+ *  @param principal
+ *  @param count
+ *
+ *  @return
+ */
++ (NSDecimalNumber *)realMoneyPrincipal:(NSInteger)principal mothCount:(NSInteger)count;
+
 @end

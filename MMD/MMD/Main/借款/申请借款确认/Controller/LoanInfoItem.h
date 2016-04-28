@@ -10,8 +10,8 @@
 
 @interface LoanInfoItem : NSObject
 
-@property (assign, nonatomic)float floatLoanMoney;
-@property (assign, nonatomic)NSUInteger refundMoth;
-@property (assign, nonatomic)float refundMoneyEveryMoth;
+@property (assign, nonatomic)NSDecimalNumber *loanMoney;
+@property (assign, nonatomic)NSDecimalNumber *refundMoneyEveryMoth;
+@property (assign, nonatomic)NSDecimalNumber *refundMoth;
 
 @end
