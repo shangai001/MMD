@@ -87,7 +87,6 @@
             NSInteger pricipalInter = loanMoney;
             
             NSDecimalNumber *actualMoney = [CalculateRefund realMoneyPrincipal:pricipalInter mothCount:moth];
-            
             NSString *actualString = [NSString stringWithFormat:@"%0.2f元",[actualMoney doubleValue]];
             [self setNonullObject:actualString Forkey:key inDic:tempDic];
         }
@@ -108,7 +107,6 @@
 + (NSMutableArray *)ez_itemsArrayForVerifymoney:(NSInteger)loanMoney time:(NSInteger)moth{
     
     NSArray *data = [self itemsArrayForVerify:loanMoney time:moth];
-    NSLog(@"字典数组是  ---> %@ ",data);
     NSMutableArray *fullArray = [NSMutableArray array];
     
     [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

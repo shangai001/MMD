@@ -105,7 +105,7 @@
     NSDecimalNumber *principalNumber = [NSDecimalNumber decimalNumberWithMantissa:principalLong exponent:0 isNegative:NO];
     //综合管理费
     NSDecimalNumber *onceFeeNumber = [self overHeadMentMoney:principal];
-    NSDecimalNumber *realMoneyNumber = [principalNumber decimalNumberBySubtracting:onceFeeNumber];
+    NSDecimalNumber *realMoneyNumber = [[[NSDecimalNumber one] decimalNumberBySubtracting:onceFeeNumber] decimalNumberByMultiplyingBy:principalNumber];
     return realMoneyNumber;
 }
 @end
