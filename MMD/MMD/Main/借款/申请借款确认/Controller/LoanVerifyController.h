@@ -7,11 +7,10 @@
 //
 
 #import "BaseViewController.h"
-
-@class LoanInfoItem;
-
 @interface LoanVerifyController : BaseViewController
 
-@property (strong, nonatomic)LoanInfoItem *infoItem;
+@property (assign, nonatomic)NSInteger loanMoney;
+@property (assign, nonatomic)NSInteger refundMoneyEveryMoth;
+@property (assign, nonatomic)NSInteger refundMoth;
 
 @end

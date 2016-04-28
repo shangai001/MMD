@@ -22,7 +22,7 @@
 @interface NewApplyViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
 
 @property (nonatomic, strong)NSArray *dataArray;
-@property (nonatomic, assign)float refundEveryMoth;
+@property (nonatomic, assign)NSNumber *refundEveryMoth;
 
 @end
 
@@ -54,7 +54,7 @@
 - (void)initDefaultValue{
     self.moneyCount = 500;
     self.refundMonth = 1;
-    self.refundEveryMoth = 0.00;
+    self.refundEveryMoth = [NSDecimalNumber zero];
     [self updateRefundLabel];
 }
 - (IBAction)decreaseCount:(id)sender {
@@ -135,15 +135,17 @@
 }
 - (void)moveToLoanVerify{
     LoanVerifyController *loanVerifyer = [LoanVerifyController new];
-    loanVerifyer.infoItem.refundMoth = [NSDecimalNumber decimalNumberWithMantissa:self.refundMonth exponent:0 isNegative:NO];
-    loanVerifyer.infoItem.loanMoney = [NSDecimalNumber decimalNumberWithMantissa:self.refundMonth exponent:0 isNegative:NO];
+    
+    loanVerifyer.refundMoth = self.refundMonth;
+    loanVerifyer.loanMoney = self.moneyCount;
     loanVerifyer.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:loanVerifyer animated:YES];
 }
 #pragma mark UpdateRefundNumber
 - (void)updateRefundLabel{
     //计算每月还款数
-    self.refundEveryMoth = [[CalculateRefund shouldRepayEveryMonthPrincipal:self.moneyCount mothCount:self.refundMonth] integerValue];
+    self.refundEveryMoth = [CalculateRefund shouldRepayEveryMonthPrincipal:self.moneyCount mothCount:self.refundMonth];
+    NSLog(@"还款数 %@",self.refundEveryMoth);
     //组织属性字符串
     NSAttributedString *string = [RefundTextHelper formatAttributeStringWith:self.refundEveryMoth refundMonth:self.refundMonth];
     self.infoLabel.attributedText = string;

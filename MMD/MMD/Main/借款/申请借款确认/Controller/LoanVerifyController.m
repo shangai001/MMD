@@ -54,14 +54,21 @@ static NSString * const bottomCellId = @"BottomCellId";
     }
     return _bottomDataArray;
 }
-- (LoanInfoItem *)infoItem{
-    if (!_infoItem) {
-        _infoItem = [LoanInfoItem new];
-        _infoItem.refundMoth = 0;
-        _infoItem.refundMoneyEveryMoth = [NSDecimalNumber zero];
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+//        self.infoItem = [LoanInfoItem new];
     }
-    return _infoItem;
+    return self;
 }
+//- (LoanInfoItem *)infoItem{
+//    if (!_infoItem) {
+//        _infoItem = [LoanInfoItem new];
+//        _infoItem.refundMoth = [NSDecimalNumber zero];
+//        _infoItem.refundMoneyEveryMoth = [NSDecimalNumber zero];
+//    }
+//    return _infoItem;
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -71,11 +78,16 @@ static NSString * const bottomCellId = @"BottomCellId";
     [self addSureBottomBar];
 }
 - (void)requestSectionTitleData{
-    NSAssert(self.infoItem.refundMoth > 0, @"缺少还款期数");
-    NSMutableArray *keyValuesArray = [FormatVerifyDataHelper ez_itemsArrayForVerify:self.infoItem];
+    
+    LoanInfoItem *item = [LoanInfoItem new];
+    
+    item.refundMoth = [NSDecimalNumber decimalNumberWithMantissa:self.refundMoth exponent:0 isNegative:NO];
+    item.loanMoney = [NSDecimalNumber decimalNumberWithMantissa:self.loanMoney exponent:0 isNegative:NO];
+    
+    NSMutableArray *keyValuesArray = [FormatVerifyDataHelper ez_itemsArrayForVerify:item];
     self.dataArray = keyValuesArray;
     
-    NSMutableArray *boItems = [FormatVerifyDataHelper ez_bottomItemArrayForBottomCell:self.infoItem];
+    NSMutableArray *boItems = [FormatVerifyDataHelper ez_bottomItemArrayForBottomCell:item];
     self.bottomDataArray = boItems;
 }
 - (void)initTableView{
@@ -109,7 +121,7 @@ static NSString * const bottomCellId = @"BottomCellId";
     }else if (section == 1){
         return 6;
     }else if (section == 2){
-        return [self.infoItem.refundMoth integerValue] + 1;
+        return self.refundMoth + 1;
     }
     return 0;
 }
@@ -180,7 +192,7 @@ static NSString * const bottomCellId = @"BottomCellId";
 - (void)submitLoanApply{
     
     [SVProgressHUD show];
-    NSDictionary *info = @{@"capital":self.infoItem.loanMoney,@"termLine":self.infoItem.refundMoth};
+    NSDictionary *info = @{@"capital":@(self.loanMoney),@"termLine":@(self.refundMoth)};
     [SubmitLoanInfoModel submitLoanInfo:info success:^(NSDictionary *resultDic) {
         if ([resultDic[@"code"] integerValue] == 0) {
             [SVProgressHUD dismiss];
