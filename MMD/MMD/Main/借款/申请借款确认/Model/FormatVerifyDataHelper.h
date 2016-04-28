@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@class LoanInfoItem;
 
 @interface FormatVerifyDataHelper : NSObject
 
@@ -19,7 +18,7 @@
  *
  *  @return
  */
-+ (NSMutableArray *)ez_itemsArrayForVerify:(LoanInfoItem *)item;
++ (NSMutableArray *)ez_itemsArrayForVerifymoney:(NSInteger)loanMoney time:(NSInteger)moth;
 
 /**
  *  返回最底部还款信息
@@ -28,7 +27,8 @@
  *
  *  @return 
  */
-+ (NSMutableArray *)ez_bottomItemArrayForBottomCell:(LoanInfoItem *)item;
++ (NSMutableArray *)ez_bottomItemArrayForBottomCellmoney:(NSInteger)loanMoney time:(NSInteger)moth;
+
 
 
 @end

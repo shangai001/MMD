@@ -16,7 +16,6 @@
 #import "LoanVerifyController.h"
 #import "CalculateRefund.h"
 #import "RefundTextHelper.h"
-#import "LoanInfoItem.h"
 #import "BaseNextButton.h"
 
 @interface NewApplyViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>

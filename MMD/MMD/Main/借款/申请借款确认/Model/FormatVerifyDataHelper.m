@@ -9,12 +9,12 @@
 #import "FormatVerifyDataHelper.h"
 #import "ReadFiler.h"
 #import "AppUserInfoHelper.h"
-#import "LoanInfoItem.h"
 #import "CalculateRefund.h"
 #import "FormItem.h"
 #import "BottomItem.h"
 
 
+//money:(NSInteger)loanMoney time:(NSInteger)moth
 @implementation FormatVerifyDataHelper
 
 + (NSArray *)formatDatarefundMoth:(NSUInteger)month{
@@ -23,21 +23,23 @@
     return originalArray;
 }
 //够造数组<字典>
-+ (NSArray *)itemsArrayForVerify:(LoanInfoItem *)item{
++ (NSArray *)itemsArrayForVerify:(NSInteger)loanMoney time:(NSInteger)moth{
+
     
-    NSArray *titleArray = [self formatDatarefundMoth:item.refundMoth];
+    NSArray *titleArray = [self formatDatarefundMoth:moth];
+    
     __block NSMutableArray *keyValuesArray = [NSMutableArray arrayWithCapacity:titleArray.count];
     [titleArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[NSDictionary class]]) {
             NSMutableDictionary *oneDic = (NSMutableDictionary *)obj;
-            NSDictionary *keyValuesDic = [self findValueForkey:oneDic item:item];
+            NSDictionary *keyValuesDic = [self findValueForkey:oneDic money:loanMoney time:moth];
             [keyValuesArray addObject:keyValuesDic];
         }
     }];
     return keyValuesArray;
 }
 
-+ (NSMutableDictionary *)findValueForkey:(NSMutableDictionary *)dic item:(LoanInfoItem *)item{
++ (NSMutableDictionary *)findValueForkey:(NSMutableDictionary *)dic money:(NSInteger)loanMoney time:(NSInteger)moth{
     
     NSDictionary *userInfo = [AppUserInfoHelper userInfo];
     NSDictionary *userBank = [AppUserInfoHelper userBank];
@@ -59,20 +61,19 @@
             [self setNonullObject:bankAdress Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"借款金额"]) {
-            
-            NSDecimalNumber *loanNumber = item.loanMoney;
-            NSString *loanFloatString = [NSString stringWithFormat:@"%0.2f元",[loanNumber doubleValue]];
+            NSString *loanFloatString = [NSString stringWithFormat:@"%@元",@(loanMoney)];
             [self setNonullObject:loanFloatString Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"借款期限"]) {
-            NSString *time = [NSString stringWithFormat:@"%ld个月",(long)item.refundMoth];
+            NSString *time = [NSString stringWithFormat:@"%ld个月",(long)moth];
             [self setNonullObject:time Forkey:key inDic:tempDic];
         }
         if ([key isEqualToString:@"综合管理费"]) {
-        
-            NSDecimalNumber *manageMentNum = [CalculateRefund overHeadMentMoney:[item.loanMoney integerValue]];
-            NSDecimalNumber *totalManageMentNum = [manageMentNum decimalNumberByMultiplyingBy:item.refundMoth];
-            NSString *totalString = [NSString stringWithFormat:@"%0.2f元",[totalManageMentNum doubleValue]];
+        //一次性扣除
+            NSDecimalNumber *manageMentNum = [CalculateRefund overHeadMentMoney:loanMoney];
+            NSDecimalNumber *totalManageNum = [manageMentNum decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithMantissa:loanMoney exponent:0 isNegative:NO]];
+            
+            NSString *totalString = [NSString stringWithFormat:@"%0.2f元",[totalManageNum doubleValue]];
             
             [self setNonullObject:totalString Forkey:key inDic:tempDic];
         }
@@ -83,8 +84,10 @@
         }
         if ([key isEqualToString:@"实际到账金额"]) {
             
-            NSInteger pricipalInter = [item.loanMoney integerValue];
-            NSDecimalNumber *actualMoney = [CalculateRefund realMoneyPrincipal:pricipalInter mothCount:[item.refundMoth integerValue]];
+            NSInteger pricipalInter = loanMoney;
+            
+            NSDecimalNumber *actualMoney = [CalculateRefund realMoneyPrincipal:pricipalInter mothCount:moth];
+            
             NSString *actualString = [NSString stringWithFormat:@"%0.2f元",[actualMoney doubleValue]];
             [self setNonullObject:actualString Forkey:key inDic:tempDic];
         }
@@ -102,13 +105,13 @@
         [tempDic setObject:object forKey:key];
     }
 }
-+ (NSMutableArray *)ez_itemsArrayForVerify:(LoanInfoItem *)item{
++ (NSMutableArray *)ez_itemsArrayForVerifymoney:(NSInteger)loanMoney time:(NSInteger)moth{
     
-    NSArray *data = [self itemsArrayForVerify:item];
+    NSArray *data = [self itemsArrayForVerify:loanMoney time:moth];
     NSLog(@"字典数组是  ---> %@ ",data);
-    
     NSMutableArray *fullArray = [NSMutableArray array];
-    [[self itemsArrayForVerify:item] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    
+    [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[NSDictionary class]]) {
             NSDictionary *oneDic = (NSDictionary *)obj;
             NSMutableArray *sectionArray = [self makeupOneSectionArray:oneDic];
@@ -134,11 +137,13 @@
     NSNumber *sortId = sortInfo[key];
     item.sortId = sortId;
 }
-+ (NSMutableArray *)ez_bottomItemArrayForBottomCell:(LoanInfoItem *)item{
++ (NSMutableArray *)ez_bottomItemArrayForBottomCellmoney:(NSInteger)loanMoney time:(NSInteger)moth{
     
     NSMutableArray *boItemArray = [NSMutableArray array];
-    double refundMoney = [[CalculateRefund shouldRepayEveryMonthPrincipal:[item.loanMoney integerValue] mothCount:[item.refundMoth integerValue]] doubleValue];
-    for (NSInteger k = 0; k < [item.refundMoth integerValue] + 1; k++) {
+    
+    double refundMoney = [[CalculateRefund shouldRepayEveryMonthPrincipal:loanMoney mothCount:moth] doubleValue];
+    
+    for (NSInteger k = 0; k < moth + 1; k++) {
         BottomItem *boItem = [BottomItem new];
         if (k == 0) {
             boItem.refundIndexMonth = @"还款期数";

@@ -14,7 +14,6 @@
 #import "FormTableViewCell+PutFormValue.h"
 #import "BottomTableViewCell+PutBottomValue.h"
 #import "SureViewController.h"
-#import "LoanInfoItem.h"
 #import "FormItem.h"
 #import "BottomItem.h"
 #import "SubmitLoanInfoModel.h"
@@ -54,21 +53,6 @@ static NSString * const bottomCellId = @"BottomCellId";
     }
     return _bottomDataArray;
 }
-- (instancetype)init{
-    self = [super init];
-    if (self) {
-//        self.infoItem = [LoanInfoItem new];
-    }
-    return self;
-}
-//- (LoanInfoItem *)infoItem{
-//    if (!_infoItem) {
-//        _infoItem = [LoanInfoItem new];
-//        _infoItem.refundMoth = [NSDecimalNumber zero];
-//        _infoItem.refundMoneyEveryMoth = [NSDecimalNumber zero];
-//    }
-//    return _infoItem;
-//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -78,16 +62,10 @@ static NSString * const bottomCellId = @"BottomCellId";
     [self addSureBottomBar];
 }
 - (void)requestSectionTitleData{
-    
-    LoanInfoItem *item = [LoanInfoItem new];
-    
-    item.refundMoth = [NSDecimalNumber decimalNumberWithMantissa:self.refundMoth exponent:0 isNegative:NO];
-    item.loanMoney = [NSDecimalNumber decimalNumberWithMantissa:self.loanMoney exponent:0 isNegative:NO];
-    
-    NSMutableArray *keyValuesArray = [FormatVerifyDataHelper ez_itemsArrayForVerify:item];
+
+    NSMutableArray *keyValuesArray = [FormatVerifyDataHelper ez_itemsArrayForVerifymoney:self.loanMoney time:self.refundMoth];
     self.dataArray = keyValuesArray;
-    
-    NSMutableArray *boItems = [FormatVerifyDataHelper ez_bottomItemArrayForBottomCell:item];
+    NSMutableArray *boItems = [FormatVerifyDataHelper ez_bottomItemArrayForBottomCellmoney:self.loanMoney time:self.refundMoth];
     self.bottomDataArray = boItems;
 }
 - (void)initTableView{

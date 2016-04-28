@@ -264,7 +264,6 @@
 		D688B9221CB6C11B00CC80FF /* mmd.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9211CB6C11B00CC80FF /* mmd.txt */; };
 		D688B9251CB6D12B00CC80FF /* RefundTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */; };
 		D688B9271CB6D8B700CC80FF /* LoanVerifySectionTitle.txt in Resources */ = {isa = PBXBuildFile; fileRef = D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */; };
-		D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */; };
 		D68F02CA1CD0249B00772644 /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02B41CD0249A00772644 /* NSDate+Utils.m */; };
 		D68F02CB1CD0249B00772644 /* UUAVAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02B61CD0249A00772644 /* UUAVAudioPlayer.m */; };
 		D68F02CC1CD0249B00772644 /* UUImageAvatarBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F02B81CD0249A00772644 /* UUImageAvatarBrowser.m */; };
@@ -796,8 +795,6 @@
 		D688B9231CB6D12B00CC80FF /* RefundTextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundTextHelper.h; sourceTree = "<group>"; };
 		D688B9241CB6D12B00CC80FF /* RefundTextHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundTextHelper.m; sourceTree = "<group>"; };
 		D688B9261CB6D8B700CC80FF /* LoanVerifySectionTitle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoanVerifySectionTitle.txt; sourceTree = "<group>"; };
-		D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanInfoItem.h; path = ../Controller/LoanInfoItem.h; sourceTree = "<group>"; };
-		D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanInfoItem.m; path = ../Controller/LoanInfoItem.m; sourceTree = "<group>"; };
 		D68F02B21CD0249A00772644 /* ACMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMacros.h; sourceTree = "<group>"; };
 		D68F02B31CD0249A00772644 /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
 		D68F02B41CD0249A00772644 /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
@@ -1150,8 +1147,6 @@
 		D633564F1CB0336A000A321C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D688B9281CB6D9E000CC80FF /* LoanInfoItem.h */,
-				D688B9291CB6D9E000CC80FF /* LoanInfoItem.m */,
 				D633565F1CB03ACE000A321C /* FormItem.h */,
 				D63356601CB03ACE000A321C /* FormItem.m */,
 				D64A4E281CB7903100FB519B /* BottomItem.h */,
@@ -3033,7 +3028,6 @@
 				D64A4E2E1CB7998A00FB519B /* BottomTableViewCell.m in Sources */,
 				D6961AA91CCE9F7B0044F337 /* LoanHistoryTableViewController.m in Sources */,
 				D6805E971CAD1A3300316925 /* STPickerSingle.m in Sources */,
-				D688B92A1CB6D9E000CC80FF /* LoanInfoItem.m in Sources */,
 				D640367A1CBE704B002009C3 /* NSNull+EZSafe.m in Sources */,
 				D68F02CC1CD0249B00772644 /* UUImageAvatarBrowser.m in Sources */,
 				D647FBCF1CAE925400CBF19E /* UIImage+Color.m in Sources */,
